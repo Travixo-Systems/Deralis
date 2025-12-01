@@ -1,77 +1,102 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { 
   ArrowRight, 
   Zap, 
-  Shield, 
-  Heart,
   Database,
-  Code2,
-  Terminal,
   CheckCircle2,
-  Lightbulb,
-  Server
+  Server,
+  Layers,
+  Shield,
+  Code2,
+  Workflow,
+  Settings,
+  Bot,
+  MapPin
 } from "lucide-react";
+import ScreenshotGallery from "@/components/about/ScreenshotGallery";
 
 export const metadata: Metadata = {
-  title: "About — Full-Stack Development Agency",
+  title: "About — Independent Engineering Practice",
   description:
-    "Deralis Digital builds real web platforms with Next.js, SQL databases, Supabase, and automation workflows. Full-stack engineering, not templates.",
+    "Deralis Digital is an independent engineering practice building real web platforms — SaaS applications, dashboards, automation workflows, and SQL-powered databases.",
   openGraph: {
     title: "About | Deralis Digital",
     description:
-      "Full-stack engineering, not templates. We build systems, not landing pages.",
+      "Independent engineering practice building real web systems. No WordPress. No templates. Only real software.",
   },
 };
 
-const values = [
+const whatWeBuild = [
   {
-    icon: Lightbulb,
-    title: "Clarity before code",
-    description:
-      "We validate your idea and challenge assumptions before writing a single line. No wasted budget on features nobody needs.",
+    icon: Layers,
+    title: "SaaS Platforms",
+    description: "Multi-tenant, subscription-ready, scalable applications.",
+  },
+  {
+    icon: Server,
+    title: "Admin Dashboards",
+    description: "Data-driven tools with secure authentication and role-based access.",
   },
   {
     icon: Database,
-    title: "Systems over pages",
-    description:
-      "A website without a backend is not a tool. We build real systems with databases, authentication, and business logic.",
+    title: "Database Systems",
+    description: "PostgreSQL / Supabase architectures, migrations, and schema design.",
   },
   {
-    icon: Zap,
-    title: "Speed matters",
-    description:
-      "Fast iteration, quick responses, rapid deployment. We respect your time and move with purpose.",
+    icon: Workflow,
+    title: "Automation Workflows",
+    description: "Integrations with APIs, webhooks, triggers, and automation tools.",
   },
   {
-    icon: Shield,
-    title: "Built to scale",
-    description:
-      "Clean code, proper architecture, real databases. We build systems that grow with your business.",
+    icon: Settings,
+    title: "API Integrations",
+    description: "Custom REST integrations, webhooks, OAuth, third-party systems.",
   },
 ];
 
-const stack = [
-  { name: "Next.js 15", category: "Framework" },
-  { name: "React", category: "UI Library" },
-  { name: "TypeScript", category: "Language" },
-  { name: "Tailwind CSS", category: "Styling" },
-  { name: "Supabase", category: "Backend" },
-  { name: "PostgreSQL", category: "SQL Database" },
-  { name: "MySQL", category: "SQL Database" },
-  { name: "MongoDB", category: "NoSQL Database" },
-  { name: "Prisma", category: "ORM" },
-  { name: "Node.js", category: "Runtime" },
-  { name: "Vercel", category: "Hosting" },
+const process = [
+  {
+    step: "01",
+    title: "Technical Discovery",
+    description: "Understanding your system, workflows, and constraints.",
+  },
+  {
+    step: "02",
+    title: "Architecture Design",
+    description: "Database schema, API structure, core flows, security, scalability.",
+  },
+  {
+    step: "03",
+    title: "Development",
+    description: "Full-stack implementation using Next.js, React, TypeScript, Supabase.",
+  },
+  {
+    step: "04",
+    title: "Testing & Deployment",
+    description: "Staging, QA, production deployment, environment setup.",
+  },
+  {
+    step: "05",
+    title: "Long-term Support",
+    description: "Feature updates, monitoring, improvements, and scaling.",
+  },
 ];
 
-const standards = [
-  "Custom code only — real engineering, not templates",
-  "Real databases — PostgreSQL, MySQL, MongoDB",
-  "Full-stack delivery — frontend, backend, and APIs",
-  "Direct communication — no middlemen, no account managers",
-  "Long-term support — we don't disappear after launch",
+const techStack = {
+  frontend: ["Next.js 15", "React", "TypeScript", "Tailwind", "shadcn/ui"],
+  backend: ["Supabase", "PostgreSQL", "Prisma", "Edge/serverless"],
+  systems: ["Authentication", "Multi-tenant logic", "RBAC permissions", "File uploads", "Background tasks"],
+  automations: ["API integrations", "Automation workflows", "Custom GPT assistants"],
+};
+
+const whyChoose = [
+  "Work directly with a senior engineer",
+  "Full-stack delivery: frontend, backend, database",
+  "Modern stack with long-term maintainability",
+  "Professional codebases, not templates",
+  "Clear communication and fast iteration",
+  "Engineering depth + business understanding",
 ];
 
 export default function AboutPage() {
@@ -82,27 +107,15 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--dd-bg-card)] border border-[var(--dd-border)] mb-4">
-                <Server className="w-4 h-4 text-[var(--dd-accent)]" />
-                <span className="text-sm text-[var(--dd-text-muted)]">
-                  Full-stack engineering, not templates.
-                </span>
-              </div>
+              <p className="text-sm text-[var(--dd-accent)] font-medium mb-3 whitespace-nowrap">Independent engineering practice</p>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dd-text-main)] mb-4">
-                We build{" "}
-                <span className="gradient-text">systems</span>,
-                <br />not landing pages
+                About{" "}
+                <span className="gradient-text">Deralis Digital</span>
               </h1>
-              <p className="text-lg text-[var(--dd-text-muted)] mb-6 leading-relaxed">
-                Deralis Digital builds real web platforms—Next.js applications 
-                powered by SQL databases, Supabase, secure authentication, and 
-                automation workflows. We deliver software, not pages.
+              <p className="text-lg text-[var(--dd-text-muted)] mb-4 leading-relaxed">
+                We build real web systems — platforms, dashboards, automation.
               </p>
-              <Link href="/contact" className="btn-primary">
-                Build your system
-                <ArrowRight className="w-4 h-4" />
-              </Link>
             </div>
 
             {/* Stats Card */}
@@ -133,7 +146,7 @@ export default function AboutPage() {
                   <p className="text-3xl font-bold gradient-text mb-1">EN/FR</p>
                   <p className="text-sm text-[var(--dd-text-muted)]">Fully bilingual</p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    France - Worldwide
+                    France — Worldwide
                   </p>
                 </div>
               </div>
@@ -142,229 +155,306 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* System Screenshots Section */}
-      <section className="py-8 lg:py-10 border-y border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <p className="text-center text-sm text-[var(--dd-text-dim)] mb-6">
-            Real systems we've built — dashboards, databases, automation
+      {/* About Intro Section */}
+      <section className="py-8 lg:py-12">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="space-y-4 text-[var(--dd-text-muted)] leading-relaxed">
+            <p className="text-lg">
+              Deralis Digital is an independent engineering practice focused on building 
+              real web platforms — not simple websites. We design and develop systems: 
+              SaaS applications, dashboards, automation workflows, and SQL-powered databases 
+              using modern technologies such as Next.js, React, TypeScript, Supabase, and Prisma.
+            </p>
+            <p>
+              Our approach is engineering-first, built around clarity, performance, and 
+              long-term reliability. No WordPress. No templates. No drag-and-drop. Only real software.
+            </p>
+          </div>
+
+          <div className="mt-6">
+            <Link href="/contact" className="btn-primary">
+              Work with us
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="py-8 lg:py-12 bg-[var(--dd-bg-soft)]">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-4">
+            Our philosophy
+          </h2>
+          <p className="text-lg text-[var(--dd-text-muted)] mb-6">
+            Modern businesses don&apos;t need pages — they need systems.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-4">
-            {/* Screenshot 1 - Dashboard */}
-            <div className="rounded-xl overflow-hidden border border-[var(--dd-border)] bg-[var(--dd-bg-card)]">
-              <div className="flex items-center gap-2 px-3 py-2 border-b border-[var(--dd-border)] bg-[var(--dd-bg)]">
-                <div className="w-2 h-2 rounded-full bg-red-500/60" />
-                <div className="w-2 h-2 rounded-full bg-yellow-500/60" />
-                <div className="w-2 h-2 rounded-full bg-green-500/60" />
-                <span className="ml-2 text-xs text-[var(--dd-text-dim)] font-mono">Dashboard</span>
-              </div>
-              <div className="aspect-video bg-gradient-to-br from-[var(--dd-bg)] to-[var(--dd-bg-soft)] flex items-center justify-center">
-                {/* Replace with real screenshot */}
-                <div className="text-center p-4">
-                  <Database className="w-8 h-8 text-[var(--dd-accent)] mx-auto mb-2 opacity-40" />
-                  <p className="text-xs text-[var(--dd-text-dim)]">TraviXO Dashboard</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Screenshot 2 - Asset Table */}
-            <div className="rounded-xl overflow-hidden border border-[var(--dd-border)] bg-[var(--dd-bg-card)]">
-              <div className="flex items-center gap-2 px-3 py-2 border-b border-[var(--dd-border)] bg-[var(--dd-bg)]">
-                <div className="w-2 h-2 rounded-full bg-red-500/60" />
-                <div className="w-2 h-2 rounded-full bg-yellow-500/60" />
-                <div className="w-2 h-2 rounded-full bg-green-500/60" />
-                <span className="ml-2 text-xs text-[var(--dd-text-dim)] font-mono">Data Tables</span>
-              </div>
-              <div className="aspect-video bg-gradient-to-br from-[var(--dd-bg)] to-[var(--dd-bg-soft)] flex items-center justify-center">
-                {/* Replace with real screenshot */}
-                <div className="text-center p-4">
-                  <Code2 className="w-8 h-8 text-[var(--dd-accent)] mx-auto mb-2 opacity-40" />
-                  <p className="text-xs text-[var(--dd-text-dim)]">Asset Management</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Screenshot 3 - Auth/Workflow */}
-            <div className="rounded-xl overflow-hidden border border-[var(--dd-border)] bg-[var(--dd-bg-card)]">
-              <div className="flex items-center gap-2 px-3 py-2 border-b border-[var(--dd-border)] bg-[var(--dd-bg)]">
-                <div className="w-2 h-2 rounded-full bg-red-500/60" />
-                <div className="w-2 h-2 rounded-full bg-yellow-500/60" />
-                <div className="w-2 h-2 rounded-full bg-green-500/60" />
-                <span className="ml-2 text-xs text-[var(--dd-text-dim)] font-mono">Workflows</span>
-              </div>
-              <div className="aspect-video bg-gradient-to-br from-[var(--dd-bg)] to-[var(--dd-bg-soft)] flex items-center justify-center">
-                {/* Replace with real screenshot */}
-                <div className="text-center p-4">
-                  <Zap className="w-8 h-8 text-[var(--dd-accent)] mx-auto mb-2 opacity-40" />
-                  <p className="text-xs text-[var(--dd-text-dim)]">QR & Compliance</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p className="text-[var(--dd-text-muted)] mb-4">Systems that:</p>
+          <ul className="space-y-2 mb-6">
+            {[
+              "Store and structure data reliably",
+              "Automate repetitive work",
+              "Integrate with existing tools and APIs",
+              "Scale without breaking",
+              "Deliver real operational value",
+            ].map((item) => (
+              <li key={item} className="flex items-center gap-3 text-[var(--dd-text-muted)]">
+                <CheckCircle2 className="w-4 h-4 text-[var(--dd-accent)] flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <p className="text-[var(--dd-text-main)] font-medium">
+            We build platforms that replace spreadsheets, manual processes, and outdated 
+            workflows with modern, stable, maintainable architecture.
+          </p>
         </div>
       </section>
 
-      {/* Origin Story Section - Credibility focused */}
-      <section className="py-8 lg:py-10">
+      {/* What We Build Section */}
+      <section className="py-8 lg:py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center">
-                <Terminal className="w-5 h-5 text-[var(--dd-accent)]" />
-              </div>
-              <h2 className="text-xl font-bold text-[var(--dd-text-main)]">
-                Why we build differently
-              </h2>
-            </div>
-            
-            <div className="space-y-3 text-[var(--dd-text-muted)] leading-relaxed">
-              <p>
-                Deralis Digital was founded by a developer who started coding with 
-                C++, Arduino, and Python—years before it became a career. The goal 
-                was always to build real systems, not decorate templates.
-              </p>
-              <p>
-                Five years in enterprise IT followed—Dassault Systèmes, Clear Channel, 
-                Scaleway. Managing servers, debugging infrastructure, understanding how 
-                real businesses run on real systems. That experience shapes everything 
-                we build today.
-              </p>
-              <p className="text-[var(--dd-text-main)] font-medium">
-                We&apos;ve seen enough spreadsheet chaos and broken tools. That&apos;s why 
-                every project starts with validation—making sure we build the right 
-                thing, the right way, from day one.
-              </p>
-            </div>
+          <div className="max-w-4xl mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
+              What we build
+            </h2>
+            <p className="text-[var(--dd-text-muted)]">
+              We specialize in full-stack platform development.
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* Standards + Process Grid */}
-      <section className="py-8 lg:py-10 bg-[var(--dd-bg-soft)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            {/* Standards */}
-            <div>
-              <h2 className="text-2xl font-bold text-[var(--dd-text-main)] mb-4">
-                Our standards
-              </h2>
-              <p className="text-[var(--dd-text-muted)] mb-6 leading-relaxed">
-                Every project follows the same principles. No exceptions, no shortcuts.
-              </p>
-              <div className="space-y-3">
-                {standards.map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[var(--dd-accent)] mt-0.5 flex-shrink-0" />
-                    <span className="text-[var(--dd-text-muted)]">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Process Card */}
-            <div className="gradient-border p-6">
-              <h3 className="text-lg font-semibold text-[var(--dd-text-main)] mb-4">
-                How we work
-              </h3>
-              <div className="space-y-4">
-                {[
-                  {
-                    step: "01",
-                    title: "Discovery & validation",
-                    desc: "Understand your problem, validate the approach.",
-                  },
-                  {
-                    step: "02",
-                    title: "Scope & quote",
-                    desc: "Clear deliverables, timeline, pricing. No surprises.",
-                  },
-                  {
-                    step: "03",
-                    title: "Build & iterate",
-                    desc: "Weekly demos, direct communication, rapid progress.",
-                  },
-                  {
-                    step: "04",
-                    title: "Launch & support",
-                    desc: "Deployment, documentation, ongoing partnership.",
-                  },
-                ].map((item) => (
-                  <div key={item.step} className="flex gap-3">
-                    <span className="text-[var(--dd-accent)] font-mono font-bold text-sm">
-                      {item.step}
-                    </span>
-                    <div>
-                      <p className="font-medium text-[var(--dd-text-main)] text-sm">
-                        {item.title}
-                      </p>
-                      <p className="text-xs text-[var(--dd-text-muted)]">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-8 lg:py-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[var(--dd-text-main)] mb-6 text-center">
-            What drives us
-          </h2>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {values.map((value) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {whatWeBuild.map((item) => (
               <div
-                key={value.title}
+                key={item.title}
                 className="p-5 rounded-xl bg-[var(--dd-bg-card)] border border-[var(--dd-border)] card-hover"
               >
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center mb-3">
-                  <value.icon className="w-5 h-5 text-[var(--dd-accent)]" />
+                  <item.icon className="w-5 h-5 text-[var(--dd-accent)]" />
                 </div>
                 <h3 className="text-base font-semibold text-[var(--dd-text-main)] mb-1">
-                  {value.title}
+                  {item.title}
                 </h3>
-                <p className="text-[var(--dd-text-muted)] text-sm">
-                  {value.description}
+                <p className="text-sm text-[var(--dd-text-muted)]">
+                  {item.description}
                 </p>
               </div>
             ))}
+          </div>
+
+          <p className="text-sm text-[var(--dd-text-dim)] mt-6 max-w-4xl">
+            Each platform we build is designed around clean engineering, not templates or pre-made components.
+          </p>
+        </div>
+      </section>
+
+      {/* How We Work Section */}
+      <section className="py-8 lg:py-12 bg-[var(--dd-bg-soft)]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
+              How we work
+            </h2>
+            <p className="text-[var(--dd-text-muted)]">
+              Clients work directly with the engineer behind Deralis Digital — without 
+              layers, outsourcing, or miscommunication. The process is simple and technical:
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {process.map((item) => (
+              <div
+                key={item.step}
+                className="p-5 rounded-xl bg-[var(--dd-bg)] border border-[var(--dd-border)]"
+              >
+                <span className="text-[var(--dd-accent)] font-mono font-bold text-sm">
+                  {item.step}
+                </span>
+                <h3 className="text-base font-semibold text-[var(--dd-text-main)] mt-2 mb-1">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-[var(--dd-text-muted)]">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-sm text-[var(--dd-text-dim)] mt-6 max-w-4xl">
+            This workflow ensures stable delivery and reduces time-to-production.
+          </p>
+        </div>
+      </section>
+
+      {/* Technology Expertise Section */}
+      <section className="py-8 lg:py-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
+              Technology expertise
+            </h2>
+            <p className="text-[var(--dd-text-muted)]">
+              We use a modern, unified stack to keep development fast, predictable, and scalable.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Frontend */}
+            <div>
+              <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-3 flex items-center gap-2">
+                <Code2 className="w-4 h-4 text-[var(--dd-accent)]" />
+                Frontend
+              </h3>
+              <div className="space-y-2">
+                {techStack.frontend.map((tech) => (
+                  <div
+                    key={tech}
+                    className="px-3 py-2 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-sm text-[var(--dd-text-muted)]"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Backend */}
+            <div>
+              <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-3 flex items-center gap-2">
+                <Database className="w-4 h-4 text-[var(--dd-accent)]" />
+                Backend
+              </h3>
+              <div className="space-y-2">
+                {techStack.backend.map((tech) => (
+                  <div
+                    key={tech}
+                    className="px-3 py-2 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-sm text-[var(--dd-text-muted)]"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Systems */}
+            <div>
+              <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-3 flex items-center gap-2">
+                <Server className="w-4 h-4 text-[var(--dd-accent)]" />
+                Systems
+              </h3>
+              <div className="space-y-2">
+                {techStack.systems.map((tech) => (
+                  <div
+                    key={tech}
+                    className="px-3 py-2 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-sm text-[var(--dd-text-muted)]"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Automations & AI */}
+            <div>
+              <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-3 flex items-center gap-2">
+                <Bot className="w-4 h-4 text-[var(--dd-accent)]" />
+                Automations & AI
+              </h3>
+              <div className="space-y-2">
+                {techStack.automations.map((tech) => (
+                  <div
+                    key={tech}
+                    className="px-3 py-2 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-sm text-[var(--dd-text-muted)]"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Tech Stack Section */}
-      <section className="py-8 lg:py-10 bg-[var(--dd-bg-soft)]">
+      {/* Screenshots Section */}
+      <section className="py-8 lg:py-12 bg-[var(--dd-bg-soft)]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[var(--dd-text-main)] mb-2 text-center">
-            Technologies we work with
-          </h2>
-          <p className="text-sm text-[var(--dd-text-dim)] text-center mb-6">
-            From modern frameworks to battle-tested databases
-          </p>
+          <div className="max-w-4xl mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
+              Real systems we&apos;ve built
+            </h2>
+            <p className="text-[var(--dd-text-muted)]">
+              Dashboards, workflows, and database systems used in production environments.
+            </p>
+          </div>
+          
+          {/* Screenshot Gallery with Modal */}
+          <ScreenshotGallery />
 
-          <div className="flex flex-wrap justify-center gap-3">
-            {stack.map((tech) => (
-              <div
-                key={tech.name}
-                className="px-4 py-3 rounded-lg bg-[var(--dd-bg)] border border-[var(--dd-border)] hover:border-[var(--dd-accent)] transition-colors"
-              >
-                <p className="font-medium text-[var(--dd-text-main)] text-sm">
-                  {tech.name}
-                </p>
-                <p className="text-xs text-[var(--dd-text-dim)]">{tech.category}</p>
+          <div className="mt-6 text-center space-y-2">
+            <p className="text-sm text-[var(--dd-text-muted)]">
+              These systems include multi-tenant logic, role-based access, SQL databases, and automation workflows.
+            </p>
+            <p className="text-sm text-[var(--dd-text-muted)]">
+              All platforms shown here are built with real databases, real logic, and real engineering — not templates.
+            </p>
+            <p className="text-sm text-[var(--dd-text-dim)]">
+              This demonstrates our focus: systems, not pages.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Principle */}
+      <section className="py-6 border-y border-[var(--dd-border)]">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <p className="text-[var(--dd-text-dim)] text-sm uppercase tracking-wider mb-1">Principle</p>
+          <p className="text-xl font-semibold text-[var(--dd-text-main)]">
+            Engineering first. Everything else second.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Section */}
+      <section className="py-8 lg:py-12">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-6">
+            Why businesses choose Deralis Digital
+          </h2>
+
+          <div className="grid sm:grid-cols-2 gap-3">
+            {whyChoose.map((item) => (
+              <div key={item} className="flex items-center gap-3">
+                <CheckCircle2 className="w-5 h-5 text-[var(--dd-accent)] flex-shrink-0" />
+                <span className="text-[var(--dd-text-muted)]">{item}</span>
               </div>
             ))}
           </div>
+
+          <p className="text-[var(--dd-text-main)] font-medium mt-8">
+            Deralis Digital is built for founders, teams, and businesses that need 
+            real engineering, not web decoration.
+          </p>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className="py-8 lg:py-10 bg-[var(--dd-bg-soft)]">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-3">
+            <MapPin className="w-5 h-5 text-[var(--dd-accent)]" />
+            <h2 className="text-xl font-bold text-[var(--dd-text-main)]">
+              Where we operate
+            </h2>
+          </div>
+          <p className="text-[var(--dd-text-muted)]">
+            Based in France — Working with clients worldwide.
+          </p>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-8 lg:py-10">
+      <section className="py-8 lg:py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
             Ready to build something real?
@@ -374,7 +464,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary">
-              Speak to an engineer
+              Start a conversation
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link href="/projects" className="btn-secondary">

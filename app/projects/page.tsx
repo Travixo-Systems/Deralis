@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   ArrowRight, 
   ExternalLink,
@@ -48,6 +49,7 @@ const projects = [
     ],
     liveUrl: "https://travixosystems.com",
     appUrl: "https://app.travixosystems.com",
+    screenshot: "/projects/travixo-dashboard.png",
     featured: true,
   },
   {
@@ -201,6 +203,26 @@ export default function ProjectsPage() {
               </div>
               
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                {/* Screenshot */}
+                <div className="rounded-xl overflow-hidden border border-[var(--dd-border)] bg-[var(--dd-bg-card)]">
+                  <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--dd-border)] bg-[var(--dd-bg)]">
+                    <div className="w-3 h-3 rounded-full bg-red-500/60" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
+                    <div className="w-3 h-3 rounded-full bg-green-500/60" />
+                    <span className="ml-3 text-xs text-[var(--dd-text-dim)] font-mono">
+                      app.travixosystems.com
+                    </span>
+                  </div>
+                  <div className="aspect-video relative">
+                    <Image
+                      src="/projects/travixo-dashboard.png"
+                      alt="TraviXO Dashboard - Asset management system"
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                </div>
+
                 {/* Content */}
                 <div>
                   <div className="flex items-center gap-3 mb-3">
@@ -236,6 +258,18 @@ export default function ProjectsPage() {
                     </ul>
                   </div>
 
+                  {/* Tech stack */}
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {project.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 rounded text-xs bg-[var(--dd-bg-soft)] border border-[var(--dd-border)] text-[var(--dd-text-muted)]"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
                   {/* CTAs */}
                   <div className="flex flex-wrap gap-3">
                     {project.liveUrl && (
@@ -262,64 +296,40 @@ export default function ProjectsPage() {
                     )}
                   </div>
                 </div>
-
-                {/* Info Card */}
-                <div className="gradient-border p-6">
-                  <div className="space-y-5">
-                    <div>
-                      <p className="text-xs text-[var(--dd-text-dim)] mb-1">Status</p>
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-green-500" />
-                        <span className="text-[var(--dd-text-main)] font-medium text-sm">
-                          {project.status}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div>
-                      <p className="text-xs text-[var(--dd-text-dim)] mb-1">Year</p>
-                      <p className="text-[var(--dd-text-main)] font-medium text-sm">
-                        {project.year}
-                      </p>
-                    </div>
-
-                    <div>
-                      <p className="text-xs text-[var(--dd-text-dim)] mb-2">
-                        Tech Stack
-                      </p>
-                      <div className="flex flex-wrap gap-1.5">
-                        {project.stack.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-2 py-1 rounded text-xs bg-[var(--dd-bg)] border border-[var(--dd-border)] text-[var(--dd-text-muted)]"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="pt-5 border-t border-[var(--dd-border)]">
-                      <p className="text-sm text-[var(--dd-text-muted)]">
-                        Want something similar?
-                      </p>
-                      <Link
-                        href="/contact?service=development"
-                        className="text-[var(--dd-accent)] hover:underline text-sm font-medium inline-flex items-center gap-1 mt-1"
-                      >
-                        Let&apos;s talk
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
         ))}
 
+      {/* Fleet Screenshot Section */}
+      <section className="py-8 lg:py-10 bg-[var(--dd-bg-soft)]">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <p className="text-center text-sm text-[var(--dd-text-dim)] mb-4">
+            Equipment fleet management with real-time status tracking
+          </p>
+          <div className="rounded-xl overflow-hidden border border-[var(--dd-border)] bg-[var(--dd-bg-card)]">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--dd-border)] bg-[var(--dd-bg)]">
+              <div className="w-3 h-3 rounded-full bg-red-500/60" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
+              <div className="w-3 h-3 rounded-full bg-green-500/60" />
+              <span className="ml-3 text-xs text-[var(--dd-text-dim)] font-mono">
+                app.travixosystems.com/fleet
+              </span>
+            </div>
+            <div className="aspect-[2/1] relative">
+              <Image
+                src="/projects/travixo-fleet.png"
+                alt="TraviXO Fleet Management - Equipment tracking table"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Other Projects */}
-      <section className="py-8 lg:py-12 bg-[var(--dd-bg-soft)]">
+      <section className="py-8 lg:py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-xl font-bold text-[var(--dd-text-main)] mb-6">
             More Projects
@@ -331,7 +341,7 @@ export default function ProjectsPage() {
               .map((project) => (
                 <div
                   key={project.id}
-                  className="p-5 rounded-xl bg-[var(--dd-bg)] border border-[var(--dd-border)] card-hover"
+                  className="p-5 rounded-xl bg-[var(--dd-bg-card)] border border-[var(--dd-border)] card-hover"
                 >
                   <div className="flex items-start gap-3 mb-3">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center flex-shrink-0">
@@ -402,7 +412,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-8 lg:py-12">
+      <section className="py-8 lg:py-12 bg-[var(--dd-bg-soft)]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-[var(--dd-text-main)] mb-3">
             Have a project in mind?
@@ -424,7 +434,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-8 border-t border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
+      <section className="py-8 border-t border-[var(--dd-border)]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>

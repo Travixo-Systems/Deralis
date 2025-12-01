@@ -176,13 +176,13 @@ export default function Hero() {
                     Fully bilingual
                   </p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-0.5">
-                    France - Worldwide
+                    France — Worldwide
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Screenshot with skeleton placeholder */}
+            {/* Screenshot */}
             <div className="relative rounded-xl overflow-hidden border border-[var(--dd-border)] bg-[var(--dd-bg-card)]">
               {/* Browser chrome */}
               <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
@@ -194,59 +194,15 @@ export default function Hero() {
                 </span>
               </div>
               
-              {/* Skeleton UI placeholder */}
-              <div className="aspect-video bg-[var(--dd-bg)] p-4">
-                {/* Skeleton header */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-[var(--dd-bg-soft)] animate-pulse" />
-                    <div className="w-24 h-4 rounded bg-[var(--dd-bg-soft)] animate-pulse" />
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="w-16 h-6 rounded bg-[var(--dd-bg-soft)] animate-pulse" />
-                    <div className="w-16 h-6 rounded bg-[var(--dd-accent)]/20 animate-pulse" />
-                  </div>
-                </div>
-                
-                {/* Skeleton stats row */}
-                <div className="grid grid-cols-4 gap-3 mb-4">
-                  {[...Array(4)].map((_, i) => (
-                    <div key={i} className="p-3 rounded-lg bg-[var(--dd-bg-soft)]">
-                      <div className="w-8 h-5 rounded bg-[var(--dd-bg-card)] animate-pulse mb-2" />
-                      <div className="w-12 h-3 rounded bg-[var(--dd-bg-card)] animate-pulse" />
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Skeleton table */}
-                <div className="rounded-lg border border-[var(--dd-border)] overflow-hidden">
-                  <div className="flex gap-4 p-2 bg-[var(--dd-bg-soft)] border-b border-[var(--dd-border)]">
-                    <div className="w-20 h-3 rounded bg-[var(--dd-bg-card)] animate-pulse" />
-                    <div className="w-16 h-3 rounded bg-[var(--dd-bg-card)] animate-pulse" />
-                    <div className="w-24 h-3 rounded bg-[var(--dd-bg-card)] animate-pulse" />
-                    <div className="w-14 h-3 rounded bg-[var(--dd-bg-card)] animate-pulse" />
-                  </div>
-                  {[...Array(3)].map((_, i) => (
-                    <div key={i} className="flex gap-4 p-2 border-b border-[var(--dd-border)] last:border-0">
-                      <div className="w-20 h-3 rounded bg-[var(--dd-bg-soft)] animate-pulse" />
-                      <div className="w-16 h-3 rounded bg-[var(--dd-bg-soft)] animate-pulse" />
-                      <div className="w-24 h-3 rounded bg-[var(--dd-bg-soft)] animate-pulse" />
-                      <div className="w-14 h-3 rounded bg-[var(--dd-accent)]/10 animate-pulse" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              {/* When you have the screenshot, replace skeleton with:
+              {/* Screenshot */}
               <div className="aspect-video relative">
                 <Image
                   src="/projects/travixo-dashboard.png"
                   alt="TraviXO Dashboard - Asset management system"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
-              */}
             </div>
 
             {/* Tech stack pills */}
