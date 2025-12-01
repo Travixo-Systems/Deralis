@@ -45,15 +45,10 @@
     "stats": {
       "platformsShipped": "5+ plateformes livrées",
       "platformsShippedShort": "Plateformes livrées",
-<<<<<<< HEAD
-      "deliveryRate": "100% des projets livrés",
-      "deliveryRateShort": "Livraison",
-=======
       "platformsSublabel": "Next.js / SQL / Supabase",
       "deliveryRate": "100% livraison garantie",
       "deliveryRateShort": "Taux de livraison",
       "deliverySublabel": "Livrées & déployées",
->>>>>>> origin/claude/setup-nextjs-i18n-01PkmQ7KXYBMJyBeRWtGqC4j
       "responseTime": "Réponse sous 24h",
       "responseTimeShort": "Temps de réponse",
       "responseSublabel": "Support technique",
@@ -159,8 +154,8 @@
       }
     },
     "clients": {
-      "title": "Avec qui nous",
-      "titleHighlight": "travaillons",
+      "title": "Nous",
+      "titleHighlight": "accompagnons",
       "description": "Des entreprises et des équipes qui ont besoin d’outils numériques concrets, pas seulement d’un site internet.",
       "items": {
         "startups": {
