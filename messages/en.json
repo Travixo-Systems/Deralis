@@ -1,0 +1,977 @@
+{
+  "metadata": {
+    "title": {
+      "default": "Deralis Digital – Modern Web Development & Digital Transformation",
+      "template": "%s | Deralis Digital"
+    },
+    "description": "We build high-performance websites, custom web applications, workflow automations and AI-powered tools that help businesses modernize and scale efficiently."
+  },
+  "common": {
+    "brand": {
+      "name": "Deralis Digital",
+      "tagline": "Modern web systems & digital transformation."
+    },
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "projects": "Projects",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "actions": {
+      "contact": "Contact us",
+      "startConversation": "Start a conversation",
+      "buildYourSystem": "Build your system",
+      "seePlatforms": "See our platforms",
+      "learnMore": "Learn more",
+      "viewMore": "View more",
+      "viewAll": "View all",
+      "viewAllServices": "View all services",
+      "viewAllPlatforms": "See all platforms",
+      "bookCall": "Book a call",
+      "readMore": "Read more",
+      "speakToEngineer": "Speak to an engineer",
+      "backToHome": "Back to home",
+      "visitWebsite": "Visit website",
+      "openApp": "Open app",
+      "viewOurWork": "View our work",
+      "workWithUs": "Work with us",
+      "getInTouch": "Get in touch",
+      "sendMessage": "Send message",
+      "sending": "Sending..."
+    },
+    "stats": {
+      "platformsShipped": "5+ platforms shipped",
+      "platformsShippedShort": "Platforms shipped",
+      "deliveryRate": "100% delivery rate",
+      "deliveryRateShort": "Delivery rate",
+      "responseTime": "Replies within 24h",
+      "responseTimeShort": "Response time",
+      "bilingual": "French / English",
+      "bilingualShort": "Fully bilingual",
+      "founded": "Founded",
+      "completionRate": "Completion rate"
+    },
+    "footer": {
+      "tagline": "Build. Modernize. Digitize.",
+      "subtagline": "Modern web systems and digital transformation for businesses ready to scale.",
+      "navigation": "Navigation",
+      "services": "Services",
+      "contact": "Contact",
+      "legal": "Legal",
+      "location": "Based in France — Working worldwide",
+      "locationShort": "France & Remote",
+      "rights": "All rights reserved."
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "legalNotice": "Legal Notice"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "Full-stack engineering, not templates.",
+      "title": "Modern Web Systems",
+      "titleHighlight": "Not Just Websites.",
+      "description": "We build real web platforms—Next.js applications powered by SQL databases, Supabase, secure authentication, and automation workflows.",
+      "subDescription": "We deliver software, not pages. Systems, not templates.",
+      "features": {
+        "tech": "Next.js, React, TypeScript",
+        "database": "PostgreSQL, Supabase, Prisma",
+        "capabilities": "Dashboards, SaaS, automation, APIs"
+      },
+      "stats": {
+        "platforms": {
+          "value": "5+",
+          "label": "Platforms shipped",
+          "sublabel": "Next.js / SQL / Supabase"
+        },
+        "delivery": {
+          "value": "100%",
+          "label": "Delivery rate",
+          "sublabel": "Shipped, tested, deployed"
+        },
+        "response": {
+          "value": "24h",
+          "label": "Response time",
+          "sublabel": "Real engineering support"
+        },
+        "bilingual": {
+          "value": "EN/FR",
+          "label": "Fully bilingual",
+          "sublabel": "France — Worldwide"
+        }
+      }
+    },
+    "services": {
+      "title": "What we",
+      "titleHighlight": "build",
+      "description": "From validation to deployment. Full-stack engineering with real databases, APIs, and long-term support.",
+      "items": {
+        "consulting": {
+          "title": "Strategic Consulting & Business Validation",
+          "description": "Idea validation, market analysis, competition research, and clear roadmaps before you invest in development.",
+          "features": ["Idea validation", "Market / competition", "Roadmaps"]
+        },
+        "development": {
+          "title": "Full-Stack Web Development",
+          "description": "Next.js applications with SQL databases, authentication, dashboards, and scalable architecture. Systems, not pages.",
+          "features": ["Next.js / React", "SQL databases", "APIs & auth"],
+          "highlight": "Systems, not pages."
+        },
+        "ai": {
+          "title": "AI Tools & Custom GPT Integration",
+          "description": "AI copilots connected to your database, trained on your data, integrated into your workflows.",
+          "features": ["Custom GPTs", "Database-connected AI", "Automation"]
+        },
+        "support": {
+          "title": "Support & Workflow Automation",
+          "description": "Ongoing maintenance, workflow automation, and technical support. We don't disappear after launch.",
+          "features": ["Workflow automation", "Integrations", "Ongoing support"]
+        }
+      }
+    },
+    "clients": {
+      "title": "Who we",
+      "titleHighlight": "work with",
+      "description": "We partner with businesses that need real systems, not just websites.",
+      "items": {
+        "startups": {
+          "title": "Startups & Founders",
+          "description": "You have an idea but need technical expertise to validate and build it. We help you ship fast without cutting corners.",
+          "points": ["Idea validation", "MVP development", "Technical guidance"]
+        },
+        "smb": {
+          "title": "Small Businesses",
+          "description": "You're ready to digitalize operations, automate workflows, or replace outdated tools with real systems.",
+          "points": ["Process digitalization", "Custom dashboards", "Workflow automation"]
+        },
+        "modernization": {
+          "title": "Teams Needing Modernization",
+          "description": "You have legacy systems or inherited codebases that need to be rebuilt, migrated, or properly maintained.",
+          "points": ["Legacy migration", "Codebase takeover", "Technical debt cleanup"]
+        }
+      }
+    },
+    "approach": {
+      "title": "Our",
+      "titleHighlight": "approach",
+      "description": "A clear, structured process from first call to long-term partnership.",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "Discovery & Validation",
+          "description": "We understand your problem, validate the approach, and make sure we're building the right thing."
+        },
+        "step2": {
+          "number": "02",
+          "title": "Scope & Planning",
+          "description": "Clear deliverables, timeline, and pricing. You know exactly what you're getting before we start."
+        },
+        "step3": {
+          "number": "03",
+          "title": "Build & Iterate",
+          "description": "Weekly demos, direct communication, rapid progress. You see real progress every week."
+        },
+        "step4": {
+          "number": "04",
+          "title": "Launch & Support",
+          "description": "Deployment, documentation, and ongoing partnership. We don't disappear after launch."
+        }
+      }
+    },
+    "featured": {
+      "title": "Featured",
+      "titleHighlight": "platforms",
+      "description": "Real systems we've built — dashboards, databases, automation.",
+      "label": "Featured",
+      "projects": {
+        "travixo": {
+          "title": "TraviXO Systems",
+          "type": "B2B SaaS Platform",
+          "description": "QR-based asset tracking and VGP compliance automation. Multi-tenant architecture with dashboards, inspection scheduling, and compliance logging."
+        },
+        "travixoWeb": {
+          "title": "TraviXO Web",
+          "type": "Marketing Website",
+          "description": "SEO-optimized, multilingual marketing site. Conversion-focused design driving signups to the SaaS platform."
+        },
+        "more": {
+          "title": "More Projects",
+          "type": "Various",
+          "description": "Legacy systems, CRUD apps, and custom internal tools. See our full portfolio for details."
+        }
+      },
+      "actions": {
+        "visitSite": "Visit site",
+        "openApp": "Open app"
+      }
+    },
+    "highlight": {
+      "badge": "Case Study",
+      "title": "TraviXO Systems",
+      "subtitle": "B2B SaaS • Equipment Tracking • VGP Compliance",
+      "description": "A full multi-tenant SaaS platform for equipment rental companies. QR-based asset tracking, inspection scheduling, and compliance automation—all powered by a real PostgreSQL database.",
+      "detailedDescription": "The platform is built with a real PostgreSQL database, multi-tenant access layers, automation workflows, and secure role-based permissions.",
+      "features": [
+        "Multi-tenant SaaS architecture",
+        "QR code asset tracking",
+        "Inspection scheduling",
+        "VGP compliance automation",
+        "Role-based access control",
+        "Real-time PostgreSQL database"
+      ],
+      "actions": {
+        "visitWebsite": "Visit website",
+        "seeAllProjects": "See all projects"
+      }
+    },
+    "faq": {
+      "title": "Common",
+      "titleHighlight": "questions",
+      "description": "Quick answers to questions you might have.",
+      "items": {
+        "pricing": {
+          "question": "How much does a typical project cost?",
+          "answer": "Consulting starts at €500. Full platforms typically range from €5,000–€25,000 depending on scope. We provide a detailed quote after understanding your needs."
+        },
+        "tools": {
+          "question": "What technologies do you work with?",
+          "answer": "Our primary stack is Next.js, React, TypeScript, and PostgreSQL. We also work with Supabase, Prisma, and various APIs. We pick the right tool for the job."
+        },
+        "timeline": {
+          "question": "How long does a project take?",
+          "answer": "A consulting engagement takes 1-2 weeks. A typical web application takes 4-12 weeks depending on complexity. We provide realistic timelines upfront—no surprises."
+        },
+        "remote": {
+          "question": "Do you work with clients outside France?",
+          "answer": "Yes. We work remotely with clients across Europe and beyond. Communication happens via video calls, email, and your preferred project management tools. Fully bilingual in English and French."
+        },
+        "support": {
+          "question": "Do you offer ongoing support after launch?",
+          "answer": "Yes. We offer maintenance packages that include bug fixes, updates, monitoring, and feature additions. Most clients choose ongoing support—we don't disappear after delivery."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to build something real?",
+      "description": "Let's talk about your project. Free consultation, no pressure. We'll discuss your goals and see if we're a good fit.",
+      "note": "Typically respond within 24 hours • EN/FR bilingual"
+    }
+  },
+  "services": {
+    "metadata": {
+      "title": "Services — Full-Stack Web Development",
+      "description": "Full-stack web development with Next.js, SQL databases, Supabase, and automation workflows. Real platforms, not templates. Systems, not pages."
+    },
+    "hero": {
+      "badge": "Full-stack engineering, not templates.",
+      "title": "Services that",
+      "titleHighlight": "drive results",
+      "description": "From validation to deployment and beyond. Next.js applications with SQL databases, authentication, automation workflows, and scalable architecture. We build systems that power your business."
+    },
+    "techBar": {
+      "label": "Technologies we work with"
+    },
+    "items": {
+      "consulting": {
+        "id": "consulting",
+        "title": "Strategic Consulting & Business Validation",
+        "subtitle": "Clarity before code.",
+        "description": "Before building anything, we validate your idea, analyze the market, and create a roadmap that makes sense. No wasted budget on features nobody needs.",
+        "features": [
+          "Business idea validation",
+          "Market & competition analysis",
+          "Technical feasibility assessment",
+          "Project roadmap & timeline",
+          "Budget estimation & phasing"
+        ],
+        "whoFor": "Founders with an idea who need clarity before investing in development.",
+        "cta": "Get a strategy session",
+        "timeline": "1-2 weeks",
+        "investment": "From €500"
+      },
+      "development": {
+        "id": "development",
+        "title": "Full-Stack Web Development",
+        "subtitle": "Systems, not pages.",
+        "description": "We build real digital platforms with frontend, backend, and database layers. Next.js applications powered by SQL, authentication, and automation workflows.",
+        "features": [
+          "Next.js, React, TypeScript",
+          "SQL databases (PostgreSQL, MySQL) & NoSQL (MongoDB)",
+          "API integrations (REST, Webhooks, OAuth)",
+          "Authentication & permission systems",
+          "Dashboards, portals, internal tools",
+          "Scalable architecture (Prisma, Supabase)"
+        ],
+        "whoFor": "Businesses that need real software, not a brochure website.",
+        "note": "If it's only HTML/CSS, it's not our work.",
+        "cta": "Build your platform",
+        "timeline": "4-12 weeks",
+        "investment": "From €3,000"
+      },
+      "ai": {
+        "id": "ai",
+        "title": "AI Tools & Custom GPT Integration",
+        "subtitle": "AI connected to your data.",
+        "description": "We build AI copilots that actually understand your business—connected to your database, trained on your data, integrated into your workflows.",
+        "features": [
+          "Custom GPT assistants",
+          "AI copilots connected to your database",
+          "Internal assistants trained on your data",
+          "Automation between tools (Make, Zapier, custom)",
+          "Report generation & content automation",
+          "Intelligent task routing"
+        ],
+        "whoFor": "Teams ready to leverage AI for real productivity gains, not gimmicks.",
+        "cta": "Explore AI solutions",
+        "timeline": "2-6 weeks",
+        "investment": "From €1,500"
+      },
+      "support": {
+        "id": "automation",
+        "title": "Support & Workflow Automation",
+        "subtitle": "We don't disappear after launch.",
+        "description": "Continuous updates, monitoring, and improvements. Your technical partner for the long run, not a one-time vendor.",
+        "features": [
+          "Workflow automation (Zapier, Make, n8n)",
+          "Third-party integrations",
+          "Database setup & migration",
+          "Ongoing maintenance & support",
+          "Performance monitoring & optimization",
+          "On-call technical support"
+        ],
+        "whoFor": "Businesses that want a reliable tech partner, not a disappearing freelancer.",
+        "cta": "Get ongoing support",
+        "timeline": "Ongoing",
+        "investment": "From €500/month"
+      }
+    },
+    "cards": {
+      "whoFor": "Who is this for?",
+      "timeline": "Typical timeline",
+      "investment": "Investment"
+    },
+    "comparison": {
+      "title": "What makes us different",
+      "description": "We focus on real engineering and long-term partnerships.",
+      "typical": {
+        "title": "Typical approach",
+        "items": [
+          "Templates and page builders",
+          "No real database",
+          "Static pages with contact forms",
+          "Disappears after delivery"
+        ]
+      },
+      "deralis": {
+        "title": "Deralis Digital",
+        "items": [
+          "Custom code (Next.js, React, TypeScript)",
+          "Real databases (PostgreSQL, MySQL, MongoDB)",
+          "Full backend + API integrations",
+          "Long-term technical partnership"
+        ]
+      }
+    },
+    "notSure": {
+      "title": "Not sure which service you need?",
+      "description": "Book a free 30-minute consultation. We'll discuss your project and recommend the best approach."
+    },
+    "faq": {
+      "title": "Common questions",
+      "items": {
+        "cost": {
+          "question": "How much does a typical project cost?",
+          "answer": "It depends on scope. Consulting starts at €500, while a full SaaS platform can range from €5,000 to €25,000+. We provide detailed quotes after understanding your needs."
+        },
+        "tech": {
+          "question": "What technologies do you work with?",
+          "answer": "Our primary stack is Next.js, React, and TypeScript. We also work with PHP, Node.js, and databases including PostgreSQL, MySQL, and MongoDB."
+        },
+        "remote": {
+          "question": "Do you work with clients outside of France?",
+          "answer": "Yes. We work remotely across Europe and beyond. Communication via video calls, email, and your preferred tools."
+        },
+        "takeover": {
+          "question": "Can you take over an existing project?",
+          "answer": "Absolutely. We audit the current state, identify issues, and propose a plan to move forward."
+        }
+      }
+    },
+    "finalCta": {
+      "title": "Ready to build something real?"
+    }
+  },
+  "projects": {
+    "metadata": {
+      "title": "Projects",
+      "description": "Real platforms built by Deralis Digital — SaaS applications, dashboards, and web systems powered by Next.js, Supabase, and PostgreSQL."
+    },
+    "hero": {
+      "title": "Our",
+      "titleHighlight": "work",
+      "description": "Real platforms we've built. SaaS applications, dashboards, and web systems — modern, scalable, and production-ready."
+    },
+    "stats": {
+      "delivered": "Platforms delivered",
+      "founded": "Founded",
+      "completionRate": "Completion rate"
+    },
+    "featured": {
+      "badge": "Featured Project",
+      "keyFeatures": "Key Features"
+    },
+    "fleetSection": {
+      "caption": "Equipment fleet management with real-time status tracking"
+    },
+    "moreProjects": "More Projects",
+    "status": {
+      "live": "Live",
+      "inDevelopment": "In Development",
+      "mvpComplete": "MVP Complete",
+      "completed": "Completed"
+    },
+    "items": {
+      "travixoSystems": {
+        "title": "TraviXO Systems",
+        "type": "B2B SaaS Web Application",
+        "description": "QR-based asset tracking and VGP compliance automation for equipment-rental companies. Full multi-tenant SaaS platform with dashboard, asset registry, inspection scheduler, and compliance logging.",
+        "features": [
+          "Multi-tenant architecture",
+          "QR code asset tracking",
+          "Inspection scheduling",
+          "Compliance log & reporting",
+          "Role-based access control"
+        ]
+      },
+      "travixoWeb": {
+        "title": "TraviXO Web",
+        "type": "Marketing Website",
+        "description": "Public marketing site for TraviXO Systems. SEO-optimized, multilingual landing pages showcasing features, pricing, and product benefits.",
+        "features": [
+          "SEO optimization",
+          "Multilingual (FR/EN)",
+          "Responsive design",
+          "Conversion-focused CTAs"
+        ]
+      },
+      "deralisDigital": {
+        "title": "Deralis Digital",
+        "type": "Agency Website",
+        "description": "Corporate website for Deralis Digital agency. Lead generation optimized with service showcase, project portfolio, and contact system.",
+        "features": [
+          "Lead generation optimized",
+          "Service showcase",
+          "Project portfolio",
+          "Contact form"
+        ]
+      },
+      "ecoridepool": {
+        "title": "EcoRidePool",
+        "type": "Carpooling Web Application",
+        "description": "Carpooling platform connecting drivers and passengers. Full trip management system with route planning, bookings, and messaging.",
+        "features": [
+          "User authentication",
+          "Trip creation & search",
+          "Booking management",
+          "In-app messaging"
+        ]
+      },
+      "arcadiaZoo": {
+        "title": "Arcadia Zoo",
+        "type": "Educational CRUD Application",
+        "description": "Zoo management system for tracking animals, species, habitats, and staff. Full CRUD operations and database design.",
+        "features": [
+          "Full CRUD operations",
+          "Database schema design",
+          "User authentication",
+          "Admin dashboard"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Have a project in mind?",
+      "description": "Whether it's a SaaS platform, a dashboard, or a web application — we're ready to bring your vision to life."
+    },
+    "finalCta": {
+      "title": "Want to see more details?",
+      "description": "We're happy to walk you through any project."
+    }
+  },
+  "about": {
+    "metadata": {
+      "title": "About — Independent Engineering Practice",
+      "description": "Deralis Digital is an independent engineering practice building real web platforms — SaaS applications, dashboards, automation workflows, and SQL-powered databases."
+    },
+    "hero": {
+      "badge": "Independent engineering practice",
+      "title": "About",
+      "titleHighlight": "Deralis Digital",
+      "description": "We build real web systems — platforms, dashboards, automation."
+    },
+    "intro": {
+      "paragraph1": "Deralis Digital is an independent engineering practice focused on building real web platforms — not simple websites. We design and develop systems: SaaS applications, dashboards, automation workflows, and SQL-powered databases using modern technologies such as Next.js, React, TypeScript, Supabase, and Prisma.",
+      "paragraph2": "Our approach is engineering-first, built around clarity, performance, and long-term reliability. No WordPress. No templates. No drag-and-drop. Only real software."
+    },
+    "philosophy": {
+      "title": "Our philosophy",
+      "subtitle": "Modern businesses don't need pages — they need systems.",
+      "systemsTitle": "Systems that:",
+      "systems": [
+        "Store and structure data reliably",
+        "Automate repetitive work",
+        "Integrate with existing tools and APIs",
+        "Scale without breaking",
+        "Deliver real operational value"
+      ],
+      "conclusion": "We build platforms that replace spreadsheets, manual processes, and outdated workflows with modern, stable, maintainable architecture."
+    },
+    "whatWeBuild": {
+      "title": "What we build",
+      "description": "We specialize in full-stack platform development.",
+      "items": {
+        "saas": {
+          "title": "SaaS Platforms",
+          "description": "Multi-tenant, subscription-ready, scalable applications."
+        },
+        "dashboards": {
+          "title": "Admin Dashboards",
+          "description": "Data-driven tools with secure authentication and role-based access."
+        },
+        "databases": {
+          "title": "Database Systems",
+          "description": "PostgreSQL / Supabase architectures, migrations, and schema design."
+        },
+        "automation": {
+          "title": "Automation Workflows",
+          "description": "Integrations with APIs, webhooks, triggers, and automation tools."
+        },
+        "api": {
+          "title": "API Integrations",
+          "description": "Custom REST integrations, webhooks, OAuth, third-party systems."
+        }
+      },
+      "note": "Each platform we build is designed around clean engineering, not templates or pre-made components."
+    },
+    "howWeWork": {
+      "title": "How we work",
+      "description": "Clients work directly with the engineer behind Deralis Digital — without layers, outsourcing, or miscommunication. The process is simple and technical:",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "Technical Discovery",
+          "description": "Understanding your system, workflows, and constraints."
+        },
+        "step2": {
+          "number": "02",
+          "title": "Architecture Design",
+          "description": "Database schema, API structure, core flows, security, scalability."
+        },
+        "step3": {
+          "number": "03",
+          "title": "Development",
+          "description": "Full-stack implementation using Next.js, React, TypeScript, Supabase."
+        },
+        "step4": {
+          "number": "04",
+          "title": "Testing & Deployment",
+          "description": "Staging, QA, production deployment, environment setup."
+        },
+        "step5": {
+          "number": "05",
+          "title": "Long-term Support",
+          "description": "Feature updates, monitoring, improvements, and scaling."
+        }
+      },
+      "note": "This workflow ensures stable delivery and reduces time-to-production."
+    },
+    "techExpertise": {
+      "title": "Technology expertise",
+      "description": "We use a modern, unified stack to keep development fast, predictable, and scalable.",
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "systems": "Systems",
+        "automations": "Automations & AI"
+      }
+    },
+    "screenshots": {
+      "title": "Real systems we've built",
+      "description": "Dashboards, workflows, and database systems used in production environments.",
+      "notes": {
+        "note1": "These systems include multi-tenant logic, role-based access, SQL databases, and automation workflows.",
+        "note2": "All platforms shown here are built with real databases, real logic, and real engineering — not templates.",
+        "note3": "This demonstrates our focus: systems, not pages."
+      }
+    },
+    "principle": {
+      "label": "Principle",
+      "text": "Engineering first. Everything else second."
+    },
+    "whyChoose": {
+      "title": "Why businesses choose Deralis Digital",
+      "items": [
+        "Work directly with a senior engineer",
+        "Full-stack delivery: frontend, backend, database",
+        "Modern stack with long-term maintainability",
+        "Professional codebases, not templates",
+        "Clear communication and fast iteration",
+        "Engineering depth + business understanding"
+      ],
+      "conclusion": "Deralis Digital is built for founders, teams, and businesses that need real engineering, not web decoration."
+    },
+    "location": {
+      "title": "Where we operate",
+      "description": "Based in France — Working with clients worldwide."
+    },
+    "cta": {
+      "title": "Ready to build something real?",
+      "description": "Free consultation, no pressure. Let's talk about your project."
+    },
+    "finalCta": {
+      "title": "Have a question?",
+      "description": "Reach out at"
+    }
+  },
+  "contact": {
+    "metadata": {
+      "title": "Contact",
+      "description": "Get in touch with Deralis Digital. Let's discuss your project and build something real."
+    },
+    "hero": {
+      "title": "Let's build",
+      "titleHighlight": "something real",
+      "description": "Have a project in mind? Tell us about it. We reply within 24 hours."
+    },
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@company.com"
+      },
+      "company": {
+        "label": "Company",
+        "optional": "(optional)",
+        "placeholder": "Your company name"
+      },
+      "service": {
+        "label": "Service interested in",
+        "placeholder": "Select a service",
+        "options": {
+          "consulting": "Strategic Consulting",
+          "development": "Full-Stack Development",
+          "ai": "AI & Automation",
+          "support": "Ongoing Support",
+          "other": "Other / Not sure"
+        }
+      },
+      "budget": {
+        "label": "Budget range",
+        "placeholder": "Select a range",
+        "options": {
+          "under2k": "< €2,000",
+          "2k5k": "€2,000 – €5,000",
+          "5k10k": "€5,000 – €10,000",
+          "10k25k": "€10,000 – €25,000",
+          "over25k": "> €25,000",
+          "notSure": "Not sure yet"
+        }
+      },
+      "message": {
+        "label": "Tell us about your project",
+        "placeholder": "Describe your project, goals, and timeline..."
+      },
+      "error": "Something went wrong. Please try again or email us directly.",
+      "required": "*"
+    },
+    "success": {
+      "title": "Message sent!",
+      "description": "Thanks for reaching out. We'll get back to you within 24 hours."
+    },
+    "sidebar": {
+      "contactInfo": {
+        "title": "Contact Info",
+        "location": "Based in France — Working Worldwide",
+        "response": "Response within 24h"
+      },
+      "whatToExpect": {
+        "title": "What to expect",
+        "items": [
+          "We reply within 24 hours",
+          "Free 30-minute discovery call",
+          "No-obligation quote"
+        ]
+      },
+      "quickAnswers": {
+        "title": "Quick answers",
+        "items": {
+          "notSure": {
+            "question": "What if I'm not sure what I need?",
+            "answer": "That's fine. We'll help you figure it out during our call."
+          },
+          "startups": {
+            "question": "Do you work with startups?",
+            "answer": "Yes. We offer consulting to help validate ideas before committing to development."
+          },
+          "timeline": {
+            "question": "What's your typical timeline?",
+            "answer": "Most projects take 4–12 weeks depending on scope."
+          }
+        }
+      }
+    },
+    "cta": {
+      "preferEmail": "Prefer email?",
+      "reachOut": "Reach out directly at"
+    }
+  },
+  "privacy": {
+    "metadata": {
+      "title": "Privacy Policy",
+      "description": "Privacy Policy for Deralis Digital — how we collect, use, and protect your personal data."
+    },
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 2025",
+    "intro": "Deralis Digital (\"we\", \"our\", \"us\") is an independent engineering practice providing web development and digital services. This Privacy Policy explains how we collect, use, and protect your personal data when you visit deralis.digital or contact us.",
+    "sections": {
+      "dataCollected": {
+        "title": "1. Data we collect",
+        "voluntary": {
+          "title": "1.1 Information you submit voluntarily",
+          "intro": "When you contact us through email or forms, we collect:",
+          "items": [
+            "Name (if provided)",
+            "Email address",
+            "Company name (optional)",
+            "Project details or message content"
+          ],
+          "note": "This information is used solely to respond to your inquiry."
+        },
+        "technical": {
+          "title": "1.2 Technical data",
+          "intro": "When you browse our website, basic technical information may be collected automatically:",
+          "items": [
+            "IP address (anonymized when possible)",
+            "Browser type and version",
+            "Device information",
+            "Pages visited",
+            "Date, time, and duration of visit"
+          ],
+          "note": "This data is used for security, performance monitoring, and aggregated analytics.",
+          "noTrackers": "We do not use advertising trackers, third-party marketing cookies, or profiling tools."
+        }
+      },
+      "howWeUse": {
+        "title": "2. How we use your data",
+        "intro": "Your data is used only for:",
+        "items": [
+          "Responding to inquiries",
+          "Preparing quotes and proposals",
+          "Providing services when requested",
+          "Website security and performance",
+          "Legal compliance when required"
+        ],
+        "noSell": "We do not sell, rent, or trade your personal data."
+      },
+      "legalBasis": {
+        "title": "3. Legal basis (GDPR)",
+        "intro": "We process personal data based on:",
+        "items": {
+          "legitimate": "Legitimate interest — responding to inquiries, improving website performance",
+          "contract": "Performance of a contract — when working together",
+          "consent": "Consent — if you choose to provide information"
+        }
+      },
+      "storage": {
+        "title": "4. Data storage and retention",
+        "intro1": "We store personal data securely in the EU or equivalent jurisdictions.",
+        "intro2": "Data is retained only as long as necessary:",
+        "items": {
+          "inquiries": "Contact inquiries: up to 24 months",
+          "project": "Project information: duration of the project + legal obligations",
+          "analytics": "Analytics logs: typically 30–90 days depending on provider"
+        }
+      },
+      "sharing": {
+        "title": "5. Sharing your data",
+        "intro": "We only share data with:",
+        "items": [
+          "Hosting providers (e.g., Vercel)",
+          "Email providers (e.g., Gmail / Google Workspace)",
+          "Tools required to deliver our services"
+        ],
+        "compliance": "These providers comply with GDPR or offer equivalent protections.",
+        "noMarketing": "We do not share your information with third parties for marketing."
+      },
+      "rights": {
+        "title": "6. Your rights (EU & GDPR)",
+        "intro": "You have the right to:",
+        "items": [
+          "Access your data",
+          "Correct your data",
+          "Request deletion",
+          "Restrict processing",
+          "Object to processing",
+          "Request a copy of your data"
+        ],
+        "exercise": "You may exercise these rights at:"
+      },
+      "cookies": {
+        "title": "7. Cookies",
+        "intro": "The website uses minimal cookies:",
+        "items": [
+          "Essential functional cookies",
+          "Anonymous analytics cookies (if enabled)"
+        ],
+        "noAds": "We do not use advertising cookies or trackers."
+      },
+      "contact": {
+        "title": "8. Contact",
+        "intro": "If you have questions about this Privacy Policy, contact:"
+      }
+    }
+  },
+  "terms": {
+    "metadata": {
+      "title": "Terms of Service",
+      "description": "Terms of Service for Deralis Digital — conditions for using our website and services."
+    },
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: January 2025",
+    "intro": "These Terms govern your use of the website deralis.digital and any services provided by Deralis Digital (\"we\", \"our\", \"us\"). By accessing our website or contacting us, you agree to these Terms.",
+    "sections": {
+      "websiteUse": {
+        "title": "1. Use of the website",
+        "intro": "You may browse this website for informational purposes. You agree not to:",
+        "items": [
+          "Attempt to breach the website's security",
+          "Copy or reproduce content without permission",
+          "Misuse contact forms or attempt spam",
+          "Interfere with the site's functionality"
+        ]
+      },
+      "services": {
+        "title": "2. Services",
+        "intro": "Deralis Digital provides:",
+        "items": [
+          "Web system development",
+          "Platform engineering",
+          "Automation and integration",
+          "Consulting and technical strategy"
+        ],
+        "note": "A service relationship begins only after both parties agree in writing to a proposal or contract."
+      },
+      "quotes": {
+        "title": "3. Quotes & pricing",
+        "intro": "All proposals, quotes, and estimates:",
+        "items": [
+          "Are valid for 30 days unless stated otherwise",
+          "May change based on updated requirements",
+          "Are not binding until formally accepted"
+        ]
+      },
+      "payment": {
+        "title": "4. Payment terms",
+        "intro": "Specific payment terms are defined in each project contract. Unless otherwise stated:",
+        "items": [
+          "Consulting may require upfront payment",
+          "Development projects may use milestone-based payments",
+          "Work begins after initial payment is received"
+        ],
+        "late": "Late payments may result in suspension of services."
+      },
+      "ip": {
+        "title": "5. Intellectual property",
+        "intro": "Unless explicitly agreed:",
+        "items": [
+          "We retain ownership of development tools, internal libraries, and frameworks we use.",
+          "The client receives full usage rights for all custom deliverables created specifically for their project.",
+          "Third-party libraries remain licensed under their respective terms."
+        ]
+      },
+      "confidentiality": {
+        "title": "6. Confidentiality",
+        "content": "All project information shared between you and Deralis Digital is confidential and will not be disclosed without consent, except when legally required."
+      },
+      "liability": {
+        "title": "7. Limitation of liability",
+        "intro": "Deralis Digital is not liable for:",
+        "items": [
+          "Business interruptions",
+          "Loss of revenue",
+          "Indirect or consequential damages",
+          "Issues caused by third-party hosting providers, APIs, or services"
+        ],
+        "limit": "Liability is limited to the amount paid for services in the preceding 3 months."
+      },
+      "termination": {
+        "title": "8. Termination",
+        "content": "Both parties may terminate a project contract with written notice if obligations are not met. Completed deliverables and pending payments remain due."
+      },
+      "law": {
+        "title": "9. Governing law",
+        "content": "These Terms are governed by French law. Any dispute shall be handled by the competent courts in France."
+      },
+      "contact": {
+        "title": "10. Contact",
+        "intro": "For questions regarding these Terms:"
+      }
+    }
+  },
+  "legal": {
+    "metadata": {
+      "title": "Legal Notice",
+      "description": "Legal Notice for Deralis Digital — French law compliance (LCEN)."
+    },
+    "title": "Legal Notice",
+    "subtitle": "In accordance with French law n° 2004-575 (LCEN), Articles 6-III and 19",
+    "sections": {
+      "publisher": {
+        "title": "Site Publisher",
+        "fields": {
+          "name": "Business Name",
+          "nameValue": "Deralis Digital",
+          "form": "Legal Form",
+          "formValue": "Individual business / Web development and digital services",
+          "address": "Address",
+          "addressValue": "Available upon official request",
+          "email": "Email",
+          "director": "Publication Director",
+          "directorValue": "Deralis Digital"
+        }
+      },
+      "hosting": {
+        "title": "Hosting Provider",
+        "fields": {
+          "provider": "Provider",
+          "providerValue": "Vercel Inc.",
+          "address": "Address",
+          "addressValue": "440 N Barranca Ave #4133, Covina, CA 91723, USA",
+          "website": "Website"
+        }
+      },
+      "ip": {
+        "title": "Intellectual Property",
+        "content": "All content on this website (text, images, logos, design, code, etc.) is protected by copyright. Reproduction, modification, or distribution without authorization is prohibited."
+      },
+      "liability": {
+        "title": "Liability",
+        "content": "The publisher strives to ensure the accuracy of information on this website but cannot guarantee the absence of errors. The site may contain external links; the publisher disclaims any responsibility for their content."
+      },
+      "personalData": {
+        "title": "Personal Data",
+        "content": "Personal data processing is described in our",
+        "link": "Privacy Policy"
+      },
+      "contact": {
+        "title": "Contact",
+        "intro": "For any inquiries:"
+      }
+    }
+  }
+}

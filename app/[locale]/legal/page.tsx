@@ -1,13 +1,14 @@
-import { Metadata } from "next";
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Legal Notice",
-  description: "Legal Notice for Deralis Digital — French law compliance (LCEN).",
-};
-
 export default function LegalPage() {
+  const t = useTranslations("legal");
+  const tActions = useTranslations("common.actions");
+  const tLegal = useTranslations("common.legal");
+
   return (
     <section className="pt-24 pb-16 lg:pt-28 lg:pb-20">
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
@@ -16,40 +17,40 @@ export default function LegalPage() {
           className="inline-flex items-center gap-2 text-sm text-[var(--dd-text-muted)] hover:text-[var(--dd-text-main)] mb-8 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          Back to home
+          {tActions("backToHome")}
         </Link>
 
         <h1 className="text-3xl sm:text-4xl font-bold text-[var(--dd-text-main)] mb-4">
-          Legal Notice
+          {t("title")}
         </h1>
         <p className="text-[var(--dd-text-dim)] mb-8">
-          In accordance with French law n° 2004-575 (LCEN), Articles 6-III and 19
+          {t("subtitle")}
         </p>
 
         <div className="prose prose-invert max-w-none space-y-8 text-[var(--dd-text-muted)]">
           {/* Site Publisher */}
           <section>
             <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              Site Publisher
+              {t("sections.publisher.title")}
             </h2>
             <ul className="list-none space-y-2">
               <li>
-                <strong className="text-[var(--dd-text-main)]">Business Name:</strong> Deralis Digital
+                <strong className="text-[var(--dd-text-main)]">{t("sections.publisher.fields.name")}:</strong> {t("sections.publisher.fields.nameValue")}
               </li>
               <li>
-                <strong className="text-[var(--dd-text-main)]">Legal Form:</strong> Individual business / Web development and digital services
+                <strong className="text-[var(--dd-text-main)]">{t("sections.publisher.fields.form")}:</strong> {t("sections.publisher.fields.formValue")}
               </li>
               <li>
-                <strong className="text-[var(--dd-text-main)]">Address:</strong> Available upon official request
+                <strong className="text-[var(--dd-text-main)]">{t("sections.publisher.fields.address")}:</strong> {t("sections.publisher.fields.addressValue")}
               </li>
               <li>
-                <strong className="text-[var(--dd-text-main)]">Email:</strong>{" "}
+                <strong className="text-[var(--dd-text-main)]">{t("sections.publisher.fields.email")}:</strong>{" "}
                 <a href="mailto:contact@deralis.digital" className="text-[var(--dd-accent)] hover:underline">
                   contact@deralis.digital
                 </a>
               </li>
               <li>
-                <strong className="text-[var(--dd-text-main)]">Publication Director:</strong> Deralis Digital
+                <strong className="text-[var(--dd-text-main)]">{t("sections.publisher.fields.director")}:</strong> {t("sections.publisher.fields.directorValue")}
               </li>
             </ul>
           </section>
@@ -57,17 +58,17 @@ export default function LegalPage() {
           {/* Hosting */}
           <section>
             <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              Hosting Provider
+              {t("sections.hosting.title")}
             </h2>
             <ul className="list-none space-y-2">
               <li>
-                <strong className="text-[var(--dd-text-main)]">Provider:</strong> Vercel Inc.
+                <strong className="text-[var(--dd-text-main)]">{t("sections.hosting.fields.provider")}:</strong> {t("sections.hosting.fields.providerValue")}
               </li>
               <li>
-                <strong className="text-[var(--dd-text-main)]">Address:</strong> 440 N Barranca Ave #4133, Covina, CA 91723, USA
+                <strong className="text-[var(--dd-text-main)]">{t("sections.hosting.fields.address")}:</strong> {t("sections.hosting.fields.addressValue")}
               </li>
               <li>
-                <strong className="text-[var(--dd-text-main)]">Website:</strong>{" "}
+                <strong className="text-[var(--dd-text-main)]">{t("sections.hosting.fields.website")}:</strong>{" "}
                 <a
                   href="https://vercel.com"
                   target="_blank"
@@ -83,35 +84,32 @@ export default function LegalPage() {
           {/* Intellectual Property */}
           <section>
             <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              Intellectual Property
+              {t("sections.ip.title")}
             </h2>
             <p>
-              All content on this website (text, images, logos, design, code, etc.) is protected by copyright. 
-              Reproduction, modification, or distribution without authorization is prohibited.
+              {t("sections.ip.content")}
             </p>
           </section>
 
           {/* Liability */}
           <section>
             <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              Liability
+              {t("sections.liability.title")}
             </h2>
             <p>
-              The publisher strives to ensure the accuracy of information on this website but cannot 
-              guarantee the absence of errors. The site may contain external links; the publisher 
-              disclaims any responsibility for their content.
+              {t("sections.liability.content")}
             </p>
           </section>
 
           {/* Personal Data */}
           <section>
             <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              Personal Data
+              {t("sections.personalData.title")}
             </h2>
             <p>
-              Personal data processing is described in our{" "}
+              {t("sections.personalData.content")}{" "}
               <Link href="/privacy" className="text-[var(--dd-accent)] hover:underline">
-                Privacy Policy
+                {t("sections.personalData.link")}
               </Link>
               .
             </p>
@@ -120,10 +118,10 @@ export default function LegalPage() {
           {/* Contact */}
           <section>
             <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              Contact
+              {t("sections.contact.title")}
             </h2>
             <p>
-              For any inquiries:{" "}
+              {t("sections.contact.intro")}{" "}
               <a href="mailto:contact@deralis.digital" className="text-[var(--dd-accent)] hover:underline">
                 contact@deralis.digital
               </a>

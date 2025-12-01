@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { 
-  ArrowRight, 
-  Mail, 
-  MapPin, 
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import {
+  ArrowRight,
+  Mail,
+  MapPin,
   Clock,
   Send,
   CheckCircle2,
@@ -14,28 +15,17 @@ import {
   Calendar
 } from "lucide-react";
 
-const services = [
-  { value: "consulting", label: "Strategic Consulting" },
-  { value: "development", label: "Full-Stack Development" },
-  { value: "ai", label: "AI & Automation" },
-  { value: "support", label: "Ongoing Support" },
-  { value: "other", label: "Other / Not sure" },
-];
-
-const budgets = [
-  { value: "< 2k", label: "< €2,000" },
-  { value: "2k-5k", label: "€2,000 – €5,000" },
-  { value: "5k-10k", label: "€5,000 – €10,000" },
-  { value: "10k-25k", label: "€10,000 – €25,000" },
-  { value: "> 25k", label: "> €25,000" },
-  { value: "not-sure", label: "Not sure yet" },
-];
+const serviceKeys = ["consulting", "development", "ai", "support", "other"] as const;
+const budgetKeys = ["under2k", "2k5k", "5k10k", "10k25k", "over25k", "notSure"] as const;
 
 type ContactFormProps = {
   prefilledService?: string;
 };
 
 export default function ContactForm({ prefilledService = "" }: ContactFormProps) {
+  const t = useTranslations("contact");
+  const tActions = useTranslations("common.actions");
+
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -84,6 +74,14 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
     }));
   };
 
+  const expectItems = [
+    { icon: MessageSquare, key: "0" },
+    { icon: Calendar, key: "1" },
+    { icon: CheckCircle2, key: "2" },
+  ];
+
+  const quickAnswerKeys = ["notSure", "startups", "timeline"] as const;
+
   return (
     <>
       {/* Hero Section */}
@@ -91,11 +89,11 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dd-text-main)] mb-4">
-              Let&apos;s build{" "}
-              <span className="gradient-text">something real</span>
+              {t("hero.title")}{" "}
+              <span className="gradient-text">{t("hero.titleHighlight")}</span>
             </h1>
             <p className="text-lg text-[var(--dd-text-muted)] leading-relaxed">
-              Have a project in mind? Tell us about it. We reply within 24 hours.
+              {t("hero.description")}
             </p>
           </div>
         </div>
@@ -113,13 +111,13 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                     <CheckCircle2 className="w-8 h-8 text-green-500" />
                   </div>
                   <h2 className="text-2xl font-bold text-[var(--dd-text-main)] mb-2">
-                    Message sent!
+                    {t("success.title")}
                   </h2>
                   <p className="text-[var(--dd-text-muted)] mb-6">
-                    Thanks for reaching out. We&apos;ll get back to you within 24 hours.
+                    {t("success.description")}
                   </p>
                   <Link href="/" className="btn-secondary">
-                    Back to home
+                    {tActions("backToHome")}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -132,7 +130,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                         htmlFor="name"
                         className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
                       >
-                        Name <span className="text-red-500">*</span>
+                        {t("form.name.label")} <span className="text-red-500">{t("form.required")}</span>
                       </label>
                       <input
                         type="text"
@@ -142,7 +140,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                         value={formState.name}
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] placeholder-[var(--dd-text-dim)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors"
-                        placeholder="Your name"
+                        placeholder={t("form.name.placeholder")}
                       />
                     </div>
                     <div>
@@ -150,7 +148,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                         htmlFor="email"
                         className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
                       >
-                        Email <span className="text-red-500">*</span>
+                        {t("form.email.label")} <span className="text-red-500">{t("form.required")}</span>
                       </label>
                       <input
                         type="email"
@@ -160,7 +158,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                         value={formState.email}
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] placeholder-[var(--dd-text-dim)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors"
-                        placeholder="you@company.com"
+                        placeholder={t("form.email.placeholder")}
                       />
                     </div>
                   </div>
@@ -171,7 +169,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                       htmlFor="company"
                       className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
                     >
-                      Company <span className="text-[var(--dd-text-dim)]">(optional)</span>
+                      {t("form.company.label")} <span className="text-[var(--dd-text-dim)]">{t("form.company.optional")}</span>
                     </label>
                     <input
                       type="text"
@@ -180,7 +178,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                       value={formState.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] placeholder-[var(--dd-text-dim)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors"
-                      placeholder="Your company name"
+                      placeholder={t("form.company.placeholder")}
                     />
                   </div>
 
@@ -191,7 +189,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                         htmlFor="service"
                         className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
                       >
-                        Service interested in
+                        {t("form.service.label")}
                       </label>
                       <select
                         id="service"
@@ -200,10 +198,10 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors"
                       >
-                        <option value="">Select a service</option>
-                        {services.map((s) => (
-                          <option key={s.value} value={s.value}>
-                            {s.label}
+                        <option value="">{t("form.service.placeholder")}</option>
+                        {serviceKeys.map((key) => (
+                          <option key={key} value={key}>
+                            {t(`form.service.options.${key}`)}
                           </option>
                         ))}
                       </select>
@@ -213,7 +211,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                         htmlFor="budget"
                         className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
                       >
-                        Budget range
+                        {t("form.budget.label")}
                       </label>
                       <select
                         id="budget"
@@ -222,10 +220,10 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors"
                       >
-                        <option value="">Select a range</option>
-                        {budgets.map((b) => (
-                          <option key={b.value} value={b.value}>
-                            {b.label}
+                        <option value="">{t("form.budget.placeholder")}</option>
+                        {budgetKeys.map((key) => (
+                          <option key={key} value={key}>
+                            {t(`form.budget.options.${key}`)}
                           </option>
                         ))}
                       </select>
@@ -238,7 +236,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                       htmlFor="message"
                       className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
                     >
-                      Tell us about your project <span className="text-red-500">*</span>
+                      {t("form.message.label")} <span className="text-red-500">{t("form.required")}</span>
                     </label>
                     <textarea
                       id="message"
@@ -248,14 +246,14 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                       value={formState.message}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] placeholder-[var(--dd-text-dim)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors resize-none"
-                      placeholder="Describe your project, goals, and timeline..."
+                      placeholder={t("form.message.placeholder")}
                     />
                   </div>
 
                   {/* Error Message */}
                   {status === "error" && (
                     <div className="p-4 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
-                      Something went wrong. Please try again or email us directly.
+                      {t("form.error")}
                     </div>
                   )}
 
@@ -268,11 +266,11 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                     {status === "loading" ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin" />
-                        Sending...
+                        {tActions("sending")}
                       </>
                     ) : (
                       <>
-                        Send message
+                        {tActions("sendMessage")}
                         <Send className="w-4 h-4" />
                       </>
                     )}
@@ -286,7 +284,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
               {/* Contact Info Card */}
               <div className="gradient-border p-6">
                 <h3 className="text-lg font-semibold text-[var(--dd-text-main)] mb-4">
-                  Contact Info
+                  {t("sidebar.contactInfo.title")}
                 </h3>
                 <div className="space-y-4">
                   <a
@@ -298,11 +296,11 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
                   </a>
                   <div className="flex items-center gap-3 text-[var(--dd-text-muted)]">
                     <MapPin className="w-5 h-5 text-[var(--dd-accent)]" />
-                    <span>Based in France — Working Worldwide</span>
+                    <span>{t("sidebar.contactInfo.location")}</span>
                   </div>
                   <div className="flex items-center gap-3 text-[var(--dd-text-muted)]">
                     <Clock className="w-5 h-5 text-[var(--dd-accent)]" />
-                    <span>Response within 24h</span>
+                    <span>{t("sidebar.contactInfo.response")}</span>
                   </div>
                 </div>
               </div>
@@ -310,18 +308,14 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
               {/* What to Expect */}
               <div className="p-6 rounded-xl bg-[var(--dd-bg-card)] border border-[var(--dd-border)]">
                 <h3 className="text-lg font-semibold text-[var(--dd-text-main)] mb-4">
-                  What to expect
+                  {t("sidebar.whatToExpect.title")}
                 </h3>
                 <div className="space-y-3">
-                  {[
-                    { icon: MessageSquare, text: "We reply within 24 hours" },
-                    { icon: Calendar, text: "Free 30-minute discovery call" },
-                    { icon: CheckCircle2, text: "No-obligation quote" },
-                  ].map((item) => (
-                    <div key={item.text} className="flex items-center gap-3">
+                  {expectItems.map((item, index) => (
+                    <div key={item.key} className="flex items-center gap-3">
                       <item.icon className="w-4 h-4 text-[var(--dd-accent)]" />
                       <span className="text-sm text-[var(--dd-text-muted)]">
-                        {item.text}
+                        {t(`sidebar.whatToExpect.items.${index}`)}
                       </span>
                     </div>
                   ))}
@@ -331,28 +325,17 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
               {/* Quick Questions */}
               <div className="p-6 rounded-xl bg-[var(--dd-bg-soft)] border border-[var(--dd-border)]">
                 <h3 className="text-base font-semibold text-[var(--dd-text-main)] mb-3">
-                  Quick answers
+                  {t("sidebar.quickAnswers.title")}
                 </h3>
                 <div className="space-y-3 text-sm">
-                  {[
-                    {
-                      q: "What if I'm not sure what I need?",
-                      a: "That's fine. We'll help you figure it out during our call.",
-                    },
-                    {
-                      q: "Do you work with startups?",
-                      a: "Yes. We offer consulting to help validate ideas before committing to development.",
-                    },
-                    {
-                      q: "What's your typical timeline?",
-                      a: "Most projects take 4–12 weeks depending on scope.",
-                    },
-                  ].map((item) => (
-                    <div key={item.q}>
+                  {quickAnswerKeys.map((key) => (
+                    <div key={key}>
                       <p className="text-[var(--dd-text-main)] font-medium">
-                        {item.q}
+                        {t(`sidebar.quickAnswers.items.${key}.question`)}
                       </p>
-                      <p className="text-[var(--dd-text-muted)]">{item.a}</p>
+                      <p className="text-[var(--dd-text-muted)]">
+                        {t(`sidebar.quickAnswers.items.${key}.answer`)}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -368,10 +351,10 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <p className="text-[var(--dd-text-main)] font-semibold">
-                Prefer email?
+                {t("cta.preferEmail")}
               </p>
               <p className="text-sm text-[var(--dd-text-muted)]">
-                Reach out directly at{" "}
+                {t("cta.reachOut")}{" "}
                 <a
                   href="mailto:contact@deralis.digital"
                   className="text-[var(--dd-accent)] hover:underline"
@@ -381,7 +364,7 @@ export default function ContactForm({ prefilledService = "" }: ContactFormProps)
               </p>
             </div>
             <Link href="/projects" className="btn-secondary">
-              View our work
+              {tActions("viewOurWork")}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

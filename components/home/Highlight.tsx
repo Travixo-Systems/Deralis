@@ -1,19 +1,25 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
-
-const features = [
-  "Multi-tenant SaaS architecture",
-  "QR code asset tracking",
-  "Inspection scheduling",
-  "VGP compliance automation",
-  "Role-based access control",
-  "Real-time PostgreSQL database",
-];
 
 const stack = ["Next.js 15", "Supabase", "PostgreSQL", "Prisma", "TypeScript", "Tailwind"];
 
 export default function Highlight() {
+  const t = useTranslations("home.highlight");
+  const tActions = useTranslations("common.actions");
+
+  const features = [
+    t("features.0"),
+    t("features.1"),
+    t("features.2"),
+    t("features.3"),
+    t("features.4"),
+    t("features.5"),
+  ];
+
   return (
     <section className="py-12 lg:py-16 bg-[var(--dd-bg-soft)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -21,27 +27,25 @@ export default function Highlight() {
           {/* Content */}
           <div>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-[var(--dd-grad-from)] to-[var(--dd-grad-to)] text-[var(--dd-bg)] text-xs font-semibold mb-4">
-              Case Study
+              {t("badge")}
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
-              TraviXO Systems
+              {t("title")}
             </h2>
             <p className="text-sm text-[var(--dd-text-dim)] mb-4">
-              B2B SaaS • Equipment Tracking • VGP Compliance
+              {t("subtitle")}
             </p>
             <p className="text-[var(--dd-text-muted)] mb-4 leading-relaxed">
-              A full multi-tenant SaaS platform for equipment rental companies.
-              QR-based asset tracking, inspection scheduling, and compliance
-              automation—all powered by a real PostgreSQL database.
+              {t("description")}
             </p>
             <p className="text-sm text-[var(--dd-text-main)] mb-6 font-medium">
-              The platform is built with a real PostgreSQL database, multi-tenant access layers, automation workflows, and secure role-based permissions.
+              {t("detailedDescription")}
             </p>
 
             {/* Features */}
             <div className="grid grid-cols-2 gap-2 mb-6">
-              {features.map((feature) => (
-                <div key={feature} className="flex items-center gap-2">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[var(--dd-accent)] flex-shrink-0" />
                   <span className="text-sm text-[var(--dd-text-muted)]">
                     {feature}
@@ -70,11 +74,11 @@ export default function Highlight() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Visit website
+                {t("actions.visitWebsite")}
                 <ExternalLink className="w-4 h-4" />
               </a>
               <Link href="/projects" className="btn-secondary">
-                See all projects
+                {t("actions.seeAllProjects")}
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

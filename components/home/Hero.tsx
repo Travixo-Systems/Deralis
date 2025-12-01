@@ -1,15 +1,10 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { ArrowRight, Database, Code2, Layers, Server } from "lucide-react";
 import { motion } from "framer-motion";
-
-const features = [
-  { icon: Code2, text: "Next.js, React, TypeScript" },
-  { icon: Database, text: "PostgreSQL, Supabase, Prisma" },
-  { icon: Layers, text: "Dashboards, SaaS, automation, APIs" },
-];
 
 const techStack = [
   "Next.js 15",
@@ -20,6 +15,15 @@ const techStack = [
 ];
 
 export default function Hero() {
+  const t = useTranslations("home.hero");
+  const tActions = useTranslations("common.actions");
+
+  const features = [
+    { icon: Code2, text: t("features.tech") },
+    { icon: Database, text: t("features.database") },
+    { icon: Layers, text: t("features.capabilities") },
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-mesh">
       {/* Ambient gradient glow */}
@@ -71,14 +75,14 @@ export default function Hero() {
             >
               <Server className="w-4 h-4 text-[var(--dd-accent)]" />
               <span className="text-sm text-[var(--dd-text-muted)]">
-                Full-stack engineering, not templates.
+                {t("badge")}
               </span>
             </motion.div>
 
             {/* Heading with glow effect */}
             <div className="relative mb-4">
               {/* Glow behind headline */}
-              <div 
+              <div
                 className="absolute -inset-x-4 -inset-y-2 opacity-60 blur-2xl pointer-events-none"
                 style={{
                   background: "radial-gradient(ellipse at center, rgba(34, 211, 238, 0.15) 0%, transparent 70%)",
@@ -86,25 +90,24 @@ export default function Hero() {
               />
               <h1 className="relative text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="text-[var(--dd-text-main)]">
-                  Modern Web Systems
+                  {t("title")}
                 </span>
                 <br />
-                <span className="gradient-text">Not Just Websites.</span>
+                <span className="gradient-text">{t("titleHighlight")}</span>
               </h1>
             </div>
 
             {/* Description - tighter spacing */}
             <p className="text-lg text-[var(--dd-text-muted)] mb-5 max-w-xl leading-relaxed">
-              We build real web platforms—Next.js applications powered by SQL
-              databases, Supabase, secure authentication, and automation workflows.
-              We deliver software, not pages. Systems, not templates.
+              {t("description")}
+              {" "}{t("subDescription")}
             </p>
 
             {/* Feature bullets */}
             <div className="space-y-2 mb-5">
               {features.map((feature, index) => (
                 <motion.div
-                  key={feature.text}
+                  key={index}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
@@ -124,11 +127,11 @@ export default function Hero() {
               className="flex flex-wrap gap-4"
             >
               <Link href="/contact" className="btn-primary">
-                Build your system
+                {tActions("buildYourSystem")}
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link href="/projects" className="btn-secondary">
-                See our platforms
+                {tActions("seePlatforms")}
               </Link>
             </motion.div>
           </motion.div>
@@ -144,39 +147,39 @@ export default function Hero() {
             <div className="gradient-border p-5 mb-5">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">5+</p>
+                  <p className="text-3xl font-bold gradient-text mb-1">{t("stats.platforms.value")}</p>
                   <p className="text-sm text-[var(--dd-text-muted)]">
-                    Platforms shipped
+                    {t("stats.platforms.label")}
                   </p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-0.5">
-                    Next.js / SQL / Supabase
+                    {t("stats.platforms.sublabel")}
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">100%</p>
+                  <p className="text-3xl font-bold gradient-text mb-1">{t("stats.delivery.value")}</p>
                   <p className="text-sm text-[var(--dd-text-muted)]">
-                    Delivery rate
+                    {t("stats.delivery.label")}
                   </p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-0.5">
-                    Shipped, tested, deployed
+                    {t("stats.delivery.sublabel")}
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">24h</p>
+                  <p className="text-3xl font-bold gradient-text mb-1">{t("stats.response.value")}</p>
                   <p className="text-sm text-[var(--dd-text-muted)]">
-                    Response time
+                    {t("stats.response.label")}
                   </p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-0.5">
-                    Real engineering support
+                    {t("stats.response.sublabel")}
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">EN/FR</p>
+                  <p className="text-3xl font-bold gradient-text mb-1">{t("stats.bilingual.value")}</p>
                   <p className="text-sm text-[var(--dd-text-muted)]">
-                    Fully bilingual
+                    {t("stats.bilingual.label")}
                   </p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-0.5">
-                    France — Worldwide
+                    {t("stats.bilingual.sublabel")}
                   </p>
                 </div>
               </div>
@@ -193,7 +196,7 @@ export default function Hero() {
                   app.travixosystems.com
                 </span>
               </div>
-              
+
               {/* Screenshot */}
               <div className="aspect-video relative">
                 <Image
