@@ -1,107 +1,73 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { User, Building2, Rocket } from "lucide-react";
+import { Rocket, Building2, RefreshCw } from "lucide-react";
 
 const audiences = [
   {
-    icon: User,
-    title: "Solo founders & independents",
+    icon: Rocket,
+    title: "Startups & Founders",
     description:
-      "Need a professional digital setup from day one. We help you launch with clean systems that scale with your growth.",
+      "You have an idea but need technical expertise to validate and build it. We help you ship fast without cutting corners.",
+    points: ["Idea validation", "MVP development", "Technical guidance"],
   },
   {
     icon: Building2,
-    title: "Small businesses & agencies",
+    title: "Small Businesses",
     description:
-      "Need a reliable tech partner that understands business. We translate your needs into efficient digital solutions.",
+      "You're ready to digitalize operations, automate workflows, or replace outdated tools with real systems.",
+    points: ["Process digitalization", "Custom dashboards", "Workflow automation"],
   },
   {
-    icon: Rocket,
-    title: "SaaS & product founders",
+    icon: RefreshCw,
+    title: "Teams Needing Modernization",
     description:
-      "Need MVPs and V1s that scale, not prototypes that break. We build production-ready applications from the start.",
+      "You have legacy systems or inherited codebases that need to be rebuilt, migrated, or properly maintained.",
+    points: ["Legacy migration", "Codebase takeover", "Technical debt cleanup"],
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
-};
-
 export default function WhoWeWorkWith() {
   return (
-    <section className="py-24 lg:py-32 bg-[var(--dd-bg-soft)]">
+    <section className="py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--dd-text-main)] mb-4">
-            Who We Work With
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--dd-text-main)] mb-3">
+            Who we <span className="gradient-text">work with</span>
           </h2>
           <p className="text-[var(--dd-text-muted)] max-w-2xl mx-auto">
-            We partner with businesses at different stages, all sharing one goal: building something that works.
+            We partner with businesses that need real systems, not just websites.
           </p>
-        </motion.div>
+        </div>
 
-        {/* Audience Cards */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8"
-        >
-          {audiences.map((audience, index) => (
-            <motion.div
+        {/* Cards */}
+        <div className="grid md:grid-cols-3 gap-5">
+          {audiences.map((audience) => (
+            <div
               key={audience.title}
-              variants={itemVariants}
-              className="relative group"
+              className="gradient-border p-6"
             >
-              <div className="h-full p-8 rounded-xl bg-[var(--dd-bg)] border border-[var(--dd-border)] card-hover">
-                {/* Number */}
-                <span className="absolute top-6 right-6 text-6xl font-bold text-[var(--dd-border)] select-none">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                {/* Icon */}
-                <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--dd-grad-from)]/10 to-[var(--dd-grad-to)]/10 border border-[var(--dd-border)] flex items-center justify-center mb-6 group-hover:border-[var(--dd-accent)]/30 transition-colors">
-                  <audience.icon className="w-8 h-8 text-[var(--dd-accent)]" />
-                </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-semibold text-[var(--dd-text-main)] mb-3">
-                  {audience.title}
-                </h3>
-                <p className="text-[var(--dd-text-muted)] leading-relaxed">
-                  {audience.description}
-                </p>
+              <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center mb-4">
+                <audience.icon className="w-5 h-5 text-[var(--dd-accent)]" />
               </div>
-
-              {/* Decorative gradient */}
-              <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl" />
-            </motion.div>
+              <h3 className="text-lg font-semibold text-[var(--dd-text-main)] mb-2">
+                {audience.title}
+              </h3>
+              <p className="text-sm text-[var(--dd-text-muted)] mb-4">
+                {audience.description}
+              </p>
+              <ul className="space-y-1">
+                {audience.points.map((point) => (
+                  <li
+                    key={point}
+                    className="text-xs text-[var(--dd-text-dim)] flex items-center gap-2"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-[var(--dd-accent)]" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

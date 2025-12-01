@@ -1,29 +1,33 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "How much does a project cost?",
+    question: "How much does a typical project cost?",
     answer:
-      "Project costs vary based on scope and complexity. A simple landing page might start around €1,500, while a full SaaS application can range from €8,000 to €25,000+. We provide detailed quotes after our discovery call, where we understand your specific needs and define the project scope together.",
+      "It depends on scope. Consulting starts at €500, while a full SaaS platform can range from €5,000 to €25,000+. We provide detailed quotes after understanding your needs.",
   },
   {
-    question: "Do you only work in France?",
+    question: "What technologies do you work with?",
     answer:
-      "No, we work with clients worldwide. While we're based in France and many of our clients are French businesses, we regularly work with international clients across Europe and beyond. All communication can be in English or French.",
+      "Our primary stack is Next.js, React, and TypeScript for modern projects. We also work with PHP, Node.js, and databases including PostgreSQL, MySQL, and MongoDB. We pick the right tool for the job.",
   },
   {
-    question: "Can you take over an existing project?",
+    question: "How long does a project take?",
     answer:
-      "Yes, we can take over existing projects. We start with a code audit to assess the current state, identify technical debt, and create a roadmap for improvements. Whether it's fixing bugs, adding features, or refactoring the entire codebase, we can help.",
+      "A consulting engagement takes 1-2 weeks. A typical web application takes 4-12 weeks depending on complexity. We provide realistic timelines upfront—no surprises.",
   },
   {
-    question: "Do you do strategy or just development?",
+    question: "Do you work with clients outside France?",
     answer:
-      "We do both. In fact, we believe good development starts with good strategy. Before writing code, we help you validate your idea, analyze your market, and design the right solution. This approach saves time and money in the long run.",
+      "Yes. We work remotely with clients across Europe and beyond. Communication happens via video calls, email, and your preferred project management tools. Fully bilingual in English and French.",
+  },
+  {
+    question: "Do you offer ongoing support after launch?",
+    answer:
+      "Yes. We offer maintenance packages that include bug fixes, updates, monitoring, and feature additions. Most clients choose ongoing support—we don't disappear after delivery.",
   },
 ];
 
@@ -31,91 +35,48 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 lg:py-32 bg-[var(--dd-bg-soft)]">
+    <section className="py-12 lg:py-16">
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--dd-text-main)] mb-4">
-            Frequently Asked Questions
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--dd-text-main)] mb-3">
+            Common <span className="gradient-text">questions</span>
           </h2>
           <p className="text-[var(--dd-text-muted)]">
-            Quick answers to common questions about working with us.
+            Quick answers to questions you might have.
           </p>
-        </motion.div>
+        </div>
 
         {/* FAQ Items */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="space-y-4"
-        >
+        <div className="space-y-3">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="rounded-xl bg-[var(--dd-bg)] border border-[var(--dd-border)] overflow-hidden"
+              className="rounded-xl border border-[var(--dd-border)] bg-[var(--dd-bg-card)] overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                className="w-full flex items-center justify-between p-4 text-left hover:bg-[var(--dd-bg-soft)] transition-colors"
               >
-                <span className="font-semibold text-[var(--dd-text-main)] pr-4">
+                <span className="font-medium text-[var(--dd-text-main)] text-sm">
                   {faq.question}
                 </span>
-                <motion.div
-                  animate={{ rotate: openIndex === index ? 180 : 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex-shrink-0"
-                >
-                  <ChevronDown className="w-5 h-5 text-[var(--dd-text-muted)]" />
-                </motion.div>
+                <ChevronDown
+                  className={`w-4 h-4 text-[var(--dd-text-muted)] transition-transform ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                />
               </button>
-
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <div className="px-6 pb-6 pt-0">
-                      <p className="text-[var(--dd-text-muted)] leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {openIndex === index && (
+                <div className="px-4 pb-4">
+                  <p className="text-sm text-[var(--dd-text-muted)] leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              )}
             </div>
           ))}
-        </motion.div>
-
-        {/* Contact CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <p className="text-[var(--dd-text-muted)] mb-4">
-            Have another question?
-          </p>
-          <a
-            href="/contact"
-            className="text-[var(--dd-accent)] font-medium hover:underline"
-          >
-            Get in touch →
-          </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
