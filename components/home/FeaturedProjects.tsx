@@ -1,169 +1,142 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
+import { ArrowRight, ExternalLink, Database, Code2, Globe } from "lucide-react";
 
-// Placeholder projects - replace with real data
 const projects = [
   {
-    id: "travixo",
+    icon: Database,
     title: "TraviXO Systems",
-    type: "SaaS Web Application",
+    type: "B2B SaaS Platform",
     description:
-      "Modern solution for equipment tracking and VGP compliance. Full SaaS platform with dashboard, QR automation, and reporting.",
-    stack: ["Next.js", "Supabase", "Prisma", "TypeScript"],
-    image: "/projects/travixo.png",
+      "QR-based asset tracking and VGP compliance automation. Multi-tenant architecture with dashboards, inspection scheduling, and compliance logging.",
+    stack: ["Next.js 15", "Supabase", "PostgreSQL", "Prisma"],
     liveUrl: "https://travixosystems.com",
+    appUrl: "https://app.travixosystems.com",
     featured: true,
   },
   {
-    id: "project-2",
-    title: "Project Two",
-    type: "Dashboard Application",
+    icon: Globe,
+    title: "TraviXO Web",
+    type: "Marketing Website",
     description:
-      "Internal dashboard for data visualization and team management with real-time updates.",
-    stack: ["React", "Node.js", "PostgreSQL"],
-    image: "/projects/placeholder.png",
-    liveUrl: "#",
+      "SEO-optimized, multilingual marketing site. Conversion-focused design driving signups to the SaaS platform.",
+    stack: ["Next.js 15", "Tailwind", "next-intl"],
+    liveUrl: "https://travixosystems.com",
   },
   {
-    id: "project-3",
-    title: "Project Three",
-    type: "Landing Page",
+    icon: Code2,
+    title: "More Projects",
+    type: "Various",
     description:
-      "High-converting landing page with modern animations and optimized performance.",
-    stack: ["Next.js", "Tailwind", "Framer Motion"],
-    image: "/projects/placeholder.png",
-    liveUrl: "#",
+      "PHP applications, CRUD systems, and more. See our full portfolio for details on all projects delivered.",
+    stack: ["PHP", "MySQL", "MongoDB"],
+    href: "/projects",
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
-};
-
 export default function FeaturedProjects() {
   return (
-    <section className="py-24 lg:py-32 bg-[var(--dd-bg-soft)]">
+    <section className="py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--dd-text-main)] mb-4">
-            Featured Projects
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--dd-text-main)] mb-3">
+            Featured <span className="gradient-text">platforms</span>
           </h2>
           <p className="text-[var(--dd-text-muted)] max-w-2xl mx-auto">
-            Real work delivered by Deralis Digital. Modern, fast, and production-ready.
+            Real systems we&apos;ve built — dashboards, databases, automation.
           </p>
-        </motion.div>
+        </div>
 
         {/* Projects Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
+        <div className="grid md:grid-cols-3 gap-5">
           {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              variants={itemVariants}
-              className={`group relative rounded-xl overflow-hidden bg-[var(--dd-bg)] border border-[var(--dd-border)] card-hover ${
-                project.featured ? "md:col-span-2 lg:col-span-1" : ""
+            <div
+              key={project.title}
+              className={`p-5 rounded-xl border flex flex-col ${
+                project.featured
+                  ? "gradient-border"
+                  : "bg-[var(--dd-bg-card)] border-[var(--dd-border)]"
               }`}
             >
-              {/* Image placeholder */}
-              <div className="aspect-video bg-[var(--dd-bg-card)] relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-6xl font-bold text-[var(--dd-border)]">
-                    {project.title.charAt(0)}
+              {project.featured && (
+                <span className="text-xs text-[var(--dd-accent)] font-medium mb-3">
+                  Featured
+                </span>
+              )}
+              
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center flex-shrink-0">
+                  <project.icon className="w-5 h-5 text-[var(--dd-accent)]" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-[var(--dd-text-main)]">
+                    {project.title}
+                  </h3>
+                  <p className="text-xs text-[var(--dd-text-dim)]">{project.type}</p>
+                </div>
+              </div>
+
+              <p className="text-sm text-[var(--dd-text-muted)] mb-4 flex-grow">
+                {project.description}
+              </p>
+
+              {/* Tech stack */}
+              <div className="flex flex-wrap gap-1.5 mb-4">
+                {project.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-0.5 rounded text-xs bg-[var(--dd-bg)] border border-[var(--dd-border)] text-[var(--dd-text-dim)]"
+                  >
+                    {tech}
                   </span>
-                </div>
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-[var(--dd-bg)]/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                  {project.liveUrl && project.liveUrl !== "#" && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-[var(--dd-accent)] flex items-center justify-center text-[var(--dd-bg)] hover:scale-110 transition-transform"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
-                  )}
-                </div>
-                {/* Featured badge */}
-                {project.featured && (
-                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-gradient-to-r from-[var(--dd-grad-from)] to-[var(--dd-grad-to)] text-[var(--dd-bg)] text-xs font-semibold">
-                    Featured
-                  </div>
+                ))}
+              </div>
+
+              {/* Links */}
+              <div className="flex items-center gap-3 pt-3 border-t border-[var(--dd-border)]">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--dd-accent)] text-sm font-medium hover:underline inline-flex items-center gap-1"
+                  >
+                    Visit site
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
+                {project.appUrl && (
+                  <a
+                    href={project.appUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--dd-text-muted)] text-sm hover:text-[var(--dd-text-main)] inline-flex items-center gap-1"
+                  >
+                    Open app
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
+                {project.href && (
+                  <Link
+                    href={project.href}
+                    className="text-[var(--dd-accent)] text-sm font-medium hover:underline inline-flex items-center gap-1"
+                  >
+                    View all
+                    <ArrowRight className="w-3 h-3" />
+                  </Link>
                 )}
               </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <span className="text-xs text-[var(--dd-accent)] font-medium uppercase tracking-wider">
-                  {project.type}
-                </span>
-                <h3 className="text-xl font-semibold text-[var(--dd-text-main)] mt-2 mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-[var(--dd-text-muted)] text-sm mb-4 line-clamp-2">
-                  {project.description}
-                </p>
-
-                {/* Stack */}
-                <div className="flex flex-wrap gap-2">
-                  {project.stack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1 rounded text-xs bg-[var(--dd-bg-soft)] border border-[var(--dd-border)] text-[var(--dd-text-dim)]"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <Link href="/projects" className="btn-primary">
-            View all projects
+        <div className="text-center mt-10">
+          <Link href="/projects" className="btn-secondary">
+            See all platforms
             <ArrowRight className="w-4 h-4" />
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
