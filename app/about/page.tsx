@@ -133,7 +133,7 @@ export default function AboutPage() {
                   <p className="text-3xl font-bold gradient-text mb-1">EN/FR</p>
                   <p className="text-sm text-[var(--dd-text-muted)]">Fully bilingual</p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    Europe & remote
+                    France - Worldwide
                   </p>
                 </div>
               </div>
