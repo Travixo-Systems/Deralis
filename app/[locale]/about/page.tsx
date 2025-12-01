@@ -1,8 +1,10 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import { 
-  ArrowRight, 
-  Zap, 
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import {
+  ArrowRight,
+  Zap,
   Database,
   CheckCircle2,
   Server,
@@ -16,72 +18,13 @@ import {
 } from "lucide-react";
 import ScreenshotGallery from "@/components/about/ScreenshotGallery";
 
-export const metadata: Metadata = {
-  title: "About — Independent Engineering Practice",
-  description:
-    "Deralis Digital is an independent engineering practice building real web platforms — SaaS applications, dashboards, automation workflows, and SQL-powered databases.",
-  openGraph: {
-    title: "About | Deralis Digital",
-    description:
-      "Independent engineering practice building real web systems. No WordPress. No templates. Only real software.",
-  },
+const whatWeBuildIcons = {
+  saas: Layers,
+  dashboards: Server,
+  databases: Database,
+  automation: Workflow,
+  api: Settings,
 };
-
-const whatWeBuild = [
-  {
-    icon: Layers,
-    title: "SaaS Platforms",
-    description: "Multi-tenant, subscription-ready, scalable applications.",
-  },
-  {
-    icon: Server,
-    title: "Admin Dashboards",
-    description: "Data-driven tools with secure authentication and role-based access.",
-  },
-  {
-    icon: Database,
-    title: "Database Systems",
-    description: "PostgreSQL / Supabase architectures, migrations, and schema design.",
-  },
-  {
-    icon: Workflow,
-    title: "Automation Workflows",
-    description: "Integrations with APIs, webhooks, triggers, and automation tools.",
-  },
-  {
-    icon: Settings,
-    title: "API Integrations",
-    description: "Custom REST integrations, webhooks, OAuth, third-party systems.",
-  },
-];
-
-const process = [
-  {
-    step: "01",
-    title: "Technical Discovery",
-    description: "Understanding your system, workflows, and constraints.",
-  },
-  {
-    step: "02",
-    title: "Architecture Design",
-    description: "Database schema, API structure, core flows, security, scalability.",
-  },
-  {
-    step: "03",
-    title: "Development",
-    description: "Full-stack implementation using Next.js, React, TypeScript, Supabase.",
-  },
-  {
-    step: "04",
-    title: "Testing & Deployment",
-    description: "Staging, QA, production deployment, environment setup.",
-  },
-  {
-    step: "05",
-    title: "Long-term Support",
-    description: "Feature updates, monitoring, improvements, and scaling.",
-  },
-];
 
 const techStack = {
   frontend: ["Next.js 15", "React", "TypeScript", "Tailwind", "shadcn/ui"],
@@ -90,16 +33,13 @@ const techStack = {
   automations: ["API integrations", "Automation workflows", "Custom GPT assistants"],
 };
 
-const whyChoose = [
-  "Work directly with a senior engineer",
-  "Full-stack delivery: frontend, backend, database",
-  "Modern stack with long-term maintainability",
-  "Professional codebases, not templates",
-  "Clear communication and fast iteration",
-  "Engineering depth + business understanding",
-];
-
 export default function AboutPage() {
+  const t = useTranslations("about");
+  const tActions = useTranslations("common.actions");
+
+  const whatWeBuildKeys = ["saas", "dashboards", "databases", "automation", "api"] as const;
+  const stepKeys = ["step1", "step2", "step3", "step4", "step5"] as const;
+
   return (
     <>
       {/* Hero Section */}
@@ -107,14 +47,16 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <p className="text-sm text-[var(--dd-accent)] font-medium mb-3 whitespace-nowrap">Independent engineering practice</p>
+              <p className="text-sm text-[var(--dd-accent)] font-medium mb-3 whitespace-nowrap">
+                {t("hero.badge")}
+              </p>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dd-text-main)] mb-4">
-                About{" "}
-                <span className="gradient-text">Deralis Digital</span>
+                {t("hero.title")}{" "}
+                <span className="gradient-text">{t("hero.titleHighlight")}</span>
               </h1>
               <p className="text-lg text-[var(--dd-text-muted)] mb-4 leading-relaxed">
-                We build real web systems — platforms, dashboards, automation.
+                {t("hero.description")}
               </p>
             </div>
 
@@ -160,20 +102,16 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="space-y-4 text-[var(--dd-text-muted)] leading-relaxed">
             <p className="text-lg">
-              Deralis Digital is an independent engineering practice focused on building 
-              real web platforms — not simple websites. We design and develop systems: 
-              SaaS applications, dashboards, automation workflows, and SQL-powered databases 
-              using modern technologies such as Next.js, React, TypeScript, Supabase, and Prisma.
+              {t("intro.paragraph1")}
             </p>
             <p>
-              Our approach is engineering-first, built around clarity, performance, and 
-              long-term reliability. No WordPress. No templates. No drag-and-drop. Only real software.
+              {t("intro.paragraph2")}
             </p>
           </div>
 
           <div className="mt-6">
             <Link href="/contact" className="btn-primary">
-              Work with us
+              {tActions("workWithUs")}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -184,31 +122,24 @@ export default function AboutPage() {
       <section className="py-8 lg:py-12 bg-[var(--dd-bg-soft)]">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-4">
-            Our philosophy
+            {t("philosophy.title")}
           </h2>
           <p className="text-lg text-[var(--dd-text-muted)] mb-6">
-            Modern businesses don&apos;t need pages — they need systems.
+            {t("philosophy.subtitle")}
           </p>
-          
-          <p className="text-[var(--dd-text-muted)] mb-4">Systems that:</p>
+
+          <p className="text-[var(--dd-text-muted)] mb-4">{t("philosophy.systemsTitle")}</p>
           <ul className="space-y-2 mb-6">
-            {[
-              "Store and structure data reliably",
-              "Automate repetitive work",
-              "Integrate with existing tools and APIs",
-              "Scale without breaking",
-              "Deliver real operational value",
-            ].map((item) => (
+            {(t.raw("philosophy.systems") as string[]).map((item: string) => (
               <li key={item} className="flex items-center gap-3 text-[var(--dd-text-muted)]">
                 <CheckCircle2 className="w-4 h-4 text-[var(--dd-accent)] flex-shrink-0" />
                 <span>{item}</span>
               </li>
             ))}
           </ul>
-          
+
           <p className="text-[var(--dd-text-main)] font-medium">
-            We build platforms that replace spreadsheets, manual processes, and outdated 
-            workflows with modern, stable, maintainable architecture.
+            {t("philosophy.conclusion")}
           </p>
         </div>
       </section>
@@ -218,34 +149,37 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
-              What we build
+              {t("whatWeBuild.title")}
             </h2>
             <p className="text-[var(--dd-text-muted)]">
-              We specialize in full-stack platform development.
+              {t("whatWeBuild.description")}
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {whatWeBuild.map((item) => (
-              <div
-                key={item.title}
-                className="p-5 rounded-xl bg-[var(--dd-bg-card)] border border-[var(--dd-border)] card-hover"
-              >
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center mb-3">
-                  <item.icon className="w-5 h-5 text-[var(--dd-accent)]" />
+            {whatWeBuildKeys.map((key) => {
+              const Icon = whatWeBuildIcons[key];
+              return (
+                <div
+                  key={key}
+                  className="p-5 rounded-xl bg-[var(--dd-bg-card)] border border-[var(--dd-border)] card-hover"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center mb-3">
+                    <Icon className="w-5 h-5 text-[var(--dd-accent)]" />
+                  </div>
+                  <h3 className="text-base font-semibold text-[var(--dd-text-main)] mb-1">
+                    {t(`whatWeBuild.items.${key}.title`)}
+                  </h3>
+                  <p className="text-sm text-[var(--dd-text-muted)]">
+                    {t(`whatWeBuild.items.${key}.description`)}
+                  </p>
                 </div>
-                <h3 className="text-base font-semibold text-[var(--dd-text-main)] mb-1">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-[var(--dd-text-muted)]">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <p className="text-sm text-[var(--dd-text-dim)] mt-6 max-w-4xl">
-            Each platform we build is designed around clean engineering, not templates or pre-made components.
+            {t("whatWeBuild.note")}
           </p>
         </div>
       </section>
@@ -255,35 +189,34 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
-              How we work
+              {t("howWeWork.title")}
             </h2>
             <p className="text-[var(--dd-text-muted)]">
-              Clients work directly with the engineer behind Deralis Digital — without 
-              layers, outsourcing, or miscommunication. The process is simple and technical:
+              {t("howWeWork.description")}
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {process.map((item) => (
+            {stepKeys.map((key) => (
               <div
-                key={item.step}
+                key={key}
                 className="p-5 rounded-xl bg-[var(--dd-bg)] border border-[var(--dd-border)]"
               >
                 <span className="text-[var(--dd-accent)] font-mono font-bold text-sm">
-                  {item.step}
+                  {t(`howWeWork.steps.${key}.number`)}
                 </span>
                 <h3 className="text-base font-semibold text-[var(--dd-text-main)] mt-2 mb-1">
-                  {item.title}
+                  {t(`howWeWork.steps.${key}.title`)}
                 </h3>
                 <p className="text-sm text-[var(--dd-text-muted)]">
-                  {item.description}
+                  {t(`howWeWork.steps.${key}.description`)}
                 </p>
               </div>
             ))}
           </div>
 
           <p className="text-sm text-[var(--dd-text-dim)] mt-6 max-w-4xl">
-            This workflow ensures stable delivery and reduces time-to-production.
+            {t("howWeWork.note")}
           </p>
         </div>
       </section>
@@ -293,10 +226,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
-              Technology expertise
+              {t("techExpertise.title")}
             </h2>
             <p className="text-[var(--dd-text-muted)]">
-              We use a modern, unified stack to keep development fast, predictable, and scalable.
+              {t("techExpertise.description")}
             </p>
           </div>
 
@@ -305,7 +238,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-3 flex items-center gap-2">
                 <Code2 className="w-4 h-4 text-[var(--dd-accent)]" />
-                Frontend
+                {t("techExpertise.categories.frontend")}
               </h3>
               <div className="space-y-2">
                 {techStack.frontend.map((tech) => (
@@ -323,7 +256,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-3 flex items-center gap-2">
                 <Database className="w-4 h-4 text-[var(--dd-accent)]" />
-                Backend
+                {t("techExpertise.categories.backend")}
               </h3>
               <div className="space-y-2">
                 {techStack.backend.map((tech) => (
@@ -341,7 +274,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-3 flex items-center gap-2">
                 <Server className="w-4 h-4 text-[var(--dd-accent)]" />
-                Systems
+                {t("techExpertise.categories.systems")}
               </h3>
               <div className="space-y-2">
                 {techStack.systems.map((tech) => (
@@ -359,7 +292,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-3 flex items-center gap-2">
                 <Bot className="w-4 h-4 text-[var(--dd-accent)]" />
-                Automations & AI
+                {t("techExpertise.categories.automations")}
               </h3>
               <div className="space-y-2">
                 {techStack.automations.map((tech) => (
@@ -381,25 +314,25 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mb-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
-              Real systems we&apos;ve built
+              {t("screenshots.title")}
             </h2>
             <p className="text-[var(--dd-text-muted)]">
-              Dashboards, workflows, and database systems used in production environments.
+              {t("screenshots.description")}
             </p>
           </div>
-          
+
           {/* Screenshot Gallery with Modal */}
           <ScreenshotGallery />
 
           <div className="mt-6 text-center space-y-2">
             <p className="text-sm text-[var(--dd-text-muted)]">
-              These systems include multi-tenant logic, role-based access, SQL databases, and automation workflows.
+              {t("screenshots.notes.note1")}
             </p>
             <p className="text-sm text-[var(--dd-text-muted)]">
-              All platforms shown here are built with real databases, real logic, and real engineering — not templates.
+              {t("screenshots.notes.note2")}
             </p>
             <p className="text-sm text-[var(--dd-text-dim)]">
-              This demonstrates our focus: systems, not pages.
+              {t("screenshots.notes.note3")}
             </p>
           </div>
         </div>
@@ -408,9 +341,11 @@ export default function AboutPage() {
       {/* Principle */}
       <section className="py-6 border-y border-[var(--dd-border)]">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <p className="text-[var(--dd-text-dim)] text-sm uppercase tracking-wider mb-1">Principle</p>
+          <p className="text-[var(--dd-text-dim)] text-sm uppercase tracking-wider mb-1">
+            {t("principle.label")}
+          </p>
           <p className="text-xl font-semibold text-[var(--dd-text-main)]">
-            Engineering first. Everything else second.
+            {t("principle.text")}
           </p>
         </div>
       </section>
@@ -419,11 +354,11 @@ export default function AboutPage() {
       <section className="py-8 lg:py-12">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-6">
-            Why businesses choose Deralis Digital
+            {t("whyChoose.title")}
           </h2>
 
           <div className="grid sm:grid-cols-2 gap-3">
-            {whyChoose.map((item) => (
+            {(t.raw("whyChoose.items") as string[]).map((item: string) => (
               <div key={item} className="flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[var(--dd-accent)] flex-shrink-0" />
                 <span className="text-[var(--dd-text-muted)]">{item}</span>
@@ -432,8 +367,7 @@ export default function AboutPage() {
           </div>
 
           <p className="text-[var(--dd-text-main)] font-medium mt-8">
-            Deralis Digital is built for founders, teams, and businesses that need 
-            real engineering, not web decoration.
+            {t("whyChoose.conclusion")}
           </p>
         </div>
       </section>
@@ -444,11 +378,11 @@ export default function AboutPage() {
           <div className="flex items-center gap-3 mb-3">
             <MapPin className="w-5 h-5 text-[var(--dd-accent)]" />
             <h2 className="text-xl font-bold text-[var(--dd-text-main)]">
-              Where we operate
+              {t("location.title")}
             </h2>
           </div>
           <p className="text-[var(--dd-text-muted)]">
-            Based in France — Working with clients worldwide.
+            {t("location.description")}
           </p>
         </div>
       </section>
@@ -457,18 +391,18 @@ export default function AboutPage() {
       <section className="py-8 lg:py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
-            Ready to build something real?
+            {t("cta.title")}
           </h2>
           <p className="text-[var(--dd-text-muted)] max-w-xl mx-auto mb-6">
-            Free consultation, no pressure. Let&apos;s talk about your project.
+            {t("cta.description")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary">
-              Start a conversation
+              {tActions("startConversation")}
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link href="/projects" className="btn-secondary">
-              See our platforms
+              {tActions("seePlatforms")}
             </Link>
           </div>
         </div>
@@ -480,10 +414,10 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <p className="text-[var(--dd-text-main)] font-semibold">
-                Have a question?
+                {t("finalCta.title")}
               </p>
               <p className="text-sm text-[var(--dd-text-muted)]">
-                Reach out at{" "}
+                {t("finalCta.description")}{" "}
                 <a
                   href="mailto:contact@deralis.digital"
                   className="text-[var(--dd-accent)] hover:underline"
@@ -493,7 +427,7 @@ export default function AboutPage() {
               </p>
             </div>
             <Link href="/contact" className="btn-primary">
-              Get in touch
+              {tActions("getInTouch")}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

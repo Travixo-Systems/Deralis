@@ -1,21 +1,29 @@
 "use client";
 
-import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { Menu, X, ArrowRight, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+const navKeys = ["home", "services", "projects", "about", "contact"] as const;
+
+const navHrefs: Record<typeof navKeys[number], string> = {
+  home: "/",
+  services: "/services",
+  projects: "/projects",
+  about: "/about",
+  contact: "/contact",
+};
 
 export default function Header() {
+  const t = useTranslations("common");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +32,11 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const switchLocale = (newLocale: string) => {
+    router.replace(pathname, { locale: newLocale });
+    setLangMenuOpen(false);
+  };
 
   return (
     <header
@@ -47,24 +60,68 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navKeys.map((key) => (
               <Link
-                key={link.href}
-                href={link.href}
+                key={key}
+                href={navHrefs[key]}
                 className="text-[var(--dd-text-muted)] hover:text-[var(--dd-text-main)] transition-colors text-sm font-medium"
               >
-                {link.label}
+                {t(`nav.${key}`)}
               </Link>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Right side: Language Switcher + CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Language Switcher */}
+            <div className="relative">
+              <button
+                onClick={() => setLangMenuOpen(!langMenuOpen)}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-[var(--dd-text-muted)] hover:text-[var(--dd-text-main)] hover:bg-[var(--dd-bg-soft)] transition-colors text-sm"
+                aria-label="Change language"
+              >
+                <Globe className="w-4 h-4" />
+                <span className="uppercase font-medium">{locale}</span>
+              </button>
+
+              <AnimatePresence>
+                {langMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute right-0 top-full mt-2 bg-[var(--dd-bg-card)] border border-[var(--dd-border)] rounded-lg shadow-lg overflow-hidden min-w-[120px]"
+                  >
+                    <button
+                      onClick={() => switchLocale("fr")}
+                      className={`w-full px-4 py-2 text-left text-sm hover:bg-[var(--dd-bg-soft)] transition-colors flex items-center gap-2 ${
+                        locale === "fr" ? "text-[var(--dd-accent)]" : "text-[var(--dd-text-muted)]"
+                      }`}
+                    >
+                      <span>🇫🇷</span>
+                      <span>Français</span>
+                    </button>
+                    <button
+                      onClick={() => switchLocale("en")}
+                      className={`w-full px-4 py-2 text-left text-sm hover:bg-[var(--dd-bg-soft)] transition-colors flex items-center gap-2 ${
+                        locale === "en" ? "text-[var(--dd-accent)]" : "text-[var(--dd-text-muted)]"
+                      }`}
+                    >
+                      <span>🇬🇧</span>
+                      <span>English</span>
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* CTA Button */}
             <Link
               href="/contact"
               className="btn-primary text-sm"
             >
-              Book a call
+              {t("actions.bookCall")}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -90,23 +147,59 @@ export default function Header() {
               className="md:hidden overflow-hidden"
             >
               <div className="py-4 space-y-2 border-t border-[var(--dd-border)]">
-                {navLinks.map((link) => (
+                {navKeys.map((key) => (
                   <Link
-                    key={link.href}
-                    href={link.href}
+                    key={key}
+                    href={navHrefs[key]}
                     onClick={() => setIsOpen(false)}
                     className="block py-3 px-4 text-[var(--dd-text-muted)] hover:text-[var(--dd-text-main)] hover:bg-[var(--dd-bg-soft)] rounded-lg transition-colors"
                   >
-                    {link.label}
+                    {t(`nav.${key}`)}
                   </Link>
                 ))}
+
+                {/* Mobile Language Switcher */}
+                <div className="px-4 pt-4 border-t border-[var(--dd-border)]">
+                  <p className="text-xs text-[var(--dd-text-dim)] mb-2 uppercase tracking-wider">
+                    Language
+                  </p>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => {
+                        switchLocale("fr");
+                        setIsOpen(false);
+                      }}
+                      className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
+                        locale === "fr"
+                          ? "bg-[var(--dd-accent)]/10 text-[var(--dd-accent)] border border-[var(--dd-accent)]"
+                          : "bg-[var(--dd-bg-soft)] text-[var(--dd-text-muted)] border border-[var(--dd-border)]"
+                      }`}
+                    >
+                      🇫🇷 FR
+                    </button>
+                    <button
+                      onClick={() => {
+                        switchLocale("en");
+                        setIsOpen(false);
+                      }}
+                      className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
+                        locale === "en"
+                          ? "bg-[var(--dd-accent)]/10 text-[var(--dd-accent)] border border-[var(--dd-accent)]"
+                          : "bg-[var(--dd-bg-soft)] text-[var(--dd-text-muted)] border border-[var(--dd-border)]"
+                      }`}
+                    >
+                      🇬🇧 EN
+                    </button>
+                  </div>
+                </div>
+
                 <div className="pt-4 px-4">
                   <Link
                     href="/contact"
                     onClick={() => setIsOpen(false)}
                     className="btn-primary w-full text-center"
                   >
-                    Book a call
+                    {t("actions.bookCall")}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>

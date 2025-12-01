@@ -1,7 +1,13 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight, Mail } from "lucide-react";
 
 export default function FinalCTA() {
+  const t = useTranslations("home.cta");
+  const tActions = useTranslations("common.actions");
+
   return (
     <section className="py-12 lg:py-16 bg-[var(--dd-bg-soft)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -11,16 +17,15 @@ export default function FinalCTA() {
 
           <div className="relative">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--dd-text-main)] mb-3">
-              Ready to build something real?
+              {t("title")}
             </h2>
             <p className="text-[var(--dd-text-muted)] max-w-xl mx-auto mb-6">
-              Let&apos;s talk about your project. Free consultation, no pressure.
-              We&apos;ll discuss your goals and see if we&apos;re a good fit.
+              {t("description")}
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               <Link href="/contact" className="btn-primary">
-                Speak to an engineer
+                {tActions("speakToEngineer")}
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
@@ -33,7 +38,7 @@ export default function FinalCTA() {
             </div>
 
             <p className="text-xs text-[var(--dd-text-dim)]">
-              Typically respond within 24 hours • EN/FR bilingual
+              {t("note")}
             </p>
           </div>
         </div>

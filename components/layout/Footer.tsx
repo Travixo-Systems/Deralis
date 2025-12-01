@@ -1,28 +1,40 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 
-const footerLinks = {
-  navigation: [
-    { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/projects", label: "Projects" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ],
-  services: [
-    { href: "/services#consulting", label: "Strategic Consulting" },
-    { href: "/services#development", label: "Web Development" },
-    { href: "/services#ai", label: "AI Integration" },
-    { href: "/services#automation", label: "Automation" },
-  ],
-  legal: [
-    { href: "/privacy", label: "Privacy Policy" },
-    { href: "/terms", label: "Terms of Service" },
-    { href: "/legal", label: "Legal Notice" },
-  ],
-};
-
 export default function Footer() {
+  const t = useTranslations("common");
+
+  const navigationLinks = [
+    { href: "/", key: "home" },
+    { href: "/services", key: "services" },
+    { href: "/projects", key: "projects" },
+    { href: "/about", key: "about" },
+    { href: "/contact", key: "contact" },
+  ];
+
+  const serviceLinks = [
+    { href: "/services#consulting", key: "consulting" },
+    { href: "/services#development", key: "development" },
+    { href: "/services#ai", key: "ai" },
+    { href: "/services#automation", key: "automation" },
+  ];
+
+  const serviceLabels = {
+    consulting: t("nav.services") === "Services" ? "Strategic Consulting" : "Conseil stratégique",
+    development: t("nav.services") === "Services" ? "Web Development" : "Développement web",
+    ai: t("nav.services") === "Services" ? "AI Integration" : "Intégration IA",
+    automation: t("nav.services") === "Services" ? "Automation" : "Automatisation",
+  };
+
+  const legalLinks = [
+    { href: "/privacy", label: t("legal.privacy") },
+    { href: "/terms", label: t("legal.terms") },
+    { href: "/legal", label: t("legal.legalNotice") },
+  ];
+
   return (
     <footer className="bg-[var(--dd-bg-soft)] border-t border-[var(--dd-border)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
@@ -38,9 +50,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-[var(--dd-text-muted)] text-sm mb-6 leading-relaxed">
-              Build. Modernize. Digitize.
+              {t("footer.tagline")}
               <br />
-              Modern web systems and digital transformation for businesses ready to scale.
+              {t("footer.subtagline")}
             </p>
             <div className="flex gap-4">
               <a
@@ -76,16 +88,16 @@ export default function Footer() {
           {/* Navigation */}
           <div>
             <h4 className="font-semibold text-[var(--dd-text-main)] mb-4">
-              Navigation
+              {t("footer.navigation")}
             </h4>
             <ul className="space-y-3">
-              {footerLinks.navigation.map((link) => (
+              {navigationLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-[var(--dd-text-muted)] hover:text-[var(--dd-text-main)] text-sm transition-colors"
                   >
-                    {link.label}
+                    {t(`nav.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -95,16 +107,16 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="font-semibold text-[var(--dd-text-main)] mb-4">
-              Services
+              {t("footer.services")}
             </h4>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-[var(--dd-text-muted)] hover:text-[var(--dd-text-main)] text-sm transition-colors"
                   >
-                    {link.label}
+                    {serviceLabels[link.key as keyof typeof serviceLabels]}
                   </Link>
                 </li>
               ))}
@@ -114,7 +126,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-semibold text-[var(--dd-text-main)] mb-4">
-              Contact
+              {t("footer.contact")}
             </h4>
             <ul className="space-y-4">
               <li>
@@ -138,7 +150,7 @@ export default function Footer() {
               <li>
                 <div className="flex items-start gap-3 text-[var(--dd-text-muted)] text-sm">
                   <MapPin className="w-4 h-4 text-[var(--dd-accent)] mt-0.5" />
-                  <span>France & Remote</span>
+                  <span>{t("footer.locationShort")}</span>
                 </div>
               </li>
             </ul>
@@ -148,10 +160,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-[var(--dd-border)] flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[var(--dd-text-dim)] text-sm">
-            © {new Date().getFullYear()} Deralis Digital. All rights reserved.
+            © {new Date().getFullYear()} Deralis Digital. {t("footer.rights")}
           </p>
           <div className="flex gap-6">
-            {footerLinks.legal.map((link) => (
+            {legalLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
