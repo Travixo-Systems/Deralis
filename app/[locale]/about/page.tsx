@@ -36,6 +36,7 @@ const techStack = {
 export default function AboutPage() {
   const t = useTranslations("about");
   const tActions = useTranslations("common.actions");
+  const tHomeStats = useTranslations("home.hero.stats");
 
   const whatWeBuildKeys = ["saas", "dashboards", "databases", "automation", "api"] as const;
   const stepKeys = ["step1", "step2", "step3", "step4", "step5"] as const;
@@ -64,31 +65,31 @@ export default function AboutPage() {
             <div className="gradient-border p-6">
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">5+</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">Platforms shipped</p>
+                  <p className="text-3xl font-bold gradient-text mb-1">{tHomeStats("platforms.value")}</p>
+                  <p className="text-sm text-[var(--dd-text-muted)]">{tHomeStats("platforms.label")}</p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    Next.js / SQL / Supabase
+                    {tHomeStats("platforms.sublabel")}
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">100%</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">Delivery rate</p>
+                  <p className="text-3xl font-bold gradient-text mb-1">{tHomeStats("delivery.value")}</p>
+                  <p className="text-sm text-[var(--dd-text-muted)]">{tHomeStats("delivery.label")}</p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    Shipped, tested, deployed
+                    {tHomeStats("delivery.sublabel")}
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">24h</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">Response time</p>
+                  <p className="text-3xl font-bold gradient-text mb-1">{tHomeStats("response.value")}</p>
+                  <p className="text-sm text-[var(--dd-text-muted)]">{tHomeStats("response.label")}</p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    Real engineering support
+                    {tHomeStats("response.sublabel")}
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">EN/FR</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">Fully bilingual</p>
+                  <p className="text-3xl font-bold gradient-text mb-1">{tHomeStats("bilingual.value")}</p>
+                  <p className="text-sm text-[var(--dd-text-muted)]">{tHomeStats("bilingual.label")}</p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    France — Worldwide
+                    {tHomeStats("bilingual.sublabel")}
                   </p>
                 </div>
               </div>

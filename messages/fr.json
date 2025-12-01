@@ -45,10 +45,13 @@
     "stats": {
       "platformsShipped": "5+ plateformes livrées",
       "platformsShippedShort": "Plateformes livrées",
+      "platformsSublabel": "Next.js / SQL / Supabase",
       "deliveryRate": "100% livraison garantie",
       "deliveryRateShort": "Taux de livraison",
+      "deliverySublabel": "Livrées & déployées",
       "responseTime": "Réponse sous 24h",
       "responseTimeShort": "Temps de réponse",
+      "responseSublabel": "Support technique",
       "bilingual": "Français / Anglais",
       "bilingualShort": "Bilingue",
       "founded": "Fondé",
