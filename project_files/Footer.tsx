@@ -75,9 +75,9 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="font-semibold text-[var(--dd-text-main)] mb-4">
+            <h2 className="font-semibold text-[var(--dd-text-main)] mb-4 text-base">
               Navigation
-            </h4>
+            </h2>
             <ul className="space-y-3">
               {footerLinks.navigation.map((link) => (
                 <li key={link.href}>
@@ -94,9 +94,9 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-[var(--dd-text-main)] mb-4">
+            <h2 className="font-semibold text-[var(--dd-text-main)] mb-4 text-base">
               Services
-            </h4>
+            </h2>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
@@ -113,9 +113,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-[var(--dd-text-main)] mb-4">
+            <h2 className="font-semibold text-[var(--dd-text-main)] mb-4 text-base">
               Contact
-            </h4>
+            </h2>
             <ul className="space-y-4">
               <li>
                 <a

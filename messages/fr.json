@@ -151,6 +151,12 @@
             "Support continu"
           ]
         }
+      },
+      "cta": {
+        "consulting": "En savoir plus — Conseil stratégique",
+        "development": "Explorer le développement complet",
+        "ai": "Découvrir — IA & Automatisation",
+        "support": "En savoir plus — Support & Maintenance"
       }
     },
     "clients": {

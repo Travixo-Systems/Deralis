@@ -76,7 +76,7 @@ export default function Services() {
                   href={serviceHrefs[key]}
                   className="text-[var(--dd-accent)] text-sm font-medium hover:underline inline-flex items-center gap-1"
                 >
-                  {tActions("learnMore")}
+                  {t(`cta.${key}`)}
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
