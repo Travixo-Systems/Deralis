@@ -3,6 +3,11 @@ import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import {
+  OrganizationJsonLd,
+  WebSiteJsonLd,
+  LocalBusinessJsonLd,
+} from "@/components/seo/JsonLd";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -81,11 +86,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className="min-h-screen bg-[var(--dd-bg)] text-[var(--dd-text-main)] antialiased">
+        <OrganizationJsonLd />
+        <WebSiteJsonLd />
+        <LocalBusinessJsonLd />
         <Header />
         <main>{children}</main>
         <Footer />
