@@ -1,12 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resendApiKey = process.env.RESEND_API_KEY!;
+const fromEmail = process.env.RESEND_FROM_EMAIL!;
+const toEmail = process.env.RESEND_TO_EMAIL!;
+
+if (!resendApiKey) {
+  throw new Error("RESEND_API_KEY is not set in environment variables");
+}
+if (!fromEmail) {
+  throw new Error("RESEND_FROM_EMAIL is not set in environment variables");
+}
+if (!toEmail) {
+  throw new Error("RESEND_TO_EMAIL is not set in environment variables");
+}
+
+const resend = new Resend(resendApiKey);
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, company, service, budget, message } = body;
+    const { name, email, company, service, budget, message } = body || {};
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -25,7 +39,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Format service name
+    // Service labels
     const serviceLabels: Record<string, string> = {
       consulting: "Strategic Consulting",
       development: "Full-Stack Development",
@@ -34,9 +48,8 @@ export async function POST(request: NextRequest) {
       other: "Other / Not sure",
     };
 
-    const serviceName = serviceLabels[service] || service || "Not specified";
+    const serviceName = serviceLabels[service as string] || service || "Not specified";
 
-    // Email content
     const emailHtml = `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #0f172a; border-bottom: 2px solid #22d3ee; padding-bottom: 10px;">
@@ -93,10 +106,9 @@ ${message}
 Sent from deralis.digital contact form
     `.trim();
 
-    // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: "Deralis Digital <onboarding@resend.dev>",
-      to: ["deralisdigital@gmail.com"], // Your email for testing
+      from: `Deralis Digital <${fromEmail}>`,
+      to: [toEmail],
       replyTo: email,
       subject: `New inquiry from ${name} - ${serviceName}`,
       html: emailHtml,
