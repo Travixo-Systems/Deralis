@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
 
-// TODO: Install resend: npm install resend
-// import { Resend } from "resend";
-// const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
@@ -39,19 +38,47 @@ export async function POST(request: NextRequest) {
 
     // Email content
     const emailHtml = `
-      <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Company:</strong> ${company || "Not provided"}</p>
-      <p><strong>Service:</strong> ${serviceName}</p>
-      <p><strong>Budget:</strong> ${budget || "Not specified"}</p>
-      <hr />
-      <h3>Message:</h3>
-      <p>${message.replace(/\n/g, "<br />")}</p>
+      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #0f172a; border-bottom: 2px solid #22d3ee; padding-bottom: 10px;">
+          New Contact Form Submission
+        </h2>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <tr>
+            <td style="padding: 8px 0; color: #64748b; width: 120px;">Name:</td>
+            <td style="padding: 8px 0; color: #0f172a; font-weight: 500;">${name}</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; color: #64748b;">Email:</td>
+            <td style="padding: 8px 0; color: #0f172a;">
+              <a href="mailto:${email}" style="color: #2563eb;">${email}</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; color: #64748b;">Company:</td>
+            <td style="padding: 8px 0; color: #0f172a;">${company || "Not provided"}</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; color: #64748b;">Service:</td>
+            <td style="padding: 8px 0; color: #0f172a;">${serviceName}</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; color: #64748b;">Budget:</td>
+            <td style="padding: 8px 0; color: #0f172a;">${budget || "Not specified"}</td>
+          </tr>
+        </table>
+        <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
+          <h3 style="color: #0f172a; margin-top: 0;">Message:</h3>
+          <p style="color: #334155; line-height: 1.6; white-space: pre-wrap;">${message}</p>
+        </div>
+        <p style="color: #94a3b8; font-size: 12px; margin-top: 30px;">
+          Sent from deralis.digital contact form
+        </p>
+      </div>
     `;
 
     const emailText = `
 New Contact Form Submission
+===========================
 
 Name: ${name}
 Email: ${email}
@@ -61,13 +88,15 @@ Budget: ${budget || "Not specified"}
 
 Message:
 ${message}
-    `;
 
-    // TODO: Uncomment when Resend is set up
-    /*
+---
+Sent from deralis.digital contact form
+    `.trim();
+
+    // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: "Deralis Digital <noreply@deralis.digital>",
-      to: ["contact@deralis.digital"],
+      from: "Deralis Digital <onboarding@resend.dev>",
+      to: ["deralisdigital@gmail.com"], // Your email for testing
       replyTo: email,
       subject: `New inquiry from ${name} - ${serviceName}`,
       html: emailHtml,
@@ -81,17 +110,8 @@ ${message}
         { status: 500 }
       );
     }
-    */
 
-    // For now, just log the submission
-    console.log("Contact form submission:", {
-      name,
-      email,
-      company,
-      service: serviceName,
-      budget,
-      message,
-    });
+    console.log("Email sent successfully:", data?.id);
 
     return NextResponse.json(
       { success: true, message: "Message sent successfully" },
