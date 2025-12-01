@@ -1,0 +1,21 @@
+{
+  "name": "Deralis Digital",
+  "short_name": "Deralis",
+  "description": "Modern Web Development & Digital Transformation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#22d3ee",
+  "icons": [
+    {
+      "src": "/icon",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
