@@ -135,6 +135,12 @@
           "description": "Ongoing maintenance, workflow automation, and technical support. We don't disappear after launch.",
           "features": ["Workflow automation", "Integrations", "Ongoing support"]
         }
+      },
+      "cta": {
+        "consulting": "Learn more about consulting",
+        "development": "Explore full-stack development",
+        "ai": "See AI integration services",
+        "support": "Discover workflow automation"
       }
     },
     "clients": {
