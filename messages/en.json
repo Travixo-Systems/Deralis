@@ -38,7 +38,9 @@
       "workWithUs": "Work with us",
       "getInTouch": "Get in touch",
       "sendMessage": "Send message",
-      "sending": "Sending..."
+      "sending": "Sending...",
+      "language": "Language",
+      "changeLanguage": "Change language"
     },
     "stats": {
       "platformsShipped": "5+ platforms shipped",

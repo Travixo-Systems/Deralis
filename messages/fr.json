@@ -38,7 +38,9 @@
       "workWithUs": "Travailler avec nous",
       "getInTouch": "Nous contacter",
       "sendMessage": "Envoyer le message",
-      "sending": "Envoi en cours..."
+      "sending": "Envoi en cours...",
+      "language": "Langue",
+      "changeLanguage": "Changer de langue"
     },
     "stats": {
       "platformsShipped": "5+ plateformes livrées",
