@@ -40,7 +40,7 @@ export default function Footer() {
             <p className="text-[var(--dd-text-muted)] text-sm mb-6 leading-relaxed">
               Build. Modernize. Digitize.
               <br />
-              Modern web development and digital transformation for businesses ready to scale.
+              Modern web systems and digital transformation for businesses ready to scale.
             </p>
             <div className="flex gap-4">
               <a
@@ -138,7 +138,7 @@ export default function Footer() {
               <li>
                 <div className="flex items-start gap-3 text-[var(--dd-text-muted)] text-sm">
                   <MapPin className="w-4 h-4 text-[var(--dd-accent)] mt-0.5" />
-                  <span>Based in France - Working Worldwide</span>
+                  <span>France & Remote</span>
                 </div>
               </li>
             </ul>

@@ -7,12 +7,12 @@ const faqs = [
   {
     question: "How much does a typical project cost?",
     answer:
-      "It depends on scope. Consulting starts at €500, while a full SaaS platform can range from €5,000 to €25,000+. We provide detailed quotes after understanding your needs.",
+      "Consulting starts at €500. Full platforms typically range from €5,000–€25,000 depending on scope. We provide a detailed quote after understanding your needs.",
   },
   {
     question: "What technologies do you work with?",
     answer:
-      "Our primary stack is Next.js, React, and TypeScript for modern projects. We also work with PHP, Node.js, and databases including PostgreSQL, MySQL, and MongoDB. We pick the right tool for the job.",
+      "Our primary stack is Next.js, React, TypeScript, and PostgreSQL. We also work with Supabase, Prisma, and various APIs. We pick the right tool for the job.",
   },
   {
     question: "How long does a project take?",

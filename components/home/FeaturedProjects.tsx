@@ -27,8 +27,8 @@ const projects = [
     title: "More Projects",
     type: "Various",
     description:
-      "PHP applications, CRUD systems, and more. See our full portfolio for details on all projects delivered.",
-    stack: ["PHP", "MySQL", "MongoDB"],
+      "Legacy systems, CRUD apps, and custom internal tools. See our full portfolio for details.",
+    stack: ["Various"],
     href: "/projects",
   },
 ];

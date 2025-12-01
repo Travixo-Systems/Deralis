@@ -29,10 +29,13 @@ export default function Highlight() {
             <p className="text-sm text-[var(--dd-text-dim)] mb-4">
               B2B SaaS • Equipment Tracking • VGP Compliance
             </p>
-            <p className="text-[var(--dd-text-muted)] mb-6 leading-relaxed">
+            <p className="text-[var(--dd-text-muted)] mb-4 leading-relaxed">
               A full multi-tenant SaaS platform for equipment rental companies.
               QR-based asset tracking, inspection scheduling, and compliance
               automation—all powered by a real PostgreSQL database.
+            </p>
+            <p className="text-sm text-[var(--dd-text-main)] mb-6 font-medium">
+              The platform is built with a real PostgreSQL database, multi-tenant access layers, automation workflows, and secure role-based permissions.
             </p>
 
             {/* Features */}
