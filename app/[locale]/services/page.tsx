@@ -45,9 +45,9 @@ export default function ServicesPage() {
   const tStats = useTranslations("common.stats");
 
   const stats = [
-    { icon: Users, value: "5+", label: tStats("platformsShippedShort"), sublabel: "Next.js / SQL / Supabase" },
-    { icon: Clock, value: "24h", label: tStats("responseTimeShort"), sublabel: "Engineering support" },
-    { icon: Target, value: "100%", label: tStats("deliveryRateShort"), sublabel: "Shipped & deployed" },
+    { icon: Users, value: "5+", label: tStats("platformsShippedShort"), sublabel: tStats("platformsSublabel") },
+    { icon: Clock, value: "24h", label: tStats("responseTimeShort"), sublabel: tStats("responseSublabel") },
+    { icon: Target, value: "100%", label: tStats("deliveryRateShort"), sublabel: tStats("deliverySublabel") },
   ];
 
   return (
