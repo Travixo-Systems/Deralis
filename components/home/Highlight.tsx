@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, ExternalLink, CheckCircle2, Database } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
 
 const features = [
   "Multi-tenant SaaS architecture",
@@ -76,7 +77,7 @@ export default function Highlight() {
             </div>
           </div>
 
-          {/* Screenshot placeholder */}
+          {/* Screenshot */}
           <div className="relative">
             <div className="rounded-xl overflow-hidden border border-[var(--dd-border)] bg-[var(--dd-bg-card)]">
               {/* Browser chrome */}
@@ -89,26 +90,14 @@ export default function Highlight() {
                 </span>
               </div>
 
-              {/* Screenshot area - replace with real image */}
-              <div className="aspect-[4/3] bg-gradient-to-br from-[var(--dd-bg)] to-[var(--dd-bg-soft)] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Database className="w-16 h-16 text-[var(--dd-accent)] mx-auto mb-4 opacity-40" />
-                  <p className="text-[var(--dd-text-dim)]">
-                    TraviXO Dashboard
-                  </p>
-                  <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    Screenshot coming soon
-                  </p>
-                </div>
-                
-                {/* When you have the screenshot:
+              {/* Screenshot */}
+              <div className="aspect-[4/3] relative">
                 <Image
                   src="/projects/travixo-dashboard.png"
-                  alt="TraviXO Dashboard"
+                  alt="TraviXO Dashboard - Asset management system"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
-                */}
               </div>
             </div>
 
