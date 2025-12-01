@@ -286,7 +286,7 @@ export default function ContactPage() {
                   </a>
                   <div className="flex items-center gap-3 text-[var(--dd-text-muted)]">
                     <MapPin className="w-5 h-5 text-[var(--dd-accent)]" />
-                    <span>France & Remote</span>
+                    <span>Based in France - Working Worldwide</span>
                   </div>
                   <div className="flex items-center gap-3 text-[var(--dd-text-muted)]">
                     <Clock className="w-5 h-5 text-[var(--dd-accent)]" />

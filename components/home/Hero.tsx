@@ -176,7 +176,7 @@ export default function Hero() {
                     Fully bilingual
                   </p>
                   <p className="text-xs text-[var(--dd-text-dim)] mt-0.5">
-                    Europe & remote
+                    France - Worldwide
                   </p>
                 </div>
               </div>

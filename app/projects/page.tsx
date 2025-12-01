@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "A selection of real projects built by Deralis Digital — from SaaS platforms to web applications, using modern technologies like Next.js, Supabase, and more.",
+    "Real platforms built by Deralis Digital — SaaS applications, dashboards, and web systems powered by Next.js, Supabase, and PostgreSQL.",
   openGraph: {
     title: "Projects | Deralis Digital",
     description:
@@ -37,8 +37,7 @@ const projects = [
       "Supabase",
       "Prisma",
       "PostgreSQL",
-      "UploadThing",
-      "Tailwind CSS",
+      "TypeScript",
     ],
     features: [
       "Multi-tenant architecture",
@@ -59,7 +58,7 @@ const projects = [
     year: "2024–2025",
     status: "Live",
     description:
-      "Public marketing site for TraviXO Systems. SEO-optimized, multilingual landing pages showcasing features, pricing, and product benefits. Drives conversions to the SaaS platform.",
+      "Public marketing site for TraviXO Systems. SEO-optimized, multilingual landing pages showcasing features, pricing, and product benefits.",
     stack: [
       "Next.js 15",
       "Tailwind CSS",
@@ -71,7 +70,6 @@ const projects = [
       "Multilingual (FR/EN)",
       "Responsive design",
       "Conversion-focused CTAs",
-      "Legal pages (Privacy, Terms)",
     ],
     liveUrl: "https://travixosystems.com",
     featured: false,
@@ -84,20 +82,18 @@ const projects = [
     year: "2024–2025",
     status: "In Development",
     description:
-      "Corporate website for Deralis Digital agency. Futuristic blue gradient branding, showcasing services, projects, and case studies. Built to generate leads and establish brand presence.",
+      "Corporate website for Deralis Digital agency. Lead generation optimized with service showcase, project portfolio, and contact system.",
     stack: [
       "Next.js 15",
       "TypeScript",
       "Tailwind CSS",
       "Framer Motion",
-      "Resend",
     ],
     features: [
       "Lead generation optimized",
       "Service showcase",
       "Project portfolio",
-      "Contact form with Resend",
-      "SEO & performance focused",
+      "Contact form",
     ],
     liveUrl: null,
     featured: false,
@@ -110,20 +106,18 @@ const projects = [
     year: "2024",
     status: "MVP Complete",
     description:
-      "Carpooling platform connecting drivers and passengers. Full trip management system with route planning, bookings, payments, and real-time messaging.",
+      "Carpooling platform connecting drivers and passengers. Full trip management system with route planning, bookings, and messaging.",
     stack: [
       "PHP (Slim)",
       "MySQL",
       "MongoDB",
       "Bootstrap",
-      "JavaScript",
     ],
     features: [
       "User authentication",
       "Trip creation & search",
       "Booking management",
       "In-app messaging",
-      "Admin panel",
     ],
     liveUrl: null,
     featured: false,
@@ -136,18 +130,16 @@ const projects = [
     year: "2024",
     status: "Completed",
     description:
-      "Zoo management system for tracking animals, species, habitats, and staff. Built as a training project demonstrating full CRUD operations and database design.",
+      "Zoo management system for tracking animals, species, habitats, and staff. Full CRUD operations and database design.",
     stack: [
       "PHP (OOP)",
       "MySQL",
       "HTML/CSS",
-      "JavaScript",
     ],
     features: [
       "Full CRUD operations",
       "Database schema design",
       "User authentication",
-      "Responsive interface",
       "Admin dashboard",
     ],
     liveUrl: null,
@@ -156,7 +148,7 @@ const projects = [
 ];
 
 const stats = [
-  { value: "5+", label: "Projects delivered" },
+  { value: "5+", label: "Platforms delivered" },
   { value: "2024", label: "Founded" },
   { value: "100%", label: "Completion rate" },
 ];
@@ -165,29 +157,25 @@ export default function ProjectsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-mesh">
+      <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-10 bg-mesh">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dd-text-main)] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dd-text-main)] mb-4">
               Our{" "}
               <span className="gradient-text">work</span>
             </h1>
-            <p className="text-lg text-[var(--dd-text-muted)] mb-8 leading-relaxed">
-              A selection of real projects built by Deralis Digital. From SaaS
-              platforms to marketing sites — modern, scalable, and production-ready.
+            <p className="text-lg text-[var(--dd-text-muted)] leading-relaxed">
+              Real platforms we&apos;ve built. SaaS applications, dashboards, 
+              and web systems — modern, scalable, and production-ready.
             </p>
-            <Link href="/contact" className="btn-primary">
-              Start your project
-              <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         </div>
       </section>
 
       {/* Stats Bar */}
-      <section className="py-8 border-y border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
+      <section className="py-5 border-y border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-6">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-2xl font-bold text-[var(--dd-text-main)]">
@@ -204,39 +192,39 @@ export default function ProjectsPage() {
       {projects
         .filter((p) => p.featured)
         .map((project) => (
-          <section key={project.id} className="py-20 lg:py-28">
+          <section key={project.id} className="py-8 lg:py-12">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-              <div className="mb-8">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-[var(--dd-grad-from)] to-[var(--dd-grad-to)] text-[var(--dd-bg)] text-sm font-semibold">
+              <div className="mb-6">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-[var(--dd-grad-from)] to-[var(--dd-grad-to)] text-[var(--dd-bg)] text-xs font-semibold">
                   Featured Project
                 </span>
               </div>
               
-              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                 {/* Content */}
                 <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center">
-                      <project.icon className="w-7 h-7 text-[var(--dd-accent)]" />
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center">
+                      <project.icon className="w-6 h-6 text-[var(--dd-accent)]" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-[var(--dd-text-main)]">
+                      <h2 className="text-2xl font-bold text-[var(--dd-text-main)]">
                         {project.title}
                       </h2>
-                      <p className="text-[var(--dd-text-muted)]">{project.type}</p>
+                      <p className="text-sm text-[var(--dd-text-muted)]">{project.type}</p>
                     </div>
                   </div>
 
-                  <p className="text-[var(--dd-text-muted)] mb-6 leading-relaxed">
+                  <p className="text-[var(--dd-text-muted)] mb-5 leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* Features */}
-                  <div className="mb-6">
-                    <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-3">
+                  <div className="mb-5">
+                    <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-2">
                       Key Features
                     </h3>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                       {project.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2">
                           <CheckCircle2 className="w-4 h-4 text-[var(--dd-accent)] flex-shrink-0" />
@@ -276,34 +264,34 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* Info Card */}
-                <div className="gradient-border p-8">
-                  <div className="space-y-6">
+                <div className="gradient-border p-6">
+                  <div className="space-y-5">
                     <div>
-                      <p className="text-sm text-[var(--dd-text-dim)] mb-2">Status</p>
+                      <p className="text-xs text-[var(--dd-text-dim)] mb-1">Status</p>
                       <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-green-500" />
-                        <span className="text-[var(--dd-text-main)] font-medium">
+                        <span className="text-[var(--dd-text-main)] font-medium text-sm">
                           {project.status}
                         </span>
                       </div>
                     </div>
 
                     <div>
-                      <p className="text-sm text-[var(--dd-text-dim)] mb-2">Year</p>
-                      <p className="text-[var(--dd-text-main)] font-medium">
+                      <p className="text-xs text-[var(--dd-text-dim)] mb-1">Year</p>
+                      <p className="text-[var(--dd-text-main)] font-medium text-sm">
                         {project.year}
                       </p>
                     </div>
 
                     <div>
-                      <p className="text-sm text-[var(--dd-text-dim)] mb-3">
+                      <p className="text-xs text-[var(--dd-text-dim)] mb-2">
                         Tech Stack
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5">
                         {project.stack.map((tech) => (
                           <span
                             key={tech}
-                            className="px-3 py-1 rounded-full text-sm bg-[var(--dd-bg)] border border-[var(--dd-border)] text-[var(--dd-text-muted)]"
+                            className="px-2 py-1 rounded text-xs bg-[var(--dd-bg)] border border-[var(--dd-border)] text-[var(--dd-text-muted)]"
                           >
                             {tech}
                           </span>
@@ -311,7 +299,7 @@ export default function ProjectsPage() {
                       </div>
                     </div>
 
-                    <div className="pt-6 border-t border-[var(--dd-border)]">
+                    <div className="pt-5 border-t border-[var(--dd-border)]">
                       <p className="text-sm text-[var(--dd-text-muted)]">
                         Want something similar?
                       </p>
@@ -331,55 +319,50 @@ export default function ProjectsPage() {
         ))}
 
       {/* Other Projects */}
-      <section className="py-20 lg:py-28 bg-[var(--dd-bg-soft)]">
+      <section className="py-8 lg:py-12 bg-[var(--dd-bg-soft)]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-[var(--dd-text-main)] mb-12">
+          <h2 className="text-xl font-bold text-[var(--dd-text-main)] mb-6">
             More Projects
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-4">
             {projects
               .filter((p) => !p.featured)
               .map((project) => (
                 <div
                   key={project.id}
-                  className="p-6 rounded-xl bg-[var(--dd-bg)] border border-[var(--dd-border)] card-hover"
+                  className="p-5 rounded-xl bg-[var(--dd-bg)] border border-[var(--dd-border)] card-hover"
                 >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center flex-shrink-0">
-                      <project.icon className="w-6 h-6 text-[var(--dd-accent)]" />
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center flex-shrink-0">
+                      <project.icon className="w-5 h-5 text-[var(--dd-accent)]" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-[var(--dd-text-main)]">
+                      <h3 className="text-lg font-semibold text-[var(--dd-text-main)]">
                         {project.title}
                       </h3>
-                      <p className="text-sm text-[var(--dd-text-muted)]">
+                      <p className="text-xs text-[var(--dd-text-muted)]">
                         {project.type}
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-[var(--dd-text-muted)] text-sm mb-4">
+                  <p className="text-sm text-[var(--dd-text-muted)] mb-3">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-1.5 mb-3">
                     {project.stack.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 rounded text-xs bg-[var(--dd-bg-soft)] border border-[var(--dd-border)] text-[var(--dd-text-dim)]"
+                        className="px-2 py-0.5 rounded text-xs bg-[var(--dd-bg-soft)] border border-[var(--dd-border)] text-[var(--dd-text-dim)]"
                       >
                         {tech}
                       </span>
                     ))}
-                    {project.stack.length > 4 && (
-                      <span className="px-2 py-1 rounded text-xs text-[var(--dd-text-dim)]">
-                        +{project.stack.length - 4} more
-                      </span>
-                    )}
                   </div>
 
-                  <div className="flex items-center justify-between pt-4 border-t border-[var(--dd-border)]">
+                  <div className="flex items-center justify-between pt-3 border-t border-[var(--dd-border)]">
                     <div className="flex items-center gap-2">
                       <span
                         className={`w-2 h-2 rounded-full ${
@@ -392,12 +375,12 @@ export default function ProjectsPage() {
                             : "bg-blue-500"
                         }`}
                       />
-                      <span className="text-sm text-[var(--dd-text-muted)]">
+                      <span className="text-xs text-[var(--dd-text-muted)]">
                         {project.status}
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="text-sm text-[var(--dd-text-dim)]">
+                      <span className="text-xs text-[var(--dd-text-dim)]">
                         {project.year}
                       </span>
                       {project.liveUrl && (
@@ -419,18 +402,18 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-28">
+      <section className="py-8 lg:py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--dd-text-main)] mb-4">
+          <h2 className="text-2xl font-bold text-[var(--dd-text-main)] mb-3">
             Have a project in mind?
           </h2>
-          <p className="text-[var(--dd-text-muted)] max-w-2xl mx-auto mb-8">
-            Whether it&apos;s a SaaS platform, a web application, or a marketing
-            website — we&apos;re ready to bring your vision to life.
+          <p className="text-[var(--dd-text-muted)] max-w-xl mx-auto mb-6">
+            Whether it&apos;s a SaaS platform, a dashboard, or a web application 
+            — we&apos;re ready to bring your vision to life.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-primary">
-              Start your project
+              Build your system
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link href="/services" className="btn-secondary">
@@ -441,19 +424,19 @@ export default function ProjectsPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 border-t border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
+      <section className="py-8 border-t border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
-              <p className="text-[var(--dd-text-main)] font-semibold mb-1">
+              <p className="text-[var(--dd-text-main)] font-semibold">
                 Want to see more details?
               </p>
-              <p className="text-[var(--dd-text-muted)]">
-                We&apos;re happy to walk you through any project in depth.
+              <p className="text-sm text-[var(--dd-text-muted)]">
+                We&apos;re happy to walk you through any project.
               </p>
             </div>
             <Link href="/contact" className="btn-primary">
-              Book a call
+              Speak to an engineer
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

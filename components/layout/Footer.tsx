@@ -138,7 +138,7 @@ export default function Footer() {
               <li>
                 <div className="flex items-start gap-3 text-[var(--dd-text-muted)] text-sm">
                   <MapPin className="w-4 h-4 text-[var(--dd-accent)] mt-0.5" />
-                  <span>France & Remote</span>
+                  <span>Based in France - Working Worldwide</span>
                 </div>
               </li>
             </ul>
