@@ -22,7 +22,7 @@ export default async function Image() {
           justifyContent: "center",
           backgroundColor: "#020617",
           backgroundImage:
-            "radial-gradient(circle at 25% 25%, rgba(34, 211, 238, 0.15) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(37, 99, 235, 0.15) 0%, transparent 50%)",
+            "radial-gradient(circle at 25% 25%, rgba(34, 211, 238, 0.08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(37, 99, 235, 0.08) 0%, transparent 50%)",
         }}
       >
         <div
@@ -31,97 +31,57 @@ export default async function Image() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            padding: "40px 80px",
           }}
         >
+          {/* DD Logo Icon */}
+          <svg
+            width="200"
+            height="200"
+            viewBox="0 0 100 100"
+            fill="none"
+            style={{ marginBottom: "30px" }}
+          >
+            <defs>
+              <linearGradient id="ddGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#22d3ee" />
+                <stop offset="100%" stopColor="#2563eb" />
+              </linearGradient>
+            </defs>
+            {/* Inner D (smaller, front) */}
+            <path
+              d="M15 15 L15 55 L35 55 C50 55 55 45 55 35 C55 25 50 15 35 15 L15 15 Z M25 25 L35 25 C42 25 45 30 45 35 C45 40 42 45 35 45 L25 45 L25 25 Z"
+              fill="url(#ddGradient)"
+            />
+            {/* Outer D (larger, back) */}
+            <path
+              d="M35 30 L35 85 L60 85 C82 85 90 70 90 57 C90 44 82 30 60 30 L35 30 Z M47 42 L60 42 C72 42 78 50 78 57 C78 64 72 73 60 73 L47 73 L47 42 Z"
+              fill="url(#ddGradient)"
+            />
+          </svg>
+
+          {/* DERALIS Text */}
           <div
             style={{
-              display: "flex",
-              alignItems: "center",
-              marginBottom: "20px",
+              fontSize: "72px",
+              fontWeight: "400",
+              color: "#f9fafb",
+              letterSpacing: "12px",
+              marginBottom: "8px",
             }}
           >
-            <div
-              style={{
-                width: "60px",
-                height: "60px",
-                borderRadius: "12px",
-                background: "linear-gradient(135deg, #22d3ee 0%, #2563eb 100%)",
-                marginRight: "20px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <span
-                style={{
-                  color: "white",
-                  fontSize: "32px",
-                  fontWeight: "bold",
-                }}
-              >
-                D
-              </span>
-            </div>
-            <span
-              style={{
-                fontSize: "48px",
-                fontWeight: "bold",
-                color: "#f9fafb",
-              }}
-            >
-              Deralis Digital
-            </span>
+            DERALIS
           </div>
 
+          {/* DIGITAL Text */}
           <div
             style={{
-              fontSize: "32px",
-              fontWeight: "600",
-              background: "linear-gradient(135deg, #22d3ee 0%, #2563eb 100%)",
-              backgroundClip: "text",
-              color: "transparent",
-              marginBottom: "20px",
-              textAlign: "center",
+              fontSize: "28px",
+              fontWeight: "300",
+              color: "#f9fafb",
+              letterSpacing: "16px",
             }}
           >
-            Modern Web Development & Digital Transformation
-          </div>
-
-          <div
-            style={{
-              fontSize: "20px",
-              color: "#94a3b8",
-              textAlign: "center",
-              maxWidth: "800px",
-              lineHeight: 1.5,
-            }}
-          >
-            High-performance websites, custom web applications, and AI-powered
-            tools that help businesses modernize and scale efficiently.
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              marginTop: "40px",
-              gap: "30px",
-            }}
-          >
-            {["Next.js", "TypeScript", "Supabase", "AI Tools"].map((tech) => (
-              <div
-                key={tech}
-                style={{
-                  padding: "8px 20px",
-                  borderRadius: "20px",
-                  border: "1px solid rgba(148, 163, 184, 0.3)",
-                  color: "#94a3b8",
-                  fontSize: "16px",
-                }}
-              >
-                {tech}
-              </div>
-            ))}
+            DIGITAL
           </div>
         </div>
 
