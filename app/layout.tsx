@@ -16,6 +16,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://deralis.digital"),
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
