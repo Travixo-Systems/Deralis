@@ -2,7 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
+import { Mail, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   const t = useTranslations("common");
@@ -42,9 +43,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)] to-[var(--dd-grad-to)] flex items-center justify-center font-bold text-[var(--dd-bg)] text-lg">
-                D
-              </div>
+              <Image 
+                src="/logo-mark.png" 
+                alt="Deralis Digital" 
+                width={40} 
+                height={40}
+                className="rounded-lg"
+              />
               <span className="font-semibold text-lg text-[var(--dd-text-main)]">
                 Deralis Digital
               </span>
@@ -136,15 +141,6 @@ export default function Footer() {
                 >
                   <Mail className="w-4 h-4 text-[var(--dd-accent)]" />
                   contact@deralis.digital
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+33600000000"
-                  className="flex items-center gap-3 text-[var(--dd-text-muted)] hover:text-[var(--dd-text-main)] text-sm transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-[var(--dd-accent)]" />
-                  +33 6 00 00 00 00
                 </a>
               </li>
               <li>
