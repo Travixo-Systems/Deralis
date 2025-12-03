@@ -52,14 +52,14 @@ const projectConfig = {
     year: "2024",
     status: "mvpComplete",
     stack: ["PHP (Slim)", "MySQL", "MongoDB", "Bootstrap"],
-    liveUrl: null,
+    liveUrl: "https://ecoride-mirror-1-fcd84d9225d6.herokuapp.com",
     featured: false,
   },
   arcadiaZoo: {
     year: "2024",
     status: "completed",
     stack: ["PHP (OOP)", "MySQL", "HTML/CSS"],
-    liveUrl: null,
+    liveUrl: "https://zooproj.great-site.net/homepage.php?i=1",
     featured: false,
   },
 };
