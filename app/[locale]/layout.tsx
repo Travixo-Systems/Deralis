@@ -37,11 +37,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const titles = {
     fr: {
-      default: "Deralis Digital – Systèmes web modernes & Transformation digitale",
+      default: "Deralis Digital — Systèmes web modernes & Transformation digitale",
       template: "%s | Deralis Digital",
     },
     en: {
-      default: "Deralis Digital – Modern Web Development & Digital Transformation",
+      default: "Deralis Digital — Modern Web Development & Digital Transformation",
       template: "%s | Deralis Digital",
     },
   };
@@ -79,6 +79,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         ],
     authors: [{ name: "Deralis Digital" }],
     creator: "Deralis Digital",
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      ],
+      apple: "/apple-touch-icon.png",
+    },
     openGraph: {
       type: "website",
       locale: locale === "fr" ? "fr_FR" : "en_US",
@@ -139,6 +147,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${manrope.variable} ${inter.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <link
           rel="canonical"

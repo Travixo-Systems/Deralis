@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { Menu, X, ArrowRight, Globe, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image"
 
 const navKeys = ["home", "services", "projects", "about", "contact"] as const;
 
@@ -88,9 +89,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 sm:gap-3 group z-10">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)] to-[var(--dd-grad-to)] flex items-center justify-center font-bold text-[var(--dd-bg)] text-base sm:text-lg">
-                D
-              </div>
+              <Image src="/logo-mark.png" alt="Deralis Digital" width={40} height={40} />
               <span className="font-semibold text-base sm:text-lg text-[var(--dd-text-main)] group-hover:text-[var(--dd-accent)] transition-colors">
                 Deralis Digital
               </span>
