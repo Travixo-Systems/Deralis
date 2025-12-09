@@ -37,11 +37,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const titles = {
     fr: {
-      default: "Deralis Digital — Systèmes web modernes & Transformation digitale",
+      default: "Deralis Digital | Systèmes web modernes & Transformation digitale",
       template: "%s | Deralis Digital",
     },
     en: {
-      default: "Deralis Digital — Modern Web Development & Digital Transformation",
+      default: "Deralis Digital | Modern Web Development & Digital Transformation",
       template: "%s | Deralis Digital",
     },
   };
