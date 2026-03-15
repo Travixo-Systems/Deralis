@@ -59,7 +59,7 @@ const projectConfig = {
     year: "2024",
     status: "completed",
     stack: ["PHP (OOP)", "MySQL", "HTML/CSS"],
-    liveUrl: "https://zooproj.great-site.net/homepage.php?i=1",
+    liveUrl: "https://github.com/theWQLker/arcadia-zoo-management",
     featured: false,
   },
 };
