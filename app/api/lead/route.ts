@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { sendNurtureSequence } from "@/lib/nurture-emails";
 
 const resendApiKey = process.env.RESEND_API_KEY;
 const fromEmail = process.env.RESEND_FROM_EMAIL;
@@ -42,7 +43,7 @@ export async function POST(request: NextRequest) {
       await resend.emails.send({
         from: `Deralis Digital <${fromEmail}>`,
         to: [toEmail],
-        subject: `New Lead: ${sourceLabel} — ${email}`,
+        subject: `New Lead: ${sourceLabel} - ${email}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #0f172a; border-bottom: 2px solid #22d3ee; padding-bottom: 10px;">
@@ -71,6 +72,11 @@ export async function POST(request: NextRequest) {
         `,
         text: `New Lead: ${sourceLabel}\nEmail: ${email}${name ? `\nName: ${name}` : ""}`,
       });
+
+      // Send nurture email sequence to the lead
+      sendNurtureSequence(resend, email).catch((err) =>
+        console.error("Nurture sequence error:", err)
+      );
     }
 
     return NextResponse.json(
