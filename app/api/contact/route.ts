@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { sendNurtureSequence } from "@/lib/nurture-emails";
 
 const resendApiKey = process.env.RESEND_API_KEY!;
 const fromEmail = process.env.RESEND_FROM_EMAIL!;
@@ -124,6 +125,11 @@ Sent from deralis.digital contact form
     }
 
     console.log("Email sent successfully:", data?.id);
+
+    // Send nurture email sequence to the contact
+    sendNurtureSequence(resend, email).catch((err) =>
+      console.error("Nurture sequence error:", err)
+    );
 
     return NextResponse.json(
       { success: true, message: "Message sent successfully" },
