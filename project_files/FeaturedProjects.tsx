@@ -94,17 +94,6 @@ export default function FeaturedProjects() {
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 )}
-                {project.appUrl && (
-                  <a
-                    href={project.appUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[var(--dd-text-muted)] text-sm hover:text-[var(--dd-text-main)] inline-flex items-center gap-1"
-                  >
-                    Open app
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                )}
                 {project.href && (
                   <Link
                     href={project.href}
