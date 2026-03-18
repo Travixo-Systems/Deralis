@@ -71,10 +71,15 @@ export default function ServicesPage() {
               {t("hero.description")}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="btn-primary">
+              <a
+                href="https://calendly.com/deralisdigital/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 {tActions("speakToEngineer")}
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
               <Link href="/projects" className="btn-secondary">
                 {tActions("seePlatforms")}
               </Link>
@@ -280,15 +285,37 @@ export default function ServicesPage() {
           <p className="text-[var(--dd-text-muted)] max-w-xl mx-auto mb-6">
             {t("notSure.description")}
           </p>
-          <Link href="/contact" className="btn-primary">
+          <a
+            href="https://calendly.com/deralisdigital/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
             {tActions("speakToEngineer")}
             <ArrowRight className="w-4 h-4" />
-          </Link>
+          </a>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="py-8 lg:py-10 bg-[var(--dd-bg-soft)]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: (["cost", "tech", "remote", "takeover"] as const).map((key) => ({
+                "@type": "Question",
+                name: t(`faq.items.${key}.question`),
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: t(`faq.items.${key}.answer`),
+                },
+              })),
+            }),
+          }}
+        />
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[var(--dd-text-main)] mb-6 text-center">
             {t("faq.title")}
@@ -317,10 +344,15 @@ export default function ServicesPage() {
           <p className="text-[var(--dd-text-muted)] mb-3">
             {t("finalCta.title")}
           </p>
-          <Link href="/contact" className="btn-primary">
+          <a
+            href="https://calendly.com/deralisdigital/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
             {tActions("buildYourSystem")}
             <ArrowRight className="w-4 h-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </>
