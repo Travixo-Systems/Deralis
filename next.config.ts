@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        // Static assets (JS, CSS bundles) — cache 1 year, immutable
+        // Static assets (JS, CSS bundles) - cache 1 year, immutable
         source: "/_next/static/:path*",
         headers: [
           {
@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // Public images and static files — cache 30 days
+        // Public images and static files - cache 30 days
         source: "/:path*.(png|jpg|jpeg|gif|svg|ico|webp|avif|woff|woff2)",
         headers: [
           {
@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // API routes — no caching
+        // API routes - no caching
         source: "/api/:path*",
         headers: [
           {
@@ -37,7 +37,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // HTML pages — no cache so Cloudflare doesn't serve stale content
+        // HTML pages - no cache so Cloudflare doesn't serve stale content
         source: "/:path*",
         headers: [
           {

@@ -121,13 +121,13 @@ export default function ROICalculator() {
                     <div className="p-4 rounded-xl bg-[var(--dd-bg)] border border-[var(--dd-border)]">
                       <p className="text-xs text-[var(--dd-text-dim)] mb-1">{t("timeline")}</p>
                       <p className="text-lg font-bold gradient-text">
-                        {multiplier.timelineLow}–{multiplier.timelineHigh} {t("weeks")}
+                        {multiplier.timelineLow} to {multiplier.timelineHigh} {t("weeks")}
                       </p>
                     </div>
                     <div className="p-4 rounded-xl bg-[var(--dd-bg)] border border-[var(--dd-border)]">
                       <p className="text-xs text-[var(--dd-text-dim)] mb-1">{t("roiMultiplier")}</p>
                       <p className="text-lg font-bold gradient-text">
-                        {multiplier.low}x – {multiplier.high}x
+                        {multiplier.low}x to {multiplier.high}x
                       </p>
                     </div>
                   </div>
@@ -135,7 +135,7 @@ export default function ROICalculator() {
                   <div className="p-4 rounded-xl bg-gradient-to-r from-[var(--dd-grad-from)]/10 to-[var(--dd-grad-to)]/10 border border-[var(--dd-accent)]/30">
                     <p className="text-sm text-[var(--dd-text-muted)] mb-1">{t("projectedValue")}</p>
                     <p className="text-2xl font-bold text-[var(--dd-text-main)]">
-                      €{roiLow.toLocaleString()} – €{roiHigh.toLocaleString()}
+                      €{roiLow.toLocaleString()} to €{roiHigh.toLocaleString()}
                       <span className="text-sm font-normal text-[var(--dd-text-dim)] ml-2">{t("perYear")}</span>
                     </p>
                   </div>
