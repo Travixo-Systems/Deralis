@@ -1,17 +1,15 @@
 import Link from "next/link";
-import { ArrowRight, ExternalLink, Database, Code2, Globe } from "lucide-react";
+import { ArrowRight, ExternalLink, Car, Code2, Globe } from "lucide-react";
 
 const projects = [
   {
-    icon: Database,
-    title: "TraviXO Systems",
-    type: "B2B SaaS Platform",
+    icon: Car,
+    title: "EcoRidePool",
+    type: "Carpooling Web App",
     description:
-      "QR-based asset tracking and VGP compliance automation. Multi-tenant architecture with dashboards, inspection scheduling, and compliance logging.",
-    stack: ["Next.js 15", "Supabase", "PostgreSQL", "Prisma"],
-    liveUrl: "https://travixosystems.com",
-    appUrl: "https://app.travixosystems.com",
-    featured: true,
+      "Connects drivers and passengers for shared rides. Full trip management with route planning, bookings, and messaging.",
+    stack: ["PHP (Slim)", "MySQL", "MongoDB", "Bootstrap"],
+    liveUrl: "https://ecoride-mirror-1-fcd84d9225d6.herokuapp.com",
   },
   {
     icon: Globe,
@@ -52,17 +50,8 @@ export default function FeaturedProjects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className={`p-5 rounded-xl border flex flex-col ${
-                project.featured
-                  ? "gradient-border"
-                  : "bg-[var(--dd-bg-card)] border-[var(--dd-border)]"
-              }`}
+              className="p-5 rounded-xl border flex flex-col bg-[var(--dd-bg-card)] border-[var(--dd-border)]"
             >
-              {project.featured && (
-                <span className="text-xs text-[var(--dd-accent)] font-medium mb-3">
-                  Featured
-                </span>
-              )}
               
               <div className="flex items-start gap-3 mb-3">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center flex-shrink-0">
