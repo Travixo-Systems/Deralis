@@ -4,6 +4,12 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight, ExternalLink, Car, Code2, Globe } from "lucide-react";
 
+interface ProjectConfig {
+  stack: string[];
+  liveUrl?: string;
+  href?: string;
+}
+
 const projectKeys = ["ecoridepool", "travixoWeb", "more"] as const;
 
 const projectIcons = {
@@ -12,7 +18,7 @@ const projectIcons = {
   more: Code2,
 };
 
-const projectConfig = {
+const projectConfig: Record<(typeof projectKeys)[number], ProjectConfig> = {
   ecoridepool: {
     stack: ["PHP (Slim)", "MySQL", "MongoDB", "Bootstrap"],
     liveUrl: "https://ecoride-mirror-1-fcd84d9225d6.herokuapp.com",
@@ -88,7 +94,7 @@ export default function FeaturedProjects() {
 
                 {/* Links */}
                 <div className="flex items-center gap-3 pt-3 border-t border-[var(--dd-border)]">
-                  {"liveUrl" in config && config.liveUrl && (
+                  {config.liveUrl && (
                     <a
                       href={config.liveUrl}
                       target="_blank"
@@ -99,18 +105,7 @@ export default function FeaturedProjects() {
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   )}
-                  {"appUrl" in config && config.appUrl && (
-                    <a
-                      href={config.appUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[var(--dd-text-muted)] text-sm hover:text-[var(--dd-text-main)] inline-flex items-center gap-1"
-                    >
-                      {t("actions.openApp")}
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  )}
-                  {"href" in config && config.href && (
+                  {config.href && (
                     <Link
                       href={config.href}
                       className="text-[var(--dd-accent)] text-sm font-medium hover:underline inline-flex items-center gap-1"
