@@ -10,6 +10,7 @@ import {
   LocalBusinessJsonLd,
 } from "@/components/seo/JsonLd";
 import StickyMobileCTA from "@/components/lead-gen/StickyMobileCTA";
+import ClarityScript from "@/components/analytics/ClarityScript";
 import { Manrope, Inter } from "next/font/google";
 
 const manrope = Manrope({
@@ -172,6 +173,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main>{children}</main>
           <Footer />
           <StickyMobileCTA />
+          <ClarityScript />
         </NextIntlClientProvider>
       </body>
     </html>
