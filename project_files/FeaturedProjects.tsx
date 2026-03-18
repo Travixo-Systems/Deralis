@@ -43,7 +43,7 @@ export default function FeaturedProjects() {
             Featured <span className="gradient-text">platforms</span>
           </h2>
           <p className="text-[var(--dd-text-muted)] max-w-2xl mx-auto">
-            Real systems we&apos;ve built — dashboards, databases, automation.
+            Real systems we&apos;ve built: dashboards, databases, automation.
           </p>
         </div>
 

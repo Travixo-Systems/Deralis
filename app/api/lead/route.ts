@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
       await resend.emails.send({
         from: `Deralis Digital <${fromEmail}>`,
         to: [toEmail],
-        subject: `New Lead: ${sourceLabel} — ${email}`,
+        subject: `New Lead: ${sourceLabel} - ${email}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #0f172a; border-bottom: 2px solid #22d3ee; padding-bottom: 10px;">

@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Legal Notice",
-  description: "Legal Notice for Deralis Digital — French law compliance (LCEN).",
+  description: "Legal Notice for Deralis Digital. French law compliance (LCEN).",
 };
 
 export default function LegalPage() {

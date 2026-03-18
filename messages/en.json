@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": {
-      "default": "Deralis Digital – Modern Web Development & Digital Transformation",
+      "default": "Deralis Digital - Modern Web Development & Digital Transformation",
       "template": "%s | Deralis Digital"
     },
     "description": "We build high-performance websites, custom web applications, workflow automations and AI-powered tools that help businesses modernize and scale efficiently."
@@ -65,7 +65,7 @@
       "services": "Services",
       "contact": "Contact",
       "legal": "Legal",
-      "location": "Based in France — Working worldwide",
+      "location": "Based in France. Working worldwide",
       "locationShort": "France & Remote",
       "rights": "All rights reserved."
     },
@@ -80,7 +80,7 @@
       "badge": "Full-stack engineering, not templates.",
       "title": "Modern Web Systems",
       "titleHighlight": "Not Just Websites.",
-      "description": "We build real web platforms—Next.js applications powered by SQL databases, Supabase, secure authentication, and automation workflows.",
+      "description": "We build real web platforms. Next.js applications powered by SQL databases, Supabase, secure authentication, and automation workflows.",
       "subDescription": "We deliver software, not pages. Systems, not templates.",
       "features": {
         "tech": "Next.js, React, TypeScript",
@@ -106,7 +106,7 @@
         "bilingual": {
           "value": "EN/FR",
           "label": "Fully bilingual",
-          "sublabel": "France — Worldwide"
+          "sublabel": "France, Worldwide"
         }
       }
     },
@@ -196,7 +196,7 @@
     "featured": {
       "title": "Featured",
       "titleHighlight": "platforms",
-      "description": "Real systems we've built — dashboards, databases, automation.",
+      "description": "Real systems we've built: dashboards, databases, automation.",
       "label": "Featured",
       "projects": {
         "travixo": {
@@ -224,7 +224,7 @@
       "badge": "Case Study",
       "title": "TraviXO Systems",
       "subtitle": "B2B SaaS • Equipment Tracking • VGP Compliance",
-      "description": "A full multi-tenant SaaS platform for equipment rental companies. QR-based asset tracking, inspection scheduling, and compliance automation—all powered by a real PostgreSQL database.",
+      "description": "A full multi-tenant SaaS platform for equipment rental companies. QR-based asset tracking, inspection scheduling, and compliance automation, all powered by a real PostgreSQL database.",
       "detailedDescription": "The platform is built with a real PostgreSQL database, multi-tenant access layers, automation workflows, and secure role-based permissions.",
       "features": [
         "Multi-tenant SaaS architecture",
@@ -246,7 +246,7 @@
       "items": {
         "pricing": {
           "question": "How much does a typical project cost?",
-          "answer": "Consulting starts at €500. Full platforms typically range from €5,000–€25,000 depending on scope. We provide a detailed quote after understanding your needs."
+          "answer": "Consulting starts at €500. Full platforms typically range from €5,000 to €25,000 depending on scope. We provide a detailed quote after understanding your needs."
         },
         "tools": {
           "question": "What technologies do you work with?",
@@ -254,7 +254,7 @@
         },
         "timeline": {
           "question": "How long does a project take?",
-          "answer": "A consulting engagement takes 1-2 weeks. A typical web application takes 4-12 weeks depending on complexity. We provide realistic timelines upfront—no surprises."
+          "answer": "A consulting engagement takes 1-2 weeks. A typical web application takes 4-12 weeks depending on complexity. We provide realistic timelines upfront. No surprises."
         },
         "remote": {
           "question": "Do you work with clients outside France?",
@@ -262,7 +262,7 @@
         },
         "support": {
           "question": "Do you offer ongoing support after launch?",
-          "answer": "Yes. We offer maintenance packages that include bug fixes, updates, monitoring, and feature additions. Most clients choose ongoing support—we don't disappear after delivery."
+          "answer": "Yes. We offer maintenance packages that include bug fixes, updates, monitoring, and feature additions. Most clients choose ongoing support. We don't disappear after delivery."
         }
       }
     },
@@ -294,7 +294,7 @@
         "label": "Response time"
       },
       "metric4": {
-        "value": "3x–8x",
+        "value": "3x to 8x",
         "label": "Avg. client ROI"
       },
       "testimonial1": {
@@ -304,7 +304,7 @@
         "initials": "MD"
       },
       "testimonial2": {
-        "quote": "They don't just write code — they understand the business problem. Our workflow automation saved us 20+ hours per week and paid for itself in the first month.",
+        "quote": "They don't just write code. They understand the business problem. Our workflow automation saved us 20+ hours per week and paid for itself in the first month.",
         "name": "Sophie L.",
         "role": "Operations Manager, Logistics Startup",
         "initials": "SL"
@@ -339,7 +339,7 @@
   },
   "services": {
     "metadata": {
-      "title": "Services — Full-Stack Web Development",
+      "title": "Services: Full-Stack Web Development",
       "description": "Full-stack web development with Next.js, SQL databases, Supabase, and automation workflows. Real platforms, not templates. Systems, not pages."
     },
     "hero": {
@@ -392,7 +392,7 @@
         "id": "ai",
         "title": "AI Tools & Custom GPT Integration",
         "subtitle": "AI connected to your data.",
-        "description": "We build AI copilots that actually understand your business—connected to your database, trained on your data, integrated into your workflows.",
+        "description": "We build AI copilots that actually understand your business, connected to your database, trained on your data, integrated into your workflows.",
         "features": [
           "Custom GPT assistants",
           "AI copilots connected to your database",
@@ -484,12 +484,12 @@
   "projects": {
     "metadata": {
       "title": "Projects",
-      "description": "Real platforms built by Deralis Digital — SaaS applications, dashboards, and web systems powered by Next.js, Supabase, and PostgreSQL."
+      "description": "Real platforms built by Deralis Digital. SaaS applications, dashboards, and web systems powered by Next.js, Supabase, and PostgreSQL."
     },
     "hero": {
       "title": "Our",
       "titleHighlight": "work",
-      "description": "Real platforms we've built. SaaS applications, dashboards, and web systems — modern, scalable, and production-ready."
+      "description": "Real platforms we've built. SaaS applications, dashboards, and web systems. Modern, scalable, and production-ready."
     },
     "stats": {
       "delivered": "Platforms delivered",
@@ -570,7 +570,7 @@
     },
     "cta": {
       "title": "Have a project in mind?",
-      "description": "Whether it's a SaaS platform, a dashboard, or a web application — we're ready to bring your vision to life."
+      "description": "Whether it's a SaaS platform, a dashboard, or a web application, we're ready to bring your vision to life."
     },
     "finalCta": {
       "title": "Want to see more details?",
@@ -579,22 +579,22 @@
   },
   "about": {
     "metadata": {
-      "title": "About — Independent Engineering Practice",
-      "description": "Deralis Digital is an independent engineering practice building real web platforms — SaaS applications, dashboards, automation workflows, and SQL-powered databases."
+      "title": "About: Independent Engineering Practice",
+      "description": "Deralis Digital is an independent engineering practice building real web platforms. SaaS applications, dashboards, automation workflows, and SQL-powered databases."
     },
     "hero": {
       "badge": "Independent engineering practice",
       "title": "About",
       "titleHighlight": "Deralis Digital",
-      "description": "We build real web systems — platforms, dashboards, automation."
+      "description": "We build real web systems: platforms, dashboards, automation."
     },
     "intro": {
-      "paragraph1": "Deralis Digital is an independent engineering practice focused on building real web platforms — not simple websites. We design and develop systems: SaaS applications, dashboards, automation workflows, and SQL-powered databases using modern technologies such as Next.js, React, TypeScript, Supabase, and Prisma.",
+      "paragraph1": "Deralis Digital is an independent engineering practice focused on building real web platforms, not simple websites. We design and develop systems: SaaS applications, dashboards, automation workflows, and SQL-powered databases using modern technologies such as Next.js, React, TypeScript, Supabase, and Prisma.",
       "paragraph2": "Our approach is engineering-first, built around clarity, performance, and long-term reliability. No WordPress. No templates. No drag-and-drop. Only real software."
     },
     "philosophy": {
       "title": "Our philosophy",
-      "subtitle": "Modern businesses don't need pages — they need systems.",
+      "subtitle": "Modern businesses don't need pages. They need systems.",
       "systemsTitle": "Systems that:",
       "systems": [
         "Store and structure data reliably",
@@ -634,7 +634,7 @@
     },
     "howWeWork": {
       "title": "How we work",
-      "description": "Clients work directly with the engineer behind Deralis Digital — without layers, outsourcing, or miscommunication. The process is simple and technical:",
+      "description": "Clients work directly with the engineer behind Deralis Digital, without layers, outsourcing, or miscommunication. The process is simple and technical:",
       "steps": {
         "step1": {
           "number": "01",
@@ -679,7 +679,7 @@
       "description": "Dashboards, workflows, and database systems used in production environments.",
       "notes": {
         "note1": "These systems include multi-tenant logic, role-based access, SQL databases, and automation workflows.",
-        "note2": "All platforms shown here are built with real databases, real logic, and real engineering — not templates.",
+        "note2": "All platforms shown here are built with real databases, real logic, and real engineering, not templates.",
         "note3": "This demonstrates our focus: systems, not pages."
       }
     },
@@ -701,7 +701,7 @@
     },
     "location": {
       "title": "Where we operate",
-      "description": "Based in France — Working with clients worldwide."
+      "description": "Based in France. Working with clients worldwide."
     },
     "cta": {
       "title": "Ready to build something real?",
@@ -752,9 +752,9 @@
         "placeholder": "Select a range",
         "options": {
           "under2k": "< €2,000",
-          "2k5k": "€2,000 – €5,000",
-          "5k10k": "€5,000 – €10,000",
-          "10k25k": "€10,000 – €25,000",
+          "2k5k": "€2,000 to €5,000",
+          "5k10k": "€5,000 to €10,000",
+          "10k25k": "€10,000 to €25,000",
           "over25k": "> €25,000",
           "notSure": "Not sure yet"
         }
@@ -773,7 +773,7 @@
     "sidebar": {
       "contactInfo": {
         "title": "Contact Info",
-        "location": "Based in France — Working Worldwide",
+        "location": "Based in France. Working Worldwide",
         "response": "Response within 24h"
       },
       "whatToExpect": {
@@ -797,7 +797,7 @@
           },
           "timeline": {
             "question": "What's your typical timeline?",
-            "answer": "Most projects take 4–12 weeks depending on scope."
+            "answer": "Most projects take 4 to 12 weeks depending on scope."
           }
         }
       }
@@ -825,7 +825,7 @@
       "successDescription": "We've sent the checklist to your email. Check your spam folder if you don't see it."
     },
     "exitIntent": {
-      "title": "Wait — before you go",
+      "title": "Wait, before you go",
       "description": "Get a free 30-minute strategy session with our engineering team. No commitment, no sales pitch.",
       "benefit1": "Free 30-min discovery call",
       "benefit2": "No-obligation technical assessment",
@@ -838,7 +838,7 @@
     },
     "newsletter": {
       "title": "Stay updated",
-      "description": "Engineering insights, case studies, and strategies — delivered monthly.",
+      "description": "Engineering insights, case studies, and strategies, delivered monthly.",
       "placeholder": "you@company.com",
       "success": "You're subscribed! Check your inbox.",
       "error": "Something went wrong. Try again."
@@ -846,7 +846,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "Blog — Engineering Insights & Case Studies",
+      "title": "Blog: Engineering Insights & Case Studies",
       "description": "Technical articles, case studies, and strategic insights on modern web development, SaaS platforms, and digital transformation."
     },
     "hero": {
@@ -895,7 +895,7 @@
   "privacy": {
     "metadata": {
       "title": "Privacy Policy",
-      "description": "Privacy Policy for Deralis Digital — how we collect, use, and protect your personal data."
+      "description": "Privacy Policy for Deralis Digital. How we collect, use, and protect your personal data."
     },
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: January 2025",
@@ -944,9 +944,9 @@
         "title": "3. Legal basis (GDPR)",
         "intro": "We process personal data based on:",
         "items": {
-          "legitimate": "Legitimate interest — responding to inquiries, improving website performance",
-          "contract": "Performance of a contract — when working together",
-          "consent": "Consent — if you choose to provide information"
+          "legitimate": "Legitimate interest: responding to inquiries, improving website performance",
+          "contract": "Performance of a contract: when working together",
+          "consent": "Consent: if you choose to provide information"
         }
       },
       "storage": {
@@ -956,7 +956,7 @@
         "items": {
           "inquiries": "Contact inquiries: up to 24 months",
           "project": "Project information: duration of the project + legal obligations",
-          "analytics": "Analytics logs: typically 30–90 days depending on provider"
+          "analytics": "Analytics logs: typically 30 to 90 days depending on provider"
         }
       },
       "sharing": {
@@ -1001,7 +1001,7 @@
   "terms": {
     "metadata": {
       "title": "Terms of Service",
-      "description": "Terms of Service for Deralis Digital — conditions for using our website and services."
+      "description": "Terms of Service for Deralis Digital. Conditions for using our website and services."
     },
     "title": "Terms of Service",
     "lastUpdated": "Last updated: January 2025",
@@ -1088,7 +1088,7 @@
   "legal": {
     "metadata": {
       "title": "Legal Notice",
-      "description": "Legal Notice for Deralis Digital — French law compliance (LCEN)."
+      "description": "Legal Notice for Deralis Digital. French law compliance (LCEN)."
     },
     "title": "Legal Notice",
     "subtitle": "In accordance with French law n° 2004-575 (LCEN), Articles 6-III and 19",
