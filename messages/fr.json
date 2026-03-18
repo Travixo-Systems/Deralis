@@ -227,10 +227,10 @@
       "description": "Quelques exemples concrets de systèmes que nous avons conçus : tableaux de bord, bases de données, automatisations.",
       "label": "En vedette",
       "projects": {
-        "travixo": {
-          "title": "TraviXO Systems",
-          "type": "Plateforme SaaS B2B",
-          "description": "SaaS B2B pour l'inspection et la gestion de matériel : base PostgreSQL, rôles et permissions, workflows automatisés."
+        "ecoridepool": {
+          "title": "EcoRidePool",
+          "type": "Application de covoiturage",
+          "description": "Met en relation conducteurs et passagers pour des trajets partagés. Gestion complète des trajets, recherche, reservations et messagerie."
         },
         "travixoWeb": {
           "title": "TraviXO Web",

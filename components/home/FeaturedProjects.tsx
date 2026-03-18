@@ -2,32 +2,28 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, ExternalLink, Database, Code2, Globe } from "lucide-react";
+import { ArrowRight, ExternalLink, Car, Code2, Globe } from "lucide-react";
 
-const projectKeys = ["travixo", "travixoWeb", "more"] as const;
+const projectKeys = ["ecoridepool", "travixoWeb", "more"] as const;
 
 const projectIcons = {
-  travixo: Database,
+  ecoridepool: Car,
   travixoWeb: Globe,
   more: Code2,
 };
 
 const projectConfig = {
-  travixo: {
-    stack: ["Next.js 15", "Supabase", "PostgreSQL", "Prisma"],
-    liveUrl: "https://travixosystems.com",
-    appUrl: "https://app.travixosystems.com",
-    featured: true,
+  ecoridepool: {
+    stack: ["PHP (Slim)", "MySQL", "MongoDB", "Bootstrap"],
+    liveUrl: "https://ecoride-mirror-1-fcd84d9225d6.herokuapp.com",
   },
   travixoWeb: {
     stack: ["Next.js 15", "Tailwind", "next-intl"],
     liveUrl: "https://travixosystems.com",
-    featured: false,
   },
   more: {
     stack: ["Various"],
     href: "/projects",
-    featured: false,
   },
 };
 
@@ -57,17 +53,8 @@ export default function FeaturedProjects() {
             return (
               <div
                 key={key}
-                className={`p-5 rounded-xl border flex flex-col ${
-                  config.featured
-                    ? "gradient-border"
-                    : "bg-[var(--dd-bg-card)] border-[var(--dd-border)]"
-                }`}
+                className="p-5 rounded-xl border flex flex-col bg-[var(--dd-bg-card)] border-[var(--dd-border)]"
               >
-                {config.featured && (
-                  <span className="text-xs text-[var(--dd-accent)] font-medium mb-3">
-                    {t("label")}
-                  </span>
-                )}
 
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center flex-shrink-0">

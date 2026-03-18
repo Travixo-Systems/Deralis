@@ -199,10 +199,10 @@
       "description": "Real systems we've built: dashboards, databases, automation.",
       "label": "Featured",
       "projects": {
-        "travixo": {
-          "title": "TraviXO Systems",
-          "type": "B2B SaaS Platform",
-          "description": "QR-based asset tracking and VGP compliance automation. Multi-tenant architecture with dashboards, inspection scheduling, and compliance logging."
+        "ecoridepool": {
+          "title": "EcoRidePool",
+          "type": "Carpooling Web App",
+          "description": "Connects drivers and passengers for shared rides. Full trip management with route planning, bookings, and messaging."
         },
         "travixoWeb": {
           "title": "TraviXO Web",
