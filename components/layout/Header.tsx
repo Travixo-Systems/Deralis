@@ -5,14 +5,16 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { Menu, X, ArrowRight, Globe, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image"
+import Image from "next/image";
+import CalendlyButton from "@/components/shared/CalendlyButton";
 
-const navKeys = ["home", "services", "projects", "about", "contact"] as const;
+const navKeys = ["home", "services", "projects", "blog", "about", "contact"] as const;
 
 const navHrefs: Record<typeof navKeys[number], string> = {
   home: "/",
   services: "/services",
   projects: "/projects",
+  blog: "/blog",
   about: "/about",
   contact: "/contact",
 };
@@ -159,13 +161,10 @@ export default function Header() {
               </div>
 
               {/* CTA Button */}
-              <Link
-                href="/contact"
-                className="btn-primary text-sm"
-              >
+              <CalendlyButton className="btn-primary text-sm">
                 {t("actions.bookCall")}
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </CalendlyButton>
             </div>
 
             {/* Mobile/Tablet Menu Button */}
@@ -268,14 +267,13 @@ export default function Header() {
 
                 {/* CTA Button */}
                 <div className="mt-6 pt-6 border-t border-[var(--dd-border)]">
-                  <Link
-                    href="/contact"
-                    onClick={closeMenu}
+                  <CalendlyButton
                     className="btn-primary w-full justify-center text-base"
+                    onClick={closeMenu}
                   >
                     {t("actions.bookCall")}
                     <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </CalendlyButton>
                 </div>
 
                 {/* Quick Contact */}

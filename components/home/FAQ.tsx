@@ -10,8 +10,25 @@ export default function FAQ() {
   const t = useTranslations("home.faq");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqKeys.map((key) => ({
+      "@type": "Question",
+      name: t(`items.${key}.question`),
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: t(`items.${key}.answer`),
+      },
+    })),
+  };
+
   return (
     <section className="py-12 lg:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10">

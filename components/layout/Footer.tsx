@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Mail, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import NewsletterSignup from "@/components/lead-gen/NewsletterSignup";
 
 export default function Footer() {
   const t = useTranslations("common");
@@ -12,6 +13,7 @@ export default function Footer() {
     { href: "/", key: "home" },
     { href: "/services", key: "services" },
     { href: "/projects", key: "projects" },
+    { href: "/blog", key: "blog" },
     { href: "/about", key: "about" },
     { href: "/contact", key: "contact" },
   ];
@@ -133,7 +135,7 @@ export default function Footer() {
             <h2 className="font-semibold text-[var(--dd-text-main)] mb-4 text-base">
               {t("footer.contact")}
             </h2>
-            <ul className="space-y-4">
+            <ul className="space-y-4 mb-6">
               <li>
                 <a
                   href="mailto:contact@deralis.digital"
@@ -150,6 +152,9 @@ export default function Footer() {
                 </div>
               </li>
             </ul>
+
+            {/* Newsletter signup */}
+            <NewsletterSignup source="footer" />
           </div>
         </div>
 
