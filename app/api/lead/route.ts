@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { sendNurtureSequence } from "@/lib/nurture-emails";
 
 const resendApiKey = process.env.RESEND_API_KEY;
 const fromEmail = process.env.RESEND_FROM_EMAIL;
@@ -71,6 +72,11 @@ export async function POST(request: NextRequest) {
         `,
         text: `New Lead: ${sourceLabel}\nEmail: ${email}${name ? `\nName: ${name}` : ""}`,
       });
+
+      // Send nurture email sequence to the lead
+      sendNurtureSequence(resend, email).catch((err) =>
+        console.error("Nurture sequence error:", err)
+      );
     }
 
     return NextResponse.json(
