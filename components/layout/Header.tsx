@@ -7,12 +7,13 @@ import { Menu, X, ArrowRight, Globe, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image"
 
-const navKeys = ["home", "services", "projects", "about", "contact"] as const;
+const navKeys = ["home", "services", "projects", "blog", "about", "contact"] as const;
 
 const navHrefs: Record<typeof navKeys[number], string> = {
   home: "/",
   services: "/services",
   projects: "/projects",
+  blog: "/blog",
   about: "/about",
   contact: "/contact",
 };

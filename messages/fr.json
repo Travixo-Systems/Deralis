@@ -16,6 +16,7 @@
       "services": "Services",
       "projects": "Réalisations",
       "about": "À propos",
+      "blog": "Blog",
       "contact": "Contact"
     },
     "actions": {
@@ -297,6 +298,71 @@
       "title": "Prêt à construire quelque chose de concret ?",
       "description": "Parlons de votre projet. Première consultation offerte, sans engagement. L'objectif : voir si ce que nous faisons correspond à ce dont vous avez besoin.",
       "note": "Réponse sous 24h • Bilingue FR/EN"
+    },
+    "trustBar": {
+      "item1": "100% taux de livraison",
+      "item2": "Réponse sous 24h",
+      "item3": "Français & Anglais",
+      "item4": "5+ plateformes livrées"
+    },
+    "socialProof": {
+      "title": "La confiance de",
+      "titleHighlight": "vrais clients",
+      "description": "Des startups aux entreprises établies, nous livrons des systèmes qui génèrent des résultats.",
+      "metric1": {
+        "value": "5+",
+        "label": "Plateformes livrées"
+      },
+      "metric2": {
+        "value": "100%",
+        "label": "Livraison à temps"
+      },
+      "metric3": {
+        "value": "<24h",
+        "label": "Temps de réponse"
+      },
+      "metric4": {
+        "value": "3x–8x",
+        "label": "ROI moyen client"
+      },
+      "testimonial1": {
+        "quote": "Deralis a construit notre plateforme SaaS de A à Z. Le système gère des milliers d'équipements en multi-tenant sans aucune interruption. Ingénierie exceptionnelle.",
+        "name": "Marc D.",
+        "role": "PDG, Société de location d'équipements",
+        "initials": "MD"
+      },
+      "testimonial2": {
+        "quote": "Ils ne font pas que coder — ils comprennent le problème métier. Notre automatisation nous fait gagner plus de 20h par semaine et s'est rentabilisée dès le premier mois.",
+        "name": "Sophie L.",
+        "role": "Responsable opérations, Startup logistique",
+        "initials": "SL"
+      },
+      "testimonial3": {
+        "quote": "Enfin une équipe qui parle à la fois technique et business. Le tableau de bord qu'ils ont construit a remplacé trois outils différents que nous payions.",
+        "name": "Antoine R.",
+        "role": "Fondateur, Agence digitale",
+        "initials": "AR"
+      }
+    },
+    "roiCalculator": {
+      "title": "Estimez le",
+      "titleHighlight": "ROI de votre projet",
+      "description": "Visualisez le retour potentiel de votre investissement en système web.",
+      "projectTypeLabel": "Que construisez-vous ?",
+      "types": {
+        "saas": "Plateforme SaaS",
+        "dashboard": "Tableau de bord",
+        "automation": "Automatisation",
+        "mvp": "MVP / Prototype"
+      },
+      "revenueLabel": "Revenu ou économies mensuelles estimées",
+      "calculate": "Calculer le ROI",
+      "timeline": "Délai estimé",
+      "weeks": "semaines",
+      "roiMultiplier": "Multiplicateur ROI",
+      "projectedValue": "Valeur annuelle projetée",
+      "perYear": "/ an",
+      "disclaimer": "Estimations basées sur les moyennes du secteur. Les résultats réels varient selon le projet."
     }
   },
   "services": {
@@ -767,6 +833,91 @@
     "cta": {
       "preferEmail": "Vous préférez l'email ?",
       "reachOut": "Écrivez-nous directement à"
+    }
+  },
+  "leadGen": {
+    "leadMagnet": {
+      "title": "Gratuit : Checklist d'audit système web",
+      "description": "Téléchargez notre checklist en 25 points pour évaluer si votre entreprise est prête pour un système web moderne.",
+      "items": [
+        "Évaluation performance & scalabilité",
+        "Revue sécurité & authentification",
+        "Évaluation architecture base de données",
+        "Cartographie des opportunités d'automatisation"
+      ],
+      "placeholder": "Votre email",
+      "cta": "Télécharger",
+      "privacy": "Aucun spam. Désabonnement à tout moment.",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "successTitle": "Vérifiez votre boîte mail !",
+      "successDescription": "Nous avons envoyé la checklist à votre email. Vérifiez vos spams si besoin."
+    },
+    "exitIntent": {
+      "title": "Attendez — avant de partir",
+      "description": "Bénéficiez d'une session stratégique gratuite de 30 minutes avec notre équipe. Sans engagement.",
+      "benefit1": "Appel découverte gratuit de 30 min",
+      "benefit2": "Évaluation technique sans engagement",
+      "benefit3": "Recommandations concrètes à garder",
+      "cta": "Réserver ma session gratuite",
+      "dismiss": "Non merci"
+    },
+    "stickyCta": {
+      "text": "Consultation gratuite"
+    },
+    "newsletter": {
+      "title": "Restez informé",
+      "description": "Insights techniques, études de cas et stratégies — une fois par mois.",
+      "placeholder": "vous@entreprise.com",
+      "success": "Vous êtes inscrit ! Vérifiez votre boîte mail.",
+      "error": "Une erreur est survenue. Réessayez."
+    }
+  },
+  "blog": {
+    "metadata": {
+      "title": "Blog — Insights techniques & études de cas",
+      "description": "Articles techniques, études de cas et réflexions stratégiques sur le développement web moderne, les plateformes SaaS et la transformation digitale."
+    },
+    "hero": {
+      "title": "Insights",
+      "titleHighlight": "techniques",
+      "description": "Analyses techniques, études de cas et réflexions stratégiques sur le développement web moderne. Rédigé par des ingénieurs qui livrent en production."
+    },
+    "categories": {
+      "strategy": "Stratégie",
+      "development": "Développement",
+      "automation": "Automatisation",
+      "ai": "IA & Outils"
+    },
+    "posts": {
+      "why-your-business-needs-a-web-system": {
+        "title": "Pourquoi votre entreprise a besoin d'un système web, pas d'un simple site",
+        "excerpt": "La différence entre une brochure digitale et une plateforme qui génère du revenu. Quand est-il temps de passer à l'étape suivante ?"
+      },
+      "saas-vs-custom-build": {
+        "title": "SaaS vs sur-mesure : faire le bon choix",
+        "excerpt": "Quand utiliser des outils existants et quand investir dans une plateforme personnalisée. Un cadre de décision pour les fondateurs."
+      },
+      "automation-roi-for-small-business": {
+        "title": "Le vrai ROI de l'automatisation pour les PME",
+        "excerpt": "Comment l'automatisation économise 15h+ par semaine et se rentabilise en moins de 3 mois. Chiffres réels de vrais projets."
+      },
+      "next-js-for-enterprise": {
+        "title": "Pourquoi nous développons avec Next.js",
+        "excerpt": "Nos choix techniques pour le développement d'applications d'entreprise performantes et maintenables."
+      },
+      "ai-tools-for-business-operations": {
+        "title": "5 outils IA qui améliorent vraiment les opérations",
+        "excerpt": "Au-delà du buzz : des intégrations IA pratiques qui font gagner du temps et réduisent les erreurs au quotidien."
+      },
+      "digital-transformation-checklist": {
+        "title": "La checklist complète de transformation digitale 2025",
+        "excerpt": "Guide étape par étape pour moderniser vos opérations, de l'évaluation à la mise en œuvre."
+      }
+    },
+    "cta": {
+      "title": "Un projet en tête ?",
+      "description": "Discutons de la meilleure solution pour votre entreprise.",
+      "button": "Consultation gratuite"
     }
   },
   "privacy": {

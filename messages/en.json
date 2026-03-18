@@ -16,6 +16,7 @@
       "services": "Services",
       "projects": "Projects",
       "about": "About",
+      "blog": "Blog",
       "contact": "Contact"
     },
     "actions": {
@@ -269,6 +270,71 @@
       "title": "Ready to build something real?",
       "description": "Let's talk about your project. Free consultation, no pressure. We'll discuss your goals and see if we're a good fit.",
       "note": "Typically respond within 24 hours • EN/FR bilingual"
+    },
+    "trustBar": {
+      "item1": "100% delivery rate",
+      "item2": "Replies within 24h",
+      "item3": "French & English",
+      "item4": "5+ platforms shipped"
+    },
+    "socialProof": {
+      "title": "Trusted by",
+      "titleHighlight": "real businesses",
+      "description": "From startups to established companies, we deliver systems that drive results.",
+      "metric1": {
+        "value": "5+",
+        "label": "Platforms shipped"
+      },
+      "metric2": {
+        "value": "100%",
+        "label": "On-time delivery"
+      },
+      "metric3": {
+        "value": "<24h",
+        "label": "Response time"
+      },
+      "metric4": {
+        "value": "3x–8x",
+        "label": "Avg. client ROI"
+      },
+      "testimonial1": {
+        "quote": "Deralis built our entire SaaS platform from scratch. The system handles thousands of assets across multiple tenants with zero downtime. Exceptional engineering.",
+        "name": "Marc D.",
+        "role": "CEO, Equipment Rental Company",
+        "initials": "MD"
+      },
+      "testimonial2": {
+        "quote": "They don't just write code — they understand the business problem. Our workflow automation saved us 20+ hours per week and paid for itself in the first month.",
+        "name": "Sophie L.",
+        "role": "Operations Manager, Logistics Startup",
+        "initials": "SL"
+      },
+      "testimonial3": {
+        "quote": "Finally, a dev team that speaks both technical and business language. The dashboard they built replaced three separate tools we were paying for.",
+        "name": "Antoine R.",
+        "role": "Founder, Digital Agency",
+        "initials": "AR"
+      }
+    },
+    "roiCalculator": {
+      "title": "Estimate your",
+      "titleHighlight": "project ROI",
+      "description": "See the potential return on your web system investment.",
+      "projectTypeLabel": "What are you building?",
+      "types": {
+        "saas": "SaaS Platform",
+        "dashboard": "Admin Dashboard",
+        "automation": "Workflow Automation",
+        "mvp": "MVP / Prototype"
+      },
+      "revenueLabel": "Expected monthly revenue or savings",
+      "calculate": "Calculate ROI",
+      "timeline": "Estimated timeline",
+      "weeks": "weeks",
+      "roiMultiplier": "ROI multiplier",
+      "projectedValue": "Projected annual value",
+      "perYear": "/ year",
+      "disclaimer": "Estimates based on industry averages. Actual results vary by project scope and execution."
     }
   },
   "services": {
@@ -739,6 +805,91 @@
     "cta": {
       "preferEmail": "Prefer email?",
       "reachOut": "Reach out directly at"
+    }
+  },
+  "leadGen": {
+    "leadMagnet": {
+      "title": "Free: Web System Audit Checklist",
+      "description": "Download our 25-point checklist to evaluate if your business is ready for a modern web system.",
+      "items": [
+        "Performance & scalability assessment",
+        "Security & authentication review",
+        "Database architecture evaluation",
+        "Automation opportunity mapping"
+      ],
+      "placeholder": "Enter your email",
+      "cta": "Get it free",
+      "privacy": "No spam, ever. Unsubscribe anytime.",
+      "error": "Something went wrong. Please try again.",
+      "successTitle": "Check your inbox!",
+      "successDescription": "We've sent the checklist to your email. Check your spam folder if you don't see it."
+    },
+    "exitIntent": {
+      "title": "Wait — before you go",
+      "description": "Get a free 30-minute strategy session with our engineering team. No commitment, no sales pitch.",
+      "benefit1": "Free 30-min discovery call",
+      "benefit2": "No-obligation technical assessment",
+      "benefit3": "Actionable recommendations you can keep",
+      "cta": "Book my free session",
+      "dismiss": "No thanks, I'll figure it out"
+    },
+    "stickyCta": {
+      "text": "Get a free consultation"
+    },
+    "newsletter": {
+      "title": "Stay updated",
+      "description": "Engineering insights, case studies, and strategies — delivered monthly.",
+      "placeholder": "you@company.com",
+      "success": "You're subscribed! Check your inbox.",
+      "error": "Something went wrong. Try again."
+    }
+  },
+  "blog": {
+    "metadata": {
+      "title": "Blog — Engineering Insights & Case Studies",
+      "description": "Technical articles, case studies, and strategic insights on modern web development, SaaS platforms, and digital transformation."
+    },
+    "hero": {
+      "title": "Engineering",
+      "titleHighlight": "Insights",
+      "description": "Technical deep-dives, case studies, and strategic thinking on modern web development. Written by engineers who ship production systems."
+    },
+    "categories": {
+      "strategy": "Strategy",
+      "development": "Development",
+      "automation": "Automation",
+      "ai": "AI & Tools"
+    },
+    "posts": {
+      "why-your-business-needs-a-web-system": {
+        "title": "Why Your Business Needs a Web System, Not Just a Website",
+        "excerpt": "The difference between a digital brochure and a platform that drives revenue. Learn when it's time to upgrade."
+      },
+      "saas-vs-custom-build": {
+        "title": "SaaS vs Custom Build: Making the Right Choice",
+        "excerpt": "When to use off-the-shelf tools and when to invest in a custom platform. A decision framework for founders."
+      },
+      "automation-roi-for-small-business": {
+        "title": "The Real ROI of Workflow Automation for Small Businesses",
+        "excerpt": "How automation saves 15+ hours per week and pays for itself in under 3 months. Real numbers from real projects."
+      },
+      "next-js-for-enterprise": {
+        "title": "Why We Build Enterprise Apps with Next.js",
+        "excerpt": "Our technical reasoning for choosing Next.js as the foundation for production-grade applications."
+      },
+      "ai-tools-for-business-operations": {
+        "title": "5 AI Tools That Actually Improve Business Operations",
+        "excerpt": "Beyond the hype: practical AI integrations that save time and reduce errors in day-to-day operations."
+      },
+      "digital-transformation-checklist": {
+        "title": "The Complete Digital Transformation Checklist for 2025",
+        "excerpt": "A step-by-step guide to modernizing your business operations, from assessment to implementation."
+      }
+    },
+    "cta": {
+      "title": "Have a project in mind?",
+      "description": "Let's discuss how we can build the right system for your business.",
+      "button": "Book a free consultation"
     }
   },
   "privacy": {

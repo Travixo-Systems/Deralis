@@ -9,6 +9,9 @@ import {
   WebSiteJsonLd,
   LocalBusinessJsonLd,
 } from "@/components/seo/JsonLd";
+import LeadMagnetPopup from "@/components/lead-gen/LeadMagnetPopup";
+import ExitIntentPopup from "@/components/lead-gen/ExitIntentPopup";
+import StickyMobileCTA from "@/components/lead-gen/StickyMobileCTA";
 import { Manrope, Inter } from "next/font/google";
 
 const manrope = Manrope({
@@ -168,6 +171,9 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Header />
           <main>{children}</main>
           <Footer />
+          <LeadMagnetPopup />
+          <ExitIntentPopup />
+          <StickyMobileCTA />
         </NextIntlClientProvider>
       </body>
     </html>
