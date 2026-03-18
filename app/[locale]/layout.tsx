@@ -9,6 +9,9 @@ import {
   WebSiteJsonLd,
   LocalBusinessJsonLd,
 } from "@/components/seo/JsonLd";
+import LeadMagnetPopup from "@/components/lead-gen/LeadMagnetPopup";
+import ExitIntentPopup from "@/components/lead-gen/ExitIntentPopup";
+import StickyMobileCTA from "@/components/lead-gen/StickyMobileCTA";
 import { Manrope, Inter } from "next/font/google";
 
 const manrope = Manrope({
@@ -147,6 +150,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${manrope.variable} ${inter.variable}`}>
       <head>
+        {/* Google Search Console verification */}
+        <meta name="google-site-verification" content="O8l12K3_FkQbmJyZf8aa5_nlD7mgLLWhY63oficzeI4" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -168,6 +173,9 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Header />
           <main>{children}</main>
           <Footer />
+          <LeadMagnetPopup />
+          <ExitIntentPopup />
+          <StickyMobileCTA />
         </NextIntlClientProvider>
       </body>
     </html>
