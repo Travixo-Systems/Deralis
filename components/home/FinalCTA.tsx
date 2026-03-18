@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { ArrowRight, Mail } from "lucide-react";
+import CalendlyButton from "@/components/shared/CalendlyButton";
 
 export default function FinalCTA() {
   const t = useTranslations("home.cta");
@@ -23,15 +24,10 @@ export default function FinalCTA() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <a
-                href="https://calendly.com/deralisdigital/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
+              <CalendlyButton className="btn-primary">
                 {tActions("speakToEngineer")}
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </CalendlyButton>
               <a
                 href="mailto:contact@deralis.digital"
                 className="btn-secondary"

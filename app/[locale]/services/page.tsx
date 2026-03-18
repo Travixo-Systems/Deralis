@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import CalendlyButton from "@/components/shared/CalendlyButton";
 import {
   ArrowRight,
   Lightbulb,
@@ -71,15 +72,10 @@ export default function ServicesPage() {
               {t("hero.description")}
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href="https://calendly.com/deralisdigital/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
+              <CalendlyButton className="btn-primary">
                 {tActions("speakToEngineer")}
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </CalendlyButton>
               <Link href="/projects" className="btn-secondary">
                 {tActions("seePlatforms")}
               </Link>
@@ -285,15 +281,10 @@ export default function ServicesPage() {
           <p className="text-[var(--dd-text-muted)] max-w-xl mx-auto mb-6">
             {t("notSure.description")}
           </p>
-          <a
-            href="https://calendly.com/deralisdigital/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
+          <CalendlyButton className="btn-primary">
             {tActions("speakToEngineer")}
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </CalendlyButton>
         </div>
       </section>
 
@@ -344,15 +335,10 @@ export default function ServicesPage() {
           <p className="text-[var(--dd-text-muted)] mb-3">
             {t("finalCta.title")}
           </p>
-          <a
-            href="https://calendly.com/deralisdigital/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
+          <CalendlyButton className="btn-primary">
             {tActions("buildYourSystem")}
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </CalendlyButton>
         </div>
       </section>
     </>
