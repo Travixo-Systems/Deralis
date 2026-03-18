@@ -26,7 +26,7 @@ const projectIcons = {
 
 const projectConfig = {
   travixoSystems: {
-    year: "2024–2025",
+    year: "2024-2025",
     status: "live",
     stack: ["Next.js 15", "Supabase", "Prisma", "PostgreSQL", "TypeScript"],
     liveUrl: "https://travixosystems.com",
@@ -35,14 +35,14 @@ const projectConfig = {
     featured: true,
   },
   travixoWeb: {
-    year: "2024–2025",
+    year: "2024-2025",
     status: "live",
     stack: ["Next.js 15", "Tailwind CSS", "next-intl", "Framer Motion"],
     liveUrl: "https://travixosystems.com",
     featured: false,
   },
   deralisDigital: {
-    year: "2024–2025",
+    year: "2024-2025",
     status: "inDevelopment",
     stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
     liveUrl: null,

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": {
-      "default": "Deralis Digital – Systèmes web modernes & transformation digitale",
+      "default": "Deralis Digital - Systèmes web modernes & transformation digitale",
       "template": "%s | Deralis Digital"
     },
     "description": "Nous concevons des plateformes web complètes, des applications sur mesure, des automatisations et des outils IA pour aider les entreprises à se moderniser et à travailler plus efficacement."
@@ -65,7 +65,7 @@
       "services": "Services",
       "contact": "Contact",
       "legal": "Légal",
-      "location": "Basé en France — Clients en France et à l'international",
+      "location": "Basé en France. Clients en France et à l'international",
       "locationShort": "France & distance",
       "rights": "Tous droits réservés."
     },
@@ -154,10 +154,10 @@
         }
       },
       "cta": {
-        "consulting": "En savoir plus — Conseil stratégique",
+        "consulting": "En savoir plus: Conseil stratégique",
         "development": "Explorer le développement complet",
-        "ai": "Découvrir — IA & Automatisation",
-        "support": "En savoir plus — Support & Maintenance"
+        "ai": "Découvrir: IA & Automatisation",
+        "support": "En savoir plus: Support & Maintenance"
       }
     },
     "clients": {
@@ -227,10 +227,10 @@
       "description": "Quelques exemples concrets de systèmes que nous avons conçus : tableaux de bord, bases de données, automatisations.",
       "label": "En vedette",
       "projects": {
-        "travixo": {
-          "title": "TraviXO Systems",
-          "type": "Plateforme SaaS B2B",
-          "description": "SaaS B2B pour l'inspection et la gestion de matériel : base PostgreSQL, rôles et permissions, workflows automatisés."
+        "ecoridepool": {
+          "title": "EcoRidePool",
+          "type": "Application de covoiturage",
+          "description": "Met en relation conducteurs et passagers pour des trajets partagés. Gestion complète des trajets, recherche, reservations et messagerie."
         },
         "travixoWeb": {
           "title": "TraviXO Web",
@@ -322,7 +322,7 @@
         "label": "Temps de réponse"
       },
       "metric4": {
-        "value": "3x–8x",
+        "value": "3x à 8x",
         "label": "ROI moyen client"
       },
       "testimonial1": {
@@ -332,7 +332,7 @@
         "initials": "MD"
       },
       "testimonial2": {
-        "quote": "Ils ne font pas que coder — ils comprennent le problème métier. Notre automatisation nous fait gagner plus de 20h par semaine et s'est rentabilisée dès le premier mois.",
+        "quote": "Ils ne font pas que coder. Ils comprennent le problème métier. Notre automatisation nous fait gagner plus de 20h par semaine et s'est rentabilisée dès le premier mois.",
         "name": "Sophie L.",
         "role": "Responsable opérations, Startup logistique",
         "initials": "SL"
@@ -367,7 +367,7 @@
   },
   "services": {
     "metadata": {
-      "title": "Services — Développement web full-stack",
+      "title": "Services: Développement web full-stack",
       "description": "Développement web full-stack avec Next.js, bases de données SQL, Supabase et automatisation. De vraies plateformes, pas des sites génériques. Des systèmes qui soutiennent votre activité."
     },
     "hero": {
@@ -607,7 +607,7 @@
   },
   "about": {
     "metadata": {
-      "title": "À propos — Cabinet d'ingénierie indépendant",
+      "title": "À propos: Cabinet d'ingénierie indépendant",
       "description": "Deralis Digital est un cabinet d'ingénierie indépendant qui conçoit de vraies plateformes web : applications SaaS, tableaux de bord, automatisation et bases de données SQL."
     },
     "hero": {
@@ -780,9 +780,9 @@
         "placeholder": "Sélectionnez une fourchette",
         "options": {
           "under2k": "< 2 000 €",
-          "2k5k": "2 000 € – 5 000 €",
-          "5k10k": "5 000 € – 10 000 €",
-          "10k25k": "10 000 € – 25 000 €",
+          "2k5k": "2 000 € à 5 000 €",
+          "5k10k": "5 000 € à 10 000 €",
+          "10k25k": "10 000 € à 25 000 €",
           "over25k": "> 25 000 €",
           "notSure": "Pas encore défini"
         }
@@ -801,7 +801,7 @@
     "sidebar": {
       "contactInfo": {
         "title": "Informations de contact",
-        "location": "Basé en France — Collaboration avec des clients dans le monde entier",
+        "location": "Basé en France. Collaboration avec des clients dans le monde entier",
         "response": "Réponse sous 24h"
       },
       "whatToExpect": {
@@ -853,7 +853,7 @@
       "successDescription": "Nous avons envoyé la checklist à votre email. Vérifiez vos spams si besoin."
     },
     "exitIntent": {
-      "title": "Attendez — avant de partir",
+      "title": "Attendez, avant de partir",
       "description": "Bénéficiez d'une session stratégique gratuite de 30 minutes avec notre équipe. Sans engagement.",
       "benefit1": "Appel découverte gratuit de 30 min",
       "benefit2": "Évaluation technique sans engagement",
@@ -866,7 +866,7 @@
     },
     "newsletter": {
       "title": "Restez informé",
-      "description": "Insights techniques, études de cas et stratégies — une fois par mois.",
+      "description": "Insights techniques, études de cas et stratégies, une fois par mois.",
       "placeholder": "vous@entreprise.com",
       "success": "Vous êtes inscrit ! Vérifiez votre boîte mail.",
       "error": "Une erreur est survenue. Réessayez."
@@ -874,7 +874,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "Blog — Insights techniques & études de cas",
+      "title": "Blog: Insights techniques & études de cas",
       "description": "Articles techniques, études de cas et réflexions stratégiques sur le développement web moderne, les plateformes SaaS et la transformation digitale."
     },
     "hero": {
@@ -1116,7 +1116,7 @@
   "legal": {
     "metadata": {
       "title": "Mentions légales",
-      "description": "Mentions légales de Deralis Digital — informations obligatoires conformément à la loi française (LCEN)."
+      "description": "Mentions légales de Deralis Digital. Informations obligatoires conformément à la loi française (LCEN)."
     },
     "title": "Mentions légales",
     "subtitle": "Conformément à la loi française n° 2004-575 (LCEN), articles 6-III et 19",

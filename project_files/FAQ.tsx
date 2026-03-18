@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "How much does a typical project cost?",
     answer:
-      "Consulting starts at €500. Full platforms typically range from €5,000–€25,000 depending on scope. We provide a detailed quote after understanding your needs.",
+      "Consulting starts at €500. Full platforms typically range from €5,000 to €25,000 depending on scope. We provide a detailed quote after understanding your needs.",
   },
   {
     question: "What technologies do you work with?",
@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "How long does a project take?",
     answer:
-      "A consulting engagement takes 1-2 weeks. A typical web application takes 4-12 weeks depending on complexity. We provide realistic timelines upfront—no surprises.",
+      "A consulting engagement takes 1-2 weeks. A typical web application takes 4-12 weeks depending on complexity. We provide realistic timelines upfront. No surprises.",
   },
   {
     question: "Do you work with clients outside France?",
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "Do you offer ongoing support after launch?",
     answer:
-      "Yes. We offer maintenance packages that include bug fixes, updates, monitoring, and feature additions. Most clients choose ongoing support—we don't disappear after delivery.",
+      "Yes. We offer maintenance packages that include bug fixes, updates, monitoring, and feature additions. Most clients choose ongoing support. We don't disappear after delivery.",
   },
 ];
 
