@@ -13,13 +13,17 @@ export function OrganizationJsonLd() {
     },
     description:
       "We build high-performance websites, custom web applications, workflow automations and AI-powered tools that help businesses modernize and scale efficiently.",
-    email: "deralisdigital@gmail.com",
+    email: "contact@deralis.digital",
     foundingDate: "2024",
-    sameAs: [],
+    sameAs: [
+      "https://github.com/deralis",
+      "https://linkedin.com/company/deralis",
+      "https://twitter.com/deralisdigital",
+    ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
-      email: "deralisdigital@gmail.com",
+      email: "contact@deralis.digital",
       availableLanguage: ["English", "French"],
     },
   };
@@ -63,7 +67,7 @@ export function LocalBusinessJsonLd() {
     name: "Deralis Digital",
     image: "https://deralis.digital/og-image.png",
     url: "https://deralis.digital",
-    email: "deralisdigital@gmail.com",
+    email: "contact@deralis.digital",
     description:
       "Full-stack web development agency specializing in Next.js, TypeScript, Supabase, and AI workflow automation.",
     address: {

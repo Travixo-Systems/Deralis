@@ -160,13 +160,15 @@ export default function Header() {
               </div>
 
               {/* CTA Button */}
-              <Link
-                href="/contact"
+              <a
+                href="https://calendly.com/deralisdigital/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary text-sm"
               >
                 {t("actions.bookCall")}
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
 
             {/* Mobile/Tablet Menu Button */}
@@ -269,14 +271,16 @@ export default function Header() {
 
                 {/* CTA Button */}
                 <div className="mt-6 pt-6 border-t border-[var(--dd-border)]">
-                  <Link
-                    href="/contact"
+                  <a
+                    href="https://calendly.com/deralisdigital/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={closeMenu}
                     className="btn-primary w-full justify-center text-base"
                   >
                     {t("actions.bookCall")}
                     <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </a>
                 </div>
 
                 {/* Quick Contact */}
