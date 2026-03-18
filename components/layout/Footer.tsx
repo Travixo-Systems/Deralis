@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Mail, MapPin, Github, Linkedin, Twitter } from "lucide-react";
-import NewsletterSignup from "@/components/lead-gen/NewsletterSignup";
 
 export default function Footer() {
   const t = useTranslations("common");
@@ -153,8 +152,6 @@ export default function Footer() {
               </li>
             </ul>
 
-            {/* Newsletter signup */}
-            <NewsletterSignup source="footer" />
           </div>
         </div>
 
