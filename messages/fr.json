@@ -882,9 +882,9 @@
       "description": "Articles techniques, études de cas et réflexions stratégiques sur le développement web moderne, les plateformes SaaS et la transformation digitale."
     },
     "hero": {
-      "title": "Insights",
-      "titleHighlight": "techniques",
-      "description": "Analyses techniques, études de cas et réflexions stratégiques sur le développement web moderne. Rédigé par des ingénieurs qui livrent en production."
+      "title": "",
+      "titleHighlight": "Insights",
+      "description": "Réflexions concrètes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
     },
     "categories": {
       "strategy": "Stratégie",
@@ -896,6 +896,26 @@
       "why-profitable-businesses-run-on-manual-work": {
         "title": "Pourquoi les entreprises rentables fonctionnent encore manuellement en 2026, et ce que ça leur coûte vraiment",
         "excerpt": "Les PME rentables tournent encore sur Excel, WhatsApp et email en 2026. Voici ce que les processus manuels coûtent réellement à votre entreprise, et ce qu'il faut pour y remédier."
+      },
+      "web-system-not-just-a-website": {
+        "title": "Pourquoi votre entreprise a besoin d'un système web, pas juste d'un site internet",
+        "excerpt": "Un site montre que vous existez. Un système web fait tourner votre activité. Voici la différence, et comment savoir lequel vous convient vraiment."
+      },
+      "saas-vs-custom-build": {
+        "title": "SaaS ou sur mesure : comment faire le bon choix",
+        "excerpt": "SaaS ou développement sur mesure ? Un cadre de décision honnête pour les fondateurs fatigués d'outils qui marchent presque."
+      },
+      "roi-workflow-automation-small-business": {
+        "title": "Le vrai ROI de l'automatisation pour les petites entreprises",
+        "excerpt": "Ce que l'automatisation fait réellement gagner à une petite entreprise. Des chiffres concrets, un cadrage honnête, et une méthode ROI en cinq minutes."
+      },
+      "why-nextjs-production-apps": {
+        "title": "Pourquoi je construis mes applications de production avec Next.js",
+        "excerpt": "Pourquoi Next.js pour des applications en production en 2026 ? Un point de vue technique honnête sur la performance, l'architecture full-stack, et quand choisir autre chose."
+      },
+      "ai-business-operations-honest-guide": {
+        "title": "5 façons dont l'IA améliore vraiment les opérations (et 3 où elle déçoit encore)",
+        "excerpt": "Cinq cas d'usage IA qui fonctionnent vraiment pour les opérations des petites entreprises, et trois qui restent décevants. Honnête, concret, sans battage."
       }
     },
     "cta": {
