@@ -17,50 +17,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-// Blog post data - in production, this would come from a CMS or MDX files
 const blogPosts = [
-  {
-    slug: "why-your-business-needs-a-web-system",
-    category: "strategy",
-    date: "2025-12-15",
-    readTime: 8,
-    image: "/projects/travixo-dashboard.png",
-  },
-  {
-    slug: "saas-vs-custom-build",
-    category: "development",
-    date: "2025-11-28",
-    readTime: 6,
-    image: "/projects/travixo-fleet.png",
-  },
-  {
-    slug: "automation-roi-for-small-business",
-    category: "automation",
-    date: "2025-11-10",
-    readTime: 5,
-    image: "/projects/travixo-dashboard.png",
-  },
-  {
-    slug: "next-js-for-enterprise",
-    category: "development",
-    date: "2025-10-22",
-    readTime: 7,
-    image: "/projects/travixo-fleet.png",
-  },
-  {
-    slug: "ai-tools-for-business-operations",
-    category: "ai",
-    date: "2025-10-05",
-    readTime: 6,
-    image: "/projects/travixo-dashboard.png",
-  },
-  {
-    slug: "digital-transformation-checklist",
-    category: "strategy",
-    date: "2025-09-18",
-    readTime: 10,
-    image: "/projects/travixo-fleet.png",
-  },
   {
     slug: "why-profitable-businesses-run-on-manual-work",
     category: "strategy",
