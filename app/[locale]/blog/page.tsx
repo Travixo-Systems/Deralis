@@ -61,6 +61,13 @@ const blogPosts = [
     readTime: 10,
     image: "/projects/travixo-fleet.png",
   },
+  {
+    slug: "why-profitable-businesses-run-on-manual-work",
+    category: "strategy",
+    date: "2026-03-19",
+    readTime: 6,
+    image: "/projects/travixo-dashboard.png",
+  },
 ];
 
 export default async function BlogPage({ params }: Props) {
