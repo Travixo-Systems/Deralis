@@ -19,11 +19,46 @@ export async function generateMetadata({ params }: Props) {
 
 const blogPosts = [
   {
+    slug: "ai-business-operations-honest-guide",
+    category: "ai",
+    date: "2026-03-19",
+    readTime: 7,
+    image: "/projects/travixo-dashboard.png",
+  },
+  {
+    slug: "why-nextjs-production-apps",
+    category: "development",
+    date: "2026-03-18",
+    readTime: 5,
+    image: "/projects/travixo-fleet.png",
+  },
+  {
+    slug: "roi-workflow-automation-small-business",
+    category: "automation",
+    date: "2026-03-17",
+    readTime: 6,
+    image: "/projects/travixo-qr.png",
+  },
+  {
+    slug: "saas-vs-custom-build",
+    category: "development",
+    date: "2026-03-16",
+    readTime: 7,
+    image: "/projects/travixo-dashboard.png",
+  },
+  {
+    slug: "web-system-not-just-a-website",
+    category: "strategy",
+    date: "2026-03-15",
+    readTime: 6,
+    image: "/projects/travixo-fleet.png",
+  },
+  {
     slug: "why-profitable-businesses-run-on-manual-work",
     category: "strategy",
-    date: "2026-03-19",
+    date: "2026-03-14",
     readTime: 6,
-    image: "/projects/travixo-dashboard.png",
+    image: "/projects/travixo-qr.png",
   },
 ];
 
