@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { ArrowRight, Database, Code2, Layers, Server } from "lucide-react";
+import { ArrowRight, Server } from "lucide-react";
 import { motion } from "framer-motion";
 
 const techStack = [
@@ -17,12 +17,6 @@ const techStack = [
 export default function Hero() {
   const t = useTranslations("home.hero");
   const tActions = useTranslations("common.actions");
-
-  const features = [
-    { icon: Code2, text: t("features.tech") },
-    { icon: Database, text: t("features.database") },
-    { icon: Layers, text: t("features.capabilities") },
-  ];
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-mesh">
@@ -101,27 +95,10 @@ export default function Hero() {
               </h1>
             </div>
 
-            {/* Description - tighter spacing */}
+            {/* Description */}
             <p className="text-lg text-[var(--dd-text-muted)] mb-5 max-w-xl leading-relaxed">
               {t("description")}
-              {" "}{t("subDescription")}
             </p>
-
-            {/* Feature bullets */}
-            <div className="space-y-2 mb-5">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-3 text-[var(--dd-text-muted)]"
-                >
-                  <feature.icon className="w-4 h-4 text-[var(--dd-accent)] flex-shrink-0" />
-                  <span className="text-sm">{feature.text}</span>
-                </motion.div>
-              ))}
-            </div>
 
             {/* CTAs */}
             <motion.div

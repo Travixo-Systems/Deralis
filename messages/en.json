@@ -81,8 +81,8 @@
       "title": "Your operations run on manual work.",
       "titleLine2": "Your team makes them work anyway.",
       "titleHighlight": "I build the system that removes that burden.",
-      "description": "Internal tools, platforms, or products built from scratch, to remove manual work and reduce your team's load.",
-      "subDescription": "Clean, documented, and fully yours.",
+      "description": "Internal tools, platforms, or products built from scratch. To remove manual work and take the load off your team. Clean, documented, and fully yours.",
+      "subDescription": "",
       "features": {
         "tech": "Next.js, React, TypeScript",
         "database": "PostgreSQL, Supabase, Prisma",
@@ -107,7 +107,7 @@
         "bilingual": {
           "value": "EN/FR",
           "label": "Fully bilingual",
-          "sublabel": "France, Worldwide"
+          "sublabel": "Global"
         }
       }
     },

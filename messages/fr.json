@@ -81,8 +81,8 @@
       "title": "Vos opérations reposent sur du travail manuel.",
       "titleLine2": "Votre équipe s'en sort quand même.",
       "titleHighlight": "Je construis le système qui change ça.",
-      "description": "Outils internes, plateformes ou produits créés from scratch, pour supprimer le travail manuel et alléger la charge de votre équipe.",
-      "subDescription": "Propre, documenté, et entièrement à vous.",
+      "description": "Outils internes, plateformes ou produits créés from scratch. Pour supprimer le travail manuel et alléger la charge de votre équipe. Propre, documenté, et entièrement à vous.",
+      "subDescription": "",
       "features": {
         "tech": "Next.js, React, TypeScript",
         "database": "PostgreSQL, Supabase, Prisma",
@@ -107,7 +107,7 @@
         "bilingual": {
           "value": "FR/EN",
           "label": "Bilingue",
-          "sublabel": "France & international"
+          "sublabel": "Global"
         }
       }
     },
