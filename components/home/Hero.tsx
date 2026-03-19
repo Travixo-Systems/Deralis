@@ -96,9 +96,11 @@ export default function Hero() {
             </div>
 
             {/* Description */}
-            <p className="text-lg text-[var(--dd-text-muted)] mb-5 max-w-xl leading-relaxed">
-              {t("description")}
-            </p>
+            <div className="flex flex-col gap-1 mb-5 max-w-xl text-lg text-[var(--dd-text-muted)] leading-relaxed">
+              <p>{t("description")}</p>
+              <p>{t("descriptionLine2")}</p>
+              <p>{t("descriptionLine3")}</p>
+            </div>
 
             {/* CTAs */}
             <motion.div
@@ -165,6 +167,11 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+
+            {/* Screenshot label */}
+            <p className="text-xs text-[var(--dd-text-dim)] font-mono mb-2">
+              {t("screenshotLabel")}
+            </p>
 
             {/* Screenshot */}
             <div className="relative rounded-xl overflow-hidden border border-[var(--dd-border)] bg-[var(--dd-bg-card)]">

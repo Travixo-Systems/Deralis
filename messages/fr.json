@@ -81,8 +81,11 @@
       "title": "Vos opérations reposent sur du travail manuel.",
       "titleLine2": "Votre équipe s'en sort quand même.",
       "titleHighlight": "Je construis le système qui change ça.",
-      "description": "Outils internes, plateformes ou produits créés from scratch. Pour supprimer le travail manuel et alléger la charge de votre équipe. Propre, documenté, et entièrement à vous.",
+      "description": "Outils internes, plateformes ou produits créés from scratch.",
+      "descriptionLine2": "Pour supprimer le travail manuel et alléger la charge de votre équipe.",
+      "descriptionLine3": "Propre, documenté, et entièrement à vous.",
       "subDescription": "",
+      "screenshotLabel": "Plateforme opérationnelle en production, par Deralis Digital",
       "features": {
         "tech": "Next.js, React, TypeScript",
         "database": "PostgreSQL, Supabase, Prisma",
