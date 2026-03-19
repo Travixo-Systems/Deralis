@@ -81,9 +81,9 @@
       "title": "Your operations run on manual work.",
       "titleLine2": "Your team makes them work anyway.",
       "titleHighlight": "I build the system that removes that burden.",
-      "description": "Internal tools, platforms, or products built from scratch.",
-      "descriptionLine2": "To remove manual work and take the load off your team.",
-      "descriptionLine3": "Clean, documented, and fully yours.",
+      "description": "Remove manual work and take the load off your team.",
+      "descriptionLine2": "Internal tools, platforms, or products built clean,",
+      "descriptionLine3": "documented, and fully yours.",
       "subDescription": "",
       "screenshotLabel": "Live internal operations platform, built by Deralis Digital",
       "features": {
@@ -888,6 +888,10 @@
       "digital-transformation-checklist": {
         "title": "The Complete Digital Transformation Checklist for 2025",
         "excerpt": "A step-by-step guide to modernizing your business operations, from assessment to implementation."
+      },
+      "why-profitable-businesses-run-on-manual-work": {
+        "title": "Why Profitable Businesses Still Run on Manual Work in 2026, and What It Actually Costs Them",
+        "excerpt": "Profitable SMEs still run on Excel, WhatsApp, and email in 2026. Here is what manual processes actually cost your business, and what fixing it really takes."
       }
     },
     "cta": {
