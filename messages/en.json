@@ -854,9 +854,9 @@
       "description": "Technical articles, case studies, and strategic insights on modern web development, SaaS platforms, and digital transformation."
     },
     "hero": {
-      "title": "Engineering",
+      "title": "",
       "titleHighlight": "Insights",
-      "description": "Technical deep-dives, case studies, and strategic thinking on modern web development. Written by engineers who ship production systems."
+      "description": "Practical thinking on operations, software, and what it actually takes to build systems that work."
     },
     "categories": {
       "strategy": "Strategy",
@@ -868,6 +868,26 @@
       "why-profitable-businesses-run-on-manual-work": {
         "title": "Why Profitable Businesses Still Run on Manual Work in 2026, and What It Actually Costs Them",
         "excerpt": "Profitable SMEs still run on Excel, WhatsApp, and email in 2026. Here is what manual processes actually cost your business, and what fixing it really takes."
+      },
+      "web-system-not-just-a-website": {
+        "title": "Why Your Business Needs a Web System, Not Just a Website",
+        "excerpt": "A website shows people you exist. A web system makes your business run. Here is the difference, and how to know which one you actually need."
+      },
+      "saas-vs-custom-build": {
+        "title": "SaaS vs Custom Build: How to Make the Right Choice",
+        "excerpt": "SaaS or custom build? An honest decision framework for founders tired of tools that almost work. No pitch, just the right questions to ask."
+      },
+      "roi-workflow-automation-small-business": {
+        "title": "The Real ROI of Workflow Automation for Small Businesses",
+        "excerpt": "What does workflow automation actually save a small business? Real numbers, honest framing, and a five-minute ROI method you can run yourself."
+      },
+      "why-nextjs-production-apps": {
+        "title": "Why I Build Production Apps with Next.js",
+        "excerpt": "Why Next.js for production apps in 2026? An honest technical take on performance, full-stack architecture, and when to choose something else."
+      },
+      "ai-business-operations-honest-guide": {
+        "title": "5 Ways AI Actually Improves Business Operations (and 3 Ways It Does Not)",
+        "excerpt": "Five AI use cases that actually work for small business operations, and three that still fall short. Honest, specific, no hype."
       }
     },
     "cta": {

@@ -99,8 +99,10 @@ export default async function BlogPostPage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  // Read the markdown file
-  const filePath = path.join(process.cwd(), "content", "blog", `${slug}.md`);
+  // Read the markdown file (locale-specific if available, fallback to English)
+  const localePath = path.join(process.cwd(), "content", "blog", locale, `${slug}.md`);
+  const defaultPath = path.join(process.cwd(), "content", "blog", `${slug}.md`);
+  const filePath = fs.existsSync(localePath) ? localePath : defaultPath;
   if (!fs.existsSync(filePath)) {
     notFound();
   }
