@@ -93,6 +93,10 @@ export default function Hero() {
                   {t("title")}
                 </span>
                 <br />
+                <span className="text-[var(--dd-text-main)]">
+                  {t("titleLine2")}
+                </span>
+                <br />
                 <span className="gradient-text">{t("titleHighlight")}</span>
               </h1>
             </div>

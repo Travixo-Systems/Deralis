@@ -22,8 +22,8 @@
     "actions": {
       "contact": "Nous contacter",
       "startConversation": "Démarrer une conversation",
-      "buildYourSystem": "Construire votre système",
-      "seePlatforms": "Voir nos plateformes",
+      "buildYourSystem": "On construit ensemble",
+      "seePlatforms": "Voir nos projets",
       "learnMore": "En savoir plus",
       "viewMore": "Voir plus",
       "viewAll": "Tout voir",
@@ -78,10 +78,11 @@
   "home": {
     "hero": {
       "badge": "Ingénierie. Pas de templates.",
-      "title": "Des systèmes web modernes,",
-      "titleHighlight": "pas de simples sites vitrine.",
-      "description": "Nous créons des plateformes complètes : tableaux de bord, automatisation, bases de données, gestion des utilisateurs et outils métiers adaptés à votre activité.",
-      "subDescription": "Des systèmes fiables, pensés pour durer et évoluer.",
+      "title": "Vos opérations reposent sur du travail manuel.",
+      "titleLine2": "Votre équipe s'en sort quand même.",
+      "titleHighlight": "Je construis le système qui change ça.",
+      "description": "Outils internes, plateformes ou produits créés from scratch, pour supprimer le travail manuel et alléger la charge de votre équipe.",
+      "subDescription": "Propre, documenté, et entièrement à vous.",
       "features": {
         "tech": "Next.js, React, TypeScript",
         "database": "PostgreSQL, Supabase, Prisma",
