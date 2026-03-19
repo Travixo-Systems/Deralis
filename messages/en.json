@@ -22,8 +22,8 @@
     "actions": {
       "contact": "Contact us",
       "startConversation": "Start a conversation",
-      "buildYourSystem": "Build your system",
-      "seePlatforms": "See our platforms",
+      "buildYourSystem": "Let's build it",
+      "seePlatforms": "See our work",
       "learnMore": "Learn more",
       "viewMore": "View more",
       "viewAll": "View all",
@@ -78,10 +78,11 @@
   "home": {
     "hero": {
       "badge": "Full-stack engineering, not templates.",
-      "title": "Modern Web Systems",
-      "titleHighlight": "Not Just Websites.",
-      "description": "We build real web platforms. Next.js applications powered by SQL databases, Supabase, secure authentication, and automation workflows.",
-      "subDescription": "We deliver software, not pages. Systems, not templates.",
+      "title": "Your operations run on manual work.",
+      "titleLine2": "Your team makes them work anyway.",
+      "titleHighlight": "I build the system that removes that burden.",
+      "description": "Internal tools, platforms, or products built from scratch, to remove manual work and reduce your team's load.",
+      "subDescription": "Clean, documented, and fully yours.",
       "features": {
         "tech": "Next.js, React, TypeScript",
         "database": "PostgreSQL, Supabase, Prisma",
