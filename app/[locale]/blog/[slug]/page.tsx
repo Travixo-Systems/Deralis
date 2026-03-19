@@ -123,8 +123,8 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       {/* Header */}
-      <section className="py-12 lg:py-16 bg-mesh">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+      <section className="py-10 lg:py-12 bg-mesh">
+        <div className="max-w-[850px] mx-auto px-6 lg:px-8">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm text-[var(--dd-text-muted)] hover:text-[var(--dd-accent)] transition-colors mb-8"
@@ -161,8 +161,8 @@ export default async function BlogPostPage({ params }: Props) {
       </section>
 
       {/* Article body */}
-      <section className="py-10 lg:py-14">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+      <section className="py-6 lg:py-8">
+        <div className="max-w-[850px] mx-auto px-6 lg:px-8">
           <article className="prose-custom">
             {blocks.map((block, i) => {
               if (block.type === "h2") {
@@ -200,7 +200,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* CTA */}
       <section className="py-12 lg:py-16 bg-[var(--dd-bg-soft)]">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        <div className="max-w-[850px] mx-auto px-6 lg:px-8">
           <div className="gradient-border p-8 lg:p-12 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-[var(--dd-grad-from)]/5 to-[var(--dd-grad-to)]/5" />
             <div className="relative">
