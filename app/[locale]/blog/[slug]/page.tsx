@@ -123,7 +123,7 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       {/* Header */}
-      <section className="py-10 lg:py-12 bg-mesh">
+      <section className="pt-10 pb-4 lg:pt-12 lg:pb-6 bg-mesh">
         <div className="max-w-[850px] mx-auto px-6 lg:px-8">
           <Link
             href="/blog"
@@ -161,7 +161,7 @@ export default async function BlogPostPage({ params }: Props) {
       </section>
 
       {/* Article body */}
-      <section className="py-6 lg:py-8">
+      <section className="pt-2 pb-10 lg:pt-3 lg:pb-14">
         <div className="max-w-[850px] mx-auto px-6 lg:px-8">
           <article className="prose-custom">
             {blocks.map((block, i) => {
@@ -169,7 +169,7 @@ export default async function BlogPostPage({ params }: Props) {
                 return (
                   <h2
                     key={i}
-                    className="text-xl sm:text-2xl font-bold text-[var(--dd-text-main)] mt-10 mb-4"
+                    className={`text-xl sm:text-2xl font-bold text-[var(--dd-text-main)] mb-4 ${i === 0 ? "mt-0" : "mt-10"}`}
                   >
                     {block.content}
                   </h2>
