@@ -81,8 +81,11 @@
       "title": "Your operations run on manual work.",
       "titleLine2": "Your team makes them work anyway.",
       "titleHighlight": "I build the system that removes that burden.",
-      "description": "Internal tools, platforms, or products built from scratch. To remove manual work and take the load off your team. Clean, documented, and fully yours.",
+      "description": "Internal tools, platforms, or products built from scratch.",
+      "descriptionLine2": "To remove manual work and take the load off your team.",
+      "descriptionLine3": "Clean, documented, and fully yours.",
       "subDescription": "",
+      "screenshotLabel": "Live internal operations platform, built by Deralis Digital",
       "features": {
         "tech": "Next.js, React, TypeScript",
         "database": "PostgreSQL, Supabase, Prisma",
