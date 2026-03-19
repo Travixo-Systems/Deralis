@@ -893,29 +893,9 @@
       "ai": "IA & Outils"
     },
     "posts": {
-      "why-your-business-needs-a-web-system": {
-        "title": "Pourquoi votre entreprise a besoin d'un système web, pas d'un simple site",
-        "excerpt": "La différence entre une brochure digitale et une plateforme qui génère du revenu. Quand est-il temps de passer à l'étape suivante ?"
-      },
-      "saas-vs-custom-build": {
-        "title": "SaaS vs sur-mesure : faire le bon choix",
-        "excerpt": "Quand utiliser des outils existants et quand investir dans une plateforme personnalisée. Un cadre de décision pour les fondateurs."
-      },
-      "automation-roi-for-small-business": {
-        "title": "Le vrai ROI de l'automatisation pour les PME",
-        "excerpt": "Comment l'automatisation économise 15h+ par semaine et se rentabilise en moins de 3 mois. Chiffres réels de vrais projets."
-      },
-      "next-js-for-enterprise": {
-        "title": "Pourquoi nous développons avec Next.js",
-        "excerpt": "Nos choix techniques pour le développement d'applications d'entreprise performantes et maintenables."
-      },
-      "ai-tools-for-business-operations": {
-        "title": "5 outils IA qui améliorent vraiment les opérations",
-        "excerpt": "Au-delà du buzz : des intégrations IA pratiques qui font gagner du temps et réduisent les erreurs au quotidien."
-      },
-      "digital-transformation-checklist": {
-        "title": "La checklist complète de transformation digitale 2025",
-        "excerpt": "Guide étape par étape pour moderniser vos opérations, de l'évaluation à la mise en œuvre."
+      "why-profitable-businesses-run-on-manual-work": {
+        "title": "Pourquoi les entreprises rentables fonctionnent encore manuellement en 2026, et ce que ça leur coûte vraiment",
+        "excerpt": "Les PME rentables tournent encore sur Excel, WhatsApp et email en 2026. Voici ce que les processus manuels coûtent réellement à votre entreprise, et ce qu'il faut pour y remédier."
       }
     },
     "cta": {
