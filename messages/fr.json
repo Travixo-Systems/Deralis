@@ -589,17 +589,6 @@
           "Appels à l'action orientés conversion"
         ]
       },
-      "deralisDigital": {
-        "title": "Deralis Digital",
-        "type": "Site d'agence",
-        "description": "Site de présentation de l'agence Deralis Digital, conçu pour générer des prises de contact, présenter les services et les projets.",
-        "features": [
-          "Optimisé pour la génération de leads",
-          "Présentation claire des services",
-          "Portfolio de projets",
-          "Formulaire de contact intégré"
-        ]
-      },
       "ecoridepool": {
         "title": "EcoRidePool",
         "type": "Application web de covoiturage",
