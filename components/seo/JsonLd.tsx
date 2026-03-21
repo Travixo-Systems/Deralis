@@ -12,7 +12,7 @@ export function OrganizationJsonLd() {
       height: 630,
     },
     description:
-      "We build high-performance websites, custom web applications, workflow automations and AI-powered tools that help businesses modernize and scale efficiently.",
+      "I build high-performance websites, custom web applications, workflow automations and AI-powered tools that help businesses modernize and scale efficiently.",
     email: "contact@deralis.digital",
     foundingDate: "2024",
     sameAs: [

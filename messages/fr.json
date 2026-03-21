@@ -4,7 +4,7 @@
       "default": "Deralis Digital - Systèmes web modernes & transformation digitale",
       "template": "%s | Deralis Digital"
     },
-    "description": "Nous concevons des plateformes web complètes, des applications sur mesure, des automatisations et des outils IA pour aider les entreprises à se moderniser et à travailler plus efficacement."
+    "description": "Je conçois des plateformes web complètes, des applications sur mesure, des automatisations et des outils IA pour aider les entreprises à se moderniser et à travailler plus efficacement."
   },
   "common": {
     "brand": {
@@ -20,10 +20,10 @@
       "contact": "Contact"
     },
     "actions": {
-      "contact": "Nous contacter",
+      "contact": "Prendre contact",
       "startConversation": "Démarrer une conversation",
       "buildYourSystem": "On construit ensemble",
-      "seePlatforms": "Voir nos projets",
+      "seePlatforms": "Voir mes projets",
       "learnMore": "En savoir plus",
       "viewMore": "Voir plus",
       "viewAll": "Tout voir",
@@ -35,8 +35,8 @@
       "backToHome": "Retour à l'accueil",
       "visitWebsite": "Visiter le site",
       "openApp": "Ouvrir l'application",
-      "viewOurWork": "Voir nos réalisations",
-      "workWithUs": "Travailler avec nous",
+      "viewOurWork": "Voir mes réalisations",
+      "workWithUs": "Travailler avec moi",
       "getInTouch": "Prendre contact",
       "sendMessage": "Envoyer le message",
       "sending": "Envoi en cours...",
@@ -200,36 +200,36 @@
       }
     },
     "approach": {
-      "title": "Notre manière de",
+      "title": "Ma manière de",
       "titleHighlight": "travailler",
       "description": "Un processus simple, lisible et structuré, du premier échange au suivi long terme.",
       "steps": {
         "step1": {
           "number": "01",
           "title": "Comprendre votre besoin",
-          "description": "Nous analysons votre activité, vos objectifs, vos contraintes et vos priorités."
+          "description": "J'analyse votre activité, vos objectifs, vos contraintes et vos priorités."
         },
         "step2": {
           "number": "02",
           "title": "Plan & architecture",
-          "description": "Nous définissons la structure du système, la base de données, les fonctionnalités et les règles métiers."
+          "description": "Je définis la structure du système, la base de données, les fonctionnalités et les règles métiers."
         },
         "step3": {
           "number": "03",
           "title": "Développement & itérations",
-          "description": "Nous construisons le système par étapes, avec des points de validation réguliers."
+          "description": "Je construis le système par étapes, avec des points de validation réguliers."
         },
         "step4": {
           "number": "04",
           "title": "Mise en production",
-          "description": "Nous déployons une version stable, sécurisée et documentée."
+          "description": "Je déploie une version stable, sécurisée et documentée."
         }
       }
     },
     "featured": {
       "title": "Plateformes",
       "titleHighlight": "mises en avant",
-      "description": "Quelques exemples concrets de systèmes que nous avons conçus : tableaux de bord, bases de données, automatisations.",
+      "description": "Quelques exemples concrets de systèmes que j'ai conçus : tableaux de bord, bases de données, automatisations.",
       "label": "En vedette",
       "projects": {
         "govPortal": {
@@ -283,19 +283,19 @@
         },
         "tools": {
           "question": "Quels outils utilisez-vous ?",
-          "answer": "Principalement Next.js, React, TypeScript, Supabase, PostgreSQL, Prisma, Tailwind, et d'autres outils modernes. Nous choisissons la stack la plus adaptée à chaque projet."
+          "answer": "Principalement Next.js, React, TypeScript, Supabase, PostgreSQL, Prisma, Tailwind, et d'autres outils modernes. Je choisis la stack la plus adaptée à chaque projet."
         },
         "timeline": {
           "question": "Combien de temps dure un projet ?",
-          "answer": "Une mission de conseil prend environ 1 à 2 semaines. Une application web typique dure 4 à 12 semaines selon la portée. Nous annonçons des délais réalistes dès le début."
+          "answer": "Une mission de conseil prend environ 1 à 2 semaines. Une application web typique dure 4 à 12 semaines selon la portée. J'annonce des délais réalistes dès le début."
         },
         "remote": {
           "question": "Travaillez-vous à distance ?",
-          "answer": "Oui, avec des clients en France et à l'international. Nous travaillons par visioconférence, email et vos outils de gestion de projet habituels. Échanges possibles en français ou en anglais."
+          "answer": "Oui, avec des clients en France et à l'international. Je travaille par visioconférence, email et vos outils de gestion de projet habituels. Échanges possibles en français ou en anglais."
         },
         "support": {
           "question": "Y a-t-il un suivi après le lancement ?",
-          "answer": "Oui. Nous proposons mises à jour, correctifs, nouvelles fonctionnalités et optimisation continue. La majorité de nos clients choisissent un accompagnement dans la durée."
+          "answer": "Oui. Je propose mises à jour, correctifs, nouvelles fonctionnalités et optimisation continue. La majorité de mes clients choisissent un accompagnement dans la durée."
         }
       }
     },
@@ -401,7 +401,7 @@
       "badge": "Engineering full-stack, pas de templates.",
       "title": "Des services qui",
       "titleHighlight": "créent de la valeur",
-      "description": "De la validation d'idée au déploiement, puis au suivi. Applications Next.js avec base de données, authentification, automatisation et architecture prête à évoluer. Nous construisons les briques techniques qui soutiennent votre business."
+      "description": "De la validation d'idée au déploiement, puis au suivi. Applications Next.js avec base de données, authentification, automatisation et architecture prête à évoluer. Je construis les briques techniques qui soutiennent votre business."
     },
     "techBar": {
       "label": "Technologies utilisées"
@@ -411,7 +411,7 @@
         "id": "consulting",
         "title": "Conseil stratégique & validation",
         "subtitle": "Clarifier avant de coder.",
-        "description": "Avant d'investir dans le développement, nous validons l'idée, le marché, les risques et les priorités. L'objectif : éviter de dépenser sur des fonctionnalités inutiles.",
+        "description": "Avant d'investir dans le développement, je valide l'idée, le marché, les risques et les priorités. L'objectif : éviter de dépenser sur des fonctionnalités inutiles.",
         "features": [
           "Validation de l'idée métier",
           "Analyse du marché et de la concurrence",
@@ -428,7 +428,7 @@
         "id": "development",
         "title": "Développement web full-stack",
         "subtitle": "Des systèmes, pas seulement des pages.",
-        "description": "Nous construisons de vraies plateformes avec interface, logique métier et base de données. Applications Next.js alimentées par SQL, authentification et intégrations.",
+        "description": "Je construis de vraies plateformes avec interface, logique métier et base de données. Applications Next.js alimentées par SQL, authentification et intégrations.",
         "features": [
           "Next.js, React, TypeScript",
           "Bases de données SQL (PostgreSQL, MySQL) & NoSQL (MongoDB)",
@@ -438,7 +438,7 @@
           "Architecture évolutive (Prisma, Supabase)"
         ],
         "whoFor": "Entreprises qui ont besoin d'un outil de travail numérique, pas seulement d'un site vitrine.",
-        "note": "Si la demande est uniquement une page statique HTML/CSS, ce n'est pas notre cœur de métier.",
+        "note": "Si la demande est uniquement une page statique HTML/CSS, ce n'est pas mon cœur de métier.",
         "cta": "Construire votre plateforme",
         "timeline": "4-12 semaines",
         "investment": "À partir de 3 000 €"
@@ -447,7 +447,7 @@
         "id": "ai",
         "title": "Outils IA & intégration GPT personnalisée",
         "subtitle": "Une IA utile, branchée sur vos données.",
-        "description": "Nous créons des copilotes IA qui connaissent votre activité : connectés à vos bases de données, à vos documents et à vos outils internes.",
+        "description": "Je crée des copilotes IA qui connaissent votre activité : connectés à vos bases de données, à vos documents et à vos outils internes.",
         "features": [
           "Assistants GPT personnalisés",
           "Copilotes IA reliés à vos données",
@@ -465,7 +465,7 @@
         "id": "automation",
         "title": "Support & automatisation des workflows",
         "subtitle": "Présent pendant et après le lancement.",
-        "description": "Nous restons votre point de contact technique : maintenance, évolutions, intégrations et automatisation des tâches répétitives.",
+        "description": "Je reste votre point de contact technique : maintenance, évolutions, intégrations et automatisation des tâches répétitives.",
         "features": [
           "Automatisation de workflows (Zapier, Make, n8n)",
           "Intégrations avec des outils tiers",
@@ -486,8 +486,8 @@
       "investment": "Investissement"
     },
     "comparison": {
-      "title": "Ce qui nous différencie",
-      "description": "Nous privilégions l'ingénierie solide et les relations durables plutôt que les solutions rapides mais limitées.",
+      "title": "Ce qui me différencie",
+      "description": "Je privilégie l'ingénierie solide et les relations durables plutôt que les solutions rapides mais limitées.",
       "typical": {
         "title": "Approche classique",
         "items": [
@@ -509,26 +509,26 @@
     },
     "notSure": {
       "title": "Vous n'êtes pas sûr du service adapté ?",
-      "description": "Réservez un échange gratuit de 30 minutes. Nous discutons de votre situation et vous orientons vers la meilleure option, même si ce n'est pas chez nous."
+      "description": "Réservez un échange gratuit de 30 minutes. Je discute de votre situation et vous oriente vers la meilleure option."
     },
     "faq": {
       "title": "Questions fréquentes",
       "items": {
         "cost": {
           "question": "Combien coûte un projet typique ?",
-          "answer": "Tout dépend de la portée. Le conseil commence à 500 €. Une plateforme SaaS complète se situe généralement entre 5 000 € et 25 000 € ou plus. Nous détaillons toujours les coûts dans un devis après analyse de votre besoin."
+          "answer": "Tout dépend de la portée. Le conseil commence à 500 €. Une plateforme SaaS complète se situe généralement entre 5 000 € et 25 000 € ou plus. Je détaille toujours les coûts dans un devis après analyse de votre besoin."
         },
         "tech": {
           "question": "Quelles technologies utilisez-vous ?",
-          "answer": "Notre stack principale est basée sur Next.js, React et TypeScript. Nous travaillons aussi avec PHP, Node.js et des bases comme PostgreSQL, MySQL et MongoDB lorsque c'est pertinent."
+          "answer": "Ma stack principale est basée sur Next.js, React et TypeScript. Je travaille aussi avec PHP, Node.js et des bases comme PostgreSQL, MySQL et MongoDB lorsque c'est pertinent."
         },
         "remote": {
           "question": "Travaillez-vous avec des clients hors de France ?",
-          "answer": "Oui. Nous accompagnons des clients partout en Europe et au-delà. Les échanges se font à distance, par visioconférence, email et outils collaboratifs."
+          "answer": "Oui. J'accompagne des clients partout en Europe et au-delà. Les échanges se font à distance, par visioconférence, email et outils collaboratifs."
         },
         "takeover": {
           "question": "Pouvez-vous reprendre un projet déjà commencé ?",
-          "answer": "Oui. Nous auditons l'existant, identifions les points bloquants et proposons un plan pour remettre le projet sur de bons rails."
+          "answer": "Oui. J'audite l'existant, identifie les points bloquants et propose un plan pour remettre le projet sur de bons rails."
         }
       }
     },
@@ -542,9 +542,9 @@
       "description": "Exemples de plateformes construites par Deralis Digital : applications SaaS, tableaux de bord et systèmes web basés sur Next.js, Supabase et PostgreSQL."
     },
     "hero": {
-      "title": "Nos",
+      "title": "Mes",
       "titleHighlight": "réalisations",
-      "description": "Un aperçu de plateformes que nous avons mises en production : applications SaaS, tableaux de bord et systèmes web modernes, pensés pour durer."
+      "description": "Un aperçu de plateformes que j'ai mises en production : applications SaaS, tableaux de bord et systèmes web modernes, pensés pour durer."
     },
     "stats": {
       "delivered": "Plateformes livrées",
@@ -629,7 +629,7 @@
     },
     "finalCta": {
       "title": "Vous voulez voir plus de détails ?",
-      "description": "Nous pouvons vous présenter en rendez-vous le fonctionnement de n'importe lequel de ces projets."
+      "description": "Je peux vous présenter en rendez-vous le fonctionnement de n'importe lequel de ces projets."
     }
   },
   "about": {
@@ -641,14 +641,14 @@
       "badge": "Cabinet d'ingénierie indépendant",
       "title": "À propos de",
       "titleHighlight": "Deralis Digital",
-      "description": "Nous construisons des systèmes web complets : plateformes, tableaux de bord, automatisations et bases de données."
+      "description": "Je construis des systèmes web complets : plateformes, tableaux de bord, automatisations et bases de données."
     },
     "intro": {
-      "paragraph1": "Deralis Digital est un cabinet d'ingénierie indépendant spécialisé dans la construction de vraies plateformes web, pas seulement de sites vitrine. Nous concevons et développons des systèmes : applications SaaS, tableaux de bord, automatisation et bases de données SQL, avec des technologies modernes comme Next.js, React, TypeScript, Supabase et Prisma.",
-      "paragraph2": "Notre approche est centrée sur l'ingénierie, la clarté et la fiabilité dans le temps. Pas de WordPress, pas de drag-and-drop générique : nous écrivons du logiciel adapté à votre usage."
+      "paragraph1": "Deralis Digital est un cabinet d'ingénierie indépendant spécialisé dans la construction de vraies plateformes web, pas seulement de sites vitrine. Je conçois et développe des systèmes : applications SaaS, tableaux de bord, automatisation et bases de données SQL, avec des technologies modernes comme Next.js, React, TypeScript, Supabase et Prisma.",
+      "paragraph2": "Mon approche est centrée sur l'ingénierie, la clarté et la fiabilité dans le temps. Pas de WordPress, pas de drag-and-drop générique : j'écris du logiciel adapté à votre usage."
     },
     "philosophy": {
-      "title": "Notre philosophie",
+      "title": "Ma philosophie",
       "subtitle": "Les entreprises modernes ont besoin de systèmes, pas seulement de pages.",
       "systemsTitle": "Des systèmes qui :",
       "systems": [
@@ -658,11 +658,11 @@
         "Peuvent évoluer sans tout casser",
         "Apportent une vraie valeur opérationnelle au quotidien"
       ],
-      "conclusion": "Nous remplaçons les tableurs, les copier-coller et les processus manuels par des plateformes modernes, stables et maintenables."
+      "conclusion": "Je remplace les tableurs, les copier-coller et les processus manuels par des plateformes modernes, stables et maintenables."
     },
     "whatWeBuild": {
-      "title": "Ce que nous construisons",
-      "description": "Nous nous concentrons sur le développement de plateformes full-stack, utiles et exploitables en conditions réelles.",
+      "title": "Ce que je construis",
+      "description": "Je me concentre sur le développement de plateformes full-stack, utiles et exploitables en conditions réelles.",
       "items": {
         "saas": {
           "title": "Plateformes SaaS",
@@ -685,10 +685,10 @@
           "description": "Connexions sur mesure avec des APIs (REST, webhooks, OAuth, services tiers)."
         }
       },
-      "note": "Chaque plateforme que nous construisons repose sur un socle technique propre et maîtrisé, pas sur des modèles préfabriqués."
+      "note": "Chaque plateforme que je construis repose sur un socle technique propre et maîtrisé, pas sur des modèles préfabriqués."
     },
     "howWeWork": {
-      "title": "Comment nous travaillons",
+      "title": "Comment je travaille",
       "description": "Vous travaillez directement avec l'ingénieur derrière Deralis Digital. Pas d'intermédiaires, pas de chaîne de sous-traitance. Le processus est transparent et technique :",
       "steps": {
         "step1": {
@@ -721,7 +721,7 @@
     },
     "techExpertise": {
       "title": "Expertise technologique",
-      "description": "Nous utilisons une stack moderne, cohérente et éprouvée pour garder les projets rapides à développer et simples à maintenir.",
+      "description": "J'utilise une stack moderne, cohérente et éprouvée pour garder les projets rapides à développer et simples à maintenir.",
       "categories": {
         "frontend": "Interface (frontend)",
         "backend": "Logique métier (backend)",
@@ -731,11 +731,11 @@
     },
     "screenshots": {
       "title": "Des systèmes utilisés en conditions réelles",
-      "description": "Tableaux de bord, workflows et systèmes de données en production chez nos clients.",
+      "description": "Tableaux de bord, workflows et systèmes de données en production chez mes clients.",
       "notes": {
         "note1": "Ces systèmes incluent multi-tenant, gestion des rôles, bases SQL et automatisations.",
         "note2": "Toutes les plateformes présentées reposent sur une vraie logique métier, pas sur de simples thèmes graphiques.",
-        "note3": "Notre priorité : des systèmes qui travaillent réellement pour vous."
+        "note3": "Ma priorité : des systèmes qui travaillent réellement pour vous."
       }
     },
     "principle": {
@@ -755,12 +755,12 @@
       "conclusion": "Deralis Digital s'adresse aux fondateurs, équipes et entreprises qui ont besoin d'un vrai partenaire technique, pas juste d'un site de plus."
     },
     "location": {
-      "title": "Où nous travaillons",
+      "title": "Où je travaille",
       "description": "Basé en France, en collaboration avec des clients en France et à l'étranger."
     },
     "cta": {
       "title": "Prêt à construire quelque chose de réel ?",
-      "description": "Première consultation gratuite et sans engagement. Présentez-nous votre projet, nous vous dirons ce qui est réaliste et ce qui ne l'est pas."
+      "description": "Première consultation gratuite et sans engagement. Présentez-moi votre projet, je vous dirai ce qui est réaliste et ce qui ne l'est pas."
     },
     "finalCta": {
       "title": "Une question ?",
@@ -775,7 +775,7 @@
     "hero": {
       "title": "Construisons",
       "titleHighlight": "quelque chose de concret",
-      "description": "Vous avez un projet ou une idée ? Partagez-la avec nous. Nous répondons en général sous 24 heures."
+      "description": "Vous avez un projet ou une idée ? Partagez-la avec moi. Je réponds en général sous 24 heures."
     },
     "form": {
       "name": {
@@ -815,15 +815,15 @@
         }
       },
       "message": {
-        "label": "Parlez-nous de votre projet",
+        "label": "Parlez-moi de votre projet",
         "placeholder": "Expliquez votre contexte, votre objectif et votre échéance idéale..."
       },
-      "error": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement par email.",
+      "error": "Une erreur s'est produite. Veuillez réessayer ou me contacter directement par email.",
       "required": "*"
     },
     "success": {
       "title": "Message envoyé !",
-      "description": "Merci pour votre message. Nous revenons vers vous sous 24 heures (jours ouvrés)."
+      "description": "Merci pour votre message. Je reviens vers vous sous 24 heures (jours ouvrés)."
     },
     "sidebar": {
       "contactInfo": {
@@ -844,11 +844,11 @@
         "items": {
           "notSure": {
             "question": "Et si je ne sais pas ce dont j'ai besoin ?",
-            "answer": "C'est fréquent. Expliquez simplement votre situation, nous vous aiderons à y voir plus clair."
+            "answer": "C'est fréquent. Expliquez simplement votre situation, je vous aiderai à y voir plus clair."
           },
           "startups": {
             "question": "Travaillez-vous avec des startups ?",
-            "answer": "Oui. Nous aidons à clarifier le besoin, à valider l'idée et à cadrer un MVP raisonnable avant de développer."
+            "answer": "Oui. J'aide à clarifier le besoin, à valider l'idée et à cadrer un MVP raisonnable avant de développer."
           },
           "timeline": {
             "question": "Quels sont vos délais typiques ?",
@@ -865,7 +865,7 @@
   "leadGen": {
     "leadMagnet": {
       "title": "Gratuit : Checklist d'audit système web",
-      "description": "Téléchargez notre checklist en 25 points pour évaluer si votre entreprise est prête pour un système web moderne.",
+      "description": "Téléchargez cette checklist en 25 points pour évaluer si votre entreprise est prête pour un système web moderne.",
       "items": [
         "Évaluation performance & scalabilité",
         "Revue sécurité & authentification",
@@ -877,11 +877,11 @@
       "privacy": "Aucun spam. Désabonnement à tout moment.",
       "error": "Une erreur est survenue. Veuillez réessayer.",
       "successTitle": "Vérifiez votre boîte mail !",
-      "successDescription": "Nous avons envoyé la checklist à votre email. Vérifiez vos spams si besoin."
+      "successDescription": "La checklist a été envoyée à votre email. Vérifiez vos spams si besoin."
     },
     "exitIntent": {
       "title": "Attendez, avant de partir",
-      "description": "Bénéficiez d'une session stratégique gratuite de 30 minutes avec notre équipe. Sans engagement.",
+      "description": "Bénéficiez d'une session stratégique gratuite de 30 minutes. Sans engagement.",
       "benefit1": "Appel découverte gratuit de 30 min",
       "benefit2": "Évaluation technique sans engagement",
       "benefit3": "Recommandations concrètes à garder",
