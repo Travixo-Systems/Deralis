@@ -224,7 +224,7 @@
       "badge": "Case Study",
       "title": "TraviXO Systems",
       "subtitle": "B2B SaaS • Equipment Tracking • VGP Compliance",
-      "description": "Built a system to manage equipment tracking and compliance for an equipment rental company. Reduced manual coordination across the team. Used as a real operational tool every day, not a prototype.",
+      "description": "Built an internal system used daily to track equipment and manage compliance, replacing manual coordination across the team. Used as a real operational tool, not a prototype.",
       "detailedDescription": "Built and deployed as a real operational system, not a template or mockup.",
       "features": [
         "Multi-tenant SaaS architecture",
@@ -267,7 +267,7 @@
       }
     },
     "cta": {
-      "title": "Let's map your current system and remove the bottlenecks.",
+      "title": "Book a call. We map your system and show what to fix.",
       "description": "No proposal, no commitment unless it makes sense.",
       "note": "One free call. I will tell you exactly what I would build and why."
     },

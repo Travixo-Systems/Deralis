@@ -252,7 +252,7 @@
       "badge": "Étude de cas",
       "title": "TraviXO Systems",
       "subtitle": "SaaS B2B • Gestion d'équipements • Conformité VGP",
-      "description": "Un système conçu pour gérer le suivi d'équipements et la conformité dans une entreprise de location. La coordination manuelle a été réduite au sein de l'équipe. Utilisé comme outil opérationnel au quotidien, pas comme un prototype.",
+      "description": "Un système interne utilisé au quotidien pour suivre les équipements et gérer la conformité, en remplacement de la coordination manuelle au sein de l'équipe. Utilisé comme un vrai outil opérationnel, pas un prototype.",
       "detailedDescription": "Construit et déployé comme un vrai système opérationnel, pas un template ou une maquette.",
       "features": [
         "Architecture SaaS multi-tenant",
@@ -295,7 +295,7 @@
       }
     },
     "cta": {
-      "title": "Cartographions votre système actuel et supprimons les blocages.",
+      "title": "Prenez rendez-vous. On analyse votre système et on vous montre quoi corriger.",
       "description": "Pas de devis, pas d'engagement tant que ça n'a pas de sens.",
       "note": "Un appel gratuit. Je vous dis exactement ce que je construirais et pourquoi."
     },
