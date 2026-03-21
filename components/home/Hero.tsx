@@ -109,13 +109,14 @@ export default function Hero() {
               transition={{ delay: 0.7 }}
               className="flex flex-col gap-3"
             >
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 <Link href="/contact" className="btn-primary">
                   {tActions("bookCall")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/projects" className="btn-secondary">
+                <Link href="/projects" className="text-sm text-[var(--dd-accent)] hover:underline inline-flex items-center gap-1">
                   {tActions("seePlatforms")}
+                  <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
               <p className="text-sm text-[var(--dd-text-dim)]">

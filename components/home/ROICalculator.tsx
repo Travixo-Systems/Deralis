@@ -141,7 +141,7 @@ export default function ROICalculator() {
                   </div>
 
                   <Link href="/contact" className="btn-primary w-full justify-center">
-                    {tActions("speakToEngineer")}
+                    {tActions("bookCall")}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
 
