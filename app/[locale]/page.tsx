@@ -9,6 +9,7 @@ import FeaturedProjects from "@/components/home/FeaturedProjects";
 import Highlight from "@/components/home/Highlight";
 import ROICalculator from "@/components/home/ROICalculator";
 import FAQ from "@/components/home/FAQ";
+import WhatHappensNext from "@/components/home/WhatHappensNext";
 import FinalCTA from "@/components/home/FinalCTA";
 
 type Props = {
@@ -31,6 +32,7 @@ export default async function Home({ params }: Props) {
       <Highlight />
       <ROICalculator />
       <FAQ />
+      <WhatHappensNext />
       <FinalCTA />
     </>
   );

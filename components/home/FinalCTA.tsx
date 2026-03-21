@@ -25,7 +25,7 @@ export default function FinalCTA() {
 
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               <CalendlyButton className="btn-primary">
-                {tActions("speakToEngineer")}
+                {tActions("bookCall")}
                 <ArrowRight className="w-4 h-4" />
               </CalendlyButton>
               <a

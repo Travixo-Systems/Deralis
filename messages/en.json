@@ -86,6 +86,7 @@
       "descriptionLine3": "documented, and fully yours.",
       "subDescription": "",
       "screenshotLabel": "Live internal operations platform, built by Deralis Digital",
+      "ctaSubtext": "We map your current system in 20 minutes",
       "features": {
         "tech": "Next.js, React, TypeScript",
         "database": "PostgreSQL, Supabase, Prisma",
@@ -115,58 +116,58 @@
       }
     },
     "services": {
-      "title": "What we",
+      "title": "What I",
       "titleHighlight": "build",
-      "description": "From validation to deployment. Full-stack engineering with real databases, APIs, and long-term support.",
+      "description": "Each project replaces something that is slowing your business down.",
       "items": {
         "consulting": {
-          "title": "Strategic Consulting & Business Validation",
-          "description": "Idea validation, market analysis, competition research, and clear roadmaps before you invest in development.",
-          "features": ["Idea validation", "Market / competition", "Roadmaps"]
+          "title": "Internal systems",
+          "description": "Replace manual tracking and disconnected tools with one system your team actually uses.",
+          "features": ["Process mapping", "Tool consolidation", "Team adoption"]
         },
         "development": {
-          "title": "Full-Stack Web Development",
-          "description": "Next.js applications with SQL databases, authentication, dashboards, and scalable architecture. Systems, not pages.",
+          "title": "Business platforms",
+          "description": "Turn operations into structured workflows instead of spreadsheets and workarounds.",
           "features": ["Next.js / React", "SQL databases", "APIs & auth"],
           "highlight": "Systems, not pages."
         },
         "ai": {
-          "title": "AI Tools & Custom GPT Integration",
-          "description": "AI copilots connected to your database, trained on your data, integrated into your workflows.",
-          "features": ["Custom GPTs", "Database-connected AI", "Automation"]
+          "title": "Custom products",
+          "description": "From idea to production-ready system. Not prototypes, not templates.",
+          "features": ["Full-stack build", "Production deployment", "Long-term support"]
         },
         "support": {
-          "title": "Support & Workflow Automation",
-          "description": "Ongoing maintenance, workflow automation, and technical support. We don't disappear after launch.",
+          "title": "Automation and workflows",
+          "description": "Remove repetitive tasks and reduce dependency on manual work.",
           "features": ["Workflow automation", "Integrations", "Ongoing support"]
         }
       },
       "cta": {
-        "consulting": "Learn more about consulting",
-        "development": "Explore full-stack development",
-        "ai": "See AI integration services",
+        "consulting": "Learn more about internal systems",
+        "development": "Explore business platforms",
+        "ai": "See custom product services",
         "support": "Discover workflow automation"
       }
     },
     "clients": {
-      "title": "Who we",
+      "title": "Who I",
       "titleHighlight": "work with",
-      "description": "We partner with businesses that need real systems, not just websites.",
+      "description": "If any of these sound like you, we should talk.",
       "items": {
         "startups": {
-          "title": "Startups & Founders",
-          "description": "You have an idea but need technical expertise to validate and build it. We help you ship fast without cutting corners.",
-          "points": ["Idea validation", "MVP development", "Technical guidance"]
+          "title": "Teams running operations manually",
+          "description": "You rely on people to keep things working day-to-day.",
+          "points": ["Manual coordination", "No centralized system", "Team bottlenecks"]
         },
         "smb": {
-          "title": "Small Businesses",
-          "description": "You're ready to digitalize operations, automate workflows, or replace outdated tools with real systems.",
-          "points": ["Process digitalization", "Custom dashboards", "Workflow automation"]
+          "title": "Businesses outgrowing their tools",
+          "description": "Spreadsheets, SaaS tools, and workarounds are no longer enough.",
+          "points": ["Tool sprawl", "Data silos", "Scaling issues"]
         },
         "modernization": {
-          "title": "Teams Needing Modernization",
-          "description": "You have legacy systems or inherited codebases that need to be rebuilt, migrated, or properly maintained.",
-          "points": ["Legacy migration", "Codebase takeover", "Technical debt cleanup"]
+          "title": "Founders building real systems",
+          "description": "You need something solid, not another fragile setup.",
+          "points": ["Production-grade build", "Clean architecture", "Full ownership"]
         }
       }
     },
@@ -203,11 +204,6 @@
       "description": "Real systems we've built: dashboards, databases, automation.",
       "label": "Featured",
       "projects": {
-        "ecoridepool": {
-          "title": "EcoRidePool",
-          "type": "Carpooling Web App",
-          "description": "Connects drivers and passengers for shared rides. Full trip management with route planning, bookings, and messaging."
-        },
         "travixoWeb": {
           "title": "TraviXO Web",
           "type": "Marketing Website",
@@ -228,8 +224,8 @@
       "badge": "Case Study",
       "title": "TraviXO Systems",
       "subtitle": "B2B SaaS • Equipment Tracking • VGP Compliance",
-      "description": "A full multi-tenant SaaS platform for equipment rental companies. QR-based asset tracking, inspection scheduling, and compliance automation, all powered by a real PostgreSQL database.",
-      "detailedDescription": "The platform is built with a real PostgreSQL database, multi-tenant access layers, automation workflows, and secure role-based permissions.",
+      "description": "Built a system to manage equipment tracking and compliance for an equipment rental company. Reduced manual coordination across the team. Used as a real operational tool every day, not a prototype.",
+      "detailedDescription": "Built and deployed as a real operational system, not a template or mockup.",
       "features": [
         "Multi-tenant SaaS architecture",
         "QR code asset tracking",
@@ -271,9 +267,9 @@
       }
     },
     "cta": {
-      "title": "Ready to build something real?",
-      "description": "Let's talk about your project. Free consultation, no pressure. We'll discuss your goals and see if we're a good fit.",
-      "note": "Typically respond within 24 hours • EN/FR bilingual"
+      "title": "Let's map your current system and remove the bottlenecks.",
+      "description": "No proposal, no commitment unless it makes sense.",
+      "note": "One free call. I will tell you exactly what I would build and why."
     },
     "trustBar": {
       "item1": "100% delivery rate",
@@ -284,22 +280,22 @@
     "socialProof": {
       "title": "Trusted by",
       "titleHighlight": "real businesses",
-      "description": "From startups to established companies, we deliver systems that drive results.",
+      "description": "From startups to established companies, I deliver systems that drive results.",
       "metric1": {
-        "value": "5+",
-        "label": "Platforms shipped"
+        "value": "",
+        "label": "From idea to working system"
       },
       "metric2": {
-        "value": "100%",
-        "label": "On-time delivery"
+        "value": "",
+        "label": "No templates, no lock-in"
       },
       "metric3": {
-        "value": "<24h",
-        "label": "Response time"
+        "value": "",
+        "label": "Clean code, full documentation"
       },
       "metric4": {
-        "value": "3x to 8x",
-        "label": "Avg. client ROI"
+        "value": "",
+        "label": "Built for production"
       },
       "testimonial1": {
         "quote": "Deralis built our entire SaaS platform from scratch. The system handles thousands of assets across multiple tenants with zero downtime. Exceptional engineering.",
@@ -321,9 +317,9 @@
       }
     },
     "roiCalculator": {
-      "title": "Estimate your",
-      "titleHighlight": "project ROI",
-      "description": "See the potential return on your web system investment.",
+      "title": "What is manual work",
+      "titleHighlight": "costing you?",
+      "description": "Estimate how much time and money your current setup is losing every month.",
       "projectTypeLabel": "What are you building?",
       "types": {
         "saas": "SaaS Platform",
@@ -339,6 +335,28 @@
       "projectedValue": "Projected annual value",
       "perYear": "/ year",
       "disclaimer": "Estimates based on industry averages. Actual results vary by project scope and execution."
+    },
+    "whatHappensNext": {
+      "title": "What happens",
+      "titleHighlight": "next",
+      "description": "Three steps, no surprises.",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "We map your current system",
+          "description": "We go through how your operations work today and where time is lost."
+        },
+        "step2": {
+          "number": "02",
+          "title": "I define what should be built",
+          "description": "You get a clear breakdown of what system would actually solve the problem."
+        },
+        "step3": {
+          "number": "03",
+          "title": "We decide if it is worth building",
+          "description": "No proposal, no commitment unless it makes sense."
+        }
+      }
     }
   },
   "services": {
