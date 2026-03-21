@@ -10,18 +10,16 @@ import {
   Car,
   PawPrint,
   Globe,
-  Briefcase,
   Landmark,
   CheckCircle2
 } from "lucide-react";
 
-const projectKeys = ["travixoSystems", "govPortal", "travixoWeb", "deralisDigital", "ecoridepool", "arcadiaZoo"] as const;
+const projectKeys = ["travixoSystems", "govPortal", "travixoWeb", "ecoridepool", "arcadiaZoo"] as const;
 
 const projectIcons = {
   travixoSystems: Building2,
   govPortal: Landmark,
   travixoWeb: Globe,
-  deralisDigital: Briefcase,
   ecoridepool: Car,
   arcadiaZoo: PawPrint,
 };
@@ -41,13 +39,6 @@ const projectConfig = {
     status: "live",
     stack: ["Next.js 15", "Tailwind CSS", "next-intl", "Framer Motion"],
     liveUrl: "https://travixosystems.com",
-    featured: false,
-  },
-  deralisDigital: {
-    year: "2024-2025",
-    status: "inDevelopment",
-    stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    liveUrl: null,
     featured: false,
   },
   ecoridepool: {
