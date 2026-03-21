@@ -3,22 +3,13 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 const stack = ["Next.js 15", "Supabase", "PostgreSQL", "Prisma", "TypeScript", "Tailwind"];
 
 export default function Highlight() {
   const t = useTranslations("home.highlight");
   const tActions = useTranslations("common.actions");
-
-  const features = [
-    t("features.0"),
-    t("features.1"),
-    t("features.2"),
-    t("features.3"),
-    t("features.4"),
-    t("features.5"),
-  ];
 
   return (
     <section className="py-12 lg:py-16 bg-[var(--dd-bg-soft)]">
@@ -41,18 +32,6 @@ export default function Highlight() {
             <p className="text-sm text-[var(--dd-text-main)] mb-6 font-medium">
               {t("detailedDescription")}
             </p>
-
-            {/* Features */}
-            <div className="grid grid-cols-2 gap-2 mb-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[var(--dd-accent)] flex-shrink-0" />
-                  <span className="text-sm text-[var(--dd-text-muted)]">
-                    {feature}
-                  </span>
-                </div>
-              ))}
-            </div>
 
             {/* Tech stack */}
             <div className="flex flex-wrap gap-2 mb-6">
