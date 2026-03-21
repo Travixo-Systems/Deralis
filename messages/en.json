@@ -204,6 +204,11 @@
       "description": "Real systems we've built: dashboards, databases, automation.",
       "label": "Featured",
       "projects": {
+        "govPortal": {
+          "title": "Government Application Portal",
+          "type": "Consular Services",
+          "description": "Online passport application system for a consular office. Applicants submit and track requests online. Staff review, approve, and manage everything from one dashboard."
+        },
         "travixoWeb": {
           "title": "TraviXO Web",
           "type": "Marketing Website",
@@ -587,6 +592,17 @@
           "Database schema design",
           "User authentication",
           "Admin dashboard"
+        ]
+      },
+      "govPortal": {
+        "title": "Government Application Portal",
+        "type": "Consular Services",
+        "description": "Online passport application system for a consular office. Applicants submit and track requests online. Staff review, approve, and manage everything from one dashboard.",
+        "features": [
+          "Application submission and tracking",
+          "Staff review dashboard",
+          "Document management",
+          "Status notifications"
         ]
       }
     },

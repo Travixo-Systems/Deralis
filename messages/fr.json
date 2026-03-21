@@ -232,6 +232,11 @@
       "description": "Quelques exemples concrets de systèmes que nous avons conçus : tableaux de bord, bases de données, automatisations.",
       "label": "En vedette",
       "projects": {
+        "govPortal": {
+          "title": "Portail de demandes gouvernementales",
+          "type": "Services consulaires",
+          "description": "Système de demande de passeport en ligne pour un bureau consulaire. Les demandeurs soumettent et suivent leurs demandes en ligne. Le personnel examine, approuve et gère tout depuis un seul tableau de bord."
+        },
         "travixoWeb": {
           "title": "TraviXO Web",
           "type": "Site marketing",
@@ -615,6 +620,17 @@
           "Conception de schéma de base de données",
           "Authentification des utilisateurs",
           "Tableau de bord administrateur"
+        ]
+      },
+      "govPortal": {
+        "title": "Portail de demandes gouvernementales",
+        "type": "Services consulaires",
+        "description": "Système de demande de passeport en ligne pour un bureau consulaire. Les demandeurs soumettent et suivent leurs demandes en ligne. Le personnel examine, approuve et gère tout depuis un seul tableau de bord.",
+        "features": [
+          "Soumission et suivi des demandes",
+          "Tableau de bord pour le personnel",
+          "Gestion documentaire",
+          "Notifications de statut"
         ]
       }
     },
