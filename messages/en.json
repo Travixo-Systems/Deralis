@@ -4,7 +4,7 @@
       "default": "Deralis Digital - Modern Web Development & Digital Transformation",
       "template": "%s | Deralis Digital"
     },
-    "description": "We build high-performance websites, custom web applications, workflow automations and AI-powered tools that help businesses modernize and scale efficiently."
+    "description": "I build high-performance websites, custom web applications, workflow automations and AI-powered tools that help businesses modernize and scale efficiently."
   },
   "common": {
     "brand": {
@@ -20,10 +20,10 @@
       "contact": "Contact"
     },
     "actions": {
-      "contact": "Contact us",
+      "contact": "Get in touch",
       "startConversation": "Start a conversation",
       "buildYourSystem": "Let's build it",
-      "seePlatforms": "See our work",
+      "seePlatforms": "See my work",
       "learnMore": "Learn more",
       "viewMore": "View more",
       "viewAll": "View all",
@@ -35,8 +35,8 @@
       "backToHome": "Back to home",
       "visitWebsite": "Visit website",
       "openApp": "Open app",
-      "viewOurWork": "View our work",
-      "workWithUs": "Work with us",
+      "viewOurWork": "View my work",
+      "workWithUs": "Work with me",
       "getInTouch": "Get in touch",
       "sendMessage": "Send message",
       "sending": "Sending...",
@@ -172,19 +172,19 @@
       }
     },
     "approach": {
-      "title": "Our",
+      "title": "My",
       "titleHighlight": "approach",
       "description": "A clear, structured process from first call to long-term partnership.",
       "steps": {
         "step1": {
           "number": "01",
           "title": "Discovery & Validation",
-          "description": "We understand your problem, validate the approach, and make sure we're building the right thing."
+          "description": "I understand your problem, validate the approach, and make sure I am building the right thing."
         },
         "step2": {
           "number": "02",
           "title": "Scope & Planning",
-          "description": "Clear deliverables, timeline, and pricing. You know exactly what you're getting before we start."
+          "description": "Clear deliverables, timeline, and pricing. You know exactly what you are getting before I start."
         },
         "step3": {
           "number": "03",
@@ -194,14 +194,14 @@
         "step4": {
           "number": "04",
           "title": "Launch & Support",
-          "description": "Deployment, documentation, and ongoing partnership. We don't disappear after launch."
+          "description": "Deployment, documentation, and ongoing partnership. I do not disappear after launch."
         }
       }
     },
     "featured": {
       "title": "Featured",
       "titleHighlight": "platforms",
-      "description": "Real systems we've built: dashboards, databases, automation.",
+      "description": "Real systems I have built: dashboards, databases, automation.",
       "label": "Featured",
       "projects": {
         "govPortal": {
@@ -217,7 +217,7 @@
         "more": {
           "title": "More Projects",
           "type": "Various",
-          "description": "Legacy systems, CRUD apps, and custom internal tools. See our full portfolio for details."
+          "description": "Legacy systems, CRUD apps, and custom internal tools. See the full portfolio for details."
         }
       },
       "actions": {
@@ -251,23 +251,23 @@
       "items": {
         "pricing": {
           "question": "How much does a typical project cost?",
-          "answer": "Consulting starts at €500. Full platforms typically range from €5,000 to €25,000 depending on scope. We provide a detailed quote after understanding your needs."
+          "answer": "Consulting starts at €500. Full platforms typically range from €5,000 to €25,000 depending on scope. I provide a detailed quote after understanding your needs."
         },
         "tools": {
           "question": "What technologies do you work with?",
-          "answer": "Our primary stack is Next.js, React, TypeScript, and PostgreSQL. We also work with Supabase, Prisma, and various APIs. We pick the right tool for the job."
+          "answer": "My primary stack is Next.js, React, TypeScript, and PostgreSQL. I also work with Supabase, Prisma, and various APIs. I pick the right tool for the job."
         },
         "timeline": {
           "question": "How long does a project take?",
-          "answer": "A consulting engagement takes 1-2 weeks. A typical web application takes 4-12 weeks depending on complexity. We provide realistic timelines upfront. No surprises."
+          "answer": "A consulting engagement takes 1-2 weeks. A typical web application takes 4-12 weeks depending on complexity. I provide realistic timelines upfront. No surprises."
         },
         "remote": {
           "question": "Do you work with clients outside France?",
-          "answer": "Yes. We work remotely with clients across Europe and beyond. Communication happens via video calls, email, and your preferred project management tools. Fully bilingual in English and French."
+          "answer": "Yes. I work remotely with clients across Europe and beyond. Communication happens via video calls, email, and your preferred project management tools. Fully bilingual in English and French."
         },
         "support": {
           "question": "Do you offer ongoing support after launch?",
-          "answer": "Yes. We offer maintenance packages that include bug fixes, updates, monitoring, and feature additions. Most clients choose ongoing support. We don't disappear after delivery."
+          "answer": "Yes. I offer maintenance packages that include bug fixes, updates, monitoring, and feature additions. Most clients choose ongoing support. I do not disappear after delivery."
         }
       }
     },
@@ -373,17 +373,17 @@
       "badge": "Full-stack engineering, not templates.",
       "title": "Services that",
       "titleHighlight": "drive results",
-      "description": "From validation to deployment and beyond. Next.js applications with SQL databases, authentication, automation workflows, and scalable architecture. We build systems that power your business."
+      "description": "From validation to deployment and beyond. Next.js applications with SQL databases, authentication, automation workflows, and scalable architecture. I build systems that power your business."
     },
     "techBar": {
-      "label": "Technologies we work with"
+      "label": "Technologies I work with"
     },
     "items": {
       "consulting": {
         "id": "consulting",
         "title": "Strategic Consulting & Business Validation",
         "subtitle": "Clarity before code.",
-        "description": "Before building anything, we validate your idea, analyze the market, and create a roadmap that makes sense. No wasted budget on features nobody needs.",
+        "description": "Before building anything, I validate your idea, analyze the market, and create a roadmap that makes sense. No wasted budget on features nobody needs.",
         "features": [
           "Business idea validation",
           "Market & competition analysis",
@@ -400,7 +400,7 @@
         "id": "development",
         "title": "Full-Stack Web Development",
         "subtitle": "Systems, not pages.",
-        "description": "We build real digital platforms with frontend, backend, and database layers. Next.js applications powered by SQL, authentication, and automation workflows.",
+        "description": "I build real digital platforms with frontend, backend, and database layers. Next.js applications powered by SQL, authentication, and automation workflows.",
         "features": [
           "Next.js, React, TypeScript",
           "SQL databases (PostgreSQL, MySQL) & NoSQL (MongoDB)",
@@ -410,7 +410,7 @@
           "Scalable architecture (Prisma, Supabase)"
         ],
         "whoFor": "Businesses that need real software, not a brochure website.",
-        "note": "If it's only HTML/CSS, it's not our work.",
+        "note": "If it's only HTML/CSS, it's not my work.",
         "cta": "Build your platform",
         "timeline": "4-12 weeks",
         "investment": "From €3,000"
@@ -419,7 +419,7 @@
         "id": "ai",
         "title": "AI Tools & Custom GPT Integration",
         "subtitle": "AI connected to your data.",
-        "description": "We build AI copilots that actually understand your business, connected to your database, trained on your data, integrated into your workflows.",
+        "description": "I build AI copilots that actually understand your business, connected to your database, trained on your data, integrated into your workflows.",
         "features": [
           "Custom GPT assistants",
           "AI copilots connected to your database",
@@ -436,7 +436,7 @@
       "support": {
         "id": "automation",
         "title": "Support & Workflow Automation",
-        "subtitle": "We don't disappear after launch.",
+        "subtitle": "I do not disappear after launch.",
         "description": "Continuous updates, monitoring, and improvements. Your technical partner for the long run, not a one-time vendor.",
         "features": [
           "Workflow automation (Zapier, Make, n8n)",
@@ -458,8 +458,8 @@
       "investment": "Investment"
     },
     "comparison": {
-      "title": "What makes us different",
-      "description": "We focus on real engineering and long-term partnerships.",
+      "title": "What makes me different",
+      "description": "I focus on real engineering and long-term partnerships.",
       "typical": {
         "title": "Typical approach",
         "items": [
@@ -481,26 +481,26 @@
     },
     "notSure": {
       "title": "Not sure which service you need?",
-      "description": "Book a free 30-minute consultation. We'll discuss your project and recommend the best approach."
+      "description": "Book a free 30-minute consultation. I will discuss your project and recommend the best approach."
     },
     "faq": {
       "title": "Common questions",
       "items": {
         "cost": {
           "question": "How much does a typical project cost?",
-          "answer": "It depends on scope. Consulting starts at €500, while a full SaaS platform can range from €5,000 to €25,000+. We provide detailed quotes after understanding your needs."
+          "answer": "It depends on scope. Consulting starts at €500, while a full SaaS platform can range from €5,000 to €25,000+. I provide detailed quotes after understanding your needs."
         },
         "tech": {
           "question": "What technologies do you work with?",
-          "answer": "Our primary stack is Next.js, React, and TypeScript. We also work with PHP, Node.js, and databases including PostgreSQL, MySQL, and MongoDB."
+          "answer": "My primary stack is Next.js, React, and TypeScript. I also work with PHP, Node.js, and databases including PostgreSQL, MySQL, and MongoDB."
         },
         "remote": {
           "question": "Do you work with clients outside of France?",
-          "answer": "Yes. We work remotely across Europe and beyond. Communication via video calls, email, and your preferred tools."
+          "answer": "Yes. I work remotely across Europe and beyond. Communication via video calls, email, and your preferred tools."
         },
         "takeover": {
           "question": "Can you take over an existing project?",
-          "answer": "Absolutely. We audit the current state, identify issues, and propose a plan to move forward."
+          "answer": "Absolutely. I audit the current state, identify issues, and propose a plan to move forward."
         }
       }
     },
@@ -514,9 +514,9 @@
       "description": "Real platforms built by Deralis Digital. SaaS applications, dashboards, and web systems powered by Next.js, Supabase, and PostgreSQL."
     },
     "hero": {
-      "title": "Our",
+      "title": "My",
       "titleHighlight": "work",
-      "description": "Real platforms we've built. SaaS applications, dashboards, and web systems. Modern, scalable, and production-ready."
+      "description": "Real platforms I have built. SaaS applications, dashboards, and web systems. Modern, scalable, and production-ready."
     },
     "stats": {
       "delivered": "Platforms delivered",
@@ -597,11 +597,11 @@
     },
     "cta": {
       "title": "Have a project in mind?",
-      "description": "Whether it's a SaaS platform, a dashboard, or a web application, we're ready to bring your vision to life."
+      "description": "Whether it is a SaaS platform, a dashboard, or a web application, I am ready to bring your vision to life."
     },
     "finalCta": {
       "title": "Want to see more details?",
-      "description": "We're happy to walk you through any project."
+      "description": "I am happy to walk you through any project."
     }
   },
   "about": {
@@ -613,14 +613,14 @@
       "badge": "Independent engineering practice",
       "title": "About",
       "titleHighlight": "Deralis Digital",
-      "description": "We build real web systems: platforms, dashboards, automation."
+      "description": "I build real web systems: platforms, dashboards, automation."
     },
     "intro": {
-      "paragraph1": "Deralis Digital is an independent engineering practice focused on building real web platforms, not simple websites. We design and develop systems: SaaS applications, dashboards, automation workflows, and SQL-powered databases using modern technologies such as Next.js, React, TypeScript, Supabase, and Prisma.",
-      "paragraph2": "Our approach is engineering-first, built around clarity, performance, and long-term reliability. No WordPress. No templates. No drag-and-drop. Only real software."
+      "paragraph1": "Deralis Digital is an independent engineering practice focused on building real web platforms, not simple websites. I design and develop systems: SaaS applications, dashboards, automation workflows, and SQL-powered databases using modern technologies such as Next.js, React, TypeScript, Supabase, and Prisma.",
+      "paragraph2": "My approach is engineering-first, built around clarity, performance, and long-term reliability. No WordPress. No templates. No drag-and-drop. Only real software."
     },
     "philosophy": {
-      "title": "Our philosophy",
+      "title": "My philosophy",
       "subtitle": "Modern businesses don't need pages. They need systems.",
       "systemsTitle": "Systems that:",
       "systems": [
@@ -630,11 +630,11 @@
         "Scale without breaking",
         "Deliver real operational value"
       ],
-      "conclusion": "We build platforms that replace spreadsheets, manual processes, and outdated workflows with modern, stable, maintainable architecture."
+      "conclusion": "I build platforms that replace spreadsheets, manual processes, and outdated workflows with modern, stable, maintainable architecture."
     },
     "whatWeBuild": {
-      "title": "What we build",
-      "description": "We specialize in full-stack platform development.",
+      "title": "What I build",
+      "description": "I specialize in full-stack platform development.",
       "items": {
         "saas": {
           "title": "SaaS Platforms",
@@ -657,11 +657,11 @@
           "description": "Custom REST integrations, webhooks, OAuth, third-party systems."
         }
       },
-      "note": "Each platform we build is designed around clean engineering, not templates or pre-made components."
+      "note": "Each platform I build is designed around clean engineering, not templates or pre-made components."
     },
     "howWeWork": {
-      "title": "How we work",
-      "description": "Clients work directly with the engineer behind Deralis Digital, without layers, outsourcing, or miscommunication. The process is simple and technical:",
+      "title": "How I work",
+      "description": "Clients work directly with me, without layers, outsourcing, or miscommunication. The process is simple and technical:",
       "steps": {
         "step1": {
           "number": "01",
@@ -693,7 +693,7 @@
     },
     "techExpertise": {
       "title": "Technology expertise",
-      "description": "We use a modern, unified stack to keep development fast, predictable, and scalable.",
+      "description": "I use a modern, unified stack to keep development fast, predictable, and scalable.",
       "categories": {
         "frontend": "Frontend",
         "backend": "Backend",
@@ -702,12 +702,12 @@
       }
     },
     "screenshots": {
-      "title": "Real systems we've built",
+      "title": "Real systems I have built",
       "description": "Dashboards, workflows, and database systems used in production environments.",
       "notes": {
         "note1": "These systems include multi-tenant logic, role-based access, SQL databases, and automation workflows.",
         "note2": "All platforms shown here are built with real databases, real logic, and real engineering, not templates.",
-        "note3": "This demonstrates our focus: systems, not pages."
+        "note3": "This demonstrates my focus: systems, not pages."
       }
     },
     "principle": {
@@ -727,7 +727,7 @@
       "conclusion": "Deralis Digital is built for founders, teams, and businesses that need real engineering, not web decoration."
     },
     "location": {
-      "title": "Where we operate",
+      "title": "Where I operate",
       "description": "Based in France. Working with clients worldwide."
     },
     "cta": {
@@ -747,7 +747,7 @@
     "hero": {
       "title": "Let's build",
       "titleHighlight": "something real",
-      "description": "Have a project in mind? Tell us about it. We reply within 24 hours."
+      "description": "Have a project in mind? Tell me about it. I reply within 24 hours."
     },
     "form": {
       "name": {
@@ -787,15 +787,15 @@
         }
       },
       "message": {
-        "label": "Tell us about your project",
+        "label": "Tell me about your project",
         "placeholder": "Describe your project, goals, and timeline..."
       },
-      "error": "Something went wrong. Please try again or email us directly.",
+      "error": "Something went wrong. Please try again or email me directly.",
       "required": "*"
     },
     "success": {
       "title": "Message sent!",
-      "description": "Thanks for reaching out. We'll get back to you within 24 hours."
+      "description": "Thanks for reaching out. I will get back to you within 24 hours."
     },
     "sidebar": {
       "contactInfo": {
@@ -806,7 +806,7 @@
       "whatToExpect": {
         "title": "What to expect",
         "items": [
-          "We reply within 24 hours",
+          "I reply within 24 hours",
           "Free 30-minute discovery call",
           "No-obligation quote"
         ]
@@ -816,11 +816,11 @@
         "items": {
           "notSure": {
             "question": "What if I'm not sure what I need?",
-            "answer": "That's fine. We'll help you figure it out during our call."
+            "answer": "That's fine. I will help you figure it out during the call."
           },
           "startups": {
             "question": "Do you work with startups?",
-            "answer": "Yes. We offer consulting to help validate ideas before committing to development."
+            "answer": "Yes. I offer consulting to help validate ideas before committing to development."
           },
           "timeline": {
             "question": "What's your typical timeline?",
@@ -837,7 +837,7 @@
   "leadGen": {
     "leadMagnet": {
       "title": "Free: Web System Audit Checklist",
-      "description": "Download our 25-point checklist to evaluate if your business is ready for a modern web system.",
+      "description": "Download this 25-point checklist to evaluate if your business is ready for a modern web system.",
       "items": [
         "Performance & scalability assessment",
         "Security & authentication review",
@@ -849,11 +849,11 @@
       "privacy": "No spam, ever. Unsubscribe anytime.",
       "error": "Something went wrong. Please try again.",
       "successTitle": "Check your inbox!",
-      "successDescription": "We've sent the checklist to your email. Check your spam folder if you don't see it."
+      "successDescription": "The checklist has been sent to your email. Check your spam folder if you don't see it."
     },
     "exitIntent": {
       "title": "Wait, before you go",
-      "description": "Get a free 30-minute strategy session with our engineering team. No commitment, no sales pitch.",
+      "description": "Get a free 30-minute strategy session. No commitment, no sales pitch.",
       "benefit1": "Free 30-min discovery call",
       "benefit2": "No-obligation technical assessment",
       "benefit3": "Actionable recommendations you can keep",
