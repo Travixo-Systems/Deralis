@@ -78,9 +78,9 @@
   "home": {
     "hero": {
       "badge": "Ingénierie. Pas de templates.",
-      "title": "Vos opérations reposent sur du travail manuel.",
-      "titleLine2": "Votre équipe s'en sort quand même.",
-      "titleHighlight": "Je construis le système qui change ça.",
+      "title": "Trop de choses passent encore par des tableurs, des contournements et des outils déconnectés.",
+      "titleLine2": "Ça ralentit tout.",
+      "titleHighlight": "Je construis le système qui règle ça.",
       "description": "Outils internes, plateformes ou produits créés from scratch.",
       "descriptionLine2": "Pour supprimer le travail manuel et alléger la charge de votre équipe.",
       "descriptionLine3": "Propre, documenté, et entièrement à vous.",

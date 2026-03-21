@@ -78,9 +78,9 @@
   "home": {
     "hero": {
       "badge": "Full-stack engineering, not templates.",
-      "title": "Your operations run on manual work.",
-      "titleLine2": "Your team makes them work anyway.",
-      "titleHighlight": "I build the system that removes that burden.",
+      "title": "Too much still runs through spreadsheets, workarounds, and disconnected tools.",
+      "titleLine2": "It slows everything down.",
+      "titleHighlight": "I build the system that fixes that.",
       "description": "Remove manual work and take the load off your team.",
       "descriptionLine2": "Internal tools, platforms, or products built clean,",
       "descriptionLine3": "documented, and fully yours.",
