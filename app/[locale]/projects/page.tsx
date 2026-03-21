@@ -11,13 +11,15 @@ import {
   PawPrint,
   Globe,
   Briefcase,
+  Landmark,
   CheckCircle2
 } from "lucide-react";
 
-const projectKeys = ["travixoSystems", "travixoWeb", "deralisDigital", "ecoridepool", "arcadiaZoo"] as const;
+const projectKeys = ["travixoSystems", "govPortal", "travixoWeb", "deralisDigital", "ecoridepool", "arcadiaZoo"] as const;
 
 const projectIcons = {
   travixoSystems: Building2,
+  govPortal: Landmark,
   travixoWeb: Globe,
   deralisDigital: Briefcase,
   ecoridepool: Car,
@@ -60,6 +62,13 @@ const projectConfig = {
     status: "completed",
     stack: ["PHP (OOP)", "MySQL", "HTML/CSS"],
     liveUrl: "https://github.com/theWQLker/arcadia-zoo-management",
+    featured: false,
+  },
+  govPortal: {
+    year: "2025",
+    status: "live",
+    stack: ["Next.js", "Supabase", "PostgreSQL", "TypeScript"],
+    liveUrl: null,
     featured: false,
   },
 };
