@@ -15,17 +15,14 @@ export default function SocialProof() {
   return (
     <section className="py-12 lg:py-16 bg-[var(--dd-bg)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Metrics bar */}
+        {/* Outcome statements */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {metrics.map((metric) => (
             <div
               key={metric.key}
               className="text-center p-4 rounded-xl bg-[var(--dd-bg-card)] border border-[var(--dd-border)]"
             >
-              <p className="text-2xl sm:text-3xl font-bold gradient-text mb-1">
-                {t(`${metric.key}.value`)}
-              </p>
-              <p className="text-sm text-[var(--dd-text-muted)]">
+              <p className="text-sm font-medium text-[var(--dd-text-main)]">
                 {t(`${metric.key}.label`)}
               </p>
             </div>

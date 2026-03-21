@@ -86,6 +86,7 @@
       "descriptionLine3": "Propre, documenté, et entièrement à vous.",
       "subDescription": "",
       "screenshotLabel": "Plateforme opérationnelle en production, par Deralis Digital",
+      "ctaSubtext": "On cartographie votre fonctionnement actuel en 20 minutes",
       "features": {
         "tech": "Next.js, React, TypeScript",
         "database": "PostgreSQL, Supabase, Prisma",
@@ -115,41 +116,41 @@
       }
     },
     "services": {
-      "title": "Ce que nous",
-      "titleHighlight": "construisons",
-      "description": "De l'idée au déploiement. Ingénierie full-stack avec base de données, APIs et accompagnement sur la durée.",
+      "title": "Ce que je",
+      "titleHighlight": "construis",
+      "description": "Chaque projet remplace quelque chose qui ralentit votre activité.",
       "items": {
         "consulting": {
-          "title": "Conseil stratégique & validation",
-          "description": "Nous clarifions l'idée, le marché, la concurrence et les priorités avant d'écrire la moindre ligne de code.",
+          "title": "Systèmes internes",
+          "description": "Remplacez le suivi manuel et les outils dispersés par un seul système que votre équipe utilise vraiment.",
           "features": [
-            "Validation d'idées",
-            "Analyse marché / concurrence",
-            "Feuilles de route claires"
+            "Cartographie des processus",
+            "Consolidation d'outils",
+            "Adoption par l'équipe"
           ]
         },
         "development": {
-          "title": "Développement de systèmes web complets",
-          "description": "Des plateformes modernes avec identifiants, base de données, espace client, tableaux de bord et logique métier.",
+          "title": "Plateformes métier",
+          "description": "Transformez vos opérations en workflows structurés au lieu de tableurs et de solutions bricolées.",
           "features": [
             "Next.js / React",
             "Bases de données SQL",
             "APIs & authentification"
           ],
-          "highlight": "De vrais systèmes, pas seulement des pages."
+          "highlight": "Des systèmes, pas des pages."
         },
         "ai": {
-          "title": "Outils IA & assistants personnalisés",
-          "description": "Automatisation, génération de documents, assistants IA connectés à vos données et intégrés à vos outils.",
+          "title": "Produits sur mesure",
+          "description": "De l'idée au système prêt pour la production. Pas de prototypes, pas de templates.",
           "features": [
-            "GPT personnalisés",
-            "IA connectée à vos données",
-            "Automatisation des tâches"
+            "Développement complet",
+            "Mise en production",
+            "Support long terme"
           ]
         },
         "support": {
-          "title": "Support & amélioration continue",
-          "description": "Maintenance, évolutions, optimisation et nouvelles fonctionnalités dans le temps.",
+          "title": "Automatisation et workflows",
+          "description": "Supprimez les tâches répétitives et réduisez la dépendance au travail manuel.",
           "features": [
             "Automatisation des workflows",
             "Intégrations entre outils",
@@ -158,42 +159,42 @@
         }
       },
       "cta": {
-        "consulting": "En savoir plus: Conseil stratégique",
-        "development": "Explorer le développement complet",
-        "ai": "Découvrir: IA & Automatisation",
-        "support": "En savoir plus: Support & Maintenance"
+        "consulting": "En savoir plus sur les systèmes internes",
+        "development": "Explorer les plateformes métier",
+        "ai": "Voir les produits sur mesure",
+        "support": "Découvrir l'automatisation"
       }
     },
     "clients": {
-      "title": "Nous",
-      "titleHighlight": "accompagnons",
-      "description": "Des entreprises et des équipes qui ont besoin d’outils numériques concrets, pas seulement d’un site internet.",
+      "title": "Avec qui je",
+      "titleHighlight": "travaille",
+      "description": "Si vous vous reconnaissez dans l’un de ces cas, on devrait en parler.",
       "items": {
         "startups": {
-          "title": "Startups & fondateurs",
-          "description": "Besoin d'un MVP, d'un outil interne ou d'une plateforme pour lancer le projet rapidement.",
+          "title": "Des équipes qui gèrent tout à la main",
+          "description": "Vous comptez sur les gens pour que les choses tournent au quotidien.",
           "points": [
-            "Validation d'idées",
-            "Développement de MVP",
-            "Accompagnement technique"
+            "Coordination manuelle",
+            "Aucun système centralisé",
+            "Goulots d’étranglement"
           ]
         },
         "smb": {
-          "title": "PME & entreprises",
-          "description": "Digitalisation, outils internes, automatisation et meilleure gestion de vos données.",
+          "title": "Des entreprises qui dépassent leurs outils",
+          "description": "Les tableurs, les outils SaaS et les solutions bricolées ne suffisent plus.",
           "points": [
-            "Digitalisation des processus",
-            "Tableaux de bord sur mesure",
-            "Automatisation de workflows"
+            "Outils éparpillés",
+            "Données cloisonnées",
+            "Problèmes de passage à l’échelle"
           ]
         },
         "modernization": {
-          "title": "Équipes à moderniser",
-          "description": "Remplacement d'anciens outils, centralisation des informations et simplification des flux.",
+          "title": "Des fondateurs qui construisent de vrais systèmes",
+          "description": "Vous avez besoin de quelque chose de solide, pas d’un montage fragile de plus.",
           "points": [
-            "Migration depuis des outils legacy",
-            "Reprise et sécurisation de code existant",
-            "Réduction de la dette technique"
+            "Construction grade production",
+            "Architecture propre",
+            "Propriété totale du code"
           ]
         }
       }
@@ -231,11 +232,6 @@
       "description": "Quelques exemples concrets de systèmes que nous avons conçus : tableaux de bord, bases de données, automatisations.",
       "label": "En vedette",
       "projects": {
-        "ecoridepool": {
-          "title": "EcoRidePool",
-          "type": "Application de covoiturage",
-          "description": "Met en relation conducteurs et passagers pour des trajets partagés. Gestion complète des trajets, recherche, reservations et messagerie."
-        },
         "travixoWeb": {
           "title": "TraviXO Web",
           "type": "Site marketing",
@@ -256,8 +252,8 @@
       "badge": "Étude de cas",
       "title": "TraviXO Systems",
       "subtitle": "SaaS B2B • Gestion d'équipements • Conformité VGP",
-      "description": "Une plateforme SaaS multi-tenant pour les entreprises de location d'équipements. Suivi par QR code, planification des contrôles, historique des opérations et conformité VGP automatisée.",
-      "detailedDescription": "La plateforme repose sur une base PostgreSQL, une architecture multi-tenant, des workflows d'automatisation et un système de permissions par rôles pour sécuriser l'accès.",
+      "description": "Un système conçu pour gérer le suivi d'équipements et la conformité dans une entreprise de location. La coordination manuelle a été réduite au sein de l'équipe. Utilisé comme outil opérationnel au quotidien, pas comme un prototype.",
+      "detailedDescription": "Construit et déployé comme un vrai système opérationnel, pas un template ou une maquette.",
       "features": [
         "Architecture SaaS multi-tenant",
         "Suivi d'actifs par QR code",
@@ -299,9 +295,9 @@
       }
     },
     "cta": {
-      "title": "Prêt à construire quelque chose de concret ?",
-      "description": "Parlons de votre projet. Première consultation offerte, sans engagement. L'objectif : voir si ce que nous faisons correspond à ce dont vous avez besoin.",
-      "note": "Réponse sous 24h • Bilingue FR/EN"
+      "title": "Cartographions votre système actuel et supprimons les blocages.",
+      "description": "Pas de devis, pas d'engagement tant que ça n'a pas de sens.",
+      "note": "Un appel gratuit. Je vous dis exactement ce que je construirais et pourquoi."
     },
     "trustBar": {
       "item1": "100% taux de livraison",
@@ -312,22 +308,22 @@
     "socialProof": {
       "title": "La confiance de",
       "titleHighlight": "vrais clients",
-      "description": "Des startups aux entreprises établies, nous livrons des systèmes qui génèrent des résultats.",
+      "description": "Des startups aux entreprises établies, je livre des systèmes qui fonctionnent.",
       "metric1": {
-        "value": "5+",
-        "label": "Plateformes livrées"
+        "value": "",
+        "label": "De l'idée au système fonctionnel"
       },
       "metric2": {
-        "value": "100%",
-        "label": "Livraison à temps"
+        "value": "",
+        "label": "Pas de templates, pas de dépendance"
       },
       "metric3": {
-        "value": "<24h",
-        "label": "Temps de réponse"
+        "value": "",
+        "label": "Code propre, documentation complète"
       },
       "metric4": {
-        "value": "3x à 8x",
-        "label": "ROI moyen client"
+        "value": "",
+        "label": "Conçu pour la production"
       },
       "testimonial1": {
         "quote": "Deralis a construit notre plateforme SaaS de A à Z. Le système gère des milliers d'équipements en multi-tenant sans aucune interruption. Ingénierie exceptionnelle.",
@@ -349,9 +345,9 @@
       }
     },
     "roiCalculator": {
-      "title": "Estimez le",
-      "titleHighlight": "ROI de votre projet",
-      "description": "Visualisez le retour potentiel de votre investissement en système web.",
+      "title": "Combien vous coûte le",
+      "titleHighlight": "travail manuel ?",
+      "description": "Estimez combien de temps et d'argent votre fonctionnement actuel vous fait perdre chaque mois.",
       "projectTypeLabel": "Que construisez-vous ?",
       "types": {
         "saas": "Plateforme SaaS",
@@ -367,6 +363,28 @@
       "projectedValue": "Valeur annuelle projetée",
       "perYear": "/ an",
       "disclaimer": "Estimations basées sur les moyennes du secteur. Les résultats réels varient selon le projet."
+    },
+    "whatHappensNext": {
+      "title": "Ce qui se passe",
+      "titleHighlight": "ensuite",
+      "description": "Trois étapes, sans surprise.",
+      "steps": {
+        "step1": {
+          "number": "01",
+          "title": "On cartographie votre système actuel",
+          "description": "On passe en revue le fonctionnement de vos opérations et les endroits où du temps est perdu."
+        },
+        "step2": {
+          "number": "02",
+          "title": "Je définis ce qu'il faut construire",
+          "description": "Vous recevez un découpage clair du système qui résoudrait vraiment le problème."
+        },
+        "step3": {
+          "number": "03",
+          "title": "On décide si ça vaut le coup",
+          "description": "Pas de devis, pas d'engagement tant que ça n'a pas de sens."
+        }
+      }
     }
   },
   "services": {

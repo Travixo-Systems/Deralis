@@ -107,15 +107,20 @@ export default function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-col gap-3"
             >
-              <Link href="/contact" className="btn-primary">
-                {tActions("buildYourSystem")}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link href="/projects" className="btn-secondary">
-                {tActions("seePlatforms")}
-              </Link>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/contact" className="btn-primary">
+                  {tActions("bookCall")}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/projects" className="btn-secondary">
+                  {tActions("seePlatforms")}
+                </Link>
+              </div>
+              <p className="text-sm text-[var(--dd-text-dim)]">
+                {t("ctaSubtext")}
+              </p>
             </motion.div>
           </motion.div>
 
