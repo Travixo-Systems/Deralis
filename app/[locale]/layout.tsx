@@ -56,8 +56,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const localeKey = locale as keyof typeof titles;
 
   return {
-    title: titles[localeKey] || titles.fr,
-    description: descriptions[localeKey] || descriptions.fr,
+    title: titles[localeKey] || titles.en,
+    description: descriptions[localeKey] || descriptions.en,
     keywords: locale === "fr"
       ? [
           "développement web",
@@ -92,10 +92,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       type: "website",
       locale: locale === "fr" ? "fr_FR" : "en_US",
-      url: locale === "fr" ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`,
+      url: locale === "en" ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`,
       siteName: "Deralis Digital",
-      title: titles[localeKey]?.default || titles.fr.default,
-      description: descriptions[localeKey] || descriptions.fr,
+      title: titles[localeKey]?.default || titles.en.default,
+      description: descriptions[localeKey] || descriptions.en,
       images: [
         {
           url: "/og-image.png",
@@ -107,8 +107,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[localeKey]?.default || titles.fr.default,
-      description: descriptions[localeKey] || descriptions.fr,
+      title: titles[localeKey]?.default || titles.en.default,
+      description: descriptions[localeKey] || descriptions.en,
       images: ["/og-image.png"],
     },
     robots: {
@@ -123,10 +123,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
     alternates: {
-      canonical: locale === "fr" ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`,
+      canonical: locale === "en" ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`,
       languages: {
-        "fr": "https://www.deralis.digital",
-        "en": "https://www.deralis.digital/en",
+        "en": "https://www.deralis.digital",
+        "fr": "https://www.deralis.digital/fr",
       },
     },
   };
@@ -158,10 +158,10 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="manifest" href="/manifest.json" />
         <link
           rel="canonical"
-          href={locale === "fr" ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`}
+          href={locale === "en" ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`}
         />
-        <link rel="alternate" hrefLang="fr" href="https://www.deralis.digital" />
-        <link rel="alternate" hrefLang="en" href="https://www.deralis.digital/en" />
+        <link rel="alternate" hrefLang="en" href="https://www.deralis.digital" />
+        <link rel="alternate" hrefLang="fr" href="https://www.deralis.digital/fr" />
         <link rel="alternate" hrefLang="x-default" href="https://www.deralis.digital" />
       </head>
       <body className="min-h-screen bg-[var(--dd-bg)] text-[var(--dd-text-main)] antialiased">
