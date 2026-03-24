@@ -59,8 +59,8 @@
       "completionRate": "Completion rate"
     },
     "footer": {
-      "tagline": "Build. Modernize. Digitize.",
-      "subtagline": "Modern web systems and digital transformation for businesses ready to scale.",
+      "tagline": "Systems that simplify how your business runs.",
+      "subtagline": "I build internal tools, platforms, and products that remove manual work and take the load off your team.",
       "navigation": "Navigation",
       "services": "Services",
       "contact": "Contact",
@@ -428,7 +428,7 @@
           "Report generation & content automation",
           "Intelligent task routing"
         ],
-        "whoFor": "Teams ready to leverage AI for real productivity gains, not gimmicks.",
+        "whoFor": "Teams that want real gains from AI, not features that don't deliver.",
         "cta": "Explore AI solutions",
         "timeline": "2-6 weeks",
         "investment": "From €1,500"
@@ -481,7 +481,7 @@
     },
     "notSure": {
       "title": "Not sure which service you need?",
-      "description": "Book a free 30-minute consultation. I will discuss your project and recommend the best approach."
+      "description": "Book a free 30-minute consultation. I will discuss your project and recommend the best approach. No proposal until we both agree there is something worth building."
     },
     "faq": {
       "title": "Common questions",
@@ -505,7 +505,7 @@
       }
     },
     "finalCta": {
-      "title": "Ready to build something real?"
+      "title": "Let's map your current system and remove the bottlenecks."
     }
   },
   "projects": {
@@ -735,7 +735,7 @@
       "description": "Free consultation, no pressure. Let's talk about your project."
     },
     "finalCta": {
-      "title": "Have a question?",
+      "title": "Let's map your current system and remove the bottlenecks.",
       "description": "Reach out at"
     }
   },
