@@ -71,8 +71,6 @@ export default function ProjectsPage() {
 
   const stats = [
     { value: "5+", label: t("stats.delivered") },
-    { value: "2024", label: tStats("founded") },
-    { value: "100%", label: tStats("completionRate") },
   ];
 
   const getStatusColor = (status: string) => {
@@ -108,7 +106,7 @@ export default function ProjectsPage() {
       {/* Stats Bar */}
       <section className="py-5 border-y border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="flex justify-center">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-2xl font-bold text-[var(--dd-text-main)]">
