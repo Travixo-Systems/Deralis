@@ -1,10 +1,10 @@
 {
   "metadata": {
     "title": {
-      "default": "Deralis Digital - Modern Web Development & Digital Transformation",
-      "template": "%s | Deralis Digital"
+      "default": "Deralis Digital: Systems that replace manual work",
+      "template": "%s: Deralis Digital"
     },
-    "description": "I build high-performance websites, custom web applications, workflow automations and AI-powered tools that help businesses modernize and scale efficiently."
+    "description": "Too much still runs through spreadsheets, workarounds, and disconnected tools. I build the system that fixes that."
   },
   "common": {
     "brand": {
