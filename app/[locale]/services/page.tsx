@@ -73,7 +73,7 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <CalendlyButton className="btn-primary">
-                {tActions("speakToEngineer")}
+                {tActions("bookCall")}
                 <ArrowRight className="w-4 h-4" />
               </CalendlyButton>
               <Link href="/projects" className="btn-secondary">
@@ -282,7 +282,7 @@ export default function ServicesPage() {
             {t("notSure.description")}
           </p>
           <CalendlyButton className="btn-primary">
-            {tActions("speakToEngineer")}
+            {tActions("bookCall")}
             <ArrowRight className="w-4 h-4" />
           </CalendlyButton>
         </div>
@@ -336,7 +336,7 @@ export default function ServicesPage() {
             {t("finalCta.title")}
           </p>
           <CalendlyButton className="btn-primary">
-            {tActions("buildYourSystem")}
+            {tActions("bookCall")}
             <ArrowRight className="w-4 h-4" />
           </CalendlyButton>
         </div>
