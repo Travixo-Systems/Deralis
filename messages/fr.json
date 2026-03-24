@@ -29,7 +29,7 @@
       "viewAll": "Tout voir",
       "viewAllServices": "Voir tous les services",
       "viewAllPlatforms": "Voir toutes les plateformes",
-      "bookCall": "Planifier un échange",
+      "bookCall": "Réserver un appel",
       "readMore": "Lire la suite",
       "speakToEngineer": "Parler à un ingénieur",
       "backToHome": "Retour à l'accueil",
@@ -59,8 +59,8 @@
       "completionRate": "Taux de réussite"
     },
     "footer": {
-      "tagline": "Construire. Moderniser. Digitaliser.",
-      "subtagline": "Systèmes web modernes et transformation digitale pour les entreprises qui veulent passer un cap.",
+      "tagline": "Des systèmes qui simplifient le fonctionnement de votre entreprise.",
+      "subtagline": "Je construis des outils internes, des plateformes et des produits qui suppriment le travail manuel et allègent la charge de votre équipe.",
       "navigation": "Navigation",
       "services": "Services",
       "contact": "Contact",
@@ -456,7 +456,7 @@
           "Génération de rapports & contenus récurrents",
           "Routage intelligent des demandes et tâches"
         ],
-        "whoFor": "Équipes qui veulent des gains de temps concrets avec l'IA, pas des gadgets de démonstration.",
+        "whoFor": "Les équipes qui veulent de vrais résultats avec l'IA, pas des fonctionnalités qui ne servent à rien.",
         "cta": "Explorer les solutions IA",
         "timeline": "2-6 semaines",
         "investment": "À partir de 1 500 €"
@@ -509,7 +509,7 @@
     },
     "notSure": {
       "title": "Vous n'êtes pas sûr du service adapté ?",
-      "description": "Réservez un échange gratuit de 30 minutes. Je discute de votre situation et vous oriente vers la meilleure option."
+      "description": "Réservez un échange gratuit de 30 minutes. Je discute de votre situation et vous oriente vers la meilleure option. Pas de proposition tant que nous n'avons pas tous les deux confirmé que le projet a du sens."
     },
     "faq": {
       "title": "Questions fréquentes",
@@ -533,7 +533,7 @@
       }
     },
     "finalCta": {
-      "title": "Prêt à construire quelque chose de concret ?"
+      "title": "Cartographions votre système et supprimons les points de friction."
     }
   },
   "projects": {
@@ -763,8 +763,8 @@
       "description": "Première consultation gratuite et sans engagement. Présentez-moi votre projet, je vous dirai ce qui est réaliste et ce qui ne l'est pas."
     },
     "finalCta": {
-      "title": "Une question ?",
-      "description": "Écrivez-nous à"
+      "title": "Cartographions votre système et supprimons les points de friction.",
+      "description": "Écrivez-moi à"
     }
   },
   "contact": {
