@@ -428,7 +428,7 @@ export default function AboutPage() {
               </p>
             </div>
             <Link href="/contact" className="btn-primary">
-              {tActions("getInTouch")}
+              {tActions("bookCall")}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
