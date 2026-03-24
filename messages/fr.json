@@ -1,10 +1,10 @@
 {
   "metadata": {
     "title": {
-      "default": "Deralis Digital - Systèmes web modernes & transformation digitale",
-      "template": "%s | Deralis Digital"
+      "default": "Deralis Digital: Des systèmes qui remplacent le travail manuel",
+      "template": "%s: Deralis Digital"
     },
-    "description": "Je conçois des plateformes web complètes, des applications sur mesure, des automatisations et des outils IA pour aider les entreprises à se moderniser et à travailler plus efficacement."
+    "description": "Trop de choses passent encore par des tableurs, des contournements et des outils déconnectés. Je construis le système qui règle ça."
   },
   "common": {
     "brand": {

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props) {
     title: t("title"),
     description: t("description"),
     openGraph: {
-      title: `${t("title")} | Deralis Digital`,
+      title: `${t("title")}: Deralis Digital`,
       description: t("description"),
     },
   };

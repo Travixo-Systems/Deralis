@@ -39,18 +39,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const titles = {
     fr: {
-      default: "Deralis Digital | Systèmes web modernes & Transformation digitale",
-      template: "%s | Deralis Digital",
+      default: "Deralis Digital: Des systèmes qui remplacent le travail manuel",
+      template: "%s: Deralis Digital",
     },
     en: {
-      default: "Deralis Digital | Modern Web Development & Digital Transformation",
-      template: "%s | Deralis Digital",
+      default: "Deralis Digital: Systems that replace manual work",
+      template: "%s: Deralis Digital",
     },
   };
 
   const descriptions = {
-    fr: "Nous créons des plateformes web performantes, des applications sur mesure, des automatisations et des outils IA qui aident les entreprises à se moderniser et à évoluer efficacement.",
-    en: "We build high-performance websites, custom web applications, workflow automations and AI-powered tools that help businesses modernize and scale efficiently.",
+    fr: "Trop de choses passent encore par des tableurs, des contournements et des outils déconnectés. Je construis le système qui règle ça.",
+    en: "Too much still runs through spreadsheets, workarounds, and disconnected tools. I build the system that fixes that.",
   };
 
   const localeKey = locale as keyof typeof titles;
