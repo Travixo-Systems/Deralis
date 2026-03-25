@@ -532,6 +532,9 @@
         }
       }
     },
+    "proof": {
+      "text": "Conçu pour le secteur de la location d'équipements en France, <link>TraviXO</link> est une plateforme SaaS en production qui automatise le suivi de conformité VGP pour des organisations multi-sites — livré et opérationnel."
+    },
     "finalCta": {
       "title": "Cartographions votre système et supprimons les points de friction."
     }

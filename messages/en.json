@@ -504,6 +504,9 @@
         }
       }
     },
+    "proof": {
+      "text": "Built for the French equipment rental industry, <link>TraviXO</link> is a production SaaS platform that automates VGP compliance tracking across multi-tenant organizations — shipped and running."
+    },
     "finalCta": {
       "title": "Let's map your current system and remove the bottlenecks."
     }
