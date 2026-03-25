@@ -422,7 +422,7 @@
         "whoFor": "Fondateurs et équipes avec une idée à structurer avant de lancer un projet technique.",
         "cta": "Planifier une session de stratégie",
         "timeline": "1-2 semaines",
-        "investment": "À partir de 500 €"
+        "investment": "Forfait fixe : 750 €"
       },
       "development": {
         "id": "development",
@@ -441,7 +441,7 @@
         "note": "Si la demande est uniquement une page statique HTML/CSS, ce n'est pas mon cœur de métier.",
         "cta": "Construire votre plateforme",
         "timeline": "4-12 semaines",
-        "investment": "À partir de 3 000 €"
+        "investment": "Selon le périmètre — défini après la phase de découverte"
       },
       "ai": {
         "id": "ai",
@@ -459,7 +459,7 @@
         "whoFor": "Les équipes qui veulent de vrais résultats avec l'IA, pas des fonctionnalités qui ne servent à rien.",
         "cta": "Explorer les solutions IA",
         "timeline": "2-6 semaines",
-        "investment": "À partir de 1 500 €"
+        "investment": "Selon le périmètre — défini après la phase de découverte"
       },
       "support": {
         "id": "automation",
@@ -477,7 +477,7 @@
         "whoFor": "Organisations qui veulent un partenaire technique fiable, pas un freelance qui disparaît après livraison.",
         "cta": "Mettre en place un support continu",
         "timeline": "Continu",
-        "investment": "À partir de 500 €/mois"
+        "investment": "À partir de 290 €/mois"
       }
     },
     "cards": {
@@ -516,7 +516,7 @@
       "items": {
         "cost": {
           "question": "Combien coûte un projet typique ?",
-          "answer": "Tout dépend de la portée. Le conseil commence à 500 €. Une plateforme SaaS complète se situe généralement entre 5 000 € et 25 000 € ou plus. Je détaille toujours les coûts dans un devis après analyse de votre besoin."
+          "answer": "Tout dépend de ce qui doit être construit. Avant de chiffrer quoi que ce soit, je mène une session de découverte pour comprendre le problème, définir le périmètre et confirmer la bonne approche. Cette session coûte 750 € et se termine par un brief écrit — quoi construire, pourquoi, et combien ça coûte. Rien n'est chiffré avant cette conversation."
         },
         "tech": {
           "question": "Quelles technologies utilisez-vous ?",
