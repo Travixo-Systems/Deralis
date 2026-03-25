@@ -329,9 +329,23 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Proof + Final CTA */}
       <section className="py-8 border-t border-[var(--dd-border)]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <p className="text-sm text-[var(--dd-text-muted)] max-w-2xl mx-auto mb-6">
+            {t.rich("proof.text", {
+              link: (chunks) => (
+                <a
+                  href="https://travixosystems.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--dd-accent)] hover:underline font-medium"
+                >
+                  {chunks}
+                </a>
+              ),
+            })}
+          </p>
           <p className="text-[var(--dd-text-muted)] mb-3">
             {t("finalCta.title")}
           </p>

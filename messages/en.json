@@ -394,7 +394,7 @@
         "whoFor": "Founders with an idea who need clarity before investing in development.",
         "cta": "Get a strategy session",
         "timeline": "1-2 weeks",
-        "investment": "From €500"
+        "investment": "Fixed fee: €750"
       },
       "development": {
         "id": "development",
@@ -413,7 +413,7 @@
         "note": "If it's only HTML/CSS, it's not my work.",
         "cta": "Build your platform",
         "timeline": "4-12 weeks",
-        "investment": "From €3,000"
+        "investment": "Scope-dependent — discussed after discovery"
       },
       "ai": {
         "id": "ai",
@@ -431,7 +431,7 @@
         "whoFor": "Teams that want real gains from AI, not features that don't deliver.",
         "cta": "Explore AI solutions",
         "timeline": "2-6 weeks",
-        "investment": "From €1,500"
+        "investment": "Scope-dependent — discussed after discovery"
       },
       "support": {
         "id": "automation",
@@ -449,7 +449,7 @@
         "whoFor": "Businesses that want a reliable tech partner, not a disappearing freelancer.",
         "cta": "Get ongoing support",
         "timeline": "Ongoing",
-        "investment": "From €500/month"
+        "investment": "From €290/month"
       }
     },
     "cards": {
@@ -488,7 +488,7 @@
       "items": {
         "cost": {
           "question": "How much does a typical project cost?",
-          "answer": "It depends on scope. Consulting starts at €500, while a full SaaS platform can range from €5,000 to €25,000+. I provide detailed quotes after understanding your needs."
+          "answer": "It depends entirely on what needs to be built. Before quoting anything, I run a discovery session to understand the problem, define the scope, and confirm the right approach. That session costs €750 and ends with a written brief — what to build, why, and what it costs. Nothing is quoted before that conversation happens."
         },
         "tech": {
           "question": "What technologies do you work with?",
@@ -503,6 +503,9 @@
           "answer": "Absolutely. I audit the current state, identify issues, and propose a plan to move forward."
         }
       }
+    },
+    "proof": {
+      "text": "Built for the French equipment rental industry, <link>TraviXO</link> is a production SaaS platform that automates VGP compliance tracking across multi-tenant organizations — shipped and running."
     },
     "finalCta": {
       "title": "Let's map your current system and remove the bottlenecks."
