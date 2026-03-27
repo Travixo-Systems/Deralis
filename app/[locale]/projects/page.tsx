@@ -11,10 +11,12 @@ import {
   PawPrint,
   Globe,
   Landmark,
-  CheckCircle2
+  CheckCircle2,
+  LayoutDashboard,
+  ShoppingCart,
 } from "lucide-react";
 
-const projectKeys = ["travixoSystems", "govPortal", "travixoWeb", "ecoridepool", "arcadiaZoo"] as const;
+const projectKeys = ["travixoSystems", "govPortal", "travixoWeb", "ecoridepool", "arcadiaZoo", "opsDashboard", "marcheDiaspora"] as const;
 
 const projectIcons = {
   travixoSystems: Building2,
@@ -22,6 +24,8 @@ const projectIcons = {
   travixoWeb: Globe,
   ecoridepool: Car,
   arcadiaZoo: PawPrint,
+  opsDashboard: LayoutDashboard,
+  marcheDiaspora: ShoppingCart,
 };
 
 const projectConfig = {
@@ -62,6 +66,20 @@ const projectConfig = {
     liveUrl: null,
     featured: false,
   },
+  opsDashboard: {
+    year: "2026",
+    status: "liveDemo",
+    stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui", "Recharts", "Framer Motion"],
+    liveUrl: "https://deralis-ops-dashboard.vercel.app",
+    featured: false,
+  },
+  marcheDiaspora: {
+    year: "2026",
+    status: "liveDemo",
+    stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui", "Zustand", "canvas-confetti"],
+    liveUrl: "https://deralis-catalog.vercel.app",
+    featured: false,
+  },
 };
 
 export default function ProjectsPage() {
@@ -70,13 +88,15 @@ export default function ProjectsPage() {
   const tStats = useTranslations("common.stats");
 
   const stats = [
-    { value: "5+", label: t("stats.delivered") },
+    { value: "7+", label: t("stats.delivered") },
   ];
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case "live":
         return "bg-green-500";
+      case "liveDemo":
+        return "bg-purple-500";
       case "inDevelopment":
         return "bg-cyan-500";
       case "mvpComplete":
