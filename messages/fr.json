@@ -627,8 +627,8 @@
         ]
       },
       "opsDashboard": {
-        "title": "Tableau de bord opérationnel (démo)",
-        "type": "Concept Build",
+        "title": "Tableau de bord opérationnel",
+        "type": "Projet conceptuel",
         "description": "Un tableau de bord pour les entreprises de terrain. Remplace le suivi des interventions par tableur et WhatsApp par une vue en temps réel des missions, de la disponibilité des équipes et des alertes. Conçu pour illustrer l'architecture système que je livre aux entreprises à forte dimension opérationnelle.",
         "features": [
           "Tableau des missions avec badges de statut et priorité",
@@ -640,7 +640,7 @@
       },
       "marcheDiaspora": {
         "title": "Marché Diaspora",
-        "type": "Concept Build",
+        "type": "Projet conceptuel",
         "description": "Une plateforme de vente avec catalogue client et tableau de bord propriétaire. Conçue pour les commerçants qui gèrent leurs commandes par WhatsApp sans système structuré. Conçu pour illustrer le système complet de gestion des commandes que je livre aux commerces et aux distributeurs.",
         "features": [
           "Catalogue de 32 produits avec filtres et recherche",
