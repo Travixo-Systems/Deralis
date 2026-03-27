@@ -564,6 +564,7 @@
     "moreProjects": "Autres projets",
     "status": {
       "live": "En ligne",
+      "liveDemo": "Démo en ligne",
       "inDevelopment": "En développement",
       "mvpComplete": "MVP terminé",
       "completed": "Terminé"
@@ -623,6 +624,29 @@
           "Tableau de bord pour le personnel",
           "Gestion documentaire",
           "Notifications de statut"
+        ]
+      },
+      "opsDashboard": {
+        "title": "Tableau de bord opérationnel (démo)",
+        "type": "Démo interactive",
+        "description": "Un tableau de bord pour les entreprises de terrain. Remplace le suivi des interventions par tableur et WhatsApp par une vue en temps réel des missions, de la disponibilité des équipes et des alertes.",
+        "features": [
+          "Tableau des missions avec badges de statut et priorité",
+          "Cartes KPI avec alertes animées",
+          "Vue de disponibilité des équipes",
+          "Liste filtrable avec panneau de détails",
+          "Panneau de contrôle pour les démonstrations"
+        ]
+      },
+      "marcheDiaspora": {
+        "title": "Marché Diaspora",
+        "type": "Démo interactive",
+        "description": "Une plateforme de vente avec catalogue client et tableau de bord propriétaire. Conçue pour les commerçants qui gèrent leurs commandes par WhatsApp sans système structuré.",
+        "features": [
+          "Catalogue de 32 produits avec filtres et recherche",
+          "Panier avec gestion des quantités et passage de commande",
+          "Tableau de bord propriétaire avec suivi des commandes",
+          "Panneau de contrôle pour basculer entre les vues"
         ]
       }
     },

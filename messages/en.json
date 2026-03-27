@@ -536,6 +536,7 @@
     "moreProjects": "More Projects",
     "status": {
       "live": "Live",
+      "liveDemo": "Live Demo",
       "inDevelopment": "In Development",
       "mvpComplete": "MVP Complete",
       "completed": "Completed"
@@ -595,6 +596,29 @@
           "Staff review dashboard",
           "Document management",
           "Status notifications"
+        ]
+      },
+      "opsDashboard": {
+        "title": "Operations Dashboard Demo",
+        "type": "Interactive Demo",
+        "description": "A field operations dashboard for service businesses. Replaces job tracking in spreadsheets and WhatsApp with one real-time view of active jobs, team availability, and issue flags.",
+        "features": [
+          "Live job table with status badges and priority flags",
+          "KPI cards with animated issue alerts",
+          "Team availability view",
+          "Searchable and filterable job list with detail panel",
+          "Demo Controls panel for live demonstrations"
+        ]
+      },
+      "marcheDiaspora": {
+        "title": "March\u00e9 Diaspora",
+        "type": "Interactive Demo",
+        "description": "A two-sided retail platform with a customer-facing product catalog and an owner-facing order dashboard. Built for shop owners who currently take orders over WhatsApp with no structured system.",
+        "features": [
+          "32-product catalog with category filtering and search",
+          "Cart with quantity controls and order placement",
+          "Owner dashboard with order status workflow",
+          "Demo Controls panel for switching views"
         ]
       }
     },
