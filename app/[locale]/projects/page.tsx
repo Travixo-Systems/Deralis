@@ -335,14 +335,18 @@ export default function ProjectsPage() {
                     </div>
 
                     <div className="flex items-center justify-between pt-3 border-t border-[var(--dd-border)]">
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`w-2 h-2 rounded-full ${getStatusColor(config.status)}`}
-                        />
-                        <span className="text-xs text-[var(--dd-text-muted)]">
-                          {t(`status.${config.status}`)}
-                        </span>
-                      </div>
+                      {config.status !== "liveDemo" ? (
+                        <div className="flex items-center gap-2">
+                          <span
+                            className={`w-2 h-2 rounded-full ${getStatusColor(config.status)}`}
+                          />
+                          <span className="text-xs text-[var(--dd-text-muted)]">
+                            {t(`status.${config.status}`)}
+                          </span>
+                        </div>
+                      ) : (
+                        <div />
+                      )}
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-[var(--dd-text-dim)]">
                           {config.year}
