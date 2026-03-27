@@ -600,8 +600,8 @@
       },
       "opsDashboard": {
         "title": "Operations Dashboard Demo",
-        "type": "Interactive Demo",
-        "description": "A field operations dashboard for service businesses. Replaces job tracking in spreadsheets and WhatsApp with one real-time view of active jobs, team availability, and issue flags.",
+        "type": "Concept Build",
+        "description": "A field operations dashboard for service businesses. Replaces job tracking in spreadsheets and WhatsApp with one real-time view of active jobs, team availability, and issue flags. Built to demonstrate the system architecture I deliver for operations-heavy businesses.",
         "features": [
           "Live job table with status badges and priority flags",
           "KPI cards with animated issue alerts",
@@ -612,8 +612,8 @@
       },
       "marcheDiaspora": {
         "title": "March\u00e9 Diaspora",
-        "type": "Interactive Demo",
-        "description": "A two-sided retail platform with a customer-facing product catalog and an owner-facing order dashboard. Built for shop owners who currently take orders over WhatsApp with no structured system.",
+        "type": "Concept Build",
+        "description": "A two-sided retail platform with a customer-facing product catalog and an owner-facing order dashboard. Built for shop owners who currently take orders over WhatsApp with no structured system. Built to demonstrate the full order management system I deliver for retail and distribution businesses.",
         "features": [
           "32-product catalog with category filtering and search",
           "Cart with quantity controls and order placement",
