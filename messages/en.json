@@ -536,7 +536,6 @@
     "moreProjects": "More Projects",
     "status": {
       "live": "Live",
-      "liveDemo": "Live Demo",
       "inDevelopment": "In Development",
       "mvpComplete": "MVP Complete",
       "completed": "Completed"
@@ -574,17 +573,6 @@
           "Trip creation & search",
           "Booking management",
           "In-app messaging"
-        ]
-      },
-      "arcadiaZoo": {
-        "title": "Arcadia Zoo",
-        "type": "Educational CRUD Application",
-        "description": "Zoo management system for tracking animals, species, habitats, and staff. Full CRUD operations and database design.",
-        "features": [
-          "Full CRUD operations",
-          "Database schema design",
-          "User authentication",
-          "Admin dashboard"
         ]
       },
       "govPortal": {
