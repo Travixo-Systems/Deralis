@@ -564,7 +564,6 @@
     "moreProjects": "Autres projets",
     "status": {
       "live": "En ligne",
-      "liveDemo": "Démo en ligne",
       "inDevelopment": "En développement",
       "mvpComplete": "MVP terminé",
       "completed": "Terminé"
@@ -602,17 +601,6 @@
           "Création & recherche de trajets",
           "Gestion des réservations",
           "Système de messagerie intégré"
-        ]
-      },
-      "arcadiaZoo": {
-        "title": "Arcadia Zoo",
-        "type": "Application CRUD éducative",
-        "description": "Système de gestion pour suivre les animaux, espèces, habitats et membres du personnel d'un zoo. Projet complet avec logique CRUD et base de données.",
-        "features": [
-          "Opérations CRUD complètes",
-          "Conception de schéma de base de données",
-          "Authentification des utilisateurs",
-          "Tableau de bord administrateur"
         ]
       },
       "govPortal": {

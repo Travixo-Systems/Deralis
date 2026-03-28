@@ -8,7 +8,6 @@ import {
   ExternalLink,
   Building2,
   Car,
-  PawPrint,
   Globe,
   Landmark,
   CheckCircle2,
@@ -16,14 +15,13 @@ import {
   ShoppingCart,
 } from "lucide-react";
 
-const projectKeys = ["travixoSystems", "govPortal", "travixoWeb", "ecoridepool", "arcadiaZoo", "opsDashboard", "marcheDiaspora"] as const;
+const projectKeys = ["travixoSystems", "govPortal", "travixoWeb", "ecoridepool", "opsDashboard", "marcheDiaspora"] as const;
 
 const projectIcons = {
   travixoSystems: Building2,
   govPortal: Landmark,
   travixoWeb: Globe,
   ecoridepool: Car,
-  arcadiaZoo: PawPrint,
   opsDashboard: LayoutDashboard,
   marcheDiaspora: ShoppingCart,
 };
@@ -52,13 +50,6 @@ const projectConfig = {
     liveUrl: "https://ecoride-mirror-1-fcd84d9225d6.herokuapp.com",
     featured: false,
   },
-  arcadiaZoo: {
-    year: "2024",
-    status: "completed",
-    stack: ["PHP (OOP)", "MySQL", "HTML/CSS"],
-    liveUrl: "https://github.com/theWQLker/arcadia-zoo-management",
-    featured: false,
-  },
   govPortal: {
     year: "2025",
     status: "live",
@@ -68,14 +59,14 @@ const projectConfig = {
   },
   opsDashboard: {
     year: "2026",
-    status: "liveDemo",
+    status: "live",
     stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui", "Recharts", "Framer Motion"],
     liveUrl: "https://deralis-ops-dashboard.vercel.app",
     featured: false,
   },
   marcheDiaspora: {
     year: "2026",
-    status: "liveDemo",
+    status: "live",
     stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui", "Zustand", "canvas-confetti"],
     liveUrl: "https://deralis-catalog.vercel.app",
     featured: false,
@@ -88,15 +79,13 @@ export default function ProjectsPage() {
   const tStats = useTranslations("common.stats");
 
   const stats = [
-    { value: "7+", label: t("stats.delivered") },
+    { value: "6+", label: t("stats.delivered") },
   ];
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case "live":
         return "bg-green-500";
-      case "liveDemo":
-        return "bg-purple-500";
       case "inDevelopment":
         return "bg-cyan-500";
       case "mvpComplete":
@@ -335,18 +324,14 @@ export default function ProjectsPage() {
                     </div>
 
                     <div className="flex items-center justify-between pt-3 border-t border-[var(--dd-border)]">
-                      {config.status !== "liveDemo" ? (
-                        <div className="flex items-center gap-2">
-                          <span
-                            className={`w-2 h-2 rounded-full ${getStatusColor(config.status)}`}
-                          />
-                          <span className="text-xs text-[var(--dd-text-muted)]">
-                            {t(`status.${config.status}`)}
-                          </span>
-                        </div>
-                      ) : (
-                        <div />
-                      )}
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`w-2 h-2 rounded-full ${getStatusColor(config.status)}`}
+                        />
+                        <span className="text-xs text-[var(--dd-text-muted)]">
+                          {t(`status.${config.status}`)}
+                        </span>
+                      </div>
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-[var(--dd-text-dim)]">
                           {config.year}
