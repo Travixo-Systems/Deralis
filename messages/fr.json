@@ -94,7 +94,7 @@
       },
       "stats": {
         "platforms": {
-          "value": "5+",
+          "value": "6+",
           "label": "Plateformes livrées",
           "sublabel": "Next.js / SQL / Supabase"
         },
