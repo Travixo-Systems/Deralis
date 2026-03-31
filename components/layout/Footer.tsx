@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { Mail, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 import NewsletterSignup from "@/components/lead-gen/NewsletterSignup";
 
 export default function Footer() {
@@ -19,24 +19,13 @@ export default function Footer() {
   ];
 
   const serviceLinks = [
-    { href: "/services#consulting", key: "consulting" },
-    { href: "/services#development", key: "development" },
-    { href: "/services#ai", key: "ai" },
-    { href: "/services#automation", key: "automation" },
+    { href: "/services#consulting", label: { en: "Internal Systems", fr: "Systèmes internes" } },
+    { href: "/services#development", label: { en: "Workflow Automation", fr: "Automatisation" } },
+    { href: "/services#ai", label: { en: "SaaS Development", fr: "Développement SaaS" } },
+    { href: "/services#automation", label: { en: "Systems Audit", fr: "Audit système" } },
   ];
 
-  const serviceLabels = {
-    consulting: t("nav.services") === "Services" ? "Strategic Consulting" : "Conseil stratégique",
-    development: t("nav.services") === "Services" ? "Web Development" : "Développement web",
-    ai: t("nav.services") === "Services" ? "AI Integration" : "Intégration IA",
-    automation: t("nav.services") === "Services" ? "Automation" : "Automatisation",
-  };
-
-  const legalLinks = [
-    { href: "/privacy", label: t("legal.privacy") },
-    { href: "/terms", label: t("legal.terms") },
-    { href: "/legal", label: t("legal.legalNotice") },
-  ];
+  const isEN = t("nav.services") === "Services";
 
   return (
     <footer className="bg-[var(--dd-bg-soft)] border-t border-[var(--dd-border)]">
@@ -45,10 +34,10 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <Image 
-                src="/logo-mark.png" 
-                alt="Deralis Digital" 
-                width={40} 
+              <Image
+                src="/logo-mark.png"
+                alt="Deralis Digital"
+                width={40}
                 height={40}
                 className="rounded-lg"
               />
@@ -58,12 +47,10 @@ export default function Footer() {
             </Link>
             <p className="text-[var(--dd-text-muted)] text-sm mb-6 leading-relaxed">
               {t("footer.tagline")}
-              <br />
-              {t("footer.subtagline")}
             </p>
             <div className="flex gap-4">
               <a
-                href="https://github.com/deralis"
+                href="https://github.com/theWQLker"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] flex items-center justify-center text-[var(--dd-text-muted)] hover:text-[var(--dd-accent)] hover:border-[var(--dd-accent)] transition-colors"
@@ -72,22 +59,13 @@ export default function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/company/deralis"
+                href="https://www.linkedin.com/in/uwaugboaja"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] flex items-center justify-center text-[var(--dd-text-muted)] hover:text-[var(--dd-accent)] hover:border-[var(--dd-accent)] transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://twitter.com/deralisdigital"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] flex items-center justify-center text-[var(--dd-text-muted)] hover:text-[var(--dd-accent)] hover:border-[var(--dd-accent)] transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -123,7 +101,7 @@ export default function Footer() {
                     href={link.href}
                     className="text-[var(--dd-text-muted)] hover:text-[var(--dd-text-main)] text-sm transition-colors"
                   >
-                    {serviceLabels[link.key as keyof typeof serviceLabels]}
+                    {isEN ? link.label.en : link.label.fr}
                   </Link>
                 </li>
               ))}
@@ -161,19 +139,8 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-[var(--dd-border)] flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[var(--dd-text-dim)] text-sm">
-            © {new Date().getFullYear()} Deralis Digital. {t("footer.rights")}
+            &copy; {new Date().getFullYear()} Deralis Digital
           </p>
-          <div className="flex gap-6">
-            {legalLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-[var(--dd-text-dim)] hover:text-[var(--dd-text-muted)] text-sm transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

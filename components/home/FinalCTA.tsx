@@ -23,11 +23,15 @@ export default function FinalCTA() {
               {t("description")}
             </p>
 
+            <p className="text-sm text-[var(--dd-text-muted)] mb-6">
+              {t("note")}
+            </p>
+
             <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <CalendlyButton className="btn-primary">
+              <a href="https://calendly.com/deralisdigital/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 {tActions("bookCall")}
                 <ArrowRight className="w-4 h-4" />
-              </CalendlyButton>
+              </a>
               <a
                 href="mailto:contact@deralis.digital"
                 className="btn-secondary"
@@ -37,9 +41,6 @@ export default function FinalCTA() {
               </a>
             </div>
 
-            <p className="text-xs text-[var(--dd-text-dim)]">
-              {t("note")}
-            </p>
           </div>
         </div>
       </div>

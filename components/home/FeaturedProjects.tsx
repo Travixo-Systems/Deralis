@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, ExternalLink, Code2, Globe, Landmark } from "lucide-react";
+import { ArrowRight, ExternalLink, Landmark, Server, LayoutDashboard, ShoppingCart } from "lucide-react";
 
 interface ProjectConfig {
   stack: string[];
@@ -10,21 +10,21 @@ interface ProjectConfig {
   href?: string;
 }
 
-const projectKeys = ["govPortal", "travixoWeb", "more"] as const;
+const projectKeys = ["govPortal", "travixo", "more"] as const;
 
 const projectIcons = {
   govPortal: Landmark,
-  travixoWeb: Globe,
-  more: Code2,
+  travixo: Server,
+  more: LayoutDashboard,
 };
 
 const projectConfig: Record<(typeof projectKeys)[number], ProjectConfig> = {
   govPortal: {
-    stack: ["Next.js", "Supabase", "PostgreSQL", "TypeScript"],
+    stack: ["Next.js", "TypeScript", "Supabase"],
   },
-  travixoWeb: {
-    stack: ["Next.js 15", "Tailwind", "next-intl"],
-    liveUrl: "https://travixosystems.com",
+  travixo: {
+    stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"],
+    liveUrl: "https://app.travixosystems.com",
   },
   more: {
     stack: ["Various"],

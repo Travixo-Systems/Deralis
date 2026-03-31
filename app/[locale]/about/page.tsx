@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import CalendlyButton from "@/components/shared/CalendlyButton";
 import {
   ArrowRight,
   Zap,
@@ -111,10 +112,10 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-6">
-            <Link href="/contact" className="btn-primary">
+            <CalendlyButton className="btn-primary">
               {tActions("workWithUs")}
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </CalendlyButton>
           </div>
         </div>
       </section>
@@ -398,10 +399,10 @@ export default function AboutPage() {
             {t("cta.description")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="btn-primary">
+            <CalendlyButton className="btn-primary">
               {tActions("startConversation")}
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </CalendlyButton>
             <Link href="/projects" className="btn-secondary">
               {tActions("seePlatforms")}
             </Link>
@@ -427,10 +428,10 @@ export default function AboutPage() {
                 </a>
               </p>
             </div>
-            <Link href="/contact" className="btn-primary">
+            <CalendlyButton className="btn-primary">
               {tActions("bookCall")}
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </CalendlyButton>
           </div>
         </div>
       </section>

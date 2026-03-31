@@ -2,23 +2,20 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { sendNurtureSequence } from "@/lib/nurture-emails";
 
-const resendApiKey = process.env.RESEND_API_KEY!;
-const fromEmail = process.env.RESEND_FROM_EMAIL!;
-const toEmail = process.env.RESEND_TO_EMAIL!;
-
-if (!resendApiKey) {
-  throw new Error("RESEND_API_KEY is not set in environment variables");
-}
-if (!fromEmail) {
-  throw new Error("RESEND_FROM_EMAIL is not set in environment variables");
-}
-if (!toEmail) {
-  throw new Error("RESEND_TO_EMAIL is not set in environment variables");
-}
-
-const resend = new Resend(resendApiKey);
-
 export async function POST(request: NextRequest) {
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const fromEmail = process.env.RESEND_FROM_EMAIL;
+  const toEmail = process.env.RESEND_TO_EMAIL;
+
+  if (!resendApiKey || !fromEmail || !toEmail) {
+    return NextResponse.json(
+      { error: "Email service not configured" },
+      { status: 503 }
+    );
+  }
+
+  const resend = new Resend(resendApiKey);
+
   try {
     const body = await request.json();
     const { name, email, company, service, budget, message } = body || {};

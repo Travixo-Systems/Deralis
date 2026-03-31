@@ -110,11 +110,11 @@ export default function Hero() {
               className="flex flex-col gap-3"
             >
               <div className="flex flex-wrap items-center gap-4">
-                <Link href="/contact" className="btn-primary">
+                <a href="https://calendly.com/deralisdigital/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   {tActions("bookCall")}
                   <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link href="/projects" className="text-sm text-[var(--dd-accent)] hover:underline inline-flex items-center gap-1">
+                </a>
+                <Link href="/services" className="text-sm text-[var(--dd-accent)] hover:underline inline-flex items-center gap-1">
                   {tActions("seePlatforms")}
                   <ArrowRight className="w-3 h-3" />
                 </Link>

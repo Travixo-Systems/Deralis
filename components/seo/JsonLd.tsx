@@ -12,13 +12,12 @@ export function OrganizationJsonLd() {
       height: 630,
     },
     description:
-      "I build high-performance websites, custom web applications, workflow automations and AI-powered tools that help businesses modernize and scale efficiently.",
+      "I build the internal systems businesses need to operate. SaaS platforms, dashboards, and workflow automation.",
     email: "contact@deralis.digital",
     foundingDate: "2024",
     sameAs: [
-      "https://github.com/deralis",
-      "https://linkedin.com/company/deralis",
-      "https://twitter.com/deralisdigital",
+      "https://github.com/theWQLker",
+      "https://www.linkedin.com/in/uwaugboaja",
     ],
     contactPoint: {
       "@type": "ContactPoint",
@@ -44,7 +43,7 @@ export function WebSiteJsonLd() {
     url: "https://deralis.digital",
     name: "Deralis Digital",
     description:
-      "Modern web development and digital transformation services. We build high-performance websites, custom web applications, and AI-powered tools.",
+      "I build the internal systems businesses need to operate. Internal tools, SaaS platforms, and workflow automation.",
     publisher: {
       "@id": "https://deralis.digital/#organization",
     },
@@ -69,7 +68,7 @@ export function LocalBusinessJsonLd() {
     url: "https://deralis.digital",
     email: "contact@deralis.digital",
     description:
-      "Full-stack web development agency specializing in Next.js, TypeScript, Supabase, and AI workflow automation.",
+      "Independent engineering practice building internal systems with Next.js, TypeScript, Supabase, and PostgreSQL.",
     address: {
       "@type": "PostalAddress",
       addressCountry: "FR",
@@ -92,11 +91,10 @@ export function LocalBusinessJsonLd() {
       },
     ],
     serviceType: [
-      "Web Development",
-      "Custom Web Applications",
+      "Internal Systems",
+      "Workflow Automation",
       "SaaS Development",
-      "AI Workflow Automation",
-      "Digital Transformation",
+      "Systems Audit",
     ],
   };
 
@@ -123,42 +121,42 @@ export function ServicesJsonLd() {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Web Development Services",
+      name: "Internal Systems Engineering",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Strategic Consulting",
+            name: "Systems Audit",
             description:
-              "Architecture planning, tech stack selection, and roadmap development for your project.",
+              "Structured mapping of your current operation to define what to build and in what order.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Full-Stack Development",
+            name: "Internal System",
             description:
-              "Complete web application development with Next.js, TypeScript, and Supabase.",
+              "One system that shows where work is, what is blocked, and what needs to happen next.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "AI Tools & Custom GPT",
+            name: "Extensions",
             description:
-              "Custom AI integrations and GPT-powered tools for business automation.",
+              "Automation, integrations, and additional workflows built on top of the working foundation.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Support & Automation",
+            name: "Ongoing Support",
             description:
-              "Ongoing maintenance, workflow automation, and technical support.",
+              "Maintenance and iteration for clients who want continued support.",
           },
         },
       ],

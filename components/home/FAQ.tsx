@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { ChevronDown } from "lucide-react";
 
-const faqKeys = ["pricing", "tools", "timeline", "remote", "support"] as const;
+const faqKeys = ["clients", "audit", "custom", "wordpress", "timeline", "afterBuild"] as const;
 
 export default function FAQ() {
   const t = useTranslations("home.faq");

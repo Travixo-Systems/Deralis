@@ -84,8 +84,13 @@ export default function Services() {
           })}
         </div>
 
+        {/* Closing note */}
+        <p className="text-center text-[var(--dd-text-muted)] mt-8 max-w-2xl mx-auto text-sm italic">
+          {t("closingNote")}
+        </p>
+
         {/* CTA */}
-        <div className="text-center mt-10">
+        <div className="text-center mt-6">
           <Link href="/services" className="btn-secondary">
             {tActions("viewAllServices")}
             <ArrowRight className="w-4 h-4" />

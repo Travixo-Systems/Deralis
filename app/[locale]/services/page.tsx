@@ -46,9 +46,9 @@ export default function ServicesPage() {
   const tStats = useTranslations("common.stats");
 
   const stats = [
-    { icon: Users, value: "5+", label: tStats("platformsShippedShort"), sublabel: tStats("platformsSublabel") },
-    { icon: Clock, value: "24h", label: tStats("responseTimeShort"), sublabel: tStats("responseSublabel") },
-    { icon: Target, value: "100%", label: tStats("deliveryRateShort"), sublabel: tStats("deliverySublabel") },
+    { icon: Users, value: "6+", label: tStats("platformsShippedShort"), sublabel: tStats("platformsSublabel") },
+    { icon: Clock, value: "", label: tStats("responseTimeShort"), sublabel: tStats("responseSublabel") },
+    { icon: Target, value: "", label: tStats("deliveryRateShort"), sublabel: tStats("deliverySublabel") },
   ];
 
   return (
@@ -168,12 +168,6 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
-
-                    {key === "development" && (
-                      <p className="text-sm text-[var(--dd-text-dim)] italic mb-4 pl-3 border-l-2 border-[var(--dd-accent)]">
-                        &quot;{t(`items.${key}.note`)}&quot;
-                      </p>
-                    )}
 
                     <Link
                       href={`/contact?service=${key}`}

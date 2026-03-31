@@ -3,25 +3,22 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import CalendlyButton from "@/components/shared/CalendlyButton";
 import {
   ArrowRight,
   ExternalLink,
   Building2,
-  Car,
-  Globe,
   Landmark,
   CheckCircle2,
   LayoutDashboard,
   ShoppingCart,
 } from "lucide-react";
 
-const projectKeys = ["travixoSystems", "govPortal", "travixoWeb", "ecoridepool", "opsDashboard", "marcheDiaspora"] as const;
+const projectKeys = ["travixoSystems", "govPortal", "opsDashboard", "marcheDiaspora"] as const;
 
 const projectIcons = {
   travixoSystems: Building2,
   govPortal: Landmark,
-  travixoWeb: Globe,
-  ecoridepool: Car,
   opsDashboard: LayoutDashboard,
   marcheDiaspora: ShoppingCart,
 };
@@ -35,20 +32,6 @@ const projectConfig = {
     appUrl: "https://app.travixosystems.com",
     screenshot: "/projects/travixo-dashboard.png",
     featured: true,
-  },
-  travixoWeb: {
-    year: "2024-2025",
-    status: "live",
-    stack: ["Next.js 15", "Tailwind CSS", "next-intl", "Framer Motion"],
-    liveUrl: "https://travixosystems.com",
-    featured: false,
-  },
-  ecoridepool: {
-    year: "2024",
-    status: "mvpComplete",
-    stack: ["PHP (Slim)", "MySQL", "MongoDB", "Bootstrap"],
-    liveUrl: "https://ecoride-mirror-1-fcd84d9225d6.herokuapp.com",
-    featured: false,
   },
   govPortal: {
     year: "2025",
@@ -365,10 +348,10 @@ export default function ProjectsPage() {
             {t("cta.description")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="btn-primary">
+            <CalendlyButton className="btn-primary">
               {tActions("buildYourSystem")}
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </CalendlyButton>
             <Link href="/services" className="btn-secondary">
               {tActions("viewAllServices")}
             </Link>
@@ -388,10 +371,10 @@ export default function ProjectsPage() {
                 {t("finalCta.description")}
               </p>
             </div>
-            <Link href="/contact" className="btn-primary">
+            <CalendlyButton className="btn-primary">
               {tActions("speakToEngineer")}
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </CalendlyButton>
           </div>
         </div>
       </section>
