@@ -51,7 +51,7 @@ const projectConfig = {
     year: "2026",
     status: "live",
     stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui", "Zustand", "canvas-confetti"],
-    liveUrl: "https://deralis-catalog.vercel.app",
+    liveUrl: "https://deralis-catalog-demo.vercel.app/",
     featured: false,
   },
 };
