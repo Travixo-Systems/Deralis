@@ -42,3 +42,4 @@ next-env.d.ts
 CLAUDE_DIRECTIVE*.md
 DERALIS_EXECUTION_PLAN.md
 .claude/
+.env*.local

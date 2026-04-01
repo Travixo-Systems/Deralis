@@ -37,7 +37,7 @@ const projectConfig = {
     year: "2025",
     status: "live",
     stack: ["Next.js", "Supabase", "PostgreSQL", "TypeScript"],
-    liveUrl: null,
+    liveUrl: "https://government-portal-ashy.vercel.app",
     featured: false,
   },
   opsDashboard: {
@@ -324,9 +324,10 @@ export default function ProjectsPage() {
                             href={config.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[var(--dd-accent)] hover:text-[var(--dd-text-main)] transition-colors"
+                            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium bg-[var(--dd-accent)]/10 text-[var(--dd-accent)] hover:bg-[var(--dd-accent)]/20 transition-colors"
                           >
-                            <ExternalLink className="w-4 h-4" />
+                            {tActions("viewLive")}
+                            <ExternalLink className="w-3.5 h-3.5" />
                           </a>
                         )}
                       </div>
