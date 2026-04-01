@@ -125,15 +125,17 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       {/* Header */}
-      <section className="pt-10 pb-4 lg:pt-12 lg:pb-6 bg-mesh">
+      <section className="pt-24 pb-4 lg:pt-28 lg:pb-6 bg-mesh">
         <div className="max-w-[850px] mx-auto px-6 lg:px-8">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-[var(--dd-text-muted)] hover:text-[var(--dd-accent)] transition-colors mb-8"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            {locale === "fr" ? "Retour au blog" : "Back to blog"}
-          </Link>
+          <div className="flex justify-end mb-8">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-sm text-[var(--dd-text-muted)] hover:text-[var(--dd-accent)] transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              {locale === "fr" ? "Retour au blog" : "Back to blog"}
+            </Link>
+          </div>
 
           <div className="flex items-center gap-3 mb-4">
             <span
