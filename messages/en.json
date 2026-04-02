@@ -588,6 +588,17 @@
           "Owner dashboard with order status workflow",
           "Demo Controls panel for switching views"
         ]
+      },
+      "fluxClient": {
+        "title": "Flux Client",
+        "type": "Concept Build",
+        "description": "A live demo of structured client intake. An inquiry arrives, becomes a job record, assigned a status, visible to the whole team without anyone forwarding anything to anyone.",
+        "features": [
+          "Structured client inquiry intake",
+          "Automatic job record creation",
+          "Status tracking and assignment",
+          "Team-wide visibility"
+        ]
       }
     },
     "cta": {

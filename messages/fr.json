@@ -620,6 +620,17 @@
           "Tableau de bord propriétaire avec suivi des commandes",
           "Panneau de contrôle pour basculer entre les vues"
         ]
+      },
+      "fluxClient": {
+        "title": "Flux Client",
+        "type": "Concept Build",
+        "description": "Une demo live de prise en charge structuree. Une demande arrive, devient une fiche mission, recoit un statut, visible par toute l'equipe sans que personne n'ait a transferer quoi que ce soit.",
+        "features": [
+          "Prise en charge structuree des demandes clients",
+          "Creation automatique de fiches mission",
+          "Suivi et attribution des statuts",
+          "Visibilite pour toute l'equipe"
+        ]
       }
     },
     "cta": {

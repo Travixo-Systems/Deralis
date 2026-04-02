@@ -12,15 +12,17 @@ import {
   CheckCircle2,
   LayoutDashboard,
   ShoppingCart,
+  Users,
 } from "lucide-react";
 
-const projectKeys = ["travixoSystems", "govPortal", "opsDashboard", "marcheDiaspora"] as const;
+const projectKeys = ["travixoSystems", "govPortal", "opsDashboard", "marcheDiaspora", "fluxClient"] as const;
 
 const projectIcons = {
   travixoSystems: Building2,
   govPortal: Landmark,
   opsDashboard: LayoutDashboard,
   marcheDiaspora: ShoppingCart,
+  fluxClient: Users,
 };
 
 const projectConfig = {
@@ -52,6 +54,13 @@ const projectConfig = {
     status: "live",
     stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui", "Zustand", "canvas-confetti"],
     liveUrl: "https://deralis-catalog-demo.vercel.app/",
+    featured: false,
+  },
+  fluxClient: {
+    year: "2026",
+    status: "live",
+    stack: ["Next.js 15", "TypeScript", "Supabase", "shadcn/ui"],
+    liveUrl: "https://flux-client-umber.vercel.app/",
     featured: false,
   },
 };
