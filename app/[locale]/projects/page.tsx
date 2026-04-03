@@ -69,7 +69,7 @@ const projectConfig = {
     year: "2026",
     status: "live",
     stack: ["Next.js 15", "TypeScript", "React Context", "shadcn/ui"],
-    liveUrl: "https://onboard-1p1nlyriy-travixosys-projects.vercel.app/",
+    liveUrl: "https://onboard-blush.vercel.app/",
     featured: false,
   },
 };
