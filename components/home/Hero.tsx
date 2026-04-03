@@ -132,48 +132,6 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="relative"
           >
-            {/* Stats Card */}
-            <div className="gradient-border p-5 mb-5">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">{t("stats.platforms.value")}</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">
-                    {t("stats.platforms.label")}
-                  </p>
-                  <p className="text-xs text-[var(--dd-text-dim)] mt-0.5">
-                    {t("stats.platforms.sublabel")}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">{t("stats.delivery.value")}</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">
-                    {t("stats.delivery.label")}
-                  </p>
-                  <p className="text-xs text-[var(--dd-text-dim)] mt-0.5">
-                    {t("stats.delivery.sublabel")}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">{t("stats.response.value")}</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">
-                    {t("stats.response.label")}
-                  </p>
-                  <p className="text-xs text-[var(--dd-text-dim)] mt-0.5">
-                    {t("stats.response.sublabel")}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">{t("stats.bilingual.value")}</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">
-                    {t("stats.bilingual.label")}
-                  </p>
-                  <p className="text-xs text-[var(--dd-text-dim)] mt-0.5">
-                    {t("stats.bilingual.sublabel")}
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* Screenshot label */}
             <p className="text-xs text-[var(--dd-text-dim)] font-mono mb-2">
               {t("screenshotLabel")}

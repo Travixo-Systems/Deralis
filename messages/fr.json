@@ -93,28 +93,7 @@
         "database": "PostgreSQL, Supabase, Prisma",
         "capabilities": "Tableaux de bord, SaaS, automatisation, APIs"
       },
-      "stats": {
-        "platforms": {
-          "value": "6+",
-          "label": "Plateformes livrées",
-          "sublabel": "Next.js / SQL / Supabase"
-        },
-        "delivery": {
-          "value": "100%",
-          "label": "Chaque projet livré",
-          "sublabel": "Conçus et déployés"
-        },
-        "response": {
-          "value": "Direct",
-          "label": "Communication directe",
-          "sublabel": "Pas d'intermédiaire"
-        },
-        "bilingual": {
-          "value": "FR/EN",
-          "label": "Bilingue",
-          "sublabel": "Global"
-        }
-      }
+      "stats": {}
     },
     "services": {
       "title": "Comment je",
