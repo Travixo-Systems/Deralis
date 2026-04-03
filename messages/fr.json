@@ -610,6 +610,17 @@
           "Suivi et attribution des statuts",
           "Visibilite pour toute l'equipe"
         ]
+      },
+      "onboard": {
+        "title": "Onboard",
+        "type": "Concept Build",
+        "description": "Une demo d'integration structuree. Creez un dossier, regardez la checklist apparaitre instantanement. Chaque etape visible. Rien qui depend de la memoire de quelqu'un.",
+        "features": [
+          "Dossiers d'integration structures",
+          "Generation instantanee de checklist",
+          "Visibilite etape par etape",
+          "Aucun suivi manuel necessaire"
+        ]
       }
     },
     "cta": {

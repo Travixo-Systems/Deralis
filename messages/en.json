@@ -578,6 +578,17 @@
           "Status tracking and assignment",
           "Team-wide visibility"
         ]
+      },
+      "onboard": {
+        "title": "Onboard",
+        "type": "Concept Build",
+        "description": "A demo of structured onboarding. Create a record, watch the task checklist appear instantly. Every step visible. Nothing depending on someone remembering.",
+        "features": [
+          "Structured onboarding records",
+          "Instant task checklist generation",
+          "Step-by-step visibility",
+          "No manual follow-up needed"
+        ]
       }
     },
     "cta": {

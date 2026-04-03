@@ -13,9 +13,10 @@ import {
   LayoutDashboard,
   ShoppingCart,
   Users,
+  ClipboardCheck,
 } from "lucide-react";
 
-const projectKeys = ["travixoSystems", "govPortal", "opsDashboard", "marcheDiaspora", "fluxClient"] as const;
+const projectKeys = ["travixoSystems", "govPortal", "opsDashboard", "marcheDiaspora", "fluxClient", "onboard"] as const;
 
 const projectIcons = {
   travixoSystems: Building2,
@@ -23,6 +24,7 @@ const projectIcons = {
   opsDashboard: LayoutDashboard,
   marcheDiaspora: ShoppingCart,
   fluxClient: Users,
+  onboard: ClipboardCheck,
 };
 
 const projectConfig = {
@@ -61,6 +63,13 @@ const projectConfig = {
     status: "live",
     stack: ["Next.js 15", "TypeScript", "Supabase", "shadcn/ui"],
     liveUrl: "https://flux-client-umber.vercel.app/",
+    featured: false,
+  },
+  onboard: {
+    year: "2026",
+    status: "live",
+    stack: ["Next.js 15", "TypeScript", "React Context", "shadcn/ui"],
+    liveUrl: "https://onboard-1p1nlyriy-travixosys-projects.vercel.app/",
     featured: false,
   },
 };
