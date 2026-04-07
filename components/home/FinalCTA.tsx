@@ -28,7 +28,7 @@ export default function FinalCTA() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-6">
-              <a href="https://calendly.com/deralisdigital/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href="https://calendly.com/deralisdigital/discovery" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 {tActions("bookCall")}
                 <ArrowRight className="w-4 h-4" />
               </a>

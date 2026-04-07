@@ -190,7 +190,7 @@ If your setup looks solid but still requires effort to keep things aligned, the 
 
 It is how they work together.
 
-Book 30 minutes here: calendly.com/deralisdigital/30min
+Book 30 minutes here: calendly.com/deralisdigital/discovery
 
 We will map how things currently move, where they slow down, and where they split.
 

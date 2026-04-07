@@ -74,7 +74,7 @@ It is not a simple product. The stack handles it without drama. That is the most
 
 ## If you are evaluating your stack
 
-If you are starting a new project and trying to figure out what to build on, or if you have inherited something and want a second opinion on whether it is the right foundation, book 30 minutes here: [calendly.com/deralisdigital/30min](https://calendly.com/deralisdigital/30min)
+If you are starting a new project and trying to figure out what to build on, or if you have inherited something and want a second opinion on whether it is the right foundation, book 30 minutes here: [calendly.com/deralisdigital/discovery](https://calendly.com/deralisdigital/discovery)
 
 I will give you a straight answer based on what you are actually building, not a pitch for whatever I happen to prefer.
 

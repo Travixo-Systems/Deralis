@@ -75,7 +75,7 @@ C'est la seule façon honnête d'avoir cette conversation.
 
 ## Si vous hésitez encore
 
-Si vous êtes assis sur un empilement d'outils qui marchent presque et que vous ne savez pas s'il faut continuer à bricoler ou construire quelque chose de vrai, réservez 30 minutes ici : calendly.com/deralisdigital/30min
+Si vous êtes assis sur un empilement d'outils qui marchent presque et que vous ne savez pas s'il faut continuer à bricoler ou construire quelque chose de vrai, réservez 30 minutes ici : calendly.com/deralisdigital/discovery
 
 Amenez votre configuration actuelle. Dites-moi ce qui casse. Je vous donnerai un avis honnête sur la question : avez-vous besoin d'un développement sur mesure ou d'une meilleure configuration d'outils existants.
 

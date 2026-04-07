@@ -75,7 +75,7 @@ Vous n'avez pas besoin de tout automatiser d'un coup. Vous avez besoin de commen
 
 Si vous pouvez lister trois tâches que votre équipe fait manuellement chaque jour, je peux en général vous dire en trente minutes laquelle vaut la peine d'être automatisée en premier et ce que ça demanderait de construire.
 
-Réservez un appel ici : calendly.com/deralisdigital/30min
+Réservez un appel ici : calendly.com/deralisdigital/discovery
 
 Amenez la liste. C'est toute la préparation dont vous avez besoin.
 

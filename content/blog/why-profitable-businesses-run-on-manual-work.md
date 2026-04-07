@@ -81,7 +81,7 @@ What most people need is someone to sit down with them and ask the right questio
 
 That is what a discovery call is for.
 
-If you want to map out what a custom tool could look like for your business, book 30 minutes here: calendly.com/deralisdigital/30min
+If you want to map out what a custom tool could look like for your business, book 30 minutes here: calendly.com/deralisdigital/discovery
 
 No pitch, no proposal. Just a conversation about how you actually work.
 

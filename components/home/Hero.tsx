@@ -110,7 +110,7 @@ export default function Hero() {
               className="flex flex-col gap-3"
             >
               <div className="flex flex-wrap items-center gap-4">
-                <a href="https://calendly.com/deralisdigital/30min" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <a href="https://calendly.com/deralisdigital/discovery" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   {tActions("bookCall")}
                   <ArrowRight className="w-4 h-4" />
                 </a>

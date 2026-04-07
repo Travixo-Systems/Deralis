@@ -90,7 +90,7 @@ The size of the business does not matter as much as the clarity of the problem. 
 
 If your current setup is a website that looks fine but does nothing once someone fills in the form, you are leaving work on the table. Not because you lack ambition, but because the tool you have was never built to carry the weight you are putting on it.
 
-Book 30 minutes here: [calendly.com/deralisdigital/30min](https://calendly.com/deralisdigital/30min)
+Book 30 minutes here: [calendly.com/deralisdigital/discovery](https://calendly.com/deralisdigital/discovery)
 
 I will ask you what your current process looks like, where things are falling through, and what you actually need. No proposal until we have both agreed there is something worth building.
 

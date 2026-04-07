@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const CALENDLY_URL = "https://calendly.com/deralisdigital/30min";
+const CALENDLY_URL = "https://calendly.com/deralisdigital/discovery";
 
 interface CalendlyButtonProps {
   children: React.ReactNode;

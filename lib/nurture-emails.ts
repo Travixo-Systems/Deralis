@@ -53,7 +53,7 @@ You should own what you paid for.
 
 If you are thinking about building something and want to talk through whether it makes sense, here is a link to book 30 minutes. No pitch, just a conversation.
 
-calendly.com/deralisdigital/30min
+calendly.com/deralisdigital/discovery
 
 Uwa
 Deralis Digital`,

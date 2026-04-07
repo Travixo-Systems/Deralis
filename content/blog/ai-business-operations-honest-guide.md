@@ -91,7 +91,7 @@ You do not need to rebuild your entire operation to get value from AI. You need 
 
 Most of the AI integrations I build are additions to existing systems, not replacements for them. A new layer on top of an intake form. A summary tool connected to a project database. A classifier wired into an email inbox.
 
-If you want to map out where AI would actually make a difference in how your business runs, book 30 minutes here: calendly.com/deralisdigital/30min
+If you want to map out where AI would actually make a difference in how your business runs, book 30 minutes here: calendly.com/deralisdigital/discovery
 
 Bring a description of one process that feels more manual than it should. That is usually enough to start.
 

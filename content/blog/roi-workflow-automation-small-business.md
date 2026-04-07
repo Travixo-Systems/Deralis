@@ -75,7 +75,7 @@ You do not need to automate everything at once. You need to start with the right
 
 If you can list three tasks your team does manually every day, I can usually tell you within thirty minutes which one is worth automating first and roughly what it would take to build.
 
-Book a call here: calendly.com/deralisdigital/30min
+Book a call here: calendly.com/deralisdigital/discovery
 
 Bring the list. That is all the preparation you need.
 

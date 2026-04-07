@@ -91,7 +91,7 @@ Vous n'avez pas besoin de reconstruire toute votre activité pour tirer de la va
 
 La plupart des intégrations IA que je construis sont des ajouts à des systèmes existants, pas des remplacements. Une nouvelle couche par-dessus un formulaire d'accueil. Un outil de synthèse connecté à une base de projets. Un classifieur branché sur une boîte mail.
 
-Si vous voulez identifier où l'IA ferait vraiment une différence dans le fonctionnement de votre entreprise, réservez 30 minutes ici : calendly.com/deralisdigital/30min
+Si vous voulez identifier où l'IA ferait vraiment une différence dans le fonctionnement de votre entreprise, réservez 30 minutes ici : calendly.com/deralisdigital/discovery
 
 Amenez la description d'un processus qui vous semble plus manuel qu'il ne devrait l'être. C'est en général suffisant pour commencer.
 
