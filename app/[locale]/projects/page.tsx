@@ -77,7 +77,6 @@ const projectConfig = {
 export default function ProjectsPage() {
   const t = useTranslations("projects");
   const tActions = useTranslations("common.actions");
-  const tStats = useTranslations("common.stats");
 
   const stats = [
     { value: "6+", label: t("stats.delivered") },

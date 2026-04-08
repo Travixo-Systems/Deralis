@@ -7,10 +7,6 @@
     "description": "La plupart des entreprises ont déjà des outils. Ce qui leur manque, c'est un système. Je construis le système qui règle ça."
   },
   "common": {
-    "brand": {
-      "name": "Deralis Digital",
-      "tagline": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner."
-    },
     "nav": {
       "home": "Accueil",
       "services": "Services",
@@ -20,7 +16,6 @@
       "contact": "Contact"
     },
     "actions": {
-      "contact": "Cartographiez votre système (300 €)",
       "seePlatforms": "Voir mes projets",
       "learnMore": "En savoir plus",
       "viewMore": "Voir plus",
@@ -29,33 +24,22 @@
       "viewAllPlatforms": "Voir toutes les plateformes",
       "bookCall": "Cartographiez votre système (300 €)",
       "readMore": "Lire la suite",
-      "speakToEngineer": "Cartographiez votre système (300 €)",
       "backToHome": "Retour à l'accueil",
       "visitWebsite": "Visiter le site",
       "openApp": "Ouvrir l'application",
       "viewLive": "Voir en ligne",
       "viewOurWork": "Voir mes réalisations",
       "workWithUs": "Cartographiez votre système (300 €)",
-      "getInTouch": "Cartographiez votre système (300 €)",
       "sendMessage": "Envoyer le message",
       "sending": "Envoi en cours...",
       "language": "Langue",
       "changeLanguage": "Changer de langue"
     },
     "stats": {
-      "platformsShipped": "Plateformes livrées",
-      "platformsShippedShort": "Plateformes livrées",
-      "platformsSublabel": "Next.js / SQL / Supabase",
-      "deliveryRate": "Chaque projet livré",
       "deliveryRateShort": "Livré",
       "deliverySublabel": "Conçus et déployés",
-      "responseTime": "Communication directe",
       "responseTimeShort": "Ligne directe",
-      "responseSublabel": "Pas d'intermédiaire",
-      "bilingual": "Français / Anglais",
-      "bilingualShort": "Bilingue",
-      "founded": "Création",
-      "completionRate": "Taux de réussite"
+      "responseSublabel": "Pas d'intermédiaire"
     },
     "footer": {
       "tagline": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
@@ -64,14 +48,7 @@
       "services": "Services",
       "contact": "Contact",
       "legal": "Légal",
-      "location": "Basé en France. Clients en France et à l'international",
-      "locationShort": "France & distance",
-      "rights": "Tous droits réservés."
-    },
-    "legal": {
-      "privacy": "Politique de confidentialité",
-      "terms": "Conditions d'utilisation",
-      "legalNotice": "Mentions légales"
+      "locationShort": "France & distance"
     }
   },
   "home": {
@@ -108,8 +85,7 @@
             "Opérations centralisées",
             "Visibilité des statuts",
             "Automatisation des flux"
-          ],
-          "highlight": "Des systèmes, pas des pages."
+          ]
         },
         "ai": {
           "title": "Extensions",
@@ -203,7 +179,6 @@
       "title": "Projets",
       "titleHighlight": "réels",
       "description": "Des systèmes que j'ai construits et déployés.",
-      "label": "En vedette",
       "projects": {
         "govPortal": {
           "title": "Portail de demandes gouvernementales",
@@ -232,14 +207,6 @@
       "subtitle": "SaaS B2B, Gestion d'équipements, Conformité VGP",
       "description": "Un système interne utilisé au quotidien pour suivre les équipements et gérer la conformité, en remplacement de la coordination manuelle au sein de l'équipe. Utilisé comme un vrai outil opérationnel, pas un prototype.",
       "detailedDescription": "Construit et déployé comme un vrai système opérationnel, pas un template ou une maquette.",
-      "features": [
-        "Chaque société de location ne voit que ses propres équipements et sa propre équipe",
-        "Un QR code sur chaque machine, scanné au téléphone, statut mis à jour en quelques secondes",
-        "Échéances d'inspection suivies automatiquement, aucune date manquée",
-        "Registre de conformité VGP généré et prêt pour les inspecteurs à tout moment",
-        "Chaque membre de l'équipe ne voit que ce qu'il doit voir, rien de plus",
-        "Toutes les données stockées en sécurité et accessibles en temps réel"
-      ],
       "actions": {
         "visitWebsite": "Visiter le site",
         "seeAllProjects": "Voir tous les projets"
@@ -754,7 +721,6 @@
       "text": "Cartographiez votre système (300 €)"
     },
     "newsletter": {
-      "title": "Restez informé",
       "description": "Réflexions techniques, études de cas et retours terrain, une fois par mois.",
       "placeholder": "vous@entreprise.com",
       "success": "Vous êtes inscrit. Vérifiez votre boîte mail.",

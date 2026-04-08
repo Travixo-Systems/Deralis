@@ -7,10 +7,6 @@
     "description": "Most businesses already have tools. What they are missing is a system. I build the system that fixes that."
   },
   "common": {
-    "brand": {
-      "name": "Deralis Digital",
-      "tagline": "I build the systems businesses need to operate."
-    },
     "nav": {
       "home": "Home",
       "services": "Services",
@@ -20,7 +16,6 @@
       "contact": "Contact"
     },
     "actions": {
-      "contact": "Get your system mapped (€300)",
       "seePlatforms": "See my work",
       "learnMore": "Learn more",
       "viewMore": "View more",
@@ -29,33 +24,22 @@
       "viewAllPlatforms": "See all platforms",
       "bookCall": "Get your system mapped (€300)",
       "readMore": "Read more",
-      "speakToEngineer": "Get your system mapped (€300)",
       "backToHome": "Back to home",
       "visitWebsite": "Visit website",
       "openApp": "Open app",
       "viewLive": "View live",
       "viewOurWork": "View my work",
       "workWithUs": "Get your system mapped (€300)",
-      "getInTouch": "Get your system mapped (€300)",
       "sendMessage": "Send message",
       "sending": "Sending...",
       "language": "Language",
       "changeLanguage": "Change language"
     },
     "stats": {
-      "platformsShipped": "Platforms shipped",
-      "platformsShippedShort": "Platforms shipped",
-      "platformsSublabel": "Next.js / SQL / Supabase",
-      "deliveryRate": "Every project delivered",
       "deliveryRateShort": "Delivered",
       "deliverySublabel": "Shipped and deployed",
-      "responseTime": "Direct communication",
       "responseTimeShort": "Direct line",
-      "responseSublabel": "No layers, no middlemen",
-      "bilingual": "French / English",
-      "bilingualShort": "Fully bilingual",
-      "founded": "Founded",
-      "completionRate": "Completion rate"
+      "responseSublabel": "No layers, no middlemen"
     },
     "footer": {
       "tagline": "I build the systems businesses need to operate.",
@@ -64,14 +48,7 @@
       "services": "Services",
       "contact": "Contact",
       "legal": "Legal",
-      "location": "Based in France. Working worldwide",
-      "locationShort": "France & Remote",
-      "rights": "All rights reserved."
-    },
-    "legal": {
-      "privacy": "",
-      "terms": "",
-      "legalNotice": ""
+      "locationShort": "France & Remote"
     }
   },
   "home": {
@@ -101,8 +78,7 @@
         "development": {
           "title": "Custom System",
           "description": "The core build. One system that shows where work is, what is blocked, and what needs to happen next.",
-          "features": ["Centralized operations", "Status visibility", "Workflow automation"],
-          "highlight": "Systems, not pages."
+          "features": ["Centralized operations", "Status visibility", "Workflow automation"]
         },
         "ai": {
           "title": "Extensions",
@@ -175,7 +151,6 @@
       "title": "Real",
       "titleHighlight": "projects",
       "description": "Systems I have built and deployed.",
-      "label": "Featured",
       "projects": {
         "govPortal": {
           "title": "Government Application Portal",
@@ -204,14 +179,6 @@
       "subtitle": "B2B SaaS - Equipment Tracking - VGP Compliance",
       "description": "Built an internal system used daily to track equipment and manage compliance, replacing manual coordination across the team. Used as a real operational tool, not a prototype.",
       "detailedDescription": "Built and deployed as a real operational system, not a template or mockup.",
-      "features": [
-        "Each rental company sees only their own equipment and their own team",
-        "QR code on every machine, scanned by phone, status updated in seconds",
-        "Inspection deadlines tracked automatically, no missed dates",
-        "VGP compliance log generated and ready for inspectors at any moment",
-        "Each team member sees only what they need to see, nothing more",
-        "All data stored securely and accessible in real time"
-      ],
       "actions": {
         "visitWebsite": "Visit website",
         "seeAllProjects": "See all projects"
@@ -722,7 +689,6 @@
       "text": "Get your system mapped (€300)"
     },
     "newsletter": {
-      "title": "Stay updated",
       "description": "Engineering insights, case studies, and strategies, delivered monthly.",
       "placeholder": "you@company.com",
       "success": "You're subscribed. Check your inbox.",

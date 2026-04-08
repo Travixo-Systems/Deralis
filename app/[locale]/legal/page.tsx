@@ -7,7 +7,6 @@ import { ArrowLeft } from "lucide-react";
 export default function LegalPage() {
   const t = useTranslations("legal");
   const tActions = useTranslations("common.actions");
-  const tLegal = useTranslations("common.legal");
 
   return (
     <section className="pt-24 pb-16 lg:pt-28 lg:pb-20">
