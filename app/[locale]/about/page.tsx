@@ -361,7 +361,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <CalendlyButton className="btn-primary">
-              {tActions("startConversation")}
+              {tActions("bookCall")}
               <ArrowRight className="w-4 h-4" />
             </CalendlyButton>
             <Link href="/projects" className="btn-secondary">
@@ -371,31 +371,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-8 border-t border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div>
-              <p className="text-[var(--dd-text-main)] font-semibold">
-                {t("finalCta.title")}
-              </p>
-              <p className="text-sm text-[var(--dd-text-muted)]">
-                {t("finalCta.description")}{" "}
-                <a
-                  href="mailto:contact@deralis.digital"
-                  className="text-[var(--dd-accent)] hover:underline"
-                >
-                  contact@deralis.digital
-                </a>
-              </p>
-            </div>
-            <CalendlyButton className="btn-primary">
-              {tActions("bookCall")}
-              <ArrowRight className="w-4 h-4" />
-            </CalendlyButton>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

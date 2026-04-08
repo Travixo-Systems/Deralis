@@ -91,7 +91,7 @@ export function LocalBusinessJsonLd() {
       },
     ],
     serviceType: [
-      "Internal Systems",
+      "Custom Systems",
       "Workflow Automation",
       "SaaS Development",
       "Systems Audit",
@@ -121,7 +121,7 @@ export function ServicesJsonLd() {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Internal Systems Engineering",
+      name: "Custom Systems Engineering",
       itemListElement: [
         {
           "@type": "Offer",

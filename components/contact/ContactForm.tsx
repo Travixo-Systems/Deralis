@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 const serviceKeys = ["consulting", "development", "ai", "support", "other"] as const;
-const budgetKeys = ["under2k", "2k5k", "5k10k", "10k25k", "over25k", "notSure"] as const;
+const budgetKeys = ["5k10k", "10k25k", "over25k", "notSure"] as const;
 
 type ContactFormProps = {
   prefilledService?: string;

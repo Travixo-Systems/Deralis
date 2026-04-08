@@ -19,9 +19,9 @@ export default function Footer() {
   ];
 
   const serviceLinks = [
-    { href: "/services#consulting", label: { en: "Internal Systems", fr: "Systèmes internes" } },
+    { href: "/services#consulting", label: { en: "Custom Systems", fr: "Systèmes sur mesure" } },
     { href: "/services#development", label: { en: "Workflow Automation", fr: "Automatisation" } },
-    { href: "/services#ai", label: { en: "SaaS Development", fr: "Développement SaaS" } },
+    { href: "/services#ai", label: { en: "Operations Systems", fr: "Systèmes opérationnels" } },
     { href: "/services#automation", label: { en: "Systems Audit", fr: "Audit système" } },
   ];
 

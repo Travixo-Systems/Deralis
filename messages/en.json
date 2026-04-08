@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": {
-      "default": "Deralis Digital: I build the internal systems businesses need to operate",
+      "default": "Deralis Digital: I build the systems businesses need to operate",
       "template": "%s: Deralis Digital"
     },
     "description": "Most businesses already have tools. What they are missing is a system. I build the system that fixes that."
@@ -9,7 +9,7 @@
   "common": {
     "brand": {
       "name": "Deralis Digital",
-      "tagline": "I build the internal systems businesses need to operate."
+      "tagline": "I build the systems businesses need to operate."
     },
     "nav": {
       "home": "Home",
@@ -21,8 +21,6 @@
     },
     "actions": {
       "contact": "Get your system mapped (€300)",
-      "startConversation": "Start a conversation",
-      "buildYourSystem": "Let's build it",
       "seePlatforms": "See my work",
       "learnMore": "Learn more",
       "viewMore": "View more",
@@ -60,7 +58,7 @@
       "completionRate": "Completion rate"
     },
     "footer": {
-      "tagline": "I build the internal systems businesses need to operate.",
+      "tagline": "I build the systems businesses need to operate.",
       "subtagline": "",
       "navigation": "Navigation",
       "services": "Services",
@@ -79,21 +77,15 @@
   "home": {
     "hero": {
       "badge": "Independent engineering practice",
-      "title": "I build the internal systems businesses need to operate.",
+      "title": "I build the systems businesses need to operate.",
       "titleLine2": "",
       "titleHighlight": "",
       "description": "If your team still asks 'where is this?' you don't have a system.",
-      "descriptionLine2": "Most businesses already have tools. What they are missing is a system.",
+      "descriptionLine2": "Tools are not the problem. The way information moves between them is.",
       "descriptionLine3": "Information in multiple places, moving inconsistently, depending on people to keep it moving.",
       "subDescription": "",
       "screenshotLabel": "TraviXO Systems: VGP compliance platform I built (demo view)",
-      "ctaSubtext": "Built for businesses already running. Not ideas. Not landing pages.",
-      "features": {
-        "tech": "Next.js, React, TypeScript",
-        "database": "PostgreSQL, Supabase, Prisma",
-        "capabilities": "Dashboards, SaaS, automation, APIs"
-      },
-      "stats": {}
+      "ctaSubtext": "For businesses whose operations have outgrown their tools. Not ideas. Not landing pages."
     },
     "services": {
       "title": "How I",
@@ -107,7 +99,7 @@
           "features": ["Process mapping", "Operational analysis", "Written brief"]
         },
         "development": {
-          "title": "Internal System",
+          "title": "Custom System",
           "description": "The core build. One system that shows where work is, what is blocked, and what needs to happen next.",
           "features": ["Centralized operations", "Status visibility", "Workflow automation"],
           "highlight": "Systems, not pages."
@@ -133,7 +125,7 @@
     "clients": {
       "title": "Who I",
       "titleHighlight": "work with",
-      "description": "SMEs with 10 to 50 people that are profitable, operational, and experiencing friction.",
+      "description": "I work with established businesses where their operations have outgrown the tools that hold them together. The person who can decide to fix this is in the room.",
       "items": {
         "startups": {
           "title": "Teams running operations manually",
@@ -187,8 +179,8 @@
       "projects": {
         "govPortal": {
           "title": "Government Application Portal",
-          "type": "Consular Services",
-          "description": "Passport intake MVP for a consular office in Paris. Replaces a paper-based process with a structured digital flow."
+          "type": "Spec Pitch",
+          "description": "A passport intake MVP I built and pitched to a consular office after going through their process myself. The frustration: files I had already uploaded online, I was then asked to bring in physically. I built the digital flow that would have made the trip unnecessary, and proposed it directly."
         },
         "travixo": {
           "title": "TraviXO Systems",
@@ -213,12 +205,12 @@
       "description": "Built an internal system used daily to track equipment and manage compliance, replacing manual coordination across the team. Used as a real operational tool, not a prototype.",
       "detailedDescription": "Built and deployed as a real operational system, not a template or mockup.",
       "features": [
-        "Multi-tenant SaaS architecture",
-        "QR code asset tracking",
-        "Inspection scheduling",
-        "VGP compliance automation",
-        "Role-based access control",
-        "Real-time PostgreSQL database"
+        "Each rental company sees only their own equipment and their own team",
+        "QR code on every machine, scanned by phone, status updated in seconds",
+        "Inspection deadlines tracked automatically, no missed dates",
+        "VGP compliance log generated and ready for inspectors at any moment",
+        "Each team member sees only what they need to see, nothing more",
+        "All data stored securely and accessible in real time"
       ],
       "actions": {
         "visitWebsite": "Visit website",
@@ -232,7 +224,7 @@
       "items": {
         "clients": {
           "question": "What kind of businesses do you work with?",
-          "answer": "SMEs with 10 to 50 people that are profitable, operational, and experiencing friction in how they work. The trigger is usually loss of control, visibility, or flow. If the business is pre-revenue or still figuring out its process, the timing is wrong."
+          "answer": "Established businesses where the operation has outgrown the tools holding it together. The trigger is usually loss of control, visibility, or flow. If the business is pre-revenue or still figuring out its process, the timing is wrong."
         },
         "audit": {
           "question": "What does the Systems Audit involve?",
@@ -248,7 +240,7 @@
         },
         "timeline": {
           "question": "How long does a project take?",
-          "answer": "Depends on scope. A focused internal system typically runs four to eight weeks. A full SaaS build runs eight to twelve weeks. Nothing starts without a written scope and a deposit."
+          "answer": "Depends on scope. A focused operations system typically runs four to eight weeks. A full SaaS build runs eight to twelve weeks. Nothing starts without a written scope and a deposit."
         },
         "afterBuild": {
           "question": "What happens after the build?",
@@ -262,97 +254,16 @@
       "note": "Another developer can take over without rebuilding everything."
     },
     "trustBar": {
-      "item1": "Every project delivered",
+      "item1": "All projects delivered",
       "item2": "Direct communication",
       "item3": "French and English",
       "item4": "Platforms shipped"
-    },
-    "socialProof": {
-      "title": "Built for",
-      "titleHighlight": "real operations",
-      "description": "Systems I build replace manual work with structured, visible processes.",
-      "metric1": {
-        "value": "",
-        "label": "From idea to working system"
-      },
-      "metric2": {
-        "value": "",
-        "label": "No templates, no lock-in"
-      },
-      "metric3": {
-        "value": "",
-        "label": "Clean code, full documentation"
-      },
-      "metric4": {
-        "value": "",
-        "label": "Built for production"
-      },
-      "testimonial1": {
-        "quote": "Built our entire SaaS platform from scratch. Handles thousands of assets across multiple tenants.",
-        "name": "Equipment rental sector",
-        "role": "",
-        "initials": "ER"
-      },
-      "testimonial2": {
-        "quote": "",
-        "name": "",
-        "role": "",
-        "initials": ""
-      },
-      "testimonial3": {
-        "quote": "",
-        "name": "",
-        "role": "",
-        "initials": ""
-      }
-    },
-    "roiCalculator": {
-      "title": "What is manual work",
-      "titleHighlight": "costing you?",
-      "description": "Estimate how much time and money your current setup is losing every month.",
-      "projectTypeLabel": "What are you building?",
-      "types": {
-        "saas": "SaaS Platform",
-        "dashboard": "Admin Dashboard",
-        "automation": "Workflow Automation",
-        "mvp": "MVP / Prototype"
-      },
-      "revenueLabel": "Expected monthly revenue or savings",
-      "calculate": "Calculate ROI",
-      "timeline": "Estimated timeline",
-      "weeks": "weeks",
-      "roiMultiplier": "ROI multiplier",
-      "projectedValue": "Projected annual value",
-      "perYear": "/ year",
-      "disclaimer": "Estimates based on industry averages. Actual results vary by project scope and execution."
-    },
-    "whatHappensNext": {
-      "title": "What happens",
-      "titleHighlight": "next",
-      "description": "Three steps, no surprises.",
-      "steps": {
-        "step1": {
-          "number": "01",
-          "title": "I map your current system",
-          "description": "I go through how your operations work today and where time is lost."
-        },
-        "step2": {
-          "number": "02",
-          "title": "I define what should be built",
-          "description": "You get a clear breakdown of what system would actually solve the problem."
-        },
-        "step3": {
-          "number": "03",
-          "title": "We decide if it is worth building",
-          "description": "No proposal, no commitment unless it makes sense."
-        }
-      }
     }
   },
   "services": {
     "metadata": {
-      "title": "Services: Internal Systems Engineering",
-      "description": "Internal systems, workflow automation, SaaS development, and systems audits. Real platforms, not templates."
+      "title": "Services: Custom Systems Engineering",
+      "description": "Operations systems, workflow automation, SaaS development, and systems audits. Real platforms, not templates."
     },
     "hero": {
       "badge": "Independent engineering practice",
@@ -377,13 +288,12 @@
           "Build-or-not recommendation"
         ],
         "whoFor": "Businesses experiencing friction in their operations.",
-        "cta": "Book a Systems Audit",
         "timeline": "1 session",
         "investment": "€300 (deducted if project proceeds)"
       },
       "development": {
         "id": "development",
-        "title": "Internal System",
+        "title": "Custom System",
         "subtitle": "The core build.",
         "description": "One system that shows where work is, what is blocked, and what needs to happen next. Built to replace fragmented tools and manual coordination.",
         "features": [
@@ -394,7 +304,6 @@
           "API integrations"
         ],
         "whoFor": "Teams running operations manually or outgrowing their current tools.",
-        "cta": "See how systems work",
         "timeline": "4-8 weeks",
         "investment": "Scope-dependent, defined after audit"
       },
@@ -411,7 +320,6 @@
           "Report generation"
         ],
         "whoFor": "Clients with a working system who need additional capabilities.",
-        "cta": "Explore extensions",
         "timeline": "2-4 weeks",
         "investment": "Scope-dependent, defined after audit"
       },
@@ -428,9 +336,8 @@
           "On-demand support"
         ],
         "whoFor": "Businesses that want a reliable technical partner without dependency.",
-        "cta": "Learn about ongoing support",
         "timeline": "Ongoing",
-        "investment": "From 290 euros per month"
+        "investment": "From 300 euros per month"
       }
     },
     "cards": {
@@ -453,16 +360,16 @@
       "deralis": {
         "title": "Deralis Digital",
         "items": [
-          "Custom code (Next.js, React, TypeScript)",
-          "Real databases (PostgreSQL, MySQL, MongoDB)",
-          "Full backend + API integrations",
+          "Custom code, written for your specific operation",
+          "Real databases that grow with your business",
+          "Full system: interface, logic, data, integrations",
           "Long-term technical partnership"
         ]
       }
     },
     "notSure": {
       "title": "Not sure where to start?",
-      "description": "Book a Systems Audit. I map your operation, identify the friction points, and define what to build. 300 euros, deducted if the project proceeds."
+      "description": "Start with the audit. I map your operation, you get a written brief, and we decide together if there is something worth building."
     },
     "faq": {
       "title": "Common questions",
@@ -470,10 +377,6 @@
         "cost": {
           "question": "How much does a typical project cost?",
           "answer": "Every system is different. Before quoting anything, I run a Systems Audit to map your operation and define what needs to be built. The audit costs 300 euros and produces a written brief. If the project proceeds, the 300 euros is deducted from the build cost."
-        },
-        "tech": {
-          "question": "What technologies do you work with?",
-          "answer": "My primary stack is Next.js, React, and TypeScript. I also work with PHP, Node.js, and databases including PostgreSQL, MySQL, and MongoDB."
         },
         "remote": {
           "question": "Do you work with clients outside of France?",
@@ -484,12 +387,6 @@
           "answer": "Absolutely. I audit the current state, identify issues, and propose a plan to move forward."
         }
       }
-    },
-    "proof": {
-      "text": "Built for the French equipment rental industry, <link>TraviXO</link> is a production SaaS platform that automates VGP compliance tracking across multi-tenant organizations, shipped and running."
-    },
-    "finalCta": {
-      "title": "Get your system mapped (€300)"
     }
   },
   "projects": {
@@ -500,7 +397,7 @@
     "hero": {
       "title": "My",
       "titleHighlight": "work",
-      "description": "Real systems I have built and deployed. Internal tools, SaaS platforms, and operational dashboards."
+      "description": "Real systems I have built and deployed. Operations tools, SaaS platforms, and operational dashboards."
     },
     "stats": {
       "delivered": "Platforms delivered",
@@ -536,8 +433,8 @@
       },
       "govPortal": {
         "title": "Government Application Portal",
-        "type": "Consular Services",
-        "description": "Passport intake MVP for a consular office in Paris. Replaces a paper-based intake process with a structured digital flow.",
+        "type": "Spec Pitch",
+        "description": "A passport intake MVP I built and pitched to a consular office. The trigger: I went through their process myself and noticed something broken. They asked for files I had already uploaded online, requiring an in-person trip that should not have been necessary. I built the digital flow that would have closed the gap, and proposed it directly after meeting in person. The proposal is currently with them.",
         "features": [
           "Application submission and tracking",
           "Staff review dashboard",
@@ -548,7 +445,7 @@
       "opsDashboard": {
         "title": "Deralis Ops Dashboard",
         "type": "Interactive Demo",
-        "description": "Interactive operations dashboard demo. Built to show prospects what a real internal system looks like before any build is discussed.",
+        "description": "Interactive operations dashboard demo. Built to show prospects what a real operations system looks like before any build is discussed.",
         "features": [
           "Live job table with status badges and priority flags",
           "KPI cards with animated issue alerts",
@@ -592,28 +489,24 @@
       }
     },
     "cta": {
-      "title": "Have a specific problem?",
+      "title": "Have a project that should look like one of these?",
       "description": "If you can describe what is breaking, I can describe what would fix it."
-    },
-    "finalCta": {
-      "title": "Get your system mapped (€300)",
-      "description": ""
     }
   },
   "about": {
     "metadata": {
       "title": "About: Independent Engineering Practice",
-      "description": "I build internal systems for operational businesses. Not websites. Not templates. Systems that show where work is, what is blocked, and what needs to happen next."
+      "description": "I build the systems established businesses need to keep working as they grow. Not websites. Not templates. Systems that show where work is, what is blocked, and what needs to happen next."
     },
     "hero": {
       "badge": "Independent engineering practice",
       "title": "About",
       "titleHighlight": "Deralis Digital",
-      "description": "I build internal systems for operational businesses."
+      "description": "I build the systems established businesses need to keep working as they grow."
     },
     "intro": {
-      "paragraph1": "Deralis Digital is an independent engineering practice. I build internal systems for businesses that are operational, profitable, and experiencing friction. Not websites. Not templates. Systems that show where work is, what is blocked, and what needs to happen next.",
-      "paragraph2": "Before Deralis, I worked inside equipment rental operations at Loxam and Ariane Systems. That experience produced TraviXO, a VGP compliance SaaS built specifically for the French equipment rental industry. It also shaped how I approach every client engagement: understand the operation before designing the solution."
+      "paragraph1": "Deralis Digital is an independent engineering practice. I work with profitable, operational businesses where the way information moves between people and tools has become the bottleneck. Not websites. Not templates. Systems that show where work is, what is blocked, and what needs to happen next.",
+      "paragraph2": "Before Deralis, I worked inside equipment rental operations at Loxam and Ariane Systems. That experience produced TraviXO, a VGP compliance SaaS built specifically for the French equipment rental industry. That experience taught me one thing that shapes every engagement: you cannot design a system for an operation you do not understand."
     },
     "philosophy": {
       "title": "My philosophy",
@@ -633,27 +526,27 @@
       "description": "I specialize in full-stack platform development.",
       "items": {
         "saas": {
-          "title": "SaaS Platforms",
-          "description": "Multi-tenant, subscription-ready, scalable applications."
+          "title": "Operations management systems",
+          "description": "Web-based systems your team can access from anywhere, with logins, permissions, and recurring billing if you need it."
         },
         "dashboards": {
-          "title": "Admin Dashboards",
-          "description": "Data-driven tools with secure authentication and role-based access."
+          "title": "Team dashboards",
+          "description": "One screen that shows the whole team where work is, what is blocked, and what needs attention. With proper logins and role-based visibility."
         },
         "databases": {
-          "title": "Database Systems",
-          "description": "PostgreSQL / Supabase architectures, migrations, and schema design."
+          "title": "Reliable data foundations",
+          "description": "The structured storage your operation needs, designed to grow with you and not lose data along the way."
         },
         "automation": {
-          "title": "Automation Workflows",
-          "description": "Integrations with APIs, webhooks, triggers, and automation tools."
+          "title": "Process automation",
+          "description": "Connecting your existing tools so information moves between them without anyone copy-pasting. Triggers, scheduled tasks, integrations."
         },
         "api": {
-          "title": "API Integrations",
-          "description": "Custom REST integrations, webhooks, OAuth, third-party systems."
+          "title": "Tool connections",
+          "description": "When two tools need to talk to each other but don't, I build the bridge."
         }
       },
-      "note": "Each platform I build is designed around clean engineering, not templates or pre-made components."
+      "note": "Each system I build is designed for the specific operation it serves. No templates. No copy-pasted solutions."
     },
     "howWeWork": {
       "title": "How I work",
@@ -661,28 +554,28 @@
       "steps": {
         "step1": {
           "number": "01",
-          "title": "Technical Discovery",
-          "description": "Understanding your system, workflows, and constraints."
+          "title": "Discovery",
+          "description": "I sit with you and walk through how your operation actually works today, where time gets lost, and where the breakage hurts most."
         },
         "step2": {
           "number": "02",
-          "title": "Architecture Design",
-          "description": "Database schema, API structure, core flows, security, scalability."
+          "title": "Design",
+          "description": "I sketch the system: what it does, what it shows, what happens when something goes wrong, how it grows with you."
         },
         "step3": {
           "number": "03",
-          "title": "Development",
-          "description": "Full-stack implementation using Next.js, React, TypeScript, Supabase."
+          "title": "Build",
+          "description": "I write the code, set up the database, and build the interface. You see it as it takes shape, not at the end."
         },
         "step4": {
           "number": "04",
-          "title": "Testing & Deployment",
-          "description": "Staging, QA, production deployment, environment setup."
+          "title": "Deploy",
+          "description": "I get it onto a live server, test it under real conditions, and walk you through how to use it."
         },
         "step5": {
           "number": "05",
-          "title": "Long-term Support",
-          "description": "Feature updates, monitoring, improvements, and scaling."
+          "title": "Support",
+          "description": "I am still around. Updates, fixes, additions, or a clean handover to another developer when you want one."
         }
       },
       "note": "This workflow ensures stable delivery and reduces time-to-production."
@@ -708,31 +601,27 @@
     },
     "principle": {
       "label": "Principle",
-      "text": "Engineering first. Everything else second."
+      "text": "No build begins without a shared definition of done. Getting there is the work that keeps you from paying for the wrong thing."
     },
     "whyChoose": {
       "title": "Why businesses choose Deralis Digital",
       "items": [
-        "Work directly with a senior engineer",
-        "Full-stack delivery: frontend, backend, database",
-        "Modern stack with long-term maintainability",
+        "You work directly with the person building it. No project manager, no junior handoff, no sales layer.",
+        "One person responsible for everything. The interface, the logic, the data, the deployment.",
+        "Built with current tools so the next developer who touches it can read it and continue.",
         "Professional codebases, not templates",
         "Clear communication and fast iteration",
         "No lock-in, full ownership"
       ],
-      "conclusion": "Deralis Digital is built for businesses that need real engineering, not web decoration."
+      "conclusion": "Deralis Digital is built for businesses that want their operation to run, not their software to impress."
     },
     "location": {
       "title": "Where I operate",
       "description": "Based in France. Working with clients worldwide."
     },
     "cta": {
-      "title": "Get your system mapped (€300)",
+      "title": "Want me to look at your operation?",
       "description": "Before anything is quoted, I map how your system actually works."
-    },
-    "finalCta": {
-      "title": "Get your system mapped (€300)",
-      "description": "contact@deralis.digital"
     }
   },
   "contact": {
@@ -764,7 +653,7 @@
         "placeholder": "Select a service",
         "options": {
           "consulting": "Systems Audit",
-          "development": "Internal System",
+          "development": "Custom System",
           "ai": "Extensions",
           "support": "Ongoing Support",
           "other": "Other, not sure"
@@ -774,8 +663,6 @@
         "label": "Budget range",
         "placeholder": "Select a range",
         "options": {
-          "under2k": "< €2,000",
-          "2k5k": "€2,000 to €5,000",
           "5k10k": "€5,000 to €10,000",
           "10k25k": "€10,000 to €25,000",
           "over25k": "> €25,000",
@@ -831,33 +718,8 @@
     }
   },
   "leadGen": {
-    "leadMagnet": {
-      "title": "Free: Web System Audit Checklist",
-      "description": "Download this 25-point checklist to evaluate if your business is ready for a modern web system.",
-      "items": [
-        "Performance & scalability assessment",
-        "Security & authentication review",
-        "Database architecture evaluation",
-        "Automation opportunity mapping"
-      ],
-      "placeholder": "Enter your email",
-      "cta": "Get it free",
-      "privacy": "No spam, ever. Unsubscribe anytime.",
-      "error": "Something went wrong. Please try again.",
-      "successTitle": "Check your inbox.",
-      "successDescription": "The checklist has been sent to your email. Check your spam folder if you don't see it."
-    },
-    "exitIntent": {
-      "title": "Wait, before you go",
-      "description": "Get a Systems Audit session. No commitment, no sales pitch.",
-      "benefit1": "Systems Audit session",
-      "benefit2": "No-obligation scope definition",
-      "benefit3": "Actionable recommendations you can keep",
-      "cta": "Book a Systems Audit",
-      "dismiss": "No thanks, I'll figure it out"
-    },
     "stickyCta": {
-      "text": "Get your system mapped"
+      "text": "Get your system mapped (€300)"
     },
     "newsletter": {
       "title": "Stay updated",
@@ -870,7 +732,7 @@
   "blog": {
     "metadata": {
       "title": "Blog: Engineering Insights & Case Studies",
-      "description": "Technical articles, case studies, and strategic insights on modern web development, SaaS platforms, and internal systems engineering."
+      "description": "Technical articles, case studies, and strategic insights on modern web development, SaaS platforms, and operations systems for established businesses."
     },
     "hero": {
       "title": "",
@@ -912,7 +774,7 @@
     "cta": {
       "title": "Have a project in mind?",
       "description": "Let's discuss how I can build the right system for your business.",
-      "button": "Book a Systems Audit"
+      "button": "Get your system mapped (€300)"
     }
   },
   "privacy": {

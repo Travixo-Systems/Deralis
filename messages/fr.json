@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": {
-      "default": "Deralis Digital: Je construis les systèmes internes dont les entreprises ont besoin pour fonctionner",
+      "default": "Deralis Digital: Je construis les systèmes dont les entreprises ont besoin pour fonctionner",
       "template": "%s: Deralis Digital"
     },
     "description": "La plupart des entreprises ont déjà des outils. Ce qui leur manque, c'est un système. Je construis le système qui règle ça."
@@ -9,7 +9,7 @@
   "common": {
     "brand": {
       "name": "Deralis Digital",
-      "tagline": "Je construis les systèmes internes dont les entreprises ont besoin pour fonctionner."
+      "tagline": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner."
     },
     "nav": {
       "home": "Accueil",
@@ -21,8 +21,6 @@
     },
     "actions": {
       "contact": "Cartographiez votre système (300 €)",
-      "startConversation": "Démarrer une conversation",
-      "buildYourSystem": "On construit ensemble",
       "seePlatforms": "Voir mes projets",
       "learnMore": "En savoir plus",
       "viewMore": "Voir plus",
@@ -60,7 +58,7 @@
       "completionRate": "Taux de réussite"
     },
     "footer": {
-      "tagline": "Je construis les systèmes internes dont les entreprises ont besoin pour fonctionner.",
+      "tagline": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
       "subtagline": "",
       "navigation": "Navigation",
       "services": "Services",
@@ -79,21 +77,15 @@
   "home": {
     "hero": {
       "badge": "Ingénierie indépendante",
-      "title": "Je construis les systèmes internes dont les entreprises ont besoin pour fonctionner.",
+      "title": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
       "titleLine2": "",
       "titleHighlight": "",
       "description": "Si votre équipe demande encore 'où en est ce dossier ?' vous n'avez pas de système.",
-      "descriptionLine2": "La plupart des entreprises ont déjà des outils. Ce qui leur manque, c'est un système.",
+      "descriptionLine2": "Les outils ne sont pas le problème. C'est la manière dont l'information circule entre eux qui l'est.",
       "descriptionLine3": "Des informations éparpillées, qui circulent de façon incohérente, et qui dépendent des personnes pour avancer.",
       "subDescription": "",
       "screenshotLabel": "TraviXO Systems : plateforme de conformité VGP que j'ai conçue (vue démo)",
-      "ctaSubtext": "Pour les entreprises déjà en activité. Pas pour les idées. Pas pour les sites vitrines.",
-      "features": {
-        "tech": "Next.js, React, TypeScript",
-        "database": "PostgreSQL, Supabase, Prisma",
-        "capabilities": "Tableaux de bord, SaaS, automatisation, APIs"
-      },
-      "stats": {}
+      "ctaSubtext": "Pour les entreprises dont le fonctionnement a dépassé les outils qui le tiennent. Pas pour les idées. Pas pour les sites vitrines."
     },
     "services": {
       "title": "Comment je",
@@ -110,7 +102,7 @@
           ]
         },
         "development": {
-          "title": "Système interne",
+          "title": "Système sur mesure",
           "description": "La construction principale. Un système unique qui montre où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite.",
           "features": [
             "Opérations centralisées",
@@ -149,7 +141,7 @@
     "clients": {
       "title": "Avec qui je",
       "titleHighlight": "travaille",
-      "description": "Des PME de 10 à 50 personnes, rentables, opérationnelles, et confrontées à des frictions.",
+      "description": "Je travaille avec des entreprises établies dont le fonctionnement a dépassé les outils qui le tiennent. La personne qui peut décider d'y remédier fait partie de l'échange.",
       "items": {
         "startups": {
           "title": "Des équipes qui gèrent tout à la main",
@@ -215,8 +207,8 @@
       "projects": {
         "govPortal": {
           "title": "Portail de demandes gouvernementales",
-          "type": "Services consulaires",
-          "description": "MVP de traitement des demandes de passeport pour un bureau consulaire à Paris. Remplace un processus papier par un flux numérique structuré."
+          "type": "Proposition spec",
+          "description": "Un MVP de prise en charge de demandes de passeport que j'ai construit et proposé à un bureau consulaire après avoir vécu leur processus moi-même. La frustration : des fichiers déjà téléversés en ligne, qu'on me demandait ensuite d'apporter physiquement. J'ai construit le flux numérique qui aurait rendu le déplacement inutile, et je l'ai proposé directement."
         },
         "travixo": {
           "title": "TraviXO Systems",
@@ -241,12 +233,12 @@
       "description": "Un système interne utilisé au quotidien pour suivre les équipements et gérer la conformité, en remplacement de la coordination manuelle au sein de l'équipe. Utilisé comme un vrai outil opérationnel, pas un prototype.",
       "detailedDescription": "Construit et déployé comme un vrai système opérationnel, pas un template ou une maquette.",
       "features": [
-        "Architecture SaaS multi-tenant",
-        "Suivi d'actifs par QR code",
-        "Planification des inspections",
-        "Automatisation de la conformité VGP",
-        "Contrôle d'accès basé sur les rôles",
-        "Base de données PostgreSQL en temps réel"
+        "Chaque société de location ne voit que ses propres équipements et sa propre équipe",
+        "Un QR code sur chaque machine, scanné au téléphone, statut mis à jour en quelques secondes",
+        "Échéances d'inspection suivies automatiquement, aucune date manquée",
+        "Registre de conformité VGP généré et prêt pour les inspecteurs à tout moment",
+        "Chaque membre de l'équipe ne voit que ce qu'il doit voir, rien de plus",
+        "Toutes les données stockées en sécurité et accessibles en temps réel"
       ],
       "actions": {
         "visitWebsite": "Visiter le site",
@@ -260,7 +252,7 @@
       "items": {
         "clients": {
           "question": "Avec quels types d'entreprises travaillez-vous ?",
-          "answer": "Des PME de 10 à 50 personnes, rentables et opérationnelles, qui rencontrent des frictions dans leur fonctionnement. Si l'entreprise est en phase de démarrage ou que ses processus ne sont pas encore stabilisés, le moment n'est pas le bon."
+          "answer": "Des entreprises établies dont le fonctionnement a dépassé les outils qui le tiennent. Le déclencheur est généralement une perte de contrôle, de visibilité ou de fluidité. Si l'entreprise est en phase de démarrage ou que ses processus ne sont pas encore stabilisés, le moment n'est pas le bon."
         },
         "audit": {
           "question": "En quoi consiste l'audit système ?",
@@ -276,7 +268,7 @@
         },
         "timeline": {
           "question": "Combien de temps dure un projet ?",
-          "answer": "Cela dépend du périmètre. Un système interne ciblé prend généralement quatre à huit semaines. Un développement SaaS complet prend huit à douze semaines. Rien ne commence sans un périmètre écrit et un acompte."
+          "answer": "Cela dépend du périmètre. Un système opérationnel ciblé prend généralement quatre à huit semaines. Un développement SaaS complet prend huit à douze semaines. Rien ne commence sans un périmètre écrit et un acompte."
         },
         "afterBuild": {
           "question": "Que se passe-t-il après la livraison ?",
@@ -290,97 +282,16 @@
       "note": "Un autre développeur peut reprendre sans tout reconstruire."
     },
     "trustBar": {
-      "item1": "Chaque projet livré",
+      "item1": "Tous livrés",
       "item2": "Communication directe",
       "item3": "Français et Anglais",
       "item4": "Plateformes livrées"
-    },
-    "socialProof": {
-      "title": "Conçu pour de",
-      "titleHighlight": "vraies opérations",
-      "description": "Les systèmes que je construis remplacent le travail manuel par des processus structurés et visibles.",
-      "metric1": {
-        "value": "",
-        "label": "De l'idée au système fonctionnel"
-      },
-      "metric2": {
-        "value": "",
-        "label": "Pas de templates, pas de dépendance"
-      },
-      "metric3": {
-        "value": "",
-        "label": "Code propre, documentation complète"
-      },
-      "metric4": {
-        "value": "",
-        "label": "Conçu pour la production"
-      },
-      "testimonial1": {
-        "quote": "A construit notre plateforme SaaS de A à Z. Gère des milliers d'équipements en multi-tenant.",
-        "name": "Secteur location d'équipements",
-        "role": "",
-        "initials": "ER"
-      },
-      "testimonial2": {
-        "quote": "",
-        "name": "",
-        "role": "",
-        "initials": ""
-      },
-      "testimonial3": {
-        "quote": "",
-        "name": "",
-        "role": "",
-        "initials": ""
-      }
-    },
-    "roiCalculator": {
-      "title": "Combien vous coûte le",
-      "titleHighlight": "travail manuel ?",
-      "description": "Estimez combien de temps et d'argent votre fonctionnement actuel vous fait perdre chaque mois.",
-      "projectTypeLabel": "Que construisez-vous ?",
-      "types": {
-        "saas": "Plateforme SaaS",
-        "dashboard": "Tableau de bord",
-        "automation": "Automatisation",
-        "mvp": "MVP / Prototype"
-      },
-      "revenueLabel": "Revenu ou économies mensuelles estimées",
-      "calculate": "Calculer le ROI",
-      "timeline": "Délai estimé",
-      "weeks": "semaines",
-      "roiMultiplier": "Multiplicateur ROI",
-      "projectedValue": "Valeur annuelle projetée",
-      "perYear": "/ an",
-      "disclaimer": "Estimations basées sur les moyennes du secteur. Les résultats réels varient selon le projet."
-    },
-    "whatHappensNext": {
-      "title": "Ce qui se passe",
-      "titleHighlight": "ensuite",
-      "description": "Trois étapes, sans surprise.",
-      "steps": {
-        "step1": {
-          "number": "01",
-          "title": "Je cartographie votre système actuel",
-          "description": "Je passe en revue le fonctionnement de vos opérations et les endroits où du temps est perdu."
-        },
-        "step2": {
-          "number": "02",
-          "title": "Je définis ce qu'il faut construire",
-          "description": "Vous recevez un découpage clair du système qui résoudrait vraiment le problème."
-        },
-        "step3": {
-          "number": "03",
-          "title": "On décide si ça vaut le coup",
-          "description": "Pas de devis, pas d'engagement tant que ça n'a pas de sens."
-        }
-      }
     }
   },
   "services": {
     "metadata": {
-      "title": "Services: Ingénierie des systèmes internes",
-      "description": "Systèmes internes, automatisation des flux, développement SaaS et audits système. De vraies plateformes, pas des templates."
+      "title": "Services : Ingénierie des systèmes opérationnels",
+      "description": "Systèmes sur mesure, automatisation des flux, développement SaaS et audits système. De vraies plateformes, pas des templates."
     },
     "hero": {
       "badge": "Ingénierie indépendante",
@@ -405,13 +316,12 @@
           "Recommandation construire ou non"
         ],
         "whoFor": "Entreprises confrontées à des frictions dans leur fonctionnement.",
-        "cta": "Réserver un audit système",
         "timeline": "1 session",
         "investment": "300 € (déduit si le projet est lancé)"
       },
       "development": {
         "id": "development",
-        "title": "Système interne",
+        "title": "Système sur mesure",
         "subtitle": "La construction principale.",
         "description": "Un système unique qui montre où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite. Conçu pour remplacer les outils fragmentés et la coordination manuelle.",
         "features": [
@@ -419,12 +329,11 @@
           "Bases de données SQL (PostgreSQL, MySQL)",
           "Intégrations API (REST, webhooks, OAuth)",
           "Systèmes d'authentification et permissions",
-          "Tableaux de bord et outils internes",
+          "Tableaux de bord et outils opérationnels",
           "Architecture maintenable (Prisma, Supabase)"
         ],
         "whoFor": "Équipes qui gèrent leurs opérations manuellement ou qui dépassent leurs outils actuels.",
         "note": "Si la demande est uniquement une page statique HTML/CSS, ce n'est pas mon cœur de métier.",
-        "cta": "Voir comment ça fonctionne",
         "timeline": "4-8 semaines",
         "investment": "Selon le périmètre, défini après l'audit"
       },
@@ -442,7 +351,6 @@
           "Extensions fonctionnelles sur mesure"
         ],
         "whoFor": "Clients avec un système fonctionnel qui ont besoin de capacités supplémentaires.",
-        "cta": "Explorer les extensions",
         "timeline": "2-4 semaines",
         "investment": "Selon le périmètre, défini après l'audit"
       },
@@ -460,9 +368,8 @@
           "Support technique sur demande"
         ],
         "whoFor": "Entreprises qui veulent un partenaire technique fiable sans dépendance.",
-        "cta": "En savoir plus sur le suivi",
         "timeline": "Continu",
-        "investment": "À partir de 290 euros par mois"
+        "investment": "À partir de 300 euros par mois"
       }
     },
     "cards": {
@@ -485,16 +392,16 @@
       "deralis": {
         "title": "Approche Deralis Digital",
         "items": [
-          "Code sur mesure (Next.js, React, TypeScript)",
-          "Vraies bases de données (PostgreSQL, MySQL, MongoDB)",
-          "Backend complet + intégrations API",
-          "Partenariat technique inscrit dans la durée"
+          "Code sur mesure, écrit pour votre fonctionnement spécifique",
+          "Vraies bases de données qui grandissent avec votre activité",
+          "Système complet : interface, logique, données, intégrations",
+          "Partenariat technique de long terme"
         ]
       }
     },
     "notSure": {
       "title": "Vous ne savez pas par où commencer ?",
-      "description": "Réservez un audit système. Je cartographie votre fonctionnement, identifie les points de friction, et définis ce qu'il faut construire. 300 euros, déduits si le projet est lancé."
+      "description": "Commencez par l'audit. Je cartographie votre fonctionnement, vous recevez un brief écrit, et nous décidons ensemble s'il y a quelque chose à construire."
     },
     "faq": {
       "title": "Questions fréquentes",
@@ -502,10 +409,6 @@
         "cost": {
           "question": "Combien coûte un projet typique ?",
           "answer": "Tout dépend de ce qui doit être construit. Avant de chiffrer quoi que ce soit, je mène un audit système pour comprendre le problème, définir le périmètre et confirmer la bonne approche. Cet audit coûte 300 euros et se termine par un brief écrit : quoi construire, pourquoi, et combien ça coûte. Rien n'est chiffré avant cette conversation."
-        },
-        "tech": {
-          "question": "Quelles technologies utilisez-vous ?",
-          "answer": "Ma stack principale est basée sur Next.js, React et TypeScript. Je travaille aussi avec PHP, Node.js et des bases comme PostgreSQL, MySQL et MongoDB lorsque c'est pertinent."
         },
         "remote": {
           "question": "Travaillez-vous avec des clients hors de France ?",
@@ -516,12 +419,6 @@
           "answer": "Oui. J'audite l'existant, identifie les points bloquants et propose un plan pour remettre le projet sur de bons rails."
         }
       }
-    },
-    "proof": {
-      "text": "Conçu pour le secteur de la location d'équipements en France, <link>TraviXO</link> est une plateforme SaaS en production qui automatise le suivi de conformité VGP pour des organisations multi-sites, livré et opérationnel."
-    },
-    "finalCta": {
-      "title": "Cartographiez votre système (300 €)"
     }
   },
   "projects": {
@@ -532,7 +429,7 @@
     "hero": {
       "title": "Mes",
       "titleHighlight": "réalisations",
-      "description": "Des systèmes réels que j'ai construits et déployés. Outils internes, plateformes SaaS et tableaux de bord opérationnels."
+      "description": "Des systèmes réels que j'ai construits et déployés. Outils opérationnels, plateformes SaaS et tableaux de bord."
     },
     "stats": {
       "delivered": "Plateformes livrées",
@@ -568,8 +465,8 @@
       },
       "govPortal": {
         "title": "Portail de demandes gouvernementales",
-        "type": "Services consulaires",
-        "description": "MVP de traitement des demandes de passeport pour un bureau consulaire à Paris. Remplace un processus papier par un flux numérique structuré.",
+        "type": "Proposition spec",
+        "description": "Un MVP de prise en charge de demandes de passeport que j'ai construit et proposé à un bureau consulaire. Le déclencheur : j'ai vécu leur processus moi-même et j'ai remarqué quelque chose de cassé. Ils me demandaient des fichiers que j'avais déjà téléversés en ligne, exigeant un déplacement qui n'aurait pas dû être nécessaire. J'ai construit le flux numérique qui aurait comblé l'écart, et je l'ai proposé directement après une rencontre en personne. La proposition est actuellement entre leurs mains.",
         "features": [
           "Soumission et suivi des demandes",
           "Tableau de bord pour le personnel",
@@ -580,7 +477,7 @@
       "opsDashboard": {
         "title": "Tableau de bord Deralis Ops",
         "type": "Démo interactive",
-        "description": "Démo de tableau de bord opérationnel interactif. Construit pour montrer aux prospects à quoi ressemble un vrai système interne.",
+        "description": "Démo de tableau de bord opérationnel interactif. Construit pour montrer aux prospects à quoi ressemble un vrai système opérationnel.",
         "features": [
           "Tableau des missions avec badges de statut et priorité",
           "Cartes KPI avec alertes animées",
@@ -624,32 +521,28 @@
       }
     },
     "cta": {
-      "title": "Vous avez un problème précis ?",
+      "title": "Vous avez un projet qui devrait ressembler à l'un de ceux-ci ?",
       "description": "Si vous pouvez décrire ce qui ne fonctionne pas, je peux décrire ce qui le résoudra."
-    },
-    "finalCta": {
-      "title": "Cartographiez votre système (300 €)",
-      "description": ""
     }
   },
   "about": {
     "metadata": {
       "title": "À propos: Cabinet d'ingénierie indépendant",
-      "description": "Je construis des systèmes internes pour les entreprises opérationnelles. Pas des sites web. Pas des templates."
+      "description": "Je construis les systèmes dont les entreprises établies ont besoin pour continuer à fonctionner en grandissant. Pas des sites web. Pas des templates."
     },
     "hero": {
       "badge": "Cabinet d'ingénierie indépendant",
       "title": "À propos de",
       "titleHighlight": "Deralis Digital",
-      "description": "Je construis des systèmes internes pour les entreprises opérationnelles."
+      "description": "Je construis les systèmes dont les entreprises établies ont besoin pour continuer à fonctionner en grandissant."
     },
     "intro": {
-      "paragraph1": "Deralis Digital est une pratique d'ingénierie indépendante. Je construis des systèmes internes pour les entreprises opérationnelles, rentables et confrontées à des frictions. Pas des sites web. Pas des templates. Des systèmes qui montrent où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite.",
-      "paragraph2": "Avant Deralis, j'ai travaillé dans le secteur de la location de matériel, chez Loxam et Ariane Systems. Cette expérience a donné naissance à TraviXO, un SaaS de conformité VGP conçu pour le secteur français de la location de matériel. Elle a aussi façonné mon approche de chaque mission client : comprendre le fonctionnement avant de concevoir la solution."
+      "paragraph1": "Deralis Digital est un cabinet d'ingénierie indépendant. Je travaille avec des entreprises rentables et opérationnelles, où la circulation de l'information entre les personnes et les outils est devenue le goulot d'étranglement. Pas des sites web. Pas des templates. Des systèmes qui montrent où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite.",
+      "paragraph2": "Avant Deralis, j'ai travaillé dans le secteur de la location de matériel, chez Loxam et Ariane Systems. Cette expérience a donné naissance à TraviXO, un SaaS de conformité VGP conçu pour le secteur français de la location de matériel. Cette expérience m'a appris une chose qui guide chaque mission : on ne peut pas concevoir un système pour un fonctionnement qu'on ne comprend pas."
     },
     "philosophy": {
       "title": "Ma philosophie",
-      "subtitle": "Le système doit fonctionner sans vous.",
+      "subtitle": "Le système doit survivre sans vous.",
       "systemsTitle": "Des systèmes qui :",
       "systems": [
         "Stockent et structurent les données de manière fiable",
@@ -665,27 +558,27 @@
       "description": "Je me concentre sur le développement de plateformes full-stack, utiles et exploitables en conditions réelles.",
       "items": {
         "saas": {
-          "title": "Plateformes SaaS",
-          "description": "Applications accessibles en ligne, multi-utilisateurs, prêtes pour la facturation récurrente."
+          "title": "Systèmes de gestion opérationnelle",
+          "description": "Des systèmes web accessibles partout par votre équipe, avec connexions, droits d'accès et facturation récurrente si vous en avez besoin."
         },
         "dashboards": {
-          "title": "Tableaux de bord admin",
-          "description": "Outils pilotés par les données, avec authentification et droits d'accès par rôle."
+          "title": "Tableaux de bord pour équipes",
+          "description": "Un écran unique qui montre à toute l'équipe où en est le travail, ce qui est bloqué et ce qui demande attention. Avec connexions et visibilité par rôle."
         },
         "databases": {
-          "title": "Systèmes de bases de données",
-          "description": "Architecture PostgreSQL / Supabase, migrations et conception de schémas solides."
+          "title": "Fondations de données fiables",
+          "description": "Le stockage structuré dont votre fonctionnement a besoin, conçu pour grandir avec vous sans perdre d'information en chemin."
         },
         "automation": {
-          "title": "Workflows d'automatisation",
-          "description": "Connexions entre outils, APIs, webhooks et automatisations pour réduire le travail manuel."
+          "title": "Automatisation des processus",
+          "description": "Connecter vos outils existants pour que l'information circule sans copier-coller. Déclencheurs, tâches planifiées, intégrations."
         },
         "api": {
-          "title": "Intégrations API",
-          "description": "Connexions sur mesure avec des APIs (REST, webhooks, OAuth, services tiers)."
+          "title": "Connexions entre outils",
+          "description": "Quand deux outils doivent communiquer mais ne le font pas, je construis le pont."
         }
       },
-      "note": "Chaque plateforme que je construis repose sur un socle technique propre et maîtrisé, pas sur des modèles préfabriqués."
+      "note": "Chaque système que je construis est conçu pour le fonctionnement précis qu'il sert. Pas de templates. Pas de solutions copiées-collées."
     },
     "howWeWork": {
       "title": "Comment je travaille",
@@ -693,28 +586,28 @@
       "steps": {
         "step1": {
           "number": "01",
-          "title": "Découverte technique",
-          "description": "Comprendre votre activité, vos processus, vos outils actuels et vos contraintes."
+          "title": "Découverte",
+          "description": "Je m'assois avec vous et passe en revue comment votre fonctionnement marche aujourd'hui, où le temps se perd, et où la casse fait le plus mal."
         },
         "step2": {
           "number": "02",
-          "title": "Conception d'architecture",
-          "description": "Définition du schéma de base de données, de la structure API, des flux principaux, de la sécurité et de l'évolutivité."
+          "title": "Conception",
+          "description": "Je dessine le système : ce qu'il fait, ce qu'il montre, ce qui se passe quand quelque chose va mal, comment il grandit avec vous."
         },
         "step3": {
           "number": "03",
-          "title": "Développement",
-          "description": "Mise en oeuvre full-stack avec Next.js, React, TypeScript, Supabase et outils associés."
+          "title": "Construction",
+          "description": "J'écris le code, je configure la base de données, je construis l'interface. Vous le voyez prendre forme, pas seulement à la fin."
         },
         "step4": {
           "number": "04",
-          "title": "Tests et déploiement",
-          "description": "Environnement de test, vérifications, puis déploiement en production et configuration de l'infrastructure."
+          "title": "Déploiement",
+          "description": "Je le mets en ligne, je le teste en conditions réelles, et je vous montre comment l'utiliser."
         },
         "step5": {
           "number": "05",
-          "title": "Support dans la durée",
-          "description": "Ajout de fonctionnalités, suivi, améliorations et montée en charge au fur et à mesure que votre usage grandit."
+          "title": "Suivi",
+          "description": "Je reste là. Mises à jour, corrections, ajouts, ou une passation propre à un autre développeur quand vous le souhaitez."
         }
       },
       "note": "Ce processus limite les surprises, sécurise la mise en production et réduit le risque de réécriture complète plus tard."
@@ -740,31 +633,27 @@
     },
     "principle": {
       "label": "Principe",
-      "text": "Engineering d'abord. Le reste ensuite."
+      "text": "Aucun projet ne commence sans une définition partagée de ce qui est terminé. Y arriver est le travail qui vous évite de payer pour la mauvaise chose."
     },
     "whyChoose": {
       "title": "Pourquoi choisir Deralis Digital",
       "items": [
-        "Travaillez directement avec un ingénieur senior",
-        "Livraison complète : frontend, backend, base de données",
-        "Stack moderne avec maintenabilité long terme",
+        "Vous travaillez directement avec la personne qui construit. Pas de chef de projet, pas de transfert vers un junior, pas de couche commerciale.",
+        "Une seule personne responsable de tout. L'interface, la logique, les données, le déploiement.",
+        "Construit avec des outils actuels pour que le prochain développeur qui y touche puisse le lire et continuer.",
         "Code professionnel, pas de templates",
         "Communication claire et itérations rapides",
         "Pas de dépendance, propriété totale"
       ],
-      "conclusion": "Deralis Digital est conçu pour les entreprises qui ont besoin d'ingénierie, pas de décoration web."
+      "conclusion": "Deralis Digital est conçu pour les entreprises qui veulent que leur fonctionnement tourne, pas que leur logiciel impressionne."
     },
     "location": {
       "title": "Où je travaille",
       "description": "Basé en France, en collaboration avec des clients en France et à l'étranger."
     },
     "cta": {
-      "title": "Cartographiez votre système (300 €)",
+      "title": "Vous voulez que je regarde votre fonctionnement ?",
       "description": "Avant tout devis, je cartographie le fonctionnement réel de votre système."
-    },
-    "finalCta": {
-      "title": "Cartographiez votre système (300 €)",
-      "description": "contact@deralis.digital"
     }
   },
   "contact": {
@@ -796,7 +685,7 @@
         "placeholder": "Sélectionnez un service",
         "options": {
           "consulting": "Audit système",
-          "development": "Système interne",
+          "development": "Système sur mesure",
           "ai": "Extensions",
           "support": "Suivi continu",
           "other": "Autre, pas sûr"
@@ -806,8 +695,6 @@
         "label": "Fourchette de budget",
         "placeholder": "Sélectionnez une fourchette",
         "options": {
-          "under2k": "< 2 000 €",
-          "2k5k": "2 000 € à 5 000 €",
           "5k10k": "5 000 € à 10 000 €",
           "10k25k": "10 000 € à 25 000 €",
           "over25k": "> 25 000 €",
@@ -863,31 +750,6 @@
     }
   },
   "leadGen": {
-    "leadMagnet": {
-      "title": "Gratuit : Checklist d'audit système web",
-      "description": "Téléchargez cette checklist en 25 points pour évaluer si votre entreprise est prête pour un système web moderne.",
-      "items": [
-        "Évaluation performance et passage à l'échelle",
-        "Revue sécurité et authentification",
-        "Évaluation architecture base de données",
-        "Cartographie des opportunités d'automatisation"
-      ],
-      "placeholder": "Votre email",
-      "cta": "Télécharger",
-      "privacy": "Aucun spam. Désabonnement à tout moment.",
-      "error": "Une erreur est survenue. Veuillez réessayer.",
-      "successTitle": "Vérifiez votre boîte mail.",
-      "successDescription": "La checklist a été envoyée à votre email. Vérifiez vos spams si besoin."
-    },
-    "exitIntent": {
-      "title": "Attendez, avant de partir",
-      "description": "Réservez un audit système pour 300 euros. Déduit si le projet est lancé.",
-      "benefit1": "Cartographie du fonctionnement actuel",
-      "benefit2": "Identification des points de friction",
-      "benefit3": "Brief écrit avec recommandations",
-      "cta": "Réserver un audit système",
-      "dismiss": "Non merci"
-    },
     "stickyCta": {
       "text": "Cartographiez votre système (300 €)"
     },
@@ -902,7 +764,7 @@
   "blog": {
     "metadata": {
       "title": "Blog: Réflexions techniques et études de cas",
-      "description": "Articles techniques, études de cas et réflexions sur le développement web moderne, les plateformes SaaS et les systèmes internes."
+      "description": "Articles techniques, études de cas et réflexions sur le développement web moderne, les plateformes SaaS et les systèmes opérationnels pour entreprises établies."
     },
     "hero": {
       "title": "",
@@ -944,7 +806,7 @@
     "cta": {
       "title": "Un projet en tête ?",
       "description": "Discutons de ce qu'il faut construire pour votre entreprise.",
-      "button": "Réserver un audit système"
+      "button": "Cartographiez votre système (300 €)"
     }
   },
   "privacy": {

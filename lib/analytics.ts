@@ -34,13 +34,6 @@ export const analytics = {
       source,
     }),
 
-  leadMagnetDownload: (magnetName: string, source: string) =>
-    trackEvent("generate_lead", {
-      method: "lead_magnet",
-      magnet_name: magnetName,
-      source,
-    }),
-
   // Engagement events
   ctaClick: (ctaName: string, location: string) =>
     trackEvent("cta_click", {

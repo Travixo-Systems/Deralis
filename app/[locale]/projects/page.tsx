@@ -368,7 +368,7 @@ export default function ProjectsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <CalendlyButton className="btn-primary">
-              {tActions("buildYourSystem")}
+              {tActions("bookCall")}
               <ArrowRight className="w-4 h-4" />
             </CalendlyButton>
             <Link href="/services" className="btn-secondary">
@@ -378,25 +378,6 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-8 border-t border-[var(--dd-border)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div>
-              <p className="text-[var(--dd-text-main)] font-semibold">
-                {t("finalCta.title")}
-              </p>
-              <p className="text-sm text-[var(--dd-text-muted)]">
-                {t("finalCta.description")}
-              </p>
-            </div>
-            <CalendlyButton className="btn-primary">
-              {tActions("speakToEngineer")}
-              <ArrowRight className="w-4 h-4" />
-            </CalendlyButton>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

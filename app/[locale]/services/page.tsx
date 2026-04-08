@@ -167,13 +167,12 @@ export default function ServicesPage() {
                       ))}
                     </ul>
 
-                    <Link
-                      href={`/contact?service=${key}`}
-                      className="btn-primary inline-flex"
-                    >
-                      {t(`items.${key}.cta`)}
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    {key === "consulting" && (
+                      <CalendlyButton className="btn-primary inline-flex">
+                        {tActions("bookCall")}
+                        <ArrowRight className="w-4 h-4" />
+                      </CalendlyButton>
+                    )}
                   </div>
 
                   {/* Card */}
@@ -288,7 +287,7 @@ export default function ServicesPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              mainEntity: (["cost", "tech", "remote", "takeover"] as const).map((key) => ({
+              mainEntity: (["cost", "remote", "takeover"] as const).map((key) => ({
                 "@type": "Question",
                 name: t(`faq.items.${key}.question`),
                 acceptedAnswer: {
@@ -304,7 +303,7 @@ export default function ServicesPage() {
             {t("faq.title")}
           </h2>
           <div className="space-y-3">
-            {(["cost", "tech", "remote", "takeover"] as const).map((key) => (
+            {(["cost", "remote", "takeover"] as const).map((key) => (
               <div
                 key={key}
                 className="p-4 rounded-xl bg-[var(--dd-bg)] border border-[var(--dd-border)]"
@@ -321,32 +320,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Proof + Final CTA */}
-      <section className="py-8 border-t border-[var(--dd-border)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <p className="text-sm text-[var(--dd-text-muted)] max-w-2xl mx-auto mb-6">
-            {t.rich("proof.text", {
-              link: (chunks) => (
-                <a
-                  href="https://travixosystems.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--dd-accent)] hover:underline font-medium"
-                >
-                  {chunks}
-                </a>
-              ),
-            })}
-          </p>
-          <p className="text-[var(--dd-text-muted)] mb-3">
-            {t("finalCta.title")}
-          </p>
-          <CalendlyButton className="btn-primary">
-            {tActions("bookCall")}
-            <ArrowRight className="w-4 h-4" />
-          </CalendlyButton>
-        </div>
-      </section>
     </>
   );
 }
