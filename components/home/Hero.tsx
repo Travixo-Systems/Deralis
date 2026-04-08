@@ -114,7 +114,7 @@ export default function Hero() {
                   {tActions("bookCall")}
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <Link href="/services" className="text-sm text-[var(--dd-accent)] hover:underline inline-flex items-center gap-1">
+                <Link href="/projects" className="text-sm text-[var(--dd-accent)] hover:underline inline-flex items-center gap-1">
                   {tActions("seePlatforms")}
                   <ArrowRight className="w-3 h-3" />
                 </Link>

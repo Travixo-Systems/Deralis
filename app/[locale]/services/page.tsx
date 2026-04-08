@@ -10,7 +10,6 @@ import {
   Bot,
   Settings,
   CheckCircle2,
-  Users,
   Clock,
   Target,
   X,
@@ -46,7 +45,6 @@ export default function ServicesPage() {
   const tStats = useTranslations("common.stats");
 
   const stats = [
-    { icon: Users, value: "6+", label: tStats("platformsShippedShort"), sublabel: tStats("platformsSublabel") },
     { icon: Clock, value: "", label: tStats("responseTimeShort"), sublabel: tStats("responseSublabel") },
     { icon: Target, value: "", label: tStats("deliveryRateShort"), sublabel: tStats("deliverySublabel") },
   ];
@@ -87,7 +85,7 @@ export default function ServicesPage() {
       {/* Stats Bar */}
       <section className="py-6 border-y border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 gap-6">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="flex items-center justify-center gap-2 mb-1">
