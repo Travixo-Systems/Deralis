@@ -37,7 +37,6 @@ const techStack = {
 export default function AboutPage() {
   const t = useTranslations("about");
   const tActions = useTranslations("common.actions");
-  const tHomeStats = useTranslations("home.hero.stats");
 
   const whatWeBuildKeys = ["saas", "dashboards", "databases", "automation", "api"] as const;
   const stepKeys = ["step1", "step2", "step3", "step4", "step5"] as const;
@@ -47,55 +46,17 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-10 bg-mesh">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
-              <p className="text-sm text-[var(--dd-accent)] font-medium mb-3 whitespace-nowrap">
-                {t("hero.badge")}
-              </p>
+          <p className="text-sm text-[var(--dd-accent)] font-medium mb-3 whitespace-nowrap">
+            {t("hero.badge")}
+          </p>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dd-text-main)] mb-4">
-                {t("hero.title")}{" "}
-                <span className="gradient-text">{t("hero.titleHighlight")}</span>
-              </h1>
-              <p className="text-lg text-[var(--dd-text-muted)] mb-4 leading-relaxed">
-                {t("hero.description")}
-              </p>
-            </div>
-
-            {/* Stats Card */}
-            <div className="gradient-border p-6">
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">{tHomeStats("platforms.value")}</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">{tHomeStats("platforms.label")}</p>
-                  <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    {tHomeStats("platforms.sublabel")}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">{tHomeStats("delivery.value")}</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">{tHomeStats("delivery.label")}</p>
-                  <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    {tHomeStats("delivery.sublabel")}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">{tHomeStats("response.value")}</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">{tHomeStats("response.label")}</p>
-                  <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    {tHomeStats("response.sublabel")}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold gradient-text mb-1">{tHomeStats("bilingual.value")}</p>
-                  <p className="text-sm text-[var(--dd-text-muted)]">{tHomeStats("bilingual.label")}</p>
-                  <p className="text-xs text-[var(--dd-text-dim)] mt-1">
-                    {tHomeStats("bilingual.sublabel")}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dd-text-main)] mb-4">
+            {t("hero.title")}{" "}
+            <span className="gradient-text">{t("hero.titleHighlight")}</span>
+          </h1>
+          <p className="text-lg text-[var(--dd-text-muted)] mb-4 leading-relaxed max-w-2xl">
+            {t("hero.description")}
+          </p>
         </div>
       </section>
 
