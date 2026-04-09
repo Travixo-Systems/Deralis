@@ -405,7 +405,10 @@
         "context": "Secteur public · MVP de prise en charge de passeports · Entre les mains de l'acheteur",
         "prose1": "Un MVP de prise en charge des demandes de passeport que j'ai construit et proposé à un bureau consulaire parisien après avoir vécu leur processus moi-même. Leur flux existant exigeait un déplacement en personne pour des fichiers que j'avais déjà téléversés en ligne. L'écart entre ce que le système pouvait faire et ce que l'équipe était obligée de faire se voyait depuis la salle d'attente.",
         "prose2": "J'ai construit le flux numérique qui aurait comblé cet écart, et je l'ai proposé directement. La proposition est actuellement entre leurs mains.",
-        "note": "Proposition spec. Pas une mission livrée. Le statut sera mis à jour quand l'acheteur répondra."
+        "note": "Proposition spec. Pas une mission livrée. Le statut sera mis à jour quand l'acheteur répondra.",
+        "screenshot": {
+          "alt": "Flux de prise en charge du Portail de demandes gouvernementales montrant la soumission de documents et le suivi de statut"
+        }
       },
       "concepts": {
         "eyebrow": "Démos",
@@ -1204,6 +1207,20 @@
             "label": "Outillage",
             "items": "Git, GitHub, Claude Code"
           }
+        }
+      },
+      "screenshots": {
+        "lead": {
+          "alt": "Vue d’ensemble du tableau de bord de conformité TraviXO Systems"
+        },
+        "equipmentRegister": {
+          "alt": "Vue de la flotte d’équipements TraviXO avec suivi d’état en temps réel et filtres par catégorie"
+        },
+        "inspectionWorkflow": {
+          "alt": "Suivi d’actifs par QR code TraviXO pour l’identification lors des inspections terrain"
+        },
+        "dashboard": {
+          "alt": "Tableau de bord principal de TraviXO montrant la liste du matériel, le statut de conformité et les inspections à venir"
         }
       }
     }

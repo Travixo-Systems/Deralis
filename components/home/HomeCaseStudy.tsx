@@ -1,8 +1,10 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 
 export default function HomeCaseStudy() {
   const t = useTranslations("home.page.casestudy");
+  const tScreenshots = useTranslations("projectDetail.travixo.screenshots");
 
   return (
     <section className="border-t border-border-default py-[52px] pb-[44px] max-md:py-[42px] max-md:pb-[34px]">
@@ -30,11 +32,14 @@ export default function HomeCaseStudy() {
           </Link>
         </div>
 
-        {/* Screenshot placeholder */}
-        <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden aspect-[16/10] casestudy-shadow flex items-center justify-center">
-          <p className="text-[13px] text-ink-3">
-            TraviXO dashboard screenshot
-          </p>
+        <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden casestudy-shadow">
+          <Image
+            src="/projects/travixo/travixo-dashboard.png"
+            alt={tScreenshots("dashboard.alt")}
+            width={1191}
+            height={982}
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </section>

@@ -405,7 +405,10 @@
         "context": "Public sector · Passport intake MVP · Currently with the buyer",
         "prose1": "A passport application intake MVP I built and pitched to a Paris consular office after going through their process myself. Their existing flow required an in-person trip for files I had already uploaded online. The gap between what the system could do and what the team was asked to do was visible from the waiting room.",
         "prose2": "I built the digital flow that would have closed the gap and proposed it directly. The proposal is currently with them.",
-        "note": "Spec pitch. Not a delivered engagement. Status updated when the buyer responds."
+        "note": "Spec pitch. Not a delivered engagement. Status updated when the buyer responds.",
+        "screenshot": {
+          "alt": "Government Application Portal intake flow showing document submission and status tracking"
+        }
       },
       "concepts": {
         "eyebrow": "Concept builds",
@@ -1204,6 +1207,20 @@
             "label": "Tooling",
             "items": "Git, GitHub, Claude Code"
           }
+        }
+      },
+      "screenshots": {
+        "lead": {
+          "alt": "TraviXO Systems compliance dashboard overview"
+        },
+        "equipmentRegister": {
+          "alt": "TraviXO equipment fleet view with real-time status tracking and category filters"
+        },
+        "inspectionWorkflow": {
+          "alt": "TraviXO QR code asset tracking for field inspection identification"
+        },
+        "dashboard": {
+          "alt": "TraviXO main dashboard showing equipment list, compliance status, and upcoming inspections"
         }
       }
     }

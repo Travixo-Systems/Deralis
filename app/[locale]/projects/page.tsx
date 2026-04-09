@@ -65,6 +65,7 @@ function ProjectsHero() {
 
 function TraviXOCaseStudy() {
   const t = useTranslations("projects.page.travixo");
+  const tScreenshots = useTranslations("projectDetail.travixo.screenshots");
 
   return (
     <CaseStudySection
@@ -79,7 +80,11 @@ function TraviXOCaseStudy() {
         label: t("linkLabel"),
         external: true,
       }}
-      screenshotAlt="TraviXO dashboard screenshot"
+      screenshotAlt={tScreenshots("dashboard.alt")}
+      screenshotSrc="/projects/travixo/travixo-dashboard.png"
+      screenshotWidth={1191}
+      screenshotHeight={982}
+      screenshotPriority
       alignStart
     />
   );
@@ -96,7 +101,10 @@ function GovPortalCaseStudy() {
       context={t("context")}
       prose={[t("prose1"), t("prose2")]}
       closing={{ type: "note", text: t("note") }}
-      screenshotAlt="Government portal application flow"
+      screenshotAlt={t("screenshot.alt")}
+      screenshotSrc="/projects/gov-portal/gov-portal.png"
+      screenshotWidth={1550}
+      screenshotHeight={792}
     />
   );
 }

@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import SectionHeading from "@/components/shared/SectionHeading";
 import AuditCTA from "@/components/shared/AuditCTA";
 
@@ -74,11 +75,20 @@ function TraviXoHero() {
 }
 
 function LeadScreenshot() {
+  const t = useTranslations("projectDetail.travixo.screenshots");
+
   return (
     <section className="pb-[60px]">
       <div className="mx-auto max-w-[1240px] px-6 md:px-12">
-        <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden aspect-[16/10] casestudy-shadow flex items-center justify-center">
-          <p className="text-[13px] text-ink-3">Lead screenshot placeholder</p>
+        <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden casestudy-shadow">
+          <Image
+            src="/projects/travixo/travixo-dashboard.png"
+            alt={t("lead.alt")}
+            width={1191}
+            height={982}
+            priority
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </section>
@@ -159,11 +169,12 @@ function WhatIBuilt() {
 function InsideTheSystem() {
   const t = useTranslations("projectDetail.travixo.inside");
   const tLabels = useTranslations("projectDetail.labels");
+  const tScreenshots = useTranslations("projectDetail.travixo.screenshots");
 
   const screenshots = [
-    { placeholder: "Equipment register screenshot", caption: t("cap1") },
-    { placeholder: "Inspection workflow screenshot", caption: t("cap2") },
-    { placeholder: "Audit trail screenshot", caption: t("cap3") },
+    { src: "/projects/travixo/travixo-fleet.png", width: 875, height: 935, alt: tScreenshots("equipmentRegister.alt"), caption: t("cap1") },
+    { src: "/projects/travixo/travixo-qr.png", width: 971, height: 943, alt: tScreenshots("inspectionWorkflow.alt"), caption: t("cap2") },
+    { src: null as string | null, width: 0, height: 0, alt: "Audit trail screenshot", caption: t("cap3") },
   ];
 
   return (
@@ -176,9 +187,22 @@ function InsideTheSystem() {
         <div className="flex flex-col gap-14 mt-2">
           {screenshots.map((shot, i) => (
             <div key={i}>
-              <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden aspect-[16/10] casestudy-shadow flex items-center justify-center">
-                <p className="text-[13px] text-ink-3">{shot.placeholder}</p>
-              </div>
+              {shot.src ? (
+                <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden casestudy-shadow">
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    width={shot.width}
+                    height={shot.height}
+                    className="w-full h-auto"
+                  />
+                </div>
+              ) : (
+                <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden aspect-[16/10] casestudy-shadow flex items-center justify-center">
+                  {/* PLACEHOLDER: audit trail screenshot pending */}
+                  <p className="text-[13px] text-ink-3">{shot.alt}</p>
+                </div>
+              )}
               <p className="text-[14px] text-ink-2-soft leading-[1.55] mt-4 max-w-[620px]">
                 {shot.caption}
               </p>

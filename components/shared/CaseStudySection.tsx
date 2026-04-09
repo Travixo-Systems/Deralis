@@ -1,4 +1,5 @@
 import { cn } from "@/lib/cn";
+import Image from "next/image";
 
 type CaseStudyClosing =
   | { type: "link"; href: string; label: string; external?: boolean }
@@ -12,6 +13,10 @@ type CaseStudySectionProps = {
   prose: string[];
   closing: CaseStudyClosing;
   screenshotAlt: string;
+  screenshotSrc?: string;
+  screenshotWidth?: number;
+  screenshotHeight?: number;
+  screenshotPriority?: boolean;
   alignStart?: boolean;
 };
 
@@ -23,6 +28,10 @@ export default function CaseStudySection({
   prose,
   closing,
   screenshotAlt,
+  screenshotSrc,
+  screenshotWidth,
+  screenshotHeight,
+  screenshotPriority = false,
   alignStart = false,
 }: CaseStudySectionProps) {
   return (
@@ -78,10 +87,22 @@ export default function CaseStudySection({
           )}
         </div>
 
-        {/* Screenshot placeholder */}
-        <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden aspect-[16/10] casestudy-shadow flex items-center justify-center">
-          <p className="text-[13px] text-ink-3">{screenshotAlt}</p>
-        </div>
+        {screenshotSrc ? (
+          <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden casestudy-shadow">
+            <Image
+              src={screenshotSrc}
+              alt={screenshotAlt}
+              width={screenshotWidth || 800}
+              height={screenshotHeight || 500}
+              priority={screenshotPriority}
+              className="w-full h-auto"
+            />
+          </div>
+        ) : (
+          <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden aspect-[16/10] casestudy-shadow flex items-center justify-center">
+            <p className="text-[13px] text-ink-3">{screenshotAlt}</p>
+          </div>
+        )}
       </div>
     </section>
   );
