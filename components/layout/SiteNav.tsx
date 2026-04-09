@@ -33,10 +33,10 @@ export default function SiteNav() {
           <Image
             src="/logo-mark.png"
             alt="Deralis Digital"
-            width={32}
-            height={32}
+            width={36}
+            height={36}
             priority
-            className="w-8 h-8"
+            className="w-9 h-9"
           />
           Deralis Digital
         </Link>

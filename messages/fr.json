@@ -66,10 +66,10 @@
     "page": {
       "hero": {
         "eyebrow": "Pratique d’ingénierie de systèmes indépendante",
-        "headline": "Je construis les <em>systèmes</em> dont les entreprises ont besoin pour fonctionner.",
-        "sub1": "Si votre équipe demande encore « où en est ce dossier ? » vous n'avez pas de système.",
-        "sub2": "Les outils ne sont pas le problème. C'est la manière dont l'information circule entre eux qui l'est.",
-        "sub3": "Des informations éparpillées, qui circulent de façon incohérente, et qui dépendent des personnes pour avancer.",
+        "headline": "Outils, messages, fichiers, tableurs. Tout fonctionne, mais rien n’est vraiment <span class=\"accent\">relié</span>.",
+        "sub1": "Ce que vous utilisez aujourd’hui pour faire tourner votre activité ne tient pas.",
+        "sub2": "Je construis le système qui remplace ça, pour les entreprises qui ont plus d’outils que de clarté. L’information va où elle doit, quand elle doit, sans dépendre des personnes pour avancer.",
+        "sub3": "",
         "anchor": {
           "backgroundHeading": "Parcours",
           "backgroundProse": "Quatre ans de missions techniques chez des éditeurs et industriels français. Dix-huit mois dans le secteur de la location de matériel chez <strong>Loxam</strong>, d'où vient la connaissance métier qui a donné naissance à TraviXO.",

@@ -66,10 +66,10 @@
     "page": {
       "hero": {
         "eyebrow": "Independent systems engineering practice",
-        "headline": "I build the <em>systems</em> businesses need to operate.",
-        "sub1": "If your team still asks 'where is this?' you don't have a system.",
-        "sub2": "Tools are not the problem. The problem is how information moves between them.",
-        "sub3": "It lives in multiple places, moves inconsistently, and depends on people to keep it going.",
+        "headline": "Tools, messages, files, spreadsheets. Everything works, but nothing is really <span class=\"accent\">connected</span>.",
+        "sub1": "What you're using today to run your business doesn't hold up.",
+        "sub2": "I build the system that replaces it, for businesses with more tools than clarity. Information goes where it needs to, when it needs to, without waiting on someone to move it forward.",
+        "sub3": "",
         "anchor": {
           "backgroundHeading": "Background",
           "backgroundProse": "Four years of technical client work across French software and industrial companies. Eighteen months inside the equipment rental industry at <strong>Loxam</strong>, where the domain knowledge behind TraviXO came from.",

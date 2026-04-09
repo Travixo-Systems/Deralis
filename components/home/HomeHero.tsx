@@ -22,12 +22,14 @@ export default function HomeHero() {
             <p className="text-ink font-medium text-[22px] leading-[1.6] max-md:text-[19px]">
               {t("sub1")}
             </p>
-            <p className="text-ink-2-soft text-[20px] leading-[1.6] mb-4 max-md:text-[17px]">
+            <p className="text-ink-2-soft text-[20px] leading-[1.6] max-md:text-[17px]">
               {t("sub2")}
             </p>
-            <p className="text-ink-2-soft text-[20px] leading-[1.6] max-md:text-[17px]">
-              {t("sub3")}
-            </p>
+            {t("sub3") && (
+              <p className="text-ink-2-soft text-[20px] leading-[1.6] mt-4 max-md:text-[17px]">
+                {t("sub3")}
+              </p>
+            )}
           </div>
           <div className="flex items-center gap-8 flex-wrap">
             <CTAPrimary href="/audit">{tActions("discoverAudit")}</CTAPrimary>
