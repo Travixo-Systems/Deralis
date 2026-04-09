@@ -1,382 +1,158 @@
-"use client";
-
+import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import Image from "next/image";
-import CalendlyButton from "@/components/shared/CalendlyButton";
-import {
-  ArrowRight,
-  ExternalLink,
-  Building2,
-  Landmark,
-  CheckCircle2,
-  LayoutDashboard,
-  ShoppingCart,
-  Users,
-  ClipboardCheck,
-} from "lucide-react";
+import CTAPrimary from "@/components/shared/CTAPrimary";
+import CTASecondary from "@/components/shared/CTASecondary";
+import CaseStudySection from "@/components/shared/CaseStudySection";
+import AuditCTA from "@/components/shared/AuditCTA";
+import SectionHeading from "@/components/shared/SectionHeading";
+import ConceptItems from "@/components/projects/ConceptItems";
 
-const projectKeys = ["travixoSystems", "govPortal", "opsDashboard", "marcheDiaspora", "fluxClient", "onboard"] as const;
-
-const projectIcons = {
-  travixoSystems: Building2,
-  govPortal: Landmark,
-  opsDashboard: LayoutDashboard,
-  marcheDiaspora: ShoppingCart,
-  fluxClient: Users,
-  onboard: ClipboardCheck,
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-const projectConfig = {
-  travixoSystems: {
-    year: "2024-2025",
-    status: "live",
-    stack: ["Next.js 15", "Supabase", "Prisma", "PostgreSQL", "TypeScript"],
-    liveUrl: "https://travixosystems.com",
-    appUrl: "https://app.travixosystems.com",
-    screenshot: "/projects/travixo-dashboard.png",
-    featured: true,
-  },
-  govPortal: {
-    year: "2025",
-    status: "live",
-    stack: ["Next.js", "Supabase", "PostgreSQL", "TypeScript"],
-    liveUrl: "https://government-portal-ashy.vercel.app",
-    featured: false,
-  },
-  opsDashboard: {
-    year: "2026",
-    status: "live",
-    stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui", "Recharts", "Framer Motion"],
-    liveUrl: "https://deralis-ops-dashboard.vercel.app",
-    featured: false,
-  },
-  marcheDiaspora: {
-    year: "2026",
-    status: "live",
-    stack: ["Next.js 15", "TypeScript", "Tailwind CSS", "shadcn/ui", "Zustand", "canvas-confetti"],
-    liveUrl: "https://deralis-catalog-demo.vercel.app/",
-    featured: false,
-  },
-  fluxClient: {
-    year: "2026",
-    status: "live",
-    stack: ["Next.js 15", "TypeScript", "Supabase", "shadcn/ui"],
-    liveUrl: "https://flux-client-umber.vercel.app/",
-    featured: false,
-  },
-  onboard: {
-    year: "2026",
-    status: "live",
-    stack: ["Next.js 15", "TypeScript", "React Context", "shadcn/ui"],
-    liveUrl: "https://onboard-blush.vercel.app/",
-    featured: false,
-  },
-};
-
-export default function ProjectsPage() {
-  const t = useTranslations("projects");
-  const tActions = useTranslations("common.actions");
-
-  const stats = [
-    { value: "6+", label: t("stats.delivered") },
-  ];
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "live":
-        return "bg-green-500";
-      case "inDevelopment":
-        return "bg-cyan-500";
-      case "mvpComplete":
-        return "bg-yellow-500";
-      default:
-        return "bg-blue-500";
-    }
-  };
+export default async function ProjectsPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-10 bg-mesh">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dd-text-main)] mb-4">
-              {t("hero.title")}{" "}
-              <span className="gradient-text">{t("hero.titleHighlight")}</span>
-            </h1>
-            <p className="text-lg text-[var(--dd-text-muted)] leading-relaxed">
-              {t("hero.description")}
+      <ProjectsHero />
+      <TraviXOCaseStudy />
+      <AuditCTA />
+      <GovPortalCaseStudy />
+      <ConceptsStrip />
+      <ProjectsFinalCTA />
+    </>
+  );
+}
+
+function ProjectsHero() {
+  const t = useTranslations("projects.page.hero");
+  const tActions = useTranslations("common.actions");
+
+  return (
+    <section className="py-8 pb-[52px] max-md:py-6 max-md:pb-[34px]">
+      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
+        <div className="max-w-[820px]">
+          <p className="text-base text-ink-label font-medium tracking-[0.01em] mb-7 max-md:text-[15px] max-md:mb-5">
+            {t("eyebrow")}
+          </p>
+          <h1
+            className="text-[60px] leading-[1.05] font-medium tracking-[-0.025em] mb-8 max-w-[780px] max-md:text-[38px] max-md:mb-6"
+            dangerouslySetInnerHTML={{ __html: t("title") }}
+          />
+          <div className="mb-9 max-w-[640px] max-md:mb-7">
+            <p className="text-ink font-medium text-[22px] leading-[1.6] max-md:text-[19px]">
+              {t("sub1")}
+            </p>
+            <p className="text-ink-2-soft text-[20px] leading-[1.6] mb-4 max-md:text-[17px]">
+              {t("sub2")}
+            </p>
+            <p className="text-ink-2-soft text-[20px] leading-[1.6] max-md:text-[17px]">
+              {t("sub3")}
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Stats Bar */}
-      <section className="py-5 border-y border-[var(--dd-border)] bg-[var(--dd-bg-soft)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex justify-center">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-2xl font-bold text-[var(--dd-text-main)]">
-                  {stat.value}
-                </p>
-                <p className="text-sm text-[var(--dd-text-muted)]">{stat.label}</p>
-              </div>
-            ))}
+          <div className="flex items-center gap-8 flex-wrap">
+            <CTASecondary href="#travixo">{t("ctaSecondary")}</CTASecondary>
+            <CTAPrimary href="/audit">{tActions("discoverAudit")}</CTAPrimary>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  );
+}
 
-      {/* Featured Project */}
-      {projectKeys
-        .filter((key) => projectConfig[key].featured)
-        .map((key) => {
-          const Icon = projectIcons[key];
-          const config = projectConfig[key];
-          const features = t.raw(`items.${key}.features`) as string[];
+function TraviXOCaseStudy() {
+  const t = useTranslations("projects.page.travixo");
 
-          return (
-            <section key={key} className="py-8 lg:py-12">
-              <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="mb-6">
-                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-[var(--dd-grad-from)] to-[var(--dd-grad-to)] text-[var(--dd-bg)] text-xs font-semibold">
-                    {t("featured.badge")}
-                  </span>
-                </div>
+  return (
+    <CaseStudySection
+      id="travixo"
+      label={t("label")}
+      title="TraviXO Systems"
+      context={t("context")}
+      prose={[t("prose1"), t("prose2"), t("prose3"), t("prose4")]}
+      closing={{
+        type: "link",
+        href: "https://app.travixosystems.com",
+        label: t("linkLabel"),
+        external: true,
+      }}
+      screenshotAlt="TraviXO dashboard screenshot"
+      alignStart
+    />
+  );
+}
 
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-                  {/* Screenshot */}
-                  <div className="rounded-xl overflow-hidden border border-[var(--dd-border)] bg-[var(--dd-bg-card)]">
-                    <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--dd-border)] bg-[var(--dd-bg)]">
-                      <div className="w-3 h-3 rounded-full bg-red-500/60" />
-                      <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-                      <div className="w-3 h-3 rounded-full bg-green-500/60" />
-                      <span className="ml-3 text-xs text-[var(--dd-text-dim)] font-mono">
-                        app.travixosystems.com
-                      </span>
-                    </div>
-                    <div className="aspect-video relative">
-                      <Image
-                        src="/projects/travixo-dashboard.png"
-                        alt="TraviXO Dashboard - Asset management system"
-                        fill
-                        className="object-cover object-top"
-                      />
-                    </div>
-                  </div>
+function GovPortalCaseStudy() {
+  const t = useTranslations("projects.page.govPortal");
 
-                  {/* Content */}
-                  <div>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-[var(--dd-accent)]" />
-                      </div>
-                      <div>
-                        <h2 className="text-2xl font-bold text-[var(--dd-text-main)]">
-                          {t(`items.${key}.title`)}
-                        </h2>
-                        <p className="text-sm text-[var(--dd-text-muted)]">
-                          {t(`items.${key}.type`)}
-                        </p>
-                      </div>
-                    </div>
+  return (
+    <CaseStudySection
+      id="government"
+      label={t("label")}
+      title={t("title")}
+      context={t("context")}
+      prose={[t("prose1"), t("prose2")]}
+      closing={{ type: "note", text: t("note") }}
+      screenshotAlt="Government portal application flow"
+    />
+  );
+}
 
-                    <p className="text-[var(--dd-text-muted)] mb-5 leading-relaxed">
-                      {t(`items.${key}.description`)}
-                    </p>
+function ConceptsStrip() {
+  const t = useTranslations("projects.page.concepts");
 
-                    {/* Features */}
-                    <div className="mb-5">
-                      <h3 className="text-sm font-semibold text-[var(--dd-text-main)] mb-2">
-                        {t("featured.keyFeatures")}
-                      </h3>
-                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                        {features.map((feature: string) => (
-                          <li key={feature} className="flex items-center gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-[var(--dd-accent)] flex-shrink-0" />
-                            <span className="text-sm text-[var(--dd-text-muted)]">
-                              {feature}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+  const items = ["1", "2", "3", "4"].map((num) => ({
+    num: `0${num}`,
+    title: t(`items.${num}.title`),
+    description: t(`items.${num}.desc`),
+    linkHref: "#",
+    linkLabel: t(`items.${num}.linkLabel`),
+  }));
 
-                    {/* Tech stack */}
-                    <div className="flex flex-wrap gap-1.5 mb-5">
-                      {config.stack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 rounded text-xs bg-[var(--dd-bg-soft)] border border-[var(--dd-border)] text-[var(--dd-text-muted)]"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+  return (
+    <section className="bg-bg-deep border-y border-border-default py-[60px] max-md:py-[42px]">
+      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
+        <SectionHeading
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          intro={t("intro")}
+        />
+        <ConceptItems items={items} />
+      </div>
+    </section>
+  );
+}
 
-                    {/* CTAs */}
-                    <div className="flex flex-wrap gap-3">
-                      {config.liveUrl && (
-                        <a
-                          href={config.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-primary"
-                        >
-                          {tActions("visitWebsite")}
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      )}
-                      {"appUrl" in config && config.appUrl && (
-                        <a
-                          href={config.appUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-secondary"
-                        >
-                          {tActions("openApp")}
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        })}
+function ProjectsFinalCTA() {
+  const t = useTranslations("projects.page.finalCta");
+  const tActions = useTranslations("common.actions");
 
-      {/* Fleet Screenshot Section */}
-      <section className="py-8 lg:py-10 bg-[var(--dd-bg-soft)]">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <p className="text-center text-sm text-[var(--dd-text-dim)] mb-4">
-            {t("fleetSection.caption")}
+  return (
+    <section className="py-[60px] pb-[34px] max-md:py-[44px] max-md:pb-7">
+      <div className="mx-auto max-w-[1240px] px-6 md:px-12 text-center">
+        <div className="max-w-[720px] mx-auto">
+          <h2
+            className="text-[44px] leading-[1.1] font-medium tracking-[-0.025em] mb-6 max-md:text-[28px]"
+            dangerouslySetInnerHTML={{ __html: t("title") }}
+          />
+          <p className="text-[18px] leading-[1.6] text-ink-2 mb-8 max-w-[580px] mx-auto max-md:text-base">
+            {t("body")}
           </p>
-          <div className="rounded-xl overflow-hidden border border-[var(--dd-border)] bg-[var(--dd-bg-card)]">
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--dd-border)] bg-[var(--dd-bg)]">
-              <div className="w-3 h-3 rounded-full bg-red-500/60" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-              <div className="w-3 h-3 rounded-full bg-green-500/60" />
-              <span className="ml-3 text-xs text-[var(--dd-text-dim)] font-mono">
-                app.travixosystems.com/fleet
-              </span>
-            </div>
-            <div className="aspect-[2/1] relative">
-              <Image
-                src="/projects/travixo-fleet.png"
-                alt="TraviXO Fleet Management - Equipment tracking table"
-                fill
-                className="object-cover object-top"
-              />
-            </div>
+          <div className="flex items-center justify-center gap-7 flex-wrap">
+            <CTAPrimary href="/audit">{tActions("discoverAudit")}</CTAPrimary>
+            <a
+              href="mailto:contact&#64;deralis.digital"
+              className="text-[15px] font-medium text-ink no-underline border-b border-transparent pb-[2px] hover:border-ink transition-[border-color] duration-150"
+            >
+              contact&#64;deralis.digital
+            </a>
           </div>
+          <p className="mt-6 text-[13px] text-ink-3">{t("note")}</p>
         </div>
-      </section>
-
-      {/* Other Projects */}
-      <section className="py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[var(--dd-text-main)] mb-6">
-            {t("moreProjects")}
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-4">
-            {projectKeys
-              .filter((key) => !projectConfig[key].featured)
-              .map((key) => {
-                const Icon = projectIcons[key];
-                const config = projectConfig[key];
-                const features = t.raw(`items.${key}.features`) as string[];
-
-                return (
-                  <div
-                    key={key}
-                    className="p-5 rounded-xl bg-[var(--dd-bg-card)] border border-[var(--dd-border)] card-hover"
-                  >
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--dd-grad-from)]/20 to-[var(--dd-grad-to)]/20 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-5 h-5 text-[var(--dd-accent)]" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-[var(--dd-text-main)]">
-                          {t(`items.${key}.title`)}
-                        </h3>
-                        <p className="text-xs text-[var(--dd-text-muted)]">
-                          {t(`items.${key}.type`)}
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="text-sm text-[var(--dd-text-muted)] mb-3">
-                      {t(`items.${key}.description`)}
-                    </p>
-
-                    <div className="flex flex-wrap gap-1.5 mb-3">
-                      {config.stack.slice(0, 4).map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-0.5 rounded text-xs bg-[var(--dd-bg-soft)] border border-[var(--dd-border)] text-[var(--dd-text-dim)]"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex items-center justify-between pt-3 border-t border-[var(--dd-border)]">
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`w-2 h-2 rounded-full ${getStatusColor(config.status)}`}
-                        />
-                        <span className="text-xs text-[var(--dd-text-muted)]">
-                          {t(`status.${config.status}`)}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <span className="text-xs text-[var(--dd-text-dim)]">
-                          {config.year}
-                        </span>
-                        {config.liveUrl && (
-                          <a
-                            href={config.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium bg-[var(--dd-accent)]/10 text-[var(--dd-accent)] hover:bg-[var(--dd-accent)]/20 transition-colors"
-                          >
-                            {tActions("viewLive")}
-                            <ExternalLink className="w-3.5 h-3.5" />
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-8 lg:py-12 bg-[var(--dd-bg-soft)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-[var(--dd-text-main)] mb-3">
-            {t("cta.title")}
-          </h2>
-          <p className="text-[var(--dd-text-muted)] max-w-xl mx-auto mb-6">
-            {t("cta.description")}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <CalendlyButton className="btn-primary">
-              {tActions("bookCall")}
-              <ArrowRight className="w-4 h-4" />
-            </CalendlyButton>
-            <Link href="/services" className="btn-secondary">
-              {tActions("viewAllServices")}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-    </>
+      </div>
+    </section>
   );
 }

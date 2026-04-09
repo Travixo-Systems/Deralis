@@ -1,166 +1,111 @@
-"use client";
-
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { ArrowLeft } from "lucide-react";
 
 export default function TermsPage() {
   const t = useTranslations("terms");
-  const tActions = useTranslations("common.actions");
 
   return (
-    <section className="pt-24 pb-16 lg:pt-28 lg:pb-20">
-      <div className="max-w-3xl mx-auto px-6 lg:px-8">
+    <section className="py-[60px] max-md:py-[42px]">
+      <div className="mx-auto max-w-[820px] px-6 md:px-12">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-[var(--dd-text-muted)] hover:text-[var(--dd-text-main)] mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-sm text-ink-2 hover:text-ink mb-8 transition-colors no-underline"
         >
-          <ArrowLeft className="w-4 h-4" />
-          {tActions("backToHome")}
+          ← {t("title")}
         </Link>
 
-        <h1 className="text-3xl sm:text-4xl font-bold text-[var(--dd-text-main)] mb-4">
+        <h1 className="text-[36px] font-medium text-ink tracking-[-0.02em] mb-3 max-md:text-[28px]">
           {t("title")}
         </h1>
-        <p className="text-[var(--dd-text-dim)] mb-8">
-          {t("lastUpdated")}
-        </p>
+        <p className="text-ink-3 mb-10">{t("lastUpdated")}</p>
 
-        <div className="prose prose-invert max-w-none space-y-8 text-[var(--dd-text-muted)]">
-          <p className="text-lg">
-            {t("intro")}
-          </p>
+        <div className="space-y-10 text-ink-2">
+          <p className="text-[17px] leading-[1.65]">{t("intro")}</p>
 
-          {/* Section 1 */}
           <section>
-            <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              {t("sections.websiteUse.title")}
-            </h2>
-            <p className="mb-3">
-              {t("sections.websiteUse.intro")}
-            </p>
-            <ul className="list-disc pl-6 space-y-1">
+            <h2 className="text-[20px] font-medium text-ink mb-4">{t("sections.websiteUse.title")}</h2>
+            <p className="text-[15px] leading-[1.65] mb-3">{t("sections.websiteUse.intro")}</p>
+            <ul className="list-disc pl-6 space-y-1 text-[15px] leading-[1.65]">
               {(t.raw("sections.websiteUse.items") as string[]).map((item: string) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </section>
 
-          {/* Section 2 */}
           <section>
-            <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              {t("sections.services.title")}
-            </h2>
-            <p className="mb-3">{t("sections.services.intro")}</p>
-            <ul className="list-disc pl-6 space-y-1 mb-4">
+            <h2 className="text-[20px] font-medium text-ink mb-4">{t("sections.services.title")}</h2>
+            <p className="text-[15px] leading-[1.65] mb-3">{t("sections.services.intro")}</p>
+            <ul className="list-disc pl-6 space-y-1 mb-4 text-[15px] leading-[1.65]">
               {(t.raw("sections.services.items") as string[]).map((item: string) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <p className="font-medium text-[var(--dd-text-main)]">
-              {t("sections.services.note")}
-            </p>
+            <p className="text-[15px] leading-[1.65] font-medium text-ink">{t("sections.services.note")}</p>
           </section>
 
-          {/* Section 3 */}
           <section>
-            <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              {t("sections.quotes.title")}
-            </h2>
-            <p className="mb-3">{t("sections.quotes.intro")}</p>
-            <ul className="list-disc pl-6 space-y-1">
+            <h2 className="text-[20px] font-medium text-ink mb-4">{t("sections.quotes.title")}</h2>
+            <p className="text-[15px] leading-[1.65] mb-3">{t("sections.quotes.intro")}</p>
+            <ul className="list-disc pl-6 space-y-1 text-[15px] leading-[1.65]">
               {(t.raw("sections.quotes.items") as string[]).map((item: string) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </section>
 
-          {/* Section 4 */}
           <section>
-            <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              {t("sections.payment.title")}
-            </h2>
-            <p className="mb-3">
-              {t("sections.payment.intro")}
-            </p>
-            <ul className="list-disc pl-6 space-y-1 mb-4">
+            <h2 className="text-[20px] font-medium text-ink mb-4">{t("sections.payment.title")}</h2>
+            <p className="text-[15px] leading-[1.65] mb-3">{t("sections.payment.intro")}</p>
+            <ul className="list-disc pl-6 space-y-1 mb-4 text-[15px] leading-[1.65]">
               {(t.raw("sections.payment.items") as string[]).map((item: string) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <p className="font-medium text-[var(--dd-text-main)]">
-              {t("sections.payment.late")}
-            </p>
+            <p className="text-[15px] leading-[1.65] font-medium text-ink">{t("sections.payment.late")}</p>
           </section>
 
-          {/* Section 5 */}
           <section>
-            <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              {t("sections.ip.title")}
-            </h2>
-            <p className="mb-3">{t("sections.ip.intro")}</p>
-            <ul className="list-disc pl-6 space-y-1">
+            <h2 className="text-[20px] font-medium text-ink mb-4">{t("sections.ip.title")}</h2>
+            <p className="text-[15px] leading-[1.65] mb-3">{t("sections.ip.intro")}</p>
+            <ul className="list-disc pl-6 space-y-1 text-[15px] leading-[1.65]">
               {(t.raw("sections.ip.items") as string[]).map((item: string) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </section>
 
-          {/* Section 6 */}
           <section>
-            <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              {t("sections.confidentiality.title")}
-            </h2>
-            <p>
-              {t("sections.confidentiality.content")}
-            </p>
+            <h2 className="text-[20px] font-medium text-ink mb-4">{t("sections.confidentiality.title")}</h2>
+            <p className="text-[15px] leading-[1.65]">{t("sections.confidentiality.content")}</p>
           </section>
 
-          {/* Section 7 */}
           <section>
-            <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              {t("sections.liability.title")}
-            </h2>
-            <p className="mb-3">{t("sections.liability.intro")}</p>
-            <ul className="list-disc pl-6 space-y-1 mb-4">
+            <h2 className="text-[20px] font-medium text-ink mb-4">{t("sections.liability.title")}</h2>
+            <p className="text-[15px] leading-[1.65] mb-3">{t("sections.liability.intro")}</p>
+            <ul className="list-disc pl-6 space-y-1 mb-4 text-[15px] leading-[1.65]">
               {(t.raw("sections.liability.items") as string[]).map((item: string) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <p className="font-medium text-[var(--dd-text-main)]">
-              {t("sections.liability.limit")}
-            </p>
+            <p className="text-[15px] leading-[1.65] font-medium text-ink">{t("sections.liability.limit")}</p>
           </section>
 
-          {/* Section 8 */}
           <section>
-            <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              {t("sections.termination.title")}
-            </h2>
-            <p>
-              {t("sections.termination.content")}
-            </p>
+            <h2 className="text-[20px] font-medium text-ink mb-4">{t("sections.termination.title")}</h2>
+            <p className="text-[15px] leading-[1.65]">{t("sections.termination.content")}</p>
           </section>
 
-          {/* Section 9 */}
           <section>
-            <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              {t("sections.law.title")}
-            </h2>
-            <p>
-              {t("sections.law.content")}
-            </p>
+            <h2 className="text-[20px] font-medium text-ink mb-4">{t("sections.law.title")}</h2>
+            <p className="text-[15px] leading-[1.65]">{t("sections.law.content")}</p>
           </section>
 
-          {/* Section 10 */}
           <section>
-            <h2 className="text-xl font-semibold text-[var(--dd-text-main)] mb-4">
-              {t("sections.contact.title")}
-            </h2>
-            <p>
+            <h2 className="text-[20px] font-medium text-ink mb-4">{t("sections.contact.title")}</h2>
+            <p className="text-[15px] leading-[1.65]">
               {t("sections.contact.intro")}{" "}
-              <a href="mailto:contact@deralis.digital" className="text-[var(--dd-accent)] hover:underline">
-                contact@deralis.digital
+              <a href="mailto:contact&#64;deralis.digital" className="text-ink no-underline border-b border-border-warm hover:text-accent hover:border-accent transition-colors">
+                contact&#64;deralis.digital
               </a>
             </p>
           </section>

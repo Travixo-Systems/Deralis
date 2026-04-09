@@ -2,25 +2,20 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import SiteNav from "@/components/layout/SiteNav";
+import SiteFooter from "@/components/layout/SiteFooter";
 import {
   OrganizationJsonLd,
   WebSiteJsonLd,
   LocalBusinessJsonLd,
 } from "@/components/seo/JsonLd";
-import StickyMobileCTA from "@/components/lead-gen/StickyMobileCTA";
 import ClarityScript from "@/components/analytics/ClarityScript";
-import { Manrope, Inter } from "next/font/google";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-});
+import { Inter } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   variable: "--font-inter",
   display: "swap",
 });
@@ -147,7 +142,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${manrope.variable} ${inter.variable}`}>
+    <html lang={locale} className={inter.variable}>
       <head>
         {/* Google Search Console verification */}
         <meta name="google-site-verification" content="O8l12K3_FkQbmJyZf8aa5_nlD7mgLLWhY63oficzeI4" />
@@ -164,15 +159,14 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="alternate" hrefLang="fr" href="https://www.deralis.digital/fr" />
         <link rel="alternate" hrefLang="x-default" href="https://www.deralis.digital" />
       </head>
-      <body className="min-h-screen bg-[var(--dd-bg)] text-[var(--dd-text-main)] antialiased">
+      <body className="min-h-screen bg-bg text-ink font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
           <OrganizationJsonLd />
           <WebSiteJsonLd />
           <LocalBusinessJsonLd />
-          <Header />
+          <SiteNav />
           <main>{children}</main>
-          <Footer />
-          <StickyMobileCTA />
+          <SiteFooter />
           <ClarityScript />
         </NextIntlClientProvider>
       </body>

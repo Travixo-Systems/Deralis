@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { sendNurtureSequence } from "@/lib/nurture-emails";
 
 export async function POST(request: NextRequest) {
   const resendApiKey = process.env.RESEND_API_KEY;
@@ -18,7 +17,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const body = await request.json();
-    const { name, email, company, service, budget, message } = body || {};
+    const { name, email, company, website, message, locale } = body || {};
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -37,65 +36,49 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Service labels
-    const serviceLabels: Record<string, string> = {
-      consulting: "Strategic Consulting",
-      development: "Full-Stack Development",
-      ai: "AI & Automation",
-      support: "Ongoing Support",
-      other: "Other / Not sure",
-    };
-
-    const serviceName = serviceLabels[service as string] || service || "Not specified";
-
     const emailHtml = `
-      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #0f172a; border-bottom: 2px solid #22d3ee; padding-bottom: 10px;">
-          New Contact Form Submission
+      <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #14110D; border-bottom: 1px solid #D4CCBA; padding-bottom: 10px;">
+          New inquiry from ${name}
         </h2>
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <tr>
-            <td style="padding: 8px 0; color: #64748b; width: 120px;">Name:</td>
-            <td style="padding: 8px 0; color: #0f172a; font-weight: 500;">${name}</td>
+            <td style="padding: 8px 0; color: #6B655C; width: 120px;">Name:</td>
+            <td style="padding: 8px 0; color: #14110D; font-weight: 500;">${name}</td>
           </tr>
           <tr>
-            <td style="padding: 8px 0; color: #64748b;">Email:</td>
-            <td style="padding: 8px 0; color: #0f172a;">
-              <a href="mailto:${email}" style="color: #2563eb;">${email}</a>
+            <td style="padding: 8px 0; color: #6B655C;">Email:</td>
+            <td style="padding: 8px 0; color: #14110D;">
+              <a href="mailto:${email}" style="color: #1B3A5C;">${email}</a>
             </td>
           </tr>
           <tr>
-            <td style="padding: 8px 0; color: #64748b;">Company:</td>
-            <td style="padding: 8px 0; color: #0f172a;">${company || "Not provided"}</td>
+            <td style="padding: 8px 0; color: #6B655C;">Company:</td>
+            <td style="padding: 8px 0; color: #14110D;">${company || "Not provided"}</td>
           </tr>
           <tr>
-            <td style="padding: 8px 0; color: #64748b;">Service:</td>
-            <td style="padding: 8px 0; color: #0f172a;">${serviceName}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px 0; color: #64748b;">Budget:</td>
-            <td style="padding: 8px 0; color: #0f172a;">${budget || "Not specified"}</td>
+            <td style="padding: 8px 0; color: #6B655C;">Website:</td>
+            <td style="padding: 8px 0; color: #14110D;">${website || "Not provided"}</td>
           </tr>
         </table>
-        <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin-top: 20px;">
-          <h3 style="color: #0f172a; margin-top: 0;">Message:</h3>
-          <p style="color: #334155; line-height: 1.6; white-space: pre-wrap;">${message}</p>
+        <div style="background: #F2EEE6; padding: 20px; border-radius: 8px; margin-top: 20px;">
+          <h3 style="color: #14110D; margin-top: 0;">Message:</h3>
+          <p style="color: #14110D; line-height: 1.6; white-space: pre-wrap;">${message}</p>
         </div>
-        <p style="color: #94a3b8; font-size: 12px; margin-top: 30px;">
+        <p style="color: #9A9388; font-size: 12px; margin-top: 30px;">
           Sent from deralis.digital contact form
         </p>
       </div>
     `;
 
     const emailText = `
-New Contact Form Submission
+New inquiry from ${name}
 ===========================
 
 Name: ${name}
 Email: ${email}
 Company: ${company || "Not provided"}
-Service: ${serviceName}
-Budget: ${budget || "Not specified"}
+Website: ${website || "Not provided"}
 
 Message:
 ${message}
@@ -108,7 +91,7 @@ Sent from deralis.digital contact form
       from: `Deralis Digital <${fromEmail}>`,
       to: [toEmail],
       replyTo: email,
-      subject: `New inquiry from ${name} - ${serviceName}`,
+      subject: `New inquiry from ${name}${company ? ` (${company})` : ""}`,
       html: emailHtml,
       text: emailText,
     });
@@ -123,10 +106,25 @@ Sent from deralis.digital contact form
 
     console.log("Email sent successfully:", data?.id);
 
-    // Send nurture email sequence to the contact
-    sendNurtureSequence(resend, email).catch((err) =>
-      console.error("Nurture sequence error:", err)
-    );
+    // Send auto-reply to buyer (non-blocking)
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://deralisdigital.com";
+    const isFr = locale === "fr";
+    const replySubject = isFr
+      ? "Message bien re\u00e7u. Je vous r\u00e9ponds bient\u00f4t"
+      : "Got your message. I'll reply soon";
+    const replyBody = isFr
+      ? `Merci pour votre message. Je lis chaque message personnellement et je vous r\u00e9ponds sous 2 jours ouvr\u00e9s.\n\nSi vous savez d\u00e9j\u00e0 que vous souhaitez avancer, l'audit est la voie la plus directe\u00a0:\n${siteUrl}/fr/audit\n\nUwa\nDeralis Digital`
+      : `Thanks for your message. I read every contact form submission personally and I'll reply within 2 working days.\n\nIf you already know you want to move forward, the audit is the faster path:\n${siteUrl}/audit\n\nUwa\nDeralis Digital`;
+
+    resend.emails
+      .send({
+        from: `Deralis Digital <${fromEmail}>`,
+        to: [email],
+        replyTo: fromEmail,
+        subject: replySubject,
+        text: replyBody,
+      })
+      .catch((err) => console.error("Auto-reply error:", err));
 
     return NextResponse.json(
       { success: true, message: "Message sent successfully" },

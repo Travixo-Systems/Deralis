@@ -1,168 +1,108 @@
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, Clock, Tag } from "lucide-react";
+import AuditCTA from "@/components/shared/AuditCTA";
+import fs from "fs";
+import path from "path";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata({ params }: Props) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "blog.metadata" });
+const slugs = [
+  "ai-business-operations-honest-guide",
+  "why-nextjs-production-apps",
+  "roi-workflow-automation-small-business",
+  "saas-vs-custom-build",
+  "web-system-not-just-a-website",
+  "why-profitable-businesses-run-on-manual-work",
+];
 
-  return {
-    title: t("title"),
-    description: t("description"),
-  };
+function getPostMeta(slug: string) {
+  const filePath = path.join(process.cwd(), "content", "blog", `${slug}.md`);
+  if (!fs.existsSync(filePath)) return { date: "", readTime: "" };
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const match = raw.match(/^---\n([\s\S]*?)\n---/);
+  if (!match) return { date: "", readTime: "" };
+  const fm: Record<string, string> = {};
+  for (const line of match[1].split("\n")) {
+    const idx = line.indexOf(":");
+    if (idx > 0) {
+      fm[line.slice(0, idx).trim()] = line.slice(idx + 1).trim().replace(/^["']|["']$/g, "");
+    }
+  }
+  return { date: fm.date || "", readTime: fm.readTime || "" };
 }
 
-const blogPosts = [
-  {
-    slug: "ai-business-operations-honest-guide",
-    category: "ai",
-    date: "2026-03-19",
-    readTime: 7,
-    image: "/projects/travixo-dashboard.png",
-  },
-  {
-    slug: "why-nextjs-production-apps",
-    category: "development",
-    date: "2026-03-18",
-    readTime: 5,
-    image: "/projects/travixo-fleet.png",
-  },
-  {
-    slug: "roi-workflow-automation-small-business",
-    category: "automation",
-    date: "2026-03-17",
-    readTime: 6,
-    image: "/projects/travixo-qr.png",
-  },
-  {
-    slug: "saas-vs-custom-build",
-    category: "development",
-    date: "2026-03-16",
-    readTime: 7,
-    image: "/projects/travixo-dashboard.png",
-  },
-  {
-    slug: "web-system-not-just-a-website",
-    category: "strategy",
-    date: "2026-03-15",
-    readTime: 6,
-    image: "/projects/travixo-fleet.png",
-  },
-  {
-    slug: "why-profitable-businesses-run-on-manual-work",
-    category: "strategy",
-    date: "2026-03-14",
-    readTime: 6,
-    image: "/projects/travixo-qr.png",
-  },
-];
+const posts = slugs.map((slug) => ({ slug, ...getPostMeta(slug) }));
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog.page" });
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  };
+}
 
 export default async function BlogPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "blog" });
-
-  const categoryColors: Record<string, string> = {
-    strategy: "from-emerald-400 to-cyan-400",
-    development: "from-[var(--dd-grad-from)] to-[var(--dd-grad-to)]",
-    automation: "from-purple-400 to-pink-400",
-    ai: "from-amber-400 to-orange-400",
-  };
+  const tPage = await getTranslations({ locale, namespace: "blog.page" });
 
   return (
     <>
       {/* Hero */}
-      <section className="py-16 lg:py-20 bg-mesh">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dd-text-main)] mb-4">
-            {t("hero.title")}{" "}
-            <span className="gradient-text">{t("hero.titleHighlight")}</span>
-          </h1>
-          <p className="text-lg text-[var(--dd-text-muted)] max-w-2xl mx-auto">
-            {t("hero.description")}
-          </p>
+      <section className="pt-14 pb-12 max-md:pt-10 max-md:pb-8">
+        <div className="mx-auto max-w-[1240px] px-6 md:px-12">
+          <div className="max-w-[820px]">
+            <h1
+              className="text-[56px] leading-[1.05] font-medium tracking-[-0.025em] mb-6 max-md:text-[36px] max-md:mb-5"
+              dangerouslySetInnerHTML={{
+                __html: `${tPage("hero.title")} <em>${tPage("hero.titleHighlight")}</em>`,
+              }}
+            />
+            <p className="text-[20px] leading-[1.55] text-ink-2-soft max-w-[640px] max-md:text-[17px]">
+              {tPage("hero.description")}
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Posts grid */}
-      <section className="py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map((post) => (
-              <Link
+      {/* Post list */}
+      <section className="pt-6 pb-20 max-md:pt-4 max-md:pb-12">
+        <div className="mx-auto max-w-[1240px] px-6 md:px-12">
+          <div className="max-w-[820px]">
+            {posts.map((post, i) => (
+              <article
                 key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group block rounded-xl bg-[var(--dd-bg-card)] border border-[var(--dd-border)] overflow-hidden card-hover"
+                className={`py-9 border-b border-border-default max-md:py-7 ${
+                  i === 0 ? "pt-2" : ""
+                } ${i === posts.length - 1 ? "border-b-0" : ""}`}
               >
-                {/* Image */}
-                <div className="aspect-[16/9] relative bg-[var(--dd-bg-soft)] overflow-hidden">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
-                    style={{ backgroundImage: `url(${post.image})` }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--dd-bg-card)] to-transparent opacity-60" />
-
-                  {/* Category badge */}
-                  <div className="absolute top-3 left-3">
-                    <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${categoryColors[post.category] || categoryColors.strategy} text-[var(--dd-bg)]`}>
-                      <Tag className="w-3 h-3" />
-                      {t(`categories.${post.category}`)}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-5">
-                  <h2 className="text-lg font-semibold text-[var(--dd-text-main)] mb-2 group-hover:text-[var(--dd-accent)] transition-colors line-clamp-2">
+                <p className="text-[13px] text-ink-3 font-medium tracking-[0.02em] mb-3.5 max-md:text-[12px] max-md:mb-3">
+                  {post.date} · {post.readTime}
+                </p>
+                <h2 className="text-[28px] leading-[1.22] font-medium tracking-[-0.015em] mb-3.5 max-w-[720px] max-md:text-[22px]">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="text-ink no-underline hover:text-accent transition-colors"
+                  >
                     {t(`posts.${post.slug}.title`)}
-                  </h2>
-                  <p className="text-sm text-[var(--dd-text-muted)] mb-4 line-clamp-2">
-                    {t(`posts.${post.slug}.excerpt`)}
-                  </p>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3 text-xs text-[var(--dd-text-dim)]">
-                      <span>{new Date(post.date).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
-                        {post.readTime} min
-                      </span>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-[var(--dd-text-dim)] group-hover:text-[var(--dd-accent)] transition-colors" />
-                  </div>
-                </div>
-              </Link>
+                  </Link>
+                </h2>
+                <p className="text-base leading-[1.6] text-ink-2 max-w-[680px] max-md:text-[15px]">
+                  {t(`posts.${post.slug}.excerpt`)}
+                </p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-12 lg:py-16 bg-[var(--dd-bg-soft)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="gradient-border p-8 lg:p-12 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-[var(--dd-grad-from)]/5 to-[var(--dd-grad-to)]/5" />
-            <div className="relative">
-              <h2 className="text-2xl sm:text-3xl font-bold text-[var(--dd-text-main)] mb-3">
-                {t("cta.title")}
-              </h2>
-              <p className="text-[var(--dd-text-muted)] max-w-xl mx-auto mb-6">
-                {t("cta.description")}
-              </p>
-              <Link href="/contact" className="btn-primary">
-                {t("cta.button")}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AuditCTA />
     </>
   );
 }

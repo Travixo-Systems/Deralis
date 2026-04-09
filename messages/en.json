@@ -22,7 +22,6 @@
       "viewAll": "View all",
       "viewAllServices": "View all services",
       "viewAllPlatforms": "See all platforms",
-      "bookCall": "Get your system mapped (€300)",
       "readMore": "Read more",
       "backToHome": "Back to home",
       "visitWebsite": "Visit website",
@@ -33,7 +32,14 @@
       "sendMessage": "Send message",
       "sending": "Sending...",
       "language": "Language",
-      "changeLanguage": "Change language"
+      "changeLanguage": "Change language",
+      "viewDemo": "View demo",
+      "viewProject": "View project",
+      "viewSystem": "View system",
+      "discoverAudit": "See what the audit covers",
+      "discoverAuditShort": "See what the audit covers",
+      "startAudit": "Start the audit (€300)",
+      "startAuditShort": "Start the audit"
     },
     "stats": {
       "deliveryRateShort": "Delivered",
@@ -48,311 +54,223 @@
       "services": "Services",
       "contact": "Contact",
       "legal": "Legal",
-      "locationShort": "France & Remote"
+      "locationShort": "France & Remote",
+      "copyrightDefault": "© 2026 Deralis Digital. All rights reserved.",
+      "copyrightShort": "© 2026 Deralis Digital",
+      "copyrightIndependent": "© 2026 Deralis Digital. Independent practice.",
+      "location": "Île-de-France · Remote for France, the UK, and the US",
+      "languages": "French and English",
+      "legalLink": "Legal Notice",
+      "privacyLink": "Privacy",
+      "servicesList": {
+        "audit": "Systems Audit",
+        "custom": "Custom System",
+        "extensions": "Extensions",
+        "ongoing": "Ongoing"
+      }
+    },
+    "auditCta": {
+      "eyebrow": "Start with a systems audit",
+      "headline": "Nothing is built until we agree it's worth building.",
+      "body1": "The Systems Audit maps your current operation, identifies structural gaps, and defines what to build and in what order.",
+      "body2": "If the project proceeds, the audit fee is deducted from the build.",
+      "note": "Fixed price. No commitment beyond the audit itself."
     }
   },
   "home": {
-    "hero": {
-      "badge": "Independent engineering practice",
-      "title": "I build the systems businesses need to operate.",
-      "titleLine2": "",
-      "titleHighlight": "",
-      "description": "If your team still asks 'where is this?' you don't have a system.",
-      "descriptionLine2": "Tools are not the problem. The way information moves between them is.",
-      "descriptionLine3": "Information in multiple places, moving inconsistently, depending on people to keep it moving.",
-      "subDescription": "",
-      "screenshotLabel": "TraviXO Systems: VGP compliance platform I built (demo view)",
-      "ctaSubtext": "For businesses whose operations have outgrown their tools. Not ideas. Not landing pages."
-    },
-    "services": {
-      "title": "How I",
-      "titleHighlight": "work",
-      "description": "A sequential process, not a menu of options.",
-      "closingNote": "Sometimes I will show you how your system should look before anything is built.",
-      "items": {
-        "consulting": {
-          "title": "Systems Audit",
-          "description": "Before anything is built, I map how your operation actually works. 300 euros. Deducted if the project proceeds.",
-          "features": ["Process mapping", "Operational analysis", "Written brief"]
-        },
-        "development": {
-          "title": "Custom System",
-          "description": "The core build. One system that shows where work is, what is blocked, and what needs to happen next.",
-          "features": ["Centralized operations", "Status visibility", "Workflow automation"]
-        },
-        "ai": {
-          "title": "Extensions",
-          "description": "Automation, integrations, and additional workflows built on top of the working foundation.",
-          "features": ["API integrations", "Workflow automation", "Third-party connections"]
-        },
-        "support": {
-          "title": "Ongoing",
-          "description": "Maintenance and iteration for clients who want continued support. No lock-in.",
-          "features": ["Updates and improvements", "System monitoring", "On-demand support"]
+    "page": {
+      "hero": {
+        "eyebrow": "Independent systems engineering practice · Île-de-France",
+        "headline": "I build the <em>systems</em> businesses need to operate.",
+        "sub1": "If your team still asks 'where is this?' you don't have a system.",
+        "sub2": "Tools are not the problem. The problem is how information moves between them.",
+        "sub3": "It lives in multiple places, moves inconsistently, and depends on people to keep it going.",
+        "anchor": {
+          "backgroundHeading": "Background",
+          "backgroundProse": "Four years of technical client work across French software and industrial companies. Eighteen months inside the equipment rental industry at <strong>Loxam</strong>, where the domain knowledge behind TraviXO came from.",
+          "builtHeading": "What I've built",
+          "built1Name": "TraviXO",
+          "built1Desc": "Multi-tenant SaaS for VGP compliance in French equipment rental. Built solo. Live.",
+          "built2Name": "Government portal",
+          "built2Tag": "spec",
+          "built2Desc": "Passport intake MVP designed and pitched to a Paris consular office.",
+          "signature": "Independent. Bilingual French and English. One person, every line of code."
         }
       },
-      "cta": {
-        "consulting": "Start with an audit",
-        "development": "See how systems work",
-        "ai": "Explore extensions",
-        "support": "Learn about ongoing support"
-      }
-    },
-    "clients": {
-      "title": "Who I",
-      "titleHighlight": "work with",
-      "description": "I work with established businesses where their operations have outgrown the tools that hold them together. The person who can decide to fix this is in the room.",
-      "items": {
-        "startups": {
+      "flow": {
+        "label": "How I work",
+        "step1": "Clarify",
+        "step2": "Scope",
+        "step3": "Build first process",
+        "step4": "Expand gradually",
+        "step5": "Handoff"
+      },
+      "who": {
+        "eyebrow": "Who I work with",
+        "title": "Established businesses where the operation has outgrown the tools holding it together.",
+        "intro": "The person who can decide to fix this is in the room. If that's not you, this is the wrong time.",
+        "card1": {
           "title": "Teams running operations manually",
-          "description": "You rely on people to keep things working day-to-day.",
-          "points": ["Manual coordination", "No centralized system", "Team bottlenecks"]
+          "description": "You rely on people to keep things working day-to-day. The process exists in someone's head, not in a system.",
+          "tags": [
+            "Manual coordination",
+            "No centralized system",
+            "Team bottlenecks"
+          ]
         },
-        "smb": {
+        "card2": {
           "title": "Businesses outgrowing their tools",
-          "description": "Spreadsheets, SaaS tools, and workarounds are no longer enough.",
-          "points": ["Tool sprawl", "Data silos", "Loss of visibility"]
+          "description": "Spreadsheets, SaaS tools, and workarounds are no longer enough. Information lives in multiple places and moves inconsistently.",
+          "tags": [
+            "Tool sprawl",
+            "Data silos",
+            "Loss of visibility"
+          ]
         },
-        "modernization": {
+        "card3": {
           "title": "Not for everyone",
-          "description": "Not for early-stage ideas, basic website requests, or projects where the problem has not been defined.",
-          "points": ["Established operations only", "Problem must be defined", "Decision-maker in the conversation"]
-        }
-      }
-    },
-    "approach": {
-      "title": "My",
-      "titleHighlight": "approach",
-      "description": "Four principles that guide every engagement.",
-      "steps": {
-        "step1": {
-          "number": "01",
-          "title": "Clarify before building",
-          "description": "Nothing is scoped until the operation is mapped."
-        },
-        "step2": {
-          "number": "02",
-          "title": "Audit first",
-          "description": "The Systems Audit produces the brief. The brief produces the proposal."
-        },
-        "step3": {
-          "number": "03",
-          "title": "One process at a time",
-          "description": "Fix the most painful thing first. Expand from a working foundation."
-        },
-        "step4": {
-          "number": "04",
-          "title": "Build to hand off",
-          "description": "The system must be maintainable and transferable. Another developer can take over without rebuilding."
-        }
-      }
-    },
-    "featured": {
-      "title": "Real",
-      "titleHighlight": "projects",
-      "description": "Systems I have built and deployed.",
-      "projects": {
-        "govPortal": {
-          "title": "Government Application Portal",
-          "type": "Spec Pitch",
-          "description": "A passport intake MVP I built and pitched to a consular office after going through their process myself. The frustration: files I had already uploaded online, I was then asked to bring in physically. I built the digital flow that would have made the trip unnecessary, and proposed it directly."
-        },
-        "travixo": {
-          "title": "TraviXO Systems",
-          "type": "B2B SaaS",
-          "description": "Multi-tenant VGP compliance SaaS for the French equipment rental industry. Built from direct domain experience."
-        },
-        "more": {
-          "title": "More Projects",
-          "type": "Various",
-          "description": "Interactive demos and operational tools. See the full portfolio."
+          "description": "Not for early-stage ideas, basic website requests, or projects where the problem has not been defined. If you cannot name what is broken, the timing is wrong.",
+          "tags": [
+            "Established operations only",
+            "Problem must be defined",
+            "Decision-maker in the conversation"
+          ]
         }
       },
-      "actions": {
-        "visitSite": "Visit site",
-        "openApp": "Open app"
-      }
-    },
-    "highlight": {
-      "badge": "Case Study",
-      "title": "TraviXO Systems",
-      "subtitle": "B2B SaaS - Equipment Tracking - VGP Compliance",
-      "description": "Built an internal system used daily to track equipment and manage compliance, replacing manual coordination across the team. Used as a real operational tool, not a prototype.",
-      "detailedDescription": "Built and deployed as a real operational system, not a template or mockup.",
-      "actions": {
-        "visitWebsite": "Visit website",
-        "seeAllProjects": "See all projects"
-      }
-    },
-    "faq": {
-      "title": "Common",
-      "titleHighlight": "questions",
-      "description": "Answers to questions prospects ask before booking.",
-      "items": {
-        "clients": {
-          "question": "What kind of businesses do you work with?",
-          "answer": "Established businesses where the operation has outgrown the tools holding it together. The trigger is usually loss of control, visibility, or flow. If the business is pre-revenue or still figuring out its process, the timing is wrong."
-        },
-        "audit": {
-          "question": "What does the Systems Audit involve?",
-          "answer": "A structured conversation that maps your current operation, identifies where work is falling through, and defines what to build and in what order. It costs 300 euros and takes one session. If the project proceeds, the 300 euros is deducted from the build cost."
-        },
-        "custom": {
-          "question": "Why build something custom instead of using existing SaaS tools?",
-          "answer": "SaaS works well when your problem is standard. When your process is specific to how you actually operate, off-the-shelf tools require you to work around them. You end up paying for features you do not use and building manual workarounds for the gaps. A focused custom system fixes the specific problem and nothing else."
-        },
-        "wordpress": {
-          "question": "Do you work with WordPress or Framer?",
-          "answer": "No. If that is what you need, I will point you to someone who does it well."
-        },
-        "timeline": {
-          "question": "How long does a project take?",
-          "answer": "Depends on scope. A focused operations system typically runs four to eight weeks. A full SaaS build runs eight to twelve weeks. Nothing starts without a written scope and a deposit."
-        },
-        "afterBuild": {
-          "question": "What happens after the build?",
-          "answer": "The system is yours. Fully documented, transferable to any developer. I offer maintenance retainers for clients who want ongoing support, but there is no lock-in."
+      "casestudy": {
+        "label": "Case study",
+        "title": "TraviXO Systems",
+        "context": "B2B SaaS · Equipment rental · VGP compliance",
+        "prose": "Multi-tenant SaaS for VGP compliance in French equipment rental. Built solo. Live. Shaped by real exposure to how these operations run.",
+        "linkLabel": "See all projects"
+      },
+      "howIWork": {
+        "eyebrow": "How I work",
+        "title": "A sequential process, not a menu of options.",
+        "intro": "Each stage exists because the one before it earned it. Nothing is assumed and nothing is skipped.",
+        "items": {
+          "1": {
+            "num": "01",
+            "title": "Systems Audit",
+            "description": "I map how your operation actually runs today and define what to build and in what order."
+          },
+          "2": {
+            "num": "02",
+            "title": "Custom System",
+            "description": "The core build. One system that shows where work is, what is blocked, and what needs to happen next."
+          },
+          "3": {
+            "num": "03",
+            "title": "Extensions",
+            "description": "Automation, integrations, and additional workflows built on top of the working foundation."
+          },
+          "4": {
+            "num": "04",
+            "title": "Ongoing",
+            "description": "Maintenance and iteration for clients who want continued support. No lock-in, no hidden retainers."
+          }
         }
+      },
+      "finalCta": {
+        "headline": "If something is <em>breaking</em>, or not working as it should, I can show you how to fix it.",
+        "description": "Before anything is priced, I map how your system actually works. Then we decide together if it's worth building.",
+        "note": "Another developer can take over without rebuilding everything."
       }
-    },
-    "cta": {
-      "title": "If you can describe what is breaking, I can describe what would fix it.",
-      "description": "Before anything is quoted, I map how your system actually works. Then we decide together if there is something worth building.",
-      "note": "Another developer can take over without rebuilding everything."
-    },
-    "trustBar": {
-      "item1": "All projects delivered",
-      "item2": "Direct communication",
-      "item3": "French and English",
-      "item4": "Platforms shipped"
     }
   },
   "services": {
-    "metadata": {
-      "title": "Services: Custom Systems Engineering",
-      "description": "Operations systems, workflow automation, SaaS development, and systems audits. Real platforms, not templates."
-    },
-    "hero": {
-      "badge": "Independent engineering practice",
-      "title": "Every system is",
-      "titleHighlight": "different",
-      "description": "The cost depends on how your business actually operates, not a fixed package. That is why I do not quote upfront. I first map your system, then define what needs to be built."
-    },
-    "techBar": {
-      "label": "Technologies I work with"
-    },
-    "items": {
-      "consulting": {
-        "id": "consulting",
-        "title": "Systems Audit",
-        "subtitle": "Clarify before building.",
-        "description": "Before building anything, I map how your operation actually works. The audit produces a written brief: what to build, why, and in what order.",
-        "features": [
-          "Operational mapping",
-          "Bottleneck identification",
-          "Written brief with priorities",
-          "Scope definition",
-          "Build-or-not recommendation"
-        ],
-        "whoFor": "Businesses experiencing friction in their operations.",
-        "timeline": "1 session",
-        "investment": "€300 (deducted if project proceeds)"
+    "page": {
+      "hero": {
+        "eyebrow": "Services · Independent systems engineering practice",
+        "headline": "The work I do, in the <em>order</em> I do it.",
+        "description": "Every engagement starts by mapping how your operation actually runs. From there, the build follows a sequence where each step earns the next. No fixed packages, no upfront quotes, no work without a written brief."
       },
-      "development": {
-        "id": "development",
-        "title": "Custom System",
-        "subtitle": "The core build.",
-        "description": "One system that shows where work is, what is blocked, and what needs to happen next. Built to replace fragmented tools and manual coordination.",
-        "features": [
-          "Centralized operations dashboard",
-          "Workflow automation",
-          "Status visibility for the whole team",
-          "Role-based access control",
-          "API integrations"
-        ],
-        "whoFor": "Teams running operations manually or outgrowing their current tools.",
-        "timeline": "4-8 weeks",
-        "investment": "Scope-dependent, defined after audit"
+      "coreServices": {
+        "eyebrow": "Core services",
+        "title": "Three sequential stages. Each one earns the next."
       },
-      "ai": {
-        "id": "ai",
-        "title": "Extensions",
-        "subtitle": "Built on the working foundation.",
-        "description": "Automation, integrations, and additional workflows that extend the core system.",
-        "features": [
-          "Third-party integrations",
-          "Workflow automation",
-          "Custom API connections",
-          "Data pipeline automation",
-          "Report generation"
-        ],
-        "whoFor": "Clients with a working system who need additional capabilities.",
-        "timeline": "2-4 weeks",
-        "investment": "Scope-dependent, defined after audit"
-      },
-      "support": {
-        "id": "automation",
-        "title": "Ongoing Support",
-        "subtitle": "No lock-in.",
-        "description": "Maintenance and iteration for clients who want continued support. The system is yours, fully documented and transferable.",
-        "features": [
-          "Bug fixes and updates",
-          "Performance monitoring",
-          "Feature additions",
-          "System documentation",
-          "On-demand support"
-        ],
-        "whoFor": "Businesses that want a reliable technical partner without dependency.",
-        "timeline": "Ongoing",
-        "investment": "From 300 euros per month"
-      }
-    },
-    "cards": {
-      "whoFor": "Who is this for?",
-      "timeline": "Typical timeline",
-      "investment": "Investment"
-    },
-    "comparison": {
-      "title": "What makes me different",
-      "description": "I focus on real engineering and long-term partnerships.",
-      "typical": {
-        "title": "Typical approach",
-        "items": [
-          "Templates and page builders",
-          "No real database",
-          "Static pages with contact forms",
-          "Disappears after delivery"
-        ]
-      },
-      "deralis": {
-        "title": "Deralis Digital",
-        "items": [
-          "Custom code, written for your specific operation",
-          "Real databases that grow with your business",
-          "Full system: interface, logic, data, integrations",
-          "Long-term technical partnership"
-        ]
-      }
-    },
-    "notSure": {
-      "title": "Not sure where to start?",
-      "description": "Start with the audit. I map your operation, you get a written brief, and we decide together if there is something worth building."
-    },
-    "faq": {
-      "title": "Common questions",
-      "items": {
-        "cost": {
-          "question": "How much does a typical project cost?",
-          "answer": "Every system is different. Before quoting anything, I run a Systems Audit to map your operation and define what needs to be built. The audit costs 300 euros and produces a written brief. If the project proceeds, the 300 euros is deducted from the build cost."
+      "blocks": {
+        "1": {
+          "num": "01",
+          "name": "Systems Audit",
+          "meta": {
+            "whoLabel": "Who it’s for",
+            "whoValue": "Businesses experiencing friction in their operations",
+            "timelineLabel": "Typical timeline",
+            "timelineValue": "One session, written brief delivered after",
+            "investmentLabel": "Investment",
+            "investmentValue": "€300 · deducted if the project proceeds"
+          },
+          "prose1": "Before anything is built, I map how your operation actually works today. We walk through the tools you use, the people involved, where information lives, where it gets stuck, and where the friction is costing you time or money.",
+          "prose2": "The audit produces a <strong>written brief</strong> that defines what to build, why it matters, and in what order. If the brief identifies a project worth doing, the €300 is deducted from the build cost. If it identifies that nothing needs to be built right now, I will tell you that directly."
         },
-        "remote": {
-          "question": "Do you work with clients outside of France?",
-          "answer": "Yes. I work remotely across Europe and beyond. Communication via video calls, email, and your preferred tools."
+        "2": {
+          "num": "02",
+          "name": "Custom System",
+          "meta": {
+            "whoLabel": "Who it’s for",
+            "whoValue": "Teams running operations manually or across fragmented tools",
+            "timelineLabel": "Typical timeline",
+            "timelineValue": "Defined after the audit, based on real scope",
+            "investmentLabel": "Investment",
+            "investmentValue": "Scope-dependent, defined after the audit"
+          },
+          "prose1": "The core build. One system that shows where work is, what is blocked, and what needs to happen next. Designed around the specific operation the audit mapped, not around a template.",
+          "prose2": "This usually replaces a combination of spreadsheets, disconnected SaaS tools, and informal processes that live in someone’s head. The goal is a single source of truth the team actually uses, not a dashboard that gets ignored after launch.",
+          "prose3": "Custom System work is always scoped against the audit brief. The brief defines what gets built, what does not, and what comes later as Extensions."
         },
-        "takeover": {
-          "question": "Can you take over an existing project?",
-          "answer": "Absolutely. I audit the current state, identify issues, and propose a plan to move forward."
+        "3": {
+          "num": "03",
+          "name": "Extensions",
+          "meta": {
+            "whoLabel": "Who it’s for",
+            "whoValue": "Clients with a working system who need additional capabilities",
+            "timelineLabel": "Typical timeline",
+            "timelineValue": "Defined per extension, smaller than core build",
+            "investmentLabel": "Investment",
+            "investmentValue": "Scope-dependent, defined after the audit"
+          },
+          "prose1": "Extensions are automation, integrations, and additional workflows built on top of a working foundation. Extensions only happen after a Custom System exists and is being used. Building extensions on top of a system that does not yet work creates more problems than it solves.",
+          "prose2": "Common extensions include connecting the system to existing tools the team already uses, automating recurring tasks that currently happen by hand, and adding reporting or visibility layers for stakeholders who need to see the data without operating it directly.",
+          "prose3": "Extensions are always defined against the original audit brief, with each extension scoped individually."
         }
+      },
+      "ongoing": {
+        "eyebrow": "After the build",
+        "title": "Ongoing Support",
+        "context": "Optional. Available after a Custom System is delivered.",
+        "prose1": "Once a system is live, it needs maintenance, small iterations, and the occasional fix. Ongoing Support is the post-delivery layer for clients who want continued support without the friction of a new contract every time something needs attention.",
+        "prose2": "This covers updates, performance monitoring, bug fixes, system documentation, and on-demand support. New features and significant additions are scoped separately as Extensions.",
+        "prose3": "No lock-in, no minimum term. Cancel any month.",
+        "price": "From €300 / month",
+        "priceNote": "Available only after a Custom System has been built."
+      },
+      "questions": {
+        "eyebrow": "Common questions",
+        "title": "Questions clients ask before booking the audit.",
+        "items": {
+          "1": {
+            "question": "How much does a typical project cost?",
+            "answer": "Every system is different and the cost depends on what your operation actually needs, not on a fixed package. Before quoting anything, I run a Systems Audit to map your operation and define what needs to be built. The audit costs €300 and produces a written brief. If the project proceeds, the €300 is deducted from the build cost."
+          },
+          "2": {
+            "question": "Do you work with clients outside France?",
+            "answer": "Yes. I work remotely with clients across France, the UK, and the US. Communication is in French or English depending on what works for you. Audit sessions and project work happen over video calls, with the deliverables and the system itself accessible from anywhere."
+          },
+          "3": {
+            "question": "Can you take over an existing project?",
+            "answer": "Sometimes. The Systems Audit covers existing systems too, not just operations that have never been digitized. If the existing system is salvageable, the brief will define what to keep, what to rebuild, and what to deprecate. If it is not salvageable, the brief will say so, and you can decide whether to start over or keep what you have."
+          },
+          "4": {
+            "question": "How long does a typical project take?",
+            "answer": "Defined after the audit. The brief includes a realistic timeline for the work it scopes, based on the complexity of your operation and the depth of the build. Projects can range from a few weeks for a focused Custom System to several months for a deeper engagement with multiple Extensions. The audit is the only stage with a fixed timeline: one session, brief delivered shortly after."
+          }
+        }
+      },
+      "finalCta": {
+        "headline": "Ready to map how your system actually <em>works</em>?",
+        "description": "The audit is the only thing you can buy upfront. Everything else gets defined here first.",
+        "note": "Another developer can take over without rebuilding everything."
       }
     }
   },
@@ -458,6 +376,69 @@
     "cta": {
       "title": "Have a project that should look like one of these?",
       "description": "If you can describe what is breaking, I can describe what would fix it."
+    },
+    "page": {
+      "metadata": {
+        "title": "Projects · Deralis Digital",
+        "description": "One live system, one spec pitch, and a set of working concept builds. The work as it actually stands today, with no fabricated metrics or invented client results."
+      },
+      "hero": {
+        "eyebrow": "Projects",
+        "title": "Real systems, built around how operations actually <em>run</em>.",
+        "sub1": "One live system, one spec pitch in front of a real buyer, and a small set of working concept builds.",
+        "sub2": "Each one started from the same observation. Most businesses already have tools. They just do not have a system.",
+        "sub3": "No fabricated metrics. No client logos I have not earned.",
+        "ctaSecondary": "See the case study"
+      },
+      "travixo": {
+        "label": "Case study",
+        "context": "B2B software · Equipment rental · VGP compliance · Live",
+        "prose1": "TraviXO is compliance software built for the French equipment rental industry. The system gives teams one place to track equipment, manage compliance, and see what needs attention next.",
+        "prose2": "Time inside the equipment rental industry at Loxam put me close to how these operations actually run. The deeper picture of how VGP compliance fails came from studying the regulation and from conversations with rental teams.",
+        "prose3": "Over time, the same failure points kept surfacing. Inspections get missed. Certificates end up scattered across emails or folders. The audit trail depends on someone remembering to keep it updated. The system was built around removing those failure points.",
+        "prose4": "Built solo. Live. Designed as a working operational system, not a concept.",
+        "linkLabel": "See the system"
+      },
+      "govPortal": {
+        "label": "Spec pitch",
+        "title": "Government Application Portal",
+        "context": "Public sector · Passport intake MVP · Currently with the buyer",
+        "prose1": "A passport application intake MVP I built and pitched to a Paris consular office after going through their process myself. Their existing flow required an in-person trip for files I had already uploaded online. The gap between what the system could do and what the team was asked to do was visible from the waiting room.",
+        "prose2": "I built the digital flow that would have closed the gap and proposed it directly. The proposal is currently with them.",
+        "note": "Spec pitch. Not a delivered engagement. Status updated when the buyer responds."
+      },
+      "concepts": {
+        "eyebrow": "Concept builds",
+        "title": "Working demos you can <em>click</em>.",
+        "intro": "Not client work. Working demos built to test patterns before they are used inside a real system. Each one is live, public, and runs on real code rather than staged screens.",
+        "items": {
+          "1": {
+            "title": "Deralis Ops Dashboard",
+            "desc": "An operations dashboard pattern for teams that need to see where work actually is. Built to test the visibility primitive a real client system would extend.",
+            "linkLabel": "View demo"
+          },
+          "2": {
+            "title": "Flux Client",
+            "desc": "A structured client intake demo. An inquiry arrives, becomes a job record, gets a status, and stays visible to a whole team without anyone forwarding anything.",
+            "linkLabel": "View demo"
+          },
+          "3": {
+            "title": "Onboard",
+            "desc": "A structured onboarding tracker. Create a record, watch the checklist appear, every step visible. Nothing depending on someone remembering.",
+            "linkLabel": "View demo"
+          },
+          "4": {
+            "title": "Marche Diaspora",
+            "desc": "A product catalogue with order management. End-to-end ordering flow as an interactive demo, built to test how a small commerce operation could run on one system.",
+            "linkLabel": "View demo"
+          }
+        }
+      },
+      "finalCta": {
+        "title": "Every project here started as a problem someone could <em>name</em>.",
+        "body": "The trigger is usually the same. A loss of control, visibility, or flow that the existing tools were never going to fix on their own. The systems audit is where that conversation starts.",
+        "note": "Fixed price. Bilingual French and English. One person, every line of code."
+      }
     }
   },
   "about": {
@@ -589,6 +570,65 @@
     "cta": {
       "title": "Want me to look at your operation?",
       "description": "Before anything is quoted, I map how your system actually works."
+    },
+    "page": {
+      "metadata": {
+        "title": "About · Deralis Digital",
+        "description": "Deralis Digital is an independent engineering practice. I build internal systems for profitable businesses where the way information moves between people and tools has become the bottleneck."
+      },
+      "hero": {
+        "eyebrow": "Independent engineering practice · Île-de-France",
+        "title": "About <em>Deralis</em> Digital.",
+        "sub1": "I build the systems businesses need to operate.",
+        "sub2": "Deralis Digital is an independent engineering practice. I work with profitable, operational businesses where the way information moves between people and tools has become the bottleneck. Not websites. Not templates. Systems that show where work is, what is blocked, and what needs to happen next.",
+        "sub3": "I’ve worked inside real businesses where the system isn’t visible, but the consequences are. That experience is what TraviXO Systems comes from, a VGP compliance software for the French equipment rental industry.",
+        "sub4": "It shapes how I work: you cannot design a system for an operation you do not understand.",
+        "ctaSecondary": "See how I work →"
+      },
+      "background": {
+        "eyebrow": "Background",
+        "title": "Four years inside French <em>software</em> and industrial businesses.",
+        "intro": "I work as a solo operator, building Deralis alongside my role in software support. My experience comes from working inside real systems where operations depend on tools that were never designed to work together.",
+        "role1": {
+          "title": "Application Support Engineer",
+          "company": "Ariane Systems · Hospitality check-in software"
+        },
+        "role2": {
+          "title": "Helpdesk Technician",
+          "company": "Loxam · Technical support inside the French equipment rental industry"
+        },
+        "closing": "The eighteen months at <strong>Loxam</strong> are where I learned how the French equipment rental industry actually operates day to day. That domain knowledge is what TraviXO Systems is built on."
+      },
+      "principles": {
+        "eyebrow": "How I work",
+        "title": "Three <em>principles</em>, no exceptions.",
+        "intro": "Every engagement runs through the same logic. Each principle exists because skipping it has cost someone, somewhere, money they did not need to spend.",
+        "p1": {
+          "title": "Audit first",
+          "body": "The €300 systems audit is the only way in. Nothing is built before that. The audit defines what to build and in what order, and the fee is deducted from the project if it proceeds."
+        },
+        "p2": {
+          "title": "Define done before we start",
+          "body": "If we cannot write down what finished looks like, the project does not start. Scope without a definition of done is how engagements run forever and clients lose trust."
+        },
+        "p3": {
+          "title": "I own the system. You own the business.",
+          "body": "Every system is documented, transferable, and maintainable by another developer. No lock-in. No hidden dependencies. You can take the build elsewhere the day it ships if that is what you need."
+        }
+      },
+      "building": {
+        "eyebrow": "What I’m building now",
+        "title": "Two independent <em>practices</em>.",
+        "intro": "Deralis Digital is the client practice. TraviXO Systems is the product.",
+        "card1": {
+          "title": "TraviXO Systems",
+          "body": "Live multi-tenant software for VGP compliance in the French equipment rental industry. Built solo from inside the industry it serves."
+        },
+        "card2": {
+          "title": "Deralis Digital",
+          "body": "Independent engineering practice built around an audit-first model for operational businesses across France, the UK, and the US."
+        }
+      }
     }
   },
   "contact": {
@@ -682,17 +722,49 @@
     "cta": {
       "preferEmail": "Prefer email?",
       "reachOut": "Reach out directly at"
-    }
-  },
-  "leadGen": {
-    "stickyCta": {
-      "text": "Get your system mapped (€300)"
     },
-    "newsletter": {
-      "description": "Engineering insights, case studies, and strategies, delivered monthly.",
-      "placeholder": "you@company.com",
-      "success": "You're subscribed. Check your inbox.",
-      "error": "Something went wrong. Try again."
+    "page": {
+      "metadata": {
+        "title": "Contact · Deralis Digital",
+        "description": "Talk to me before booking a Systems Audit. Independent systems engineering practice based in Île-de-France, working across France and remote."
+      },
+      "hero": {
+        "eyebrow": "Contact",
+        "title": "Let’s <em>clarify</em> what is breaking before building anything.",
+        "sub1Prefix": "If you already know you want to move forward, start with the",
+        "sub1LinkText": "Systems Audit",
+        "sub1Suffix": ".",
+        "sub2": "If you need to explain your situation first, use the form below."
+      },
+      "formIntro": {
+        "p1": "Describe what is happening in your business and where things are breaking.",
+        "p2": "I read every message personally. If there is a fit, I will reply within 2 working days."
+      },
+      "form": {
+        "websiteLabel": "Website",
+        "messageLabel": "Message",
+        "submitButton": "Send your situation",
+        "errors": {
+          "required": "Required",
+          "email": "Invalid email",
+          "minLength": "Minimum 20 characters"
+        }
+      },
+      "nextStrip": {
+        "label": "What happens next",
+        "step1": "I read your message",
+        "step2": "I reply within 2 working days",
+        "step3": "If there is a fit, we book a 30-minute call"
+      },
+      "methods": {
+        "emailHeading": "Email",
+        "locationHeading": "Location",
+        "locationValue": "Île-de-France, France",
+        "locationMuted": "Working across France and remote.",
+        "languagesHeading": "Languages",
+        "languagesValue": "French and English",
+        "languagesMuted": "Native bilingual. Documents and meetings in either."
+      }
     }
   },
   "blog": {
@@ -741,6 +813,20 @@
       "title": "Have a project in mind?",
       "description": "Let's discuss how I can build the right system for your business.",
       "button": "Get your system mapped (€300)"
+    },
+    "page": {
+      "metadata": {
+        "title": "Blog · Deralis Digital",
+        "description": "From the practice. Notes on operations, software, and what it actually takes to build systems that work."
+      },
+      "hero": {
+        "title": "From the",
+        "titleHighlight": "practice",
+        "description": "Notes on operations, software, and what it actually takes to build systems that work."
+      },
+      "postMeta": {
+        "minRead": "min read"
+      }
     }
   },
   "privacy": {
@@ -947,15 +1033,19 @@
       "publisher": {
         "title": "Site Publisher",
         "fields": {
-          "name": "Business Name",
-          "nameValue": "Deralis Digital",
-          "form": "Legal Form",
-          "formValue": "Individual business / Web development and digital services",
+          "name": "Legal name",
+          "nameValue": "UGBOAJA Uwa Chidera",
+          "form": "Status",
+          "formValue": "Sole proprietor (micro-entrepreneur)",
+          "siret": "SIRET",
+          "siretValue": "852 525 963 00025",
           "address": "Address",
           "addressValue": "Available upon official request",
           "email": "Email",
-          "director": "Publication Director",
-          "directorValue": "Deralis Digital"
+          "vat": "VAT",
+          "vatValue": "VAT not applicable, art. 293 B of the French Tax Code (CGI)",
+          "director": "Publication director",
+          "directorValue": "UGBOAJA Uwa Chidera"
         }
       },
       "hosting": {
@@ -984,6 +1074,290 @@
       "contact": {
         "title": "Contact",
         "intro": "For any inquiries:"
+      }
+    }
+  },
+  "projectDetail": {
+    "labels": {
+      "category": "Category",
+      "role": "Role",
+      "status": "Status",
+      "started": "Started",
+      "live": "Live",
+      "inDevelopment": "in development",
+      "repo": "Repo",
+      "private": "Private",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Data",
+      "infrastructure": "Infrastructure",
+      "tooling": "Tooling",
+      "viewProject": "View project →",
+      "whereToFind": "Where to find it",
+      "linksTitle": "Links.",
+      "builtWith": "Built with",
+      "stackTitle": "The stack underneath.",
+      "stackIntro": "Listed plainly. The choice of tools matters less than how they are used.",
+      "whatItIs": "What it is",
+      "whatIBuilt": "What I built",
+      "insideTheSystem": "Inside the system",
+      "relatedProjects": "Related projects",
+      "relatedTitle": "Other things I have built."
+    },
+    "travixo": {
+      "metadata": {
+        "title": "TraviXO Systems · Deralis Digital",
+        "description": "A live multi-tenant VGP compliance SaaS for the French equipment rental industry. Built solo from domain expertise inside the sector."
+      },
+      "eyebrow": "Projects / TraviXO Systems",
+      "title": "A compliance system for the equipment rental <em>industry</em>.",
+      "standfirst": "A live multi-tenant SaaS that manages VGP regulatory inspections for French equipment rental companies. Built solo, grounded in real industry constraints.",
+      "meta": {
+        "category": "Vertical SaaS",
+        "role": "Solo founder, every line",
+        "status": "Live",
+        "started": "2025 (in development)"
+      },
+      "whatItIs": {
+        "title": "Compliance for the French equipment rental industry.",
+        "p1": "TraviXO Systems is a multi-tenant compliance SaaS for the French equipment rental industry. It tracks the periodic regulatory inspections, the VGP, that every rental company in France is legally required to perform on the equipment they put in front of customers.",
+        "p2": "Missed inspections are a liability problem and a regulatory problem, and the way most rental companies track them today is through a mix of paper folders, individual spreadsheets, and the memory of whoever has been there longest.",
+        "p3": "The understanding behind it comes from time spent inside the equipment rental industry, close to how this work actually gets done. The product is shaped around those workflows rather than around a generic compliance template.",
+        "p4": "Built solo. Live. Running real inspection workflows in production."
+      },
+      "whatIBuilt": {
+        "title": "The pieces that make the system work.",
+        "items": {
+          "1": {
+            "title": "Multi-tenant foundation",
+            "body": "Each rental company operates in its own isolated workspace, with strict separation of data between tenants."
+          },
+          "2": {
+            "title": "Equipment register",
+            "body": "Every piece of rentable equipment is tracked with its identification, category, regulatory class, and inspection schedule. The register is the single source of truth that every other part of the system depends on."
+          },
+          "3": {
+            "title": "Inspection workflow",
+            "body": "Inspections are scheduled automatically based on regulatory frequency, surfaced as work to do, and recorded with the inspector identity, date, findings, and any required follow-up. Nothing is recorded on paper and forgotten."
+          },
+          "4": {
+            "title": "Audit trail and exports",
+            "body": "Every action is logged in a way that survives an audit by the regulator. Inspection records can be exported as compliance reports without anyone having to assemble a folder by hand the night before."
+          },
+          "5": {
+            "title": "Role-aware access",
+            "body": "The branch manager, the technician, and the head office accountant see different views of the same data. Each role sees what is theirs to act on, and only that."
+          }
+        }
+      },
+      "inside": {
+        "title": "A few of the screens that run it.",
+        "cap1": "The equipment register, where every rentable item lives with its regulatory class and inspection schedule.",
+        "cap2": "The inspection workflow surfacing what is due, what is overdue, and what was completed in the last cycle.",
+        "cap3": "The exportable audit trail. Every action attributable, every record reproducible."
+      },
+      "links": {
+        "liveLabel": "Live",
+        "liveValue": "app.travixosystems.com",
+        "repoLabel": "Repo",
+        "repoValue": "Private"
+      },
+      "related": {
+        "card1": {
+          "eyebrow": "Demo build / 2026",
+          "title": "Flux Client",
+          "body": "An intake-to-job-board demo showing how a single form can drive a real-time operational view for a small team."
+        },
+        "card2": {
+          "eyebrow": "Demo build / 2026",
+          "title": "Onboard",
+          "body": "A staff and client onboarding tracker that replaces the spreadsheet most small teams quietly run their first weeks on."
+        },
+        "card3": {
+          "eyebrow": "Spec pitch / 2026",
+          "title": "Government Application Portal",
+          "body": "A spec pitch for a structured application intake portal. Not delivered. Included here as scope reference."
+        }
+      },
+      "stack": {
+        "eyebrow": "Built with",
+        "title": "The stack underneath.",
+        "intro": "Listed plainly. The choice of tools matters less than how they are used.",
+        "layers": {
+          "frontend": {
+            "label": "Frontend",
+            "items": "Next.js 15, TypeScript, Tailwind CSS, shadcn/ui"
+          },
+          "backend": {
+            "label": "Backend",
+            "items": "Next.js server actions, Prisma ORM, Zod validation"
+          },
+          "data": {
+            "label": "Data",
+            "items": "Supabase, PostgreSQL, Row Level Security"
+          },
+          "infrastructure": {
+            "label": "Infrastructure",
+            "items": "Vercel, Cloudflare, Resend"
+          },
+          "tooling": {
+            "label": "Tooling",
+            "items": "Git, GitHub, Claude Code"
+          }
+        }
+      }
+    }
+  },
+  "blogPost": {
+    "minRead": "min read",
+    "signatureBlock": {
+      "eyebrow": "Written by",
+      "name": "Uwa Ugboaja",
+      "bio": "I build the internal systems small businesses run on, working independently in French and English from Île-de-France.",
+      "linkLabel": "More about how I work →"
+    },
+    "moreStrip": {
+      "eyebrow": "More from the practice",
+      "title": "Other things I have written.",
+      "readMore": "Read →"
+    }
+  },
+  "audit": {
+    "page": {
+      "metadata": {
+        "title": "Systems Audit · Deralis Digital",
+        "description": "A paid decision point, not a conversation, not a report, and not a sales step. A structured 60 to 90 minute call plus a written decision brief, for 300 euros."
+      },
+      "hero": {
+        "eyebrow": "Systems Audit · €300",
+        "headline": "Find out what to build, and what <em>not</em> to build, before anyone writes code.",
+        "sub1": "The audit is a paid decision point, not a conversation, not a report, and not a sales step.",
+        "sub2": "One structured call, followed by a written decision brief delivered within five working days.",
+        "sub3": "Delivered by an independent systems engineer who builds live systems and works from real operational constraints."
+      },
+      "walkaway": {
+        "eyebrow": "What you walk away with",
+        "title": "A set of <em>decisions</em> you can act on Monday morning.",
+        "intro": "The audit exists so you can stop guessing which system to fix first, and start executing against an order that holds up.",
+        "items": [
+          "Decide which system to fix first, and why the others wait.",
+          "Decide whether to build, buy, or use what already exists.",
+          "Decide whether the problem is software or operations.",
+          "Decide what not to build yet, so the scope stops expanding on its own."
+        ]
+      },
+      "inPractice": {
+        "disclaimerLead": "Example scenario. Not a specific client.",
+        "disclaimerBody": "An illustrative composite, not a case study. No fabricated metrics, no client name, no implied track record.",
+        "eyebrow": "In practice",
+        "title": "What an audit <em>actually</em> looks like.",
+        "intro": "The five pieces of a decision brief, walked through on a composite example.",
+        "steps": {
+          "1": {
+            "heading": "Situation",
+            "body": "A French SME, about thirty staff, coordinating field operations across multiple sites. Profitable, growing, run day-to-day on WhatsApp, email, and three separate SaaS tools that didn’t talk to each other."
+          },
+          "2": {
+            "heading": "What was breaking",
+            "body": "Nobody could answer “where is this right now?” without making two phone calls. The same information was being entered into three places. The operations lead was spending a full day a week reconciling the gaps manually."
+          },
+          "3": {
+            "heading": "What the audit clarified",
+            "body": "The problem was not the tools. The problem was that no single place held the current state of a job. Adding a fourth tool would have made it worse. The fix was one thin layer on top of the existing tools, not a replacement of any of them."
+          },
+          "4": {
+            "heading": "What the first build should be",
+            "body": "A single status surface showing every active job, its current stage, and who owns the next step. Pulling from the existing tools, not replacing them. Scoped to ship in weeks, not months."
+          },
+          "5": {
+            "heading": "What was explicitly ruled out",
+            "body": "A full operations platform. A mobile app. A CRM replacement. Each of those was a real temptation the audit made it easier to say no to, because the brief named them and explained why they were wrong for this operation right now."
+          }
+        },
+        "midCtaNote": "This is what the brief looks like. Same format, your operation, your decisions."
+      },
+      "deliverables": {
+        "eyebrow": "What you get now",
+        "title": "Two things. A call, and a written brief.",
+        "intro": "No slide decks. No generic audit template. No recycled recommendations.",
+        "items": [
+          "One structured audit call, 60 to 90 minutes.",
+          "A written decision brief, delivered after the call.",
+          "A friction map of how your operation actually runs today.",
+          "A what-to-build and what-not-to-build split, with reasoning.",
+          "An execution sequence and the first system scope direction."
+        ],
+        "notIncludedLabel": "What’s NOT included",
+        "excludes": [
+          "No full technical specification.",
+          "No implementation work. The audit does not build anything.",
+          "No vague generic recommendations. The brief names your operation, not a category."
+        ]
+      },
+      "flow": {
+        "label": "How it works",
+        "step1": "Pay €300 via Stripe",
+        "step2": "Confirmation + scheduling link",
+        "step3": "60 to 90 minute audit call",
+        "step4": "Brief delivered within 5 working days"
+      },
+      "notFor": {
+        "eyebrow": "Who this is not for",
+        "title": "Don’t book the audit <em>if</em>…",
+        "intro": "If any of these describe you, the audit is the wrong product. Save the €300.",
+        "items": [
+          "You need a marketing website (WordPress, Webflow, Framer, and so on).",
+          "You want someone to start building before the problem is properly defined.",
+          "There is no operational friction to solve.",
+          "You cannot define what “better” would look like.",
+          "You expect to skip the audit and go straight to building."
+        ]
+      },
+      "refund": {
+        "eyebrow": "Refund policy",
+        "title": "The audit <em>is</em> the work.",
+        "p1": "I don’t take money for audits I can’t deliver. If during the call I find I’m not the right person to help you, I refund the full €300. No arguments, no partial credit, no upsell into something else.",
+        "p2": "Otherwise the audit is non-refundable, because the audit is the work, not a sales step. The call and the brief exist so you can make decisions you couldn’t make before. That value is delivered whether or not you hire me afterwards, and that’s the point."
+      },
+      "tailCta": {
+        "eyebrow": "Ready to book",
+        "headline": "You are not buying a call. You are buying a decision.",
+        "body": "One fixed price, one structured call, one written decision brief. If I’m not the right person to help, you get your money back.",
+        "note": "Fixed price. Non-refundable unless I determine I’m not the right fit."
+      },
+      "faq": {
+        "eyebrow": "Questions",
+        "title": "Common <em>questions</em>.",
+        "items": {
+          "1": {
+            "question": "How long until I get the brief?",
+            "answer": "Five working days from the audit call. If anything delays that, you hear from me before the deadline, not after."
+          },
+          "2": {
+            "question": "What if I’m not ready to act on the brief?",
+            "answer": "The brief is yours. Use it when the timing is right. There is no expiry, no follow-up sequence, no sales chase."
+          },
+          "3": {
+            "question": "What if I want to hire you to build the first system after the audit?",
+            "answer": "The €300 audit fee is deducted from the project cost if the project proceeds. The audit pays for itself the moment the build starts."
+          },
+          "4": {
+            "question": "Do you sign NDAs?",
+            "answer": "Yes. Standard mutual NDA, signed before the call if you want one. Send yours or I’ll send mine."
+          },
+          "5": {
+            "question": "What happens to my data?",
+            "answer": "It stays with me. Nothing is shared with third parties, nothing is used for marketing, nothing is stored longer than necessary to deliver the brief."
+          },
+          "6": {
+            "question": "Can I share the brief with my team?",
+            "answer": "Yes. The brief is yours to circulate, reference, and act on however you want. It’s written to be readable by someone who wasn’t on the call."
+          },
+          "7": {
+            "question": "Can the call be in French?",
+            "answer": "Yes. The call and the brief can be delivered in French or English. I’m bilingual and work daily in both."
+          }
+        }
       }
     }
   }

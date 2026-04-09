@@ -1,376 +1,174 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import CalendlyButton from "@/components/shared/CalendlyButton";
-import {
-  ArrowRight,
-  Mail,
-  MapPin,
-  Clock,
-  Send,
-  CheckCircle2,
-  Loader2,
-  MessageSquare,
-  Calendar
-} from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
 
-const serviceKeys = ["consulting", "development", "ai", "support", "other"] as const;
-const budgetKeys = ["5k10k", "10k25k", "over25k", "notSure"] as const;
+// TODO: Reply email template (Resend) should include soft redirect to audit page.
+// See PHASE_5_CONTACT_PAGE_NOTES.md section (d).
 
-type ContactFormProps = {
-  prefilledService?: string;
-};
+type FormState = "idle" | "submitting" | "success" | "error";
+type FieldErrors = Record<string, string>;
 
-export default function ContactForm({ prefilledService = "" }: ContactFormProps) {
-  const t = useTranslations("contact");
-  const tActions = useTranslations("common.actions");
+export default function ContactForm() {
+  const t = useTranslations("contact.page.form");
+  const tErrors = useTranslations("contact.page.form.errors");
+  const tCommon = useTranslations("contact");
+  const locale = useLocale();
 
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    company: "",
-    service: prefilledService,
-    budget: "",
-    message: "",
-  });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [state, setState] = useState<FormState>("idle");
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const [formError, setFormError] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  function validate(data: FormData): FieldErrors {
+    const errors: FieldErrors = {};
+    const name = (data.get("name") as string)?.trim();
+    const email = (data.get("email") as string)?.trim();
+    const message = (data.get("message") as string)?.trim();
+
+    if (!name) errors.name = "required";
+    if (!email) errors.email = "required";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = "invalid";
+    if (!message) errors.message = "required";
+    else if (message.length < 20) errors.message = "tooShort";
+
+    return errors;
+  }
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("loading");
+    setFieldErrors({});
+    setFormError("");
+
+    const formData = new FormData(e.currentTarget);
+
+    // Honeypot check
+    if (formData.get("website_url")) return;
+
+    const errors = validate(formData);
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      return;
+    }
+
+    setState("submitting");
 
     try {
-      const response = await fetch("/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formState),
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          company: formData.get("company") || "",
+          website: formData.get("website") || "",
+          message: formData.get("message"),
+          locale,
+        }),
       });
 
-      if (response.ok) {
-        setStatus("success");
-        setFormState({
-          name: "",
-          email: "",
-          company: "",
-          service: "",
-          budget: "",
-          message: "",
-        });
-      } else {
-        setStatus("error");
-      }
+      if (!res.ok) throw new Error("Failed");
+      setState("success");
     } catch {
-      setStatus("error");
+      setState("error");
+      setFormError(tCommon("form.error"));
     }
-  };
+  }
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setFormState((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
+  if (state === "success") {
+    return (
+      <div className="max-w-[640px] mx-auto py-12">
+        <h3 className="text-[22px] font-medium text-ink mb-3">
+          {tCommon("success.title")}
+        </h3>
+        <p className="text-base leading-[1.65] text-ink-2">
+          {tCommon("success.description")}
+        </p>
+      </div>
+    );
+  }
 
-  const expectItems = [
-    { icon: MessageSquare, key: "0" },
-    { icon: Calendar, key: "1" },
-    { icon: CheckCircle2, key: "2" },
-  ];
-
-  const quickAnswerKeys = ["notSure", "startups", "timeline"] as const;
+  const fieldCls = (name: string) =>
+    `block w-full text-base leading-[1.6] text-ink bg-bg border rounded-lg px-4 py-3.5 max-md:py-[13px] max-md:px-3.5 placeholder:text-ink-3 hover:border-border-warm focus:outline-none focus:border-accent transition-colors ${
+      fieldErrors[name] ? "border-[var(--border-error)]" : "border-border-default"
+    }`;
 
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-10 bg-mesh">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--dd-text-main)] mb-4">
-              {t("hero.title")}{" "}
-              <span className="gradient-text">{t("hero.titleHighlight")}</span>
-            </h1>
-            <p className="text-lg text-[var(--dd-text-muted)] leading-relaxed">
-              {t("hero.description")}
-            </p>
-          </div>
-        </div>
-      </section>
+    <form onSubmit={handleSubmit} noValidate>
+      {/* Honeypot */}
+      <div className="hidden" aria-hidden="true">
+        <input type="text" name="website_url" tabIndex={-1} autoComplete="off" />
+      </div>
 
-      {/* Main Content */}
-      <section className="py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Form */}
-            <div className="lg:col-span-2">
-              {status === "success" ? (
-                <div className="gradient-border p-8 text-center">
-                  <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle2 className="w-8 h-8 text-green-500" />
-                  </div>
-                  <h2 className="text-2xl font-bold text-[var(--dd-text-main)] mb-2">
-                    {t("success.title")}
-                  </h2>
-                  <p className="text-[var(--dd-text-muted)] mb-6">
-                    {t("success.description")}
-                  </p>
-                  <Link href="/" className="btn-secondary">
-                    {tActions("backToHome")}
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  {/* Name & Email Row */}
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
-                      >
-                        {t("form.name.label")} <span className="text-red-500">{t("form.required")}</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        value={formState.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] placeholder-[var(--dd-text-dim)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors"
-                        placeholder={t("form.name.placeholder")}
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
-                      >
-                        {t("form.email.label")} <span className="text-red-500">{t("form.required")}</span>
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formState.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] placeholder-[var(--dd-text-dim)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors"
-                        placeholder={t("form.email.placeholder")}
-                      />
-                    </div>
-                  </div>
+      {formError && (
+        <p className="text-[15px] text-[var(--border-error)] mb-6">{formError}</p>
+      )}
 
-                  {/* Company */}
-                  <div>
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
-                    >
-                      {t("form.company.label")} <span className="text-[var(--dd-text-dim)]">{t("form.company.optional")}</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formState.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] placeholder-[var(--dd-text-dim)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors"
-                      placeholder={t("form.company.placeholder")}
-                    />
-                  </div>
+      <div className="mb-6">
+        <label htmlFor="name" className="block text-[14px] font-semibold text-ink-label tracking-[0.01em] mb-2">
+          {tCommon("form.name.label")}
+          <span className="text-accent ml-0.5 font-medium">{tCommon("form.required")}</span>
+        </label>
+        <input type="text" id="name" name="name" autoComplete="name" required className={fieldCls("name")} />
+        {fieldErrors.name && <p className="text-[13px] text-ink-2 mt-1.5">{tErrors("required")}</p>}
+      </div>
 
-                  {/* Service & Budget Row */}
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label
-                        htmlFor="service"
-                        className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
-                      >
-                        {t("form.service.label")}
-                      </label>
-                      <select
-                        id="service"
-                        name="service"
-                        value={formState.service}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors"
-                      >
-                        <option value="">{t("form.service.placeholder")}</option>
-                        {serviceKeys.map((key) => (
-                          <option key={key} value={key}>
-                            {t(`form.service.options.${key}`)}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="budget"
-                        className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
-                      >
-                        {t("form.budget.label")}
-                      </label>
-                      <select
-                        id="budget"
-                        name="budget"
-                        value={formState.budget}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors"
-                      >
-                        <option value="">{t("form.budget.placeholder")}</option>
-                        {budgetKeys.map((key) => (
-                          <option key={key} value={key}>
-                            {t(`form.budget.options.${key}`)}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
+      <div className="mb-6">
+        <label htmlFor="email" className="block text-[14px] font-semibold text-ink-label tracking-[0.01em] mb-2">
+          {tCommon("form.email.label")}
+          <span className="text-accent ml-0.5 font-medium">{tCommon("form.required")}</span>
+        </label>
+        <input type="email" id="email" name="email" autoComplete="email" required className={fieldCls("email")} />
+        {fieldErrors.email && <p className="text-[13px] text-ink-2 mt-1.5">{fieldErrors.email === "invalid" ? tErrors("email") : tErrors("required")}</p>}
+      </div>
 
-                  {/* Message */}
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-[var(--dd-text-main)] mb-2"
-                    >
-                      {t("form.message.label")} <span className="text-red-500">{t("form.required")}</span>
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={5}
-                      value={formState.message}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg bg-[var(--dd-bg-card)] border border-[var(--dd-border)] text-[var(--dd-text-main)] placeholder-[var(--dd-text-dim)] focus:outline-none focus:border-[var(--dd-accent)] transition-colors resize-none"
-                      placeholder={t("form.message.placeholder")}
-                    />
-                  </div>
+      <div className="mb-6">
+        <label htmlFor="company" className="block text-[14px] font-semibold text-ink-label tracking-[0.01em] mb-2">
+          {tCommon("form.company.label")}
+          <span className="text-ink-3 font-normal ml-1.5">{tCommon("form.company.optional")}</span>
+        </label>
+        <input type="text" id="company" name="company" autoComplete="organization" className={fieldCls("company")} />
+      </div>
 
-                  {/* Error Message */}
-                  {status === "error" && (
-                    <div className="p-4 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
-                      {t("form.error")}
-                    </div>
-                  )}
+      <div className="mb-6">
+        <label htmlFor="website" className="block text-[14px] font-semibold text-ink-label tracking-[0.01em] mb-2">
+          {t("websiteLabel")}
+          <span className="text-ink-3 font-normal ml-1.5">{tCommon("form.company.optional")}</span>
+        </label>
+        <input type="url" id="website" name="website" autoComplete="url" placeholder="https://" className={fieldCls("website")} />
+      </div>
 
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    disabled={status === "loading"}
-                    className="btn-primary w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {status === "loading" ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        {tActions("sending")}
-                      </>
-                    ) : (
-                      <>
-                        {tActions("sendMessage")}
-                        <Send className="w-4 h-4" />
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
-            </div>
+      <div className="mb-6">
+        <label htmlFor="message" className="block text-[14px] font-semibold text-ink-label tracking-[0.01em] mb-2">
+          {t("messageLabel")}
+          <span className="text-accent ml-0.5 font-medium">{tCommon("form.required")}</span>
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          minLength={20}
+          rows={6}
+          className={`${fieldCls("message")} min-h-[160px] resize-y`}
+        />
+        {fieldErrors.message && (
+          <p className="text-[13px] text-ink-2 mt-1.5">
+            {fieldErrors.message === "tooShort" ? tErrors("minLength") : tErrors("required")}
+          </p>
+        )}
+      </div>
 
-            {/* Sidebar */}
-            <div className="space-y-6">
-              {/* Contact Info Card */}
-              <div className="gradient-border p-6">
-                <h3 className="text-lg font-semibold text-[var(--dd-text-main)] mb-4">
-                  {t("sidebar.contactInfo.title")}
-                </h3>
-                <div className="space-y-4">
-                  <a
-                    href="mailto:contact@deralis.digital"
-                    className="flex items-center gap-3 text-[var(--dd-text-muted)] hover:text-[var(--dd-text-main)] transition-colors"
-                  >
-                    <Mail className="w-5 h-5 text-[var(--dd-accent)]" />
-                    <span>contact@deralis.digital</span>
-                  </a>
-                  <div className="flex items-center gap-3 text-[var(--dd-text-muted)]">
-                    <MapPin className="w-5 h-5 text-[var(--dd-accent)]" />
-                    <span>{t("sidebar.contactInfo.location")}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-[var(--dd-text-muted)]">
-                    <Clock className="w-5 h-5 text-[var(--dd-accent)]" />
-                    <span>{t("sidebar.contactInfo.response")}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* What to Expect */}
-              <div className="p-6 rounded-xl bg-[var(--dd-bg-card)] border border-[var(--dd-border)]">
-                <h3 className="text-lg font-semibold text-[var(--dd-text-main)] mb-4">
-                  {t("sidebar.whatToExpect.title")}
-                </h3>
-                <div className="space-y-3">
-                  {expectItems.map((item, index) => (
-                    <div key={item.key} className="flex items-center gap-3">
-                      <item.icon className="w-4 h-4 text-[var(--dd-accent)]" />
-                      <span className="text-sm text-[var(--dd-text-muted)]">
-                        {t(`sidebar.whatToExpect.items.${index}`)}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Quick Questions */}
-              <div className="p-6 rounded-xl bg-[var(--dd-bg-soft)] border border-[var(--dd-border)]">
-                <h3 className="text-base font-semibold text-[var(--dd-text-main)] mb-3">
-                  {t("sidebar.quickAnswers.title")}
-                </h3>
-                <div className="space-y-3 text-sm">
-                  {quickAnswerKeys.map((key) => (
-                    <div key={key}>
-                      <p className="text-[var(--dd-text-main)] font-medium">
-                        {t(`sidebar.quickAnswers.items.${key}.question`)}
-                      </p>
-                      <p className="text-[var(--dd-text-muted)]">
-                        {t(`sidebar.quickAnswers.items.${key}.answer`)}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-8 lg:py-10 bg-[var(--dd-bg-soft)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div>
-              <p className="text-[var(--dd-text-main)] font-semibold">
-                {t("cta.preferEmail")}
-              </p>
-              <p className="text-sm text-[var(--dd-text-muted)]">
-                {t("cta.reachOut")}{" "}
-                <a
-                  href="mailto:contact@deralis.digital"
-                  className="text-[var(--dd-accent)] hover:underline"
-                >
-                  contact@deralis.digital
-                </a>
-              </p>
-            </div>
-            <Link href="/projects" className="btn-secondary">
-              {tActions("viewOurWork")}
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
+      <div className="mt-8">
+        <button
+          type="submit"
+          disabled={state === "submitting"}
+          className="w-full justify-center group inline-flex items-center gap-2.5 px-7 py-[18px] bg-ink text-bg text-[15px] font-medium rounded-lg transition-colors hover:bg-accent disabled:opacity-60 disabled:cursor-not-allowed"
+        >
+          {state === "submitting" ? tCommon("form.sending" as never) : t("submitButton")}
+          {state !== "submitting" && (
+            <span aria-hidden="true" className="transition-transform duration-[180ms] group-hover:translate-x-[3px]">→</span>
+          )}
+        </button>
+      </div>
+    </form>
   );
 }

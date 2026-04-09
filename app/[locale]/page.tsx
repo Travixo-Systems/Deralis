@@ -1,15 +1,11 @@
 import { setRequestLocale } from "next-intl/server";
-import Hero from "@/components/home/Hero";
-import BeforeAfter from "@/components/home/BeforeAfter";
-import TrustBar from "@/components/home/TrustBar";
-import Services from "@/components/home/Services";
-import WhoWeWorkWith from "@/components/home/WhoWeWorkWith";
-import Approach from "@/components/home/Approach";
-import FeaturedProjects from "@/components/home/FeaturedProjects";
-import Highlight from "@/components/home/Highlight";
-import FAQ from "@/components/home/FAQ";
-import BlogPreview from "@/components/home/BlogPreview";
-import FinalCTA from "@/components/home/FinalCTA";
+import HomeHero from "@/components/home/HomeHero";
+import FlowStrip from "@/components/home/FlowStrip";
+import WhoSection from "@/components/home/WhoSection";
+import HomeCaseStudy from "@/components/home/HomeCaseStudy";
+import AuditCTA from "@/components/shared/AuditCTA";
+import HowIWork from "@/components/home/HowIWork";
+import HomeFinalCTA from "@/components/home/HomeFinalCTA";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -21,17 +17,13 @@ export default async function Home({ params }: Props) {
 
   return (
     <>
-      <Hero />
-      <BeforeAfter />
-      <TrustBar />
-      <Services />
-      <WhoWeWorkWith />
-      <Approach />
-      <FeaturedProjects />
-      <Highlight />
-      <FAQ />
-      <BlogPreview />
-      <FinalCTA />
+      <HomeHero />
+      <FlowStrip />
+      <WhoSection />
+      <HomeCaseStudy />
+      <AuditCTA />
+      <HowIWork />
+      <HomeFinalCTA />
     </>
   );
 }

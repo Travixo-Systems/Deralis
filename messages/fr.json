@@ -22,7 +22,6 @@
       "viewAll": "Tout voir",
       "viewAllServices": "Voir tous les services",
       "viewAllPlatforms": "Voir toutes les plateformes",
-      "bookCall": "Cartographiez votre système (300 €)",
       "readMore": "Lire la suite",
       "backToHome": "Retour à l'accueil",
       "visitWebsite": "Visiter le site",
@@ -33,7 +32,14 @@
       "sendMessage": "Envoyer le message",
       "sending": "Envoi en cours...",
       "language": "Langue",
-      "changeLanguage": "Changer de langue"
+      "changeLanguage": "Changer de langue",
+      "viewDemo": "Voir la démo",
+      "viewProject": "Voir le projet",
+      "viewSystem": "Voir le système",
+      "discoverAudit": "Découvrez l’audit",
+      "discoverAuditShort": "Découvrez l’audit",
+      "startAudit": "Démarrez l’audit (300 €)",
+      "startAuditShort": "Démarrez l’audit"
     },
     "stats": {
       "deliveryRateShort": "Livré",
@@ -48,350 +54,230 @@
       "services": "Services",
       "contact": "Contact",
       "legal": "Légal",
-      "locationShort": "France & distance"
+      "locationShort": "France & distance",
+      "copyrightDefault": "© 2026 Deralis Digital. Tous droits réservés.",
+      "copyrightShort": "© 2026 Deralis Digital",
+      "copyrightIndependent": "© 2026 Deralis Digital. Pratique indépendante.",
+      "location": "Île-de-France · À distance pour la France, le Royaume-Uni, les États-Unis",
+      "languages": "Français et anglais",
+      "legalLink": "Mentions légales",
+      "privacyLink": "Confidentialité",
+      "servicesList": {
+        "audit": "Audit système",
+        "custom": "Système sur mesure",
+        "extensions": "Extensions",
+        "ongoing": "Suivi continu"
+      }
+    },
+    "auditCta": {
+      "eyebrow": "Commencez par un audit système",
+      "headline": "Rien n'est construit tant que nous ne sommes pas d'accord sur sa valeur.",
+      "body1": "L'audit système cartographie votre fonctionnement actuel, identifie les écarts structurels, et définit quoi construire et dans quel ordre.",
+      "body2": "Si le projet est lancé, le coût de l'audit est déduit du développement.",
+      "note": "Prix fixe. Aucun engagement au-delà de l'audit lui-même."
     }
   },
   "home": {
-    "hero": {
-      "badge": "Ingénierie indépendante",
-      "title": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
-      "titleLine2": "",
-      "titleHighlight": "",
-      "description": "Si votre équipe demande encore 'où en est ce dossier ?' vous n'avez pas de système.",
-      "descriptionLine2": "Les outils ne sont pas le problème. C'est la manière dont l'information circule entre eux qui l'est.",
-      "descriptionLine3": "Des informations éparpillées, qui circulent de façon incohérente, et qui dépendent des personnes pour avancer.",
-      "subDescription": "",
-      "screenshotLabel": "TraviXO Systems : plateforme de conformité VGP que j'ai conçue (vue démo)",
-      "ctaSubtext": "Pour les entreprises dont le fonctionnement a dépassé les outils qui le tiennent. Pas pour les idées. Pas pour les sites vitrines."
-    },
-    "services": {
-      "title": "Comment je",
-      "titleHighlight": "travaille",
-      "description": "Un processus séquentiel, pas un menu d'options.",
-      "items": {
-        "consulting": {
-          "title": "Audit système",
-          "description": "Avant de construire quoi que ce soit, je cartographie le fonctionnement réel de votre activité. 300 euros. Déduit si le projet est lancé.",
-          "features": [
-            "Cartographie des processus",
-            "Analyse opérationnelle",
-            "Brief écrit"
-          ]
-        },
-        "development": {
-          "title": "Système sur mesure",
-          "description": "La construction principale. Un système unique qui montre où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite.",
-          "features": [
-            "Opérations centralisées",
-            "Visibilité des statuts",
-            "Automatisation des flux"
-          ]
-        },
-        "ai": {
-          "title": "Extensions",
-          "description": "Automatisation, intégrations et flux supplémentaires construits sur la base opérationnelle.",
-          "features": [
-            "Intégrations API",
-            "Automatisation des flux",
-            "Connexions tierces"
-          ]
-        },
-        "support": {
-          "title": "Suivi",
-          "description": "Maintenance et itérations pour les clients qui souhaitent un accompagnement continu. Sans engagement.",
-          "features": [
-            "Mises à jour et améliorations",
-            "Surveillance système",
-            "Support à la demande"
-          ]
+    "page": {
+      "hero": {
+        "eyebrow": "Pratique d'ingénierie de systèmes indépendante · Île-de-France",
+        "headline": "Je construis les <em>systèmes</em> dont les entreprises ont besoin pour fonctionner.",
+        "sub1": "Si votre équipe demande encore « où en est ce dossier ? » vous n'avez pas de système.",
+        "sub2": "Les outils ne sont pas le problème. C'est la manière dont l'information circule entre eux qui l'est.",
+        "sub3": "Des informations éparpillées, qui circulent de façon incohérente, et qui dépendent des personnes pour avancer.",
+        "anchor": {
+          "backgroundHeading": "Parcours",
+          "backgroundProse": "Quatre ans de missions techniques chez des éditeurs et industriels français. Dix-huit mois dans le secteur de la location de matériel chez <strong>Loxam</strong>, d'où vient la connaissance métier qui a donné naissance à TraviXO.",
+          "builtHeading": "Ce que j'ai construit",
+          "built1Name": "TraviXO",
+          "built1Desc": "SaaS multi-tenant de conformité VGP pour la location de matériel en France. Construit en solo. En production.",
+          "built2Name": "Portail gouvernemental",
+          "built2Tag": "spec",
+          "built2Desc": "MVP de prise en charge des demandes de passeport, conçu et proposé à un bureau consulaire parisien.",
+          "signature": "Indépendant. Bilingue français et anglais. Une seule personne, chaque ligne de code."
         }
       },
-      "cta": {
-        "consulting": "Commencer par un audit",
-        "development": "Voir comment ça fonctionne",
-        "ai": "Explorer les extensions",
-        "support": "En savoir plus sur le suivi"
+      "flow": {
+        "label": "Comment je travaille",
+        "step1": "Clarifier",
+        "step2": "Cadrer",
+        "step3": "Construire le premier processus",
+        "step4": "Étendre progressivement",
+        "step5": "Transmission"
       },
-      "closingNote": "Il m'arrive de vous montrer à quoi ressemblera votre système avant que quoi que ce soit ne soit construit."
-    },
-    "clients": {
-      "title": "Avec qui je",
-      "titleHighlight": "travaille",
-      "description": "Je travaille avec des entreprises établies dont le fonctionnement a dépassé les outils qui le tiennent. La personne qui peut décider d'y remédier fait partie de l'échange.",
-      "items": {
-        "startups": {
+      "who": {
+        "eyebrow": "Avec qui je travaille",
+        "title": "Des entreprises établies dont le fonctionnement a dépassé les outils qui le tiennent.",
+        "intro": "La personne qui peut décider d'y remédier fait partie de l'échange. Si ce n'est pas vous, le moment n'est pas le bon.",
+        "card1": {
           "title": "Des équipes qui gèrent tout à la main",
-          "description": "Vous comptez sur les gens pour que les choses tournent au quotidien.",
-          "points": [
+          "description": "Vous comptez sur les gens pour que les choses tournent au quotidien. Le processus existe dans la tête de quelqu'un, pas dans un système.",
+          "tags": [
             "Coordination manuelle",
             "Aucun système centralisé",
             "Goulots d'étranglement"
           ]
         },
-        "smb": {
+        "card2": {
           "title": "Des entreprises qui dépassent leurs outils",
-          "description": "Les tableurs, les outils SaaS et les solutions bricolées ne suffisent plus.",
-          "points": [
+          "description": "Les tableurs, les outils SaaS et les solutions bricolées ne suffisent plus. L'information vit à plusieurs endroits et circule de façon incohérente.",
+          "tags": [
             "Outils éparpillés",
             "Données cloisonnées",
             "Perte de visibilité"
           ]
         },
-        "modernization": {
+        "card3": {
           "title": "Pas pour tout le monde",
-          "description": "Pas pour les entreprises en phase de démarrage, les demandes de sites simples, ou les projets dont le problème n'a pas été défini.",
-          "points": [
+          "description": "Pas pour les idées en phase de démarrage, les demandes de sites simples, ou les projets dont le problème n'a pas été défini. Si vous ne pouvez pas nommer ce qui est cassé, le moment n'est pas le bon.",
+          "tags": [
             "Activité établie uniquement",
             "Le problème doit être défini",
             "Le décideur participe aux échanges"
           ]
         }
-      }
-    },
-    "approach": {
-      "title": "Ma manière de",
-      "titleHighlight": "travailler",
-      "description": "Quatre principes qui guident chaque mission.",
-      "steps": {
-        "step1": {
-          "number": "01",
-          "title": "Clarifier avant de construire",
-          "description": "Rien n'est défini tant que le fonctionnement n'est pas cartographié."
-        },
-        "step2": {
-          "number": "02",
-          "title": "L'audit en premier",
-          "description": "L'audit système produit le cahier des charges. Le cahier des charges produit la proposition."
-        },
-        "step3": {
-          "number": "03",
-          "title": "Un processus à la fois",
-          "description": "Résoudre d'abord ce qui fait le plus mal. Développer à partir d'une base qui fonctionne."
-        },
-        "step4": {
-          "number": "04",
-          "title": "Construire pour transmettre",
-          "description": "Le système doit être maintenable et transmissible. Un autre développeur peut reprendre sans tout reconstruire."
-        }
-      }
-    },
-    "featured": {
-      "title": "Projets",
-      "titleHighlight": "réels",
-      "description": "Des systèmes que j'ai construits et déployés.",
-      "projects": {
-        "govPortal": {
-          "title": "Portail de demandes gouvernementales",
-          "type": "Proposition spec",
-          "description": "Un MVP de prise en charge de demandes de passeport que j'ai construit et proposé à un bureau consulaire après avoir vécu leur processus moi-même. La frustration : des fichiers déjà téléversés en ligne, qu'on me demandait ensuite d'apporter physiquement. J'ai construit le flux numérique qui aurait rendu le déplacement inutile, et je l'ai proposé directement."
-        },
-        "travixo": {
-          "title": "TraviXO Systems",
-          "type": "SaaS B2B",
-          "description": "SaaS multi-tenant de conformité VGP pour le secteur français de la location de matériel. Construit à partir d'une expérience directe du secteur."
-        },
-        "more": {
-          "title": "Autres projets",
-          "type": "Divers",
-          "description": "Démos interactives et outils opérationnels. Voir le portfolio complet."
+      },
+      "casestudy": {
+        "label": "Étude de cas",
+        "title": "TraviXO Systems",
+        "context": "SaaS B2B · Location de matériel · Conformité VGP",
+        "prose": "SaaS multi-tenant de conformité VGP pour la location de matériel en France. Construit en solo. En production. Façonné par une exposition directe au fonctionnement réel de ces opérations.",
+        "linkLabel": "Voir tous les projets"
+      },
+      "howIWork": {
+        "eyebrow": "Comment je travaille",
+        "title": "Un processus séquentiel, pas un menu d'options.",
+        "intro": "Chaque étape existe parce que la précédente l'a méritée. Rien n'est présumé, rien n'est sauté.",
+        "items": {
+          "1": {
+            "num": "01",
+            "title": "Audit système",
+            "description": "Je cartographie le fonctionnement réel de votre activité aujourd'hui et je définis quoi construire et dans quel ordre."
+          },
+          "2": {
+            "num": "02",
+            "title": "Système sur mesure",
+            "description": "La construction principale. Un système unique qui montre où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite."
+          },
+          "3": {
+            "num": "03",
+            "title": "Extensions",
+            "description": "Automatisation, intégrations et flux supplémentaires construits sur la base opérationnelle."
+          },
+          "4": {
+            "num": "04",
+            "title": "Suivi",
+            "description": "Maintenance et itérations pour les clients qui souhaitent un accompagnement continu. Sans engagement, sans forfait caché."
+          }
         }
       },
-      "actions": {
-        "visitSite": "Visiter le site",
-        "openApp": "Ouvrir l'app"
+      "finalCta": {
+        "headline": "Si quelque chose <em>casse</em>, ou ne fonctionne pas comme il devrait, je peux vous montrer comment le réparer.",
+        "description": "Avant tout devis, je cartographie le fonctionnement réel de votre système. Ensuite, nous décidons ensemble s'il vaut la peine de le construire.",
+        "note": "Un autre développeur peut reprendre sans tout reconstruire."
       }
-    },
-    "highlight": {
-      "badge": "Étude de cas",
-      "title": "TraviXO Systems",
-      "subtitle": "SaaS B2B, Gestion d'équipements, Conformité VGP",
-      "description": "Un système interne utilisé au quotidien pour suivre les équipements et gérer la conformité, en remplacement de la coordination manuelle au sein de l'équipe. Utilisé comme un vrai outil opérationnel, pas un prototype.",
-      "detailedDescription": "Construit et déployé comme un vrai système opérationnel, pas un template ou une maquette.",
-      "actions": {
-        "visitWebsite": "Visiter le site",
-        "seeAllProjects": "Voir tous les projets"
-      }
-    },
-    "faq": {
-      "title": "Questions",
-      "titleHighlight": "fréquentes",
-      "description": "Réponses aux questions que les prospects posent avant de réserver.",
-      "items": {
-        "clients": {
-          "question": "Avec quels types d'entreprises travaillez-vous ?",
-          "answer": "Des entreprises établies dont le fonctionnement a dépassé les outils qui le tiennent. Le déclencheur est généralement une perte de contrôle, de visibilité ou de fluidité. Si l'entreprise est en phase de démarrage ou que ses processus ne sont pas encore stabilisés, le moment n'est pas le bon."
-        },
-        "audit": {
-          "question": "En quoi consiste l'audit système ?",
-          "answer": "Un entretien structuré qui cartographie votre fonctionnement actuel, identifie où le travail se perd, et définit ce qu'il faut construire et dans quel ordre. Il coûte 300 euros. Si le projet est lancé, les 300 euros sont déduits du coût de développement."
-        },
-        "custom": {
-          "question": "Pourquoi construire sur mesure plutôt que d'utiliser des outils SaaS existants ?",
-          "answer": "Le SaaS fonctionne bien quand le problème est standard. Quand votre processus est spécifique à votre façon de fonctionner, les outils génériques vous obligent à vous adapter à eux. Un système sur mesure résout le problème précis, rien de plus."
-        },
-        "wordpress": {
-          "question": "Travaillez-vous avec WordPress ou Framer ?",
-          "answer": "Non. Si c'est ce dont vous avez besoin, je vous orienterai vers quelqu'un qui le fait bien."
-        },
-        "timeline": {
-          "question": "Combien de temps dure un projet ?",
-          "answer": "Cela dépend du périmètre. Un système opérationnel ciblé prend généralement quatre à huit semaines. Un développement SaaS complet prend huit à douze semaines. Rien ne commence sans un périmètre écrit et un acompte."
-        },
-        "afterBuild": {
-          "question": "Que se passe-t-il après la livraison ?",
-          "answer": "Le système est le vôtre. Entièrement documenté, transmissible à n'importe quel développeur. Je propose des forfaits de maintenance, mais il n'y a aucune dépendance imposée."
-        }
-      }
-    },
-    "cta": {
-      "title": "Si vous pouvez décrire ce qui ne fonctionne pas, je peux décrire ce qui le résoudra.",
-      "description": "Avant tout devis, je cartographie le fonctionnement réel de votre système. Ensuite, nous décidons ensemble s'il y a quelque chose à construire.",
-      "note": "Un autre développeur peut reprendre sans tout reconstruire."
-    },
-    "trustBar": {
-      "item1": "Tous livrés",
-      "item2": "Communication directe",
-      "item3": "Français et Anglais",
-      "item4": "Plateformes livrées"
     }
   },
   "services": {
-    "metadata": {
-      "title": "Services : Ingénierie des systèmes opérationnels",
-      "description": "Systèmes sur mesure, automatisation des flux, développement SaaS et audits système. De vraies plateformes, pas des templates."
-    },
-    "hero": {
-      "badge": "Ingénierie indépendante",
-      "title": "Chaque système est",
-      "titleHighlight": "différent",
-      "description": "Le coût dépend de la façon dont votre entreprise fonctionne réellement, pas d'un forfait fixe. C'est pourquoi je ne donne pas de prix à l'avance. Je cartographie d'abord votre système, puis je définis ce qu'il faut construire."
-    },
-    "techBar": {
-      "label": "Technologies utilisées"
-    },
-    "items": {
-      "consulting": {
-        "id": "consulting",
-        "title": "Audit système",
-        "subtitle": "Clarifier avant de construire.",
-        "description": "Avant de construire quoi que ce soit, je cartographie le fonctionnement réel de votre activité. L'audit produit un brief écrit : quoi construire, pourquoi, et dans quel ordre.",
-        "features": [
-          "Cartographie opérationnelle",
-          "Identification des goulots d'étranglement",
-          "Brief écrit avec priorités",
-          "Définition du périmètre",
-          "Recommandation construire ou non"
-        ],
-        "whoFor": "Entreprises confrontées à des frictions dans leur fonctionnement.",
-        "timeline": "1 session",
-        "investment": "300 € (déduit si le projet est lancé)"
+    "page": {
+      "hero": {
+        "eyebrow": "Services · Pratique d'ingénierie de systèmes indépendante",
+        "headline": "Le travail que je fais, dans l'<em>ordre</em> où je le fais.",
+        "description": "Chaque mission commence par cartographier le fonctionnement réel de votre activité. À partir de là, la construction suit une séquence où chaque étape mérite la suivante. Pas de forfait fixe, pas de devis à l'avance, aucun travail sans brief écrit."
       },
-      "development": {
-        "id": "development",
-        "title": "Système sur mesure",
-        "subtitle": "La construction principale.",
-        "description": "Un système unique qui montre où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite. Conçu pour remplacer les outils fragmentés et la coordination manuelle.",
-        "features": [
-          "Next.js, React, TypeScript",
-          "Bases de données SQL (PostgreSQL, MySQL)",
-          "Intégrations API (REST, webhooks, OAuth)",
-          "Systèmes d'authentification et permissions",
-          "Tableaux de bord et outils opérationnels",
-          "Architecture maintenable (Prisma, Supabase)"
-        ],
-        "whoFor": "Équipes qui gèrent leurs opérations manuellement ou qui dépassent leurs outils actuels.",
-        "note": "Si la demande est uniquement une page statique HTML/CSS, ce n'est pas mon cœur de métier.",
-        "timeline": "4-8 semaines",
-        "investment": "Selon le périmètre, défini après l'audit"
+      "coreServices": {
+        "eyebrow": "Services principaux",
+        "title": "Trois étapes séquentielles. Chacune mérite la suivante."
       },
-      "ai": {
-        "id": "ai",
-        "title": "Extensions",
-        "subtitle": "Sur la base opérationnelle.",
-        "description": "Automatisation, intégrations et flux supplémentaires qui étendent le système principal.",
-        "features": [
-          "Intégrations API tierces",
-          "Automatisation des flux entre outils",
-          "Connexions avec services externes",
-          "Génération de rapports automatisés",
-          "Routage des tâches et notifications",
-          "Extensions fonctionnelles sur mesure"
-        ],
-        "whoFor": "Clients avec un système fonctionnel qui ont besoin de capacités supplémentaires.",
-        "timeline": "2-4 semaines",
-        "investment": "Selon le périmètre, défini après l'audit"
-      },
-      "support": {
-        "id": "automation",
-        "title": "Suivi continu",
-        "subtitle": "Sans engagement.",
-        "description": "Maintenance et itérations pour les clients qui souhaitent un accompagnement continu. Le système est le vôtre, entièrement documenté et transmissible.",
-        "features": [
-          "Mises à jour et améliorations continues",
-          "Intégrations avec des outils tiers",
-          "Configuration et migration de bases de données",
-          "Maintenance et support au long cours",
-          "Surveillance des performances",
-          "Support technique sur demande"
-        ],
-        "whoFor": "Entreprises qui veulent un partenaire technique fiable sans dépendance.",
-        "timeline": "Continu",
-        "investment": "À partir de 300 euros par mois"
-      }
-    },
-    "cards": {
-      "whoFor": "Pour qui ?",
-      "timeline": "Délai typique",
-      "investment": "Investissement"
-    },
-    "comparison": {
-      "title": "Ce qui me différencie",
-      "description": "Je privilégie l'ingénierie solide et les relations durables plutôt que les solutions rapides mais limitées.",
-      "typical": {
-        "title": "Approche classique",
-        "items": [
-          "Sites basés sur des templates et page builders",
-          "Pas de vraie base de données derrière",
-          "Pages statiques avec simple formulaire de contact",
-          "Plus de nouvelles une fois le site livré"
-        ]
-      },
-      "deralis": {
-        "title": "Approche Deralis Digital",
-        "items": [
-          "Code sur mesure, écrit pour votre fonctionnement spécifique",
-          "Vraies bases de données qui grandissent avec votre activité",
-          "Système complet : interface, logique, données, intégrations",
-          "Partenariat technique de long terme"
-        ]
-      }
-    },
-    "notSure": {
-      "title": "Vous ne savez pas par où commencer ?",
-      "description": "Commencez par l'audit. Je cartographie votre fonctionnement, vous recevez un brief écrit, et nous décidons ensemble s'il y a quelque chose à construire."
-    },
-    "faq": {
-      "title": "Questions fréquentes",
-      "items": {
-        "cost": {
-          "question": "Combien coûte un projet typique ?",
-          "answer": "Tout dépend de ce qui doit être construit. Avant de chiffrer quoi que ce soit, je mène un audit système pour comprendre le problème, définir le périmètre et confirmer la bonne approche. Cet audit coûte 300 euros et se termine par un brief écrit : quoi construire, pourquoi, et combien ça coûte. Rien n'est chiffré avant cette conversation."
+      "blocks": {
+        "1": {
+          "num": "01",
+          "name": "Audit système",
+          "meta": {
+            "whoLabel": "Pour qui",
+            "whoValue": "Entreprises confrontées à des frictions dans leur fonctionnement",
+            "timelineLabel": "Délai typique",
+            "timelineValue": "Une session, brief écrit livré après",
+            "investmentLabel": "Investissement",
+            "investmentValue": "300 € · déduit si le projet est lancé"
+          },
+          "prose1": "Avant que quoi que ce soit ne soit construit, je cartographie le fonctionnement réel de votre activité aujourd'hui. Nous passons en revue les outils que vous utilisez, les personnes impliquées, où vit l'information, où elle se bloque, et où la friction vous coûte du temps ou de l'argent.",
+          "prose2": "L'audit produit un <strong>brief écrit</strong> qui définit quoi construire, pourquoi c'est important, et dans quel ordre. Si le brief identifie un projet qui vaut la peine d'être lancé, les 300 € sont déduits du coût de développement. S'il identifie que rien n'a besoin d'être construit pour le moment, je vous le dirai directement."
         },
-        "remote": {
-          "question": "Travaillez-vous avec des clients hors de France ?",
-          "answer": "Oui. J'accompagne des clients partout en Europe et au-delà. Les échanges se font à distance, par visioconférence, email et outils collaboratifs."
+        "2": {
+          "num": "02",
+          "name": "Système sur mesure",
+          "meta": {
+            "whoLabel": "Pour qui",
+            "whoValue": "Équipes qui gèrent leurs opérations manuellement ou à travers des outils fragmentés",
+            "timelineLabel": "Délai typique",
+            "timelineValue": "Défini après l'audit, selon le périmètre réel",
+            "investmentLabel": "Investissement",
+            "investmentValue": "Selon le périmètre, défini après l'audit"
+          },
+          "prose1": "La construction principale. Un système unique qui montre où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite. Conçu autour du fonctionnement spécifique que l'audit a cartographié, pas autour d'un template.",
+          "prose2": "Cela remplace généralement une combinaison de tableurs, d'outils SaaS déconnectés, et de processus informels qui vivent dans la tête de quelqu'un. L'objectif : une source unique de vérité que l'équipe utilise réellement, pas un tableau de bord ignoré après la mise en ligne.",
+          "prose3": "Le travail sur le système sur mesure est toujours cadré par le brief d'audit. Le brief définit ce qui est construit, ce qui ne l'est pas, et ce qui viendra plus tard sous forme d'Extensions."
         },
-        "takeover": {
-          "question": "Pouvez-vous reprendre un projet déjà commencé ?",
-          "answer": "Oui. J'audite l'existant, identifie les points bloquants et propose un plan pour remettre le projet sur de bons rails."
+        "3": {
+          "num": "03",
+          "name": "Extensions",
+          "meta": {
+            "whoLabel": "Pour qui",
+            "whoValue": "Clients avec un système fonctionnel qui ont besoin de capacités supplémentaires",
+            "timelineLabel": "Délai typique",
+            "timelineValue": "Défini par extension, plus petit que la construction principale",
+            "investmentLabel": "Investissement",
+            "investmentValue": "Selon le périmètre, défini après l'audit"
+          },
+          "prose1": "Les Extensions sont de l'automatisation, des intégrations et des flux supplémentaires construits sur une base qui fonctionne. Les Extensions n'arrivent qu'après qu'un Système sur mesure existe et est utilisé. Construire des extensions sur un système qui ne fonctionne pas encore crée plus de problèmes que ça n'en résout.",
+          "prose2": "Les extensions courantes incluent connecter le système aux outils existants que l'équipe utilise déjà, automatiser des tâches récurrentes qui se font actuellement à la main, et ajouter des couches de reporting ou de visibilité pour les parties prenantes qui ont besoin de voir les données sans les manipuler directement.",
+          "prose3": "Les extensions sont toujours définies par rapport au brief d'audit initial, chaque extension étant cadrée individuellement."
         }
+      },
+      "ongoing": {
+        "eyebrow": "Après la construction",
+        "title": "Suivi continu",
+        "context": "Optionnel. Disponible après la livraison d'un Système sur mesure.",
+        "prose1": "Une fois qu'un système est en ligne, il a besoin de maintenance, de petites itérations, et de corrections occasionnelles. Le Suivi continu est la couche post-livraison pour les clients qui veulent un accompagnement continu sans la friction d'un nouveau contrat chaque fois que quelque chose nécessite de l'attention.",
+        "prose2": "Cela couvre les mises à jour, la surveillance des performances, les corrections de bugs, la documentation système, et le support à la demande. Les nouvelles fonctionnalités et les ajouts importants sont cadrés séparément comme Extensions.",
+        "prose3": "Sans engagement, sans durée minimale. Résiliable n'importe quel mois.",
+        "price": "À partir de 300 € / mois",
+        "priceNote": "Disponible uniquement après qu'un Système sur mesure a été construit."
+      },
+      "questions": {
+        "eyebrow": "Questions fréquentes",
+        "title": "Les questions que les clients posent avant de réserver l'audit.",
+        "items": {
+          "1": {
+            "question": "Combien coûte un projet typique ?",
+            "answer": "Chaque système est différent et le coût dépend de ce dont votre activité a réellement besoin, pas d'un forfait fixe. Avant de chiffrer quoi que ce soit, je mène un audit système pour cartographier votre fonctionnement et définir ce qui doit être construit. L'audit coûte 300 € et produit un brief écrit. Si le projet est lancé, les 300 € sont déduits du coût de développement."
+          },
+          "2": {
+            "question": "Travaillez-vous avec des clients hors de France ?",
+            "answer": "Oui. Je travaille à distance avec des clients en France, au Royaume-Uni et aux États-Unis. La communication se fait en français ou en anglais selon ce qui vous convient. Les sessions d'audit et le travail de projet se déroulent en visioconférence, les livrables et le système lui-même étant accessibles de partout."
+          },
+          "3": {
+            "question": "Pouvez-vous reprendre un projet existant ?",
+            "answer": "Parfois. L'audit système couvre aussi les systèmes existants, pas seulement les opérations qui n'ont jamais été numérisées. Si le système existant est récupérable, le brief définira ce qu'il faut garder, ce qu'il faut reconstruire, et ce qu'il faut abandonner. S'il n'est pas récupérable, le brief le dira, et vous pourrez décider de recommencer ou de garder ce que vous avez."
+          },
+          "4": {
+            "question": "Combien de temps prend un projet typique ?",
+            "answer": "Défini après l'audit. Le brief inclut un délai réaliste pour le travail qu'il cadre, selon la complexité de votre fonctionnement et la profondeur de la construction. Les projets peuvent aller de quelques semaines pour un Système sur mesure ciblé à plusieurs mois pour une mission plus profonde avec plusieurs Extensions. L'audit est la seule étape avec un délai fixe : une session, brief livré peu après."
+          }
+        }
+      },
+      "finalCta": {
+        "headline": "Prêt à cartographier le <em>fonctionnement</em> réel de votre système ?",
+        "description": "L'audit est la seule chose que vous pouvez acheter à l'avance. Tout le reste se définit ici d'abord.",
+        "note": "Un autre développeur peut reprendre sans tout reconstruire."
       }
     }
   },
   "projects": {
     "metadata": {
       "title": "Réalisations",
-      "description": "Exemples de plateformes construites par Deralis Digital : applications SaaS, tableaux de bord et systèmes web basés sur Next.js, Supabase et PostgreSQL."
+      "description": "Exemples de plateformes construites par Deralis Digital : applications SaaS, tableaux de bord et systèmes web basés sur Next.js, Supabase et PostgreSQL."
     },
     "hero": {
       "title": "Mes",
@@ -433,7 +319,7 @@
       "govPortal": {
         "title": "Portail de demandes gouvernementales",
         "type": "Proposition spec",
-        "description": "Un MVP de prise en charge de demandes de passeport que j'ai construit et proposé à un bureau consulaire. Le déclencheur : j'ai vécu leur processus moi-même et j'ai remarqué quelque chose de cassé. Ils me demandaient des fichiers que j'avais déjà téléversés en ligne, exigeant un déplacement qui n'aurait pas dû être nécessaire. J'ai construit le flux numérique qui aurait comblé l'écart, et je l'ai proposé directement après une rencontre en personne. La proposition est actuellement entre leurs mains.",
+        "description": "Un MVP de prise en charge de demandes de passeport que j'ai construit et proposé à un bureau consulaire. Le déclencheur : j'ai vécu leur processus moi-même et j'ai remarqué quelque chose de cassé. Ils me demandaient des fichiers que j'avais déjà téléversés en ligne, exigeant un déplacement qui n'aurait pas dû être nécessaire. J'ai construit le flux numérique qui aurait comblé l'écart, et je l'ai proposé directement après une rencontre en personne. La proposition est actuellement entre leurs mains.",
         "features": [
           "Soumission et suivi des demandes",
           "Tableau de bord pour le personnel",
@@ -488,8 +374,71 @@
       }
     },
     "cta": {
-      "title": "Vous avez un projet qui devrait ressembler à l'un de ceux-ci ?",
+      "title": "Vous avez un projet qui devrait ressembler à l'un de ceux-ci ?",
       "description": "Si vous pouvez décrire ce qui ne fonctionne pas, je peux décrire ce qui le résoudra."
+    },
+    "page": {
+      "metadata": {
+        "title": "Réalisations · Deralis Digital",
+        "description": "Un système en production, une proposition spec, et une série de démos qui fonctionnent. Le travail tel qu'il se présente aujourd'hui, sans métriques inventées ni résultats clients fictifs."
+      },
+      "hero": {
+        "eyebrow": "Réalisations",
+        "title": "Des systèmes concrets, conçus pour le <em>fonctionnement</em> réel des opérations.",
+        "sub1": "Un système en production, une proposition spec présentée à un acheteur réel, et une petite série de démos qui fonctionnent.",
+        "sub2": "Chacune est partie de la même observation. La plupart des entreprises ont déjà des outils. Ce qui leur manque, c'est un système.",
+        "sub3": "Pas de métriques inventées. Aucun logo client que je n'ai pas mérité.",
+        "ctaSecondary": "Voir l'étude de cas"
+      },
+      "travixo": {
+        "label": "Étude de cas",
+        "context": "Logiciel B2B · Location de matériel · Conformité VGP · En production",
+        "prose1": "TraviXO est un logiciel de conformité construit pour le secteur français de la location de matériel. Le système donne aux équipes un seul endroit pour suivre le matériel, gérer la conformité, et voir ce qui demande de l'attention ensuite.",
+        "prose2": "Le temps passé dans la location de matériel chez Loxam m'a placé près de la façon dont ces opérations fonctionnent réellement. La compréhension plus profonde des points de défaillance VGP est venue de l'étude de la réglementation et de conversations avec des équipes de location.",
+        "prose3": "Avec le temps, les mêmes points de défaillance revenaient sans cesse. Des inspections oubliées. Des certificats éparpillés entre des e-mails et des dossiers. La piste d'audit qui dépend de quelqu'un qui pense à la mettre à jour. Le système a été construit pour supprimer ces points de défaillance.",
+        "prose4": "Construit en solo. En production. Conçu comme un véritable système opérationnel, pas comme un concept.",
+        "linkLabel": "Voir le système"
+      },
+      "govPortal": {
+        "label": "Proposition spec",
+        "title": "Portail de demandes gouvernementales",
+        "context": "Secteur public · MVP de prise en charge de passeports · Entre les mains de l'acheteur",
+        "prose1": "Un MVP de prise en charge des demandes de passeport que j'ai construit et proposé à un bureau consulaire parisien après avoir vécu leur processus moi-même. Leur flux existant exigeait un déplacement en personne pour des fichiers que j'avais déjà téléversés en ligne. L'écart entre ce que le système pouvait faire et ce que l'équipe était obligée de faire se voyait depuis la salle d'attente.",
+        "prose2": "J'ai construit le flux numérique qui aurait comblé cet écart, et je l'ai proposé directement. La proposition est actuellement entre leurs mains.",
+        "note": "Proposition spec. Pas une mission livrée. Le statut sera mis à jour quand l'acheteur répondra."
+      },
+      "concepts": {
+        "eyebrow": "Démos",
+        "title": "Des démos qu'on peut <em>cliquer</em>.",
+        "intro": "Pas du travail client. Des démos construites pour tester des patterns avant qu'ils soient utilisés dans un vrai système. Chacune est en ligne, publique, et tourne sur du vrai code plutôt que sur des écrans figés.",
+        "items": {
+          "1": {
+            "title": "Tableau de bord Deralis Ops",
+            "desc": "Un pattern de tableau de bord opérationnel pour les équipes qui ont besoin de voir où en est le travail. Construit pour tester la primitive de visibilité qu'un système client réel viendrait étendre.",
+            "linkLabel": "Voir la démo"
+          },
+          "2": {
+            "title": "Flux Client",
+            "desc": "Une démo de prise en charge structurée. Une demande arrive, devient une fiche mission, reçoit un statut, et reste visible pour toute l'équipe sans que personne n'ait à transférer quoi que ce soit.",
+            "linkLabel": "Voir la démo"
+          },
+          "3": {
+            "title": "Onboard",
+            "desc": "Un suivi d'intégration structuré. Créez un dossier, regardez la checklist apparaître, chaque étape visible. Rien qui dépende de la mémoire de quelqu'un.",
+            "linkLabel": "Voir la démo"
+          },
+          "4": {
+            "title": "Catalogue interactif",
+            "desc": "Un catalogue produits avec gestion des commandes. Flux de commande complet en démo interactive, construit pour tester comment une petite opération commerciale pourrait fonctionner sur un seul système.",
+            "linkLabel": "Voir la démo"
+          }
+        }
+      },
+      "finalCta": {
+        "title": "Chaque projet ici a commencé par un problème que quelqu'un pouvait <em>nommer</em>.",
+        "body": "Le déclencheur est presque toujours le même. Une perte de contrôle, de visibilité, ou de fluidité que les outils existants n'allaient pas régler tout seuls. L'audit système est là où cette conversation commence.",
+        "note": "Prix fixe. Bilingue français et anglais. Une seule personne, chaque ligne de code."
+      }
     }
   },
   "about": {
@@ -505,12 +454,12 @@
     },
     "intro": {
       "paragraph1": "Deralis Digital est un cabinet d'ingénierie indépendant. Je travaille avec des entreprises rentables et opérationnelles, où la circulation de l'information entre les personnes et les outils est devenue le goulot d'étranglement. Pas des sites web. Pas des templates. Des systèmes qui montrent où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite.",
-      "paragraph2": "Avant Deralis, j'ai travaillé dans le secteur de la location de matériel, chez Loxam et Ariane Systems. Cette expérience a donné naissance à TraviXO, un SaaS de conformité VGP conçu pour le secteur français de la location de matériel. Cette expérience m'a appris une chose qui guide chaque mission : on ne peut pas concevoir un système pour un fonctionnement qu'on ne comprend pas."
+      "paragraph2": "Avant Deralis, j'ai travaillé dans le secteur de la location de matériel, chez Loxam et Ariane Systems. Cette expérience a donné naissance à TraviXO, un SaaS de conformité VGP conçu pour le secteur français de la location de matériel. Cette expérience m'a appris une chose qui guide chaque mission : on ne peut pas concevoir un système pour un fonctionnement qu'on ne comprend pas."
     },
     "philosophy": {
       "title": "Ma philosophie",
       "subtitle": "Le système doit survivre sans vous.",
-      "systemsTitle": "Des systèmes qui :",
+      "systemsTitle": "Des systèmes qui :",
       "systems": [
         "Stockent et structurent les données de manière fiable",
         "Automatisent les tâches répétitives",
@@ -549,7 +498,7 @@
     },
     "howWeWork": {
       "title": "Comment je travaille",
-      "description": "Vous travaillez directement avec l'ingénieur derrière Deralis Digital. Pas d'intermédiaires, pas de chaîne de sous-traitance. Le processus est transparent et technique :",
+      "description": "Vous travaillez directement avec l'ingénieur derrière Deralis Digital. Pas d'intermédiaires, pas de chaîne de sous-traitance. Le processus est transparent et technique :",
       "steps": {
         "step1": {
           "number": "01",
@@ -559,7 +508,7 @@
         "step2": {
           "number": "02",
           "title": "Conception",
-          "description": "Je dessine le système : ce qu'il fait, ce qu'il montre, ce qui se passe quand quelque chose va mal, comment il grandit avec vous."
+          "description": "Je dessine le système : ce qu'il fait, ce qu'il montre, ce qui se passe quand quelque chose va mal, comment il grandit avec vous."
         },
         "step3": {
           "number": "03",
@@ -595,7 +544,7 @@
       "notes": {
         "note1": "Ces systèmes incluent multi-tenant, gestion des rôles, bases SQL et automatisations.",
         "note2": "Toutes les plateformes présentées reposent sur une vraie logique métier, pas sur de simples thèmes graphiques.",
-        "note3": "Ma priorité : des systèmes qui travaillent réellement pour vous."
+        "note3": "Ma priorité : des systèmes qui travaillent réellement pour vous."
       }
     },
     "principle": {
@@ -619,8 +568,67 @@
       "description": "Basé en France, en collaboration avec des clients en France et à l'étranger."
     },
     "cta": {
-      "title": "Vous voulez que je regarde votre fonctionnement ?",
+      "title": "Vous voulez que je regarde votre fonctionnement ?",
       "description": "Avant tout devis, je cartographie le fonctionnement réel de votre système."
+    },
+    "page": {
+      "metadata": {
+        "title": "À propos · Deralis Digital",
+        "description": "Deralis Digital est une pratique d'ingénierie indépendante. Je construis les systèmes internes pour les entreprises rentables où la circulation de l'information entre les personnes et les outils est devenue le goulot d'étranglement."
+      },
+      "hero": {
+        "eyebrow": "Pratique d'ingénierie indépendante · Île-de-France",
+        "title": "À propos de <em>Deralis</em> Digital.",
+        "sub1": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
+        "sub2": "Deralis Digital est une pratique d'ingénierie indépendante. Je travaille avec des entreprises rentables et opérationnelles où la circulation de l'information entre les personnes et les outils est devenue le goulot d'étranglement. Pas des sites web. Pas de templates. Des systèmes qui montrent où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite.",
+        "sub3": "J'ai travaillé à l'intérieur de vraies entreprises où le système n'est pas visible, mais les conséquences le sont. C'est de cette expérience que vient TraviXO Systems, un logiciel de conformité VGP pour le secteur français de la location de matériel.",
+        "sub4": "C'est ce qui façonne ma façon de travailler : on ne peut pas concevoir un système pour un fonctionnement qu'on ne comprend pas.",
+        "ctaSecondary": "Voir comment je travaille →"
+      },
+      "background": {
+        "eyebrow": "Parcours",
+        "title": "Quatre ans à l'intérieur d'<em>éditeurs</em> et d'industriels français.",
+        "intro": "Je travaille en solo, en construisant Deralis en parallèle de mon poste dans le support logiciel. Mon expérience vient du travail à l'intérieur de vrais systèmes où les opérations dépendent d'outils qui n'ont jamais été conçus pour fonctionner ensemble.",
+        "role1": {
+          "title": "Application Support Engineer",
+          "company": "Ariane Systems · Logiciel de check-in pour l'hôtellerie"
+        },
+        "role2": {
+          "title": "Technicien support",
+          "company": "Loxam · Support technique au sein du secteur français de la location de matériel"
+        },
+        "closing": "Les dix-huit mois chez <strong>Loxam</strong> sont là où j'ai appris comment le secteur français de la location de matériel fonctionne réellement au quotidien. C'est sur cette connaissance métier que TraviXO Systems est construit."
+      },
+      "principles": {
+        "eyebrow": "Comment je travaille",
+        "title": "Trois <em>principes</em>, sans exception.",
+        "intro": "Chaque mission passe par la même logique. Chaque principe existe parce que le sauter a coûté à quelqu'un, quelque part, de l'argent qu'il n'avait pas besoin de dépenser.",
+        "p1": {
+          "title": "L'audit en premier",
+          "body": "L'audit système à 300 € est la seule porte d'entrée. Rien n'est construit avant. L'audit définit quoi construire et dans quel ordre, et le coût est déduit du projet s'il est lancé."
+        },
+        "p2": {
+          "title": "Définir ce qui doit être livré avant de commencer",
+          "body": "Si l'on ne peut pas définir clairement ce qui doit être livré, le projet ne démarre pas."
+        },
+        "p3": {
+          "title": "Je suis responsable du système. Vous êtes responsable de l'activité.",
+          "body": "Chaque système est documenté, transmissible, et maintenable par un autre développeur. Aucun verrouillage. Aucune dépendance cachée. Vous pouvez emporter le projet ailleurs le jour même de la livraison si c'est ce dont vous avez besoin."
+        }
+      },
+      "building": {
+        "eyebrow": "Ce que je construis en ce moment",
+        "title": "Deux <em>pratiques</em> indépendantes.",
+        "intro": "Deralis Digital est la pratique client. TraviXO Systems est le produit.",
+        "card1": {
+          "title": "TraviXO Systems",
+          "body": "Logiciel multi-tenant en production pour la conformité VGP dans le secteur français de la location de matériel. Construit en solo depuis l'intérieur du secteur qu'il sert."
+        },
+        "card2": {
+          "title": "Deralis Digital",
+          "body": "Pratique d'ingénierie indépendante construite autour d'un modèle audit-first pour les entreprises opérationnelles en France, au Royaume-Uni, et aux États-Unis."
+        }
+      }
     }
   },
   "contact": {
@@ -697,34 +705,66 @@
         "title": "Réponses rapides",
         "items": {
           "notSure": {
-            "question": "Et si je ne sais pas ce dont j'ai besoin ?",
+            "question": "Et si je ne sais pas ce dont j'ai besoin ?",
             "answer": "C'est fréquent. Expliquez simplement votre situation, je vous aiderai à y voir plus clair."
           },
           "startups": {
-            "question": "Travaillez-vous avec des startups ?",
+            "question": "Travaillez-vous avec des startups ?",
             "answer": "Uniquement si l'activité est déjà en fonctionnement et que le problème est identifié."
           },
           "timeline": {
-            "question": "Quels sont vos délais typiques ?",
+            "question": "Quels sont vos délais typiques ?",
             "answer": "La plupart des projets demandent entre quatre et douze semaines selon le périmètre."
           }
         }
       }
     },
     "cta": {
-      "preferEmail": "Vous préférez l'email ?",
+      "preferEmail": "Vous préférez l'email ?",
       "reachOut": "Écrivez-moi directement à"
-    }
-  },
-  "leadGen": {
-    "stickyCta": {
-      "text": "Cartographiez votre système (300 €)"
     },
-    "newsletter": {
-      "description": "Réflexions techniques, études de cas et retours terrain, une fois par mois.",
-      "placeholder": "vous@entreprise.com",
-      "success": "Vous êtes inscrit. Vérifiez votre boîte mail.",
-      "error": "Une erreur est survenue. Réessayez."
+    "page": {
+      "metadata": {
+        "title": "Contact · Deralis Digital",
+        "description": "Parlez-moi avant de réserver un audit système. Pratique d'ingénierie de systèmes indépendante basée en Île-de-France, travail à travers la France et à distance."
+      },
+      "hero": {
+        "eyebrow": "Contact",
+        "title": "D'abord, <em>clarifions</em> ce qui bloque avant de construire.",
+        "sub1Prefix": "Si vous savez déjà que vous voulez avancer, commencez par",
+        "sub1LinkText": "l'audit système",
+        "sub1Suffix": ".",
+        "sub2": "Si vous avez besoin d'expliquer votre situation d'abord, utilisez le formulaire ci-dessous."
+      },
+      "formIntro": {
+        "p1": "Décrivez ce qui se passe dans votre activité et où les choses se cassent.",
+        "p2": "Je lis chaque message personnellement. S'il y a un fit, je réponds sous 2 jours ouvrés."
+      },
+      "form": {
+        "websiteLabel": "Site web",
+        "messageLabel": "Message",
+        "submitButton": "Envoyer votre situation",
+        "errors": {
+          "required": "Obligatoire",
+          "email": "Email invalide",
+          "minLength": "20 caractères minimum"
+        }
+      },
+      "nextStrip": {
+        "label": "Ce qui se passe ensuite",
+        "step1": "Je lis votre message",
+        "step2": "Je réponds sous 2 jours ouvrés",
+        "step3": "S'il y a un fit, nous prenons un appel de 30 minutes"
+      },
+      "methods": {
+        "emailHeading": "Email",
+        "locationHeading": "Localisation",
+        "locationValue": "Île-de-France, France",
+        "locationMuted": "Travail à travers la France et à distance.",
+        "languagesHeading": "Langues",
+        "languagesValue": "Français et anglais",
+        "languagesMuted": "Bilingue natif. Documents et réunions dans l'une ou l'autre."
+      }
     }
   },
   "blog": {
@@ -753,8 +793,8 @@
         "excerpt": "Un site montre que vous existez. Un système web fait tourner votre activité. Voici la différence, et comment savoir de quoi vous avez vraiment besoin."
       },
       "saas-vs-custom-build": {
-        "title": "SaaS ou sur mesure : comment faire le bon choix",
-        "excerpt": "SaaS ou développement sur mesure ? Un cadre de décision honnête pour les fondateurs fatigués d'outils qui marchent presque."
+        "title": "SaaS ou sur mesure : comment faire le bon choix",
+        "excerpt": "SaaS ou développement sur mesure ? Un cadre de décision honnête pour les fondateurs fatigués d'outils qui marchent presque."
       },
       "roi-workflow-automation-small-business": {
         "title": "Le vrai ROI de l'automatisation pour les petites entreprises",
@@ -762,7 +802,7 @@
       },
       "why-nextjs-production-apps": {
         "title": "Pourquoi je construis mes applications de production avec Next.js",
-        "excerpt": "Pourquoi Next.js pour des applications en production en 2026 ? Un point de vue technique honnête sur la performance, l'architecture full-stack, et quand choisir autre chose."
+        "excerpt": "Pourquoi Next.js pour des applications en production en 2026 ? Un point de vue technique honnête sur la performance, l'architecture full-stack, et quand choisir autre chose."
       },
       "ai-business-operations-honest-guide": {
         "title": "5 façons dont l'IA améliore vraiment les opérations (et 3 où elle déçoit encore)",
@@ -770,25 +810,39 @@
       }
     },
     "cta": {
-      "title": "Un projet en tête ?",
+      "title": "Un projet en tête ?",
       "description": "Discutons de ce qu'il faut construire pour votre entreprise.",
       "button": "Cartographiez votre système (300 €)"
+    },
+    "page": {
+      "metadata": {
+        "title": "Blog · Deralis Digital",
+        "description": "Depuis la pratique. Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
+      },
+      "hero": {
+        "title": "Depuis la",
+        "titleHighlight": "pratique",
+        "description": "Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
+      },
+      "postMeta": {
+        "minRead": "min de lecture"
+      }
     }
   },
   "privacy": {
     "metadata": {
       "title": "Politique de confidentialité",
-      "description": "Politique de confidentialité de Deralis Digital : comment je collecte, utilise et protège vos données personnelles."
+      "description": "Politique de confidentialité de Deralis Digital : comment je collecte, utilise et protège vos données personnelles."
     },
     "title": "Politique de confidentialité",
-    "lastUpdated": "Dernière mise à jour : janvier 2025",
+    "lastUpdated": "Dernière mise à jour : janvier 2025",
     "intro": "Deralis Digital est un cabinet d'ingénierie indépendant qui fournit des services de développement web et digitaux. Cette politique explique comment je collecte, utilise et protège vos données personnelles lorsque vous visitez deralis.digital ou que vous me contactez.",
     "sections": {
       "dataCollected": {
         "title": "1. Données collectées",
         "voluntary": {
           "title": "1.1 Informations que vous transmettez",
-          "intro": "Lorsque vous me contactez par email ou via un formulaire, je peux recueillir :",
+          "intro": "Lorsque vous me contactez par email ou via un formulaire, je peux recueillir :",
           "items": [
             "Votre nom (si vous le renseignez)",
             "Votre adresse email",
@@ -799,7 +853,7 @@
         },
         "technical": {
           "title": "1.2 Données techniques",
-          "intro": "Lors de votre navigation sur le site, certaines informations techniques peuvent être collectées automatiquement :",
+          "intro": "Lors de votre navigation sur le site, certaines informations techniques peuvent être collectées automatiquement :",
           "items": [
             "Adresse IP (anonymisée lorsque c'est possible)",
             "Type et version du navigateur",
@@ -813,7 +867,7 @@
       },
       "howWeUse": {
         "title": "2. Comment j'utilise vos données",
-        "intro": "Vos données sont utilisées uniquement pour :",
+        "intro": "Vos données sont utilisées uniquement pour :",
         "items": [
           "Répondre à vos demandes",
           "Préparer des devis et propositions",
@@ -825,26 +879,26 @@
       },
       "legalBasis": {
         "title": "3. Bases légales (RGPD)",
-        "intro": "Conformément au RGPD, je traite les données personnelles sur les bases suivantes :",
+        "intro": "Conformément au RGPD, je traite les données personnelles sur les bases suivantes :",
         "items": {
-          "legitimate": "Intérêt légitime : répondre à vos demandes, améliorer le site, assurer sa sécurité.",
-          "contract": "Exécution d'un contrat : lorsque j'interviens dans le cadre d'une mission pour vous.",
-          "consent": "Consentement : lorsque vous choisissez librement de transmettre certaines informations."
+          "legitimate": "Intérêt légitime : répondre à vos demandes, améliorer le site, assurer sa sécurité.",
+          "contract": "Exécution d'un contrat : lorsque j'interviens dans le cadre d'une mission pour vous.",
+          "consent": "Consentement : lorsque vous choisissez librement de transmettre certaines informations."
         }
       },
       "storage": {
         "title": "4. Stockage et durée de conservation",
         "intro1": "Je stocke vos données personnelles de manière sécurisée dans l'Union européenne ou dans des juridictions offrant un niveau de protection équivalent.",
-        "intro2": "Je conserve les données uniquement le temps nécessaire :",
+        "intro2": "Je conserve les données uniquement le temps nécessaire :",
         "items": {
-          "inquiries": "Demandes de contact : jusqu'à 24 mois après le dernier échange.",
-          "project": "Informations liées à un projet : pendant la durée de la collaboration, puis selon les obligations légales (facturation, comptabilité, etc.).",
-          "analytics": "Données de logs et mesures d'audience : en général entre 30 et 90 jours selon le prestataire."
+          "inquiries": "Demandes de contact : jusqu'à 24 mois après le dernier échange.",
+          "project": "Informations liées à un projet : pendant la durée de la collaboration, puis selon les obligations légales (facturation, comptabilité, etc.).",
+          "analytics": "Données de logs et mesures d'audience : en général entre 30 et 90 jours selon le prestataire."
         }
       },
       "sharing": {
         "title": "5. Partage de vos données",
-        "intro": "Je peux partager certaines données uniquement avec :",
+        "intro": "Je peux partager certaines données uniquement avec :",
         "items": [
           "Le prestataire d'hébergement (par exemple Vercel)",
           "Les fournisseurs de messagerie (par exemple Gmail / Google Workspace)",
@@ -855,20 +909,20 @@
       },
       "rights": {
         "title": "6. Vos droits (UE et RGPD)",
-        "intro": "Vous disposez des droits suivants sur vos données personnelles :",
+        "intro": "Vous disposez des droits suivants sur vos données personnelles :",
         "items": [
-          "Droit d'accès : obtenir une copie de vos données",
-          "Droit de rectification : corriger des données inexactes",
-          "Droit à l'effacement : demander la suppression de certaines données",
-          "Droit à la limitation : restreindre temporairement l'utilisation de vos données",
-          "Droit d'opposition : vous opposer à certains traitements",
-          "Droit à la portabilité : recevoir vos données dans un format structuré"
+          "Droit d'accès : obtenir une copie de vos données",
+          "Droit de rectification : corriger des données inexactes",
+          "Droit à l'effacement : demander la suppression de certaines données",
+          "Droit à la limitation : restreindre temporairement l'utilisation de vos données",
+          "Droit d'opposition : vous opposer à certains traitements",
+          "Droit à la portabilité : recevoir vos données dans un format structuré"
         ],
-        "exercise": "Pour exercer vos droits, vous pouvez me contacter à :"
+        "exercise": "Pour exercer vos droits, vous pouvez me contacter à :"
       },
       "cookies": {
         "title": "7. Cookies",
-        "intro": "Le site peut utiliser des cookies limités pour :",
+        "intro": "Le site peut utiliser des cookies limités pour :",
         "items": [
           "Assurer le fonctionnement essentiel du site",
           "Mesurer de façon anonyme l'audience et les performances (si activé)"
@@ -877,22 +931,22 @@
       },
       "contact": {
         "title": "8. Contact",
-        "intro": "Pour toute question sur cette politique de confidentialité ou sur vos données personnelles, vous pouvez m'écrire à :"
+        "intro": "Pour toute question sur cette politique de confidentialité ou sur vos données personnelles, vous pouvez m'écrire à :"
       }
     }
   },
   "terms": {
     "metadata": {
       "title": "Conditions d'utilisation",
-      "description": "Conditions d'utilisation de Deralis Digital : règles d'utilisation du site web et cadre général des services."
+      "description": "Conditions d'utilisation de Deralis Digital : règles d'utilisation du site web et cadre général des services."
     },
     "title": "Conditions d'utilisation",
-    "lastUpdated": "Dernière mise à jour : janvier 2025",
+    "lastUpdated": "Dernière mise à jour : janvier 2025",
     "intro": "Les présentes conditions encadrent l'utilisation du site deralis.digital et, de manière générale, vos échanges avec Deralis Digital. En accédant au site ou en me contactant, vous acceptez ces conditions.",
     "sections": {
       "websiteUse": {
         "title": "1. Utilisation du site",
-        "intro": "Vous pouvez consulter ce site à des fins d'information et pour prendre contact. Vous vous engagez notamment à ne pas :",
+        "intro": "Vous pouvez consulter ce site à des fins d'information et pour prendre contact. Vous vous engagez notamment à ne pas :",
         "items": [
           "Tenter de porter atteinte à la sécurité ou au bon fonctionnement du site",
           "Copier ou réutiliser le contenu sans autorisation",
@@ -902,7 +956,7 @@
       },
       "services": {
         "title": "2. Services",
-        "intro": "Deralis Digital propose notamment :",
+        "intro": "Deralis Digital propose notamment :",
         "items": [
           "Développement de systèmes web et d'applications",
           "Conception et ingénierie de plateformes",
@@ -913,7 +967,7 @@
       },
       "quotes": {
         "title": "3. Devis et tarification",
-        "intro": "Sauf mention contraire, les devis et estimations :",
+        "intro": "Sauf mention contraire, les devis et estimations :",
         "items": [
           "Sont valables 30 jours à compter de leur émission",
           "Peuvent être ajustés si le périmètre du projet évolue",
@@ -922,7 +976,7 @@
       },
       "payment": {
         "title": "4. Conditions de paiement",
-        "intro": "Les modalités précises de paiement sont définies dans chaque contrat de projet. Sauf disposition contraire :",
+        "intro": "Les modalités précises de paiement sont définies dans chaque contrat de projet. Sauf disposition contraire :",
         "items": [
           "Les audits système nécessitent un règlement à l'avance",
           "Les projets de développement peuvent être facturés par étapes (acompte, jalons, solde)",
@@ -932,7 +986,7 @@
       },
       "ip": {
         "title": "5. Propriété intellectuelle",
-        "intro": "Sauf accord spécifique mentionné dans le contrat :",
+        "intro": "Sauf accord spécifique mentionné dans le contrat :",
         "items": [
           "Je reste propriétaire de mes outils internes, de mes bibliothèques et de mon savoir-faire utilisés pour mener le projet.",
           "Le client obtient les droits d'utilisation sur les livrables personnalisés créés spécifiquement pour son projet, selon les termes du contrat.",
@@ -945,7 +999,7 @@
       },
       "liability": {
         "title": "7. Limitation de responsabilité",
-        "intro": "Dans les limites permises par la loi, Deralis Digital ne peut être tenue responsable de :",
+        "intro": "Dans les limites permises par la loi, Deralis Digital ne peut être tenue responsable de :",
         "items": [
           "Pertes d'exploitation ou d'activité",
           "Perte de chiffre d'affaires ou de données",
@@ -964,7 +1018,7 @@
       },
       "contact": {
         "title": "10. Contact",
-        "intro": "Pour toute question concernant ces conditions d'utilisation ou un contrat en cours, vous pouvez me contacter à :"
+        "intro": "Pour toute question concernant ces conditions d'utilisation ou un contrat en cours, vous pouvez me contacter à :"
       }
     }
   },
@@ -980,14 +1034,18 @@
         "title": "Éditeur du site",
         "fields": {
           "name": "Raison sociale",
-          "nameValue": "Deralis Digital",
-          "form": "Forme juridique",
-          "formValue": "Entreprise individuelle / Services de développement web et digitaux",
+          "nameValue": "UGBOAJA Uwa Chidera",
+          "form": "Statut",
+          "formValue": "Entrepreneur individuel (micro-entrepreneur)",
+          "siret": "SIRET",
+          "siretValue": "852 525 963 00025",
           "address": "Adresse",
           "addressValue": "Communiquée sur demande officielle",
           "email": "Email",
+          "vat": "TVA",
+          "vatValue": "TVA non applicable, art. 293 B du CGI",
           "director": "Directeur de publication",
-          "directorValue": "Deralis Digital"
+          "directorValue": "UGBOAJA Uwa Chidera"
         }
       },
       "hosting": {
@@ -1006,7 +1064,7 @@
       },
       "liability": {
         "title": "Responsabilité",
-        "content": "Je veille à fournir des informations à jour et exactes, mais des erreurs ou omissions peuvent subsister. Le site peut contenir des liens vers d'autres sites : je n'ai aucun contrôle sur leur contenu et décline toute responsabilité à leur égard."
+        "content": "Je veille à fournir des informations à jour et exactes, mais des erreurs ou omissions peuvent subsister. Le site peut contenir des liens vers d'autres sites : je n'ai aucun contrôle sur leur contenu et décline toute responsabilité à leur égard."
       },
       "personalData": {
         "title": "Données personnelles",
@@ -1015,7 +1073,291 @@
       },
       "contact": {
         "title": "Contact",
-        "intro": "Pour toute demande relative aux mentions légales ou au site, vous pouvez m'écrire à :"
+        "intro": "Pour toute demande relative aux mentions légales ou au site, vous pouvez m'écrire à :"
+      }
+    }
+  },
+  "projectDetail": {
+    "labels": {
+      "category": "Catégorie",
+      "role": "Rôle",
+      "status": "Statut",
+      "started": "Démarré",
+      "live": "En production",
+      "inDevelopment": "En développement",
+      "repo": "Dépôt",
+      "private": "Privé",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Données",
+      "infrastructure": "Infrastructure",
+      "tooling": "Outillage",
+      "viewProject": "Voir le projet →",
+      "whereToFind": "Où le trouver",
+      "linksTitle": "Liens.",
+      "builtWith": "Construit avec",
+      "stackTitle": "La stack en dessous.",
+      "stackIntro": "Listée simplement. Le choix des outils compte moins que la façon dont on s'en sert.",
+      "whatItIs": "Ce que c'est",
+      "whatIBuilt": "Ce que j'ai construit",
+      "insideTheSystem": "À l'intérieur du système",
+      "relatedProjects": "Projets liés",
+      "relatedTitle": "Autres choses que j'ai construites."
+    },
+    "travixo": {
+      "metadata": {
+        "title": "TraviXO Systems · Deralis Digital",
+        "description": "Un SaaS multi-tenant en production pour la conformité VGP dans le secteur français de la location de matériel. Construit en solo depuis l'intérieur du secteur."
+      },
+      "eyebrow": "Réalisations / TraviXO Systems",
+      "title": "Un système de conformité pour le secteur de la location de <em>matériel</em>.",
+      "standfirst": "Un SaaS multi-tenant en production qui gère les inspections VGP réglementaires pour les entreprises françaises de location de matériel. Construit en solo, ancré dans des contraintes industrielles réelles.",
+      "meta": {
+        "category": "SaaS vertical",
+        "role": "Fondateur solo, chaque ligne",
+        "status": "En production",
+        "started": "2025 (en développement)"
+      },
+      "whatItIs": {
+        "title": "Conformité pour le secteur français de la location de matériel.",
+        "p1": "TraviXO Systems est un SaaS multi-tenant de conformité pour le secteur français de la location de matériel. Il suit les inspections réglementaires périodiques, le VGP, que toute entreprise de location en France est légalement tenue d'effectuer sur le matériel qu'elle met devant les clients.",
+        "p2": "Les inspections oubliées sont un problème de responsabilité et un problème réglementaire, et la façon dont la plupart des entreprises de location les suivent aujourd'hui passe par un mélange de dossiers papier, de tableurs individuels, et de la mémoire de la personne qui est là depuis le plus longtemps.",
+        "p3": "La compréhension qui sous-tend tout ça vient du temps passé à l'intérieur du secteur de la location de matériel, près de la façon dont ce travail se fait réellement. Le produit est façonné autour de ces flux plutôt qu'autour d'un template de conformité générique.",
+        "p4": "<strong>Construit en solo. En production. Tournant sur de vrais flux d'inspection en production.</strong>"
+      },
+      "whatIBuilt": {
+        "title": "Les pièces qui font fonctionner le système.",
+        "items": {
+          "1": {
+            "title": "Fondation multi-tenant",
+            "body": "Chaque entreprise de location opère dans son propre espace isolé, avec une séparation stricte des données entre les tenants."
+          },
+          "2": {
+            "title": "Registre du matériel",
+            "body": "Chaque pièce de matériel louable est suivie avec son identification, sa catégorie, sa classe réglementaire, et son calendrier d'inspection. Le registre est la source unique de vérité dont chaque autre partie du système dépend."
+          },
+          "3": {
+            "title": "Flux d'inspection",
+            "body": "Les inspections sont planifiées automatiquement selon la fréquence réglementaire, remontées comme du travail à faire, et enregistrées avec l'identité de l'inspecteur, la date, les constats, et tout suivi requis. Rien n'est noté sur papier puis oublié."
+          },
+          "4": {
+            "title": "Piste d'audit et exports",
+            "body": "Chaque action est journalisée d'une façon qui survit à un audit du régulateur. Les enregistrements d'inspection peuvent être exportés sous forme de rapports de conformité sans que personne n'ait à assembler un dossier à la main la veille au soir."
+          },
+          "5": {
+            "title": "Accès par rôle",
+            "body": "Le responsable d'agence, le technicien, et le comptable du siège voient des vues différentes des mêmes données. Chaque rôle voit ce qui lui revient, et seulement ça."
+          }
+        }
+      },
+      "inside": {
+        "title": "Quelques-uns des écrans qui le font tourner.",
+        "cap1": "Le registre du matériel, où chaque pièce louable vit avec sa classe réglementaire et son calendrier d'inspection.",
+        "cap2": "Le flux d'inspection qui remonte ce qui est dû, ce qui est en retard, et ce qui a été terminé dans le dernier cycle.",
+        "cap3": "La piste d'audit exportable. Chaque action attribuable, chaque enregistrement reproductible."
+      },
+      "links": {
+        "liveLabel": "En production",
+        "liveValue": "app.travixosystems.com",
+        "repoLabel": "Dépôt",
+        "repoValue": "Privé"
+      },
+      "related": {
+        "card1": {
+          "eyebrow": "Démo / 2026",
+          "title": "Flux Client",
+          "body": "Une démo intake-vers-job-board montrant comment un seul formulaire peut alimenter une vue opérationnelle en temps réel pour une petite équipe."
+        },
+        "card2": {
+          "eyebrow": "Démo / 2026",
+          "title": "Onboard",
+          "body": "Un suivi d'intégration staff et clients qui remplace le tableur sur lequel la plupart des petites équipes font tourner leurs premières semaines en silence."
+        },
+        "card3": {
+          "eyebrow": "Proposition spec / 2026",
+          "title": "Portail de demandes gouvernementales",
+          "body": "Une proposition spec pour un portail structuré de prise en charge de demandes. Pas livré. Inclus ici comme référence de périmètre."
+        }
+      },
+      "stack": {
+        "eyebrow": "Construit avec",
+        "title": "La stack en dessous.",
+        "intro": "Listée simplement. Le choix des outils compte moins que la façon dont on s’en sert.",
+        "layers": {
+          "frontend": {
+            "label": "Frontend",
+            "items": "Next.js 15, TypeScript, Tailwind CSS, shadcn/ui"
+          },
+          "backend": {
+            "label": "Backend",
+            "items": "Next.js server actions, Prisma ORM, validation Zod"
+          },
+          "data": {
+            "label": "Données",
+            "items": "Supabase, PostgreSQL, Row Level Security"
+          },
+          "infrastructure": {
+            "label": "Infrastructure",
+            "items": "Vercel, Cloudflare, Resend"
+          },
+          "tooling": {
+            "label": "Outillage",
+            "items": "Git, GitHub, Claude Code"
+          }
+        }
+      }
+    }
+  },
+  "blogPost": {
+    "minRead": "min de lecture",
+    "signatureBlock": {
+      "eyebrow": "Écrit par",
+      "name": "Uwa Ugboaja",
+      "bio": "Je construis les systèmes internes sur lesquels les petites entreprises tournent, en travaillant en solo en français et en anglais depuis l'Île-de-France.",
+      "linkLabel": "En savoir plus sur ma façon de travailler →"
+    },
+    "moreStrip": {
+      "eyebrow": "D'autres choses depuis la pratique",
+      "title": "D'autres choses que j'ai écrites.",
+      "readMore": "Lire →"
+    }
+  },
+  "audit": {
+    "page": {
+      "metadata": {
+        "title": "Audit système · Deralis Digital",
+        "description": "Un point de décision payant. Pas une conversation, pas un rapport, pas une étape commerciale. Un appel structuré de 60 à 90 minutes, suivi d’un brief de décision écrit, pour 300 €."
+      },
+      "hero": {
+        "eyebrow": "Audit système · 300 €",
+        "headline": "Identifiez quoi construire, et quoi <em>ne pas</em> construire, avant qu’une seule ligne de code ne soit écrite.",
+        "sub1": "L’audit est un point de décision payant. Pas une conversation, pas un rapport, pas une étape commerciale.",
+        "sub2": "Un appel structuré, suivi d’un brief de décision écrit livré sous cinq jours ouvrés.",
+        "sub3": "Réalisé par un ingénieur systèmes indépendant qui construit des systèmes en production et travaille à partir de contraintes opérationnelles réelles."
+      },
+      "walkaway": {
+        "eyebrow": "Ce que vous repartez avec",
+        "title": "Un ensemble de <em>décisions</em> sur lesquelles agir dès lundi matin.",
+        "intro": "L’audit existe pour que vous puissiez arrêter de deviner quel système corriger en premier, et commencer à exécuter dans un ordre qui tient la route.",
+        "items": [
+          "Décider quel système corriger en premier, et pourquoi les autres attendent.",
+          "Décider s’il faut construire, acheter ou utiliser ce qui existe déjà.",
+          "Décider si le problème relève du logiciel ou de l’organisation.",
+          "Décider quoi ne pas construire maintenant, pour que le périmètre arrête de gonfler tout seul."
+        ]
+      },
+      "inPractice": {
+        "disclaimerLead": "Scénario illustratif. Pas un client réel.",
+        "disclaimerBody": "Un composite illustratif, pas une étude de cas. Aucun chiffre inventé, aucun nom de client, aucun historique suggéré.",
+        "eyebrow": "En pratique",
+        "title": "À quoi ressemble <em>concrètement</em> un audit.",
+        "intro": "Les cinq parties d’un brief de décision, illustrées sur un exemple composite.",
+        "steps": {
+          "1": {
+            "heading": "Situation",
+            "body": "Une PME française, une trentaine de personnes, qui coordonne des opérations terrain sur plusieurs sites. Rentable, en croissance, gérée au quotidien via WhatsApp, e-mail et trois outils SaaS distincts qui ne communiquaient pas entre eux."
+          },
+          "2": {
+            "heading": "Ce qui ne fonctionnait plus",
+            "body": "Personne ne pouvait répondre à « où en est-ce en ce moment ? » sans passer deux appels. La même information était saisie dans trois endroits différents. Le responsable des opérations passait une journée entière par semaine à réconcilier les écarts à la main."
+          },
+          "3": {
+            "heading": "Ce que l’audit a clarifié",
+            "body": "Le problème ne venait pas des outils. Le problème, c’est qu’aucun endroit unique ne reflétait l’état courant d’un chantier. Ajouter un quatrième outil aurait aggravé la situation. La bonne réponse, c’était une couche fine au-dessus des outils existants, pas leur remplacement."
+          },
+          "4": {
+            "heading": "Ce que le premier développement devait être",
+            "body": "Un tableau de bord unique montrant chaque chantier actif, son étape en cours et la personne responsable de l’action suivante. Alimenté par les outils existants, sans les remplacer. Calibré pour être livré en semaines, pas en mois."
+          },
+          "5": {
+            "heading": "Ce qui a été explicitement écarté",
+            "body": "Une plateforme opérationnelle complète. Une application mobile. Un remplacement de CRM. Chacune de ces options était une vraie tentation, et l’audit a rendu plus facile d’y dire non, parce que le brief les nommait et expliquait pourquoi elles n’étaient pas adaptées à cette opération à ce stade."
+          }
+        },
+        "midCtaNote": "Voilà à quoi ressemble le brief. Même format, votre opération, vos décisions."
+      },
+      "deliverables": {
+        "eyebrow": "Ce que vous obtenez",
+        "title": "Deux choses. Un appel et un brief écrit.",
+        "intro": "Pas de slides. Pas de modèle d’audit générique. Pas de recommandations recyclées.",
+        "items": [
+          "Un appel d’audit structuré, 60 à 90 minutes.",
+          "Un brief de décision écrit, livré après l’appel.",
+          "Une cartographie des frictions dans le fonctionnement actuel de votre opération.",
+          "Un découpage quoi-construire / quoi-ne-pas-construire, avec le raisonnement.",
+          "Un ordre d’exécution et l’orientation du premier périmètre système."
+        ],
+        "notIncludedLabel": "Ce qui N’EST PAS inclus",
+        "excludes": [
+          "Pas de spécification technique complète.",
+          "Pas de travail d’implémentation. L’audit ne construit rien.",
+          "Pas de recommandations vagues et génériques. Le brief nomme votre opération, pas une catégorie."
+        ]
+      },
+      "flow": {
+        "label": "Comment ça se passe",
+        "step1": "Paiement de 300 € via Stripe",
+        "step2": "Confirmation + lien de prise de rendez-vous",
+        "step3": "Appel d’audit de 60 à 90 minutes",
+        "step4": "Brief livré sous 5 jours ouvrés"
+      },
+      "notFor": {
+        "eyebrow": "À qui cet audit ne s’adresse pas",
+        "title": "Ne réservez pas l’audit <em>si</em>…",
+        "intro": "Si l’un de ces cas vous décrit, l’audit n’est pas le bon produit. Économisez les 300 €.",
+        "items": [
+          "Vous avez besoin d’un site vitrine (WordPress, Webflow, Framer, etc.).",
+          "Vous voulez que quelqu’un commence à construire avant que le problème ne soit correctement défini.",
+          "Il n’y a pas de friction opérationnelle à résoudre.",
+          "Vous ne pouvez pas définir à quoi « mieux » ressemblerait.",
+          "Vous comptez sauter l’audit et passer directement à la construction."
+        ]
+      },
+      "refund": {
+        "eyebrow": "Politique de remboursement",
+        "title": "L’audit <em>est</em> le travail.",
+        "p1": "Je n’accepte pas de paiement pour un audit que je ne peux pas mener à bien. Si pendant l’appel je constate que je ne suis pas la bonne personne pour vous aider, je rembourse l’intégralité des 300 €. Sans discussion, sans paiement partiel, sans tentative de vous vendre autre chose.",
+        "p2": "Dans le cas contraire, l’audit n’est pas remboursable, parce que l’audit est le travail, pas une étape commerciale. L’appel et le brief existent pour que vous puissiez prendre des décisions que vous ne pouviez pas prendre avant. Cette valeur est livrée que vous me confiiez la suite ou non, et c’est précisément l’objectif."
+      },
+      "tailCta": {
+        "eyebrow": "Prêt à réserver",
+        "headline": "Vous n’achetez pas un appel. Vous achetez une décision.",
+        "body": "Un prix fixe, un appel structuré, un brief de décision écrit. Si je ne suis pas la bonne personne pour vous aider, vous êtes remboursé.",
+        "note": "Prix fixe. Non remboursable, sauf si je détermine que je ne suis pas le bon interlocuteur."
+      },
+      "faq": {
+        "eyebrow": "Questions",
+        "title": "<em>Questions</em> fréquentes.",
+        "items": {
+          "1": {
+            "question": "Dans quel délai est-ce que je reçois le brief ?",
+            "answer": "Cinq jours ouvrés après l’appel d’audit. Si quoi que ce soit retarde la livraison, vous en êtes informé avant l’échéance, pas après."
+          },
+          "2": {
+            "question": "Et si je ne suis pas prêt à agir sur le brief ?",
+            "answer": "Le brief est à vous. Utilisez-le quand le moment sera le bon. Pas de date d’expiration, pas de séquence de relance, pas de suivi commercial."
+          },
+          "3": {
+            "question": "Et si je veux vous confier la construction du premier système après l’audit ?",
+            "answer": "Les 300 € de l’audit sont déduits du coût du projet si celui-ci se concrétise. L’audit est rentabilisé dès que le développement commence."
+          },
+          "4": {
+            "question": "Signez-vous des accords de confidentialité ?",
+            "answer": "Oui. NDA mutuel standard, signé avant l’appel si vous le souhaitez. Envoyez le vôtre ou j’envoie le mien."
+          },
+          "5": {
+            "question": "Que deviennent mes données ?",
+            "answer": "Elles restent chez moi. Rien n’est partagé avec des tiers, rien n’est utilisé à des fins marketing, rien n’est conservé plus longtemps que nécessaire pour livrer le brief."
+          },
+          "6": {
+            "question": "Puis-je partager le brief avec mon équipe ?",
+            "answer": "Oui. Le brief est à vous : diffusez-le, référencez-le, agissez dessus comme vous le souhaitez. Il est rédigé pour être compréhensible par quelqu’un qui n’était pas sur l’appel."
+          },
+          "7": {
+            "question": "L’appel peut-il se faire en français ?",
+            "answer": "Oui. L’appel et le brief peuvent être réalisés en français ou en anglais. Je suis bilingue et je travaille dans les deux langues au quotidien."
+          }
+        }
       }
     }
   }
