@@ -76,9 +76,8 @@ function TraviXOCaseStudy() {
       prose={[t("prose1"), t("prose2"), t("prose3"), t("prose4")]}
       closing={{
         type: "link",
-        href: "https://app.travixosystems.com",
+        href: "/projects/travixo",
         label: t("linkLabel"),
-        external: true,
       }}
       screenshotAlt={tScreenshots("dashboard.alt")}
       screenshotSrc="/projects/travixo/travixo-dashboard.png"
@@ -100,7 +99,11 @@ function GovPortalCaseStudy() {
       title={t("title")}
       context={t("context")}
       prose={[t("prose1"), t("prose2")]}
-      closing={{ type: "note", text: t("note") }}
+      closing={{
+        type: "note",
+        text: t("note"),
+        link: { href: t("url"), label: t("viewBuildLabel") },
+      }}
       screenshotAlt={t("screenshot.alt")}
       screenshotSrc="/projects/gov-portal/gov-portal.png"
       screenshotWidth={1550}
@@ -116,7 +119,7 @@ function ConceptsStrip() {
     num: `0${num}`,
     title: t(`items.${num}.title`),
     description: t(`items.${num}.desc`),
-    linkHref: "#",
+    linkHref: t(`items.${num}.url`),
     linkLabel: t(`items.${num}.linkLabel`),
   }));
 

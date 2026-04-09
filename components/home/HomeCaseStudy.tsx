@@ -24,7 +24,7 @@ export default function HomeCaseStudy() {
             {t("prose")}
           </p>
           <Link
-            href="/projects"
+            href="/projects/travixo"
             className="inline-flex items-center gap-2 text-[15px] font-medium text-ink no-underline border-b border-ink pb-[3px] hover:text-accent hover:border-accent transition-colors"
           >
             {t("linkLabel")}

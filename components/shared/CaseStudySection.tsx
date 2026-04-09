@@ -1,9 +1,10 @@
 import { cn } from "@/lib/cn";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 type CaseStudyClosing =
   | { type: "link"; href: string; label: string; external?: boolean }
-  | { type: "note"; text: string };
+  | { type: "note"; text: string; link?: { href: string; label: string } };
 
 type CaseStudySectionProps = {
   id?: string;
@@ -70,20 +71,42 @@ export default function CaseStudySection({
             ))}
           </div>
           {closing.type === "link" ? (
-            <a
-              href={closing.href}
-              {...(closing.external
-                ? { target: "_blank", rel: "noopener noreferrer" }
-                : {})}
-              className="inline-flex items-center gap-2 text-[15px] font-medium text-ink no-underline border-b border-ink pb-[3px] hover:text-accent hover:border-accent transition-colors"
-            >
-              {closing.label}
-              <span aria-hidden="true">→</span>
-            </a>
+            closing.external ? (
+              <a
+                href={closing.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[15px] font-medium text-ink no-underline border-b border-ink pb-[3px] hover:text-accent hover:border-accent transition-colors"
+              >
+                {closing.label}
+                <span aria-hidden="true">→</span>
+              </a>
+            ) : (
+              <Link
+                href={closing.href}
+                className="inline-flex items-center gap-2 text-[15px] font-medium text-ink no-underline border-b border-ink pb-[3px] hover:text-accent hover:border-accent transition-colors"
+              >
+                {closing.label}
+                <span aria-hidden="true">→</span>
+              </Link>
+            )
           ) : (
-            <p className="text-[13px] text-ink-3 leading-[1.6]">
-              {closing.text}
-            </p>
+            <div>
+              <p className="text-[13px] text-ink-3 leading-[1.6]">
+                {closing.text}
+              </p>
+              {closing.link && (
+                <a
+                  href={closing.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[15px] font-medium text-ink no-underline border-b border-ink pb-[3px] hover:text-accent hover:border-accent transition-colors mt-4"
+                >
+                  {closing.link.label}
+                  <span aria-hidden="true">→</span>
+                </a>
+              )}
+            </div>
           )}
         </div>
 

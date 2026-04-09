@@ -49,25 +49,11 @@
     },
     "footer": {
       "tagline": "I build the systems businesses need to operate.",
-      "subtagline": "",
-      "navigation": "Navigation",
-      "services": "Services",
-      "contact": "Contact",
-      "legal": "Legal",
-      "locationShort": "France & Remote",
-      "copyrightDefault": "© 2026 Deralis Digital. All rights reserved.",
-      "copyrightShort": "© 2026 Deralis Digital",
       "copyrightIndependent": "© 2026 Deralis Digital. Independent practice.",
       "location": "Île-de-France · Remote for France, the UK, and the US",
       "languages": "French and English",
       "legalLink": "Legal Notice",
-      "privacyLink": "Privacy",
-      "servicesList": {
-        "audit": "Systems Audit",
-        "custom": "Custom System",
-        "extensions": "Extensions",
-        "ongoing": "Ongoing"
-      }
+      "privacyLink": "Privacy"
     },
     "auditCta": {
       "eyebrow": "Start with a systems audit",
@@ -408,7 +394,9 @@
         "note": "Spec pitch. Not a delivered engagement. Status updated when the buyer responds.",
         "screenshot": {
           "alt": "Government Application Portal intake flow showing document submission and status tracking"
-        }
+        },
+        "url": "https://government-portal-ashy.vercel.app/",
+        "viewBuildLabel": "View the build"
       },
       "concepts": {
         "eyebrow": "Concept builds",
@@ -418,22 +406,26 @@
           "1": {
             "title": "Deralis Ops Dashboard",
             "desc": "An operations dashboard pattern for teams that need to see where work actually is. Built to test the visibility primitive a real client system would extend.",
-            "linkLabel": "View demo"
+            "linkLabel": "View demo",
+            "url": "https://deralis-ops-dashboard.vercel.app/"
           },
           "2": {
             "title": "Flux Client",
             "desc": "A structured client intake demo. An inquiry arrives, becomes a job record, gets a status, and stays visible to a whole team without anyone forwarding anything.",
-            "linkLabel": "View demo"
+            "linkLabel": "View demo",
+            "url": "https://flux-client-umber.vercel.app/"
           },
           "3": {
             "title": "Onboard",
             "desc": "A structured onboarding tracker. Create a record, watch the checklist appear, every step visible. Nothing depending on someone remembering.",
-            "linkLabel": "View demo"
+            "linkLabel": "View demo",
+            "url": "https://onboard-blush.vercel.app/"
           },
           "4": {
             "title": "Marche Diaspora",
             "desc": "A product catalogue with order management. End-to-end ordering flow as an interactive demo, built to test how a small commerce operation could run on one system.",
-            "linkLabel": "View demo"
+            "linkLabel": "View demo",
+            "url": "https://deralis-catalog-demo.vercel.app/"
           }
         }
       },
@@ -1169,17 +1161,21 @@
         "card1": {
           "eyebrow": "Demo build / 2026",
           "title": "Flux Client",
-          "body": "An intake-to-job-board demo showing how a single form can drive a real-time operational view for a small team."
+          "body": "An intake-to-job-board demo showing how a single form can drive a real-time operational view for a small team.",
+          "url": "https://flux-client-umber.vercel.app/"
         },
         "card2": {
           "eyebrow": "Demo build / 2026",
           "title": "Onboard",
-          "body": "A staff and client onboarding tracker that replaces the spreadsheet most small teams quietly run their first weeks on."
+          "body": "A staff and client onboarding tracker that replaces the spreadsheet most small teams quietly run their first weeks on.",
+          "url": "https://onboard-blush.vercel.app/"
         },
         "card3": {
           "eyebrow": "Spec pitch / 2026",
           "title": "Government Application Portal",
-          "body": "A spec pitch for a structured application intake portal. Not delivered. Included here as scope reference."
+          "body": "A spec pitch for a structured application intake portal. Not delivered. Included here as scope reference.",
+          "url": "https://government-portal-ashy.vercel.app/",
+          "disclosure": "Spec pitch. Not a delivered engagement."
         }
       },
       "stack": {

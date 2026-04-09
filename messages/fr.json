@@ -408,7 +408,9 @@
         "note": "Proposition spec. Pas une mission livrée. Le statut sera mis à jour quand l'acheteur répondra.",
         "screenshot": {
           "alt": "Flux de prise en charge du Portail de demandes gouvernementales montrant la soumission de documents et le suivi de statut"
-        }
+        },
+        "url": "https://government-portal-ashy.vercel.app/",
+        "viewBuildLabel": "Voir le build"
       },
       "concepts": {
         "eyebrow": "Démos",
@@ -418,22 +420,26 @@
           "1": {
             "title": "Tableau de bord Deralis Ops",
             "desc": "Un pattern de tableau de bord opérationnel pour les équipes qui ont besoin de voir où en est le travail. Construit pour tester la primitive de visibilité qu'un système client réel viendrait étendre.",
-            "linkLabel": "Voir la démo"
+            "linkLabel": "Voir la démo",
+            "url": "https://deralis-ops-dashboard.vercel.app/"
           },
           "2": {
             "title": "Flux Client",
             "desc": "Une démo de prise en charge structurée. Une demande arrive, devient une fiche mission, reçoit un statut, et reste visible pour toute l'équipe sans que personne n'ait à transférer quoi que ce soit.",
-            "linkLabel": "Voir la démo"
+            "linkLabel": "Voir la démo",
+            "url": "https://flux-client-umber.vercel.app/"
           },
           "3": {
             "title": "Onboard",
             "desc": "Un suivi d'intégration structuré. Créez un dossier, regardez la checklist apparaître, chaque étape visible. Rien qui dépende de la mémoire de quelqu'un.",
-            "linkLabel": "Voir la démo"
+            "linkLabel": "Voir la démo",
+            "url": "https://onboard-blush.vercel.app/"
           },
           "4": {
             "title": "Catalogue interactif",
             "desc": "Un catalogue produits avec gestion des commandes. Flux de commande complet en démo interactive, construit pour tester comment une petite opération commerciale pourrait fonctionner sur un seul système.",
-            "linkLabel": "Voir la démo"
+            "linkLabel": "Voir la démo",
+            "url": "https://deralis-catalog-demo.vercel.app/"
           }
         }
       },
@@ -1169,17 +1175,21 @@
         "card1": {
           "eyebrow": "Démo / 2026",
           "title": "Flux Client",
-          "body": "Une démo intake-vers-job-board montrant comment un seul formulaire peut alimenter une vue opérationnelle en temps réel pour une petite équipe."
+          "body": "Une démo intake-vers-job-board montrant comment un seul formulaire peut alimenter une vue opérationnelle en temps réel pour une petite équipe.",
+          "url": "https://flux-client-umber.vercel.app/"
         },
         "card2": {
           "eyebrow": "Démo / 2026",
           "title": "Onboard",
-          "body": "Un suivi d'intégration staff et clients qui remplace le tableur sur lequel la plupart des petites équipes font tourner leurs premières semaines en silence."
+          "body": "Un suivi d'intégration staff et clients qui remplace le tableur sur lequel la plupart des petites équipes font tourner leurs premières semaines en silence.",
+          "url": "https://onboard-blush.vercel.app/"
         },
         "card3": {
           "eyebrow": "Proposition spec / 2026",
           "title": "Portail de demandes gouvernementales",
-          "body": "Une proposition spec pour un portail structuré de prise en charge de demandes. Pas livré. Inclus ici comme référence de périmètre."
+          "body": "Une proposition spec pour un portail structuré de prise en charge de demandes. Pas livré. Inclus ici comme référence de périmètre.",
+          "url": "https://government-portal-ashy.vercel.app/",
+          "disclosure": "Proposition spec. Pas une mission livrée."
         }
       },
       "stack": {

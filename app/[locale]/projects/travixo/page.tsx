@@ -174,7 +174,6 @@ function InsideTheSystem() {
   const screenshots = [
     { src: "/projects/travixo/travixo-fleet.png", width: 875, height: 935, alt: tScreenshots("equipmentRegister.alt"), caption: t("cap1") },
     { src: "/projects/travixo/travixo-qr.png", width: 971, height: 943, alt: tScreenshots("inspectionWorkflow.alt"), caption: t("cap2") },
-    { src: null as string | null, width: 0, height: 0, alt: "Audit trail screenshot", caption: t("cap3") },
   ];
 
   return (
@@ -187,22 +186,15 @@ function InsideTheSystem() {
         <div className="flex flex-col gap-14 mt-2">
           {screenshots.map((shot, i) => (
             <div key={i}>
-              {shot.src ? (
-                <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden casestudy-shadow">
-                  <Image
-                    src={shot.src}
-                    alt={shot.alt}
-                    width={shot.width}
-                    height={shot.height}
-                    className="w-full h-auto"
-                  />
-                </div>
-              ) : (
-                <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden aspect-[16/10] casestudy-shadow flex items-center justify-center">
-                  {/* PLACEHOLDER: audit trail screenshot pending */}
-                  <p className="text-[13px] text-ink-3">{shot.alt}</p>
-                </div>
-              )}
+              <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden casestudy-shadow">
+                <Image
+                  src={shot.src}
+                  alt={shot.alt}
+                  width={shot.width}
+                  height={shot.height}
+                  className="w-full h-auto"
+                />
+              </div>
               <p className="text-[14px] text-ink-2-soft leading-[1.55] mt-4 max-w-[620px]">
                 {shot.caption}
               </p>
@@ -300,7 +292,9 @@ function RelatedProjects() {
           title={tLabels("relatedTitle")}
         />
         <div className="grid grid-cols-1 md:grid-cols-3 mt-2">
-          {cards.map((card, i) => (
+          {cards.map((card, i) => {
+            const hasDisclosure = card === "card3";
+            return (
             <div
               key={card}
               className={`py-8 max-md:py-6 ${
@@ -320,14 +314,22 @@ function RelatedProjects() {
               <p className="text-[15px] leading-[1.6] text-ink-2 mb-[18px]">
                 {t(`${card}.body`)}
               </p>
+              {hasDisclosure && (
+                <p className="text-[13px] text-ink-3 leading-[1.55] mb-3">
+                  {t(`${card}.disclosure`)}
+                </p>
+              )}
               <a
-                href="#"
+                href={t(`${card}.url`)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[14px] font-medium text-ink no-underline border-b border-ink pb-[2px] hover:text-accent hover:border-accent transition-colors"
               >
                 {tLabels("viewProject")}
               </a>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
