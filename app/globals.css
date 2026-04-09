@@ -90,7 +90,7 @@ h2 em {
 
 /* Hero headline separator dots */
 .hero-sep {
-  margin: 0 0.02em;
+  margin: 0 0.002em;
   opacity: 0.8;
   font-weight: 300;
 }
