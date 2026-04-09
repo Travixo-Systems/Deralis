@@ -7,16 +7,6 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        // Static assets (JS, CSS bundles) - cache 1 year, immutable
-        source: "/_next/static/:path*",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
         // Public images and static files - cache 30 days
         source: "/:path*.(png|jpg|jpeg|gif|svg|ico|webp|avif|woff|woff2)",
         headers: [
