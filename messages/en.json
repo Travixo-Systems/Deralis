@@ -66,8 +66,8 @@
   "home": {
     "page": {
       "hero": {
-        "eyebrow": "Independent systems engineering practice · Île-de-France",
-        "headline": "I build the <em>systems</em> businesses need to operate.",
+        "eyebrow": "Independent systems engineering practice",
+        "headline": "Operational systems for growing businesses.",
         "sub1": "If your team still asks 'where is this?' you don't have a system.",
         "sub2": "Tools are not the problem. The problem is how information moves between them.",
         "sub3": "It lives in multiple places, moves inconsistently, and depends on people to keep it going.",
@@ -128,7 +128,7 @@
         "title": "TraviXO Systems",
         "context": "B2B SaaS · Equipment rental · VGP compliance",
         "prose": "Multi-tenant SaaS for VGP compliance in French equipment rental. Built solo. Live. Shaped by real exposure to how these operations run.",
-        "linkLabel": "See all projects"
+        "linkLabel": "See more about TraviXO"
       },
       "howIWork": {
         "eyebrow": "How I work",
