@@ -28,7 +28,6 @@
       "openApp": "Open app",
       "viewLive": "View live",
       "viewOurWork": "View my work",
-      "workWithUs": "Get your system mapped (€300)",
       "sendMessage": "Send message",
       "sending": "Sending...",
       "language": "Language",
@@ -806,8 +805,7 @@
     },
     "cta": {
       "title": "Have a project in mind?",
-      "description": "Let's discuss how I can build the right system for your business.",
-      "button": "Get your system mapped (€300)"
+      "description": "Let's discuss how I can build the right system for your business."
     },
     "page": {
       "metadata": {

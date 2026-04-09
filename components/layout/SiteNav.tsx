@@ -2,6 +2,7 @@
 
 import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import LanguageToggle from "./LanguageToggle";
 
 const navItems = [
@@ -29,7 +30,14 @@ export default function SiteNav() {
           href="/"
           className="flex items-center gap-3 text-ink font-medium text-base tracking-[-0.01em] no-underline"
         >
-          <span className="w-6 h-6 bg-ink rounded-[5px] shrink-0" />
+          <Image
+            src="/logo-mark.png"
+            alt="Deralis Digital"
+            width={24}
+            height={24}
+            priority
+            className="w-6 h-6"
+          />
           Deralis Digital
         </Link>
 

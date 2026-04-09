@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function SiteFooter() {
   const t = useTranslations("common");
@@ -12,7 +13,13 @@ export default function SiteFooter() {
           {/* Brand block */}
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-6 bg-ink rounded-[5px] shrink-0" />
+              <Image
+                src="/logo-mark.png"
+                alt="Deralis Digital"
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
               <span className="text-base font-medium text-ink">
                 Deralis Digital
               </span>

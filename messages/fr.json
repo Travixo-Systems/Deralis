@@ -28,7 +28,6 @@
       "openApp": "Ouvrir l'application",
       "viewLive": "Voir en ligne",
       "viewOurWork": "Voir mes réalisations",
-      "workWithUs": "Cartographiez votre système (300 €)",
       "sendMessage": "Envoyer le message",
       "sending": "Envoi en cours...",
       "language": "Langue",
@@ -806,8 +805,7 @@
     },
     "cta": {
       "title": "Un projet en tête ?",
-      "description": "Discutons de ce qu'il faut construire pour votre entreprise.",
-      "button": "Cartographiez votre système (300 €)"
+      "description": "Discutons de ce qu'il faut construire pour votre entreprise."
     },
     "page": {
       "metadata": {

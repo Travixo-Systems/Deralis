@@ -44,3 +44,8 @@ DERALIS_EXECUTION_PLAN.md
 .claude/
 .env*.local
 *:Zone.Identifier
+
+# reference / working files
+/rehaulrefs/
+CLAUDE_CODE_MIGRATION_BRIEF.md
+PHASE_*.md
