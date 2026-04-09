@@ -71,8 +71,8 @@
         "sub2": "I build the system that replaces it, for businesses with more tools than clarity.",
         "sub3": "Information goes where it needs to, when it needs to, without waiting on someone to move it forward.",
         "anchor": {
-          "backgroundHeading": "Background",
-          "backgroundProse": "Four years of technical client work across French software and industrial companies. Eighteen months inside the equipment rental industry at <strong>Loxam</strong>, where the domain knowledge behind TraviXO came from.",
+          "backgroundHeading": "Context",
+          "backgroundProse": "Technical work in direct contact with clients across French software and industrial companies.<br/>Direct observation point of systems in real operating conditions at <strong>Loxam</strong>, working alongside teams and operational incidents, which led to the understanding behind TraviXO.<br/><br/>Built TraviXO, a VGP compliance SaaS currently in production.<br/>Built independently.",
           "builtHeading": "What I've built",
           "built1Name": "TraviXO",
           "built1Desc": "Multi-tenant SaaS for VGP compliance in French equipment rental. Built solo. Live.",
@@ -1199,7 +1199,7 @@
           },
           "tooling": {
             "label": "Tooling",
-            "items": "Git, GitHub, Claude Code"
+            "items": "Git, GitHub"
           }
         }
       },

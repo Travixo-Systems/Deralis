@@ -117,9 +117,10 @@ function WhatItIs() {
               {p}
             </p>
           ))}
-          <p className="text-[18px] leading-[1.7] text-ink font-medium mt-[22px]">
-            {t("p4")}
-          </p>
+          <p
+            className="text-[18px] leading-[1.7] text-ink font-medium mt-[22px]"
+            dangerouslySetInnerHTML={{ __html: t("p4") }}
+          />
         </div>
       </div>
     </section>

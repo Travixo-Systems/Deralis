@@ -40,18 +40,18 @@ export default function HomeHero() {
         {/* Right column — Trust Anchor */}
         <aside className="border-l border-border-warm pl-9 pt-1.5 max-w-[360px] max-md:border-l-0 max-md:border-t max-md:border-border-warm max-md:pl-0 max-md:pt-6 max-md:max-w-full">
           {/* Background */}
-          <h3 className="text-[14px] text-ink-label font-semibold tracking-[0.03em] mb-3.5">
+          <p className="text-[14px] text-ink-label font-semibold tracking-[0.03em] mb-3.5">
             {t("anchor.backgroundHeading")}
-          </h3>
+          </p>
           <p
             className="text-[15px] leading-[1.7] text-ink mb-8"
             dangerouslySetInnerHTML={{ __html: t("anchor.backgroundProse") }}
           />
 
           {/* What I've built */}
-          <h3 className="text-[14px] text-ink-label font-semibold tracking-[0.03em] mb-3.5">
+          <p className="text-[14px] text-ink-label font-semibold tracking-[0.03em] mb-3.5">
             {t("anchor.builtHeading")}
-          </h3>
+          </p>
           <div className="flex flex-col">
             <div className="py-[13px] border-b border-border-default pt-0">
               <span className="text-base font-medium text-ink block mb-1">

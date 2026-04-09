@@ -71,8 +71,8 @@
         "sub2": "Je construis le système qui remplace ça, pour les entreprises qui ont plus d’outils que de clarté.",
         "sub3": "L’information va où elle doit, quand elle doit, sans dépendre des personnes pour avancer.",
         "anchor": {
-          "backgroundHeading": "Parcours",
-          "backgroundProse": "Quatre ans de missions techniques chez des éditeurs et industriels français. Dix-huit mois dans le secteur de la location de matériel chez <strong>Loxam</strong>, d'où vient la connaissance métier qui a donné naissance à TraviXO.",
+          "backgroundHeading": "Contexte",
+          "backgroundProse": "Travail technique au contact de clients chez des éditeurs et industriels français.<br/>Point d’observation direct des systèmes en conditions réelles chez <strong>Loxam</strong>, au contact des équipes et des incidents opérationnels, à l’origine de la compréhension derrière TraviXO.<br/><br/>Construction de TraviXO, un SaaS de conformité VGP en production.<br/>Construit seul.",
           "builtHeading": "Ce que j'ai construit",
           "built1Name": "TraviXO",
           "built1Desc": "SaaS multi-tenant de conformité VGP pour la location de matériel en France. Construit en solo. En production.",
@@ -1199,7 +1199,7 @@
           },
           "tooling": {
             "label": "Outillage",
-            "items": "Git, GitHub, Claude Code"
+            "items": "Git, GitHub"
           }
         }
       },
