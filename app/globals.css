@@ -88,6 +88,13 @@ h2 em {
   color: var(--accent);
 }
 
+/* Hero headline separator dots */
+.hero-sep {
+  margin: 0 0.25em;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
 /* Italic + underline accent variant for hero headline */
 h1 .accent {
   font-style: italic;

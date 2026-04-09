@@ -66,7 +66,7 @@
     "page": {
       "hero": {
         "eyebrow": "Independent systems engineering practice",
-        "headline": "Tools · files · spreadsheets. Everything works, but nothing is really <span class=\"accent\">connected</span>.",
+        "headline": "Tools <span class=\"hero-sep\">·</span> files <span class=\"hero-sep\">·</span> spreadsheets. Everything works, but nothing is really <span class=\"accent\">connected</span>.",
         "sub1": "What you're using today to run your business doesn't hold up.",
         "sub2": "I build the system that replaces it, for businesses with more tools than clarity.",
         "sub3": "Information goes where it needs to, when it needs to, without waiting on someone to move it forward.",

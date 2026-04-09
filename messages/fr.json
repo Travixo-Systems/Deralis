@@ -66,7 +66,7 @@
     "page": {
       "hero": {
         "eyebrow": "Pratique d’ingénierie de systèmes indépendante",
-        "headline": "Outils · fichiers · tableurs. Tout fonctionne, mais rien n’est vraiment <span class=\"accent\">relié</span>.",
+        "headline": "Outils <span class=\"hero-sep\">·</span> fichiers <span class=\"hero-sep\">·</span> tableurs. Tout fonctionne, mais rien n’est vraiment <span class=\"accent\">relié</span>.",
         "sub1": "Ce que vous utilisez aujourd’hui pour faire tourner votre activité ne tient pas.",
         "sub2": "Je construis le système qui remplace ça, pour les entreprises qui ont plus d’outils que de clarté.",
         "sub3": "L’information va où elle doit, quand elle doit, sans dépendre des personnes pour avancer.",
