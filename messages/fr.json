@@ -49,25 +49,11 @@
     },
     "footer": {
       "tagline": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
-      "subtagline": "",
-      "navigation": "Navigation",
-      "services": "Services",
-      "contact": "Contact",
-      "legal": "Légal",
-      "locationShort": "France & distance",
-      "copyrightDefault": "© 2026 Deralis Digital. Tous droits réservés.",
-      "copyrightShort": "© 2026 Deralis Digital",
-      "copyrightIndependent": "© 2026 Deralis Digital. Pratique indépendante.",
+      "copyrightIndependent": "© 2026 Deralis Digital. Pratique indépendante.",
       "location": "Île-de-France · À distance pour la France, le Royaume-Uni, les États-Unis",
       "languages": "Français et anglais",
       "legalLink": "Mentions légales",
-      "privacyLink": "Confidentialité",
-      "servicesList": {
-        "audit": "Audit système",
-        "custom": "Système sur mesure",
-        "extensions": "Extensions",
-        "ongoing": "Suivi continu"
-      }
+      "privacyLink": "Confidentialité"
     },
     "auditCta": {
       "eyebrow": "Commencez par un audit système",
