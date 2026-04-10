@@ -39,9 +39,17 @@ const posts = slugs.map((slug) => ({ slug, ...getPostMeta(slug) }));
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog.page" });
+  const title = t("metadata.title");
+  const description = t("metadata.description");
   return {
-    title: t("metadata.title"),
-    description: t("metadata.description"),
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "website" as const,
+      url: `https://www.deralis.digital/${locale}/blog`,
+    },
   };
 }
 

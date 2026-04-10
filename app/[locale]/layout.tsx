@@ -34,18 +34,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const titles = {
     fr: {
-      default: "Deralis Digital: Des systèmes qui remplacent le travail manuel",
-      template: "%s: Deralis Digital",
+      default: "Deralis Digital",
+      template: "%s · Deralis Digital",
     },
     en: {
-      default: "Deralis Digital: Systems that replace manual work",
-      template: "%s: Deralis Digital",
+      default: "Deralis Digital",
+      template: "%s · Deralis Digital",
     },
   };
 
   const descriptions = {
-    fr: "Trop de choses passent encore par des tableurs, des contournements et des outils déconnectés. Je construis le système qui règle ça.",
-    en: "Too much still runs through spreadsheets, workarounds, and disconnected tools. I build the system that fixes that.",
+    fr: "Cabinet d'ingénierie des systèmes indépendant. Je construis les systèmes opérationnels pour les entreprises dont les outils ont dépassé la façon dont l'information circule entre eux.",
+    en: "Independent systems engineering practice. I build the operational systems that fix businesses whose tools have outgrown the way information moves between them.",
   };
 
   const localeKey = locale as keyof typeof titles;

@@ -1,5 +1,6 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
 import CTAPrimary from "@/components/shared/CTAPrimary";
 import CTASecondary from "@/components/shared/CTASecondary";
 import CaseStudySection from "@/components/shared/CaseStudySection";
@@ -10,6 +11,23 @@ import ConceptItems from "@/components/projects/ConceptItems";
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "projects.page.metadata" });
+  const title = t("title");
+  const description = t("description");
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: `https://www.deralis.digital/${locale}/projects`,
+    },
+  };
+}
 
 export default async function ProjectsPage({ params }: Props) {
   const { locale } = await params;

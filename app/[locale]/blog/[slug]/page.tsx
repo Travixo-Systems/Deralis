@@ -148,9 +148,24 @@ export async function generateMetadata({ params }: Props) {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: "blog" });
   try {
+    const title = t(`posts.${slug}.title`);
+    const description = t(`posts.${slug}.excerpt`);
     return {
-      title: t(`posts.${slug}.title`),
-      description: t(`posts.${slug}.excerpt`),
+      title,
+      description,
+      openGraph: {
+        title,
+        description,
+        type: "article" as const,
+        url: `https://www.deralis.digital/${locale}/blog/${slug}`,
+        siteName: "Deralis Digital",
+        locale: locale === "fr" ? "fr_FR" : "en_US",
+      },
+      twitter: {
+        card: "summary_large_image" as const,
+        title,
+        description,
+      },
     };
   } catch {
     return { title: "Blog Post" };

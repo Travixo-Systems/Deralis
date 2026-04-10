@@ -165,6 +165,10 @@
   },
   "services": {
     "page": {
+      "metadata": {
+        "title": "Services",
+        "description": "Chaque mission commence par cartographier le fonctionnement réel de votre activité. Trois étapes séquentielles, chacune mérite la suivante. Pas de forfait fixe, pas de devis à l'avance."
+      },
       "hero": {
         "eyebrow": "Services · Pratique d'ingénierie de systèmes indépendante",
         "headline": "Le travail que je fais, dans l'<em>ordre</em> où je le fais.",
@@ -364,7 +368,7 @@
     },
     "page": {
       "metadata": {
-        "title": "Réalisations · Deralis Digital",
+        "title": "Réalisations",
         "description": "Un système en production, une proposition spec, et une série de démos qui fonctionnent. Le travail tel qu'il se présente aujourd'hui, sans métriques inventées ni résultats clients fictifs."
       },
       "hero": {
@@ -567,7 +571,7 @@
     },
     "page": {
       "metadata": {
-        "title": "À propos · Deralis Digital",
+        "title": "À propos",
         "description": "Deralis Digital est une pratique d'ingénierie indépendante. Je construis les systèmes internes pour les entreprises rentables où la circulation de l'information entre les personnes et les outils est devenue le goulot d'étranglement."
       },
       "hero": {
@@ -719,7 +723,7 @@
     },
     "page": {
       "metadata": {
-        "title": "Contact · Deralis Digital",
+        "title": "Contact",
         "description": "Parlez-moi avant de réserver un audit système. Pratique d'ingénierie de systèmes indépendante basée en Île-de-France, travail à travers la France et à distance."
       },
       "hero": {
@@ -809,7 +813,7 @@
     },
     "page": {
       "metadata": {
-        "title": "Blog · Deralis Digital",
+        "title": "Blog",
         "description": "Depuis la pratique. Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
       },
       "hero": {
@@ -1099,7 +1103,7 @@
     },
     "travixo": {
       "metadata": {
-        "title": "TraviXO Systems · Deralis Digital",
+        "title": "TraviXO Systems",
         "description": "Un SaaS multi-tenant en production pour la conformité VGP dans le secteur français de la location de matériel. Construit en solo depuis l'intérieur du secteur."
       },
       "eyebrow": "Réalisations / TraviXO Systems",
@@ -1236,7 +1240,7 @@
   "audit": {
     "page": {
       "metadata": {
-        "title": "Audit système · Deralis Digital",
+        "title": "Audit système",
         "description": "Un point de décision payant. Pas une conversation, pas un rapport, pas une étape commerciale. Un appel structuré de 60 à 90 minutes, suivi d’un brief de décision écrit, pour 300 €."
       },
       "hero": {

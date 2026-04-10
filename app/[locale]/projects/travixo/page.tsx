@@ -1,5 +1,6 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
 import Image from "next/image";
 import SectionHeading from "@/components/shared/SectionHeading";
 import AuditCTA from "@/components/shared/AuditCTA";
@@ -7,6 +8,23 @@ import AuditCTA from "@/components/shared/AuditCTA";
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "projectDetail.travixo.metadata" });
+  const title = t("title");
+  const description = t("description");
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      url: `https://www.deralis.digital/${locale}/projects/travixo`,
+    },
+  };
+}
 
 export default async function TraviXoPage({ params }: Props) {
   const { locale } = await params;

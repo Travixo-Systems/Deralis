@@ -165,6 +165,10 @@
   },
   "services": {
     "page": {
+      "metadata": {
+        "title": "Services",
+        "description": "Every engagement starts by mapping how your operation actually runs. Three sequential stages, each one earns the next. No fixed packages, no upfront quotes."
+      },
       "hero": {
         "eyebrow": "Services · Independent systems engineering practice",
         "headline": "The work I do, in the <em>order</em> I do it.",
@@ -364,7 +368,7 @@
     },
     "page": {
       "metadata": {
-        "title": "Projects · Deralis Digital",
+        "title": "Projects",
         "description": "One live system, one spec pitch, and a set of working concept builds. The work as it actually stands today, with no fabricated metrics or invented client results."
       },
       "hero": {
@@ -567,7 +571,7 @@
     },
     "page": {
       "metadata": {
-        "title": "About · Deralis Digital",
+        "title": "About",
         "description": "Deralis Digital is an independent engineering practice. I build internal systems for profitable businesses where the way information moves between people and tools has become the bottleneck."
       },
       "hero": {
@@ -719,7 +723,7 @@
     },
     "page": {
       "metadata": {
-        "title": "Contact · Deralis Digital",
+        "title": "Contact",
         "description": "Talk to me before booking a Systems Audit. Independent systems engineering practice based in Île-de-France, working across France and remote."
       },
       "hero": {
@@ -809,7 +813,7 @@
     },
     "page": {
       "metadata": {
-        "title": "Blog · Deralis Digital",
+        "title": "Blog",
         "description": "From the practice. Notes on operations, software, and what it actually takes to build systems that work."
       },
       "hero": {
@@ -1099,7 +1103,7 @@
     },
     "travixo": {
       "metadata": {
-        "title": "TraviXO Systems · Deralis Digital",
+        "title": "TraviXO Systems",
         "description": "A live multi-tenant VGP compliance SaaS for the French equipment rental industry. Built solo from domain expertise inside the sector."
       },
       "eyebrow": "Projects / TraviXO Systems",
@@ -1236,7 +1240,7 @@
   "audit": {
     "page": {
       "metadata": {
-        "title": "Systems Audit · Deralis Digital",
+        "title": "Systems Audit",
         "description": "A paid decision point, not a conversation, not a report, and not a sales step. A structured 60 to 90 minute call plus a written decision brief, for 300 euros."
       },
       "hero": {
