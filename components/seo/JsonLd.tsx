@@ -12,7 +12,7 @@ export function OrganizationJsonLd() {
       height: 630,
     },
     description:
-      "I build the internal systems businesses need to operate. SaaS platforms, dashboards, and workflow automation.",
+      "I build the operational systems businesses need to operate. SaaS platforms, dashboards, and workflow automation.",
     email: "contact@deralis.digital",
     foundingDate: "2024",
     sameAs: [
@@ -43,7 +43,7 @@ export function WebSiteJsonLd() {
     url: "https://deralis.digital",
     name: "Deralis Digital",
     description:
-      "I build the internal systems businesses need to operate. Internal tools, SaaS platforms, and workflow automation.",
+      "I build the operational systems businesses need to operate. Operational tools, SaaS platforms, and workflow automation.",
     publisher: {
       "@id": "https://deralis.digital/#organization",
     },
@@ -68,7 +68,7 @@ export function LocalBusinessJsonLd() {
     url: "https://deralis.digital",
     email: "contact@deralis.digital",
     description:
-      "Independent engineering practice building internal systems with Next.js, TypeScript, Supabase, and PostgreSQL.",
+      "Independent engineering practice building operational systems with Next.js, TypeScript, Supabase, and PostgreSQL.",
     address: {
       "@type": "PostalAddress",
       addressCountry: "FR",
@@ -136,7 +136,7 @@ export function ServicesJsonLd() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Internal System",
+            name: "Operational System",
             description:
               "One system that shows where work is, what is blocked, and what needs to happen next.",
           },

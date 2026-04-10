@@ -572,7 +572,7 @@
     "page": {
       "metadata": {
         "title": "About",
-        "description": "Deralis Digital is an independent engineering practice. I build internal systems for profitable businesses where the way information moves between people and tools has become the bottleneck."
+        "description": "Deralis Digital is an independent engineering practice. I build operational systems for profitable businesses where the way information moves between people and tools has become the bottleneck."
       },
       "hero": {
         "eyebrow": "Independent engineering practice · Île-de-France",
@@ -1228,7 +1228,7 @@
     "signatureBlock": {
       "eyebrow": "Written by",
       "name": "Uwa Ugboaja",
-      "bio": "I build the internal systems small businesses run on, working independently in French and English from Île-de-France.",
+      "bio": "I build the operational systems small businesses run on, working independently in French and English from Île-de-France.",
       "linkLabel": "More about how I work →"
     },
     "moreStrip": {

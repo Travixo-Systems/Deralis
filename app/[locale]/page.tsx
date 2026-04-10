@@ -15,13 +15,12 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const isEn = locale === "en";
-  const tagline = isEn
-    ? "Systems that replace manual work"
-    : "Des systèmes qui remplacent le travail manuel";
-  const fullTitle = `Deralis Digital: ${tagline}`;
+  const fullTitle = isEn
+    ? "Deralis Digital · Systems that replace disconnected tools and manual coordination"
+    : "Deralis Digital · Des systèmes qui remplacent les outils déconnectés et la coordination manuelle";
   const description = isEn
-    ? "Too much still runs through spreadsheets, workarounds, and disconnected tools. I build the system that fixes that."
-    : "Trop de choses passent encore par des tableurs, des contournements et des outils déconnectés. Je construis le système qui règle ça.";
+    ? "I design and build operational systems that replace disconnected tools and manual coordination in growing businesses."
+    : "Je conçois et construis des systèmes opérationnels qui remplacent les outils déconnectés et la coordination manuelle dans des entreprises en croissance.";
   return {
     title: { absolute: fullTitle },
     description,
