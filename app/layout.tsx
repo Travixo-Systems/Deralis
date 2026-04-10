@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://deralis.digital"),
+  metadataBase: new URL("https://www.deralis.digital"),
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",

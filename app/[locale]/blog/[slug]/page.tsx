@@ -160,11 +160,20 @@ export async function generateMetadata({ params }: Props) {
         url: `https://www.deralis.digital/${locale}/blog/${slug}`,
         siteName: "Deralis Digital",
         locale: locale === "fr" ? "fr_FR" : "en_US",
+        images: [
+          {
+            url: "https://www.deralis.digital/og-image.png",
+            width: 1200,
+            height: 630,
+            alt: "Deralis Digital",
+          },
+        ],
       },
       twitter: {
         card: "summary_large_image" as const,
         title,
         description,
+        images: ["https://www.deralis.digital/og-image.png"],
       },
     };
   } catch {

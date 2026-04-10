@@ -31,11 +31,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: isEn ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`,
       siteName: "Deralis Digital",
       locale: isEn ? "en_US" : "fr_FR",
+      images: [
+        {
+          url: "https://www.deralis.digital/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "Deralis Digital",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
+      images: ["https://www.deralis.digital/og-image.png"],
     },
   };
 }

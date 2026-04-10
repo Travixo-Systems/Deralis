@@ -22,6 +22,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: "article",
       url: `https://www.deralis.digital/${locale}/projects/travixo`,
+      images: [
+        {
+          url: "https://www.deralis.digital/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "Deralis Digital",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://www.deralis.digital/og-image.png"],
     },
   };
 }
