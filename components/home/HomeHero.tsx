@@ -37,7 +37,7 @@ export default function HomeHero() {
           </div>
         </div>
 
-        {/* Right column — Trust Anchor */}
+        {/* Right column - Trust Anchor */}
         <aside className="border-l border-border-warm pl-9 pt-1.5 max-w-[360px] max-md:border-l-0 max-md:border-t max-md:border-border-warm max-md:pl-0 max-md:pt-6 max-md:max-w-full">
           {/* Background */}
           <p className="text-[14px] text-ink-label font-semibold tracking-[0.03em] mb-3.5">

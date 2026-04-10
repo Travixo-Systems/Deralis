@@ -97,7 +97,7 @@ It connects what already exists.
 
 What starts as someone finding you and reaching out does not stop at the message, or split across platforms. It continues in a structure where it can move from one step to the next without friction.
 
-The CRM, the messages, the documents, the follow-ups—
+The CRM, the messages, the documents, the follow-ups:
 
 they stop being separate places and start acting as one flow.
 
@@ -180,7 +180,7 @@ The problem is that they do not form a single flow.
 
 My work is to make that flow real.
 
-So that once something starts, it moves—cleanly, predictably, and all the way to completion.
+So that once something starts, it moves: cleanly, predictably, and all the way to completion.
 
 ---
 
@@ -200,4 +200,4 @@ No proposal unless there is something concrete to fix.
 
 *One question worth sitting with:*
 
-**If every inquiry your business received this month moved cleanly from first contact to completion, without delays, missed follow-ups, or confusion — how many more jobs would you have closed?**
+**If every inquiry your business received this month moved cleanly from first contact to completion, without delays, missed follow-ups, or confusion. How many more jobs would you have closed?**
