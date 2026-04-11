@@ -36,7 +36,7 @@ export default function MobileMenu({
       id="mobile-menu"
       role="dialog"
       aria-modal="true"
-      className="lg:hidden absolute top-[58px] right-[14px] w-[58%] sm:top-[64px] sm:right-[22px] sm:w-[42%] bg-[#FBF8EF] border border-border-warm rounded-[10px] overflow-hidden pt-2 shadow-[0_10px_30px_-12px_rgba(20,17,13,0.12)] z-50"
+      className="lg:hidden absolute top-[58px] right-[14px] w-[58%] sm:top-[64px] sm:right-[22px] sm:w-[42%] bg-[#FBF8EF] rounded-[10px] overflow-hidden pt-2 shadow-[0_10px_30px_-12px_rgba(20,17,13,0.12)] z-50"
     >
       <ul className="list-none">
         {links.map((link) => (
