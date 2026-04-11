@@ -10,6 +10,7 @@ import {
   LocalBusinessJsonLd,
 } from "@/components/seo/JsonLd";
 import ClarityScript from "@/components/analytics/ClarityScript";
+import { Analytics } from "@vercel/analytics/next";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -169,6 +170,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <SiteFooter />
           <ClarityScript />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
