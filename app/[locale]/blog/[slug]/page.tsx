@@ -185,6 +185,8 @@ export default async function BlogPostPage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
+  if (!/^[a-z0-9-]+$/.test(slug)) notFound();
+
   const localePath = path.join(process.cwd(), "content", "blog", locale, `${slug}.md`);
   const defaultPath = path.join(process.cwd(), "content", "blog", `${slug}.md`);
   const filePath = fs.existsSync(localePath) ? localePath : defaultPath;
