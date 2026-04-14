@@ -11,7 +11,7 @@
       "home": "Accueil",
       "projects": "Réalisations",
       "about": "À propos",
-      "blog": "Blog",
+      "blog": "Carnet",
       "contact": "Contact",
       "methode": "Méthode"
     },
@@ -90,7 +90,7 @@
   "home": {
     "page": {
       "hero": {
-        "eyebrow": "Pratique d’ingénierie de systèmes indépendante",
+        "eyebrow": "Structu d’ingénierie de systèmes indépendante" d’ingénierie de systèmes indépendante",
         "h1": "<strong>Outils · fichiers · tableurs.</strong> Tout fonctionne, mais rien n’est vraiment <em>relié</em>.",
         "subhead1": "<strong>Ce que vous utilisez aujourd’hui pour faire tourner votre activité ne tient pas.</strong>",
         "subhead2": "Je construis le système qui remplace ça, pour les entreprises qui ont plus d’outils que de clarté.",
@@ -579,13 +579,13 @@
     "page": {
       "metadata": {
         "title": "À propos",
-        "description": "Deralis Digital est une pratique d'ingénierie indépendante. Je construis les systèmes opérationnels pour les entreprises rentables où la circulation de l'information entre les personnes et les outils est devenue le goulot d'étranglement."
+        "description": "Deralis Digital est une structure d'ingénierie indépendante. Je construis les systèmes opérationnels pour les entreprises rentables où la circulation de l'information entre les personnes et les outils est devenue le goulot d'étranglement."
       },
       "hero": {
-        "eyebrow": "Pratique d'ingénierie indépendante · Île-de-France",
+        "eyebrow": "Structu d’ingénierie de systèmes indépendante",
         "title": "À propos de <em>Deralis</em> Digital.",
         "sub1": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
-        "sub2": "Deralis Digital est une pratique d'ingénierie indépendante. Je travaille avec des entreprises rentables et opérationnelles où la circulation de l'information entre les personnes et les outils est devenue le goulot d'étranglement. Pas des sites web. Pas de templates. Des systèmes qui montrent où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite.",
+        "sub2": "Deralis Digital est une structure d'ingénierie indépendante. Je travaille avec des entreprises rentables et opérationnelles où la circulation de l'information entre les personnes et les outils est devenue le goulot d'étranglement. Pas des sites web. Pas de templates. Des systèmes qui montrent où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite.",
         "sub3": "J'ai travaillé à l'intérieur de vraies entreprises où le système n'est pas visible, mais les conséquences le sont. C'est de cette expérience que vient TraviXO Systems, un logiciel de conformité VGP pour le secteur français de la location de matériel.",
         "sub4": "C'est ce qui façonne ma façon de travailler : on ne peut pas concevoir un système pour un fonctionnement qu'on ne comprend pas.",
         "ctaSecondary": "Voir comment je travaille →"
@@ -631,7 +631,7 @@
         },
         "card2": {
           "title": "Deralis Digital",
-          "body": "Pratique d'ingénierie indépendante construite autour d'un modèle audit-first pour les entreprises opérationnelles en France, au Royaume-Uni, et aux États-Unis."
+          "body": "Structure d'ingénierie indépendante construite autour d'un modèle audit-first pour les entreprises opérationnelles en France, au Royaume-Uni, et aux États-Unis."
         }
       }
     }
@@ -731,7 +731,7 @@
     "page": {
       "metadata": {
         "title": "Contact",
-        "description": "Parlez-moi avant de réserver un audit système. Pratique d'ingénierie de systèmes indépendante basée en Île-de-France, travail à travers la France et à distance."
+        "description": "Parlez-moi avant de réserver un audit système. Structure"Structu d’ingénierie de systèmes indépendante" d'ingénierie de systèmes indépendante basée en Île-de-France, travail à travers la France et à distance."
       },
       "hero": {
         "eyebrow": "Contact",
@@ -767,7 +767,7 @@
       "title": "",
       "titleHighlight": "Insights",
       "description": "Réflexions concrètes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent.",
-      "h1": "Depuis la <em>pratique</em>.",
+      "h1": "En conditions <em>réelles</em>.",
       "subtitle": "Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
     },
     "categories": {
@@ -808,19 +808,19 @@
     },
     "page": {
       "metadata": {
-        "title": "Blog",
-        "description": "Depuis la pratique. Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
+        "title": "Carnet",
+        "description": "En conditions réelles. Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
       },
       "hero": {
-        "title": "Depuis la",
-        "titleHighlight": "pratique",
+        "title": "En conditions ",
+        "titleHighlight": "réelles",
         "description": "Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
       },
       "postMeta": {
         "minRead": "min de lecture"
       }
     },
-    "eyebrow": "Blog",
+    "eyebrow": "Carnet",
     "topics": {
       "tab": "Sujets",
       "count": {
