@@ -1388,25 +1388,25 @@
       "stage1": {
         "num": "01",
         "title": "Audit",
-        "desc": "Je cartographie votre fonctionnement réel. Où l'information circule, où elle s'arrête, où elle se duplique. Le livrable est un dossier de décision, pas un rapport.",
+        "desc": "I map how your operation actually runs. Where information moves, where it stops, where it duplicates. The deliverable is a decision document, not a report.",
         "metadata": "5 business days · €300",
         "cta": "Start the audit →"
       },
       "stage2": {
         "num": "02",
         "title": "System",
-        "desc": "Le premier système réel, construit à partir du dossier. Un seul, pas trois. Celui sans lequel rien d'autre ne tient.",
+        "desc": "The first real system, built from the brief. One system, not three. The one everything else depends on."
+      },
       "stage3": {
         "num": "03",
         "title": "Extensions",
-        "desc": "Une intégration, une automatisation, un flux supplémentaire. Toujours sur ce qui existe déjà. Jamais la première chose."
+        "desc": "An integration, an automation, an additional flow. Always on top of what already exists. Never the first step."
       }
     },
     "finalCta": {
-      "h2": "Commencez par ce qui doit être compris avant d'être construit.",
-      "sub": "90 minutes. Cinq jours. Un dossier que vous gardez, quoi qu'il arrive ensuite.",
+      "h2": "Start by understanding what needs to be built.",
+      "sub": "90 minutes. Five days. The document is yours, whatever happens next.",
       "cta": "Make a decision — €300 →"
     }
   }
-}
 }
