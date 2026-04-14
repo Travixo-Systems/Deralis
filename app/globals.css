@@ -276,6 +276,7 @@ h2 em,
       border-radius: 12px !important;
       margin-bottom: 14px !important;
     }
+    
 
     /* All multi-col grids collapse */
     .grid-hero,
@@ -321,14 +322,6 @@ h2 em,
       gap: 14px !important;
     }
 
-    /* Theme toggle mobile */
-    .theme-toggle-mobile {
-      top: 14px !important;
-      right: 14px !important;
-      padding: 8px 14px 8px 12px !important;
-      font-size: 11px !important;
-    }
-
     /* Nav/footer mobile */
     .site-nav-responsive,
     .site-footer-responsive {
@@ -362,6 +355,50 @@ h2 em,
     }
   }
 }
+
+.theme-toggle-desktop-overlay,
+.theme-toggle-mobile-overlay {
+  position: sticky;
+  top: 86px;
+  z-index: 60;
+  height: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.theme-toggle-desktop-overlay button,
+.theme-toggle-mobile-overlay button {
+  pointer-events: auto;
+}
+
+.theme-toggle-desktop-overlay {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 28px;
+}
+
+.theme-toggle-mobile-overlay {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .theme-toggle-desktop-overlay {
+    display: none;
+  }
+
+  .theme-toggle-mobile-overlay {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+  }
+
+  .theme-toggle-mobile-overlay button {
+    transform: translateX(22px);
+  }
+}
+
+
+
 
 /* ========== MOTION ========== */
 @media (prefers-reduced-motion: reduce) {

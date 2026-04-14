@@ -6,19 +6,22 @@ import type { CSSProperties } from "react";
 type Props = {
   className?: string;
   style?: CSSProperties;
+  mobileEdgeMode?: boolean;
 };
 
-export default function ThemeToggle({ className, style }: Props) {
-  const [theme, setTheme] = useState<string>("light");
+export default function ThemeToggle({
+  className,
+  style,
+  mobileEdgeMode = false,
+}: Props) {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("deralis-theme");
-    const initial = stored === "dark" || stored === "light"
-      ? stored
-      : window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
+    const initial =
+      stored === "dark" || stored === "light" ? stored : "light";
+
     setTheme(initial);
     document.documentElement.setAttribute("data-theme", initial);
     setMounted(true);
@@ -33,10 +36,57 @@ export default function ThemeToggle({ className, style }: Props) {
 
   if (!mounted) return null;
 
+  const targetLabel =
+    theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+
+  const icon = theme === "dark" ? "☀" : "☾";
+
+  if (mobileEdgeMode) {
+    return (
+      <button
+        onClick={toggle}
+        aria-label={targetLabel}
+        className={className}
+        style={{
+          width: 72,
+          height: 44,
+          padding: 0,
+          background: "var(--card-main)",
+          border: "1px solid var(--border-strong)",
+          borderRadius: "999px 0 0 999px",
+          color: "var(--text-primary)",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          paddingLeft: 18,
+          boxShadow: "var(--card-shadow)",
+          transition:
+            "background-color 450ms ease, color 450ms ease, border-color 450ms ease, transform 150ms ease",
+          ...style,
+        }}
+      >
+        <span
+          aria-hidden="true"
+          style={{
+            fontSize: 18,
+            lineHeight: 1,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: 16,
+          }}
+        >
+          {icon}
+        </span>
+      </button>
+    );
+  }
+
   return (
     <button
       onClick={toggle}
-      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={targetLabel}
       className={className}
       style={{
         padding: "10px 18px 10px 14px",
@@ -52,7 +102,8 @@ export default function ThemeToggle({ className, style }: Props) {
         alignItems: "center",
         gap: 10,
         boxShadow: "var(--card-shadow)",
-        transition: "background-color 450ms ease, color 450ms ease, border-color 450ms ease, transform 150ms ease",
+        transition:
+          "background-color 450ms ease, color 450ms ease, border-color 450ms ease, transform 150ms ease",
         ...style,
       }}
     >
@@ -70,7 +121,6 @@ export default function ThemeToggle({ className, style }: Props) {
       >
         <span
           style={{
-            content: "''",
             position: "absolute",
             top: -1,
             right: -1,

@@ -12,7 +12,11 @@ import {
 } from "@/components/seo/JsonLd";
 import ClarityScript from "@/components/analytics/ClarityScript";
 import { Analytics } from "@vercel/analytics/next";
-import { Playfair_Display, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import {
+  Playfair_Display,
+  IBM_Plex_Sans,
+  IBM_Plex_Mono,
+} from "next/font/google";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -46,7 +50,11 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
 
   const titles = {
@@ -70,27 +78,28 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: titles[localeKey] || titles.en,
     description: descriptions[localeKey] || descriptions.en,
-    keywords: locale === "fr"
-      ? [
-          "développement web",
-          "agence web France",
-          "transformation digitale",
-          "automatisation IA",
-          "applications web sur mesure",
-          "développeur Next.js",
-          "développeur Supabase",
-          "développement SaaS",
-        ]
-      : [
-          "web development agency",
-          "digital transformation",
-          "AI workflow automation",
-          "custom web applications",
-          "Next.js developer",
-          "Supabase developer",
-          "SaaS development",
-          "web agency France",
-        ],
+    keywords:
+      locale === "fr"
+        ? [
+            "développement web",
+            "agence web France",
+            "transformation digitale",
+            "automatisation IA",
+            "applications web sur mesure",
+            "développeur Next.js",
+            "développeur Supabase",
+            "développement SaaS",
+          ]
+        : [
+            "web development agency",
+            "digital transformation",
+            "AI workflow automation",
+            "custom web applications",
+            "Next.js developer",
+            "Supabase developer",
+            "SaaS development",
+            "web agency France",
+          ],
     authors: [{ name: "Deralis Digital" }],
     creator: "Deralis Digital",
     icons: {
@@ -104,7 +113,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       type: "website",
       locale: locale === "fr" ? "fr_FR" : "en_US",
-      url: locale === "en" ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`,
+      url:
+        locale === "en"
+          ? "https://www.deralis.digital"
+          : `https://www.deralis.digital/${locale}`,
       siteName: "Deralis Digital",
       title: titles[localeKey]?.default || titles.en.default,
       description: descriptions[localeKey] || descriptions.en,
@@ -135,10 +147,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
     alternates: {
-      canonical: locale === "en" ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`,
+      canonical:
+        locale === "en"
+          ? "https://www.deralis.digital"
+          : `https://www.deralis.digital/${locale}`,
       languages: {
-        "en": "https://www.deralis.digital",
-        "fr": "https://www.deralis.digital/fr",
+        en: "https://www.deralis.digital",
+        fr: "https://www.deralis.digital/fr",
       },
     },
   };
@@ -147,7 +162,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as typeof routing.locales[number])) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
@@ -156,48 +171,79 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${playfairDisplay.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}>
+    <html
+      lang={locale}
+      className={`${playfairDisplay.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
+    >
       <head>
-        <meta name="google-site-verification" content="O8l12K3_FkQbmJyZf8aa5_nlD7mgLLWhY63oficzeI4" />
+        <meta
+          name="google-site-verification"
+          content="O8l12K3_FkQbmJyZf8aa5_nlD7mgLLWhY63oficzeI4"
+        />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <link
           rel="canonical"
-          href={locale === "en" ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`}
+          href={
+            locale === "en"
+              ? "https://www.deralis.digital"
+              : `https://www.deralis.digital/${locale}`
+          }
         />
-        <link rel="alternate" hrefLang="en" href="https://www.deralis.digital" />
-        <link rel="alternate" hrefLang="fr" href="https://www.deralis.digital/fr" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.deralis.digital" />
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('deralis-theme');if(t){document.documentElement.setAttribute('data-theme',t)}else if(window.matchMedia('(prefers-color-scheme:dark)').matches){document.documentElement.setAttribute('data-theme','dark')}}catch(e){}})()` }} />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://www.deralis.digital"
+        />
+        <link
+          rel="alternate"
+          hrefLang="fr"
+          href="https://www.deralis.digital/fr"
+        />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://www.deralis.digital"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('deralis-theme');document.documentElement.setAttribute('data-theme',t==='dark'||t==='light'?t:'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}})()`,
+          }}
+        />{" "}
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <a href="#main-content" className="skip-link">Skip to content</a>
+          <a href="#main-content" className="skip-link">
+            Skip to content
+          </a>
           <OrganizationJsonLd />
           <WebSiteJsonLd />
           <LocalBusinessJsonLd />
           <SiteNav />
           <div style={{ position: "relative" }}>
-            <div
-              className="theme-toggle-wrap"
-              style={{
-                position: "sticky",
-                top: 96,
-                zIndex: 50,
-                display: "flex",
-                justifyContent: "flex-end",
-                paddingRight: 28,
-                marginBottom: -48,
-                pointerEvents: "none",
-              }}
-            >
-              <ThemeToggle style={{ pointerEvents: "auto" }} />
-            </div>
-            <main id="main-content">{children}</main>
-          </div>
+  <div className="theme-toggle-desktop-overlay">
+    <ThemeToggle />
+  </div>
+
+  <div className="theme-toggle-mobile-overlay">
+    <ThemeToggle mobileEdgeMode />
+  </div>
+
+  <main id="main-content">{children}</main>
+</div>
           <SiteFooter />
           <ClarityScript />
         </NextIntlClientProvider>
