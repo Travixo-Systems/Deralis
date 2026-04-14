@@ -1388,25 +1388,25 @@
       "stage1": {
         "num": "01",
         "title": "Audit",
-        "desc": "Je cartographie votre fonctionnement réel. Où l'information circule, où elle s'arrête, où elle se duplique. Le livrable est un dossier de décision, pas un rapport. // TODO: EN review — FR draft locked, EN pending",
+        "desc": "Je cartographie votre fonctionnement réel. Où l'information circule, où elle s'arrête, où elle se duplique. Le livrable est un dossier de décision, pas un rapport.",
         "metadata": "5 business days · €300",
         "cta": "Start the audit →"
       },
       "stage2": {
         "num": "02",
         "title": "System",
-        "desc": "Le premier système réel, construit à partir du dossier. Un seul, pas trois. Celui sans lequel rien d'autre ne tient. // TODO: EN review — FR draft locked, EN pending"
-      },
+        "desc": "Le premier système réel, construit à partir du dossier. Un seul, pas trois. Celui sans lequel rien d'autre ne tient.",
       "stage3": {
         "num": "03",
         "title": "Extensions",
-        "desc": "Une intégration, une automatisation, un flux supplémentaire. Toujours sur ce qui existe déjà. Jamais la première chose. // TODO: EN review — FR draft locked, EN pending"
+        "desc": "Une intégration, une automatisation, un flux supplémentaire. Toujours sur ce qui existe déjà. Jamais la première chose."
       }
     },
     "finalCta": {
-      "h2": "Commencez par ce qui doit être compris avant d'être construit. // TODO: EN review — FR draft locked, EN pending",
-      "sub": "90 minutes. Cinq jours. Un dossier que vous gardez, quoi qu'il arrive ensuite. // TODO: EN review — FR draft locked, EN pending",
+      "h2": "Commencez par ce qui doit être compris avant d'être construit.",
+      "sub": "90 minutes. Cinq jours. Un dossier que vous gardez, quoi qu'il arrive ensuite.",
       "cta": "Make a decision — €300 →"
     }
   }
+}
 }
