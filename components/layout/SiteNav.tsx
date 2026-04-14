@@ -1,14 +1,15 @@
 "use client";
 
 import { Link, usePathname } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter } from "@/i18n/navigation";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import LanguageToggle from "./LanguageToggle";
 import MobileMenu from "./MobileMenu";
+import type { CSSProperties } from "react";
 
 const navItems = [
-  { href: "/services", key: "services" },
+  { href: "/methode", key: "methode" },
   { href: "/projects", key: "projects" },
   { href: "/blog", key: "blog" },
   { href: "/about", key: "about" },
@@ -17,8 +18,10 @@ const navItems = [
 
 export default function SiteNav() {
   const t = useTranslations("common.nav");
-  const tCta = useTranslations("common.actions");
+  const tActions = useTranslations("common.actions");
   const pathname = usePathname();
+  const locale = useLocale();
+  const router = useRouter();
 
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -35,18 +38,15 @@ export default function SiteNav() {
 
   useEffect(() => {
     if (!open) return;
-
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") setOpen(false);
     }
-
     function onMouseDown(e: MouseEvent) {
       const target = e.target as Node;
       if (menuRef.current?.contains(target)) return;
       if (buttonRef.current?.contains(target)) return;
       setOpen(false);
     }
-
     window.addEventListener("keydown", onKeyDown);
     window.addEventListener("mousedown", onMouseDown);
     return () => {
@@ -55,97 +55,105 @@ export default function SiteNav() {
     };
   }, [open]);
 
-  const isAuditPage = pathname === "/audit";
-  const ctaHref = isAuditPage
-    ? process.env.NEXT_PUBLIC_STRIPE_AUDIT_LINK || "#"
-    : "/audit";
-  const ctaLabel = isAuditPage
-    ? tCta("startAuditShort")
-    : tCta("discoverAuditShort");
-
   const mobileLinks = navItems.map(({ href, key }) => ({
     href,
     key,
     label: t(key),
   }));
 
+  function switchLocale(nextLocale: "fr" | "en") {
+    if (nextLocale === locale) return;
+    router.replace(pathname, { locale: nextLocale });
+  }
+
   return (
-    <nav className="relative border-b border-border-default py-[22px]">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12 flex items-center justify-between gap-4 lg:gap-10">
-        <Link
-          href="/"
-          className="flex items-center gap-3 text-ink font-medium text-base tracking-[-0.01em] no-underline"
-        >
+    <header style={headerStyle}>
+      <div style={innerStyle}>
+        {/* Logo + wordmark */}
+        <Link href="/" style={logoLink}>
           <Image
             src="/logo-mark.png"
-            alt="Deralis Digital"
-            width={36}
-            height={36}
+            alt=""
+            width={22}
+            height={22}
             priority
-            className="w-9 h-9"
+            style={{ width: 22, height: 22, borderRadius: 4, display: "block" }}
           />
-          Deralis Digital
+          <span style={wordmark}>Deralis Digital</span>
         </Link>
 
-        <ul className="hidden lg:flex gap-8 list-none">
-          {navItems.map(({ href, key }) => (
-            <li key={key}>
-              <Link
-                href={href}
-                className={`text-sm no-underline transition-colors ${
-                  isActive(href)
-                    ? "text-ink font-medium"
-                    : "text-ink-2 hover:text-ink"
-                }`}
-              >
-                {t(key)}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Right cluster: nav + locale + audit pill */}
+        <div style={rightCluster} className="nav-cluster-desktop">
+          <nav style={navLinks}>
+            {navItems.map(({ href, key }) => {
+              const active = isActive(href);
+              return (
+                <Link
+                  key={key}
+                  href={href}
+                  style={{
+                    ...navLink,
+                    color: active ? "var(--text-primary)" : "var(--text-secondary)",
+                    borderBottom: active ? "2px solid var(--accent)" : "2px solid transparent",
+                  }}
+                >
+                  {t(key)}
+                </Link>
+              );
+            })}
+          </nav>
 
-        <div className="flex items-center gap-5">
-          <LanguageToggle />
-
-          <div className="hidden lg:block">
-            {isAuditPage ? (
-              <a
-                href={ctaHref}
-                className="text-[13px] font-medium px-[18px] py-[10px] border border-ink rounded-lg text-ink no-underline hover:bg-ink hover:text-bg transition-colors"
-              >
-                {ctaLabel}
-              </a>
-            ) : (
-              <Link
-                href={ctaHref}
-                className="text-[13px] font-medium px-[18px] py-[10px] border border-ink rounded-lg text-ink no-underline hover:bg-ink hover:text-bg transition-colors"
-              >
-                {ctaLabel}
-              </Link>
-            )}
+          {/* Locale switcher */}
+          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+            <button
+              onClick={() => switchLocale("fr")}
+              style={{ ...localeBtn, color: locale === "fr" ? "var(--text-primary)" : "var(--text-muted)" }}
+              aria-label="Français"
+            >
+              FR
+            </button>
+            <span style={{ color: "var(--text-muted)", fontSize: 12 }}>/</span>
+            <button
+              onClick={() => switchLocale("en")}
+              style={{ ...localeBtn, color: locale === "en" ? "var(--text-primary)" : "var(--text-muted)" }}
+              aria-label="English"
+            >
+              EN
+            </button>
           </div>
 
-          <button
-            ref={buttonRef}
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            className="lg:hidden relative w-[18px] sm:w-[22px] h-[14px] flex-shrink-0"
-          >
-            <span
-              className={`absolute left-0 w-full h-[1.5px] bg-ink transition-all duration-200 ${
-                open ? "top-[6px] rotate-45" : "top-[3px]"
-              }`}
-            />
-            <span
-              className={`absolute left-0 w-full h-[1.5px] bg-ink transition-all duration-200 ${
-                open ? "top-[6px] -rotate-45" : "top-[9px]"
-              }`}
-            />
-          </button>
+          {/* Audit pill */}
+          <Link href="/audit" style={auditPill} className="audit-pill">
+            {tActions("discoverAudit")}
+          </Link>
         </div>
+
+        {/* Mobile hamburger */}
+        <button
+          ref={buttonRef}
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          className="nav-hamburger-mobile"
+          style={hamburgerStyle}
+        >
+          <span
+            style={{
+              position: "absolute", left: 0, width: "100%", height: 1.5,
+              background: "var(--text-primary)", transition: "all 200ms ease",
+              top: open ? 6 : 3, transform: open ? "rotate(45deg)" : "none",
+            }}
+          />
+          <span
+            style={{
+              position: "absolute", left: 0, width: "100%", height: 1.5,
+              background: "var(--text-primary)", transition: "all 200ms ease",
+              top: open ? 6 : 9, transform: open ? "rotate(-45deg)" : "none",
+            }}
+          />
+        </button>
       </div>
 
       <MobileMenu
@@ -153,10 +161,103 @@ export default function SiteNav() {
         open={open}
         onClose={() => setOpen(false)}
         links={mobileLinks}
-        ctaHref={ctaHref}
-        ctaLabel={ctaLabel}
-        ctaIsExternal={isAuditPage}
       />
-    </nav>
+    </header>
   );
 }
+
+const headerStyle: CSSProperties = {
+  position: "sticky",
+  top: 0,
+  zIndex: 100,
+  background: "var(--card-main)",
+  borderBottom: "1px solid var(--border-soft)",
+  padding: "22px 0",
+  transition: "background-color 450ms ease, border-color 450ms ease",
+};
+
+const innerStyle: CSSProperties = {
+  maxWidth: 1100,
+  margin: "0 auto",
+  padding: "0 28px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+};
+
+const logoLink: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: 12,
+  textDecoration: "none",
+};
+
+const wordmark: CSSProperties = {
+  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
+  fontSize: 15,
+  fontWeight: 600,
+  letterSpacing: "-0.01em",
+  color: "var(--text-primary)",
+  transition: "color 450ms ease",
+};
+
+const rightCluster: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: 32,
+};
+
+const navLinks: CSSProperties = {
+  display: "flex",
+  gap: 28,
+  alignItems: "center",
+};
+
+const navLink: CSSProperties = {
+  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
+  fontSize: 14,
+  fontWeight: 500,
+  letterSpacing: "0.01em",
+  textDecoration: "none",
+  paddingBottom: 4,
+  transition: "color 200ms ease, border-color 200ms ease",
+};
+
+const localeBtn: CSSProperties = {
+  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
+  fontSize: 12,
+  fontWeight: 500,
+  letterSpacing: "0.05em",
+  textTransform: "uppercase",
+  background: "none",
+  border: "none",
+  cursor: "pointer",
+  padding: "4px 6px",
+  transition: "color 200ms ease",
+};
+
+const auditPill: CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  padding: "10px 20px",
+  background: "transparent",
+  color: "var(--text-primary)",
+  border: "1px solid var(--text-primary)",
+  borderRadius: 100,
+  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
+  fontSize: 13,
+  fontWeight: 500,
+  textDecoration: "none",
+  transition: "background-color 200ms ease, color 200ms ease, border-color 450ms ease",
+};
+
+const hamburgerStyle: CSSProperties = {
+  position: "relative",
+  width: 20,
+  height: 14,
+  flexShrink: 0,
+  background: "none",
+  border: "none",
+  cursor: "pointer",
+  padding: 0,
+};

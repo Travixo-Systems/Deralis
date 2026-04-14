@@ -14,7 +14,17 @@ export default function LanguageToggle() {
   return (
     <button
       onClick={() => router.replace(pathname, { locale: otherLocale })}
-      className="text-[13px] text-ink-3 hover:text-ink transition-colors"
+      style={{
+        fontSize: 12,
+        color: "var(--text-muted)",
+        background: "none",
+        border: "none",
+        cursor: "pointer",
+        fontFamily: "inherit",
+        fontWeight: 500,
+        padding: 0,
+        transition: "color 300ms ease",
+      }}
       aria-label={t("changeLanguage")}
     >
       {locale === "en" ? "EN / FR" : "FR / EN"}

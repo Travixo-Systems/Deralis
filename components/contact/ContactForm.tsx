@@ -76,71 +76,95 @@ export default function ContactForm() {
 
   if (state === "success") {
     return (
-      <div className="max-w-[640px] mx-auto py-12">
-        <h3 className="text-[22px] font-medium text-ink mb-3">
+      <div style={{ padding: "32px 0" }}>
+        <h3 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 26, fontWeight: 500, color: "var(--text-primary)", marginBottom: 14, letterSpacing: "-0.01em" }}>
           {tCommon("success.title")}
         </h3>
-        <p className="text-base leading-[1.65] text-ink-2">
+        <p style={{ fontSize: 16, lineHeight: 1.65, color: "var(--text-secondary)" }}>
           {tCommon("success.description")}
         </p>
       </div>
     );
   }
 
-  const fieldCls = (name: string) =>
-    `block w-full text-base leading-[1.6] text-ink bg-bg border rounded-lg px-4 py-3.5 max-md:py-[13px] max-md:px-3.5 placeholder:text-ink-3 hover:border-border-warm focus:outline-none focus:border-accent transition-colors ${
-      fieldErrors[name] ? "border-[var(--border-error)]" : "border-border-default"
-    }`;
+  const fieldStyle = (name: string): React.CSSProperties => ({
+    display: "block",
+    width: "100%",
+    fontSize: 16,
+    lineHeight: 1.6,
+    color: "var(--text-primary)",
+    background: "var(--card-paper)",
+    border: `1px solid ${fieldErrors[name] ? "#B84A3A" : "var(--border-strong)"}`,
+    borderRadius: "var(--radius-button)",
+    padding: "14px 16px",
+    fontFamily: "inherit",
+    transition: "border-color 300ms ease, background-color 450ms ease, color 450ms ease",
+  });
+
+  const labelStyle: React.CSSProperties = {
+    display: "block", fontSize: 13, fontWeight: 600, color: "var(--text-primary)",
+    letterSpacing: "0.01em", marginBottom: 8,
+  };
+  const reqStyle: React.CSSProperties = {
+    color: "var(--accent)", marginLeft: 4, fontWeight: 500,
+  };
+  const optStyle: React.CSSProperties = {
+    color: "var(--text-muted)", fontWeight: 400, marginLeft: 6,
+  };
+  const errStyle: React.CSSProperties = {
+    fontSize: 13, color: "#B84A3A", marginTop: 6,
+  };
+  const fieldBlock: React.CSSProperties = { marginBottom: 24 };
 
   return (
     <form onSubmit={handleSubmit} noValidate>
       {/* Honeypot */}
-      <div className="hidden" aria-hidden="true">
+      <div style={{ display: "none" }} aria-hidden="true">
         <input type="text" name="website_url" tabIndex={-1} autoComplete="off" />
       </div>
 
       {formError && (
-        <p className="text-[15px] text-[var(--border-error)] mb-6">{formError}</p>
+        <p style={{ fontSize: 15, color: "#B84A3A", marginBottom: 24 }}>{formError}</p>
       )}
 
-      <div className="mb-6">
-        <label htmlFor="name" className="block text-[14px] font-semibold text-ink-label tracking-[0.01em] mb-2">
+      <div style={fieldBlock}>
+        <label htmlFor="name" style={labelStyle}>
           {tCommon("form.name.label")}
-          <span className="text-accent ml-0.5 font-medium">{tCommon("form.required")}</span>
+          <span style={reqStyle}>{tCommon("form.required")}</span>
         </label>
-        <input type="text" id="name" name="name" autoComplete="name" required className={fieldCls("name")} />
-        {fieldErrors.name && <p className="text-[13px] text-ink-2 mt-1.5">{tErrors("required")}</p>}
+        <input type="text" id="name" name="name" autoComplete="name" required style={fieldStyle("name")} />
+        {fieldErrors.name && <p style={errStyle}>{tErrors("required")}</p>}
       </div>
 
-      <div className="mb-6">
-        <label htmlFor="email" className="block text-[14px] font-semibold text-ink-label tracking-[0.01em] mb-2">
+      <div style={fieldBlock}>
+        <label htmlFor="email" style={labelStyle}>
           {tCommon("form.email.label")}
-          <span className="text-accent ml-0.5 font-medium">{tCommon("form.required")}</span>
+          <span style={reqStyle}>{tCommon("form.required")}</span>
         </label>
-        <input type="email" id="email" name="email" autoComplete="email" required className={fieldCls("email")} />
-        {fieldErrors.email && <p className="text-[13px] text-ink-2 mt-1.5">{fieldErrors.email === "invalid" ? tErrors("email") : tErrors("required")}</p>}
+        <input type="email" id="email" name="email" autoComplete="email" required style={fieldStyle("email")} />
+        {fieldErrors.email && <p style={errStyle}>{fieldErrors.email === "invalid" ? tErrors("email") : tErrors("required")}</p>}
       </div>
 
-      <div className="mb-6">
-        <label htmlFor="company" className="block text-[14px] font-semibold text-ink-label tracking-[0.01em] mb-2">
+      <div style={fieldBlock}>
+        <label htmlFor="company" style={labelStyle}>
           {tCommon("form.company.label")}
-          <span className="text-ink-3 font-normal ml-1.5">{tCommon("form.company.optional")}</span>
+          <span style={optStyle}>{tCommon("form.company.optional")}</span>
         </label>
-        <input type="text" id="company" name="company" autoComplete="organization" className={fieldCls("company")} />
+        <input type="text" id="company" name="company" autoComplete="organization" style={fieldStyle("company")} />
       </div>
 
-      <div className="mb-6">
-        <label htmlFor="website" className="block text-[14px] font-semibold text-ink-label tracking-[0.01em] mb-2">
+      <div style={fieldBlock}>
+        <label htmlFor="website" style={labelStyle}>
           {t("websiteLabel")}
-          <span className="text-ink-3 font-normal ml-1.5">{tCommon("form.company.optional")}</span>
+          <span style={optStyle}>{tCommon("form.company.optional")}</span>
         </label>
-        <input type="url" id="website" name="website" autoComplete="url" placeholder="https://" className={fieldCls("website")} />
+        <input type="url" id="website" name="website" autoComplete="url" placeholder="https://" style={fieldStyle("website")} />
       </div>
 
-      <div className="mb-6">
-        <label htmlFor="message" className="block text-[14px] font-semibold text-ink-label tracking-[0.01em] mb-2">
+      <div style={fieldBlock}>
+        <label htmlFor="message" style={labelStyle}>
           {t("messageLabel")}
-          <span className="text-accent ml-0.5 font-medium">{tCommon("form.required")}</span>
+          <span style={reqStyle}>{tCommon("form.required")}</span>
         </label>
         <textarea
           id="message"
@@ -148,25 +172,31 @@ export default function ContactForm() {
           required
           minLength={20}
           rows={6}
-          className={`${fieldCls("message")} min-h-[160px] resize-y`}
+          style={{ ...fieldStyle("message"), minHeight: 160, resize: "vertical" }}
         />
         {fieldErrors.message && (
-          <p className="text-[13px] text-ink-2 mt-1.5">
+          <p style={errStyle}>
             {fieldErrors.message === "tooShort" ? tErrors("minLength") : tErrors("required")}
           </p>
         )}
       </div>
 
-      <div className="mt-8">
+      <div style={{ marginTop: 28 }}>
         <button
           type="submit"
           disabled={state === "submitting"}
-          className="w-full justify-center group inline-flex items-center gap-2.5 px-7 py-[18px] bg-ink text-bg text-[15px] font-medium rounded-lg transition-colors hover:bg-accent disabled:opacity-60 disabled:cursor-not-allowed"
+          style={{
+            width: "100%", display: "inline-flex", alignItems: "center", justifyContent: "center",
+            gap: 10, padding: "16px 28px", background: "var(--text-primary)", color: "var(--canvas)",
+            fontSize: 15, fontWeight: 500, border: "none", borderRadius: "var(--radius-button)",
+            cursor: state === "submitting" ? "not-allowed" : "pointer",
+            opacity: state === "submitting" ? 0.6 : 1,
+            fontFamily: "inherit",
+            transition: "background-color 300ms ease, color 300ms ease",
+          }}
         >
           {state === "submitting" ? tCommon("form.sending" as never) : t("submitButton")}
-          {state !== "submitting" && (
-            <span aria-hidden="true" className="transition-transform duration-[180ms] group-hover:translate-x-[3px]">→</span>
-          )}
+          {state !== "submitting" && <span aria-hidden="true">→</span>}
         </button>
       </div>
     </form>

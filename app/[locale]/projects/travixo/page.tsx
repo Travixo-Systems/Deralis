@@ -2,8 +2,10 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 import Image from "next/image";
-import SectionHeading from "@/components/shared/SectionHeading";
-import AuditCTA from "@/components/shared/AuditCTA";
+import DsCard, { DsCardPeak } from "@/components/shared/DsCard";
+import RichText from "@/components/shared/RichText";
+import { Link } from "@/i18n/navigation";
+import type { CSSProperties } from "react";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -12,30 +14,15 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "projectDetail.travixo.metadata" });
-  const title = t("title");
-  const description = t("description");
   return {
-    title,
-    description,
+    title: t("title"),
+    description: t("description"),
     openGraph: {
-      title,
-      description,
+      title: t("title"),
+      description: t("description"),
       type: "article",
       url: `https://www.deralis.digital/${locale}/projects/travixo`,
-      images: [
-        {
-          url: "https://www.deralis.digital/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: "Deralis Digital",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: ["https://www.deralis.digital/og-image.png"],
+      images: [{ url: "https://www.deralis.digital/og-image.png", width: 1200, height: 630, alt: "Deralis Digital" }],
     },
   };
 }
@@ -46,22 +33,21 @@ export default async function TraviXoPage({ params }: Props) {
 
   return (
     <>
-      <TraviXoHero />
-      <LeadScreenshot />
-      <WhatItIs />
-      <WhatIBuilt />
-      <InsideTheSystem />
-      <TechStack />
-      <LinksSection />
-      <RelatedProjects />
-      <AuditCTA />
+      <TraviXoHeroWithScreenshot />
+      <WhatItIsCard />
+      <WhatIBuiltCard />
+      <InsideCard />
+      <TechAndLinksCard />
+      <TraviXoClimax />
     </>
   );
 }
 
-function TraviXoHero() {
+/* ========== Card 1: Hero + Lead Screenshot combined ========== */
+function TraviXoHeroWithScreenshot() {
   const t = useTranslations("projectDetail.travixo");
   const tLabels = useTranslations("projectDetail.labels");
+  const tScreenshots = useTranslations("projectDetail.travixo.screenshots");
 
   const metaCells = [
     { label: tLabels("category"), value: t("meta.category") },
@@ -71,300 +57,175 @@ function TraviXoHero() {
   ];
 
   return (
-    <section className="py-8 pb-[52px] max-md:py-6 max-md:pb-[34px]">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
-        <div className="max-w-[820px]">
-          <p className="text-[14px] text-ink-label tracking-[0.03em] font-semibold mb-6">
-            {t("eyebrow")}
-          </p>
-          <h1
-            className="text-[60px] leading-[1.05] font-medium tracking-[-0.025em] mb-7 max-w-[780px] max-md:text-[38px] max-md:mb-6"
-            dangerouslySetInnerHTML={{ __html: t("title") }}
-          />
-          <p className="text-[22px] font-medium leading-[1.5] text-ink max-w-[720px] mb-10">
-            {t("standfirst")}
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-7 border-t border-border-warm max-w-[820px]">
-            {metaCells.map((cell) => (
-              <div key={cell.label}>
-                <p className="text-[12px] font-semibold text-ink-label tracking-[0.04em] uppercase mb-2">
-                  {cell.label}
-                </p>
-                <p
-                  className={`text-[15px] leading-[1.4] text-ink ${
-                    cell.muted ? "font-normal" : "font-medium"
-                  }`}
-                >
-                  {cell.value}
-                </p>
-              </div>
-            ))}
+    <DsCard>
+      <p style={eyebrow}>{t("eyebrow")}</p>
+      <h1 style={h1Style} className="hero-h1-responsive">
+        <RichText html={t.raw("title")} />
+      </h1>
+      <p style={standfirst}>{t("standfirst")}</p>
+
+      {/* Internal meta grid (anchor #1) */}
+      <div className="grid-process" style={{ paddingTop: 28, marginTop: 28, marginBottom: 40, borderTop: "2px solid var(--border-strong)" }}>
+        {metaCells.map((cell) => (
+          <div key={cell.label}>
+            <p style={{ fontSize: 11, fontWeight: 700, color: "var(--text-muted)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>{cell.label}</p>
+            <p style={{ fontSize: 14, lineHeight: 1.4, color: "var(--text-primary)", fontWeight: cell.muted ? 400 : 500 }}>{cell.value}</p>
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+
+      {/* Lead screenshot (visual anchor) */}
+      <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
+        <Image
+          src="/projects/travixo/travixo-dashboard.png"
+          alt={tScreenshots("lead.alt")}
+          width={1191}
+          height={982}
+          priority
+          style={{ width: "100%", height: "auto", display: "block" }}
+        />
+      </div>
+    </DsCard>
   );
 }
 
-function LeadScreenshot() {
-  const t = useTranslations("projectDetail.travixo.screenshots");
-
-  return (
-    <section className="pb-[60px]">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
-        <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden casestudy-shadow">
-          <Image
-            src="/projects/travixo/travixo-dashboard.png"
-            alt={t("lead.alt")}
-            width={1191}
-            height={982}
-            priority
-            className="w-full h-auto"
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function WhatItIs() {
+/* ========== Card 2: What It Is ========== */
+function WhatItIsCard() {
   const t = useTranslations("projectDetail.travixo.whatItIs");
   const tLabels = useTranslations("projectDetail.labels");
-
-  const paragraphs = [t("p1"), t("p2"), t("p3")];
-
   return (
-    <section className="py-[60px] max-md:py-[42px]">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
-        <SectionHeading
-          eyebrow={tLabels("whatItIs")}
-          title={t("title")}
-        />
-        <div className="max-w-[720px]">
-          {paragraphs.map((p, i) => (
-            <p
-              key={i}
-              className="text-[18px] leading-[1.7] text-ink-2 mb-[22px] last:mb-0"
-            >
-              {p}
-            </p>
-          ))}
-          <p
-            className="text-[18px] leading-[1.7] text-ink font-medium mt-[22px]"
-            dangerouslySetInnerHTML={{ __html: t("p4") }}
-          />
-        </div>
+    <DsCard>
+      <p style={eyebrow}>{tLabels("whatItIs")}</p>
+      <h2 style={h2Style}>{t("title")}</h2>
+      <div style={{ maxWidth: "58ch", display: "flex", flexDirection: "column", gap: 20 }}>
+        <p style={bodyP}>{t("p1")}</p>
+        <p style={bodyP}>{t("p2")}</p>
+        <p style={bodyP}>{t("p3")}</p>
+        <p style={{ ...bodyP, color: "var(--text-primary)", fontWeight: 500 }}>
+          <RichText html={t.raw("p4")} />
+        </p>
       </div>
-    </section>
+    </DsCard>
   );
 }
 
-function WhatIBuilt() {
+/* ========== Card 3: What I Built (5 items) ========== */
+function WhatIBuiltCard() {
   const t = useTranslations("projectDetail.travixo.whatIBuilt");
   const tLabels = useTranslations("projectDetail.labels");
-
   const items = ["1", "2", "3", "4", "5"] as const;
-
   return (
-    <section className="bg-bg-deep border-y border-border-default py-[60px] max-md:py-[42px]">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
-        <SectionHeading
-          eyebrow={tLabels("whatIBuilt")}
-          title={t("title")}
-        />
-        <div className="max-w-[820px] mt-2">
-          {items.map((num, i) => (
-            <div
-              key={num}
-              className={`grid grid-cols-[60px_1fr] gap-6 py-7 border-t border-border-warm items-start ${
-                i === items.length - 1 ? "border-b border-border-warm" : ""
-              }`}
-            >
-              <p className="text-[13px] text-ink-3 font-medium tracking-[0.04em] pt-1">
-                0{num}
-              </p>
-              <div>
-                <h3 className="text-[20px] font-medium text-ink leading-[1.3] mb-2.5">
-                  {t(`items.${num}.title`)}
-                </h3>
-                <p className="text-base leading-[1.65] text-ink-2 max-w-[620px]">
-                  {t(`items.${num}.body`)}
-                </p>
-              </div>
+    <DsCard>
+      <p style={eyebrow}>{tLabels("whatIBuilt")}</p>
+      <h2 style={h2Style}>{t("title")}</h2>
+      <div style={{ maxWidth: 820, marginTop: 20 }}>
+        {items.map((num, i) => (
+          <div key={num} style={{ display: "grid", gridTemplateColumns: "60px 1fr", gap: 24, padding: "28px 0", borderTop: "1px solid var(--border-soft)", borderBottom: i === items.length - 1 ? "1px solid var(--border-soft)" : undefined, alignItems: "start" }}>
+            <span style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 18, fontWeight: 600, color: "var(--accent)", paddingTop: 2 }}>0{num}</span>
+            <div>
+              <h3 style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 20, fontWeight: 500, color: "var(--text-primary)", marginBottom: 10, letterSpacing: "-0.01em" }}>{t(`items.${num}.title`)}</h3>
+              <p style={{ fontSize: 15, lineHeight: 1.65, color: "var(--text-secondary)", maxWidth: "58ch" }}>{t(`items.${num}.body`)}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </DsCard>
   );
 }
 
-function InsideTheSystem() {
+/* ========== Card 4: Inside the System (2 screenshots, visual anchor) ========== */
+function InsideCard() {
   const t = useTranslations("projectDetail.travixo.inside");
   const tLabels = useTranslations("projectDetail.labels");
   const tScreenshots = useTranslations("projectDetail.travixo.screenshots");
-
-  const screenshots = [
-    { src: "/projects/travixo/travixo-fleet.png", width: 875, height: 935, alt: tScreenshots("equipmentRegister.alt"), caption: t("cap1") },
-    { src: "/projects/travixo/travixo-qr.png", width: 971, height: 943, alt: tScreenshots("inspectionWorkflow.alt"), caption: t("cap2") },
+  const shots = [
+    { src: "/projects/travixo/travixo-fleet.png", w: 875, h: 935, alt: tScreenshots("equipmentRegister.alt"), cap: t("cap1") },
+    { src: "/projects/travixo/travixo-qr.png", w: 971, h: 943, alt: tScreenshots("inspectionWorkflow.alt"), cap: t("cap2") },
   ];
-
   return (
-    <section className="py-[60px] max-md:py-[42px]">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
-        <SectionHeading
-          eyebrow={tLabels("insideTheSystem")}
-          title={t("title")}
-        />
-        <div className="flex flex-col gap-14 mt-2">
-          {screenshots.map((shot, i) => (
-            <div key={i}>
-              <div className="bg-white border border-border-warm rounded-[10px] overflow-hidden casestudy-shadow">
-                <Image
-                  src={shot.src}
-                  alt={shot.alt}
-                  width={shot.width}
-                  height={shot.height}
-                  className="w-full h-auto"
-                />
-              </div>
-              <p className="text-[14px] text-ink-2-soft leading-[1.55] mt-4 max-w-[620px]">
-                {shot.caption}
-              </p>
+    <DsCard>
+      <p style={eyebrow}>{tLabels("insideTheSystem")}</p>
+      <h2 style={h2Style}>{t("title")}</h2>
+      <div style={{ display: "flex", flexDirection: "column", gap: 56, marginTop: 32 }}>
+        {shots.map((shot, i) => (
+          <div key={i}>
+            <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
+              <Image src={shot.src} alt={shot.alt} width={shot.w} height={shot.h} style={{ width: "100%", height: "auto", display: "block" }} />
             </div>
-          ))}
-        </div>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", lineHeight: 1.55, marginTop: 16, maxWidth: "58ch" }}>{shot.cap}</p>
+          </div>
+        ))}
       </div>
-    </section>
+    </DsCard>
   );
 }
 
-function TechStack() {
-  const t = useTranslations("projectDetail.travixo.stack");
-
+/* ========== Card 5: Tech Stack + Links combined ========== */
+function TechAndLinksCard() {
+  const tStack = useTranslations("projectDetail.travixo.stack");
+  const tLinks = useTranslations("projectDetail.travixo.links");
+  const tLabels = useTranslations("projectDetail.labels");
   const layers = ["frontend", "backend", "data", "infrastructure", "tooling"] as const;
 
   return (
-    <section className="bg-bg-deep border-y border-border-default py-[60px] max-md:py-[42px]">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
-        <SectionHeading
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          intro={t("intro")}
-        />
-        <div className="max-w-[820px] mt-2">
-          {layers.map((layer, i) => (
-            <div
-              key={layer}
-              className={`grid grid-cols-[180px_1fr] gap-8 py-[18px] border-t border-border-default items-baseline max-md:grid-cols-1 max-md:gap-2 ${
-                i === layers.length - 1 ? "border-b border-border-default" : ""
-              }`}
-            >
-              <span className="text-[11px] font-semibold text-ink-3 tracking-[0.04em] uppercase">
-                {t(`layers.${layer}.label`)}
-              </span>
-              <span className="text-[14px] text-ink-2 leading-[1.6]">
-                {t(`layers.${layer}.items`)}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+    <DsCard>
+      <p style={eyebrow}>{tStack("eyebrow")}</p>
+      <h2 style={h2Style}>{tStack("title")}</h2>
+      <p style={{ ...bodyP, marginBottom: 32, maxWidth: "58ch" }}>{tStack("intro")}</p>
 
-function LinksSection() {
-  const t = useTranslations("projectDetail.travixo.links");
-  const tLabels = useTranslations("projectDetail.labels");
-
-  return (
-    <section className="py-[60px] max-md:py-[42px]">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
-        <SectionHeading
-          eyebrow={tLabels("whereToFind")}
-          title={tLabels("linksTitle")}
-        />
-        <div className="max-w-[820px] mt-2">
-          <div className="grid grid-cols-[180px_1fr] gap-8 py-[22px] border-t border-border-warm items-baseline max-md:grid-cols-1 max-md:gap-2">
-            <span className="text-[12px] font-semibold text-ink-label tracking-[0.04em] uppercase">
-              {t("liveLabel")}
-            </span>
-            <a
-              href="https://app.travixosystems.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base text-ink no-underline border-b border-ink pb-[2px] hover:text-accent hover:border-accent transition-colors"
-            >
-              {t("liveValue")}
-            </a>
+      <div style={{ maxWidth: 820, marginBottom: 56 }}>
+        {layers.map((layer, i) => (
+          <div key={layer} style={{ display: "grid", gridTemplateColumns: "180px 1fr", gap: 32, padding: "20px 0", borderTop: "1px solid var(--border-soft)", borderBottom: i === layers.length - 1 ? "1px solid var(--border-soft)" : undefined, alignItems: "baseline" }} className="tech-row-responsive">
+            <span style={{ fontSize: 11, fontWeight: 600, color: "var(--text-muted)", letterSpacing: "0.08em", textTransform: "uppercase" }}>{tStack(`layers.${layer}.label`)}</span>
+            <span style={{ fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.6 }}>{tStack(`layers.${layer}.items`)}</span>
           </div>
-          <div className="grid grid-cols-[180px_1fr] gap-8 py-[22px] border-t border-border-warm border-b border-border-warm items-baseline max-md:grid-cols-1 max-md:gap-2">
-            <span className="text-[12px] font-semibold text-ink-label tracking-[0.04em] uppercase">
-              {t("repoLabel")}
-            </span>
-            <span className="text-base text-ink-2-soft">{t("repoValue")}</span>
-          </div>
+        ))}
+      </div>
+
+      {/* Links */}
+      <p style={{ ...eyebrow, marginBottom: 16 }}>{tLabels("whereToFind")}</p>
+      <div style={{ maxWidth: 820 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "180px 1fr", gap: 32, padding: "20px 0", borderTop: "1px solid var(--border-soft)", alignItems: "baseline" }} className="tech-row-responsive">
+          <span style={{ fontSize: 12, fontWeight: 600, color: "var(--text-muted)", letterSpacing: "0.04em", textTransform: "uppercase" }}>{tLinks("liveLabel")}</span>
+          <a href="https://app.travixosystems.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: 15, color: "var(--text-primary)", textDecoration: "none", borderBottom: "1px solid var(--text-primary)", paddingBottom: 2 }}>{tLinks("liveValue")}</a>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "180px 1fr", gap: 32, padding: "20px 0", borderTop: "1px solid var(--border-soft)", borderBottom: "1px solid var(--border-soft)", alignItems: "baseline" }} className="tech-row-responsive">
+          <span style={{ fontSize: 12, fontWeight: 600, color: "var(--text-muted)", letterSpacing: "0.04em", textTransform: "uppercase" }}>{tLinks("repoLabel")}</span>
+          <span style={{ fontSize: 15, color: "var(--text-muted)" }}>{tLinks("repoValue")}</span>
         </div>
       </div>
-    </section>
+    </DsCard>
   );
 }
 
-function RelatedProjects() {
-  const t = useTranslations("projectDetail.travixo.related");
-  const tLabels = useTranslations("projectDetail.labels");
-
-  const cards = ["card1", "card2", "card3"] as const;
-
+/* ========== Card 6: AuditCTA climax ========== */
+function TraviXoClimax() {
+  const t = useTranslations("common.auditCta");
   return (
-    <section className="bg-bg-deep border-y border-border-default py-[60px] max-md:py-[42px]">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
-        <SectionHeading
-          eyebrow={tLabels("relatedProjects")}
-          title={tLabels("relatedTitle")}
-        />
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-2">
-          {cards.map((card, i) => {
-            const hasDisclosure = card === "card3";
-            return (
-            <div
-              key={card}
-              className={`py-8 max-md:py-6 ${
-                i < 2
-                  ? "md:pr-8 md:border-r md:border-border-default"
-                  : ""
-              } ${i > 0 ? "md:pl-8" : ""} ${
-                i < 2 ? "max-md:border-b max-md:border-border-default" : ""
-              }`}
-            >
-              <p className="text-[13px] text-ink-label tracking-[0.03em] font-semibold mb-3.5">
-                {t(`${card}.eyebrow`)}
-              </p>
-              <h3 className="text-[20px] font-medium text-ink leading-[1.3] mb-3">
-                {t(`${card}.title`)}
-              </h3>
-              <p className="text-[15px] leading-[1.6] text-ink-2 mb-[18px]">
-                {t(`${card}.body`)}
-              </p>
-              {hasDisclosure && (
-                <p className="text-[13px] text-ink-3 leading-[1.55] mb-3">
-                  {t(`${card}.disclosure`)}
-                </p>
-              )}
-              <a
-                href={t(`${card}.url`)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[14px] font-medium text-ink no-underline border-b border-ink pb-[2px] hover:text-accent hover:border-accent transition-colors"
-              >
-                {tLabels("viewProject")}
-              </a>
-            </div>
-            );
-          })}
+    <DsCardPeak>
+      <div className="grid-climax">
+        <div>
+          <p style={{ ...eyebrow, color: "var(--text-on-peak-dim)", marginBottom: 22 }}>{t("eyebrow")}</p>
+          <h2 style={{ fontFamily: "var(--font-fraunces), serif", fontSize: "clamp(38px, 4.6vw, 52px)", fontWeight: 500, lineHeight: 1.04, letterSpacing: "-0.02em", color: "var(--text-on-peak)", marginBottom: 28 }}>
+            <RichText html={t.raw("headline")} />
+          </h2>
+          <p style={{ fontSize: 16, lineHeight: 1.6, color: "var(--text-on-peak-muted)", marginBottom: 14, maxWidth: "42ch" }}>{t("body1")}</p>
+          <p style={{ fontSize: 16, lineHeight: 1.6, color: "var(--text-on-peak-muted)", marginBottom: 32, maxWidth: "42ch" }}>{t("body2")}</p>
+          <Link href="/audit" style={ctaPeak}>{t("ctaLabel")}</Link>
+          <span style={{ display: "block", marginTop: 14, fontSize: 12, color: "var(--text-on-peak-dim)", fontStyle: "italic" }}>{t("ctaMeta")}</span>
         </div>
       </div>
-    </section>
+    </DsCardPeak>
   );
 }
+
+const eyebrow: CSSProperties = { fontSize: "var(--fs-eyebrow)", textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--text-muted)", marginBottom: 20, fontWeight: 600 };
+const h1Style: CSSProperties = { fontFamily: "var(--font-fraunces), serif", fontSize: "var(--fs-h1)", fontWeight: 500, lineHeight: 1.02, letterSpacing: "-0.02em", marginBottom: 28, maxWidth: "20ch" };
+const h2Style: CSSProperties = { fontFamily: "var(--font-fraunces), serif", fontSize: "var(--fs-h2)", fontWeight: 500, lineHeight: 1.08, letterSpacing: "-0.015em", marginBottom: 20, maxWidth: "22ch" };
+const standfirst: CSSProperties = { fontSize: 20, fontWeight: 500, lineHeight: 1.5, color: "var(--text-primary)", maxWidth: "54ch" };
+const bodyP: CSSProperties = { fontSize: 17, lineHeight: 1.65, color: "var(--text-secondary)" };
+const ctaPeak: CSSProperties = {
+  display: "inline-flex", alignItems: "center", gap: 12, padding: "18px 32px",
+  background: "var(--text-on-peak)", color: "var(--card-peak)", fontSize: 14, fontWeight: 600,
+  border: "none", borderRadius: "var(--radius-button)", cursor: "pointer", textDecoration: "none",
+};

@@ -51,3 +51,40 @@ CLAUDE_CODE_MIGRATION_BRIEF.md
 PHASE_*.md
 deralis-blog-article-*.md
 /docs/memory/
+
+
+# Playwright artifacts
+.playwright-mcp/
+playwright-report/
+test-results/
+
+# Logs
+*.log
+console-*.log
+
+# Debug YAML
+page-*.yml
+
+# Root-level generated screenshots
+/*.png
+/*.html
+/*.md
+
+# Keep real app assets
+!/public/
+!/public/**
+!/content/
+!/content/**
+!/components/
+!/app/
+!/messages/
+!/lib/
+!/scripts/
+
+# Local debug folders
+/screenshots/
+/debug/
+/tmp/
+
+# OS
+.DS_Store

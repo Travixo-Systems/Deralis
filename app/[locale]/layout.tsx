@@ -4,6 +4,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import SiteNav from "@/components/layout/SiteNav";
 import SiteFooter from "@/components/layout/SiteFooter";
+import ThemeToggle from "@/components/layout/ThemeToggle";
 import {
   OrganizationJsonLd,
   WebSiteJsonLd,
@@ -11,13 +12,28 @@ import {
 } from "@/components/seo/JsonLd";
 import ClarityScript from "@/components/analytics/ClarityScript";
 import { Analytics } from "@vercel/analytics/next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 
-const inter = Inter({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
-  variable: "--font-inter",
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-ibm-plex-sans",
+  display: "swap",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-ibm-plex-mono",
   display: "swap",
 });
 
@@ -131,21 +147,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as typeof routing.locales[number])) {
     notFound();
   }
 
-  // Enable static rendering
   setRequestLocale(locale);
 
-  // Provide all messages to the client side
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={inter.variable}>
+    <html lang={locale} className={`${playfairDisplay.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}>
       <head>
-        {/* Google Search Console verification */}
         <meta name="google-site-verification" content="O8l12K3_FkQbmJyZf8aa5_nlD7mgLLWhY63oficzeI4" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -159,14 +171,33 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="alternate" hrefLang="en" href="https://www.deralis.digital" />
         <link rel="alternate" hrefLang="fr" href="https://www.deralis.digital/fr" />
         <link rel="alternate" hrefLang="x-default" href="https://www.deralis.digital" />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('deralis-theme');if(t){document.documentElement.setAttribute('data-theme',t)}else if(window.matchMedia('(prefers-color-scheme:dark)').matches){document.documentElement.setAttribute('data-theme','dark')}}catch(e){}})()` }} />
       </head>
-      <body className="min-h-screen bg-bg text-ink font-sans antialiased">
+      <body>
         <NextIntlClientProvider messages={messages}>
+          <a href="#main-content" className="skip-link">Skip to content</a>
           <OrganizationJsonLd />
           <WebSiteJsonLd />
           <LocalBusinessJsonLd />
           <SiteNav />
-          <main>{children}</main>
+          <div style={{ position: "relative" }}>
+            <div
+              className="theme-toggle-wrap"
+              style={{
+                position: "sticky",
+                top: 96,
+                zIndex: 50,
+                display: "flex",
+                justifyContent: "flex-end",
+                paddingRight: 28,
+                marginBottom: -48,
+                pointerEvents: "none",
+              }}
+            >
+              <ThemeToggle style={{ pointerEvents: "auto" }} />
+            </div>
+            <main id="main-content">{children}</main>
+          </div>
           <SiteFooter />
           <ClarityScript />
         </NextIntlClientProvider>

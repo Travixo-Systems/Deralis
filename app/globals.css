@@ -1,118 +1,373 @@
 @import "tailwindcss";
 
+/* ========== DESIGN SYSTEM TOKENS ========== */
 :root {
-  /* New design system (spec v1.5) */
-  --bg: #F7F4ED;
-  --bg-deep: #F2EEE6;
-  --bg-cta: #F2F5F7;
-  --bg-footer: #EFEAD8;
+  /* Surfaces */
+  --canvas: #EDE7D8;
+  --card-main: #F7F4ED;
+  --card-paper: #FDFBF4;
+  --card-peak: #1A1D1B;
 
-  --ink: #14110D;
-  --ink-2: #6B655C;
-  --ink-2-soft: #706A61;
-  --ink-3: #756E66;
-  --ink-label: #5C5750;
+  /* Text */
+  --text-primary: #14110D;
+  --text-secondary: #4A453D;
+  --text-muted: #6B6458;
 
-  --ink-cool: #5A6472;
-  --ink-cool-label: #4E5865;
-  --ink-cool-muted: #636D7B;
+  --text-on-peak: #F7F4ED;
+  --text-on-peak-muted: rgba(247, 244, 237, 0.78);
+  --text-on-peak-dim: rgba(247, 244, 237, 0.65);
 
-  --border: #DCD5C2;
-  --border-warm: #D4CCBA;
-  --border-cool: #DCE2EA;
-
+  /* Accent */
   --accent: #1B3A5C;
 
-  --border-error: #B84A3A;
+  /* Borders */
+  --border-soft: rgba(20, 17, 13, 0.08);
+  --border-strong: rgba(20, 17, 13, 0.18);
 
-  --background: var(--bg);
-  --foreground: var(--ink);
+  /* Canvas grid */
+  --grid-color: rgba(20, 17, 13, 0.07);
+
+  /* Status */
+  --status-ok: #2A6B3F;
+
+  /* Shadows */
+  --card-shadow: 0 2px 12px rgba(20, 17, 13, 0.04), 0 1px 3px rgba(20, 17, 13, 0.03);
+  --peak-shadow: 0 50px 100px rgba(26, 29, 27, 0.3), 0 20px 40px rgba(26, 29, 27, 0.15);
+  --tile-shadow: 0 24px 50px rgba(20, 17, 13, 0.1), 0 8px 20px rgba(20, 17, 13, 0.05);
+  --page-shadow: 0 40px 80px rgba(0, 0, 0, 0.28), 0 14px 30px rgba(0, 0, 0, 0.14);
+  --paper-shadow: 0 4px 16px rgba(20, 17, 13, 0.06), 0 1px 4px rgba(20, 17, 13, 0.04);
+
+  /* Radius hierarchy */
+  --radius-card: 14px;
+  --radius-internal: 4px;
+  --radius-pill: 2px;
+  --radius-button: 6px;
+  --radius-document: 0;
+  --radius-toggle: 100px;
+
+  /* Type scale */
+  --fs-h1: clamp(38px, 4.5vw, 52px);
+  --fs-h2: clamp(30px, 3.8vw, 40px);
+  --fs-h3: 22px;
+  --fs-pullquote: clamp(40px, 5vw, 56px);
+  --fs-doc-title: clamp(30px, 3.8vw, 38px);
+  --fs-subhead: 18px;
+  --fs-body: 16px;
+  --fs-body-sm: 15px;
+  --fs-intro: 17px;
+  --fs-eyebrow: 12px;
+  --fs-tab: 10px;
+  --fs-tab-hero: 11px;
+  --fs-nav: 13px;
+  --fs-nav-links: 12px;
+  --fs-footer: 12px;
+  --fs-meta: 11px;
+
+  /* Spacing */
+  --pad-card-large: 64px 64px;
+  --pad-card-medium: 52px 56px;
+  --pad-card-peak: 72px 64px;
+  --pad-card-final: 52px 56px;
+  --pad-card-nav: 22px 36px;
+  --gap-card: 22px;
+}
+
+:root[data-theme="dark"] {
+  --canvas: #1A1D1B;
+  --card-main: #272320;
+  --card-paper: #2F2A24;
+  --card-peak: #EDE7D8;
+
+  --text-primary: #EDE7D8;
+  --text-secondary: rgba(237, 231, 216, 0.78);
+  --text-muted: rgba(237, 231, 216, 0.65);
+
+  --text-on-peak: #14110D;
+  --text-on-peak-muted: rgba(20, 17, 13, 0.78);
+  --text-on-peak-dim: rgba(20, 17, 13, 0.65);
+
+  --accent: #5E8BAE;
+
+  --border-soft: rgba(237, 231, 216, 0.1);
+  --border-strong: rgba(237, 231, 216, 0.22);
+  --grid-color: rgba(237, 231, 216, 0.07);
+
+  --status-ok: #4A9560;
+
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+  --peak-shadow: 0 50px 100px rgba(0, 0, 0, 0.65), 0 20px 40px rgba(0, 0, 0, 0.4);
+  --tile-shadow: 0 24px 50px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.25);
+  --page-shadow: 0 50px 100px rgba(0, 0, 0, 0.55), 0 18px 36px rgba(0, 0, 0, 0.3);
+  --paper-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 @theme inline {
-  /* New design system surfaces */
-  --color-bg: var(--bg);
-  --color-bg-deep: var(--bg-deep);
-  --color-bg-cta: var(--bg-cta);
-  --color-bg-footer: var(--bg-footer);
+  --color-canvas: var(--canvas);
+  --color-card-main: var(--card-main);
+  --color-card-paper: var(--card-paper);
+  --color-card-peak: var(--card-peak);
 
-  /* New design system ink (text) */
-  --color-ink: var(--ink);
-  --color-ink-2: var(--ink-2);
-  --color-ink-2-soft: var(--ink-2-soft);
-  --color-ink-3: var(--ink-3);
-  --color-ink-label: var(--ink-label);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-on-peak: var(--text-on-peak);
+  --color-text-on-peak-muted: var(--text-on-peak-muted);
+  --color-text-on-peak-dim: var(--text-on-peak-dim);
 
-  /* Cool accent colors (used on --bg-cta surfaces) */
-  --color-ink-cool: var(--ink-cool);
-  --color-ink-cool-label: var(--ink-cool-label);
-  --color-ink-cool-muted: var(--ink-cool-muted);
-
-  /* Borders — suffixed to avoid Tailwind default collision */
-  --color-border-default: var(--border);
-  --color-border-warm: var(--border-warm);
-  --color-border-cool: var(--border-cool);
-  --color-border-error: var(--border-error);
-
-  /* Accent */
   --color-accent: var(--accent);
 
-  /* Semantic aliases */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-border-soft: var(--border-soft);
+  --color-border-strong: var(--border-strong);
 
-  /* Font — updated to Inter */
-  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --color-status-ok: var(--status-ok);
 
-  /* Breakpoint — spec locks 880px as the mobile/desktop split */
-  --breakpoint-md: 880px;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-ibm-plex-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, monospace;
+
+  --breakpoint-md: 960px;
 }
 
+/* ========== BASE ========== */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-ibm-plex-sans), system-ui, -apple-system, sans-serif;
+  background-color: var(--canvas);
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: 0 0;
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.55;
+  padding: 28px;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 450ms ease, color 450ms ease;
 }
 
-/* Italic accent for headlines — spec: one word per headline, --accent color */
-.section-title em,
+@media (max-width: 960px) {
+  body {
+    background-size: 40px 40px;
+    padding: 14px;
+  }
+}
+
+/* ========== ITALIC ACCENT (display text only) ========== */
 h1 em,
-h2 em {
+h2 em,
+.pull-quote em {
   font-style: italic;
-  font-weight: 500;
-  color: var(--accent);
-}
-
-/* Hero headline separator dots */
-.hero-sep {
-  margin: 0 -0.03em;
-  opacity: 0.6;
   font-weight: 400;
-}
-
-/* Italic + underline accent variant for hero headline */
-h1 .accent {
-  font-style: italic;
-  font-weight: 500;
   color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 2px;
+  text-decoration: none;
+  border: none;
 }
 
-/* Case study screenshot shadow */
-.casestudy-shadow {
-  box-shadow: 0 20px 50px -24px rgba(20, 17, 13, 0.18),
-              0 2px 6px -2px rgba(20, 17, 13, 0.06);
+/* On peak cards: em uses on-peak-muted, not accent (navy disappears on dark) */
+.ds-card-peak h2 em {
+  color: var(--text-on-peak-muted);
 }
 
-/* Focus styles */
+/* ========== BROWSER CHROME (proof tiles) ========== */
+@layer components {
+  .chrome-bar { background: #EDE8DC; }
+  :root[data-theme="dark"] .chrome-bar { background: #2A2622; }
+  .chrome-dot { background: #D4CBB8; }
+  :root[data-theme="dark"] .chrome-dot { background: #444037; }
+}
+
+/* ========== FOCUS ========== */
 *:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+/* ========== HEADER / NAV ========== */
+@layer components {
+  .audit-pill:hover {
+    background: var(--text-primary);
+    color: var(--canvas);
+  }
+  .nav-hamburger-mobile {
+    display: none;
+  }
+  @media (max-width: 960px) {
+    .nav-cluster-desktop {
+      display: none !important;
+    }
+    .nav-hamburger-mobile {
+      display: block !important;
+    }
+  }
+}
+
+/* ========== BLOG POST ROW (PostListCard) ========== */
+.blog-post-row {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 150ms ease;
+  border-radius: 4px;
+}
+.blog-post-row:hover {
+  transform: translateX(4px);
+}
+.blog-post-row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* ========== SKIP LINK ========== */
+@layer components {
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    z-index: 9999;
+    padding: 12px 24px;
+    background: var(--text-primary);
+    color: var(--canvas);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: var(--radius-button);
+    text-decoration: none;
+  }
+  .skip-link:focus {
+    top: 16px;
+  }
+}
+
+/* ========== GRID LAYOUT CLASSES ========== */
+@layer components {
+  .grid-hero { display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: start; }
+  .grid-hero-centered { display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: center; }
+  .grid-peak { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
+  .grid-peak-example { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 72px; align-items: center; }
+  .grid-climax { display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: center; }
+  .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .grid-2col-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+  .grid-proof { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: stretch; }
+  .grid-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; z-index: 2; }
+  .grid-process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .grid-audit-hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+}
+
+/* ========== RESPONSIVE (<960px) ========== */
+@layer components {
+  @media (max-width: 960px) {
+    .ds-card {
+      padding: 56px 32px !important;
+      border-radius: 12px !important;
+      margin-bottom: 14px !important;
+    }
+    .ds-card-peak {
+      padding: 72px 32px !important;
+      border-radius: 12px !important;
+      margin-bottom: 14px !important;
+    }
+    .ds-card-paper {
+      padding: 56px 32px !important;
+      border-radius: 12px !important;
+      margin-bottom: 14px !important;
+    }
+
+    /* All multi-col grids collapse */
+    .grid-hero,
+    .grid-hero-centered,
+    .grid-peak,
+    .grid-peak-example,
+    .grid-climax,
+    .grid-2col,
+    .grid-2col-wide,
+    .grid-proof,
+    .grid-process,
+    .grid-audit-hero {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    /* Flow: 2 columns on mobile */
+    .grid-flow {
+      grid-template-columns: 1fr 1fr;
+      gap: 48px 24px;
+    }
+    .flow-line-responsive {
+      display: none !important;
+    }
+    .flow-dot-responsive {
+      display: none !important;
+    }
+
+    /* Pull quote mobile */
+    .pull-quote {
+      font-size: 38px !important;
+      margin: 48px 0 !important;
+    }
+
+    /* Hero H1 mobile */
+    .hero-h1-responsive {
+      font-size: 36px !important;
+    }
+
+    /* Trajectory mobile */
+    .trajectory-responsive {
+      font-size: 16px !important;
+      gap: 14px !important;
+    }
+
+    /* Theme toggle mobile */
+    .theme-toggle-mobile {
+      top: 14px !important;
+      right: 14px !important;
+      padding: 8px 14px 8px 12px !important;
+      font-size: 11px !important;
+    }
+
+    /* Nav/footer mobile */
+    .site-nav-responsive,
+    .site-footer-responsive {
+      padding: 18px 14px !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    /* PDF stacks hide on mobile */
+    .pdf-stack-responsive {
+      display: none;
+    }
+
+    /* Opened page responsive */
+    .opened-page-responsive {
+      width: 100% !important;
+      max-width: 380px;
+      position: relative !important;
+    }
+
+    /* Tech row: stack label and value */
+    .tech-row-responsive {
+      grid-template-columns: 1fr !important;
+      gap: 8px !important;
+    }
+
+    /* Footer zone 1 collapses to single column */
+    .footer-zone1-grid {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+  }
+}
+
+/* ========== MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+    transform: none !important;
+  }
 }

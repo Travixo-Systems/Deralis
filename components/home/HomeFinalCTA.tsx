@@ -1,33 +1,86 @@
 import { useTranslations } from "next-intl";
-import CTAPrimary from "@/components/shared/CTAPrimary";
+import { DsCardFinal } from "@/components/shared/DsCard";
+import RichText from "@/components/shared/RichText";
+import { Link } from "@/i18n/navigation";
+import type { CSSProperties } from "react";
+
+const h2Style: CSSProperties = {
+  fontFamily: "var(--font-fraunces), Georgia, serif",
+  fontSize: "clamp(32px, 4vw, 44px)",
+  fontWeight: 500,
+  lineHeight: 1.1,
+  margin: "0 auto 22px",
+  letterSpacing: "-0.02em",
+  maxWidth: "22ch",
+};
+
+const pStyle: CSSProperties = {
+  fontSize: "var(--fs-body)",
+  color: "var(--text-secondary)",
+  maxWidth: "52ch",
+  margin: "0 auto 36px",
+  lineHeight: 1.55,
+};
+
+const actionsStyle: CSSProperties = {
+  display: "flex",
+  gap: 18,
+  justifyContent: "center",
+  flexWrap: "wrap",
+};
+
+const ctaPrimaryStyle: CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 12,
+  padding: "17px 30px",
+  background: "var(--text-primary)",
+  color: "var(--canvas)",
+  fontSize: 14,
+  fontWeight: 500,
+  border: "none",
+  borderRadius: "var(--radius-button)",
+  cursor: "pointer",
+  fontFamily: "inherit",
+  textDecoration: "none",
+  transition: "background-color 450ms ease, color 450ms ease, transform 150ms ease",
+};
+
+const ctaSecondaryStyle: CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 6,
+  padding: "16px 4px",
+  background: "transparent",
+  color: "var(--text-primary)",
+  fontSize: 14,
+  fontWeight: 500,
+  textDecoration: "none",
+  cursor: "pointer",
+  border: "none",
+  fontFamily: "inherit",
+  transition: "color 300ms ease",
+};
 
 export default function HomeFinalCTA() {
   const t = useTranslations("home.page.finalCta");
-  const tActions = useTranslations("common.actions");
+  const tHero = useTranslations("home.page.hero");
+  const tNav = useTranslations("common.nav");
 
   return (
-    <section className="py-[60px] pb-[34px] max-md:py-[44px] max-md:pb-7">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12 text-center">
-        <div className="max-w-[720px] mx-auto">
-          <h2
-            className="text-[44px] leading-[1.1] font-medium tracking-[-0.025em] mb-6 max-md:text-[28px]"
-            dangerouslySetInnerHTML={{ __html: t("headline") }}
-          />
-          <p className="text-[18px] leading-[1.6] text-ink-2 mb-8 max-w-[580px] mx-auto max-md:text-base">
-            {t("description")}
-          </p>
-          <div className="flex items-center justify-center gap-7 flex-wrap">
-            <CTAPrimary href="/audit">{tActions("discoverAudit")}</CTAPrimary>
-            <a
-              href="mailto:contact&#64;deralis.digital"
-              className="text-[15px] font-medium text-ink no-underline border-b border-transparent pb-[2px] hover:border-ink transition-[border-color] duration-150"
-            >
-              contact&#64;deralis.digital
-            </a>
-          </div>
-          <p className="mt-6 text-[13px] text-ink-3">{t("note")}</p>
-        </div>
+    <DsCardFinal>
+      <h2 style={h2Style}>
+        <RichText html={t.raw("headline")} />
+      </h2>
+      <p style={pStyle}>{t("description")}</p>
+      <div style={actionsStyle}>
+        <Link href="/audit" style={ctaPrimaryStyle}>
+          {tHero("ctaPrimary")}
+        </Link>
+        <Link href="/contact" style={ctaSecondaryStyle}>
+          {tNav("contact")} →
+        </Link>
       </div>
-    </section>
+    </DsCardFinal>
   );
 }

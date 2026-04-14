@@ -1,11 +1,11 @@
 import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import HomeHero from "@/components/home/HomeHero";
-import FlowStrip from "@/components/home/FlowStrip";
 import WhoSection from "@/components/home/WhoSection";
+import ExclusionPeak from "@/components/home/ExclusionPeak";
 import HomeCaseStudy from "@/components/home/HomeCaseStudy";
-import AuditCTA from "@/components/shared/AuditCTA";
 import HowIWork from "@/components/home/HowIWork";
+import ClimaxPeak from "@/components/home/ClimaxPeak";
 import HomeFinalCTA from "@/components/home/HomeFinalCTA";
 
 type Props = {
@@ -56,11 +56,11 @@ export default async function Home({ params }: Props) {
   return (
     <>
       <HomeHero />
-      <FlowStrip />
       <WhoSection />
+      <ExclusionPeak />
       <HomeCaseStudy />
-      <AuditCTA />
       <HowIWork />
+      <ClimaxPeak />
       <HomeFinalCTA />
     </>
   );

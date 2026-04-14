@@ -1,0 +1,310 @@
+/*
+ * TEST LAYOUT: Floating Card System
+ * ==================================
+ * Light mode: warm background, cards float as lighter surfaces
+ * Dark mode:  void background, cards lift as warmer/cooler surfaces
+ *
+ * Card types:
+ *   --warm:    sand/kraft (hero, how-i-work)
+ *   --neutral: pure white / near-white (who, final CTA)
+ *   --accent:  cool blue-gray (flow strip, audit CTA)
+ *   --dark:    inverted dark card (case study peak)
+ */
+
+/* ─── Page background ─── */
+
+.test-layout-page {
+  /* Surfaces */
+  --canvas: #EDE7D8;
+  --card-main: #F7F4ED;
+  --card-paper: #FDFBF4;
+  --card-peak: #1A1D1B;
+
+  /* Text */
+  --text-primary: #14110D;
+  --text-secondary: #4A453D;
+  --text-muted: #686458;
+  --text-on-peak: #F7F4ED;
+
+  /* Accent */
+  --accent: #1B3A5C;
+
+  /* Layout */
+  --test-radius: 16px;
+  --test-border: rgba(20, 17, 13, 0.08);
+
+  background: var(--canvas);
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+/* Hide nav and footer on this test page */
+body:has(.test-layout-page) nav,
+body:has(.test-layout-page) footer {
+  display: none !important;
+}
+
+/* ─── 12-column grid on background (behind cards) ─── */
+
+.test-grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(20, 17, 13, 0.06) 0px,
+      rgba(20, 17, 13, 0.06) 1px,
+      transparent 1px,
+      transparent calc(100% / 12)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(20, 17, 13, 0.06) 0px,
+      rgba(20, 17, 13, 0.06) 1px,
+      transparent 1px,
+      transparent calc(100% / 12)
+    );
+  background-size: 100% 100%;
+}
+
+/* Hide the child divs — grid is now pure CSS background */
+.test-grid-col { display: none; }
+
+/* ─── Container ─── */
+
+.test-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ─── Base card ─── */
+
+.test-card {
+  border-radius: var(--test-radius);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.test-card-inner {
+  padding: 48px 52px;
+}
+
+.test-card-inner--wide {
+  padding: 48px 52px;
+}
+
+/* ─── Card variants (light mode) ─── */
+
+.test-card--warm {
+  background: var(--card-main);
+  box-shadow: 0 2px 8px rgba(20, 17, 13, 0.05), 0 0 0 1px rgba(20, 17, 13, 0.03);
+}
+
+.test-card--neutral {
+  background: var(--card-paper);
+  box-shadow: 0 2px 8px rgba(20, 17, 13, 0.05), 0 0 0 1px rgba(20, 17, 13, 0.03);
+}
+
+.test-card--accent {
+  background: var(--card-paper);
+  border-left: 3px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(20, 17, 13, 0.05), 0 0 0 1px rgba(20, 17, 13, 0.03);
+}
+
+.test-card--dark {
+  background: var(--card-peak);
+  box-shadow: 0 24px 64px rgba(20, 17, 13, 0.3), 0 8px 20px rgba(20, 17, 13, 0.15);
+}
+
+.test-card--small .test-card-inner {
+  padding: 20px 52px;
+}
+
+/* ─── Typography ─── */
+
+.test-eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.test-eyebrow--dark {
+  color: rgba(247, 244, 237, 0.5);
+}
+
+.test-eyebrow--accent {
+  color: var(--accent);
+}
+
+.test-h1 {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  max-width: 700px;
+}
+
+.test-h2 {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  max-width: 580px;
+}
+
+.test-h2--dark {
+  color: var(--text-on-peak);
+}
+
+.test-h2--accent {
+  color: var(--accent);
+}
+
+/* ─── Text colors (semantic) ─── */
+
+.test-ink { color: var(--text-primary); }
+.test-ink-muted { color: var(--text-secondary); }
+.test-ink-soft { color: var(--text-muted); }
+.test-ink-accent { color: var(--text-secondary); }
+.test-ink-accent-label { color: var(--accent); }
+.test-ink-accent-muted { color: var(--text-muted); }
+
+/* ─── Aside (trust anchor) ─── */
+
+.test-aside {
+  border-left: 1px solid rgba(20, 17, 13, 0.1);
+  padding-left: 32px;
+}
+
+.test-aside-heading {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+/* ─── Dark mode inversion ─── */
+
+@media (prefers-color-scheme: dark) {
+  .test-layout-page {
+    /* Dark mode: inversion from spec */
+    --canvas: #1A1D1B;
+    --card-main: #272320;
+    --card-paper: #2F2A24;
+    --card-peak: #EDE7D8;
+
+    --text-primary: #EDE7D8;
+    --text-secondary: rgba(237, 231, 216, 0.78);
+    --text-muted: rgba(237, 231, 216, 0.55);
+    --text-on-peak: #14110D;
+
+    --accent: #7EADD4;
+
+    --test-border: rgba(255, 255, 255, 0.08);
+  }
+
+  .test-grid-overlay {
+    background-image:
+      repeating-linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.04) 0px,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px,
+        transparent calc(100% / 12)
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.04) 0px,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px,
+        transparent calc(100% / 12)
+      );
+  }
+
+  .test-card--warm {
+    box-shadow:
+      0 2px 12px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.04);
+  }
+
+  .test-card--neutral {
+    box-shadow:
+      0 2px 12px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.04);
+  }
+
+  .test-card--accent {
+    border-left-color: var(--accent);
+    box-shadow:
+      0 2px 12px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.04);
+  }
+
+  /* Peak card INVERTS — becomes the bright focal point */
+  .test-card--dark {
+    box-shadow:
+      0 24px 80px rgba(0, 0, 0, 0.5),
+      0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .test-aside {
+    border-left-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Peak card text inversion */
+  .test-card--dark .test-eyebrow--dark { color: var(--text-on-peak); opacity: 0.5; }
+  .test-card--dark .test-h2--dark { color: var(--text-on-peak); }
+  .test-card--dark p { color: var(--text-on-peak) !important; opacity: 0.72; }
+  .test-card--dark a { color: var(--text-on-peak) !important; border-color: rgba(20, 17, 13, 0.25) !important; }
+}
+
+/* ─── Responsive ─── */
+
+@media (max-width: 880px) {
+  .test-container {
+    padding: 12px 12px 0;
+    gap: 10px;
+  }
+
+  .test-card-inner,
+  .test-card-inner--wide {
+    padding: 32px 24px;
+  }
+
+  .test-card--small .test-card-inner {
+    padding: 16px 24px;
+  }
+
+  .test-h1 { font-size: 36px; }
+  .test-h2 { font-size: 28px; }
+
+  .test-grid-overlay { display: none; }
+
+  .test-aside {
+    border-left: none;
+    border-top: 1px solid var(--test-border);
+    padding-left: 0;
+    padding-top: 24px;
+    margin-top: 8px;
+  }
+}

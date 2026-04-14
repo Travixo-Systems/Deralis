@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
+import LanguageToggle from "./LanguageToggle";
 import type { Ref } from "react";
 
 type NavLink = {
@@ -13,9 +14,6 @@ type MobileMenuProps = {
   open: boolean;
   onClose: () => void;
   links: ReadonlyArray<NavLink>;
-  ctaHref: string;
-  ctaLabel: string;
-  ctaIsExternal: boolean;
   ref?: Ref<HTMLDivElement>;
 };
 
@@ -23,9 +21,6 @@ export default function MobileMenu({
   open,
   onClose,
   links,
-  ctaHref,
-  ctaLabel,
-  ctaIsExternal,
   ref,
 }: MobileMenuProps) {
   if (!open) return null;
@@ -36,40 +31,44 @@ export default function MobileMenu({
       id="mobile-menu"
       role="dialog"
       aria-modal="true"
-      className="lg:hidden absolute top-[58px] right-[14px] w-[58%] sm:top-[64px] sm:right-[22px] sm:w-[42%] bg-[#FBF8EF] rounded-[10px] overflow-hidden pt-2 shadow-[0_10px_30px_-12px_rgba(20,17,13,0.12)] z-50"
+      style={{
+        position: "fixed",
+        top: 70,
+        right: 14,
+        width: "60%",
+        maxWidth: 280,
+        background: "var(--card-main)",
+        border: "1px solid var(--border-strong)",
+        borderRadius: "var(--radius-card)",
+        overflow: "hidden",
+        padding: "8px 0",
+        boxShadow: "var(--card-shadow)",
+        zIndex: 100,
+        transition: "background-color 450ms ease",
+      }}
     >
-      <ul className="list-none">
+      <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
         {links.map((link) => (
           <li key={link.key}>
             <Link
               href={link.href}
               onClick={onClose}
-              className="block text-[15px] text-ink no-underline py-[11px] px-[18px] hover:bg-[rgba(20,17,13,0.03)] transition-colors"
+              style={{
+                display: "block",
+                fontSize: 15,
+                color: "var(--text-primary)",
+                textDecoration: "none",
+                padding: "11px 18px",
+                transition: "background-color 150ms ease",
+              }}
             >
               {link.label}
             </Link>
           </li>
         ))}
       </ul>
-
-      <div className="px-[14px] pt-[10px] pb-[14px]">
-        {ctaIsExternal ? (
-          <a
-            href={ctaHref}
-            onClick={onClose}
-            className="block w-full text-center bg-ink text-bg text-[13px] font-medium py-[11px] rounded-lg no-underline"
-          >
-            {ctaLabel}
-          </a>
-        ) : (
-          <Link
-            href={ctaHref}
-            onClick={onClose}
-            className="block w-full text-center bg-ink text-bg text-[13px] font-medium py-[11px] rounded-lg no-underline"
-          >
-            {ctaLabel}
-          </Link>
-        )}
+      <div style={{ padding: "10px 14px 14px", borderTop: "1px solid var(--border-soft)" }}>
+        <LanguageToggle />
       </div>
     </div>
   );

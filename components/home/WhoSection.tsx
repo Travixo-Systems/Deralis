@@ -1,55 +1,107 @@
 import { useTranslations } from "next-intl";
-import SectionHeading from "@/components/shared/SectionHeading";
+import DsCard from "@/components/shared/DsCard";
+import PullQuote from "@/components/shared/PullQuote";
+import type { CSSProperties } from "react";
 
-const CARDS = ["card1", "card2", "card3"] as const;
+const eyebrowStyle: CSSProperties = {
+  fontSize: "var(--fs-eyebrow)",
+  textTransform: "uppercase",
+  letterSpacing: "0.14em",
+  color: "var(--text-muted)",
+  fontWeight: 600,
+  transition: "color 450ms ease",
+};
+
+const introStyle: CSSProperties = {
+  fontSize: 19,
+  lineHeight: 1.55,
+  color: "var(--text-secondary)",
+  maxWidth: "60ch",
+  marginBottom: 14,
+  transition: "color 450ms ease",
+};
+
+// Grid layout via CSS class .grid-2col (responsive handled in globals.css)
+
+const whoCardStyle: CSSProperties = {
+  background: "var(--card-paper)",
+  border: "1px solid var(--border-soft)",
+  borderLeft: "3px solid var(--accent)",
+  borderRadius: "var(--radius-internal)",
+  padding: "36px 32px",
+  transition: "background-color 450ms ease, color 450ms ease, border-color 450ms ease, transform 150ms ease, box-shadow 150ms ease",
+};
+
+const whoCardH3Style: CSSProperties = {
+  fontFamily: "var(--font-fraunces), Georgia, serif",
+  fontSize: 23,
+  fontWeight: 500,
+  lineHeight: 1.2,
+  marginBottom: 16,
+  letterSpacing: "-0.01em",
+  color: "var(--text-primary)",
+};
+
+const whoCardPStyle: CSSProperties = {
+  fontSize: "var(--fs-body-sm)",
+  lineHeight: 1.6,
+  color: "var(--text-secondary)",
+  marginBottom: 22,
+};
+
+const tagsStyle: CSSProperties = {
+  display: "flex",
+  flexWrap: "wrap",
+  gap: 8,
+};
+
+const tagStyle: CSSProperties = {
+  fontSize: 11,
+  textTransform: "uppercase",
+  letterSpacing: "0.08em",
+  color: "var(--text-muted)",
+  padding: "6px 12px",
+  background: "var(--card-main)",
+  border: "1px solid var(--border-soft)",
+  fontWeight: 600,
+  borderRadius: "var(--radius-pill)",
+  transition: "background-color 450ms ease, color 450ms ease, border-color 450ms ease",
+};
 
 export default function WhoSection() {
   const t = useTranslations("home.page.who");
 
+  const card1Tags: string[] = t.raw("card1.tags");
+  const card2Tags: string[] = t.raw("card2.tags");
+
   return (
-    <section className="py-[60px] max-md:py-[42px]">
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12">
-        <SectionHeading
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          intro={t("intro")}
-          className="mb-10 max-md:mb-7"
-        />
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          {CARDS.map((card, i) => {
-            const tags: string[] = t.raw(`${card}.tags`) as string[];
-            const isExclude = card === "card3";
-            return (
-              <div
-                key={card}
-                className={`py-8 max-md:py-6 ${
-                  i < 2
-                    ? "md:pr-8 md:border-r md:border-border-default"
-                    : ""
-                } ${i > 0 ? "md:pl-8" : ""} ${
-                  i < 2 ? "max-md:border-b max-md:border-border-default" : ""
-                }`}
-              >
-                <h3
-                  className={`text-[20px] font-medium leading-[1.3] mb-3 ${
-                    isExclude ? "text-ink-label" : "text-ink"
-                  }`}
-                >
-                  {t(`${card}.title`)}
-                </h3>
-                <p className="text-base leading-[1.65] text-ink-2 mb-4">
-                  {t(`${card}.description`)}
-                </p>
-                <div className="flex flex-col gap-1.5 text-[13px] text-ink-2-soft leading-[1.6]">
-                  {tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+    <DsCard>
+      <p style={eyebrowStyle}>{t("eyebrow")}</p>
+      <p style={introStyle}>{t("intro1")}</p>
+      <p style={introStyle}>{t("intro2")}</p>
+
+      <PullQuote html={t.raw("pullquote")} />
+
+      <div className="grid-2col">
+        <div style={whoCardStyle}>
+          <h3 style={whoCardH3Style}>{t("card1.title")}</h3>
+          <p style={whoCardPStyle}>{t("card1.description")}</p>
+          <div style={tagsStyle}>
+            {card1Tags.map((tag) => (
+              <span key={tag} style={tagStyle}>{tag}</span>
+            ))}
+          </div>
+        </div>
+        <div style={whoCardStyle}>
+          <h3 style={whoCardH3Style}>{t("card2.title")}</h3>
+          <p style={whoCardPStyle}>{t("card2.description")}</p>
+          <div style={tagsStyle}>
+            {card2Tags.map((tag) => (
+              <span key={tag} style={tagStyle}>{tag}</span>
+            ))}
+          </div>
         </div>
       </div>
-    </section>
+    </DsCard>
   );
 }

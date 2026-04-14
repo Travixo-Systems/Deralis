@@ -2,7 +2,7 @@
 title: "5 Ways AI Actually Improves Business Operations (and 3 Ways It Does Not)"
 slug: ai-business-operations-honest-guide
 date: 2026-03-19
-category: ai
+category: AI
 readTime: 7 min read
 description: "Five AI use cases that actually work for small business operations, and three that still fall short. Honest, specific, no hype."
 ---

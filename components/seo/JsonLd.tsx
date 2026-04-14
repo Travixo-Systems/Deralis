@@ -110,7 +110,7 @@ export function ServicesJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://deralis.digital/services#service",
+    "@id": "https://deralis.digital/methode#service",
     serviceType: "Web Development Services",
     provider: {
       "@id": "https://deralis.digital/#organization",

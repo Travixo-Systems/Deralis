@@ -1,76 +1,140 @@
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import type { CSSProperties } from "react";
 
 export default function SiteFooter() {
-  const t = useTranslations("common");
+  const t = useTranslations("common.footer");
 
   return (
-    <footer className="bg-bg-footer mt-32">
-      {/* Zone 1: Main */}
-      <div className="mx-auto max-w-[1240px] px-6 md:px-12 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-8 md:gap-12">
-          {/* Brand block */}
+    <>
+      {/* ZONE 1: weighted brand + contact */}
+      <div style={zone1Wrap}>
+        <div style={zone1Inner} className="footer-zone1-grid">
+          {/* Left: logo + wordmark + tagline */}
           <div>
-            <div className="flex items-center gap-3 mb-3">
+            <Link href="/" style={logoLink}>
               <Image
                 src="/logo-mark.png"
-                alt="Deralis Digital"
-                width={24}
-                height={24}
-                className="w-6 h-6"
+                alt=""
+                width={22}
+                height={22}
+                style={{ width: 22, height: 22, borderRadius: 4, display: "block" }}
               />
-              <span className="text-base font-medium text-ink">
-                Deralis Digital
-              </span>
-            </div>
-            <p className="text-[15px] text-ink-2 leading-relaxed max-w-xs">
-              {t("footer.tagline")}
-            </p>
+              <span style={wordmark}>Deralis Digital</span>
+            </Link>
+            <p style={tagline}>{t("tagline")}</p>
           </div>
 
-          {/* Contact block */}
-          <div className="space-y-2">
-            <a
-              href="mailto:contact&#64;deralis.digital"
-              className="text-[15px] font-medium text-ink hover:underline"
-            >
-              contact&#64;deralis.digital
+          {/* Right: contact details */}
+          <div style={rightCol}>
+            <a href={`mailto:${t("email")}`} style={emailLink}>
+              {t("email")}
             </a>
-            <p className="text-[15px] text-ink-2">
-              {t("footer.location")}
-            </p>
-            <p className="text-[15px] text-ink-2">
-              {t("footer.languages")}
-            </p>
+            <p style={metaLine}>{t("location")}</p>
+            <p style={metaLine}>{t("languages")}</p>
           </div>
         </div>
       </div>
 
-      {/* Zone 2: Legal bar */}
-      <div className="border-t border-border-warm">
-        <div className="mx-auto max-w-[1240px] px-6 md:px-12 py-6">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3">
-            <p className="text-[13px] text-ink-2">
-              {t("footer.copyrightIndependent")}
-            </p>
-            <div className="flex gap-6">
-              <Link
-                href="/legal"
-                className="text-[13px] text-ink-2 no-underline hover:text-ink hover:underline transition-colors"
-              >
-                {t("footer.legalLink")}
-              </Link>
-              <Link
-                href="/privacy"
-                className="text-[13px] text-ink-2 no-underline hover:text-ink hover:underline transition-colors"
-              >
-                {t("footer.privacyLink")}
-              </Link>
-            </div>
-          </div>
+      {/* ZONE 2: bare canvas strip — copyright + legal links */}
+      <footer style={zone2Wrap}>
+        <span style={{ fontWeight: 600, color: "var(--text-primary)", transition: "color 450ms ease" }}>
+          {t("copyrightIndependent")}
+        </span>
+        <div style={{ display: "flex", gap: 28, alignItems: "center" }}>
+          <Link
+            href="/legal"
+            style={{ color: "var(--text-muted)", textDecoration: "none", transition: "color 300ms ease" }}
+          >
+            {t("legalLink")}
+          </Link>
+          <Link
+            href="/privacy"
+            style={{ color: "var(--text-muted)", textDecoration: "none", transition: "color 300ms ease" }}
+          >
+            {t("privacyLink")}
+          </Link>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }
+
+const zone1Wrap: CSSProperties = {
+  background: "var(--card-main)",
+  borderTop: "1px solid var(--border-soft)",
+  padding: "40px 0",
+  transition: "background-color 450ms ease, border-color 450ms ease",
+  marginTop: 22,
+};
+
+const zone1Inner: CSSProperties = {
+  maxWidth: 1100,
+  margin: "0 auto",
+  padding: "0 28px",
+  display: "grid",
+  gridTemplateColumns: "1fr 1fr",
+  gap: 64,
+};
+
+const logoLink: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: 12,
+  textDecoration: "none",
+  marginBottom: 16,
+};
+
+const wordmark: CSSProperties = {
+  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
+  fontSize: 15,
+  fontWeight: 600,
+  letterSpacing: "-0.01em",
+  color: "var(--text-primary)",
+  transition: "color 450ms ease",
+};
+
+const tagline: CSSProperties = {
+  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
+  fontSize: 13,
+  lineHeight: 1.55,
+  color: "var(--text-secondary)",
+  maxWidth: "36ch",
+  transition: "color 450ms ease",
+};
+
+const rightCol: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  gap: 8,
+};
+
+const emailLink: CSSProperties = {
+  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
+  fontSize: 13,
+  fontWeight: 600,
+  color: "var(--text-primary)",
+  textDecoration: "none",
+  transition: "color 300ms ease",
+};
+
+const metaLine: CSSProperties = {
+  fontSize: 12,
+  color: "var(--text-secondary)",
+  transition: "color 450ms ease",
+};
+
+const zone2Wrap: CSSProperties = {
+  maxWidth: 1100,
+  margin: "0 auto",
+  padding: "22px 28px",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
+  fontSize: 12,
+  fontWeight: 500,
+  color: "var(--text-muted)",
+  transition: "color 450ms ease",
+};

@@ -9,11 +9,11 @@
   "common": {
     "nav": {
       "home": "Accueil",
-      "services": "Services",
       "projects": "Réalisations",
       "about": "À propos",
       "blog": "Blog",
-      "contact": "Contact"
+      "contact": "Contact",
+      "methode": "Méthode"
     },
     "actions": {
       "seePlatforms": "Voir mes projets",
@@ -48,38 +48,75 @@
     },
     "footer": {
       "tagline": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
-      "copyrightIndependent": "© 2026 Deralis Digital. Pratique indépendante.",
+      "copyrightIndependent": "© 2026 Deralis Digital · Île-de-France",
       "location": "Île-de-France · À distance pour la France, le Royaume-Uni, les États-Unis",
       "languages": "Français et anglais",
       "legalLink": "Mentions légales",
-      "privacyLink": "Confidentialité"
+      "privacyLink": "Confidentialité",
+      "email": "contact@deralis.digital"
     },
     "auditCta": {
-      "eyebrow": "Commencez par un audit système",
-      "headline": "Rien n'est construit tant que nous ne sommes pas d'accord sur sa valeur.",
-      "body1": "L'audit système cartographie votre fonctionnement actuel, identifie les écarts structurels, et définit quoi construire et dans quel ordre.",
+      "eyebrow": "Commencez par un audit de décision",
+      "headline": "Rien n’est construit sans valeur claire pour votre activité.",
+      "body1": "L'audit cartographie votre fonctionnement actuel, identifie les écarts structurels, et définit quoi construire, dans quel ordre, et ce qu'il ne faut pas construire.",
       "body2": "Si le projet est lancé, le coût de l'audit est déduit du développement.",
-      "note": "Prix fixe. Aucun engagement au-delà de l'audit lui-même."
+      "note": "Prix fixe. Aucun engagement.",
+      "facts": {
+        "duree": {
+          "label": "Durée",
+          "value": "90 minutes d'appel"
+        },
+        "livrable": {
+          "label": "Livrable",
+          "value": "Dossier sous 5 jours ouvrés"
+        },
+        "prix": {
+          "label": "Prix",
+          "value": "300 €, déduits du build"
+        },
+        "garantie": {
+          "label": "Garantie",
+          "value": "Remboursement si je ne suis pas le bon interlocuteur"
+        },
+        "langue": {
+          "label": "Langue",
+          "value": "Français ou anglais"
+        }
+      },
+      "ctaLabel": "Prendre une décision — 300 € →",
+      "ctaMeta": "Prix fixe. Aucun engagement."
     }
   },
   "home": {
     "page": {
       "hero": {
         "eyebrow": "Pratique d’ingénierie de systèmes indépendante",
-        "headline": "Outils <span class=\"hero-sep\">·</span> fichiers <span class=\"hero-sep\">·</span> tableurs. Tout fonctionne, mais rien n’est vraiment <span class=\"accent\">relié</span>.",
-        "sub1": "Ce que vous utilisez aujourd’hui pour faire tourner votre activité ne tient pas.",
-        "sub2": "Je construis le système qui remplace ça, pour les entreprises qui ont plus d’outils que de clarté.",
-        "sub3": "L’information va où elle doit, quand elle doit, sans dépendre des personnes pour avancer.",
+        "h1": "<strong>Outils · fichiers · tableurs.</strong> Tout fonctionne, mais rien n’est vraiment <em>relié</em>.",
+        "subhead1": "<strong>Ce que vous utilisez aujourd’hui pour faire tourner votre activité ne tient pas.</strong>",
+        "subhead2": "Je construis le système qui remplace ça, pour les entreprises qui ont plus d’outils que de clarté.",
+        "subhead3": "L’information va où elle doit, quand elle doit, sans dépendre des personnes pour avancer.",
+        "ctaPrimary": "Découvrez l’audit →",
+        "ctaSecondary": "Voir mes réalisations",
         "anchor": {
-          "backgroundHeading": "Contexte",
-          "backgroundProse": "Travail technique au contact de clients chez des éditeurs et industriels français.<br/>Point d’observation direct des systèmes en conditions réelles chez <strong>Loxam</strong>, au contact des équipes et des incidents opérationnels, à l’origine de la compréhension derrière TraviXO.<br/><br/>Construction de TraviXO, un SaaS de conformité VGP en production.<br/>Construit seul.",
-          "builtHeading": "Ce que j'ai construit",
-          "built1Name": "TraviXO",
-          "built1Desc": "SaaS multi-tenant de conformité VGP pour la location de matériel en France. Construit en solo. En production.",
-          "built2Name": "Portail gouvernemental",
-          "built2Tag": "spec",
-          "built2Desc": "MVP de prise en charge des demandes de passeport, conçu et proposé à un bureau consulaire parisien.",
-          "signature": "Indépendant. Bilingue français et anglais. Une seule personne, chaque ligne de code."
+          "tab": "Ce que j’ai construit",
+          "travixoName": "TraviXO",
+          "travixoDesc": "SaaS multi-tenant de conformité VGP pour la location de matériel. En production.",
+          "consulaireName": "Portail consulaire",
+          "consulaireDesc": "Système opérationnel pitché à un consulat parisien. Format white-label.",
+          "arcadiaName": "Arcadia Zoo V2",
+          "arcadiaDesc": "Refonte complète déployée. Next.js 15, Supabase, Vercel.",
+          "signature": "Indépendant. Bilingue. Une seule personne, chaque ligne de code."
+        },
+        "trajectory": {
+          "label": "Parcours · Cinq ans en environnements réels",
+          "employers": [
+            "Dassault Systèmes",
+            "Scaleway",
+            "Clear Channel",
+            "BWT France",
+            "Loxam",
+            "Ariane Systems"
+          ]
         }
       },
       "flow": {
@@ -92,15 +129,13 @@
       },
       "who": {
         "eyebrow": "Avec qui je travaille",
-        "title": "Des entreprises établies dont le fonctionnement a dépassé les outils qui le tiennent.",
-        "intro": "La personne qui peut décider d'y remédier fait partie de l'échange. Si ce n'est pas vous, le moment n'est pas le bon.",
         "card1": {
-          "title": "Des équipes qui gèrent tout à la main",
-          "description": "Vous comptez sur les gens pour que les choses tournent au quotidien. Le processus existe dans la tête de quelqu'un, pas dans un système.",
+          "title": "Des équipes qui fonctionnent encore manuellement",
+          "description": "Le fonctionnement repose sur les personnes. Les processus ne sont pas formalisés dans un système, mais dispersés dans les outils et la mémoire de l’équipe.",
           "tags": [
             "Coordination manuelle",
-            "Aucun système centralisé",
-            "Goulots d'étranglement"
+            "Absence de système centralisé",
+            "Points de blocage"
           ]
         },
         "card2": {
@@ -118,9 +153,12 @@
           "tags": [
             "Activité établie uniquement",
             "Le problème doit être défini",
-            "Le décideur participe aux échanges"
+            "Le décideur participe"
           ]
-        }
+        },
+        "pullquote": "Des entreprises établies dont le fonctionnement a dépassé <em>les outils qui le tiennent</em>.",
+        "intro1": "La personne qui peut décider d'y remédier fait partie de l'échange.",
+        "intro2": "Si ce n'est pas vous, le moment n'est pas le bon."
       },
       "casestudy": {
         "label": "Étude de cas",
@@ -136,130 +174,101 @@
         "items": {
           "1": {
             "num": "01",
-            "title": "Audit système",
-            "description": "Je cartographie le fonctionnement réel de votre activité aujourd'hui et je définis quoi construire et dans quel ordre."
+            "title": "Audit de décision",
+            "description": "Je cartographie le fonctionnement réel. 5 jours ouvrés. 300 €."
           },
           "2": {
             "num": "02",
             "title": "Système sur mesure",
-            "description": "La construction principale. Un système unique qui montre où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite."
+            "description": "La construction principale. Un système unique qui montre où en est le travail."
           },
           "3": {
             "num": "03",
             "title": "Extensions",
-            "description": "Automatisation, intégrations et flux supplémentaires construits sur la base opérationnelle."
+            "description": "Automatisation, intégrations et flux, sur la base existante."
           },
           "4": {
             "num": "04",
             "title": "Suivi",
-            "description": "Maintenance et itérations pour les clients qui souhaitent un accompagnement continu. Sans engagement, sans forfait caché."
+            "description": "Maintenance et itérations, sans engagement ni forfait caché."
           }
         }
       },
       "finalCta": {
-        "headline": "Si quelque chose <em>casse</em>, ou ne fonctionne pas comme il devrait, je peux vous montrer comment le réparer.",
+        "headline": "Si quelque chose <em>casse</em>, je peux vous montrer comment le réparer.",
         "description": "Avant tout devis, je cartographie le fonctionnement réel de votre système. Ensuite, nous décidons ensemble s'il vaut la peine de le construire.",
         "note": "Un autre développeur peut reprendre sans tout reconstruire."
-      }
-    }
-  },
-  "services": {
-    "page": {
-      "metadata": {
-        "title": "Services",
-        "description": "Chaque mission commence par cartographier le fonctionnement réel de votre activité. Trois étapes séquentielles, chacune mérite la suivante. Pas de forfait fixe, pas de devis à l'avance."
       },
-      "hero": {
-        "eyebrow": "Services · Pratique d'ingénierie de systèmes indépendante",
-        "headline": "Le travail que je fais, dans l'<em>ordre</em> où je le fais.",
-        "description": "Chaque mission commence par cartographier le fonctionnement réel de votre activité. À partir de là, la construction suit une séquence où chaque étape mérite la suivante. Pas de forfait fixe, pas de devis à l'avance, aucun travail sans brief écrit."
-      },
-      "coreServices": {
-        "eyebrow": "Services principaux",
-        "title": "Trois étapes séquentielles. Chacune mérite la suivante."
-      },
-      "blocks": {
-        "1": {
-          "num": "01",
-          "name": "Audit système",
-          "meta": {
-            "whoLabel": "Pour qui",
-            "whoValue": "Entreprises confrontées à des frictions dans leur fonctionnement",
-            "timelineLabel": "Délai typique",
-            "timelineValue": "Une session, brief écrit livré après",
-            "investmentLabel": "Investissement",
-            "investmentValue": "300 € · déduit si le projet est lancé"
+      "proof": {
+        "eyebrow": "Ce que j'ai construit",
+        "h2": "Deux projets en production.",
+        "subtitle": "Un SaaS B2B multi-tenant en live. Une architecture opérationnelle pitchée, en format réutilisable. Construits en solo.",
+        "travixo": {
+          "tab": "En production",
+          "url": "app.travixosystems.com / dashboard",
+          "facts": {
+            "stack": {
+              "label": "Stack",
+              "value": "Next.js · Supabase"
+            },
+            "architecture": {
+              "label": "Architecture",
+              "value": "Multi-tenant"
+            },
+            "build": {
+              "label": "Build",
+              "value": "Solo · 2024"
+            }
           },
-          "prose1": "Avant que quoi que ce soit ne soit construit, je cartographie le fonctionnement réel de votre activité aujourd'hui. Nous passons en revue les outils que vous utilisez, les personnes impliquées, où vit l'information, où elle se bloque, et où la friction vous coûte du temps ou de l'argent.",
-          "prose2": "L'audit produit un <strong>brief écrit</strong> qui définit quoi construire, pourquoi c'est important, et dans quel ordre. Si le brief identifie un projet qui vaut la peine d'être lancé, les 300 € sont déduits du coût de développement. S'il identifie que rien n'a besoin d'être construit pour le moment, je vous le dirai directement."
+          "cta": "Détails techniques →"
         },
-        "2": {
-          "num": "02",
-          "name": "Système sur mesure",
-          "meta": {
-            "whoLabel": "Pour qui",
-            "whoValue": "Équipes qui gèrent leurs opérations manuellement ou à travers des outils fragmentés",
-            "timelineLabel": "Délai typique",
-            "timelineValue": "Défini après l'audit, selon le périmètre réel",
-            "investmentLabel": "Investissement",
-            "investmentValue": "Selon le périmètre, défini après l'audit"
+        "consulaire": {
+          "tab": "White-label",
+          "url": "portail-consulaire.vercel.app / admin",
+          "title": "Portail consulaire",
+          "subtitle": "White-label · Pitché à un consulat parisien",
+          "caps": {
+            "01": {
+              "name": "Intake publique",
+              "desc": "Formulaire de demande citoyen, validation, queue."
+            },
+            "02": {
+              "name": "Backoffice /admin",
+              "desc": "Gestion des dossiers, attribution, actions agents."
+            },
+            "03": {
+              "name": "Suivi des dossiers",
+              "desc": "Statut en temps réel, notifications, historique."
+            }
           },
-          "prose1": "La construction principale. Un système unique qui montre où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite. Conçu autour du fonctionnement spécifique que l'audit a cartographié, pas autour d'un template.",
-          "prose2": "Cela remplace généralement une combinaison de tableurs, d'outils SaaS déconnectés, et de processus informels qui vivent dans la tête de quelqu'un. L'objectif : une source unique de vérité que l'équipe utilise réellement, pas un tableau de bord ignoré après la mise en ligne.",
-          "prose3": "Le travail sur le système sur mesure est toujours cadré par le brief d'audit. Le brief définit ce qui est construit, ce qui ne l'est pas, et ce qui viendra plus tard sous forme d'Extensions."
-        },
-        "3": {
-          "num": "03",
-          "name": "Extensions",
-          "meta": {
-            "whoLabel": "Pour qui",
-            "whoValue": "Clients avec un système fonctionnel qui ont besoin de capacités supplémentaires",
-            "timelineLabel": "Délai typique",
-            "timelineValue": "Défini par extension, plus petit que la construction principale",
-            "investmentLabel": "Investissement",
-            "investmentValue": "Selon le périmètre, défini après l'audit"
+          "description": "Architecture réutilisable pour tout bureau traitant des demandes entrantes : consulat, préfecture, cabinet.",
+          "facts": {
+            "stack": {
+              "label": "Stack",
+              "value": "Next.js · Supabase"
+            },
+            "format": {
+              "label": "Format",
+              "value": "White-label"
+            },
+            "origine": {
+              "label": "Origine",
+              "value": "Consulat parisien"
+            }
           },
-          "prose1": "Les Extensions sont de l'automatisation, des intégrations et des flux supplémentaires construits sur une base qui fonctionne. Les Extensions n'arrivent qu'après qu'un Système sur mesure existe et est utilisé. Construire des extensions sur un système qui ne fonctionne pas encore crée plus de problèmes que ça n'en résout.",
-          "prose2": "Les extensions courantes incluent connecter le système aux outils existants que l'équipe utilise déjà, automatiser des tâches récurrentes qui se font actuellement à la main, et ajouter des couches de reporting ou de visibilité pour les parties prenantes qui ont besoin de voir les données sans les manipuler directement.",
-          "prose3": "Les extensions sont toujours définies par rapport au brief d'audit initial, chaque extension étant cadrée individuellement."
+          "cta": "Voir l'architecture →"
         }
       },
-      "ongoing": {
-        "eyebrow": "Après la construction",
-        "title": "Suivi continu",
-        "context": "Optionnel. Disponible après la livraison d'un Système sur mesure.",
-        "prose1": "Une fois qu'un système est en ligne, il a besoin de maintenance, de petites itérations, et de corrections occasionnelles. Le Suivi continu est la couche post-livraison pour les clients qui veulent un accompagnement continu sans la friction d'un nouveau contrat chaque fois que quelque chose nécessite de l'attention.",
-        "prose2": "Cela couvre les mises à jour, la surveillance des performances, les corrections de bugs, la documentation système, et le support à la demande. Les nouvelles fonctionnalités et les ajouts importants sont cadrés séparément comme Extensions.",
-        "prose3": "Sans engagement, sans durée minimale. Résiliable n'importe quel mois.",
-        "price": "À partir de 300 € / mois",
-        "priceNote": "Disponible uniquement après qu'un Système sur mesure a été construit."
-      },
-      "questions": {
-        "eyebrow": "Questions fréquentes",
-        "title": "Les questions que les clients posent avant de réserver l'audit.",
-        "items": {
-          "1": {
-            "question": "Combien coûte un projet typique ?",
-            "answer": "Chaque système est différent et le coût dépend de ce dont votre activité a réellement besoin, pas d'un forfait fixe. Avant de chiffrer quoi que ce soit, je mène un audit système pour cartographier votre fonctionnement et définir ce qui doit être construit. L'audit coûte 300 € et produit un brief écrit. Si le projet est lancé, les 300 € sont déduits du coût de développement."
-          },
-          "2": {
-            "question": "Travaillez-vous avec des clients hors de France ?",
-            "answer": "Oui. Je travaille à distance avec des clients en France, au Royaume-Uni et aux États-Unis. La communication se fait en français ou en anglais selon ce qui vous convient. Les sessions d'audit et le travail de projet se déroulent en visioconférence, les livrables et le système lui-même étant accessibles de partout."
-          },
-          "3": {
-            "question": "Pouvez-vous reprendre un projet existant ?",
-            "answer": "Parfois. L'audit système couvre aussi les systèmes existants, pas seulement les opérations qui n'ont jamais été numérisées. Si le système existant est récupérable, le brief définira ce qu'il faut garder, ce qu'il faut reconstruire, et ce qu'il faut abandonner. S'il n'est pas récupérable, le brief le dira, et vous pourrez décider de recommencer ou de garder ce que vous avez."
-          },
-          "4": {
-            "question": "Combien de temps prend un projet typique ?",
-            "answer": "Défini après l'audit. Le brief inclut un délai réaliste pour le travail qu'il cadre, selon la complexité de votre fonctionnement et la profondeur de la construction. Les projets peuvent aller de quelques semaines pour un Système sur mesure ciblé à plusieurs mois pour une mission plus profonde avec plusieurs Extensions. L'audit est la seule étape avec un délai fixe : une session, brief livré peu après."
-          }
-        }
-      },
-      "finalCta": {
-        "headline": "Prêt à cartographier le <em>fonctionnement</em> réel de votre système ?",
-        "description": "L'audit est la seule chose que vous pouvez acheter à l'avance. Tout le reste se définit ici d'abord.",
-        "note": "Un autre développeur peut reprendre sans tout reconstruire."
+      "exclusion": {
+        "eyebrow": "Filtre",
+        "headline": "Pas pour tout le monde.",
+        "body1": "Pas pour les idées en phase de démarrage, les demandes de sites simples, ou les projets dont le problème n'a pas été défini.",
+        "body2": "<strong>Si vous ne pouvez pas nommer ce qui est cassé, le moment n'est pas le bon.</strong>",
+        "tags": [
+          "Activité établie uniquement",
+          "Le problème doit être défini",
+          "Le décideur participe"
+        ]
       }
     }
   },
@@ -376,7 +385,6 @@
         "title": "Des systèmes concrets, conçus pour le <em>fonctionnement</em> réel des opérations.",
         "sub1": "Un système en production, une proposition spec présentée à un acheteur réel, et une petite série de démos qui fonctionnent.",
         "sub2": "Chacune est partie de la même observation. La plupart des entreprises ont déjà des outils. Ce qui leur manque, c'est un système.",
-        "sub3": "Pas de métriques inventées. Aucun logo client que je n'ai pas mérité.",
         "ctaSecondary": "Voir l'étude de cas"
       },
       "travixo": {
@@ -394,7 +402,6 @@
         "context": "Secteur public · MVP de prise en charge de passeports · Entre les mains de l'acheteur",
         "prose1": "Un MVP de prise en charge des demandes de passeport que j'ai construit et proposé à un bureau consulaire parisien après avoir vécu leur processus moi-même. Leur flux existant exigeait un déplacement en personne pour des fichiers que j'avais déjà téléversés en ligne. L'écart entre ce que le système pouvait faire et ce que l'équipe était obligée de faire se voyait depuis la salle d'attente.",
         "prose2": "J'ai construit le flux numérique qui aurait comblé cet écart, et je l'ai proposé directement. La proposition est actuellement entre leurs mains.",
-        "note": "Proposition spec. Pas une mission livrée. Le statut sera mis à jour quand l'acheteur répondra.",
         "screenshot": {
           "alt": "Flux de prise en charge du Portail de demandes gouvernementales montrant la soumission de documents et le suivi de statut"
         },
@@ -402,8 +409,8 @@
         "viewBuildLabel": "Voir le build"
       },
       "concepts": {
+        "title": "Quatre patterns. Tous live.",
         "eyebrow": "Démos",
-        "title": "Des démos qu'on peut <em>cliquer</em>.",
         "intro": "Pas du travail client. Des démos construites pour tester des patterns avant qu'ils soient utilisés dans un vrai système. Chacune est en ligne, publique, et tourne sur du vrai code plutôt que sur des écrans figés.",
         "items": {
           "1": {
@@ -728,40 +735,26 @@
       },
       "hero": {
         "eyebrow": "Contact",
-        "title": "D'abord, <em>clarifions</em> ce qui bloque avant de construire.",
-        "sub1Prefix": "Si vous savez déjà que vous voulez avancer, commencez par",
-        "sub1LinkText": "l'audit système",
-        "sub1Suffix": ".",
-        "sub2": "Si vous avez besoin d'expliquer votre situation d'abord, utilisez le formulaire ci-dessous."
-      },
-      "formIntro": {
-        "p1": "Décrivez ce qui se passe dans votre activité et où les choses se cassent.",
-        "p2": "Je lis chaque message personnellement. S'il y a un fit, je réponds sous 2 jours ouvrés."
+        "title": "Écrivez-moi directement.",
+        "sub": "Pour les questions qui ne passent pas par un formulaire d'audit. Partenariats, NDA, langue de travail, ou simplement parce que vous préférez écrire."
       },
       "form": {
-        "websiteLabel": "Site web",
+        "nameLabel": "Nom",
+        "emailLabel": "Email",
         "messageLabel": "Message",
-        "submitButton": "Envoyer votre situation",
+        "websiteLabel": "Site web",
+        "submitButton": "Envoyer",
         "errors": {
-          "required": "Obligatoire",
+          "required": "Requis",
           "email": "Email invalide",
-          "minLength": "20 caractères minimum"
+          "minLength": "Trop court (min 20 caractères)"
         }
       },
-      "nextStrip": {
-        "label": "Ce qui se passe ensuite",
-        "step1": "Je lis votre message",
-        "step2": "Je réponds sous 2 jours ouvrés",
-        "step3": "S'il y a un fit, nous prenons un appel de 30 minutes"
-      },
-      "methods": {
-        "emailHeading": "Email",
-        "locationHeading": "Localisation",
-        "locationValue": "Île-de-France, France",
-        "locationMuted": "Travail à travers la France et à distance.",
-        "languagesHeading": "Langues",
-        "languagesValue": "Français et anglais",
-        "languagesMuted": "Bilingue natif. Documents et réunions dans l'une ou l'autre."
+      "final": {
+        "h2": "Autres façons de me joindre.",
+        "email": "contact@deralis.digital",
+        "location": "Île-de-France, France",
+        "languages": "Français et anglais"
       }
     }
   },
@@ -773,7 +766,9 @@
     "hero": {
       "title": "",
       "titleHighlight": "Insights",
-      "description": "Réflexions concrètes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
+      "description": "Réflexions concrètes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent.",
+      "h1": "Depuis la <em>pratique</em>.",
+      "subtitle": "Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
     },
     "categories": {
       "strategy": "Stratégie",
@@ -824,6 +819,21 @@
       "postMeta": {
         "minRead": "min de lecture"
       }
+    },
+    "eyebrow": "Blog",
+    "topics": {
+      "tab": "Sujets",
+      "count": {
+        "singular": "{count} article",
+        "plural": "{count} articles"
+      }
+    },
+    "featured": {
+      "eyebrow": "Le plus récent",
+      "cta": "Lire l'article →"
+    },
+    "list": {
+      "cta": "Lire →"
     }
   },
   "privacy": {
@@ -1139,7 +1149,7 @@
           },
           "4": {
             "title": "Piste d'audit et exports",
-            "body": "Chaque action est journalisée d'une façon qui survit à un audit du régulateur. Les enregistrements d'inspection peuvent être exportés sous forme de rapports de conformité sans que personne n'ait à assembler un dossier à la main la veille au soir."
+            "body": "Chaque action est journalisée d'une façon qui survit à un audit du régulateur. Les enregistrements d'inspection peuvent être exportés sous forme de rapports de conformité sans que personne n'ait à rassembler un dossier manuellement la veille au soir."
           },
           "5": {
             "title": "Accès par rôle",
@@ -1240,140 +1250,161 @@
   "audit": {
     "page": {
       "metadata": {
-        "title": "Audit système",
-        "description": "Un point de décision payant. Pas une conversation, pas un rapport, pas une étape commerciale. Un appel structuré de 60 à 90 minutes, suivi d’un brief de décision écrit, pour 300 €."
+        "title": "Audit de décision · 300 €",
+        "description": "Quoi construire, dans quel ordre, et ce qu'il ne faut pas construire. 90 minutes d'appel, dossier livré sous cinq jours ouvrés."
       },
       "hero": {
-        "eyebrow": "Audit système · 300 €",
-        "headline": "Identifiez quoi construire, et quoi <em>ne pas</em> construire, avant qu’une seule ligne de code ne soit écrite.",
-        "sub1": "L’audit est un point de décision payant. Pas une conversation, pas un rapport, pas une étape commerciale.",
-        "sub2": "Un appel structuré, suivi d’un brief de décision écrit livré sous cinq jours ouvrés.",
-        "sub3": "Réalisé par un ingénieur systèmes indépendant qui construit des systèmes en production et travaille à partir de contraintes opérationnelles réelles."
-      },
-      "walkaway": {
-        "eyebrow": "Ce que vous repartez avec",
-        "title": "Un ensemble de <em>décisions</em> sur lesquelles agir dès lundi matin.",
-        "intro": "L’audit existe pour que vous puissiez arrêter de deviner quel système corriger en premier, et commencer à exécuter dans un ordre qui tient la route.",
-        "items": [
-          "Décider quel système corriger en premier, et pourquoi les autres attendent.",
-          "Décider s’il faut construire, acheter ou utiliser ce qui existe déjà.",
-          "Décider si le problème relève du logiciel ou de l’organisation.",
-          "Décider quoi ne pas construire maintenant, pour que le périmètre arrête de gonfler tout seul."
-        ]
-      },
-      "inPractice": {
-        "disclaimerLead": "Scénario illustratif. Pas un client réel.",
-        "disclaimerBody": "Un composite illustratif, pas une étude de cas. Aucun chiffre inventé, aucun nom de client, aucun historique suggéré.",
-        "eyebrow": "En pratique",
-        "title": "À quoi ressemble <em>concrètement</em> un audit.",
-        "intro": "Les cinq parties d’un brief de décision, illustrées sur un exemple composite.",
-        "steps": {
-          "1": {
-            "heading": "Situation",
-            "body": "Une PME française, une trentaine de personnes, qui coordonne des opérations terrain sur plusieurs sites. Rentable, en croissance, gérée au quotidien via WhatsApp, e-mail et trois outils SaaS distincts qui ne communiquaient pas entre eux."
-          },
-          "2": {
-            "heading": "Ce qui ne fonctionnait plus",
-            "body": "Personne ne pouvait répondre à « où en est-ce en ce moment ? » sans passer deux appels. La même information était saisie dans trois endroits différents. Le responsable des opérations passait une journée entière par semaine à réconcilier les écarts à la main."
-          },
-          "3": {
-            "heading": "Ce que l’audit a clarifié",
-            "body": "Le problème ne venait pas des outils. Le problème, c’est qu’aucun endroit unique ne reflétait l’état courant d’un chantier. Ajouter un quatrième outil aurait aggravé la situation. La bonne réponse, c’était une couche fine au-dessus des outils existants, pas leur remplacement."
-          },
-          "4": {
-            "heading": "Ce que le premier développement devait être",
-            "body": "Un tableau de bord unique montrant chaque chantier actif, son étape en cours et la personne responsable de l’action suivante. Alimenté par les outils existants, sans les remplacer. Calibré pour être livré en semaines, pas en mois."
-          },
-          "5": {
-            "heading": "Ce qui a été explicitement écarté",
-            "body": "Une plateforme opérationnelle complète. Une application mobile. Un remplacement de CRM. Chacune de ces options était une vraie tentation, et l’audit a rendu plus facile d’y dire non, parce que le brief les nommait et expliquait pourquoi elles n’étaient pas adaptées à cette opération à ce stade."
-          }
+        "eyebrow": "Audit de décision · 300 €",
+        "h1": "Vos outils tiennent. Votre opération, non.",
+        "sub": "<strong>Audit de décision :</strong> quoi construire, dans quel ordre, et ce qu'il ne faut pas construire.",
+        "offer": {
+          "tab": "L'offre",
+          "line1": "<strong>90 minutes</strong> d'appel",
+          "line2": "<strong>Cinq jours ouvrés</strong> de livraison",
+          "line3": "<strong>300 €</strong>, déduits si vous construisez ensuite",
+          "line4": "Remboursement si je ne suis pas le bon interlocuteur"
         },
-        "midCtaNote": "Voilà à quoi ressemble le brief. Même format, votre opération, vos décisions."
+        "cta": "Prendre une décision — 300 € →",
+        "meta": "Un exemple du dossier à droite. Téléchargeable plus bas."
       },
-      "deliverables": {
-        "eyebrow": "Ce que vous obtenez",
-        "title": "Deux choses. Un appel et un brief écrit.",
-        "intro": "Pas de slides. Pas de modèle d’audit générique. Pas de recommandations recyclées.",
-        "items": [
-          "Un appel d’audit structuré, 60 à 90 minutes.",
-          "Un brief de décision écrit, livré après l’appel.",
-          "Une cartographie des frictions dans le fonctionnement actuel de votre opération.",
-          "Un découpage quoi-construire / quoi-ne-pas-construire, avec le raisonnement.",
-          "Un ordre d’exécution et l’orientation du premier périmètre système."
+      "recognition": {
+        "h2": "Si vous êtes ici, ce n'est probablement pas par hasard.",
+        "intro1": "Votre activité tourne. Les clients sont servis, les factures sortent, les équipes font le travail.",
+        "intro2": "Ce n'est pas un problème de volonté, et ce n'est pas un problème d'équipe.",
+        "pullquote": "C'est un problème de système.",
+        "symptomsLabel": "Vous le reconnaissez peut-être à ces signes",
+        "symptoms": [
+          "Vous avez déjà des outils en place, mais l'information circule encore mal entre eux.",
+          "Le CRM dit une chose, l'ERP une autre, et l'équipe finit par vérifier ailleurs.",
+          "Pour trancher une question simple, il faut croiser plusieurs sources avant d'avoir confiance.",
+          "Les cas particuliers vivent ailleurs : fichiers perso, mails, mémoire individuelle.",
+          "Vos outils existent. Le système, lui, reste fragile."
         ],
-        "notIncludedLabel": "Ce qui N’EST PAS inclus",
-        "excludes": [
-          "Pas de spécification technique complète.",
-          "Pas de travail d’implémentation. L’audit ne construit rien.",
-          "Pas de recommandations vagues et génériques. Le brief nomme votre opération, pas une catégorie."
+        "closing1": "À ce stade, la question n'est plus est-ce qu'on a un problème. Vous le savez déjà.",
+        "closing2": "La question est : quel est le bon premier mouvement. Un nouveau logiciel ? Un changement de process ? Rien du tout ? Faut-il construire, acheter, ou mieux utiliser ce qui est déjà là ?",
+        "closing3": "C'est la question à laquelle l'audit répond. Pas en théorie. Sur votre opération, avec vos contraintes, en cinq jours ouvrés.",
+        "cta": "Prendre une décision — 300 € →"
+      },
+      "deliverable": {
+        "tab": "Ce que vous aurez en main",
+        "h3": "Un dossier de décision.",
+        "negations": "Pas un rapport. Pas un audit théorique. Pas un deck de slides.",
+        "lede": "Court, structuré, signé. Écrit pour être relu par quelqu'un qui n'était pas sur l'appel.",
+        "bodyLabel": "À l'intérieur",
+        "items": [
+          "<strong>La cartographie</strong> de votre fonctionnement réel : où l'information circule, où elle s'arrête, où elle se duplique.",
+          "<strong>Le premier système à construire</strong>, et pourquoi lui avant les autres.",
+          "<strong>Ce qu'il ne faut pas construire</strong> : tentations, fausses bonnes idées, chantiers qui élargissent le périmètre.",
+          "<strong>Le découpage</strong> build / acheter / mieux utiliser ce qui existe déjà.",
+          "<strong>Un ordre d'exécution</strong> : quoi d'abord, quoi ensuite, quoi peut attendre."
+        ],
+        "ownerLine": "Le document est le vôtre.",
+        "ownerDetail": "Vous le gardez, vous le partagez, vous l'utilisez quand vous voulez.",
+        "guarantees": [
+          "Pas d'expiration",
+          "Pas de relances",
+          "Pas de chasse commerciale"
         ]
       },
-      "flow": {
-        "label": "Comment ça se passe",
-        "step1": "Paiement de 300 € via Stripe",
-        "step2": "Confirmation + lien de prise de rendez-vous",
-        "step3": "Appel d’audit de 60 à 90 minutes",
-        "step4": "Brief livré sous 5 jours ouvrés"
+      "example": {
+        "eyebrow": "Un exemple concret",
+        "h2": "Un vrai dossier. Ouvert. Dans vos mains avant de <em>décider</em>.",
+        "body1": "<strong>Même format, même structure, même niveau de détail</strong> que ce que vous recevriez.",
+        "body2": "Lisez-le avant de décider si l'audit est pour vous.",
+        "pagesMeta": "Cinq pages · PDF · Anonymisé",
+        "cta": "Télécharger l'exemple (PDF) ↓",
+        "meta": "Pas de formulaire. Pas d'email à laisser."
       },
       "notFor": {
-        "eyebrow": "À qui cet audit ne s’adresse pas",
-        "title": "Ne réservez pas l’audit <em>si</em>…",
-        "intro": "Si l’un de ces cas vous décrit, l’audit n’est pas le bon produit. Économisez les 300 €.",
+        "h3": "Pas pour vous si…",
+        "intro": "Dans les cas suivants, l'audit n'a pas de sens. Ne le réservez pas.",
         "items": [
-          "Vous avez besoin d’un site vitrine (WordPress, Webflow, Framer, etc.).",
-          "Vous voulez que quelqu’un commence à construire avant que le problème ne soit correctement défini.",
-          "Il n’y a pas de friction opérationnelle à résoudre.",
-          "Vous ne pouvez pas définir à quoi « mieux » ressemblerait.",
-          "Vous comptez sauter l’audit et passer directement à la construction."
+          "Vous cherchez un site vitrine. WordPress, Webflow, Framer, autre chose.",
+          "Vous voulez commencer à construire avant que le problème soit défini.",
+          "Vous ne pouvez pas nommer ce qui ne va pas, même approximativement.",
+          "Vous comptez sauter l'audit et passer directement à la construction.",
+          "Il n'y a pas de friction opérationnelle à résoudre."
         ]
       },
-      "refund": {
-        "eyebrow": "Politique de remboursement",
-        "title": "L’audit <em>est</em> le travail.",
-        "p1": "Je n’accepte pas de paiement pour un audit que je ne peux pas mener à bien. Si pendant l’appel je constate que je ne suis pas la bonne personne pour vous aider, je rembourse l’intégralité des 300 €. Sans discussion, sans paiement partiel, sans tentative de vous vendre autre chose.",
-        "p2": "Dans le cas contraire, l’audit n’est pas remboursable, parce que l’audit est le travail, pas une étape commerciale. L’appel et le brief existent pour que vous puissiez prendre des décisions que vous ne pouviez pas prendre avant. Cette valeur est livrée que vous me confiiez la suite ou non, et c’est précisément l’objectif."
+      "guarantee": {
+        "h3": "Et si je me trompe ?",
+        "p1": "Si pendant l'appel je constate que je ne suis pas la bonne personne pour vous aider, je rembourse l'intégralité des 300 €. Sans discussion, sans paiement partiel, sans tentative de vous vendre autre chose.",
+        "p2": "Dans le cas contraire, l'audit n'est pas remboursable. Parce que l'audit est le travail, pas une étape commerciale. Le dossier existe pour que vous puissiez prendre des décisions que vous ne pouviez pas prendre avant. Cette valeur est livrée que vous me confiiez la suite ou non, et c'est précisément l'objectif."
       },
-      "tailCta": {
-        "eyebrow": "Prêt à réserver",
-        "headline": "Vous n’achetez pas un appel. Vous achetez une décision.",
-        "body": "Un prix fixe, un appel structuré, un brief de décision écrit. Si je ne suis pas la bonne personne pour vous aider, vous êtes remboursé.",
-        "note": "Prix fixe. Non remboursable, sauf si je détermine que je ne suis pas le bon interlocuteur."
-      },
-      "faq": {
-        "eyebrow": "Questions",
-        "title": "<em>Questions</em> fréquentes.",
-        "items": {
-          "1": {
-            "question": "Dans quel délai est-ce que je reçois le brief ?",
-            "answer": "Cinq jours ouvrés après l’appel d’audit. Si quoi que ce soit retarde la livraison, vous en êtes informé avant l’échéance, pas après."
+      "process": {
+        "intro": "Quatre étapes. Dossier livré sous cinq jours ouvrés après l'appel.",
+        "steps": [
+          {
+            "num": "01",
+            "title": "Paiement",
+            "desc": "300 € via Stripe. Lien de prise de rendez-vous immédiat."
           },
-          "2": {
-            "question": "Et si je ne suis pas prêt à agir sur le brief ?",
-            "answer": "Le brief est à vous. Utilisez-le quand le moment sera le bon. Pas de date d’expiration, pas de séquence de relance, pas de suivi commercial."
+          {
+            "num": "02",
+            "title": "Rendez-vous",
+            "desc": "Vous choisissez un créneau dans les jours qui suivent. 90 minutes, en visio."
           },
-          "3": {
-            "question": "Et si je veux vous confier la construction du premier système après l’audit ?",
-            "answer": "Les 300 € de l’audit sont déduits du coût du projet si celui-ci se concrétise. L’audit est rentabilisé dès que le développement commence."
+          {
+            "num": "03",
+            "title": "Appel d'audit",
+            "desc": "Structure fixe. J'identifie avec vous les points clés et formalise les éléments nécessaires."
           },
-          "4": {
-            "question": "Signez-vous des accords de confidentialité ?",
-            "answer": "Oui. NDA mutuel standard, signé avant l’appel si vous le souhaitez. Envoyez le vôtre ou j’envoie le mien."
-          },
-          "5": {
-            "question": "Que deviennent mes données ?",
-            "answer": "Elles restent chez moi. Rien n’est partagé avec des tiers, rien n’est utilisé à des fins marketing, rien n’est conservé plus longtemps que nécessaire pour livrer le brief."
-          },
-          "6": {
-            "question": "Puis-je partager le brief avec mon équipe ?",
-            "answer": "Oui. Le brief est à vous : diffusez-le, référencez-le, agissez dessus comme vous le souhaitez. Il est rédigé pour être compréhensible par quelqu’un qui n’était pas sur l’appel."
-          },
-          "7": {
-            "question": "L’appel peut-il se faire en français ?",
-            "answer": "Oui. L’appel et le brief peuvent être réalisés en français ou en anglais. Je suis bilingue et je travaille dans les deux langues au quotidien."
+          {
+            "num": "04",
+            "title": "Dossier livré",
+            "desc": "Sous cinq jours ouvrés après l'appel. PDF signé, envoyé par email."
           }
-        }
+        ]
+      },
+      "finalCta": {
+        "h2": "Prendre une décision avant de construire.",
+        "sub": "Un audit. Un dossier. Une décision que vous pouvez défendre.",
+        "cta": "Prendre une décision — 300 € →",
+        "meta": "Français ou anglais. NDA sur demande."
       }
+    }
+  },
+  "methode": {
+    "metadata": {
+      "title": "Méthode",
+      "description": "Trois étapes : audit, système, extensions. Rien n'est construit avant que le fonctionnement réel soit compris. Aucune étape ne peut être sautée."
+    },
+    "hero": {
+      "eyebrow": "Méthode",
+      "h1": "D'abord comprendre. Puis décider. Seulement après, <em>construire</em>.",
+      "sub": "Trois étapes. Chacune ouvre la suivante. Aucune ne peut être sautée.",
+      "ctaPrimary": "Commencer par l'audit →",
+      "anchorTab": "Ce que vous obtenez",
+      "stageNames": [
+        "Audit",
+        "Système",
+        "Extensions"
+      ]
+    },
+    "stages": {
+      "intro": "Rien n'est construit avant que le fonctionnement réel soit cartographié.",
+      "stage1": {
+        "num": "01",
+        "title": "Audit",
+        "desc": "Je cartographie votre fonctionnement réel. Où l'information circule, où elle s'arrête, où elle se duplique. Le livrable est un dossier de décision, pas un rapport.",
+        "metadata": "5 jours ouvrés · 300 €",
+        "cta": "Démarrer l'audit →"
+      },
+      "stage2": {
+        "num": "02",
+        "title": "Système",
+        "desc": "Le premier système réel, construit à partir du dossier. Un seul, pas trois. Celui sans lequel rien d'autre ne tient."
+      },
+      "stage3": {
+        "num": "03",
+        "title": "Extensions",
+        "desc": "Une intégration, une automatisation, un flux supplémentaire. Toujours sur ce qui existe déjà. Jamais la première chose."
+      }
+    },
+    "finalCta": {
+      "h2": "Commencez par ce qui doit être compris avant d'être construit.",
+      "sub": "90 minutes. Cinq jours. Un dossier que vous gardez, quoi qu'il arrive ensuite.",
+      "cta": "Prendre une décision — 300 € →"
     }
   }
 }
