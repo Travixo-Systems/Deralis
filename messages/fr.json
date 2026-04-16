@@ -1,7 +1,6 @@
 {
   "common": {
     "nav": {
-      "home": "Accueil",
       "projects": "Réalisations",
       "about": "À propos",
       "blog": "Carnet",
@@ -9,34 +8,11 @@
       "methode": "Méthode"
     },
     "actions": {
-      "seePlatforms": "Voir mes projets",
-      "learnMore": "En savoir plus",
-      "viewMore": "Voir plus",
-      "viewAll": "Tout voir",
-      "viewAllPlatforms": "Voir toutes les plateformes",
-      "readMore": "Lire la suite",
-      "backToHome": "Retour à l'accueil",
-      "visitWebsite": "Visiter le site",
-      "openApp": "Ouvrir l'application",
-      "viewLive": "Voir en ligne",
       "viewOurWork": "Voir mes réalisations",
-      "sendMessage": "Envoyer le message",
       "sending": "Envoi en cours...",
-      "language": "Langue",
       "changeLanguage": "Changer de langue",
-      "viewDemo": "Voir la démo",
-      "viewProject": "Voir le projet",
-      "viewSystem": "Voir le système",
       "discoverAudit": "Découvrez l’audit",
-      "discoverAuditShort": "Découvrez l’audit",
-      "startAudit": "Démarrez l’audit (300 €)",
-      "startAuditShort": "Démarrez l’audit"
-    },
-    "stats": {
-      "deliveryRateShort": "Livré",
-      "deliverySublabel": "Conçus et déployés",
-      "responseTimeShort": "Ligne directe",
-      "responseSublabel": "Pas d'intermédiaire"
+      "startAudit": "Démarrez l’audit (300 €)"
     },
     "footer": {
       "tagline": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",

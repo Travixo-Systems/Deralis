@@ -1,7 +1,6 @@
 {
   "common": {
     "nav": {
-      "home": "Home",
       "projects": "Projects",
       "about": "About",
       "blog": "Blog",
@@ -9,34 +8,11 @@
       "methode": "Method"
     },
     "actions": {
-      "seePlatforms": "See my work",
-      "learnMore": "Learn more",
-      "viewMore": "View more",
-      "viewAll": "View all",
-      "viewAllPlatforms": "See all platforms",
-      "readMore": "Read more",
-      "backToHome": "Back to home",
-      "visitWebsite": "Visit website",
-      "openApp": "Open app",
-      "viewLive": "View live",
       "viewOurWork": "View my work",
-      "sendMessage": "Send message",
       "sending": "Sending...",
-      "language": "Language",
       "changeLanguage": "Change language",
-      "viewDemo": "View demo",
-      "viewProject": "View project",
-      "viewSystem": "View system",
       "discoverAudit": "See what the audit covers",
-      "discoverAuditShort": "See what the audit covers",
-      "startAudit": "Start the audit (€300)",
-      "startAuditShort": "Start the audit"
-    },
-    "stats": {
-      "deliveryRateShort": "Delivered",
-      "deliverySublabel": "Shipped and deployed",
-      "responseTimeShort": "Direct line",
-      "responseSublabel": "No layers, no middlemen"
+      "startAudit": "Start the audit (€300)"
     },
     "footer": {
       "tagline": "I build the systems businesses need to operate.",
