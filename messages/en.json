@@ -404,28 +404,17 @@
       "title": "Contact",
       "description": "Get in touch with Deralis Digital. Let's discuss your project and build something real."
     },
-    "hero": {
-      "title": "Let's build",
-      "titleHighlight": "something real",
-      "description": "If you have a specific problem you want to describe in writing before booking, use the form below. Otherwise, book directly."
-    },
+    "hero": {},
     "form": {
       "name": {
-        "label": "Name",
-        "placeholder": "Your name"
+        "label": "Name"
       },
       "email": {
-        "label": "Email",
-        "placeholder": "you@company.com"
+        "label": "Email"
       },
       "company": {
         "label": "Company",
-        "optional": "(optional)",
-        "placeholder": "Your company name"
-      },
-      "message": {
-        "label": "Tell me about your project",
-        "placeholder": "Describe your project, goals, and timeline..."
+        "optional": "(optional)"
       },
       "error": "Something went wrong. Please try again or email me directly.",
       "required": "*"
@@ -434,42 +423,7 @@
       "title": "Message sent.",
       "description": "Thanks for reaching out. I will get back to you within 24 hours."
     },
-    "sidebar": {
-      "contactInfo": {
-        "title": "Contact Info",
-        "location": "Based in France. Working Worldwide",
-        "response": "Direct communication"
-      },
-      "whatToExpect": {
-        "title": "What to expect",
-        "items": [
-          "I reply within 24 hours",
-          "Systems Audit session",
-          "No-obligation scope definition"
-        ]
-      },
-      "quickAnswers": {
-        "title": "Quick answers",
-        "items": {
-          "notSure": {
-            "question": "What if I'm not sure what I need?",
-            "answer": "That's fine. The Systems Audit exists to figure that out."
-          },
-          "startups": {
-            "question": "Do you work with startups?",
-            "answer": "Only if the business is operational and the problem is defined."
-          },
-          "timeline": {
-            "question": "What's your typical timeline?",
-            "answer": "Most projects take 4 to 12 weeks depending on scope."
-          }
-        }
-      }
-    },
-    "cta": {
-      "preferEmail": "Prefer email?",
-      "reachOut": "Reach out directly at"
-    },
+    "cta": {},
     "page": {
       "metadata": {
         "title": "Contact",

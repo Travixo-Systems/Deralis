@@ -402,28 +402,17 @@
       "title": "Contact",
       "description": "Contactez Deralis Digital pour parler de votre projet et voir comment le traduire en système concret."
     },
-    "hero": {
-      "title": "Construisons",
-      "titleHighlight": "quelque chose de concret",
-      "description": "Si vous avez un problème précis à décrire par écrit avant de réserver, utilisez le formulaire ci-dessous. Sinon, réservez directement."
-    },
+    "hero": {},
     "form": {
       "name": {
-        "label": "Nom",
-        "placeholder": "Votre nom"
+        "label": "Nom"
       },
       "email": {
-        "label": "Email",
-        "placeholder": "vous@entreprise.com"
+        "label": "Email"
       },
       "company": {
         "label": "Entreprise",
-        "optional": "(optionnel)",
-        "placeholder": "Nom de votre entreprise"
-      },
-      "message": {
-        "label": "Parlez-moi de votre projet",
-        "placeholder": "Expliquez votre contexte, votre objectif et votre échéance idéale..."
+        "optional": "(optionnel)"
       },
       "error": "Une erreur s'est produite. Veuillez réessayer ou me contacter directement par email.",
       "required": "*"
@@ -432,42 +421,7 @@
       "title": "Message envoyé.",
       "description": "Merci pour votre message. Je reviens vers vous sous 24 heures (jours ouvrés)."
     },
-    "sidebar": {
-      "contactInfo": {
-        "title": "Informations de contact",
-        "location": "Basé en France. Collaboration avec des clients dans le monde entier",
-        "response": "Réponse sous 24h"
-      },
-      "whatToExpect": {
-        "title": "Ce que vous pouvez attendre",
-        "items": [
-          "Une réponse claire sous 24 heures",
-          "Un audit système de 300 euros si nécessaire",
-          "Un brief écrit avant toute proposition"
-        ]
-      },
-      "quickAnswers": {
-        "title": "Réponses rapides",
-        "items": {
-          "notSure": {
-            "question": "Et si je ne sais pas ce dont j'ai besoin ?",
-            "answer": "C'est fréquent. Expliquez simplement votre situation, je vous aiderai à y voir plus clair."
-          },
-          "startups": {
-            "question": "Travaillez-vous avec des startups ?",
-            "answer": "Uniquement si l'activité est déjà en fonctionnement et que le problème est identifié."
-          },
-          "timeline": {
-            "question": "Quels sont vos délais typiques ?",
-            "answer": "La plupart des projets demandent entre quatre et douze semaines selon le périmètre."
-          }
-        }
-      }
-    },
-    "cta": {
-      "preferEmail": "Vous préférez l'email ?",
-      "reachOut": "Écrivez-moi directement à"
-    },
+    "cta": {},
     "page": {
       "metadata": {
         "title": "Contact",
