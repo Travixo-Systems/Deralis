@@ -1,11 +1,4 @@
 {
-  "metadata": {
-    "title": {
-      "default": "Deralis Digital: I build the systems businesses need to operate",
-      "template": "%s: Deralis Digital"
-    },
-    "description": "Most businesses already have tools. What they are missing is a system. I build the system that fixes that."
-  },
   "common": {
     "nav": {
       "home": "Home",

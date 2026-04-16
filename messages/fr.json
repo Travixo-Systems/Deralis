@@ -1,11 +1,4 @@
 {
-  "metadata": {
-    "title": {
-      "default": "Deralis Digital: Je construis les systèmes dont les entreprises ont besoin pour fonctionner",
-      "template": "%s: Deralis Digital"
-    },
-    "description": "La plupart des entreprises ont déjà des outils. Ce qui leur manque, c'est un système. Je construis le système qui règle ça."
-  },
   "common": {
     "nav": {
       "home": "Accueil",
