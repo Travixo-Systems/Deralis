@@ -272,108 +272,6 @@
     }
   },
   "projects": {
-    "metadata": {
-      "title": "Réalisations",
-      "description": "Exemples de plateformes construites par Deralis Digital : applications SaaS, tableaux de bord et systèmes web basés sur Next.js, Supabase et PostgreSQL."
-    },
-    "hero": {
-      "title": "Mes",
-      "titleHighlight": "réalisations",
-      "description": "Des systèmes réels que j'ai construits et déployés. Outils opérationnels, plateformes SaaS et tableaux de bord."
-    },
-    "stats": {
-      "delivered": "Plateformes livrées",
-      "founded": "Création",
-      "completionRate": "Taux de réussite"
-    },
-    "featured": {
-      "badge": "Projet mis en avant",
-      "keyFeatures": "Fonctionnalités principales"
-    },
-    "fleetSection": {
-      "caption": "Gestion de flotte d'équipements avec suivi d'état en temps réel"
-    },
-    "moreProjects": "Autres projets",
-    "status": {
-      "live": "En ligne",
-      "inDevelopment": "En développement",
-      "mvpComplete": "MVP terminé",
-      "completed": "Terminé"
-    },
-    "items": {
-      "travixoSystems": {
-        "title": "TraviXO Systems",
-        "type": "SaaS B2B",
-        "description": "SaaS multi-tenant de conformité VGP pour le secteur français de la location de matériel. Construit après avoir travaillé directement dans le secteur chez Loxam et Ariane Systems.",
-        "features": [
-          "Architecture multi-tenant",
-          "Suivi d'actifs par QR code",
-          "Planification des inspections",
-          "Journal et rapports de conformité",
-          "Contrôle d'accès par rôles"
-        ]
-      },
-      "govPortal": {
-        "title": "Portail de demandes gouvernementales",
-        "type": "Proposition spec",
-        "description": "Un MVP de prise en charge de demandes de passeport que j'ai construit et proposé à un bureau consulaire. Le déclencheur : j'ai vécu leur processus moi-même et j'ai remarqué quelque chose de cassé. Ils me demandaient des fichiers que j'avais déjà téléversés en ligne, exigeant un déplacement qui n'aurait pas dû être nécessaire. J'ai construit le flux numérique qui aurait comblé l'écart, et je l'ai proposé directement après une rencontre en personne. La proposition est actuellement entre leurs mains.",
-        "features": [
-          "Soumission et suivi des demandes",
-          "Tableau de bord pour le personnel",
-          "Gestion documentaire",
-          "Notifications de statut"
-        ]
-      },
-      "opsDashboard": {
-        "title": "Tableau de bord Deralis Ops",
-        "type": "Démo interactive",
-        "description": "Démo de tableau de bord opérationnel interactif. Construit pour montrer aux prospects à quoi ressemble un vrai système opérationnel.",
-        "features": [
-          "Tableau des missions avec badges de statut et priorité",
-          "Cartes KPI avec alertes animées",
-          "Vue de disponibilité des équipes",
-          "Liste filtrable avec panneau de détails",
-          "Panneau de contrôle pour les démonstrations"
-        ]
-      },
-      "marcheDiaspora": {
-        "title": "Marché Diaspora",
-        "type": "Démo interactive",
-        "description": "Catalogue produits avec gestion des commandes. Démo interactive avec flux de commande complet.",
-        "features": [
-          "Catalogue de 32 produits avec filtres et recherche",
-          "Panier avec gestion des quantités et passage de commande",
-          "Tableau de bord propriétaire avec suivi des commandes",
-          "Panneau de contrôle pour basculer entre les vues"
-        ]
-      },
-      "fluxClient": {
-        "title": "Flux Client",
-        "type": "Concept Build",
-        "description": "Une demo live de prise en charge structuree. Une demande arrive, devient une fiche mission, recoit un statut, visible par toute l'equipe sans que personne n'ait a transferer quoi que ce soit.",
-        "features": [
-          "Prise en charge structuree des demandes clients",
-          "Creation automatique de fiches mission",
-          "Suivi et attribution des statuts",
-          "Visibilite pour toute l'equipe"
-        ]
-      },
-      "onboard": {
-        "title": "Onboard",
-        "type": "Concept Build",
-        "description": "Une demo d'integration structuree. Creez un dossier, regardez la checklist apparaitre instantanement. Chaque etape visible. Rien qui depend de la memoire de quelqu'un.",
-        "features": [
-          "Dossiers d'integration structures",
-          "Generation instantanee de checklist",
-          "Visibilite etape par etape",
-          "Aucun suivi manuel necessaire"
-        ]
-      }
-    },
-    "cta": {
-      "title": "Vous avez un projet qui devrait ressembler à l'un de ceux-ci ?",
-      "description": "Si vous pouvez décrire ce qui ne fonctionne pas, je peux décrire ce qui le résoudra."
-    },
     "page": {
       "metadata": {
         "title": "Réalisations",
@@ -608,14 +506,7 @@
     }
   },
   "blog": {
-    "metadata": {
-      "title": "Blog: Réflexions techniques et études de cas",
-      "description": "Articles techniques, études de cas et réflexions sur le développement web moderne, les plateformes SaaS et les systèmes opérationnels pour entreprises établies."
-    },
     "hero": {
-      "title": "",
-      "titleHighlight": "Insights",
-      "description": "Réflexions concrètes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent.",
       "h1": "En conditions <em>réelles</em>.",
       "subtitle": "Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
     },
@@ -651,22 +542,10 @@
         "excerpt": "Cinq cas d'usage IA qui fonctionnent vraiment pour les opérations des petites entreprises, et trois qui restent décevants. Honnête, concret, sans battage."
       }
     },
-    "cta": {
-      "title": "Un projet en tête ?",
-      "description": "Discutons de ce qu'il faut construire pour votre entreprise."
-    },
     "page": {
       "metadata": {
         "title": "Carnet",
         "description": "En conditions réelles. Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
-      },
-      "hero": {
-        "title": "En conditions ",
-        "titleHighlight": "réelles",
-        "description": "Notes sur les opérations, le logiciel, et ce qu'il faut vraiment pour construire des systèmes qui fonctionnent."
-      },
-      "postMeta": {
-        "minRead": "min de lecture"
       }
     },
     "eyebrow": "Carnet",
@@ -680,9 +559,6 @@
     "featured": {
       "eyebrow": "Le plus récent",
       "cta": "Lire l'article →"
-    },
-    "list": {
-      "cta": "Lire →"
     }
   },
   "privacy": {

@@ -272,108 +272,6 @@
     }
   },
   "projects": {
-    "metadata": {
-      "title": "Projects",
-      "description": "Real platforms built by Deralis Digital. SaaS applications, dashboards, and web systems powered by Next.js, Supabase, and PostgreSQL."
-    },
-    "hero": {
-      "title": "My",
-      "titleHighlight": "work",
-      "description": "Real systems I have built and deployed. Operations tools, SaaS platforms, and operational dashboards."
-    },
-    "stats": {
-      "delivered": "Platforms delivered",
-      "founded": "Founded",
-      "completionRate": ""
-    },
-    "featured": {
-      "badge": "Featured Project",
-      "keyFeatures": "Key Features"
-    },
-    "fleetSection": {
-      "caption": "Equipment fleet management with real-time status tracking"
-    },
-    "moreProjects": "More Projects",
-    "status": {
-      "live": "Live",
-      "inDevelopment": "In Development",
-      "mvpComplete": "MVP Complete",
-      "completed": "Completed"
-    },
-    "items": {
-      "travixoSystems": {
-        "title": "TraviXO Systems",
-        "type": "B2B SaaS",
-        "description": "Multi-tenant VGP compliance SaaS for the French equipment rental industry. Built after working directly in the sector at Loxam and Ariane Systems.",
-        "features": [
-          "Multi-tenant architecture",
-          "QR code asset tracking",
-          "Inspection scheduling",
-          "Compliance log & reporting",
-          "Role-based access control"
-        ]
-      },
-      "govPortal": {
-        "title": "Government Application Portal",
-        "type": "Spec Pitch",
-        "description": "A passport intake MVP I built and pitched to a consular office. The trigger: I went through their process myself and noticed something broken. They asked for files I had already uploaded online, requiring an in-person trip that should not have been necessary. I built the digital flow that would have closed the gap, and proposed it directly after meeting in person. The proposal is currently with them.",
-        "features": [
-          "Application submission and tracking",
-          "Staff review dashboard",
-          "Document management",
-          "Status notifications"
-        ]
-      },
-      "opsDashboard": {
-        "title": "Deralis Ops Dashboard",
-        "type": "Interactive Demo",
-        "description": "Interactive operations dashboard demo. Built to show prospects what a real operations system looks like before any build is discussed.",
-        "features": [
-          "Live job table with status badges and priority flags",
-          "KPI cards with animated issue alerts",
-          "Team availability view",
-          "Searchable and filterable job list with detail panel",
-          "Demo Controls panel for live demonstrations"
-        ]
-      },
-      "marcheDiaspora": {
-        "title": "Marche Diaspora",
-        "description": "Product catalog with order management. Interactive demo with full ordering flow.",
-        "type": "Concept Build",
-        "features": [
-          "32-product catalog with category filtering and search",
-          "Cart with quantity controls and order placement",
-          "Owner dashboard with order status workflow",
-          "Demo Controls panel for switching views"
-        ]
-      },
-      "fluxClient": {
-        "title": "Flux Client",
-        "type": "Concept Build",
-        "description": "A live demo of structured client intake. An inquiry arrives, becomes a job record, assigned a status, visible to the whole team without anyone forwarding anything to anyone.",
-        "features": [
-          "Structured client inquiry intake",
-          "Automatic job record creation",
-          "Status tracking and assignment",
-          "Team-wide visibility"
-        ]
-      },
-      "onboard": {
-        "title": "Onboard",
-        "type": "Concept Build",
-        "description": "A demo of structured onboarding. Create a record, watch the task checklist appear instantly. Every step visible. Nothing depending on someone remembering.",
-        "features": [
-          "Structured onboarding records",
-          "Instant task checklist generation",
-          "Step-by-step visibility",
-          "No manual follow-up needed"
-        ]
-      }
-    },
-    "cta": {
-      "title": "Have a project that should look like one of these?",
-      "description": "If you can describe what is breaking, I can describe what would fix it."
-    },
     "page": {
       "metadata": {
         "title": "Projects",
@@ -610,14 +508,7 @@
     }
   },
   "blog": {
-    "metadata": {
-      "title": "Blog: Engineering Insights & Case Studies",
-      "description": "Technical articles, case studies, and strategic insights on modern web development, SaaS platforms, and operations systems for established businesses."
-    },
     "hero": {
-      "title": "",
-      "titleHighlight": "Insights",
-      "description": "Practical thinking on operations, software, and what it actually takes to build systems that work.",
       "h1": "From <em>practice</em>.",
       "subtitle": "Notes on operations, software, and what it actually takes to build systems that work."
     },
@@ -653,22 +544,10 @@
         "excerpt": "Five AI use cases that actually work for small business operations, and three that still fall short. Honest, specific, no hype."
       }
     },
-    "cta": {
-      "title": "Have a project in mind?",
-      "description": "Let's discuss how I can build the right system for your business."
-    },
     "page": {
       "metadata": {
         "title": "Blog",
         "description": "From the practice. Notes on operations, software, and what it actually takes to build systems that work."
-      },
-      "hero": {
-        "title": "From the",
-        "titleHighlight": "practice",
-        "description": "Notes on operations, software, and what it actually takes to build systems that work."
-      },
-      "postMeta": {
-        "minRead": "min read"
       }
     },
     "eyebrow": "Blog",
@@ -682,9 +561,6 @@
     "featured": {
       "eyebrow": "Latest",
       "cta": "Read the article →"
-    },
-    "list": {
-      "cta": "Read →"
     }
   },
   "privacy": {
