@@ -817,26 +817,10 @@
       "role": "Role",
       "status": "Status",
       "started": "Started",
-      "live": "Live",
-      "inDevelopment": "in development",
-      "repo": "Repo",
-      "private": "Private",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "data": "Data",
-      "infrastructure": "Infrastructure",
-      "tooling": "Tooling",
-      "viewProject": "View project →",
       "whereToFind": "Where to find it",
-      "linksTitle": "Links.",
-      "builtWith": "Built with",
-      "stackTitle": "The stack underneath.",
-      "stackIntro": "Listed plainly. The choice of tools matters less than how they are used.",
       "whatItIs": "What it is",
       "whatIBuilt": "What I built",
-      "insideTheSystem": "Inside the system",
-      "relatedProjects": "Related projects",
-      "relatedTitle": "Other things I have built."
+      "insideTheSystem": "Inside the system"
     },
     "travixo": {
       "metadata": {
