@@ -869,35 +869,13 @@
       "inside": {
         "title": "Quelques-uns des écrans qui le font tourner.",
         "cap1": "Le registre du matériel, où chaque pièce louable vit avec sa classe réglementaire et son calendrier d'inspection.",
-        "cap2": "Le flux d'inspection qui remonte ce qui est dû, ce qui est en retard, et ce qui a été terminé dans le dernier cycle.",
-        "cap3": "La piste d'audit exportable. Chaque action attribuable, chaque enregistrement reproductible."
+        "cap2": "Le flux d'inspection qui remonte ce qui est dû, ce qui est en retard, et ce qui a été terminé dans le dernier cycle."
       },
       "links": {
         "liveLabel": "En production",
         "liveValue": "app.travixosystems.com",
         "repoLabel": "Dépôt",
         "repoValue": "Privé"
-      },
-      "related": {
-        "card1": {
-          "eyebrow": "Démo / 2026",
-          "title": "Flux Client",
-          "body": "Une démo intake-vers-job-board montrant comment un seul formulaire peut alimenter une vue opérationnelle en temps réel pour une petite équipe.",
-          "url": "https://flux-client-umber.vercel.app/"
-        },
-        "card2": {
-          "eyebrow": "Démo / 2026",
-          "title": "Onboard",
-          "body": "Un suivi d'intégration staff et clients qui remplace le tableur sur lequel la plupart des petites équipes font tourner leurs premières semaines en silence.",
-          "url": "https://onboard-blush.vercel.app/"
-        },
-        "card3": {
-          "eyebrow": "Proposition spec / 2026",
-          "title": "Portail de demandes gouvernementales",
-          "body": "Une proposition spec pour un portail structuré de prise en charge de demandes. Pas livré. Inclus ici comme référence de périmètre.",
-          "url": "https://government-portal-ashy.vercel.app/",
-          "disclosure": "Proposition spec. Pas une mission livrée."
-        }
       },
       "stack": {
         "eyebrow": "Construit avec",

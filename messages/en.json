@@ -871,35 +871,13 @@
       "inside": {
         "title": "A few of the screens that run it.",
         "cap1": "The equipment register, where every rentable item lives with its regulatory class and inspection schedule.",
-        "cap2": "The inspection workflow surfacing what is due, what is overdue, and what was completed in the last cycle.",
-        "cap3": "The exportable audit trail. Every action attributable, every record reproducible."
+        "cap2": "The inspection workflow surfacing what is due, what is overdue, and what was completed in the last cycle."
       },
       "links": {
         "liveLabel": "Live",
         "liveValue": "app.travixosystems.com",
         "repoLabel": "Repo",
         "repoValue": "Private"
-      },
-      "related": {
-        "card1": {
-          "eyebrow": "Demo build / 2026",
-          "title": "Flux Client",
-          "body": "An intake-to-job-board demo showing how a single form can drive a real-time operational view for a small team.",
-          "url": "https://flux-client-umber.vercel.app/"
-        },
-        "card2": {
-          "eyebrow": "Demo build / 2026",
-          "title": "Onboard",
-          "body": "A staff and client onboarding tracker that replaces the spreadsheet most small teams quietly run their first weeks on.",
-          "url": "https://onboard-blush.vercel.app/"
-        },
-        "card3": {
-          "eyebrow": "Spec pitch / 2026",
-          "title": "Government Application Portal",
-          "body": "A spec pitch for a structured application intake portal. Not delivered. Included here as scope reference.",
-          "url": "https://government-portal-ashy.vercel.app/",
-          "disclosure": "Spec pitch. Not a delivered engagement."
-        }
       },
       "stack": {
         "eyebrow": "Built with",
