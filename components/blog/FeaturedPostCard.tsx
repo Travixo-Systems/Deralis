@@ -2,12 +2,12 @@ import { useLocale, useTranslations } from "next-intl";
 import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import { DsCardPeak } from "@/components/shared/DsCard";
-import { formatBlogDate, formatReadTime, getFeaturedPost } from "@/lib/blog";
+import { formatBlogDate, formatReadTime, getFeaturedPost, type Locale } from "@/lib/blog";
 
 export default function FeaturedPostCard() {
   const t = useTranslations("blog");
-  const locale = useLocale();
-  const post = getFeaturedPost();
+  const locale = useLocale() as Locale;
+  const post = getFeaturedPost(locale);
 
   return (
     <DsCardPeak>

@@ -207,20 +207,96 @@ h2 em,
   }
 }
 
-/* ========== BLOG POST ROW (PostListCard) ========== */
-.blog-post-row {
+/* ========== BLOG POST LIST (PostListCard) ========== */
+:root {
+  --category-pill-bg: rgba(27, 58, 92, 0.06);
+}
+:root[data-theme="dark"] {
+  --category-pill-bg: rgba(94, 139, 174, 0.12);
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.dpc {
   display: block;
   text-decoration: none;
   color: inherit;
-  transition: transform 150ms ease;
-  border-radius: 4px;
+  background: var(--card-paper);
+  border: 1px solid var(--border-soft);
+  border-left: 3px solid transparent;
+  border-radius: 8px;
+  padding: 22px 24px;
+  transition: border-left-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
 }
-.blog-post-row:hover {
-  transform: translateX(4px);
+.dpc:hover {
+  border-left-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(20, 17, 13, 0.06);
 }
-.blog-post-row:focus-visible {
+:root[data-theme="dark"] .dpc:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+.dpc:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 4px;
+  outline-offset: 2px;
+}
+.dpc-wide {
+  grid-column: 1 / -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dpc {
+    transition: border-left-color 200ms ease;
+  }
+  .dpc:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.dpc-header {
+  margin-bottom: 12px;
+}
+.dpc-title {
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.dpc-excerpt {
+}
+
+@media (max-width: 960px) {
+  .dpc {
+    padding: 14px 18px;
+  }
+  .dpc .dpc-title {
+    font-size: 16px;
+    line-height: 1.22;
+    margin-bottom: 6px;
+  }
+  .dpc .dpc-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .dpc .dpc-header {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 640px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+  .dpc-wide {
+    grid-column: auto;
+  }
 }
 
 /* ========== SKIP LINK ========== */

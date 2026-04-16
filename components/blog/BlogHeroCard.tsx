@@ -1,18 +1,19 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import type { CSSProperties } from "react";
 import DsCard from "@/components/shared/DsCard";
 import TabLabel from "@/components/shared/TabLabel";
 import RichText from "@/components/shared/RichText";
-import { getTopicCounts } from "@/lib/blog";
+import { getTopicCounts, type Locale } from "@/lib/blog";
 
-const TOPIC_ORDER = ["Strategy", "Development", "Automation", "AI"] as const;
+const TOPIC_ORDER = ["strategy", "development", "automation", "ai"] as const;
 
 export default function BlogHeroCard() {
   const t = useTranslations("blog");
-  const counts = getTopicCounts();
+  const locale = useLocale() as Locale;
+  const counts = new Map(getTopicCounts(locale).map((r) => [r.categoryKey, r]));
   const topics = TOPIC_ORDER
-    .filter((cat) => (counts.get(cat) ?? 0) > 0)
-    .map((category) => ({ category, count: counts.get(category)! }));
+    .filter((key) => (counts.get(key)?.count ?? 0) > 0)
+    .map((key) => counts.get(key)!);
 
   return (
     <DsCard>
@@ -32,13 +33,13 @@ export default function BlogHeroCard() {
           <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
             {topics.map((topic, i) => (
               <li
-                key={topic.category}
+                key={topic.categoryKey}
                 style={{
                   ...builtItem,
                   marginBottom: i === topics.length - 1 ? 0 : 18,
                 }}
               >
-                <span style={topicName}>{topic.category}</span>
+                <span style={topicName}>{topic.categoryLabel}</span>
                 <span style={topicCount}>
                   {t(topic.count === 1 ? "topics.count.singular" : "topics.count.plural", {
                     count: topic.count,

@@ -198,7 +198,6 @@ export default async function BlogPostPage({ params }: Props) {
 
   const t = await getTranslations({ locale, namespace: "blog" });
   const tPost = await getTranslations({ locale, namespace: "blogPost" });
-  const tPage = await getTranslations({ locale, namespace: "blog.page" });
 
   // Pick 3 other posts for the "more" strip
   const otherPosts = postsList.filter((p) => p.slug !== slug).slice(0, 3);

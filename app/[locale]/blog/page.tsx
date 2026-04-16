@@ -1,4 +1,7 @@
-// TODO: FR translation pending. All 6 posts EN only. /fr/blog serves EN. Translate or add banner as a separate task.
+// Blog posts localized via messages/{locale}.json -> blog.posts[slug].
+// Frontmatter = structure SoT (date, readTime, featured, category key).
+// Locale files = content SoT (title, excerpt, category label).
+// Missing slug in locale -> loader falls back to frontmatter + logs warning.
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import BlogHeroCard from "@/components/blog/BlogHeroCard";

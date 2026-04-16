@@ -2,207 +2,114 @@ import { useLocale } from "next-intl";
 import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import DsCard from "@/components/shared/DsCard";
-import { formatBlogDate, formatReadTime, getNonFeaturedPosts, type BlogPost } from "@/lib/blog";
+import {
+  formatBlogDate,
+  formatReadTimeCompact,
+  getNonFeaturedPosts,
+  truncateWords,
+  type BlogPost,
+  type Locale,
+} from "@/lib/blog";
+
+const EXCERPT_WORDS = 18;
 
 export default function PostListCard() {
-  const locale = useLocale();
-  const posts = getNonFeaturedPosts();
-  const [large, ...tight] = posts;
+  const locale = useLocale() as Locale;
+  const posts = getNonFeaturedPosts(locale);
+  const isOddCount = posts.length % 2 === 1;
 
   return (
     <DsCard>
-      <div style={{ maxWidth: 820 }}>
-        <LargeRow post={large} locale={locale} />
-        <div style={divider} />
-        {tight.map((post, i) => (
-          <TightRow
-            key={post.slug}
-            post={post}
-            locale={locale}
-            last={i === tight.length - 1}
-          />
-        ))}
+      <div className="post-grid">
+        {posts.map((post, i) => {
+          const isLastOrphan = isOddCount && i === posts.length - 1;
+          return (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className={`dpc${isLastOrphan ? " dpc-wide" : ""}`}
+            >
+              <PostCardContent post={post} locale={locale} />
+            </Link>
+          );
+        })}
       </div>
     </DsCard>
   );
 }
 
-function LargeRow({ post, locale }: { post: BlogPost; locale: string }) {
+function PostCardContent({ post, locale }: { post: BlogPost; locale: Locale }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="blog-post-row" style={largeRow}>
-      <div style={largeMetaLine}>
-        <span style={largeDate}>{formatBlogDate(post.date, locale)}</span>
-        <span style={readTimePill}>{formatReadTime(post.readTime, locale)}</span>
-      </div>
-      <h3 style={largeTitle}>{post.title}</h3>
-      <p style={largeExcerpt}>{post.description}</p>
-      <span style={categoryPill}>{post.category}</span>
-    </Link>
-  );
-}
-
-function TightRow({
-  post,
-  locale,
-  last,
-}: {
-  post: BlogPost;
-  locale: string;
-  last: boolean;
-}) {
-  return (
-    <Link
-      href={`/blog/${post.slug}`}
-      className="blog-post-row"
-      style={{
-        ...tightRow,
-        borderBottom: last ? "none" : "1px solid rgba(20, 17, 13, 0.08)",
-      }}
-    >
-      <div style={tightMain}>
-        <div style={tightTitleLine}>
-          <span style={tightDate}>{formatBlogDate(post.date, locale)}</span>
-          <h3 style={tightTitle}>{post.title}</h3>
+    <>
+      <div className="dpc-header" style={header}>
+        <span style={date}>{formatBlogDate(post.date, locale)}</span>
+        <div style={pillRow}>
+          <span style={categoryPill}>{post.categoryLabel}</span>
+          <span style={readTimePill}>{formatReadTimeCompact(post.readTime)}</span>
         </div>
-        <p style={tightDesc}>{post.description}</p>
       </div>
-      <span style={readTimePillSmall}>{formatReadTime(post.readTime, locale)}</span>
-    </Link>
+      <h3 className="dpc-title" style={title}>{post.title}</h3>
+      <p className="dpc-excerpt" style={excerpt}>{truncateWords(post.excerpt, EXCERPT_WORDS)}</p>
+    </>
   );
 }
 
-const divider: CSSProperties = {
-  height: 1,
-  background: "var(--border-soft)",
-  margin: "0 0 4px",
-};
-
-const largeRow: CSSProperties = {
-  display: "block",
-  padding: "8px 0 32px",
-};
-
-const largeMetaLine: CSSProperties = {
+const header: CSSProperties = {
   display: "flex",
-  alignItems: "center",
-  gap: 14,
-  marginBottom: 16,
+  justifyContent: "space-between",
+  alignItems: "flex-start",
+  gap: 12,
 };
 
-const largeDate: CSSProperties = {
-  fontSize: 12,
-  color: "var(--text-muted)",
+const date: CSSProperties = {
+  fontSize: 11,
   fontFamily: "var(--font-mono), ui-monospace, monospace",
-  letterSpacing: "0.04em",
-};
-
-const readTimePill: CSSProperties = {
-  fontSize: 10,
-  textTransform: "uppercase",
-  letterSpacing: "0.12em",
   color: "var(--text-muted)",
-  border: "1px solid var(--border-strong)",
-  borderRadius: "var(--radius-pill)",
-  padding: "3px 8px",
-  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
-  fontWeight: 600,
+  letterSpacing: "0.04em",
+  flexShrink: 0,
 };
 
-const largeTitle: CSSProperties = {
-  fontFamily: "var(--font-fraunces), Georgia, serif",
-  fontSize: "clamp(22px, 2.2vw, 24px)",
-  fontWeight: 500,
-  lineHeight: 1.22,
-  letterSpacing: "-0.015em",
-  color: "var(--text-primary)",
-  marginBottom: 12,
-  maxWidth: "30ch",
-};
-
-const largeExcerpt: CSSProperties = {
-  fontSize: 15,
-  lineHeight: 1.55,
-  color: "var(--text-secondary)",
-  maxWidth: "62ch",
-  marginBottom: 18,
-  display: "-webkit-box",
-  WebkitLineClamp: 2,
-  WebkitBoxOrient: "vertical",
-  overflow: "hidden",
+const pillRow: CSSProperties = {
+  display: "flex",
+  gap: 6,
+  flexShrink: 0,
 };
 
 const categoryPill: CSSProperties = {
-  display: "inline-block",
   fontFamily: "var(--font-fraunces), Georgia, serif",
-  fontSize: 11,
-  textTransform: "uppercase",
-  letterSpacing: "0.14em",
-  color: "var(--text-muted)",
-  borderLeft: "2px solid var(--accent)",
-  paddingLeft: 10,
-};
-
-const tightRow: CSSProperties = {
-  display: "flex",
-  alignItems: "center",
-  gap: 18,
-  padding: "22px 0",
-  textDecoration: "none",
-  color: "inherit",
-};
-
-const tightMain: CSSProperties = {
-  flex: 1,
-  minWidth: 0,
-};
-
-const tightTitleLine: CSSProperties = {
-  display: "flex",
-  alignItems: "baseline",
-  gap: 12,
-  marginBottom: 6,
-  flexWrap: "wrap",
-};
-
-const tightDate: CSSProperties = {
-  fontSize: 11,
-  color: "var(--text-muted)",
-  fontFamily: "var(--font-mono), ui-monospace, monospace",
-  letterSpacing: "0.04em",
-  flexShrink: 0,
-};
-
-const tightTitle: CSSProperties = {
-  fontFamily: "var(--font-fraunces), Georgia, serif",
-  fontSize: 17,
-  fontWeight: 500,
-  lineHeight: 1.3,
-  letterSpacing: "-0.01em",
-  color: "var(--text-primary)",
-  margin: 0,
-};
-
-const tightDesc: CSSProperties = {
-  fontSize: 13,
-  lineHeight: 1.5,
-  color: "var(--text-secondary)",
-  margin: 0,
-  display: "-webkit-box",
-  WebkitLineClamp: 1,
-  WebkitBoxOrient: "vertical",
-  overflow: "hidden",
-};
-
-const readTimePillSmall: CSSProperties = {
   fontSize: 10,
+  fontWeight: 600,
+  color: "var(--accent)",
+  background: "var(--category-pill-bg)",
+  padding: "3px 9px",
+  borderRadius: 2,
   textTransform: "uppercase",
-  letterSpacing: "0.12em",
+  letterSpacing: "0.1em",
+};
+
+const readTimePill: CSSProperties = {
+  fontFamily: "var(--font-mono), ui-monospace, monospace",
+  fontSize: 9,
+  fontWeight: 600,
   color: "var(--text-muted)",
   border: "1px solid var(--border-strong)",
-  borderRadius: "var(--radius-pill)",
   padding: "3px 8px",
+  borderRadius: 2,
+  textTransform: "uppercase",
+  letterSpacing: "0.06em",
+};
+
+const title: CSSProperties = {
+  fontFamily: "var(--font-fraunces), Georgia, serif",
+  fontWeight: 500,
+  letterSpacing: "-0.015em",
+  color: "var(--text-primary)",
+};
+
+const excerpt: CSSProperties = {
   fontFamily: "var(--font-ibm-plex-sans), sans-serif",
-  fontWeight: 600,
-  flexShrink: 0,
-  alignSelf: "center",
+  fontSize: 13,
+  lineHeight: 1.55,
+  color: "var(--text-secondary)",
+  margin: 0,
 };

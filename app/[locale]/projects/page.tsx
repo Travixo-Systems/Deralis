@@ -165,6 +165,7 @@ function ConceptsCard() {
       <div className="grid-2col">
         {items.map((item) => (
           <div key={item.num} style={conceptCard}>
+            <span style={livePill} aria-label="Live">LIVE</span>
             <span style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 16, fontWeight: 600, color: "var(--accent)", display: "block", marginBottom: 12 }}>{item.num}</span>
             <h3 style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 20, fontWeight: 500, color: "var(--text-primary)", marginBottom: 10, letterSpacing: "-0.01em" }}>{item.title}</h3>
             <p style={{ fontSize: 14, lineHeight: 1.6, color: "var(--text-secondary)", marginBottom: 16 }}>{item.desc}</p>
@@ -216,4 +217,21 @@ const ctaPeak: CSSProperties = {
 const conceptCard: CSSProperties = {
   background: "var(--card-paper)", border: "1px solid var(--border-soft)",
   borderLeft: "3px solid var(--accent)", borderRadius: "var(--radius-internal)", padding: "28px 24px",
+  position: "relative",
+};
+const livePill: CSSProperties = {
+  position: "absolute",
+  top: 20,
+  right: 20,
+  background: "var(--status-ok)",
+  color: "#FFFFFF",
+  padding: "4px 10px",
+  borderRadius: "var(--radius-pill)",
+  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
+  fontSize: 9,
+  fontWeight: 700,
+  textTransform: "uppercase",
+  letterSpacing: "0.16em",
+  border: "none",
+  lineHeight: 1,
 };
