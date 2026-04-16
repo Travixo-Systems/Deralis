@@ -217,23 +217,6 @@
         "consulaire": {
           "tab": "White-label",
           "url": "portail-consulaire.vercel.app / admin",
-          "title": "Portail consulaire",
-          "subtitle": "White-label · Pitched to a Paris consulate",
-          "caps": {
-            "01": {
-              "name": "Public intake",
-              "desc": "Citizen request form, validation, queue."
-            },
-            "02": {
-              "name": "Backoffice /admin",
-              "desc": "Case management, assignment, agent actions."
-            },
-            "03": {
-              "name": "Case tracking",
-              "desc": "Real-time status, notifications, history."
-            }
-          },
-          "description": "Reusable architecture for any office handling incoming requests: consulate, prefecture, agency.",
           "facts": {
             "stack": {
               "label": "Stack",

@@ -217,23 +217,6 @@
         "consulaire": {
           "tab": "White-label",
           "url": "portail-consulaire.vercel.app / admin",
-          "title": "Portail consulaire",
-          "subtitle": "White-label · Pitché à un consulat parisien",
-          "caps": {
-            "01": {
-              "name": "Intake publique",
-              "desc": "Formulaire de demande citoyen, validation, queue."
-            },
-            "02": {
-              "name": "Backoffice /admin",
-              "desc": "Gestion des dossiers, attribution, actions agents."
-            },
-            "03": {
-              "name": "Suivi des dossiers",
-              "desc": "Statut en temps réel, notifications, historique."
-            }
-          },
-          "description": "Architecture réutilisable pour tout bureau traitant des demandes entrantes : consulat, préfecture, cabinet.",
           "facts": {
             "stack": {
               "label": "Stack",
