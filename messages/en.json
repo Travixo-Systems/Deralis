@@ -20,7 +20,6 @@
       "learnMore": "Learn more",
       "viewMore": "View more",
       "viewAll": "View all",
-      "viewAllServices": "View all services",
       "viewAllPlatforms": "See all platforms",
       "readMore": "Read more",
       "backToHome": "Back to home",
@@ -410,7 +409,7 @@
         "url": "https://government-portal-ashy.vercel.app/",
         "viewBuildLabel": "View the build"
       },
-      "concepts": {        
+      "concepts": {
         "title": "Four patterns. All live.",
         "eyebrow": "Concept builds",
         "intro": "Working demos built to test patterns before they are used inside a real system. Each one is live, public, and runs on real code rather than staged screens.",
@@ -475,33 +474,6 @@
         "Deliver real operational value"
       ],
       "conclusion": "Every system I build is transferable. Documented. Maintainable by another developer. You own the system. There is no lock-in."
-    },
-    "whatWeBuild": {
-      "title": "What I build",
-      "description": "I specialize in full-stack platform development.",
-      "items": {
-        "saas": {
-          "title": "Operations management systems",
-          "description": "Web-based systems your team can access from anywhere, with logins, permissions, and recurring billing if you need it."
-        },
-        "dashboards": {
-          "title": "Team dashboards",
-          "description": "One screen that shows the whole team where work is, what is blocked, and what needs attention. With proper logins and role-based visibility."
-        },
-        "databases": {
-          "title": "Reliable data foundations",
-          "description": "The structured storage your operation needs, designed to grow with you and not lose data along the way."
-        },
-        "automation": {
-          "title": "Process automation",
-          "description": "Connecting your existing tools so information moves between them without anyone copy-pasting. Triggers, scheduled tasks, integrations."
-        },
-        "api": {
-          "title": "Tool connections",
-          "description": "When two tools need to talk to each other but don't, I build the bridge."
-        }
-      },
-      "note": "Each system I build is designed for the specific operation it serves. No templates. No copy-pasted solutions."
     },
     "howWeWork": {
       "title": "How I work",
@@ -661,27 +633,6 @@
         "label": "Company",
         "optional": "(optional)",
         "placeholder": "Your company name"
-      },
-      "service": {
-        "label": "Service interested in",
-        "placeholder": "Select a service",
-        "options": {
-          "consulting": "Systems Audit",
-          "development": "Custom System",
-          "ai": "Extensions",
-          "support": "Ongoing Support",
-          "other": "Other, not sure"
-        }
-      },
-      "budget": {
-        "label": "Budget range",
-        "placeholder": "Select a range",
-        "options": {
-          "5k10k": "€5,000 to €10,000",
-          "10k25k": "€10,000 to €25,000",
-          "over25k": "> €25,000",
-          "notSure": "Not sure yet"
-        }
       },
       "message": {
         "label": "Tell me about your project",

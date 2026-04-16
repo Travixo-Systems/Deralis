@@ -13,6 +13,7 @@ export default function ContactForm() {
   const t = useTranslations("contact.page.form");
   const tErrors = useTranslations("contact.page.form.errors");
   const tCommon = useTranslations("contact");
+  const tActions = useTranslations("common.actions");
   const locale = useLocale();
 
   const [state, setState] = useState<FormState>("idle");
@@ -195,7 +196,7 @@ export default function ContactForm() {
             transition: "background-color 300ms ease, color 300ms ease",
           }}
         >
-          {state === "submitting" ? tCommon("form.sending" as never) : t("submitButton")}
+          {state === "submitting" ? tActions("sending") : t("submitButton")}
           {state !== "submitting" && <span aria-hidden="true">→</span>}
         </button>
       </div>

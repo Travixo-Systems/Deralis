@@ -20,7 +20,6 @@
       "learnMore": "En savoir plus",
       "viewMore": "Voir plus",
       "viewAll": "Tout voir",
-      "viewAllServices": "Voir tous les services",
       "viewAllPlatforms": "Voir toutes les plateformes",
       "readMore": "Lire la suite",
       "backToHome": "Retour à l'accueil",
@@ -474,33 +473,6 @@
       ],
       "conclusion": "Chaque système que je construis est transmissible. Documenté. Maintenable par un autre développeur. Le système vous appartient. Il n'y a aucune dépendance."
     },
-    "whatWeBuild": {
-      "title": "Ce que je construis",
-      "description": "Je me concentre sur le développement de plateformes full-stack, utiles et exploitables en conditions réelles.",
-      "items": {
-        "saas": {
-          "title": "Systèmes de gestion opérationnelle",
-          "description": "Des systèmes web accessibles partout par votre équipe, avec connexions, droits d'accès et facturation récurrente si vous en avez besoin."
-        },
-        "dashboards": {
-          "title": "Tableaux de bord pour équipes",
-          "description": "Un écran unique qui montre à toute l'équipe où en est le travail, ce qui est bloqué et ce qui demande attention. Avec connexions et visibilité par rôle."
-        },
-        "databases": {
-          "title": "Fondations de données fiables",
-          "description": "Le stockage structuré dont votre fonctionnement a besoin, conçu pour grandir avec vous sans perdre d'information en chemin."
-        },
-        "automation": {
-          "title": "Automatisation des processus",
-          "description": "Connecter vos outils existants pour que l'information circule sans copier-coller. Déclencheurs, tâches planifiées, intégrations."
-        },
-        "api": {
-          "title": "Connexions entre outils",
-          "description": "Quand deux outils doivent communiquer mais ne le font pas, je construis le pont."
-        }
-      },
-      "note": "Chaque système que je construis est conçu pour le fonctionnement précis qu'il sert. Pas de templates. Pas de solutions copiées-collées."
-    },
     "howWeWork": {
       "title": "Comment je travaille",
       "description": "Vous travaillez directement avec l'ingénieur derrière Deralis Digital. Pas d'intermédiaires, pas de chaîne de sous-traitance. Le processus est transparent et technique :",
@@ -659,27 +631,6 @@
         "label": "Entreprise",
         "optional": "(optionnel)",
         "placeholder": "Nom de votre entreprise"
-      },
-      "service": {
-        "label": "Service souhaité",
-        "placeholder": "Sélectionnez un service",
-        "options": {
-          "consulting": "Audit système",
-          "development": "Système sur mesure",
-          "ai": "Extensions",
-          "support": "Suivi continu",
-          "other": "Autre, pas sûr"
-        }
-      },
-      "budget": {
-        "label": "Fourchette de budget",
-        "placeholder": "Sélectionnez une fourchette",
-        "options": {
-          "5k10k": "5 000 € à 10 000 €",
-          "10k25k": "10 000 € à 25 000 €",
-          "over25k": "> 25 000 €",
-          "notSure": "Pas encore défini"
-        }
       },
       "message": {
         "label": "Parlez-moi de votre projet",
