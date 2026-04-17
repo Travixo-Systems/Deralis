@@ -19,7 +19,7 @@ export default function FeaturedPostCard() {
           <span style={sep}> · </span>
           <span>{formatReadTime(post.readTime, locale)}</span>
         </p>
-        <p style={excerpt}>{post.description}</p>
+        <p style={excerpt}>{post.excerpt}</p>
         <Link href={`/blog/${post.slug}`} style={cta}>
           {t("featured.cta")}
         </Link>
