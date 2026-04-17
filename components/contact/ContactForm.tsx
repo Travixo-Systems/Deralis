@@ -95,7 +95,7 @@ export default function ContactForm() {
     lineHeight: 1.6,
     color: "var(--text-primary)",
     background: "var(--card-paper)",
-    border: `1px solid ${fieldErrors[name] ? "#B84A3A" : "var(--border-strong)"}`,
+    border: `1px solid ${fieldErrors[name] ? "var(--color-error)" : "var(--border-strong)"}`,
     borderRadius: "var(--radius-button)",
     padding: "14px 16px",
     fontFamily: "inherit",
@@ -113,9 +113,26 @@ export default function ContactForm() {
     color: "var(--text-muted)", fontWeight: 400, marginLeft: 6,
   };
   const errStyle: React.CSSProperties = {
-    fontSize: 13, color: "#B84A3A", marginTop: 6,
+    fontSize: 13, color: "var(--color-error)", marginTop: 6,
+    display: "flex", alignItems: "center", gap: 6, fontWeight: 500,
+  };
+  const errIconStyle: React.CSSProperties = {
+    display: "inline-flex", alignItems: "center", justifyContent: "center",
+    width: 16, height: 16, borderRadius: "50%",
+    background: "var(--color-error)", color: "#FFFFFF",
+    fontSize: 11, fontWeight: 700, lineHeight: 1,
+    flexShrink: 0,
   };
   const fieldBlock: React.CSSProperties = { marginBottom: 24 };
+
+  function ErrorLine({ id, children }: { id: string; children: React.ReactNode }) {
+    return (
+      <p id={id} style={errStyle}>
+        <span aria-hidden="true" style={errIconStyle}>!</span>
+        <span>{children}</span>
+      </p>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} noValidate>
@@ -125,7 +142,16 @@ export default function ContactForm() {
       </div>
 
       {formError && (
-        <p style={{ fontSize: 15, color: "#B84A3A", marginBottom: 24 }}>{formError}</p>
+        <p
+          role="alert"
+          style={{
+            fontSize: 15, color: "var(--color-error)", marginBottom: 24,
+            display: "flex", alignItems: "center", gap: 8, fontWeight: 500,
+          }}
+        >
+          <span aria-hidden="true" style={{ ...errIconStyle, width: 20, height: 20, fontSize: 13 }}>!</span>
+          <span>{formError}</span>
+        </p>
       )}
 
       <div style={fieldBlock}>
@@ -133,8 +159,13 @@ export default function ContactForm() {
           {tCommon("form.name.label")}
           <span style={reqStyle}>{tCommon("form.required")}</span>
         </label>
-        <input type="text" id="name" name="name" autoComplete="name" required style={fieldStyle("name")} />
-        {fieldErrors.name && <p style={errStyle}>{tErrors("required")}</p>}
+        <input
+          type="text" id="name" name="name" autoComplete="name" required
+          style={fieldStyle("name")}
+          aria-invalid={!!fieldErrors.name}
+          aria-describedby={fieldErrors.name ? "name-err" : undefined}
+        />
+        {fieldErrors.name && <ErrorLine id="name-err">{tErrors("required")}</ErrorLine>}
       </div>
 
       <div style={fieldBlock}>
@@ -142,8 +173,17 @@ export default function ContactForm() {
           {tCommon("form.email.label")}
           <span style={reqStyle}>{tCommon("form.required")}</span>
         </label>
-        <input type="email" id="email" name="email" autoComplete="email" required style={fieldStyle("email")} />
-        {fieldErrors.email && <p style={errStyle}>{fieldErrors.email === "invalid" ? tErrors("email") : tErrors("required")}</p>}
+        <input
+          type="email" id="email" name="email" autoComplete="email" required
+          style={fieldStyle("email")}
+          aria-invalid={!!fieldErrors.email}
+          aria-describedby={fieldErrors.email ? "email-err" : undefined}
+        />
+        {fieldErrors.email && (
+          <ErrorLine id="email-err">
+            {fieldErrors.email === "invalid" ? tErrors("email") : tErrors("required")}
+          </ErrorLine>
+        )}
       </div>
 
       <div style={fieldBlock}>
@@ -174,11 +214,13 @@ export default function ContactForm() {
           minLength={20}
           rows={6}
           style={{ ...fieldStyle("message"), minHeight: 160, resize: "vertical" }}
+          aria-invalid={!!fieldErrors.message}
+          aria-describedby={fieldErrors.message ? "message-err" : undefined}
         />
         {fieldErrors.message && (
-          <p style={errStyle}>
+          <ErrorLine id="message-err">
             {fieldErrors.message === "tooShort" ? tErrors("minLength") : tErrors("required")}
-          </p>
+          </ErrorLine>
         )}
       </div>
 
