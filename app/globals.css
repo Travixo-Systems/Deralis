@@ -190,6 +190,17 @@ h2 em,
   outline-offset: 2px;
 }
 
+/* ========== HERO CTA CAPTION ========== */
+.hero-cta-caption {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-muted);
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-weight: 400;
+  transition: color 450ms ease;
+}
+
 /* ========== HEADER / NAV ========== */
 @layer components {
   .audit-pill:hover {

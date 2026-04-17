@@ -6,7 +6,6 @@ import ExclusionPeak from "@/components/home/ExclusionPeak";
 import HomeCaseStudy from "@/components/home/HomeCaseStudy";
 import HowIWork from "@/components/home/HowIWork";
 import ClimaxPeak from "@/components/home/ClimaxPeak";
-import HomeFinalCTA from "@/components/home/HomeFinalCTA";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -61,7 +60,6 @@ export default async function Home({ params }: Props) {
       <HomeCaseStudy />
       <HowIWork />
       <ClimaxPeak />
-      <HomeFinalCTA />
     </>
   );
 }

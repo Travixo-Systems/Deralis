@@ -178,9 +178,12 @@ export default function HomeHero() {
             </p>
           </div>
           <div style={ctaRowStyle}>
-            <Link href="/audit" style={ctaPrimaryStyle}>
-              {t("ctaPrimary")}
-            </Link>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <Link href="/audit" style={ctaPrimaryStyle}>
+                {t("ctaPrimary")}
+              </Link>
+              <p className="hero-cta-caption">{t("ctaCaption")}</p>
+            </div>
             <Link href="/projects" style={ctaSecondaryStyle}>
               {t("ctaSecondary")}
             </Link>
