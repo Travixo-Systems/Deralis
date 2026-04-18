@@ -191,9 +191,11 @@ h2 em,
 }
 
 /* ========== FIRST CARD TOP GUTTER ========== */
-/* 16px canvas-grid gap between sticky nav and first card on every page */
+/* 16px canvas-grid gap between sticky nav and first card on every page.
+   !important required because DsCard inline sets `margin: 0 auto 22px`
+   which explicitly zeros margin-top. Applies to all viewports. */
 main > :first-child {
-  margin-top: 16px;
+  margin-top: 16px !important;
 }
 
 /* ========== HERO CTA CAPTION ========== */
