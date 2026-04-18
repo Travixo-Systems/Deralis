@@ -189,8 +189,8 @@ const logoLink: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
   gap: 10,
-  padding: "10px 12px",
-  margin: "-10px -12px",
+  padding: "12px 16px",
+  margin: "-12px -16px",
   textDecoration: "none",
   borderRadius: 6,
 };
