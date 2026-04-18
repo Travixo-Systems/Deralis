@@ -190,6 +190,12 @@ h2 em,
   outline-offset: 2px;
 }
 
+/* ========== FIRST CARD TOP GUTTER ========== */
+/* 16px canvas-grid gap between sticky nav and first card on every page */
+main > :first-child {
+  margin-top: 16px;
+}
+
 /* ========== HERO CTA CAPTION ========== */
 .hero-cta-caption {
   font-size: 12px;
