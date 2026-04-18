@@ -159,7 +159,7 @@ export default function HomeHero() {
   );
 
   return (
-    <DsCard>
+    <DsCard style={{ marginTop: 18 }}>
       <div className="grid-hero-centered">
         <div>
           <p style={eyebrowStyle}>{t("eyebrow")}</p>

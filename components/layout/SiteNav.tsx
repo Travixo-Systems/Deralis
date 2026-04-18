@@ -186,10 +186,13 @@ const innerStyle: CSSProperties = {
 };
 
 const logoLink: CSSProperties = {
-  display: "flex",
+  display: "inline-flex",
   alignItems: "center",
-  gap: 12,
+  gap: 10,
+  padding: "10px 12px",
+  margin: "-10px -12px",
   textDecoration: "none",
+  borderRadius: 6,
 };
 
 const wordmark: CSSProperties = {
