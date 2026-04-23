@@ -1,6 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import DsCard, { DsCardPeak, DsCardPaper, DsCardMedium, DsCardFinal } from "@/components/shared/DsCard";
 import TabLabel from "@/components/shared/TabLabel";
 import RichText from "@/components/shared/RichText";
@@ -196,6 +196,8 @@ function DeliverableCard() {
 /* ========== Card 4: Example (dark peak) — PAPER→DARK adjacency intentional ========== */
 function ExamplePeak() {
   const t = useTranslations("audit.page.example");
+  const locale = useLocale();
+  const downloadFilename = locale === "fr" ? "deralis-exemple-audit.pdf" : "deralis-audit-example.pdf";
 
   return (
     <DsCardPeak>
@@ -212,7 +214,13 @@ function ExamplePeak() {
           <div style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--text-on-peak-dim)", margin: "28px 0 26px", fontWeight: 600, padding: "12px 0", borderTop: "1px solid var(--text-on-peak-dim)", borderBottom: "1px solid var(--text-on-peak-dim)", maxWidth: 280 }}>
             {t("pagesMeta")}
           </div>
-          <a href="#" style={{ display: "inline-flex", alignItems: "center", gap: 12, padding: "18px 32px", background: "var(--text-on-peak)", color: "var(--card-peak)", fontSize: 14, fontWeight: 600, border: "none", borderRadius: "var(--radius-button)", cursor: "pointer", fontFamily: "inherit", textDecoration: "none", transition: "background-color 450ms ease, color 450ms ease" }}>
+          <a
+            href="/audit-example.pdf"
+            download={downloadFilename}
+            target="_blank"
+            rel="noopener"
+            style={{ display: "inline-flex", alignItems: "center", gap: 12, padding: "18px 32px", background: "var(--text-on-peak)", color: "var(--card-peak)", fontSize: 14, fontWeight: 600, border: "none", borderRadius: "var(--radius-button)", cursor: "pointer", fontFamily: "inherit", textDecoration: "none", transition: "background-color 450ms ease, color 450ms ease" }}
+          >
             {t("cta")}
           </a>
           <span style={{ display: "block", marginTop: 14, fontSize: 12, color: "var(--text-on-peak-dim)", fontStyle: "italic" }}>{t("meta")}</span>
