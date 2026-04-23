@@ -51,7 +51,7 @@
           "value": "French or English"
         }
       },
-      "ctaLabel": "Make a decision — €300 →",
+      "ctaLabel": "Make a decision · €300 →",
       "ctaMeta": "Fixed price. No forced follow-up."
     }
   },
@@ -337,8 +337,8 @@
           "body": "The €300 systems audit is the only way in. Nothing is built before that. The audit defines what to build and in what order, and the fee is deducted from the project if it proceeds."
         },
         "p2": {
-          "title": "Define done before we start",
-          "body": "If we cannot write down what finished looks like, the project does not start. Scope without a definition of done is how engagements run forever and clients lose trust."
+          "title": "Define done before the work starts",
+          "body": "If ‘finished’ can’t be written down, the project doesn’t start. Scope without a definition of done is how engagements run forever and clients lose trust."
         },
         "p3": {
           "title": "No lock-in.",
@@ -347,7 +347,7 @@
       },
       "building": {
         "eyebrow": "What I’m building now",
-        "title": "Two independent <em>practices</em>.",
+        "title": "One practice. One product. One entity.",
         "intro": "Deralis Digital is the client practice. TraviXO Systems is the product.",
         "card1": {
           "title": "TraviXO Systems",
@@ -861,7 +861,7 @@
           "line3": "<strong>€300</strong>, deducted if you build next",
           "line4": "Refund if I’m not the right fit"
         },
-        "cta": "Make a decision — €300 →",
+        "cta": "Make a decision · €300 →",
         "meta": "A sample report on the right. Downloadable below."
       },
       "recognition": {
@@ -880,7 +880,7 @@
         "closing1": "At this point, the question is no longer whether there’s a problem. You already know.",
         "closing2": "The question is: what’s the right first move. New software? A process change? Nothing at all? Should you build, buy, or better use what’s already there?",
         "closing3": "That’s the question the audit answers. Not in theory. On your operation, with your constraints, in five business days.",
-        "cta": "Make a decision — €300 →"
+        "cta": "Make a decision · €300 →"
       },
       "deliverable": {
         "tab": "What you’ll have in hand",
@@ -956,7 +956,7 @@
       "finalCta": {
         "h2": "Make a decision before you build.",
         "sub": "One audit. One report. One decision you can defend.",
-        "cta": "Make a decision — €300 →",
+        "cta": "Make a decision · €300 →",
         "meta": "French or English. NDA on request."
       }
     }
@@ -1001,7 +1001,7 @@
     "finalCta": {
       "h2": "Start by understanding what needs to be built.",
       "sub": "90 minutes. Five days. The document is yours, whatever happens next.",
-      "cta": "Make a decision — €300 →"
+      "cta": "Make a decision · €300 →"
     }
   }
 }

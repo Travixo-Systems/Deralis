@@ -51,7 +51,7 @@
           "value": "Français ou anglais"
         }
       },
-      "ctaLabel": "Prendre une décision — 300 € →",
+      "ctaLabel": "Prendre une décision · 300 € →",
       "ctaMeta": "Prix fixe. Sans suite obligatoire."
     }
   },
@@ -345,7 +345,7 @@
       },
       "building": {
         "eyebrow": "Ce que je construis en ce moment",
-        "title": "Deux <em>pratiques</em> indépendantes.",
+        "title": "Une pratique. Un produit. Une entité.",
         "intro": "Deralis Digital est la pratique client. TraviXO Systems est le produit.",
         "card1": {
           "title": "TraviXO Systems",
@@ -859,7 +859,7 @@
           "line3": "<strong>300 €</strong>, déduits si vous construisez ensuite",
           "line4": "Remboursement si je ne suis pas le bon interlocuteur"
         },
-        "cta": "Prendre une décision — 300 € →",
+        "cta": "Prendre une décision · 300 € →",
         "meta": "Un exemple du dossier à droite. Téléchargeable plus bas."
       },
       "recognition": {
@@ -878,7 +878,7 @@
         "closing1": "À ce stade, la question n’est plus est-ce qu’on a un problème. Vous le savez déjà.",
         "closing2": "La question est : quel est le bon premier mouvement. Un nouveau logiciel ? Un changement de process ? Rien du tout ? Faut-il construire, acheter, ou mieux utiliser ce qui est déjà là ?",
         "closing3": "C’est la question à laquelle l’audit répond. Pas en théorie. Sur votre opération, avec vos contraintes, en cinq jours ouvrés.",
-        "cta": "Prendre une décision — 300 € →"
+        "cta": "Prendre une décision · 300 € →"
       },
       "deliverable": {
         "tab": "Ce que vous aurez en main",
@@ -954,7 +954,7 @@
       "finalCta": {
         "h2": "Prendre une décision avant de construire.",
         "sub": "Un audit. Un dossier. Une décision que vous pouvez défendre.",
-        "cta": "Prendre une décision — 300 € →",
+        "cta": "Prendre une décision · 300 € →",
         "meta": "Français ou anglais. NDA sur demande."
       }
     }
@@ -999,7 +999,7 @@
     "finalCta": {
       "h2": "Commencez par comprendre ce qui doit être construit..",
       "sub": "90 minutes. Cinq jours. Un dossier que vous gardez, quoi qu’il arrive ensuite.",
-      "cta": "Prendre une décision — 300 € →"
+      "cta": "Prendre une décision · 300 € →"
     }
   }
 }
