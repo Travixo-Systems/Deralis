@@ -28,7 +28,7 @@
       "headline": "Nothing is built without clear value to your business.",
       "body1": "The audit maps your current operation, identifies structural gaps, and defines what to build, in what order, and what not to build.",
       "body2": "If the project proceeds, the audit fee is deducted from the build.",
-      "note": "Fixed price. No commitment.",
+      "note": "Fixed price. No forced follow-up.",
       "facts": {
         "duree": {
           "label": "Duration",
@@ -52,7 +52,7 @@
         }
       },
       "ctaLabel": "Make a decision — €300 →",
-      "ctaMeta": "Fixed price. No commitment."
+      "ctaMeta": "Fixed price. No forced follow-up."
     }
   },
   "home": {
@@ -342,7 +342,7 @@
         },
         "p3": {
           "title": "No lock-in.",
-          "body": "Every system is documented, transferable, and maintainable by another developer. No lock-in. No hidden dependencies. You can take the build elsewhere the day it ships if that is what you need."
+          "body": "Every system is documented, transferable, and maintainable by another developer. You can take the project elsewhere the day of delivery if that’s what you need."
         }
       },
       "building": {

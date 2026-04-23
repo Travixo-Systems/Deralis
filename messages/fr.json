@@ -28,7 +28,7 @@
       "headline": "Rien n’est construit sans valeur claire pour votre activité.",
       "body1": "L’audit cartographie votre fonctionnement actuel, identifie les écarts structurels, et définit quoi construire, dans quel ordre, et ce qu’il ne faut pas construire.",
       "body2": "Si le projet est lancé, le coût de l’audit est déduit du développement.",
-      "note": "Prix fixe. Aucun engagement.",
+      "note": "Prix fixe. Sans suite obligatoire.",
       "facts": {
         "duree": {
           "label": "Durée",
@@ -52,7 +52,7 @@
         }
       },
       "ctaLabel": "Prendre une décision — 300 € →",
-      "ctaMeta": "Prix fixe. Aucun engagement."
+      "ctaMeta": "Prix fixe. Sans suite obligatoire."
     }
   },
   "home": {
@@ -329,7 +329,7 @@
       "principles": {
         "eyebrow": "Comment je travaille",
         "title": "Trois <em>principes</em>, sans exception.",
-        "intro": "Chaque mission passe par la même logique. Chaque principe existe parce que le sauter a coûté à quelqu’un, quelque part, de l’argent qu’il n’avait pas besoin de dépenser.",
+        "intro": "Chaque mission passe par la même logique. Chaque principe existe parce que s’en passer a coûté à quelqu’un, quelque part, de l’argent qu’il n’avait pas besoin de dépenser.",
         "p1": {
           "title": "L’audit en premier",
           "body": "L’audit système à 300 € est la seule porte d’entrée. Rien n’est construit avant. L’audit définit quoi construire et dans quel ordre, et le coût est déduit du projet s’il est lancé."
@@ -340,7 +340,7 @@
         },
         "p3": {
           "title": "Aucun verrouillage.",
-          "body": "Chaque système est documenté, transmissible, et maintenable par un autre développeur. Aucun verrouillage. Aucune dépendance cachée. Vous pouvez emporter le projet ailleurs le jour même de la livraison si c’est ce dont vous avez besoin."
+          "body": "Chaque système est documenté, transmissible, et maintenable par un autre développeur. Vous pouvez emporter le projet ailleurs le jour même de la livraison si c’est ce dont vous avez besoin."
         }
       },
       "building": {
