@@ -36,7 +36,7 @@ export default function TabLabel({ children, variant = "default", heroSize = fal
     },
     "status-ok": {
       background: "var(--status-ok)",
-      color: "#FFFFFF",
+      color: "var(--text-on-status)",
       border: "none",
     },
     accent: {

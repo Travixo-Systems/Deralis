@@ -65,7 +65,7 @@ function AuditHero() {
           </p>
 
           {/* Offer block */}
-          <div style={{ background: "var(--card-peak)", color: "var(--text-on-peak)", padding: "22px 26px", marginBottom: 32, maxWidth: 420, position: "relative", borderRadius: 10, boxShadow: "0 20px 44px rgba(26, 29, 27, 0.2)", transition: "background-color 450ms ease, color 450ms ease" }}>
+          <div style={{ background: "var(--card-peak)", color: "var(--text-on-peak)", padding: "22px 26px", marginBottom: 32, maxWidth: 420, position: "relative", borderRadius: 10, boxShadow: "var(--offer-peak-shadow)", transition: "background-color 450ms ease, color 450ms ease" }}>
             <TabLabel variant="default" style={{ left: 22, top: -10 }}>
               {t("offer.tab")}
             </TabLabel>
@@ -100,19 +100,19 @@ function AuditHero() {
 function PdfContent({ title, section, section2 }: { title: string; section: string; section2?: string }) {
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 8, textTransform: "uppercase", letterSpacing: "0.12em", color: "#6B6458", paddingBottom: 10, borderBottom: "1px solid rgba(20,17,13,0.08)", marginBottom: 14, fontWeight: 700 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 8, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--paper-mock-ink-muted)", paddingBottom: 10, borderBottom: "1px solid var(--paper-mock-border)", marginBottom: 14, fontWeight: 700 }}>
         <span>Dossier de décision</span><span>Exemple</span>
       </div>
-      <div style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 14, lineHeight: 1.14, fontWeight: 500, color: "#14110D", marginBottom: 14, letterSpacing: "-0.01em" }}>{title}</div>
-      <div style={{ fontSize: 8, textTransform: "uppercase", letterSpacing: "0.12em", color: "#1B3A5C", fontWeight: 700, marginBottom: 5 }}>{section}</div>
-      <div style={{ height: 3, background: "rgba(20,17,13,0.12)", marginBottom: 4, borderRadius: 1, width: "90%" }} />
-      <div style={{ height: 3, background: "rgba(20,17,13,0.12)", marginBottom: 4, borderRadius: 1, width: "80%" }} />
-      <div style={{ height: 3, background: "rgba(20,17,13,0.12)", marginBottom: 4, borderRadius: 1, width: "60%" }} />
+      <div style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 14, lineHeight: 1.14, fontWeight: 500, color: "var(--paper-mock-ink)", marginBottom: 14, letterSpacing: "-0.01em" }}>{title}</div>
+      <div style={{ fontSize: 8, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--paper-mock-accent)", fontWeight: 700, marginBottom: 5 }}>{section}</div>
+      <div style={{ height: 3, background: "var(--paper-mock-skeleton)", marginBottom: 4, borderRadius: 1, width: "90%" }} />
+      <div style={{ height: 3, background: "var(--paper-mock-skeleton)", marginBottom: 4, borderRadius: 1, width: "80%" }} />
+      <div style={{ height: 3, background: "var(--paper-mock-skeleton)", marginBottom: 4, borderRadius: 1, width: "60%" }} />
       {section2 && (
         <>
-          <div style={{ fontSize: 8, textTransform: "uppercase", letterSpacing: "0.12em", color: "#1B3A5C", fontWeight: 700, marginTop: 10, marginBottom: 5 }}>{section2}</div>
-          <div style={{ height: 3, background: "rgba(20,17,13,0.12)", marginBottom: 4, borderRadius: 1, width: "80%" }} />
-          <div style={{ height: 3, background: "rgba(20,17,13,0.12)", marginBottom: 4, borderRadius: 1, width: "70%" }} />
+          <div style={{ fontSize: 8, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--paper-mock-accent)", fontWeight: 700, marginTop: 10, marginBottom: 5 }}>{section2}</div>
+          <div style={{ height: 3, background: "var(--paper-mock-skeleton)", marginBottom: 4, borderRadius: 1, width: "80%" }} />
+          <div style={{ height: 3, background: "var(--paper-mock-skeleton)", marginBottom: 4, borderRadius: 1, width: "70%" }} />
         </>
       )}
     </>
@@ -228,26 +228,26 @@ function ExamplePeak() {
 
         {/* Opened page mock */}
         <div style={{ position: "relative", height: 620 }} className="pdf-stack-responsive">
-          <div style={{ position: "absolute", top: 32, left: 56, width: 380, height: 520, background: "#FDFBF4", border: "1px solid rgba(20,17,13,0.22)", transform: "rotate(3deg)", opacity: 0.4, boxShadow: "var(--page-shadow)", borderRadius: 2 }} />
-          <div style={{ position: "absolute", top: 0, left: 0, width: 440, height: 600, background: "#FDFBF4", border: "1px solid rgba(20,17,13,0.25)", padding: "40px 44px 32px", boxShadow: "var(--page-shadow)", fontFamily: "var(--font-ibm-plex-sans), sans-serif", color: "#14110D", display: "flex", flexDirection: "column", borderRadius: 2 }} className="opened-page-responsive">
-            <div style={{ display: "flex", justifyContent: "space-between", fontSize: 9, textTransform: "uppercase", letterSpacing: "0.14em", color: "#6B6458", paddingBottom: 14, borderBottom: "1px solid rgba(20,17,13,0.08)", marginBottom: 22, fontWeight: 700 }}>
+          <div style={{ position: "absolute", top: 32, left: 56, width: 380, height: 520, background: "var(--paper-mock-bg)", border: "1px solid var(--paper-mock-border-strong)", transform: "rotate(3deg)", opacity: 0.4, boxShadow: "var(--page-shadow)", borderRadius: 2 }} />
+          <div style={{ position: "absolute", top: 0, left: 0, width: 440, height: 600, background: "var(--paper-mock-bg)", border: "1px solid var(--paper-mock-border-strong)", padding: "40px 44px 32px", boxShadow: "var(--page-shadow)", fontFamily: "var(--font-ibm-plex-sans), sans-serif", color: "var(--paper-mock-ink)", display: "flex", flexDirection: "column", borderRadius: 2 }} className="opened-page-responsive">
+            <div style={{ display: "flex", justifyContent: "space-between", fontSize: 9, textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--paper-mock-ink-muted)", paddingBottom: 14, borderBottom: "1px solid var(--paper-mock-border)", marginBottom: 22, fontWeight: 700 }}>
               <span>Dossier de décision · Exemple</span><span>Deralis Digital</span>
             </div>
-            <h3 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 22, lineHeight: 1.13, fontWeight: 500, color: "#14110D", marginBottom: 8, letterSpacing: "-0.015em" }}>
+            <h3 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 22, lineHeight: 1.13, fontWeight: 500, color: "var(--paper-mock-ink)", marginBottom: 8, letterSpacing: "-0.015em" }}>
               Quoi construire, dans quel ordre, et ce qu'il ne faut pas construire.
             </h3>
-            <div style={{ fontSize: 10, color: "#6B6458", fontStyle: "italic", marginBottom: 22, lineHeight: 1.5 }}>
+            <div style={{ fontSize: 10, color: "var(--paper-mock-ink-muted)", fontStyle: "italic", marginBottom: 22, lineHeight: 1.5 }}>
               Cas composite anonymisé · PME de services, 34 personnes · Île-de-France
             </div>
             {["01 · Situation", "02 · Ce qui casse", "03 · Premier système à construire"].map((sec) => (
               <div key={sec}>
-                <div style={{ fontSize: 9, textTransform: "uppercase", letterSpacing: "0.14em", color: "#1B3A5C", fontWeight: 700, marginTop: 16, marginBottom: 8, paddingBottom: 4, borderBottom: "1px solid rgba(27,58,92,0.15)" }}>{sec}</div>
-                <div style={{ height: 5, background: "rgba(20,17,13,0.09)", marginBottom: 6, borderRadius: 1, width: "95%" }} />
-                <div style={{ height: 5, background: "rgba(20,17,13,0.09)", marginBottom: 6, borderRadius: 1, width: "80%" }} />
-                <div style={{ height: 5, background: "rgba(20,17,13,0.09)", marginBottom: 6, borderRadius: 1, width: "90%" }} />
+                <div style={{ fontSize: 9, textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--paper-mock-accent)", fontWeight: 700, marginTop: 16, marginBottom: 8, paddingBottom: 4, borderBottom: "1px solid var(--paper-mock-accent-rule)" }}>{sec}</div>
+                <div style={{ height: 5, background: "var(--paper-mock-skeleton)", marginBottom: 6, borderRadius: 1, width: "95%" }} />
+                <div style={{ height: 5, background: "var(--paper-mock-skeleton)", marginBottom: 6, borderRadius: 1, width: "80%" }} />
+                <div style={{ height: 5, background: "var(--paper-mock-skeleton)", marginBottom: 6, borderRadius: 1, width: "90%" }} />
               </div>
             ))}
-            <div style={{ marginTop: "auto", paddingTop: 14, borderTop: "1px solid rgba(20,17,13,0.08)", display: "flex", justifyContent: "space-between", fontSize: 9, textTransform: "uppercase", letterSpacing: "0.12em", color: "#6B6458", fontWeight: 700 }}>
+            <div style={{ marginTop: "auto", paddingTop: 14, borderTop: "1px solid var(--paper-mock-border)", display: "flex", justifyContent: "space-between", fontSize: 9, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--paper-mock-ink-muted)", fontWeight: 700 }}>
               <span>Deralis Digital · exemple anonymisé</span><span>1 / 5</span>
             </div>
           </div>
@@ -351,7 +351,7 @@ const metaStyle: CSSProperties = {
 };
 
 const pdfPage: CSSProperties = {
-  position: "absolute", width: 240, height: 320, background: "#FDFBF4",
-  border: "1px solid rgba(20,17,13,0.2)", padding: "18px 22px",
-  fontFamily: "var(--font-ibm-plex-sans), sans-serif", color: "#14110D", borderRadius: 2,
+  position: "absolute", width: 240, height: 320, background: "var(--paper-mock-bg)",
+  border: "1px solid var(--paper-mock-border-strong)", padding: "18px 22px",
+  fontFamily: "var(--font-ibm-plex-sans), sans-serif", color: "var(--paper-mock-ink)", borderRadius: 2,
 };

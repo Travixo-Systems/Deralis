@@ -119,7 +119,7 @@ export default function ContactForm() {
   const errIconStyle: React.CSSProperties = {
     display: "inline-flex", alignItems: "center", justifyContent: "center",
     width: 16, height: 16, borderRadius: "50%",
-    background: "var(--color-error)", color: "#FFFFFF",
+    background: "var(--color-error)", color: "var(--text-on-status)",
     fontSize: 11, fontWeight: 700, lineHeight: 1,
     flexShrink: 0,
   };

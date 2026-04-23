@@ -194,7 +194,7 @@ const ctaSecondary: CSSProperties = {
 };
 const anchorBlock: CSSProperties = {
   background: "var(--card-peak)", color: "var(--text-on-peak)", padding: "40px 36px",
-  position: "relative", borderRadius: 12, boxShadow: "0 30px 60px rgba(26, 29, 27, 0.2), 0 10px 20px rgba(26, 29, 27, 0.1)",
+  position: "relative", borderRadius: 12, boxShadow: "var(--hero-peak-shadow)",
 };
 const internalCard: CSSProperties = {
   background: "var(--card-paper)", border: "1px solid var(--border-soft)",

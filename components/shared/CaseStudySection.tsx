@@ -118,6 +118,7 @@ export default function CaseStudySection({
               width={screenshotWidth || 800}
               height={screenshotHeight || 500}
               priority={screenshotPriority}
+              sizes="(max-width: 960px) 100vw, 520px"
               className="w-full h-auto"
             />
           </div>

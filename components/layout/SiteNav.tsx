@@ -109,14 +109,16 @@ export default function SiteNav() {
               onClick={() => switchLocale("fr")}
               style={{ ...localeBtn, color: locale === "fr" ? "var(--text-primary)" : "var(--text-muted)" }}
               aria-label="Français"
+              aria-pressed={locale === "fr"}
             >
               FR
             </button>
-            <span style={{ color: "var(--text-muted)", fontSize: 12 }}>/</span>
+            <span style={{ color: "var(--text-muted)", fontSize: 12 }} aria-hidden="true">/</span>
             <button
               onClick={() => switchLocale("en")}
               style={{ ...localeBtn, color: locale === "en" ? "var(--text-primary)" : "var(--text-muted)" }}
               aria-label="English"
+              aria-pressed={locale === "en"}
             >
               EN
             </button>
@@ -141,16 +143,18 @@ export default function SiteNav() {
         >
           <span
             style={{
-              position: "absolute", left: 0, width: "100%", height: 1.5,
-              background: "var(--text-primary)", transition: "all 200ms ease",
-              top: open ? 6 : 3, transform: open ? "rotate(45deg)" : "none",
+              position: "absolute", left: 12, width: 20, height: 1.5, top: 18,
+              background: "var(--text-primary)",
+              transition: "transform 200ms ease, background-color 450ms ease",
+              transform: open ? "translateY(3px) rotate(45deg)" : "none",
             }}
           />
           <span
             style={{
-              position: "absolute", left: 0, width: "100%", height: 1.5,
-              background: "var(--text-primary)", transition: "all 200ms ease",
-              top: open ? 6 : 9, transform: open ? "rotate(-45deg)" : "none",
+              position: "absolute", left: 12, width: 20, height: 1.5, top: 24,
+              background: "var(--text-primary)",
+              transition: "transform 200ms ease, background-color 450ms ease",
+              transform: open ? "translateY(-3px) rotate(-45deg)" : "none",
             }}
           />
         </button>
@@ -235,7 +239,8 @@ const localeBtn: CSSProperties = {
   background: "none",
   border: "none",
   cursor: "pointer",
-  padding: "4px 6px",
+  padding: "14px 10px",
+  margin: "-14px -4px",
   transition: "color 200ms ease",
 };
 
@@ -256,9 +261,10 @@ const auditPill: CSSProperties = {
 
 const hamburgerStyle: CSSProperties = {
   position: "relative",
-  width: 20,
-  height: 14,
+  width: 44,
+  height: 44,
   flexShrink: 0,
+  margin: "-12px",
   background: "none",
   border: "none",
   cursor: "pointer",

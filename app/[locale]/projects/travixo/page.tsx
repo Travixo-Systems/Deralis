@@ -82,6 +82,7 @@ function TraviXoHeroWithScreenshot() {
           width={1191}
           height={982}
           priority
+          sizes="(max-width: 960px) 100vw, 1040px"
           style={{ width: "100%", height: "auto", display: "block" }}
         />
       </div>
@@ -150,7 +151,7 @@ function InsideCard() {
         {shots.map((shot, i) => (
           <div key={i}>
             <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
-              <Image src={shot.src} alt={shot.alt} width={shot.w} height={shot.h} style={{ width: "100%", height: "auto", display: "block" }} />
+              <Image src={shot.src} alt={shot.alt} width={shot.w} height={shot.h} sizes="(max-width: 960px) 100vw, 1040px" style={{ width: "100%", height: "auto", display: "block" }} />
             </div>
             <p style={{ fontSize: 14, color: "var(--text-muted)", lineHeight: 1.55, marginTop: 16, maxWidth: "58ch" }}>{shot.cap}</p>
           </div>

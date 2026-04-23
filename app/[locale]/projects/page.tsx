@@ -89,6 +89,7 @@ function TraviXOCaseStudy() {
             width={1191}
             height={982}
             priority
+            sizes="(max-width: 960px) 100vw, 520px"
             style={{ width: "100%", height: "auto", display: "block" }}
           />
         </div>
@@ -138,6 +139,7 @@ function GovPortalCaseStudy() {
             alt={t("screenshot.alt")}
             width={1534}
             height={730}
+            sizes="(max-width: 960px) 100vw, 520px"
             style={{ width: "100%", height: "auto", display: "block" }}
           />
         </div>
@@ -224,7 +226,7 @@ const livePill: CSSProperties = {
   top: 20,
   right: 20,
   background: "var(--status-ok)",
-  color: "#FFFFFF",
+  color: "var(--text-on-status)",
   padding: "4px 10px",
   borderRadius: "var(--radius-pill)",
   fontFamily: "var(--font-ibm-plex-sans), sans-serif",

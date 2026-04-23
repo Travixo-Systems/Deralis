@@ -37,6 +37,24 @@
   --tile-shadow: 0 24px 50px rgba(20, 17, 13, 0.1), 0 8px 20px rgba(20, 17, 13, 0.05);
   --page-shadow: 0 40px 80px rgba(0, 0, 0, 0.28), 0 14px 30px rgba(0, 0, 0, 0.14);
   --paper-shadow: 0 4px 16px rgba(20, 17, 13, 0.06), 0 1px 4px rgba(20, 17, 13, 0.04);
+  --hero-peak-shadow: 0 30px 60px rgba(26, 29, 27, 0.2), 0 10px 20px rgba(26, 29, 27, 0.1);
+  --offer-peak-shadow: 0 20px 44px rgba(26, 29, 27, 0.2);
+
+  /* Surface overlay on peak cards (e.g. elevated facts panels) */
+  --peak-surface-elevated: rgba(247, 244, 237, 0.1);
+
+  /* Text on colored status/error backgrounds (always white for legibility) */
+  --text-on-status: #FFFFFF;
+
+  /* Paper-mock tokens (PDF previews; theme-stable by design — a PDF is always paper) */
+  --paper-mock-bg: #FDFBF4;
+  --paper-mock-ink: #14110D;
+  --paper-mock-ink-muted: #6B6458;
+  --paper-mock-accent: #1B3A5C;
+  --paper-mock-border: rgba(20, 17, 13, 0.08);
+  --paper-mock-border-strong: rgba(20, 17, 13, 0.22);
+  --paper-mock-skeleton: rgba(20, 17, 13, 0.12);
+  --paper-mock-accent-rule: rgba(27, 58, 92, 0.15);
 
   /* Radius hierarchy */
   --radius-card: 14px;
@@ -63,6 +81,10 @@
   --fs-nav-links: 12px;
   --fs-footer: 12px;
   --fs-meta: 11px;
+
+  /* Layout metrics (keep in sync with SiteNav: 22px padding × 2 + 22px content + 1px border) */
+  --nav-height: 66px;
+  --mobile-menu-offset: 70px;
 
   /* Spacing */
   --pad-card-large: 64px 64px;
@@ -101,6 +123,9 @@
   --tile-shadow: 0 24px 50px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.25);
   --page-shadow: 0 50px 100px rgba(0, 0, 0, 0.55), 0 18px 36px rgba(0, 0, 0, 0.3);
   --paper-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.3);
+  --hero-peak-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.3);
+  --offer-peak-shadow: 0 20px 44px rgba(0, 0, 0, 0.5);
+  --peak-surface-elevated: rgba(20, 17, 13, 0.08);
 }
 
 @theme inline {

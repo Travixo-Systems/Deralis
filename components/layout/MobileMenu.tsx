@@ -33,7 +33,7 @@ export default function MobileMenu({
       aria-modal="true"
       style={{
         position: "fixed",
-        top: 70,
+        top: "var(--mobile-menu-offset)",
         right: 14,
         width: "60%",
         maxWidth: 280,

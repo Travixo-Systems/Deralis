@@ -57,7 +57,7 @@ const meta: CSSProperties = {
   display: "block", marginTop: 14, fontSize: 12, color: "var(--text-on-peak-dim)", fontStyle: "italic",
 };
 const factsPanel: CSSProperties = {
-  background: "rgba(247, 244, 237, 0.1)", borderLeft: "3px solid var(--text-on-peak)",
+  background: "var(--peak-surface-elevated)", borderLeft: "3px solid var(--text-on-peak)",
   padding: 32, borderRadius: "var(--radius-button)",
   display: "flex", flexDirection: "column", gap: 18,
   transition: "background-color 450ms ease, border-color 450ms ease",

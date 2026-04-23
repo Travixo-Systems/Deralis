@@ -89,7 +89,7 @@ const anchorBlock: CSSProperties = {
   padding: "40px 36px 32px",
   position: "relative",
   borderRadius: 12,
-  boxShadow: "0 30px 60px rgba(26, 29, 27, 0.2), 0 10px 20px rgba(26, 29, 27, 0.1)",
+  boxShadow: "var(--hero-peak-shadow)",
   transition: "background-color 450ms ease, color 450ms ease",
 };
 

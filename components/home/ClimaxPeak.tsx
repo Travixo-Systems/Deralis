@@ -60,7 +60,7 @@ const peakMetaStyle: CSSProperties = {
 };
 
 const factsStyle: CSSProperties = {
-  background: "rgba(247, 244, 237, 0.1)",
+  background: "var(--peak-surface-elevated)",
   borderLeft: "3px solid var(--text-on-peak)",
   padding: 32,
   borderRadius: "var(--radius-button)",

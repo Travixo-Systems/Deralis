@@ -44,7 +44,7 @@
         },
         "garantie": {
           "label": "Guarantee",
-          "value": "Refund if I'm not the right fit"
+          "value": "Refund if I’m not the right fit"
         },
         "langue": {
           "label": "Language",
@@ -60,7 +60,7 @@
       "hero": {
         "eyebrow": "Independent systems engineering practice",
         "anchor": {
-          "tab": "What I've built",
+          "tab": "What I’ve built",
           "travixoName": "TraviXO",
           "travixoDesc": "Multi-tenant SaaS for VGP equipment compliance in the rental industry. In production.",
           "consulaireName": "Portail consulaire",
@@ -70,7 +70,7 @@
           "signature": "Independent. Bilingual. One person, every line of code."
         },
         "h1": "<strong>Tools · files · spreadsheets.</strong> Everything works, but nothing is really <em>connected</em>.",
-        "subhead1": "<strong>What you're using today to run your business doesn't hold up.</strong>",
+        "subhead1": "<strong>What you’re using today to run your business doesn’t hold up.</strong>",
         "subhead2": "I build the system that replaces it, for businesses with more tools than clarity.",
         "subhead3": "Information goes where it needs to, when it needs to, without waiting on someone to move it forward.",
         "ctaPrimary": "Discover the audit →",
@@ -100,7 +100,7 @@
         "eyebrow": "Who I work with",
         "card1": {
           "title": "Teams running operations manually",
-          "description": "You rely on people to keep things working day-to-day. The process exists in someone's head, not in a system.",
+          "description": "You rely on people to keep things working day-to-day. The process exists in someone’s head, not in a system.",
           "tags": [
             "Manual coordination",
             "No centralized system",
@@ -127,7 +127,7 @@
         },
         "pullquote": "Established businesses where the operation has outgrown <em>the tools holding it together</em>.",
         "intro1": "The person who can decide to fix this is in the room.",
-        "intro2": "If that's not you, this is the wrong time."
+        "intro2": "If that’s not you, this is the wrong time."
       },
       "casestudy": {
         "label": "Case study",
@@ -165,11 +165,11 @@
       },
       "finalCta": {
         "headline": "If something <em>breaks</em>, I can show you how to fix it.",
-        "description": "Before any estimate, I map how your system actually works. Then we decide together whether it's worth building.",
+        "description": "Before any estimate, I map how your system actually works. Then we decide together whether it’s worth building.",
         "note": "Another developer can take over without rebuilding everything."
       },
       "proof": {
-        "eyebrow": "What I've built",
+        "eyebrow": "What I’ve built",
         "h2": "Two projects in production.",
         "subtitle": "A multi-tenant B2B SaaS live. An operational architecture pitched, in reusable format. Built solo.",
         "travixo": {
@@ -207,15 +207,14 @@
               "label": "Origin",
               "value": "Paris consulate"
             }
-          },
-          "cta": "View architecture →"
+          }
         }
       },
       "exclusion": {
         "eyebrow": "Filter",
         "headline": "Not for everyone.",
-        "body1": "Not for early-stage ideas, simple website requests, or projects where the problem hasn't been defined.",
-        "body2": "<strong>If you can't name what's broken, this isn't the right time.</strong>",
+        "body1": "Not for early-stage ideas, simple website requests, or projects where the problem hasn’t been defined.",
+        "body2": "<strong>If you can’t name what’s broken, this isn’t the right time.</strong>",
         "tags": [
           "Established business only",
           "Problem must be defined",
@@ -362,7 +361,7 @@
   "contact": {
     "metadata": {
       "title": "Contact",
-      "description": "Get in touch with Deralis Digital. Let's discuss your project and build something real."
+      "description": "Get in touch with Deralis Digital. Let’s discuss your project and build something real."
     },
     "hero": {},
     "form": {
@@ -392,7 +391,7 @@
       "hero": {
         "eyebrow": "Contact",
         "title": "Write me directly.",
-        "sub": "For questions that don't fit an audit form. Partnerships, NDAs, working language, or simply because you prefer to write."
+        "sub": "For questions that don’t fit an audit form. Partnerships, NDAs, working language, or simply because you prefer to write."
       },
       "form": {
         "nameLabel": "Name",
@@ -589,10 +588,10 @@
         "title": "1. Use of the website",
         "intro": "You may browse this website for informational purposes. You agree not to:",
         "items": [
-          "Attempt to breach the website's security",
+          "Attempt to breach the website’s security",
           "Copy or reproduce content without permission",
           "Misuse contact forms or attempt spam",
-          "Interfere with the site's functionality"
+          "Interfere with the site’s functionality"
         ]
       },
       "services": {
@@ -851,23 +850,23 @@
       },
       "hero": {
         "eyebrow": "Decision audit · €300",
-        "h1": "Your tools hold up. Your operation doesn't.",
+        "h1": "Your tools hold up. Your operation doesn’t.",
         "sub": "<strong>Decision audit:</strong> what to build, in what order, and what not to build.",
         "offer": {
           "tab": "The offer",
           "line1": "<strong>90 minutes</strong> call",
           "line2": "<strong>Five business days</strong> delivery",
           "line3": "<strong>€300</strong>, deducted if you build next",
-          "line4": "Refund if I'm not the right fit"
+          "line4": "Refund if I’m not the right fit"
         },
         "cta": "Make a decision — €300 →",
         "meta": "A sample report on the right. Downloadable below."
       },
       "recognition": {
-        "h2": "If you're here, it's probably not by accident.",
+        "h2": "If you’re here, it’s probably not by accident.",
         "intro1": "Your business runs. Clients are served, invoices go out, teams do the work.",
-        "intro2": "It's not a willpower problem, and it's not a team problem.",
-        "pullquote": "It's a system problem.",
+        "intro2": "It’s not a willpower problem, and it’s not a team problem.",
+        "pullquote": "It’s a system problem.",
         "symptomsLabel": "You might recognize these signs",
         "symptoms": [
           "You already have tools in place, but information still moves poorly between them.",
@@ -876,16 +875,16 @@
           "Edge cases live elsewhere: personal files, emails, individual memory.",
           "Your tools exist. The system remains fragile."
         ],
-        "closing1": "At this point, the question is no longer whether there's a problem. You already know.",
-        "closing2": "The question is: what's the right first move. New software? A process change? Nothing at all? Should you build, buy, or better use what's already there?",
-        "closing3": "That's the question the audit answers. Not in theory. On your operation, with your constraints, in five business days.",
+        "closing1": "At this point, the question is no longer whether there’s a problem. You already know.",
+        "closing2": "The question is: what’s the right first move. New software? A process change? Nothing at all? Should you build, buy, or better use what’s already there?",
+        "closing3": "That’s the question the audit answers. Not in theory. On your operation, with your constraints, in five business days.",
         "cta": "Make a decision — €300 →"
       },
       "deliverable": {
-        "tab": "What you'll have in hand",
+        "tab": "What you’ll have in hand",
         "h3": "A decision report.",
         "negations": "Not a report. Not a theoretical audit. Not a slide deck.",
-        "lede": "Short, structured, signed. Written to be read by someone who wasn't on the call.",
+        "lede": "Short, structured, signed. Written to be read by someone who wasn’t on the call.",
         "bodyLabel": "Inside",
         "items": [
           "<strong>The map</strong> of how things actually work: where information flows, where it stops, where it duplicates.",
@@ -905,7 +904,7 @@
       "example": {
         "eyebrow": "A concrete example",
         "h2": "A real report. Open. In your hands before you <em>decide</em>.",
-        "body1": "<strong>Same format, same structure, same level of detail</strong> as what you'd receive.",
+        "body1": "<strong>Same format, same structure, same level of detail</strong> as what you’d receive.",
         "body2": "Read it before deciding if the audit is for you.",
         "pagesMeta": "Five pages · PDF · Anonymized",
         "cta": "Download the example (PDF) ↓",
@@ -913,19 +912,19 @@
       },
       "notFor": {
         "h3": "Not for you if…",
-        "intro": "In the following cases, the audit doesn't make sense. Don't book it.",
+        "intro": "In the following cases, the audit doesn’t make sense. Don’t book it.",
         "items": [
-          "You're looking for a showcase website. WordPress, Webflow, Framer, something else.",
+          "You’re looking for a showcase website. WordPress, Webflow, Framer, something else.",
           "You want to start building before the problem is defined.",
-          "You can't name what's wrong, even approximately.",
+          "You can’t name what’s wrong, even approximately.",
           "You plan to skip the audit and go straight to building.",
-          "There's no operational friction to solve."
+          "There’s no operational friction to solve."
         ]
       },
       "guarantee": {
-        "h3": "What if I'm wrong?",
-        "p1": "If during the call I realize I'm not the right person to help you, I refund the full €300. No discussion, no partial payment, no attempt to sell you something else.",
-        "p2": "Otherwise, the audit is non-refundable. Because the audit is the work, not a sales step. The report exists so you can make decisions you couldn't make before. That value is delivered whether you hire me for what comes next or not, and that's precisely the point."
+        "h3": "What if I’m wrong?",
+        "p1": "If during the call I realize I’m not the right person to help you, I refund the full €300. No discussion, no partial payment, no attempt to sell you something else.",
+        "p2": "Otherwise, the audit is non-refundable. Because the audit is the work, not a sales step. The report exists so you can make decisions you couldn’t make before. That value is delivered whether you hire me for what comes next or not, and that’s precisely the point."
       },
       "process": {
         "intro": "Four steps. Report delivered within five business days after the call.",
@@ -943,7 +942,7 @@
           {
             "num": "03",
             "title": "Audit call",
-            "desc": "Fixed structure. I identify key points with you and formalize what's needed."
+            "desc": "Fixed structure. I identify key points with you and formalize what’s needed."
           },
           {
             "num": "04",

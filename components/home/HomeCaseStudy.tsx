@@ -183,7 +183,7 @@ export default function HomeCaseStudy() {
               <span style={dotStyle} className="chrome-dot" />
             </div>
             <div style={urlStyle}>
-              <span style={{ marginRight: 8, fontSize: 10 }}>🔒</span>
+              <span style={{ marginRight: 8, fontSize: 10 }} aria-hidden="true">🔒</span>
               {t("travixo.url")}
             </div>
           </div>
@@ -193,6 +193,7 @@ export default function HomeCaseStudy() {
               alt="TraviXO dashboard"
               width={1191}
               height={982}
+              sizes="(max-width: 960px) 100vw, 520px"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
@@ -223,7 +224,7 @@ export default function HomeCaseStudy() {
               <span style={dotStyle} className="chrome-dot" />
             </div>
             <div style={urlStyle}>
-              <span style={{ marginRight: 8, fontSize: 10 }}>🔒</span>
+              <span style={{ marginRight: 8, fontSize: 10 }} aria-hidden="true">🔒</span>
               {t("consulaire.url")}
             </div>
           </div>
@@ -233,6 +234,7 @@ export default function HomeCaseStudy() {
               alt="Portail consulaire"
               width={1534}
               height={730}
+              sizes="(max-width: 960px) 100vw, 520px"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
@@ -245,9 +247,6 @@ export default function HomeCaseStudy() {
                 </div>
               ))}
             </div>
-            <a href="#" style={proofCtaStyle}>
-              {t("consulaire.cta")}
-            </a>
           </div>
         </div>
       </div>
