@@ -306,7 +306,7 @@
       "hero": {
         "eyebrow": "Independent engineering practice · Île-de-France",
         "title": "About <em>Deralis</em> Digital.",
-        "sub1": "I build the systems businesses need to operate.",
+        "sub1": "I build the operational systems established businesses need to keep running when their tools and processes <em>stop keeping up</em>.",
         "sub2": "Deralis Digital is an independent engineering practice. I work with profitable, operational businesses where the way information moves between people and tools has become the bottleneck. Not websites. Not templates. Systems that show where work is, what is blocked, and what needs to happen next.",
         "sub3": "I’ve worked inside real businesses where the system isn’t visible, but the consequences are. That experience is what TraviXO Systems comes from, a VGP compliance software for the French equipment rental industry.",
         "sub4": "It shapes how I work: you cannot design a system for an operation you do not understand.",
@@ -314,17 +314,19 @@
       },
       "background": {
         "eyebrow": "Background",
-        "title": "Four years inside French <em>software</em> and industrial businesses.",
-        "intro": "I work as a solo operator, building Deralis alongside my role in software support. My experience comes from working inside real systems where operations depend on tools that were never designed to work together.",
+        "title": "Five years inside French <em>software</em> and industrial businesses.",
+        "intro": "I work solo, full-time on Deralis Digital since October 2025. The five years before that were spent inside real systems, at the contact point where operations break: where tools don’t talk to each other, where information gets stuck, and where execution depends on what people remember.",
         "role1": {
-          "title": "Application Support Engineer",
-          "company": "Ariane Systems · Hospitality check-in software"
+          "title": "Ariane Systems",
+          "company": "Hospitality check-in software, in application support.",
+          "body": "Almost two years between code and real operations: client deployments, XML log analysis, PMS integrations, hardware incidents on kiosks in hotel lobbies. Where I learned how systems break in production, and what makes them hold."
         },
         "role2": {
-          "title": "Helpdesk Technician",
-          "company": "Loxam · Technical support inside the French equipment rental industry"
+          "title": "Loxam",
+          "company": "French equipment rental industry, in technical support.",
+          "body": "Eighteen months inside a multi-site rental operation: missed inspections, scattered certificates, audit trails that depend on someone remembering. The domain knowledge TraviXO Systems is built on."
         },
-        "closing": "The eighteen months at <strong>Loxam</strong> are where I learned how the French equipment rental industry actually operates day to day. That domain knowledge is what TraviXO Systems is built on."
+        "closing": "The eighteen months at <strong>Loxam</strong> are where I learned how the French equipment rental industry operates day to day. The domain knowledge TraviXO Systems is built on."
       },
       "principles": {
         "eyebrow": "How I work",
@@ -339,7 +341,7 @@
           "body": "If we cannot write down what finished looks like, the project does not start. Scope without a definition of done is how engagements run forever and clients lose trust."
         },
         "p3": {
-          "title": "I own the system. You own the business.",
+          "title": "No lock-in.",
           "body": "Every system is documented, transferable, and maintainable by another developer. No lock-in. No hidden dependencies. You can take the build elsewhere the day it ships if that is what you need."
         }
       },
@@ -349,11 +351,11 @@
         "intro": "Deralis Digital is the client practice. TraviXO Systems is the product.",
         "card1": {
           "title": "TraviXO Systems",
-          "body": "Live multi-tenant software for VGP compliance in the French equipment rental industry. Built solo from inside the industry it serves."
+          "body": "VGP compliance software for the French equipment rental industry. Built solo from inside the industry it serves."
         },
         "card2": {
           "title": "Deralis Digital",
-          "body": "Independent engineering practice built around an audit-first model for operational businesses across France, the UK, and the US."
+          "body": "Independent engineering practice. Audit-first model. France, the UK, the US."
         }
       }
     }

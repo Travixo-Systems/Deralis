@@ -304,7 +304,7 @@
       "hero": {
         "eyebrow": "Structure d’ingénierie de systèmes indépendante",
         "title": "À propos de <em>Deralis</em> Digital.",
-        "sub1": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
+        "sub1": "Je construis les systèmes opérationnels dont les entreprises établies ont besoin pour continuer à tourner quand leurs outils et processus <em>ne suivent plus</em>.",
         "sub2": "Deralis Digital est une structure d’ingénierie indépendante. Je travaille avec des entreprises rentables et opérationnelles où la circulation de l’information entre les personnes et les outils est devenue le goulot d’étranglement. Pas des sites web. Pas de templates. Des systèmes qui montrent où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite.",
         "sub3": "J’ai travaillé à l’intérieur de vraies entreprises où le système n’est pas visible, mais les conséquences le sont. C’est de cette expérience que vient TraviXO Systems, un logiciel de conformité VGP pour le secteur français de la location de matériel.",
         "sub4": "C’est ce qui façonne ma façon de travailler : on ne peut pas concevoir un système pour un fonctionnement qu’on ne comprend pas.",
@@ -312,17 +312,19 @@
       },
       "background": {
         "eyebrow": "Parcours",
-        "title": "Quatre ans à l’intérieur d’<em>éditeurs</em> et d’industriels français.",
-        "intro": "Je travaille en solo, en construisant Deralis en parallèle de mon poste dans le support logiciel. Mon expérience vient du travail à l’intérieur de vrais systèmes où les opérations dépendent d’outils qui n’ont jamais été conçus pour fonctionner ensemble.",
+        "title": "Cinq ans à l’intérieur d’<em>éditeurs</em> et d’industriels français.",
+        "intro": "Je travaille en solo à plein temps sur Deralis Digital depuis octobre 2025. Les cinq années précédentes se sont passées à l’intérieur de vrais systèmes, au point de contact où les opérations cassent : là où les outils ne se parlent pas, où l’information reste coincée, et où l’exécution dépend de ce que les gens se rappellent.",
         "role1": {
-          "title": "Application Support Engineer",
-          "company": "Ariane Systems · Logiciel de check-in pour l’hôtellerie"
+          "title": "Ariane Systems",
+          "company": "Logiciel de check-in hôtelier, en support applicatif.",
+          "body": "Presque deux ans entre le code et l’opération réelle : déploiements clients, analyse de logs XML, intégrations PMS, incidents matériel sur bornes en lobby d’hôtel. C’est là que j’ai appris comment les systèmes cassent en production, et ce qui les fait tenir."
         },
         "role2": {
-          "title": "Technicien support",
-          "company": "Loxam · Support technique au sein du secteur français de la location de matériel"
+          "title": "Loxam",
+          "company": "Secteur français de la location de matériel, en support technique.",
+          "body": "Dix-huit mois à l’intérieur d’une opération de location multi-sites : inspections manquées, certificats dispersés, pistes d’audit qui dépendent de quelqu’un qui se souvient. C’est la connaissance métier sur laquelle TraviXO Systems est construit."
         },
-        "closing": "Les dix-huit mois chez <strong>Loxam</strong> sont là où j’ai appris comment le secteur français de la location de matériel fonctionne réellement au quotidien. C’est sur cette connaissance métier que TraviXO Systems est construit."
+        "closing": "Les dix-huit mois chez <strong>Loxam</strong> sont là où j’ai appris comment le secteur français de la location de matériel fonctionne au quotidien. C’est la connaissance métier sur laquelle TraviXO Systems est construit."
       },
       "principles": {
         "eyebrow": "Comment je travaille",
@@ -337,7 +339,7 @@
           "body": "Si l’on ne peut pas définir clairement ce qui doit être livré, le projet ne démarre pas."
         },
         "p3": {
-          "title": "Je suis responsable du système. Vous êtes responsable de l’activité.",
+          "title": "Aucun verrouillage.",
           "body": "Chaque système est documenté, transmissible, et maintenable par un autre développeur. Aucun verrouillage. Aucune dépendance cachée. Vous pouvez emporter le projet ailleurs le jour même de la livraison si c’est ce dont vous avez besoin."
         }
       },
@@ -347,11 +349,11 @@
         "intro": "Deralis Digital est la pratique client. TraviXO Systems est le produit.",
         "card1": {
           "title": "TraviXO Systems",
-          "body": "Logiciel multi-tenant en production pour la conformité VGP dans le secteur français de la location de matériel. Construit en solo depuis l’intérieur du secteur qu’il sert."
+          "body": "Logiciel de conformité VGP pour le secteur français de la location de matériel. Construit en solo depuis l’intérieur du secteur qu’il sert."
         },
         "card2": {
           "title": "Deralis Digital",
-          "body": "Structure d’ingénierie indépendante construite autour d’un modèle audit-first pour les entreprises opérationnelles en France, au Royaume-Uni, et aux États-Unis."
+          "body": "Structure d’ingénierie indépendante. Modèle audit-first. France, Royaume-Uni, États-Unis."
         }
       }
     }

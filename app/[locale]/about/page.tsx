@@ -51,7 +51,9 @@ function AboutHero() {
         <RichText html={t.raw("title")} />
       </h1>
       <div style={subStack}>
-        <p style={{ ...sub, color: "var(--text-primary)", fontWeight: 500 }}>{t("sub1")}</p>
+        <p className="hero-lede" style={{ ...sub, color: "var(--text-primary)", fontWeight: 500 }}>
+          <RichText html={t.raw("sub1")} />
+        </p>
         <p style={sub}>{t("sub2")}</p>
         <p style={sub}>{t("sub3")}</p>
         <p style={sub}>{t("sub4")}</p>
@@ -78,21 +80,27 @@ function BackgroundCard() {
 
         {/* Internal anchor block: roles */}
         <aside style={anchorBlock}>
-          <div style={{ paddingLeft: 14, borderLeft: "2px solid var(--accent)", marginBottom: 20 }}>
-            <span style={{ display: "block", fontSize: 14, fontWeight: 600, color: "var(--text-on-peak)", marginBottom: 4 }}>
+          <div style={{ paddingLeft: 14, borderLeft: "2px solid var(--accent)", marginBottom: 24 }}>
+            <span style={{ display: "block", fontFamily: "var(--font-fraunces), serif", fontSize: 18, fontWeight: 500, letterSpacing: "-0.01em", color: "var(--text-on-peak)", marginBottom: 4 }}>
               {t("role1.title")}
             </span>
-            <span style={{ display: "block", fontSize: 12, lineHeight: 1.55, color: "var(--text-on-peak-muted)" }}>
+            <span style={{ display: "block", fontSize: 12, lineHeight: 1.55, color: "var(--text-on-peak-muted)", marginBottom: 10 }}>
               {t("role1.company")}
             </span>
+            <p style={{ fontSize: 13, lineHeight: 1.6, color: "var(--text-on-peak-muted)", margin: 0 }}>
+              {t("role1.body")}
+            </p>
           </div>
           <div style={{ paddingLeft: 14, borderLeft: "2px solid var(--accent)" }}>
-            <span style={{ display: "block", fontSize: 14, fontWeight: 600, color: "var(--text-on-peak)", marginBottom: 4 }}>
+            <span style={{ display: "block", fontFamily: "var(--font-fraunces), serif", fontSize: 18, fontWeight: 500, letterSpacing: "-0.01em", color: "var(--text-on-peak)", marginBottom: 4 }}>
               {t("role2.title")}
             </span>
-            <span style={{ display: "block", fontSize: 12, lineHeight: 1.55, color: "var(--text-on-peak-muted)" }}>
+            <span style={{ display: "block", fontSize: 12, lineHeight: 1.55, color: "var(--text-on-peak-muted)", marginBottom: 10 }}>
               {t("role2.company")}
             </span>
+            <p style={{ fontSize: 13, lineHeight: 1.6, color: "var(--text-on-peak-muted)", margin: 0 }}>
+              {t("role2.body")}
+            </p>
           </div>
         </aside>
       </div>

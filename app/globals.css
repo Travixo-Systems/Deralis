@@ -188,7 +188,8 @@ body {
 /* ========== ITALIC ACCENT (display text only) ========== */
 h1 em,
 h2 em,
-.pull-quote em {
+.pull-quote em,
+.hero-lede em {
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
