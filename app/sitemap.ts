@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://deralis.digital";
+  const baseUrl = "https://www.deralis.digital";
 
   const pages = [
     { path: "", changeFrequency: "weekly" as const, priority: 1 },
@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           en: `${baseUrl}${page.path}`,
           fr: `${baseUrl}/fr${page.path}`,
+          "x-default": `${baseUrl}${page.path}`,
         },
       },
     },
@@ -45,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           en: `${baseUrl}${page.path}`,
           fr: `${baseUrl}/fr${page.path}`,
+          "x-default": `${baseUrl}${page.path}`,
         },
       },
     },
