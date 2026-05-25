@@ -72,7 +72,8 @@
           "consulaireDesc": "Système opérationnel pitché à un consulat parisien. Format white-label.",
           "arcadiaName": "Arcadia Zoo V2",
           "arcadiaDesc": "Refonte complète déployée. Next.js 15, Supabase, Vercel.",
-          "signature": "Indépendant. Bilingue. Une seule personne, chaque ligne de code."
+          "signature": "Indépendant. Bilingue. Une seule personne, chaque ligne de code.",
+          "cardAriaLabel": "Voir toutes les réalisations"
         },
         "trajectory": {
           "label": "Parcours · Cinq ans en environnements réels",
@@ -246,12 +247,12 @@
       },
       "govPortal": {
         "label": "Proposition spec",
-        "title": "Portail de demandes gouvernementales",
+        "title": "Portail consulaire",
         "context": "Secteur public · MVP de prise en charge de passeports · Entre les mains de l’acheteur",
         "prose1": "Un MVP de prise en charge des demandes de passeport que j’ai construit et proposé à un bureau consulaire parisien après avoir vécu leur processus moi-même. Leur flux existant exigeait un déplacement en personne pour des fichiers que j’avais déjà téléversés en ligne. L’écart entre ce que le système pouvait faire et ce que l’équipe était obligée de faire se voyait depuis la salle d’attente.",
         "prose2": "J’ai construit le flux numérique qui aurait comblé cet écart, et je l’ai proposé directement. La proposition est actuellement entre leurs mains.",
         "screenshot": {
-          "alt": "Flux de prise en charge du Portail de demandes gouvernementales montrant la soumission de documents et le suivi de statut"
+          "alt": "Flux de prise en charge du Portail consulaire montrant la soumission de documents et le suivi de statut"
         },
         "url": "https://government-portal-ashy.vercel.app/",
         "viewBuildLabel": "Voir le build"

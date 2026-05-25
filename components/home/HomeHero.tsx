@@ -78,14 +78,28 @@ const anchorBlockStyle: CSSProperties = {
   position: "relative",
   borderRadius: 12,
   boxShadow: "var(--hero-peak-shadow)",
-  transition: "background-color 450ms ease, color 450ms ease",
+  transition: "background-color 450ms ease, color 450ms ease, box-shadow 450ms ease",
+};
+
+const anchorOverlayStyle: CSSProperties = {
+  position: "absolute",
+  inset: 0,
+  borderRadius: 12,
+  zIndex: 1,
+  cursor: "pointer",
 };
 
 const builtItemStyle: CSSProperties = {
+  display: "block",
+  position: "relative",
+  zIndex: 2,
   paddingLeft: 14,
   borderLeft: "2px solid var(--accent)",
   marginBottom: 18,
-  transition: "border-color 450ms ease",
+  color: "inherit",
+  textDecoration: "none",
+  cursor: "pointer",
+  transition: "border-color 450ms ease, transform 200ms ease",
 };
 
 const builtNameStyle: CSSProperties = {
@@ -167,31 +181,40 @@ export default function HomeHero() {
               </Link>
               <p className="hero-cta-caption">{t("ctaCaption")}</p>
             </div>
-            <Link href="/projects" style={ctaSecondaryStyle}>
-              {t("ctaSecondary")}
-            </Link>
           </div>
         </div>
 
-        <aside style={anchorBlockStyle}>
-          <TabLabel variant="default" heroSize style={{ left: 32 }}>
-            {t("anchor.tab")}
-          </TabLabel>
+        <aside style={anchorBlockStyle} className="hero-anchor">
+          <Link
+            href="/projects"
+            aria-label={t("anchor.cardAriaLabel")}
+            tabIndex={-1}
+            className="hero-anchor-overlay"
+            style={anchorOverlayStyle}
+          />
 
-          <div style={{ ...builtItemStyle }}>
+          <div style={{ position: "relative", zIndex: 2 }}>
+            <TabLabel variant="default" heroSize style={{ left: 32 }}>
+              {t("anchor.tab")}
+            </TabLabel>
+          </div>
+
+          <Link href="/projects/travixo" className="hero-anchor-item" style={builtItemStyle}>
             <span style={builtNameStyle}>{t("anchor.travixoName")}</span>
             <span style={builtDescStyle}>{t("anchor.travixoDesc")}</span>
-          </div>
-          <div style={builtItemStyle}>
+          </Link>
+          <Link href="/projects#portail-consulaire" className="hero-anchor-item" style={builtItemStyle}>
             <span style={builtNameStyle}>{t("anchor.consulaireName")}</span>
             <span style={builtDescStyle}>{t("anchor.consulaireDesc")}</span>
-          </div>
-          <div style={{ ...builtItemStyle, marginBottom: 0 }}>
+          </Link>
+          <Link href="/projects" className="hero-anchor-item" style={{ ...builtItemStyle, marginBottom: 0 }}>
             <span style={builtNameStyle}>{t("anchor.arcadiaName")}</span>
             <span style={builtDescStyle}>{t("anchor.arcadiaDesc")}</span>
-          </div>
+          </Link>
 
           <p style={{
+            position: "relative",
+            zIndex: 2,
             marginTop: 22,
             paddingTop: 18,
             borderTop: "1px solid var(--text-on-peak-dim)",
@@ -199,6 +222,7 @@ export default function HomeHero() {
             color: "var(--text-on-peak-dim)",
             fontStyle: "italic",
             transition: "color 450ms ease, border-color 450ms ease",
+            pointerEvents: "none",
           }}>
             {t("anchor.signature")}
           </p>

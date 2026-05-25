@@ -63,11 +63,12 @@
           "tab": "What I’ve built",
           "travixoName": "TraviXO",
           "travixoDesc": "Multi-tenant SaaS for VGP equipment compliance in the rental industry. In production.",
-          "consulaireName": "Portail consulaire",
+          "consulaireName": "Consular portal",
           "consulaireDesc": "Operational system pitched to a Paris consulate. White-label format.",
           "arcadiaName": "Arcadia Zoo V2",
           "arcadiaDesc": "Full rebuild deployed. Next.js 15, Supabase, Vercel.",
-          "signature": "Independent. Bilingual. One person, every line of code."
+          "signature": "Independent. Bilingual. One person, every line of code.",
+          "cardAriaLabel": "See all projects"
         },
         "h1": "<strong>Tools · files · spreadsheets.</strong> Everything works, but nothing is really <em>connected</em>.",
         "subhead1": "First I map what's broken. With you, not for you. Then I build what should hold it together.",
@@ -247,13 +248,13 @@
       },
       "govPortal": {
         "label": "Spec pitch",
-        "title": "Government Application Portal",
+        "title": "Consular portal",
         "context": "Public sector · Passport intake MVP · Currently with the buyer",
         "prose1": "A passport application intake MVP I built and pitched to a Paris consular office after going through their process myself. Their existing flow required an in-person trip for files I had already uploaded online. The gap between what the system could do and what the team was asked to do was visible from the waiting room.",
         "prose2": "I built the digital flow that would have closed the gap and proposed it directly. The proposal is currently with them.",
         "note": "Spec pitch. Not a delivered engagement. Status updated when the buyer responds.",
         "screenshot": {
-          "alt": "Government Application Portal intake flow showing document submission and status tracking"
+          "alt": "Consular portal intake flow showing document submission and status tracking"
         },
         "url": "https://government-portal-ashy.vercel.app/",
         "viewBuildLabel": "View the build"

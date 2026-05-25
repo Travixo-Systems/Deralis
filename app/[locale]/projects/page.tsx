@@ -121,7 +121,7 @@ function ProjectsClimax() {
 function GovPortalCaseStudy() {
   const t = useTranslations("projects.page.govPortal");
   return (
-    <DsCard>
+    <DsCard id="portail-consulaire">
       <div className="grid-hero">
         <div>
           <p style={eyebrow}>{t("label")}</p>

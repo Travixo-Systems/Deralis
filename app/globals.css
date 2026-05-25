@@ -523,6 +523,31 @@ main > :first-child {
 
 
 
+/* ========== HERO ANCHOR (proof card) ========== */
+@layer components {
+  .hero-anchor { transition: box-shadow 280ms ease; }
+  .hero-anchor:has(.hero-anchor-overlay:hover) {
+    box-shadow: var(--hero-peak-shadow), 0 0 0 1px var(--text-on-peak-dim);
+  }
+  .hero-anchor:has(.hero-anchor-overlay:focus-visible) {
+    box-shadow: var(--hero-peak-shadow), 0 0 0 2px var(--accent);
+  }
+
+  .hero-anchor-item {
+    transition: border-color 280ms ease, transform 200ms ease;
+  }
+  .hero-anchor-item:hover {
+    border-left-color: var(--text-on-peak);
+    transform: translateX(2px);
+  }
+  .hero-anchor-item:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+  .hero-anchor-overlay:focus-visible { outline: none; }
+}
+
 /* ========== MOTION ========== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
