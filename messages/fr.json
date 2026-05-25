@@ -58,11 +58,10 @@
   "home": {
     "page": {
       "hero": {
-        "eyebrow": "Structure d’ingénierie de systèmes indépendante",
+        "eyebrow": "",
         "h1": "<strong>Outils · fichiers · tableurs.</strong> Tout fonctionne, mais rien n’est vraiment <em>relié</em>.",
-        "subhead1": "<strong>Ce que vous utilisez aujourd’hui pour faire tourner votre activité ne tient pas.</strong>",
-        "subhead2": "Je construis le système qui remplace ça, pour les entreprises qui ont plus d’outils que de clarté.",
-        "subhead3": "L’information va où elle doit, quand elle doit, sans dépendre des personnes pour avancer.",
+        "subhead1": "D’abord, je regarde là où ça coince. Avec vous, pas à votre place. Ensuite, je construis ce qui devrait tout relier.",
+        "subhead2": "L’information va où elle doit, quand elle doit, sans dépendre des personnes pour avancer.",
         "ctaPrimary": "Découvrez l’audit →",
         "ctaSecondary": "Voir mes réalisations",
         "anchor": {

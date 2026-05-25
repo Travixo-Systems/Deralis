@@ -7,17 +7,6 @@ import type { CSSProperties } from "react";
 
 // Grid layout via CSS class .grid-hero (responsive handled in globals.css)
 
-const eyebrowStyle: CSSProperties = {
-  fontSize: "var(--fs-eyebrow)",
-  textTransform: "uppercase",
-  letterSpacing: "0.14em",
-  color: "var(--text-muted)",
-  marginBottom: 26,
-  fontWeight: 600,
-  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
-  transition: "color 450ms ease",
-};
-
 const h1Style: CSSProperties = {
   fontFamily: "var(--font-fraunces), Georgia, serif",
   fontSize: "var(--fs-h1)",
@@ -160,19 +149,15 @@ export default function HomeHero() {
     <DsCard>
       <div className="grid-hero-centered">
         <div>
-          <p style={eyebrowStyle}>{t("eyebrow")}</p>
           <h1 style={h1Style} className="hero-h1-responsive">
             <RichText html={t.raw("h1")} />
           </h1>
           <div style={subheadStackStyle}>
             <p style={subheadPStyle}>
-              <RichText html={t.raw("subhead1")} />
+              {t("subhead1")}
             </p>
             <p style={subheadPStyle}>
               {t("subhead2")}
-            </p>
-            <p style={subheadPStyle}>
-              {t("subhead3")}
             </p>
           </div>
           <div style={ctaRowStyle}>

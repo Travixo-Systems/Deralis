@@ -58,7 +58,7 @@
   "home": {
     "page": {
       "hero": {
-        "eyebrow": "Independent systems engineering practice",
+        "eyebrow": "",
         "anchor": {
           "tab": "What I’ve built",
           "travixoName": "TraviXO",
@@ -70,9 +70,8 @@
           "signature": "Independent. Bilingual. One person, every line of code."
         },
         "h1": "<strong>Tools · files · spreadsheets.</strong> Everything works, but nothing is really <em>connected</em>.",
-        "subhead1": "<strong>What you’re using today to run your business doesn’t hold up.</strong>",
-        "subhead2": "I build the system that replaces it, for businesses with more tools than clarity.",
-        "subhead3": "Information goes where it needs to, when it needs to, without waiting on someone to move it forward.",
+        "subhead1": "First I map what's broken. With you, not for you. Then I build what should hold it together.",
+        "subhead2": "Information goes where it needs to, when it needs to, without waiting on someone to move it forward.",
         "ctaPrimary": "Discover the audit →",
         "ctaSecondary": "View my work",
         "trajectory": {
