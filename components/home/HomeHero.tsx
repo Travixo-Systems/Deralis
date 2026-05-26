@@ -193,11 +193,9 @@ export default function HomeHero() {
             style={anchorOverlayStyle}
           />
 
-          <div style={{ position: "relative", zIndex: 2 }}>
-            <TabLabel variant="default" heroSize style={{ left: 32 }}>
-              {t("anchor.tab")}
-            </TabLabel>
-          </div>
+          <TabLabel variant="default" heroSize style={{ left: 32 }}>
+            {t("anchor.tab")}
+          </TabLabel>
 
           <Link href="/projects/travixo" className="hero-anchor-item" style={builtItemStyle}>
             <span style={builtNameStyle}>{t("anchor.travixoName")}</span>
