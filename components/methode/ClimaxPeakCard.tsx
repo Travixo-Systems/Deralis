@@ -5,8 +5,11 @@ import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
 
 // Reuses common.auditCta keys (home.climax.* equivalent per the spec)
+const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
+
 export default function ClimaxPeakCard() {
   const t = useTranslations("common.auditCta");
+  const tActions = useTranslations("common.actions");
   const FACT_KEYS = ["duree", "livrable", "prix", "garantie", "langue"] as const;
 
   return (
@@ -18,6 +21,16 @@ export default function ClimaxPeakCard() {
           <p style={body}>{t("body1")}</p>
           <p style={body}>{t("body2")}</p>
           <Link href="/audit" style={ctaPeak}>{t("ctaLabel")}</Link>
+          {discoveryCallLink && (
+            <a
+              href={discoveryCallLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={ctaSecondary}
+            >
+              {tActions("bookCall")}
+            </a>
+          )}
           <span style={meta}>{t("ctaMeta")}</span>
         </div>
 
@@ -52,6 +65,10 @@ const ctaPeak: CSSProperties = {
   display: "inline-flex", alignItems: "center", gap: 12, padding: "18px 32px",
   background: "var(--text-on-peak)", color: "var(--card-peak)", fontSize: 14, fontWeight: 600,
   borderRadius: "var(--radius-button)", textDecoration: "none", marginTop: 18,
+};
+const ctaSecondary: CSSProperties = {
+  display: "inline-flex", alignItems: "center", gap: 8, marginLeft: 18, fontSize: 14, fontWeight: 500,
+  color: "var(--text-on-peak-muted)", textDecoration: "none", transition: "color 200ms ease",
 };
 const meta: CSSProperties = {
   display: "block", marginTop: 14, fontSize: 12, color: "var(--text-on-peak-dim)", fontStyle: "italic",

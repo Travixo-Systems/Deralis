@@ -14,6 +14,7 @@ type MobileMenuProps = {
   open: boolean;
   onClose: () => void;
   links: ReadonlyArray<NavLink>;
+  auditCta?: { href: string; label: string };
   ref?: Ref<HTMLDivElement>;
 };
 
@@ -21,6 +22,7 @@ export default function MobileMenu({
   open,
   onClose,
   links,
+  auditCta,
   ref,
 }: MobileMenuProps) {
   if (!open) return null;
@@ -67,6 +69,32 @@ export default function MobileMenu({
           </li>
         ))}
       </ul>
+      {auditCta && (
+        <div style={{ padding: "12px 14px 4px" }}>
+          <Link
+            href={auditCta.href}
+            onClick={onClose}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+              padding: "11px 20px",
+              background: "transparent",
+              color: "var(--text-primary)",
+              border: "1px solid var(--text-primary)",
+              borderRadius: 100,
+              fontFamily: "var(--font-ibm-plex-sans), sans-serif",
+              fontSize: 13,
+              fontWeight: 500,
+              textDecoration: "none",
+              transition: "background-color 200ms ease, color 200ms ease, border-color 450ms ease",
+            }}
+          >
+            {auditCta.label}
+          </Link>
+        </div>
+      )}
       <div style={{ padding: "10px 14px 14px", borderTop: "1px solid var(--border-soft)" }}>
         <LanguageToggle />
       </div>

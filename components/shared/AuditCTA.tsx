@@ -8,13 +8,17 @@ type AuditCTAProps = {
   eyebrowOverride?: string;
   /** When true, renders destination-page CTA (Stripe link, startAudit label) */
   destination?: boolean;
+  /** When true, renders the subordinate discovery-call ("Book the call") link below the primary CTA */
+  showDiscoveryCta?: boolean;
 };
 
 const stripeLink = process.env.NEXT_PUBLIC_STRIPE_AUDIT_LINK || "#";
+const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK || "#";
 
-export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride, eyebrowOverride, destination = false }: AuditCTAProps) {
+export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride, eyebrowOverride, destination = false, showDiscoveryCta = false }: AuditCTAProps) {
   const t = useTranslations("common.auditCta");
   const tActions = useTranslations("common.actions");
+  const tDiscovery = useTranslations("common.discoveryCall");
 
   return (
     <section className="bg-bg-cta border-y border-border-cool py-[60px] max-md:py-[42px]">
@@ -64,6 +68,22 @@ export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride,
                 →
               </span>
             </Link>
+          )}
+          {showDiscoveryCta && (
+            <a
+              href={discoveryCallLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-[15px] font-medium text-ink-cool hover:text-accent transition-colors no-underline"
+            >
+              {tDiscovery("ctaLabel").replace(/\s*→\s*$/, "")}
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-[180ms] group-hover:translate-x-[3px]"
+              >
+                →
+              </span>
+            </a>
           )}
           <p className="text-[13px] text-ink-cool-muted">{noteOverride || t("note")}</p>
         </div>

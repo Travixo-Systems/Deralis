@@ -165,6 +165,7 @@ export default function SiteNav() {
         open={open}
         onClose={() => setOpen(false)}
         links={mobileLinks}
+        auditCta={{ href: "/audit", label: tActions("discoverAudit") }}
       />
     </header>
   );

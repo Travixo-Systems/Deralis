@@ -59,6 +59,22 @@ const peakMetaStyle: CSSProperties = {
   fontStyle: "italic",
 };
 
+// Secondary (subordinate) audit link shown beneath the primary discovery CTA on the home surface
+const ctaSecondaryPeakStyle: CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 8,
+  marginTop: 16,
+  fontSize: 14,
+  fontWeight: 500,
+  color: "var(--text-on-peak-muted)",
+  textDecoration: "none",
+  fontFamily: "inherit",
+  transition: "color 200ms ease",
+};
+
+const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
+
 const factsStyle: CSSProperties = {
   background: "var(--peak-surface-elevated)",
   borderLeft: "3px solid var(--text-on-peak)",
@@ -95,6 +111,7 @@ const FACT_KEYS = ["duree", "livrable", "prix", "garantie", "langue"] as const;
 
 export default function ClimaxPeak() {
   const t = useTranslations("common.auditCta");
+  const tActions = useTranslations("common.actions");
 
   return (
     <DsCardPeak>
@@ -106,9 +123,25 @@ export default function ClimaxPeak() {
           </h2>
           <p style={bodyStyle}>{t("body1")}</p>
           <p style={bodyStyle}>{t("body2")}</p>
-          <Link href="/audit" style={ctaPeakStyle}>
-            {t("ctaLabel")}
-          </Link>
+          {discoveryCallLink ? (
+            <>
+              <a
+                href={discoveryCallLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={ctaPeakStyle}
+              >
+                {tActions("bookCall")}
+              </a>
+              <Link href="/audit" style={ctaSecondaryPeakStyle}>
+                {t("ctaLabel")}
+              </Link>
+            </>
+          ) : (
+            <Link href="/audit" style={ctaPeakStyle}>
+              {t("ctaLabel")}
+            </Link>
+          )}
           <span style={peakMetaStyle}>{t("ctaMeta")}</span>
         </div>
         <div style={factsStyle}>

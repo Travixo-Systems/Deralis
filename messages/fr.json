@@ -12,7 +12,8 @@
       "sending": "Envoi en cours...",
       "changeLanguage": "Changer de langue",
       "discoverAudit": "Découvrez l’audit",
-      "startAudit": "Démarrez l’audit (300 €)"
+      "startAudit": "Démarrez l’audit (1 280 €)",
+      "bookCall": "Réserver l’appel →"
     },
     "footer": {
       "tagline": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
@@ -27,12 +28,12 @@
       "eyebrow": "Commencez par un audit de décision",
       "headline": "Rien n’est construit sans valeur claire pour votre activité.",
       "body1": "L’audit cartographie votre fonctionnement actuel, identifie les écarts structurels, et définit quoi construire, dans quel ordre, et ce qu’il ne faut pas construire.",
-      "body2": "Si le projet est lancé, le coût de l’audit est déduit du développement.",
+      "body2": "Si vous construisez ensuite, 500 € sont déduits du développement.",
       "note": "Prix fixe. Sans suite obligatoire.",
       "facts": {
         "duree": {
           "label": "Durée",
-          "value": "90 minutes d’appel"
+          "value": "Deux jours d’analyse"
         },
         "livrable": {
           "label": "Livrable",
@@ -40,7 +41,7 @@
         },
         "prix": {
           "label": "Prix",
-          "value": "300 €, déduits du build"
+          "value": "1 280 €, 500 € déduits si vous construisez"
         },
         "garantie": {
           "label": "Garantie",
@@ -51,8 +52,14 @@
           "value": "Français ou anglais"
         }
       },
-      "ctaLabel": "Prendre une décision · 300 € →",
+      "ctaLabel": "Prendre une décision · 1 280 € →",
       "ctaMeta": "Prix fixe. Sans suite obligatoire."
+    },
+    "discoveryCall": {
+      "eyebrow": "Pas encore sûr ?",
+      "headline": "Commencez par un point gratuit.",
+      "body": "Trente minutes pour voir si c’est pertinent. Si ça ne l’est pas, je vous le dis. Pas de livrable, pas de pression.",
+      "ctaLabel": "Réserver l’appel →"
     }
   },
   "home": {
@@ -86,7 +93,7 @@
             "Ariane Systems"
           ]
         },
-        "ctaCaption": "90 minutes · 300 € · déduits si vous construisez"
+        "ctaCaption": "Deux jours · 1 280 € · 500 € déduits si vous construisez"
       },
       "flow": {
         "label": "Comment je travaille",
@@ -144,7 +151,7 @@
           "1": {
             "num": "01",
             "title": "Audit de décision",
-            "description": "Je cartographie le fonctionnement réel. 5 jours ouvrés. 300 €."
+            "description": "Je cartographie le fonctionnement réel. Deux jours, sur site quand c’est utile. Dossier livré sous cinq jours ouvrés."
           },
           "2": {
             "num": "02",
@@ -332,7 +339,7 @@
         "intro": "Chaque mission passe par la même logique. Chaque principe existe parce que s’en passer a coûté à quelqu’un, quelque part, de l’argent qu’il n’avait pas besoin de dépenser.",
         "p1": {
           "title": "L’audit en premier",
-          "body": "L’audit système à 300 € est la seule porte d’entrée. Rien n’est construit avant. L’audit définit quoi construire et dans quel ordre, et le coût est déduit du projet s’il est lancé."
+          "body": "L’audit système à 1 280 € est la seule porte d’entrée. Rien n’est construit avant. L’audit définit quoi construire et dans quel ordre, et 500 € sont déduits du projet s’il est lancé."
         },
         "p2": {
           "title": "Définir ce qui doit être livré avant de commencer",
@@ -845,21 +852,21 @@
   "audit": {
     "page": {
       "metadata": {
-        "title": "Audit de décision · 300 €",
-        "description": "Quoi construire, dans quel ordre, et ce qu’il ne faut pas construire. 90 minutes d’appel, dossier livré sous cinq jours ouvrés."
+        "title": "Audit de décision · 1 280 €",
+        "description": "Quoi construire, dans quel ordre, et ce qu’il ne faut pas construire. Deux jours d’analyse, dossier livré sous cinq jours ouvrés."
       },
       "hero": {
-        "eyebrow": "Audit de décision · 300 €",
+        "eyebrow": "Audit de décision · 1 280 €",
         "h1": "Vos outils tiennent. Votre opération, non.",
         "sub": "<strong>Audit de décision :</strong> quoi construire, dans quel ordre, et ce qu’il ne faut pas construire.",
         "offer": {
           "tab": "L’offre",
-          "line1": "<strong>90 minutes</strong> d’appel",
+          "line1": "<strong>Deux jours</strong> d’analyse, sur site quand c’est utile, à distance sinon",
           "line2": "<strong>Cinq jours ouvrés</strong> de livraison",
-          "line3": "<strong>300 €</strong>, déduits si vous construisez ensuite",
+          "line3": "<strong>1 280 €</strong>, 500 € déduits si vous construisez ensuite",
           "line4": "Remboursement si je ne suis pas le bon interlocuteur"
         },
-        "cta": "Prendre une décision · 300 € →",
+        "cta": "Prendre une décision · 1 280 € →",
         "meta": "Un exemple du dossier à droite. Téléchargeable plus bas."
       },
       "recognition": {
@@ -878,13 +885,13 @@
         "closing1": "À ce stade, la question n’est plus est-ce qu’on a un problème. Vous le savez déjà.",
         "closing2": "La question est : quel est le bon premier mouvement. Un nouveau logiciel ? Un changement de process ? Rien du tout ? Faut-il construire, acheter, ou mieux utiliser ce qui est déjà là ?",
         "closing3": "C’est la question à laquelle l’audit répond. Pas en théorie. Sur votre opération, avec vos contraintes, en cinq jours ouvrés.",
-        "cta": "Prendre une décision · 300 € →"
+        "cta": "Prendre une décision · 1 280 € →"
       },
       "deliverable": {
         "tab": "Ce que vous aurez en main",
         "h3": "Un dossier de décision.",
         "negations": "Pas un rapport. Pas un audit théorique. Pas un deck de slides.",
-        "lede": "Court, structuré, signé. Écrit pour être relu par quelqu’un qui n’était pas sur l’appel.",
+        "lede": "Court, structuré, signé. Écrit pour être relu par quelqu’un qui n’était pas présent.",
         "bodyLabel": "À l’intérieur",
         "items": [
           "<strong>La cartographie</strong> de votre fonctionnement réel : où l’information circule, où elle s’arrête, où elle se duplique.",
@@ -923,38 +930,38 @@
       },
       "guarantee": {
         "h3": "Et si je me trompe ?",
-        "p1": "Si pendant l’appel je constate que je ne suis pas la bonne personne pour vous aider, je rembourse l’intégralité des 300 €. Sans discussion, sans paiement partiel, sans tentative de vous vendre autre chose.",
+        "p1": "Si en cours de route je constate que je ne suis pas la bonne personne pour vous aider, je rembourse l’intégralité des 1 280 €. Sans discussion, sans paiement partiel, sans tentative de vous vendre autre chose.",
         "p2": "Dans le cas contraire, l’audit n’est pas remboursable. Parce que l’audit est le travail, pas une étape commerciale. Le dossier existe pour que vous puissiez prendre des décisions que vous ne pouviez pas prendre avant. Cette valeur est livrée que vous me confiiez la suite ou non, et c’est précisément l’objectif."
       },
       "process": {
-        "intro": "Quatre étapes. Dossier livré sous cinq jours ouvrés après l’appel.",
+        "intro": "Quatre étapes. Dossier livré sous cinq jours ouvrés après l’analyse.",
         "steps": [
           {
             "num": "01",
             "title": "Paiement",
-            "desc": "300 € via Stripe. Lien de prise de rendez-vous immédiat."
+            "desc": "1 280 € via Stripe. Lien de prise de rendez-vous immédiat."
           },
           {
             "num": "02",
             "title": "Rendez-vous",
-            "desc": "Vous choisissez un créneau dans les jours qui suivent. 90 minutes, en visio."
+            "desc": "Vous choisissez les dates dans les jours qui suivent. Deux jours d’analyse, sur site quand c’est utile, à distance sinon."
           },
           {
             "num": "03",
-            "title": "Appel d’audit",
+            "title": "Audit",
             "desc": "Structure fixe. J’identifie avec vous les points clés et formalise les éléments nécessaires."
           },
           {
             "num": "04",
             "title": "Dossier livré",
-            "desc": "Sous cinq jours ouvrés après l’appel. PDF signé, envoyé par email."
+            "desc": "Sous cinq jours ouvrés après l’analyse. PDF signé, envoyé par email."
           }
         ]
       },
       "finalCta": {
         "h2": "Prendre une décision avant de construire.",
         "sub": "Un audit. Un dossier. Une décision que vous pouvez défendre.",
-        "cta": "Prendre une décision · 300 € →",
+        "cta": "Prendre une décision · 1 280 € →",
         "meta": "Français ou anglais. NDA sur demande."
       }
     }
@@ -982,7 +989,7 @@
         "num": "01",
         "title": "Audit",
         "desc": "Je cartographie votre fonctionnement réel. Où l’information circule, où elle s’arrête, où elle se duplique. Le livrable est un dossier de décision, pas un rapport.",
-        "metadata": "5 jours ouvrés · 300 €",
+        "metadata": "Deux jours · dossier sous 5 jours ouvrés",
         "cta": "Démarrer l’audit →"
       },
       "stage2": {
@@ -998,8 +1005,8 @@
     },
     "finalCta": {
       "h2": "Commencez par comprendre ce qui doit être construit..",
-      "sub": "90 minutes. Cinq jours. Un dossier que vous gardez, quoi qu’il arrive ensuite.",
-      "cta": "Prendre une décision · 300 € →"
+      "sub": "Deux jours. Cinq jours. Un dossier que vous gardez, quoi qu’il arrive ensuite.",
+      "cta": "Prendre une décision · 1 280 € →"
     }
   }
 }
