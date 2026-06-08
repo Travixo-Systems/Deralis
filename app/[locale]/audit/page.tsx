@@ -12,6 +12,7 @@ type Props = {
 };
 
 const stripeLink = process.env.NEXT_PUBLIC_STRIPE_AUDIT_LINK || "#";
+const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
@@ -77,6 +78,7 @@ function AuditHero() {
           </div>
 
           <a href={stripeLink} style={ctaPrimary}>{t("cta")}</a>
+          <DiscoveryCallLink />
           <span style={metaStyle}>{t("meta")}</span>
         </div>
 
@@ -149,6 +151,7 @@ function RecognitionCard() {
         <p style={introP}>{t("closing2")}</p>
         <p style={{ ...introP, marginBottom: 32 }}>{t("closing3")}</p>
         <a href={stripeLink} style={ctaPrimary}>{t("cta")}</a>
+        <DiscoveryCallLink />
       </div>
     </DsCard>
   );
@@ -318,6 +321,7 @@ function AuditFinalCTA() {
         {t("sub")}
       </p>
       <a href={stripeLink} style={ctaPrimary}>{t("cta")}</a>
+      <DiscoveryCallLink />
       <p style={{ marginTop: 14, fontSize: 12, color: "var(--text-muted)", fontStyle: "italic" }}>{t("meta")}</p>
     </DsCardFinal>
   );
@@ -349,6 +353,22 @@ const ctaPrimary: CSSProperties = {
 const metaStyle: CSSProperties = {
   display: "block", marginTop: 14, fontSize: 12, color: "var(--text-muted)", fontStyle: "italic",
 };
+
+const ctaDiscoveryStyle: CSSProperties = {
+  display: "inline-flex", alignItems: "center", gap: 8, marginLeft: 18, fontSize: 14, fontWeight: 500,
+  color: "var(--text-secondary)", textDecoration: "none", transition: "color 200ms ease",
+};
+
+/* Subordinate discovery-call link beside the primary paid-audit CTA. Renders only when the link env is set. */
+function DiscoveryCallLink() {
+  const tActions = useTranslations("common.actions");
+  if (!discoveryCallLink) return null;
+  return (
+    <a href={discoveryCallLink} target="_blank" rel="noopener noreferrer" style={ctaDiscoveryStyle}>
+      {tActions("bookCall")}
+    </a>
+  );
+}
 
 const pdfPage: CSSProperties = {
   position: "absolute", width: 240, height: 320, background: "var(--paper-mock-bg)",
