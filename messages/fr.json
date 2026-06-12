@@ -271,29 +271,33 @@
         "items": {
           "1": {
             "title": "Tableau de bord Deralis Ops",
-            "desc": "Un pattern de tableau de bord opérationnel pour les équipes qui ont besoin de voir où en est le travail. Construit pour tester la primitive de visibilité qu’un système client réel viendrait étendre.",
+            "desc": "Dans ce concept, vous voyez toute l’opération tenir sur un seul écran : missions ouvertes, qui est disponible, ce qui a glissé aujourd’hui, ce qui demande une attention maintenant. Le même tableau de bord convient à une société de sécurité qui suit ses rondes sur plusieurs sites, une entreprise de nettoyage qui ajuste ses équipes aux créneaux, ou une équipe de maintenance qui regarde les tickets s’accumuler ou se résorber. Les chiffres existent déjà, éparpillés entre les personnes et les tableurs. Le point, c’est de les voir au même endroit.",
             "linkLabel": "Voir la démo",
             "url": "https://deralis-ops-dashboard.vercel.app/"
           },
           "2": {
             "title": "Flux Client",
-            "desc": "Une démo de prise en charge structurée. Une demande arrive, devient une fiche mission, reçoit un statut, et reste visible pour toute l’équipe sans que personne n’ait à transférer quoi que ce soit.",
+            "desc": "Dans ce concept, vous voyez une demande arriver : quelqu’un remplit un court formulaire, et elle apparaît aussitôt comme une mission suivie, visible par toute l’équipe, sans e-mail, sans transfert. La même prise en charge convient à une agence qui capte des demandes de projet, un atelier qui enregistre des dépôts en réparation, ou un studio qui transforme des briefs en file d’attente. La demande allait arriver de toute façon. Le point, c’est que personne n’ait à lui courir après ensuite.",
             "linkLabel": "Voir la démo",
             "url": "https://flux-client-umber.vercel.app/"
           },
           "3": {
             "title": "Onboard",
-            "desc": "Un suivi d’intégration structuré. Créez un dossier, regardez la checklist apparaître, chaque étape visible. Rien qui dépende de la mémoire de quelqu’un.",
+            "desc": "Dans ce concept, vous voyez une arrivée devenir un plan : ajoutez une personne, et sa checklist se construit toute seule, chaque étape visible, chacune cochée au nom de qui l’a faite. Le même suivi convient à une agence de recrutement qui place un candidat, un cabinet qui accueille un nouveau client, ou une équipe qui briefe un prestataire. Les étapes étaient toujours les mêmes. Le point, c’est qu’aucune ne dépende de la mémoire de quelqu’un.",
             "linkLabel": "Voir la démo",
             "url": "https://onboard-blush.vercel.app/"
           },
           "4": {
-            "title": "Catalogue interactif",
-            "desc": "Un catalogue produits avec gestion des commandes. Flux de commande complet en démo interactive, construit pour tester comment une petite opération commerciale pourrait fonctionner sur un seul système.",
+            "title": "Tableau de flux",
+            "desc": "Dans ce concept, vous suivez une seule demande qui circule : elle arrive, devient une carte suivie, et d’un coup vous voyez qui s’en occupe, ce qui la bloque, et ce qui vient ensuite. Le même tableau convient à un syndic qui relance la validation d’un gestionnaire, une équipe technique qui attend la pièce d’un fournisseur, ou un négoce qui retient une commande jusqu’à confirmation de la livraison. Les outils existent déjà. Le point, c’est ce qui se passe entre eux.",
             "linkLabel": "Voir la démo",
-            "url": "https://deralis-catalog-demo.vercel.app/"
+            "url": "https://deralis-flow-board.vercel.app/"
           }
-        }
+        },
+        "alsoPrefix": "Aussi en ligne : ",
+        "alsoLinkLabel": "Catalogue interactif",
+        "alsoSuffix": ", une démo de commande e-commerce de bout en bout.",
+        "alsoUrl": "https://deralis-catalog-demo.vercel.app/"
       },
       "finalCta": {
         "title": "Chaque projet ici a commencé par un problème que quelqu’un pouvait <em>nommer</em>.",

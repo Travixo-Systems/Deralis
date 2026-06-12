@@ -175,6 +175,19 @@ function ConceptsCard() {
           </div>
         ))}
       </div>
+
+      <p style={alsoLine}>
+        {t("alsoPrefix")}
+        <a
+          href={t("alsoUrl")}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "var(--text-primary)", textDecoration: "none", borderBottom: "1px solid var(--border-strong)" }}
+        >
+          {t("alsoLinkLabel")}
+        </a>
+        {t("alsoSuffix")}
+      </p>
     </DsCard>
   );
 }
@@ -220,6 +233,9 @@ const conceptCard: CSSProperties = {
   background: "var(--card-paper)", border: "1px solid var(--border-soft)",
   borderLeft: "3px solid var(--accent)", borderRadius: "var(--radius-internal)", padding: "28px 24px",
   position: "relative",
+};
+const alsoLine: CSSProperties = {
+  marginTop: 28, fontSize: 13, lineHeight: 1.6, color: "var(--text-muted)",
 };
 const livePill: CSSProperties = {
   position: "absolute",
