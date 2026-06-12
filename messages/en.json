@@ -273,25 +273,25 @@
         "items": {
           "1": {
             "title": "Deralis Ops Dashboard",
-            "desc": "In this concept, you watch the whole operation resolve into a single screen: open jobs, who is free, what slipped today, what needs attention now. The same dashboard fits a security firm tracking patrols across sites, a cleaning company balancing crews against shifts, or a maintenance team watching tickets pile or clear. The numbers already exist, scattered across people and spreadsheets. The point is seeing them in one place.",
+            "desc": "The whole operation resolves into a single screen: open jobs, who is free, what slipped today, what needs attention now. The same dashboard fits a security firm tracking patrols across sites, a cleaning company balancing crews against shifts, or a maintenance team watching tickets pile or clear. The numbers already exist, scattered across people and spreadsheets. The point is seeing them in one place.",
             "linkLabel": "View demo",
             "url": "https://deralis-ops-dashboard.vercel.app/"
           },
           "2": {
             "title": "Flux Client",
-            "desc": "In this concept, you watch an inquiry arrive: someone fills a short form, and it lands instantly as a tracked job the whole team can see, no email, no forwarding. The same intake fits an agency catching project requests, a workshop logging repair drop-offs, or a studio turning briefs into a queue. The request was always going to come in. The point is that nobody has to chase it after it does.",
+            "desc": "An inquiry arrives: someone fills a short form, and it lands instantly as a tracked job the whole team can see, no email, no forwarding. The same intake fits an agency catching project requests, a workshop logging repair drop-offs, or a studio turning briefs into a queue. The request was always going to come in. The point is that nobody has to chase it after it does.",
             "linkLabel": "View demo",
             "url": "https://flux-client-umber.vercel.app/"
           },
           "3": {
             "title": "Onboard",
-            "desc": "In this concept, you watch a new arrival become a plan: add a person, and their checklist builds itself, every step visible, each one marked done by name. The same tracker fits a hiring agency placing a candidate, a firm bringing on a new client, or a team briefing a contractor. The steps were always the same. The point is that none of them depend on someone remembering.",
+            "desc": "A new arrival becomes a plan: add a person, and their checklist builds itself, every step visible, each one marked done by name. The same tracker fits a hiring agency placing a candidate, a firm bringing on a new client, or a team briefing a contractor. The steps were always the same. The point is that none of them depend on someone remembering.",
             "linkLabel": "View demo",
             "url": "https://onboard-blush.vercel.app/"
           },
           "4": {
             "title": "Flow Board",
-            "desc": "In this concept, you watch a single request travel: it arrives, becomes a tracked card, and suddenly you see who owns it, what's blocking it, and what moves next. The same board fits a syndic chasing a gestionnaire's validation, a technical team waiting on a supplier's part, or a négoce holding an order until a delivery is confirmed. The tools already exist. The point is what happens between them.",
+            "desc": "A single request travels: it arrives, becomes a tracked card, and suddenly you see who owns it, what's blocking it, and what moves next. The same board fits a syndic chasing a gestionnaire's validation, a technical team waiting on a supplier's part, or a négoce holding an order until a delivery is confirmed. The tools already exist. The point is what happens between them.",
             "linkLabel": "View demo",
             "url": "https://deralis-flow-board.vercel.app/"
           }
