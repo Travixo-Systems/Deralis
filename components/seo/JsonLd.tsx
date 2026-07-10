@@ -71,6 +71,9 @@ export function LocalBusinessJsonLd() {
       "Independent engineering practice building operational systems with Next.js, TypeScript, Supabase, and PostgreSQL.",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "57 rue Léo Lagrange",
+      postalCode: "93130",
+      addressLocality: "Noisy-le-Sec",
       addressCountry: "FR",
     },
     priceRange: "€€€",
