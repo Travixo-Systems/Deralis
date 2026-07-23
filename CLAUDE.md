@@ -1,5 +1,9 @@
 # Project Notes
 
+## Security
+
+- Never read or print `.env*` files (`.env`, `.env.local`, `.env.*`, etc.). These contain secrets and must not be opened, echoed, or included in any output.
+
 ## Blog Articles
 
 - Blog content lives in `content/blog/<slug>.md` with frontmatter metadata
