@@ -16,7 +16,7 @@
       "bookCall": "Book the call →"
     },
     "footer": {
-      "tagline": "I build the systems businesses need to operate.",
+      "tagline": "I make sure work stops getting lost between people, teams and tools.",
       "copyrightIndependent": "© 2026 Deralis Digital · Île-de-France",
       "location": "France · Île-de-France · remote",
       "languages": "French and English",
@@ -79,22 +79,34 @@
           "cardAriaLabel": "See all projects"
         },
         "h1": "<strong>Clearer operations. Faster growth.</strong>",
-        "subhead1": "I design solutions that improve visibility, streamline workflows, and help businesses grow faster.",
-        "subhead2": "From internal coordination and handoffs between teams to approvals, follow-ups, orders, and customer requests, everyone can see what is moving, what is blocked, and who needs to act next.",
+        "subhead1": "I design solutions that keep work and information moving together from one person to the next, using the teams and tools you already have.",
+        "subhead2": "Every request, approval, order or follow up has an owner, a status and a next action. Your teams know what is moving, what is blocked and who needs to act.",
         "ctaPrimary": "See what the audit covers →",
         "ctaSecondary": "View my work",
-        "trajectory": {
-          "label": "Background · Five years in real-world environments",
-          "employers": [
-            "Dassault Systèmes",
-            "Scaleway",
-            "Clear Channel",
-            "BWT France",
-            "Loxam",
-            "Ariane Systems"
-          ]
+        "ctaCaption": "Two days · €1,280 · €500 deducted if you build",
+        "benefits": [
+          "Less time spent searching, checking and chasing",
+          "Fewer errors and less rework",
+          "More capacity to serve your customers"
+        ]
+      },
+      "cost": {
+        "eyebrow": "What coordination absorbs",
+        "intro1": "Your teams are working. Some of that time is spent delivering for customers. Some is spent coordinating the work itself.",
+        "intro2": "A request comes in. Someone forwards it. Another person waits on an approval. The customer follows up. A manager goes looking for the latest version.",
+        "pullquote": "Some of that time is necessary. The rest is <em>recoverable</em>.",
+        "card1": {
+          "title": "The time coordination absorbs",
+          "description": "Finding a piece of information, checking who replied, asking where an approval stands."
         },
-        "ctaCaption": "Two days · €1,280 · €500 deducted if you build"
+        "card2": {
+          "title": "Avoidable errors and rework",
+          "description": "Information typed in twice, an old version used by mistake, a deadline noticed too late."
+        },
+        "card3": {
+          "title": "Growth that overloads the team",
+          "description": "When activity rises, so do the messages, the checks and the chasing. Without better organisation, part of the extra capacity is absorbed by coordination."
+        }
       },
       "flow": {
         "label": "How I work",
@@ -117,11 +129,11 @@
         },
         "card2": {
           "title": "Businesses outgrowing their tools",
-          "description": "Spreadsheets, SaaS tools, and workarounds are no longer enough. Information lives in multiple places and moves inconsistently.",
+          "description": "Spreadsheets, SaaS tools and accumulated workarounds are no longer enough. Information lives in several places and nobody knows which copy is authoritative.",
           "tags": [
             "Tool sprawl",
             "Data silos",
-            "Loss of visibility"
+            "Conflicting sources"
           ]
         },
         "card3": {
@@ -221,11 +233,11 @@
       "exclusion": {
         "eyebrow": "Filter",
         "headline": "Not for everyone.",
-        "body1": "Not for early-stage ideas, simple website requests, or projects where the problem hasn’t been defined.",
-        "body2": "<strong>If you can’t name what’s broken, this isn’t the right time.</strong>",
+        "body1": "Not for an idea with no real activity yet, not for a brochure-site request, and not for adding automation with no real situation to point at.",
+        "body2": "<strong>You do not need to know the cause.</strong> One real example is enough: a file that drags, an approval that stalls, a customer who has to chase.",
         "tags": [
-          "Established business only",
-          "Problem must be defined",
+          "Established business",
+          "One concrete example is enough",
           "Decision-maker participates"
         ]
       }
@@ -928,7 +940,7 @@
         "items": [
           "You’re looking for a showcase website. WordPress, Webflow, Framer, something else.",
           "You want to start building before the problem is defined.",
-          "You can’t name what’s wrong, even approximately.",
+          "You cannot point to a single concrete example: not a file that drags, not an approval that stalls, not a customer who has to chase.",
           "You plan to skip the audit and go straight to building.",
           "There’s no operational friction to solve."
         ]

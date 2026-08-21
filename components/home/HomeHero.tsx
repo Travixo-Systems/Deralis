@@ -118,34 +118,15 @@ const builtDescStyle: CSSProperties = {
   color: "var(--text-on-peak-muted)",
 };
 
-const trajectoryStyle: CSSProperties = {
-  marginTop: 56,
-  paddingTop: 48,
-  borderTop: "2px solid var(--border-strong)",
-  transition: "border-color 450ms ease",
-};
-
-const trajectoryLabelStyle: CSSProperties = {
-  fontSize: 12,
-  textTransform: "uppercase",
-  letterSpacing: "0.14em",
-  color: "var(--text-muted)",
-  fontWeight: 600,
-  marginBottom: 24,
-  fontFamily: "var(--font-ibm-plex-sans), sans-serif",
-  transition: "color 450ms ease",
-};
-
-const trajectoryListStyle: CSSProperties = {
+const benefitStripStyle: CSSProperties = {
   display: "flex",
-  gap: 26,
+  gap: 14,
   flexWrap: "wrap",
   alignItems: "center",
-  fontFamily: "var(--font-fraunces), Georgia, serif",
-  fontSize: "clamp(20px, 2.2vw, 22px)",
-  fontWeight: 500,
-  color: "var(--text-primary)",
-  letterSpacing: "-0.01em",
+  marginBottom: 28,
+  fontSize: 13,
+  lineHeight: 1.5,
+  color: "var(--text-secondary)",
   transition: "color 450ms ease",
 };
 
@@ -157,7 +138,7 @@ const sepStyle: CSSProperties = {
 export default function HomeHero() {
   const t = useTranslations("home.page.hero");
 
-  const employers = t.raw("trajectory.employers") as string[];
+  const benefits = t.raw("benefits") as string[];
 
   return (
     <DsCard>
@@ -174,6 +155,14 @@ export default function HomeHero() {
               {t("subhead2")}
             </p>
           </div>
+          <p style={benefitStripStyle} className="hero-benefits-responsive">
+            {benefits.map((b, i) => (
+              <span key={b}>
+                {i > 0 && <span style={sepStyle}> · </span>}
+                {b}
+              </span>
+            ))}
+          </p>
           <div style={ctaRowStyle}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <Link href="/audit" style={ctaPrimaryStyle}>
@@ -227,17 +216,6 @@ export default function HomeHero() {
         </aside>
       </div>
 
-      <div style={trajectoryStyle}>
-        <p style={trajectoryLabelStyle}>{t("trajectory.label")}</p>
-        <div style={trajectoryListStyle} className="trajectory-responsive">
-          {employers.map((name, i) => (
-            <span key={name}>
-              {i > 0 && <span style={sepStyle}> · </span>}
-              {name}
-            </span>
-          ))}
-        </div>
-      </div>
     </DsCard>
   );
 }

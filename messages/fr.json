@@ -16,7 +16,7 @@
       "bookCall": "Réserver l’appel →"
     },
     "footer": {
-      "tagline": "Je construis les systèmes dont les entreprises ont besoin pour fonctionner.",
+      "tagline": "Je fais en sorte que le travail ne se perde plus entre les personnes, les équipes et les outils.",
       "copyrightIndependent": "© 2026 Deralis Digital · Île-de-France",
       "location": "France · Île-de-France · interventions à distance",
       "languages": "Français et anglais",
@@ -68,8 +68,8 @@
       "hero": {
         "eyebrow": "",
         "h1": "<strong>Optimisez vos opérations. Accélérez votre croissance.</strong>",
-        "subhead1": "Je conçois des solutions qui améliorent la visibilité, fluidifient les workflows et aident les entreprises à accélérer leur croissance.",
-        "subhead2": "De la coordination interne et des passages de relais entre équipes aux validations, relances, commandes et demandes clients, chacun voit ce qui avance, ce qui bloque et qui doit agir ensuite.",
+        "subhead1": "Je conçois des solutions où le travail et l’information avancent ensemble d’une personne à l’autre, avec les équipes et les outils déjà en place.",
+        "subhead2": "Chaque demande, validation, commande ou relance a un responsable, un statut et une prochaine action. Vos équipes savent ce qui avance, ce qui bloque et qui doit agir.",
         "ctaPrimary": "Voir ce que couvre l’audit →",
         "ctaSecondary": "Voir mes réalisations",
         "anchor": {
@@ -83,18 +83,30 @@
           "signature": "Indépendant. Bilingue. Un seul interlocuteur, de l’analyse à la mise en production.",
           "cardAriaLabel": "Voir toutes les réalisations"
         },
-        "trajectory": {
-          "label": "Parcours · Cinq ans en environnements réels",
-          "employers": [
-            "Dassault Systèmes",
-            "Scaleway",
-            "Clear Channel",
-            "BWT France",
-            "Loxam",
-            "Ariane Systems"
-          ]
+        "ctaCaption": "Deux jours · 1 280 € · 500 € déduits si vous construisez",
+        "benefits": [
+          "Moins de temps à chercher, vérifier et relancer",
+          "Moins d’erreurs et de travail à reprendre",
+          "Plus de capacité pour servir vos clients"
+        ]
+      },
+      "cost": {
+        "eyebrow": "Ce que la coordination absorbe",
+        "intro1": "Vos équipes travaillent. Une partie de leur temps sert à livrer pour les clients. Une autre sert à coordonner le travail lui-même.",
+        "intro2": "Une demande arrive. Quelqu’un la transfère. Une autre personne attend une validation. Le client relance. Le responsable cherche la dernière information.",
+        "pullquote": "Une partie de ce temps est nécessaire. Le reste est <em>récupérable</em>.",
+        "card1": {
+          "title": "Le temps absorbé par la coordination",
+          "description": "Retrouver une information, vérifier qui a répondu, demander où en est une validation."
         },
-        "ctaCaption": "Deux jours · 1 280 € · 500 € déduits si vous construisez"
+        "card2": {
+          "title": "Les erreurs et reprises évitables",
+          "description": "Une information ressaisie, une ancienne version utilisée, une échéance découverte trop tard."
+        },
+        "card3": {
+          "title": "La croissance qui surcharge l’équipe",
+          "description": "Quand l’activité augmente, les messages, contrôles et relances augmentent aussi. Sans meilleure organisation, une partie de la capacité supplémentaire est absorbée par la coordination."
+        }
       },
       "flow": {
         "label": "Comment je travaille",
@@ -117,11 +129,11 @@
         },
         "card2": {
           "title": "Des entreprises qui dépassent leurs outils",
-          "description": "Les tableurs, les outils SaaS et les solutions bricolées ne suffisent plus. L’information vit à plusieurs endroits et circule de façon incohérente.",
+          "description": "Les tableurs, les outils SaaS et les rustines accumulées ne suffisent plus. L’information vit à plusieurs endroits et personne ne sait laquelle fait foi.",
           "tags": [
             "Outils éparpillés",
             "Données cloisonnées",
-            "Perte de visibilité"
+            "Sources contradictoires"
           ]
         },
         "card3": {
@@ -221,11 +233,11 @@
       "exclusion": {
         "eyebrow": "Filtre",
         "headline": "Pas pour tout le monde.",
-        "body1": "Pas pour les idées en phase de démarrage, les demandes de sites simples, ou les projets dont le problème n’a pas été défini.",
-        "body2": "<strong>Si vous ne pouvez pas nommer ce qui est cassé, le moment n’est pas le bon.</strong>",
+        "body1": "Pas pour une idée qui n’a pas encore d’activité réelle, pas pour une demande de site vitrine, pas pour une envie d’ajouter de l’automatisation sans situation réelle à montrer.",
+        "body2": "<strong>Vous n’avez pas besoin de connaître la cause.</strong> Un exemple réel suffit : un dossier qui traîne, une validation qui bloque, un client qui relance.",
         "tags": [
-          "Activité établie uniquement",
-          "Le problème doit être défini",
+          "Activité établie",
+          "Un exemple concret suffit",
           "Le décideur participe"
         ]
       }
@@ -928,7 +940,7 @@
         "items": [
           "Vous cherchez un site vitrine. WordPress, Webflow, Framer, autre chose.",
           "Vous voulez commencer à construire avant que le problème soit défini.",
-          "Vous ne pouvez pas nommer ce qui ne va pas, même approximativement.",
+          "Vous ne pouvez montrer aucun exemple concret : pas un dossier qui traîne, pas une validation qui bloque, pas un client qui relance.",
           "Vous comptez sauter l’audit et passer directement à la construction.",
           "Il n’y a pas de friction opérationnelle à résoudre."
         ]

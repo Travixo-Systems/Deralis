@@ -374,6 +374,7 @@ main > :first-child {
   .grid-peak-example { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 72px; align-items: center; }
   .grid-climax { display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: center; }
   .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .grid-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .grid-2col-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
   .grid-proof { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: stretch; }
   .grid-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; z-index: 2; }
@@ -408,6 +409,7 @@ main > :first-child {
     .grid-peak-example,
     .grid-climax,
     .grid-2col,
+    .grid-3col,
     .grid-2col-wide,
     .grid-proof,
     .grid-process,
@@ -439,10 +441,10 @@ main > :first-child {
       font-size: 36px !important;
     }
 
-    /* Trajectory mobile */
-    .trajectory-responsive {
-      font-size: 16px !important;
-      gap: 14px !important;
+    /* Hero benefit strip mobile: stack rather than wrap mid-item */
+    .hero-benefits-responsive {
+      font-size: 12px !important;
+      gap: 10px !important;
     }
 
     /* Nav/footer mobile */
