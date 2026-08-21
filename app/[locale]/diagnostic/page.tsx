@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { STRIPE_AUDIT_LINK } from "@/lib/checkout";
+import EstimateBanner from "@/components/diagnostic/EstimateBanner";
 import { getTranslations } from "next-intl/server";
 import { useTranslations, useLocale } from "next-intl";
 import DsCard, { DsCardPeak, DsCardPaper, DsCardMedium, DsCardFinal } from "@/components/shared/DsCard";
@@ -39,6 +40,7 @@ export default async function DiagnosticPage({ params }: Props) {
 
   return (
     <>
+      <EstimateBanner />
       <DiagnosticHero />
       <RecognitionCard />
       <DeliverableCard />

@@ -106,7 +106,8 @@
         "card3": {
           "title": "Growth that overloads the team",
           "description": "When activity rises, so do the messages, the checks and the chasing. Without better organisation, part of the extra capacity is absorbed by coordination."
-        }
+        },
+        "calculatorLink": "Put a figure on what this friction absorbs in your business →"
       },
       "flow": {
         "label": "How I work",
@@ -980,6 +981,11 @@
         "sub": "One diagnostic. One dossier. One decision you can defend.",
         "cta": "Make a decision · €1,280 →",
         "meta": "French or English. NDA on request."
+      },
+      "estimateBanner": {
+        "eyebrow": "Your indicative estimate",
+        "body": "{amount} of annual capacity absorbed, or {rate} of the paid time of the team concerned. The diagnostic checks that figure and identifies the share that is genuinely avoidable, worth recovering and technically fixable.",
+        "recalculate": "Redo the estimate"
       }
     }
   },
@@ -1024,6 +1030,58 @@
       "h2": "Start by understanding what needs building.",
       "sub": "Two days. Five days. The document is yours, whatever happens next.",
       "cta": "Make a decision · €1,280 →"
+    }
+  },
+  "frictions": {
+    "metadata": {
+      "title": "Where does your paid time go?",
+      "description": "Put a figure on the value absorbed by operational friction. Free estimate, calculated in your browser, from your own numbers."
+    },
+    "hero": {
+      "eyebrow": "Free estimate",
+      "h1": "Where does your paid time go?",
+      "sub": "Put a figure on the value absorbed by operational friction.",
+      "intro": "Re-entering data, hunting for information, chasing colleagues for a status and unclear handoffs all consume time you already pay for. This estimate puts a value on that capacity, using your own numbers.",
+      "privacy": "The calculation runs entirely in your browser. None of your figures are sent, stored or shared with any third party."
+    },
+    "form": {
+      "people": {
+        "label": "People affected",
+        "help": "How many people regularly do this work? Not your total headcount."
+      },
+      "cost": {
+        "label": "Average annual employer cost per person",
+        "help": "Gross annual salary plus employer contributions. Use a figure from payroll or accounting where you can.",
+        "suffix": "€"
+      },
+      "friction": {
+        "label": "Time absorbed per person per week",
+        "help": "Re-entry, looking for information, chasing status, double-checking, and avoidable handoffs.",
+        "suffix": "h",
+        "warning": "Check that this is hours per person per week, not the team total."
+      },
+      "hours": {
+        "label": "Contractual weekly hours",
+        "help": "Editable. For day-rate contracts, enter an equivalent weekly basis.",
+        "suffix": "h"
+      },
+      "invalid": "Check your entries. Time absorbed cannot exceed contractual weekly hours."
+    },
+    "result": {
+      "eyebrow": "Your estimate",
+      "unit": "per year",
+      "caption": "of paid salary capacity absorbed by this friction",
+      "rateCaption": "of the paid time of the team concerned",
+      "disclaimer": "This figure is not an accounting loss, a cash outflow, or a guaranteed saving. It values the share of employer cost matching the time you declared. Only observing the actual processes can establish what is genuinely avoidable and recoverable.",
+      "cta": "Find out how much is actually recoverable →",
+      "ctaSub": "The diagnostic examines the real flows, checks the volumes, and establishes what would be economically worth correcting."
+    },
+    "method": {
+      "title": "How this is calculated",
+      "formula": "People affected × annual employer cost × (friction hours ÷ weekly hours)",
+      "p1": "The result is the average annual employer cost multiplied by the share of time you declared as absorbed by the friction in question, across everyone affected.",
+      "p2": "The approach follows the capacity-cost logic of Time-Driven Activity-Based Costing (Kaplan and Anderson, Harvard Business School). The categories of dysfunction it asks about also sit within ISEOR's body of work on hidden costs tied to work organisation, time management and coordination. This simplified calculation is not an ISEOR diagnostic.",
+      "p3": "It divides by contractual hours rather than practical capacity, which runs at roughly 80 to 85 percent of theoretical. The estimate is therefore deliberately conservative: it understates rather than exaggerates."
     }
   }
 }

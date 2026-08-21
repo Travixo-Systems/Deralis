@@ -106,7 +106,8 @@
         "card3": {
           "title": "La croissance qui surcharge l’équipe",
           "description": "Quand l’activité augmente, les messages, contrôles et relances augmentent aussi. Sans meilleure organisation, une partie de la capacité supplémentaire est absorbée par la coordination."
-        }
+        },
+        "calculatorLink": "Chiffrez ce que ces frictions mobilisent chez vous →"
       },
       "flow": {
         "label": "Comment je travaille",
@@ -980,6 +981,11 @@
         "sub": "Un diagnostic. Un dossier. Une décision que vous pouvez défendre.",
         "cta": "Prendre une décision · 1 280 € →",
         "meta": "Français ou anglais. NDA sur demande."
+      },
+      "estimateBanner": {
+        "eyebrow": "Votre estimation indicative",
+        "body": "{amount} de capacité annuelle mobilisée, soit {rate} du temps payé de l’équipe concernée. Le diagnostic permet de vérifier ce montant et d’identifier la part réellement évitable, valorisable et techniquement corrigeable.",
+        "recalculate": "Refaire l’estimation"
       }
     }
   },
@@ -1024,6 +1030,58 @@
       "h2": "Commencez par comprendre ce qui doit être construit.",
       "sub": "Deux jours. Cinq jours. Un dossier que vous gardez, quoi qu’il arrive ensuite.",
       "cta": "Prendre une décision · 1 280 € →"
+    }
+  },
+  "frictions": {
+    "metadata": {
+      "title": "Où part votre temps payé ?",
+      "description": "Chiffrez la valeur absorbée par vos frictions opérationnelles. Estimation gratuite, calculée dans votre navigateur, à partir de vos propres données."
+    },
+    "hero": {
+      "eyebrow": "Estimation gratuite",
+      "h1": "Où part votre temps payé ?",
+      "sub": "Chiffrez la valeur absorbée par vos frictions opérationnelles.",
+      "intro": "Ressaisies, recherches d’information, relances internes et passages de relais flous mobilisent du temps déjà payé. Cette estimation permet de valoriser cette capacité à partir de vos propres données.",
+      "privacy": "Le calcul se fait entièrement dans votre navigateur. Aucune de vos données n’est envoyée, enregistrée ou transmise à un service tiers."
+    },
+    "form": {
+      "people": {
+        "label": "Nombre de personnes concernées",
+        "help": "Combien de personnes effectuent régulièrement ces tâches ? Pas l’effectif total de l’entreprise."
+      },
+      "cost": {
+        "label": "Coût employeur annuel moyen par personne",
+        "help": "Salaire brut annuel et cotisations patronales. Utilisez de préférence une donnée communiquée par votre paie ou votre comptabilité.",
+        "suffix": "€"
+      },
+      "friction": {
+        "label": "Temps absorbé par personne et par semaine",
+        "help": "Ressaisie, recherche d’informations, relances de statut, vérifications et passages de relais évitables.",
+        "suffix": "h",
+        "warning": "Vérifiez que vous avez indiqué le temps hebdomadaire par personne, et non le total de l’équipe."
+      },
+      "hours": {
+        "label": "Durée hebdomadaire de travail",
+        "help": "Modifiable. Pour un forfait-jours, indiquez une base hebdomadaire équivalente.",
+        "suffix": "h"
+      },
+      "invalid": "Vérifiez vos saisies. Le temps absorbé ne peut pas dépasser la durée hebdomadaire de travail."
+    },
+    "result": {
+      "eyebrow": "Votre estimation",
+      "unit": "par an",
+      "caption": "de capacité salariale mobilisée par ces frictions",
+      "rateCaption": "du temps payé de l’équipe concernée",
+      "disclaimer": "Ce montant ne constitue ni une perte comptable, ni une sortie de trésorerie, ni une économie garantie. Il valorise la part du coût employeur correspondant au temps déclaré. Seule une observation des processus permet de déterminer ce qui est réellement évitable et récupérable.",
+      "cta": "Identifier la part réellement récupérable →",
+      "ctaSub": "Le diagnostic analyse les flux réels, vérifie les volumes et détermine ce qu’il serait économiquement pertinent de corriger."
+    },
+    "method": {
+      "title": "Méthode de calcul",
+      "formula": "Personnes concernées × coût employeur annuel × (heures de friction ÷ heures hebdomadaires)",
+      "p1": "Le résultat correspond au coût employeur annuel moyen multiplié par la proportion de temps déclarée comme absorbée par les frictions étudiées, pour l’ensemble des personnes concernées.",
+      "p2": "Cette approche s’appuie sur la logique de coût de capacité du Time-Driven Activity-Based Costing (Kaplan et Anderson, Harvard Business School). Les catégories de dysfonctionnements s’inscrivent également dans les travaux de l’ISEOR sur les coûts cachés liés à l’organisation du travail, à la gestion du temps et à la communication-coordination. Ce calcul simplifié ne constitue pas un diagnostic ISEOR.",
+      "p3": "Le calcul divise par la durée contractuelle et non par la capacité pratique, qui représente environ 80 à 85 % de la durée théorique. L’estimation est donc volontairement prudente : elle sous-évalue plutôt qu’elle n’exagère."
     }
   }
 }

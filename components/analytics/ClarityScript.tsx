@@ -1,7 +1,25 @@
+"use client";
+
 import Script from "next/script";
+import { usePathname } from "next/navigation";
+
+/**
+ * Routes where session replay must not run.
+ *
+ * The friction calculator asks for salary and headcount and tells the visitor
+ * the calculation never leaves their browser. Clarity records session replays,
+ * so the computed figure would reach Microsoft as ordinary page text even
+ * though it is never sent as an analytics event. Excluding the route is what
+ * makes that promise true. The inputs and result also carry
+ * data-clarity-mask as a second layer.
+ */
+const REPLAY_EXCLUDED = ["/frictions-operationnelles"];
 
 export default function ClarityScript() {
+  const pathname = usePathname();
+
   if (process.env.NODE_ENV !== "production") return null;
+  if (REPLAY_EXCLUDED.some((route) => pathname?.startsWith(route))) return null;
 
   return (
     <Script

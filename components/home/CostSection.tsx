@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import DsCard from "@/components/shared/DsCard";
+import { Link } from "@/i18n/navigation";
 import PullQuote from "@/components/shared/PullQuote";
 import type { CSSProperties } from "react";
 
@@ -49,6 +50,17 @@ const costCardPStyle: CSSProperties = {
   margin: 0,
 };
 
+const calculatorLinkStyle: CSSProperties = {
+  display: "inline-block",
+  marginTop: 28,
+  fontSize: 15,
+  fontWeight: 500,
+  color: "var(--text-primary)",
+  textDecoration: "none",
+  borderBottom: "1px solid var(--border-strong)",
+  paddingBottom: 3,
+};
+
 const CARDS = ["card1", "card2", "card3"] as const;
 
 export default function CostSection() {
@@ -70,6 +82,13 @@ export default function CostSection() {
           </div>
         ))}
       </div>
+
+      {/* Bridges the vocabulary: this section names coordination, the calculator
+          names friction. The link states the relationship rather than leaving a
+          reader to cross the gap unaided. */}
+      <Link href="/frictions-operationnelles" style={calculatorLinkStyle}>
+        {t("calculatorLink")}
+      </Link>
     </DsCard>
   );
 }
