@@ -67,7 +67,7 @@ export default function SiteNav() {
   }
 
   return (
-    <header style={headerStyle}>
+    <header style={headerStyle} className="shell-bleed">
       <div style={innerStyle}>
         {/* Logo + wordmark */}
         <Link href="/" style={logoLink}>
