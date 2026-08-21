@@ -109,7 +109,7 @@ export default function HowIWork() {
         <div style={flowLineStyle} className="flow-line-responsive" />
         <div className="grid-flow">
           {ITEMS.map((item) => (
-            <div key={item} style={flowStepStyle}>
+            <div key={item} className="lift-step" style={flowStepStyle}>
               <div style={flowDotStyle} className="flow-dot-responsive" />
               <div style={flowNumStyle}>{t(`items.${item}.num`)}</div>
               <div style={flowTitleStyle}>{t(`items.${item}.title`)}</div>

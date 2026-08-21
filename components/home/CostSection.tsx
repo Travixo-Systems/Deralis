@@ -117,7 +117,7 @@ export default function CostSection() {
 
       <div className="grid-3col">
         {CARDS.map((c) => (
-          <div key={c} style={costCardStyle}>
+          <div key={c} className="lift-card" style={costCardStyle}>
             <h3 style={costCardH3Style}>{t(`${c}.title`)}</h3>
             <p style={costCardPStyle}>{t(`${c}.description`)}</p>
           </div>

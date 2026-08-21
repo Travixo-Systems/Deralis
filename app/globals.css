@@ -606,6 +606,50 @@ main > :first-child {
   .hero-anchor-overlay:focus-visible { outline: none; }
 }
 
+/* ========== HOVER RESPONSE ==========
+   Follows the .dpc pattern above: a small lift, a shadow step up, a visible
+   focus ring, and a reduced-motion opt-out that drops the movement while
+   keeping the colour response. Kept to translateY and box-shadow so it stays
+   on the compositor and never affects layout. */
+
+.lift-card {
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+.lift-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(20, 17, 13, 0.07);
+}
+:root[data-theme="dark"] .lift-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+.lift-card:focus-visible,
+.lift-card a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Process steps and concept items sit on a rule rather than in a filled card,
+   so they take the border accent instead of a shadow. */
+.lift-step {
+  transition: transform 200ms ease, border-color 200ms ease;
+}
+.lift-step:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+.lift-step:focus-visible,
+.lift-step a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lift-card:hover,
+  .lift-step:hover {
+    transform: none;
+  }
+}
+
 /* ========== MOTION ========== */
 /* Reduced motion means less movement, not a different layout.
    Durations are collapsed so nothing animates, but transform itself is left
