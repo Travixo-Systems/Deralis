@@ -60,16 +60,17 @@
       "headline": "Commencez par un point gratuit.",
       "body": "Trente minutes pour voir si c’est pertinent. Si ça ne l’est pas, je vous le dis. Pas de livrable, pas de pression.",
       "ctaLabel": "Réserver l’appel →"
-    }
+    },
+    "screenshotDisclaimer": "Produit Deralis en production. Données de démonstration."
   },
   "home": {
     "page": {
       "hero": {
         "eyebrow": "",
-        "h1": "<strong>Outils · fichiers · tableurs.</strong> Tout fonctionne, mais rien n’est vraiment <em>relié</em>.",
-        "subhead1": "D’abord, je regarde là où ça coince. Avec vous, pas à votre place. Ensuite, je construis ce qui devrait tout relier.",
-        "subhead2": "L’information va où elle doit, quand elle doit, sans dépendre des personnes pour avancer.",
-        "ctaPrimary": "Découvrez l’audit →",
+        "h1": "<strong>Optimisez vos opérations. Accélérez votre croissance.</strong>",
+        "subhead1": "Je conçois des solutions qui améliorent la visibilité, fluidifient les workflows et aident les entreprises à accélérer leur croissance.",
+        "subhead2": "De la coordination interne et des passages de relais entre équipes aux validations, relances, commandes et demandes clients, chacun voit ce qui avance, ce qui bloque et qui doit agir ensuite.",
+        "ctaPrimary": "Voir ce que couvre l’audit →",
         "ctaSecondary": "Voir mes réalisations",
         "anchor": {
           "tab": "Ce que j’ai construit",
@@ -871,7 +872,7 @@
           "line4": "Remboursement si je ne suis pas le bon interlocuteur"
         },
         "cta": "Prendre une décision · 1 280 € →",
-        "meta": "Un exemple du dossier à droite. Téléchargeable plus bas."
+        "meta": "Un exemple du dossier ci-dessous. Téléchargeable plus bas."
       },
       "recognition": {
         "h2": "Si vous êtes ici, ce n’est probablement pas par hasard.",

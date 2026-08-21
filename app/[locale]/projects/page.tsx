@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import DsCard, { DsCardPeak, DsCardFinal } from "@/components/shared/DsCard";
 import RichText from "@/components/shared/RichText";
+import ScreenshotDisclaimer from "@/components/shared/ScreenshotDisclaimer";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
 
@@ -82,16 +83,19 @@ function TraviXOCaseStudy() {
           </div>
           <Link href="/projects/travixo" style={ctaSecondary}>{t("linkLabel")} →</Link>
         </div>
-        <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
-          <Image
-            src="/projects/travixo/travixo-dashboard.png"
-            alt={tScreenshots("dashboard.alt")}
-            width={1191}
-            height={982}
-            priority
-            sizes="(max-width: 960px) 100vw, 520px"
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
+        <div>
+          <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
+            <Image
+              src="/projects/travixo/travixo-dashboard.png"
+              alt={tScreenshots("dashboard.alt")}
+              width={1109}
+              height={704}
+              priority
+              sizes="(max-width: 960px) 100vw, 520px"
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </div>
+          <ScreenshotDisclaimer />
         </div>
       </div>
     </DsCard>
@@ -133,15 +137,18 @@ function GovPortalCaseStudy() {
           </div>
           <a href={t("url")} target="_blank" rel="noopener noreferrer" style={ctaSecondary}>{t("viewBuildLabel")} →</a>
         </div>
-        <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
-          <Image
-            src="/projects/gov-portal/gov-portal.png"
-            alt={t("screenshot.alt")}
-            width={1534}
-            height={730}
-            sizes="(max-width: 960px) 100vw, 520px"
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
+        <div>
+          <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
+            <Image
+              src="/projects/gov-portal/gov-portal.png"
+              alt={t("screenshot.alt")}
+              width={948}
+              height={917}
+              sizes="(max-width: 960px) 100vw, 400px"
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </div>
+          <ScreenshotDisclaimer />
         </div>
       </div>
     </DsCard>

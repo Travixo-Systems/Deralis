@@ -515,8 +515,11 @@ main > :first-child {
     padding-right: 0;
   }
 
+  /* Flush-right tab: justify-content already pins it to the edge.
+     A translateX here pushed the button past the viewport and was the
+     sole source of horizontal scroll at <=375px. */
   .theme-toggle-mobile-overlay button {
-    transform: translateX(22px);
+    transform: none;
   }
 }
 

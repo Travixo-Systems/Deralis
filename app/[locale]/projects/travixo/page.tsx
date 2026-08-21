@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import DsCard, { DsCardPeak } from "@/components/shared/DsCard";
 import RichText from "@/components/shared/RichText";
+import ScreenshotDisclaimer from "@/components/shared/ScreenshotDisclaimer";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
 
@@ -79,13 +80,14 @@ function TraviXoHeroWithScreenshot() {
         <Image
           src="/projects/travixo/travixo-dashboard.png"
           alt={tScreenshots("lead.alt")}
-          width={1191}
-          height={982}
+          width={1109}
+          height={704}
           priority
-          sizes="(max-width: 960px) 100vw, 1040px"
+          sizes="(max-width: 960px) 100vw, 970px"
           style={{ width: "100%", height: "auto", display: "block" }}
         />
       </div>
+      <ScreenshotDisclaimer />
     </DsCard>
   );
 }
@@ -151,8 +153,9 @@ function InsideCard() {
         {shots.map((shot, i) => (
           <div key={i}>
             <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
-              <Image src={shot.src} alt={shot.alt} width={shot.w} height={shot.h} sizes="(max-width: 960px) 100vw, 1040px" style={{ width: "100%", height: "auto", display: "block" }} />
+              <Image src={shot.src} alt={shot.alt} width={shot.w} height={shot.h} sizes="(max-width: 960px) 100vw, 970px" style={{ width: "100%", height: "auto", display: "block" }} />
             </div>
+            <ScreenshotDisclaimer />
             <p style={{ fontSize: 14, color: "var(--text-muted)", lineHeight: 1.55, marginTop: 16, maxWidth: "58ch" }}>{shot.cap}</p>
           </div>
         ))}

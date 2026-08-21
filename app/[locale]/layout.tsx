@@ -175,6 +175,10 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={locale}
       className={`${playfairDisplay.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
+      /* The blocking script below sets data-theme before hydration to avoid a
+         flash of the wrong theme. That intentional pre-hydration mutation is
+         what React reported as an attribute mismatch. */
+      suppressHydrationWarning
     >
       <head>
         <meta
@@ -223,7 +227,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('deralis-theme');document.documentElement.setAttribute('data-theme',t==='dark'||t==='light'?t:'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}})()`,
           }}
-        />{" "}
+        />
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>

@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import DsCard from "@/components/shared/DsCard";
 import TabLabel from "@/components/shared/TabLabel";
+import ScreenshotDisclaimer from "@/components/shared/ScreenshotDisclaimer";
 import Image from "next/image";
 import type { CSSProperties } from "react";
 
@@ -187,15 +188,16 @@ export default function HomeCaseStudy() {
               {t("travixo.url")}
             </div>
           </div>
-          <div style={{ lineHeight: 0, flex: 1 }}>
+          <div style={{ flex: 1 }}>
             <Image
               src="/projects/travixo/travixo-dashboard.png"
               alt="TraviXO dashboard"
-              width={1191}
-              height={982}
+              width={1109}
+              height={704}
               sizes="(max-width: 960px) 100vw, 520px"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
+            <ScreenshotDisclaimer style={{ padding: "0 20px", marginBottom: 4 }} />
           </div>
           <div style={footerStyle}>
             <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
@@ -228,15 +230,16 @@ export default function HomeCaseStudy() {
               {t("consulaire.url")}
             </div>
           </div>
-          <div style={{ lineHeight: 0, flex: 1 }}>
+          <div style={{ flex: 1 }}>
             <Image
               src="/projects/gov-portal/gov-portal.png"
               alt="Portail consulaire"
-              width={1534}
-              height={730}
+              width={948}
+              height={917}
               sizes="(max-width: 960px) 100vw, 520px"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
+            <ScreenshotDisclaimer style={{ padding: "0 20px", marginBottom: 4 }} />
           </div>
           <div style={footerStyle}>
             <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>

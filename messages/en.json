@@ -60,7 +60,8 @@
       "headline": "Start with a free fit-check.",
       "body": "Thirty minutes to see if this is the right fit. If it isn’t, I’ll tell you. No deliverable, no pressure.",
       "ctaLabel": "Book the call →"
-    }
+    },
+    "screenshotDisclaimer": "Deralis product in production. Demonstration data."
   },
   "home": {
     "page": {
@@ -77,10 +78,10 @@
           "signature": "Independent. Bilingual. One person, every line of code.",
           "cardAriaLabel": "See all projects"
         },
-        "h1": "<strong>Tools · files · spreadsheets.</strong> Everything works, but nothing is really <em>connected</em>.",
-        "subhead1": "First I map what's broken. With you, not for you. Then I build what should hold it together.",
-        "subhead2": "Information goes where it needs to, when it needs to, without waiting on someone to move it forward.",
-        "ctaPrimary": "Discover the audit →",
+        "h1": "<strong>Clearer operations. Faster growth.</strong>",
+        "subhead1": "I design solutions that improve visibility, streamline workflows, and help businesses grow faster.",
+        "subhead2": "From internal coordination and handoffs between teams to approvals, follow-ups, orders, and customer requests, everyone can see what is moving, what is blocked, and who needs to act next.",
+        "ctaPrimary": "See what the audit covers →",
         "ctaSecondary": "View my work",
         "trajectory": {
           "label": "Background · Five years in real-world environments",
@@ -873,7 +874,7 @@
           "line4": "Refund if I’m not the right fit"
         },
         "cta": "Make a decision · €1,280 →",
-        "meta": "A sample report on the right. Downloadable below."
+        "meta": "A sample report below. Downloadable further down."
       },
       "recognition": {
         "h2": "If you’re here, it’s probably not by accident.",
