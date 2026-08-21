@@ -106,7 +106,9 @@ export default function HowIWork() {
       <p style={introStyle}>{t("intro")}</p>
 
       <div style={flowProcessStyle}>
-        <div style={flowLineStyle} className="flow-line-responsive" />
+        <div style={flowLineStyle} className="flow-line-responsive flow-line">
+          <span className="flow-line-fill" aria-hidden="true" />
+        </div>
         <div className="grid-flow" data-cascade>
           {ITEMS.map((item) => (
             <div key={item} className="lift-step flow-step" style={flowStepStyle} tabIndex={0}>

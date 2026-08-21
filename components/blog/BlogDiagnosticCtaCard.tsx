@@ -8,7 +8,7 @@ export default function BlogDiagnosticCtaCard() {
   const t = useTranslations("common.diagnosticCta");
 
   return (
-    <DsCard>
+    <DsCard style={{ background: "var(--card-accent)", border: "1px solid var(--card-accent-border)" }}>
       <div style={{ maxWidth: 720 }}>
         <p style={eyebrow}>{t("eyebrow")}</p>
         <h2 style={h2Style}>

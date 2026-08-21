@@ -13,7 +13,8 @@
       "changeLanguage": "Change language",
       "discoverDiagnostic": "See what the diagnostic covers",
       "startDiagnostic": "Start the diagnostic (€1,280)",
-      "bookCall": "Book the call →"
+      "bookCall": "Book the call →",
+      "dismiss": "Dismiss"
     },
     "footer": {
       "tagline": "I make sure work stops getting lost between people, teams and tools.",

@@ -4,6 +4,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import SiteNav from "@/components/layout/SiteNav";
 import SiteFooter from "@/components/layout/SiteFooter";
+import StickyCTA from "@/components/layout/StickyCTA";
 import ThemeToggle from "@/components/layout/ThemeToggle";
 import {
   OrganizationJsonLd,
@@ -249,6 +250,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   <main id="main-content">{children}</main>
 </div>
+          <StickyCTA />
           <SiteFooter />
           <ClarityScript />
         </NextIntlClientProvider>

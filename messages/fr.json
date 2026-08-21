@@ -13,7 +13,8 @@
       "changeLanguage": "Changer de langue",
       "discoverDiagnostic": "Découvrez le diagnostic",
       "startDiagnostic": "Démarrez le diagnostic (1 280 €)",
-      "bookCall": "Réserver l’appel →"
+      "bookCall": "Réserver l’appel →",
+      "dismiss": "Masquer"
     },
     "footer": {
       "tagline": "Je fais en sorte que le travail ne se perde plus entre les personnes, les équipes et les outils.",

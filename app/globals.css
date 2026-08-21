@@ -6,6 +6,11 @@
   --canvas: #EDE7D8;
   --card-main: #F7F4ED;
   --card-paper: #FDFBF4;
+  /* A third surface. The palette was two tones, cream and near black, which
+     made long pages read as one continuous slab. This is used sparingly, on
+     panels that invite an action. */
+  --card-accent: #EDF1F6;
+  --card-accent-border: rgba(27, 58, 92, 0.16);
   --card-peak: #1A1D1B;
 
   /* Text */
@@ -104,6 +109,8 @@
   --canvas: #1A1D1B;
   --card-main: #272320;
   --card-paper: #2F2A24;
+  --card-accent: #232C34;
+  --card-accent-border: rgba(94, 139, 174, 0.26);
   --card-peak: #EDE7D8;
 
   --text-primary: #EDE7D8;
@@ -1090,6 +1097,141 @@ html {
   .pdf-stack:active .pdf-sheet-2,
   .pdf-stack:active .pdf-sheet-3 {
     transform: none;
+  }
+}
+
+/* --- Process line progress ----------------------------------------------
+   The connecting rule fills as the section crosses the viewport, so the
+   sequence reads as something you move through rather than a static rule.
+   Scale on the x axis only, which stays on the compositor and cannot affect
+   layout. */
+.flow-line {
+  overflow: hidden;
+}
+.flow-line-fill {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .flow-line-fill {
+      animation: line-fill linear both;
+      animation-timeline: view();
+      animation-range: entry 30% cover 60%;
+    }
+  }
+
+  @keyframes line-fill {
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* Without a view timeline the rule simply stays as it was: the fill is an
+   addition, never the thing that makes the line visible. */
+
+/* --- Sticky prompt ------------------------------------------------------
+   Appears once the hero is gone. Transform and opacity only, and it is taken
+   out of the layout entirely when hidden so it cannot trap a pointer or a
+   tab stop. */
+.sticky-cta {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 8px 8px 18px;
+  background: var(--card-main);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  box-shadow: 0 18px 40px rgba(20, 17, 13, 0.16);
+  transform: translate(-50%, 140%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 420ms cubic-bezier(0.16, 1.02, 0.3, 1),
+    opacity 300ms ease, visibility 0s linear 420ms,
+    background-color 450ms ease, border-color 450ms ease;
+}
+.sticky-cta.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+:root[data-theme="dark"] .sticky-cta {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.sticky-cta-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 8px 4px;
+  transition: color 200ms ease;
+}
+.sticky-cta-link:hover {
+  color: var(--accent);
+}
+
+.sticky-cta-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.sticky-cta-close:hover {
+  background: var(--border-soft);
+  color: var(--text-primary);
+}
+.sticky-cta-link:focus-visible,
+.sticky-cta-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 520px) {
+  .sticky-cta {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    transform: translateY(140%);
+    justify-content: space-between;
+  }
+  .sticky-cta.is-visible {
+    transform: translateY(0);
+  }
+  .sticky-cta-link {
+    font-size: 13px;
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-cta {
+    transition: opacity 200ms ease, visibility 0s linear 200ms;
+    transform: translate(-50%, 0);
+  }
+  .sticky-cta.is-visible {
+    transform: translate(-50%, 0);
   }
 }
 
