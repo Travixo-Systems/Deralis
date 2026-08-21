@@ -78,7 +78,7 @@
           "signature": "Independent. Bilingual. One point of contact, from analysis to production.",
           "cardAriaLabel": "See all projects"
         },
-        "h1": "<strong>Clearer operations. Faster growth.</strong>",
+        "h1": "<em>Clearer</em> operations. Faster <em>growth</em>.",
         "subhead1": "I design solutions that keep work and information moving together from one person to the next, using the teams and tools you already have.",
         "subhead2": "Every request, approval, order or follow up has an owner, a status and a next action. Your teams know what is moving, what is blocked and who needs to act.",
         "ctaPrimary": "See what the diagnostic covers →",
@@ -106,6 +106,11 @@
         "card3": {
           "title": "Growth that overloads the team",
           "description": "When activity rises, so do the messages, the checks and the chasing. Without better organisation, part of the extra capacity is absorbed by coordination."
+        },
+        "calculatorCta": {
+          "eyebrow": "Free estimate · 2 minutes · No sign-up",
+          "title": "Put a figure on what this friction absorbs in your business.",
+          "button": "Start the estimate →"
         }
       },
       "flow": {
@@ -980,6 +985,11 @@
         "sub": "One diagnostic. One dossier. One decision you can defend.",
         "cta": "Make a decision · €1,280 →",
         "meta": "French or English. NDA on request."
+      },
+      "estimateBanner": {
+        "eyebrow": "Your indicative estimate",
+        "body": "{amount} of annual capacity absorbed, or {rate} of the paid time of the team concerned. The diagnostic checks that figure and identifies the share that is genuinely avoidable, worth recovering and technically fixable.",
+        "recalculate": "Redo the estimate"
       }
     }
   },
@@ -1024,6 +1034,73 @@
       "h2": "Start by understanding what needs building.",
       "sub": "Two days. Five days. The document is yours, whatever happens next.",
       "cta": "Make a decision · €1,280 →"
+    }
+  },
+  "frictions": {
+    "metadata": {
+      "title": "Operational Friction Calculator",
+      "description": "Estimate the annual value of working time absorbed by duplicate data entry, information searches, internal follow-ups, and unclear handoffs."
+    },
+    "hero": {
+      "h1": "Where does your paid time go?",
+      "sub": "Estimate the annual value absorbed by duplicate data entry, information searches, internal follow-ups, and unclear handoffs.",
+      "meta": "Free estimate · 2 minutes · No sign-up"
+    },
+    "form": {
+      "title": "Build your estimate",
+      "people": {
+        "label": "People affected",
+        "help": "How many people regularly encounter these frictions?",
+        "help2": "Do not include the entire workforce when only part of the team is affected."
+      },
+      "cost": {
+        "label": "Average annual employer cost per person",
+        "help": "Annual gross salary plus employer contributions.",
+        "help2": "Use an average supplied by payroll or accounting whenever possible."
+      },
+      "friction": {
+        "label": "Time absorbed per person each week",
+        "help": "How many hours does one person spend each week re-entering data, searching for information, following up internally, checking statuses, or managing avoidable handoffs?",
+        "help2": "Only include time you believe could reasonably be avoided.",
+        "warning": "Check that this is hours per person per week, not the team total."
+      },
+      "hours": {
+        "label": "Contracted weekly hours",
+        "help": "The number of hours each person is contracted to work per week.",
+        "help2": "For day-rate contracts, enter an equivalent weekly basis."
+      },
+      "submit": "Calculate",
+      "invalid": "Check your entries. Time absorbed cannot exceed contracted weekly hours.",
+      "privacy": "The calculation runs entirely in your browser. None of your figures are sent, stored or shared with any third party."
+    },
+    "result": {
+      "eyebrow": "Your estimate",
+      "unit": "per year",
+      "caption": "The value of paid working time absorbed by these frictions.",
+      "rateLine": "That represents approximately {rate} of the working time of the team concerned.",
+      "disclaimer": "This amount is not an accounting loss or a direct cash expense. It values the share of employer cost associated with the time entered. The amount that could actually be recovered depends on the processes, volumes, constraints, and how the released capacity would be used.",
+      "edit": "Change the estimate"
+    },
+    "next": {
+      "title": "This number is a starting point",
+      "p1": "It does not yet show which frictions can genuinely be removed or whether fixing them would justify the investment.",
+      "p2": "During the diagnostic, I examine the real workflows, verify the volumes, and identify the capacity that could realistically be recovered. The result shows what should be fixed, in what order, and under which economic conditions.",
+      "cta": "Identify what can actually be recovered →",
+      "ctaMeta": "Operational diagnostic · €1,280 · Two days"
+    },
+    "method": {
+      "title": "How the calculation works",
+      "intro": "The result uses the following formula:",
+      "formula": "People affected × average annual employer cost × share of weekly time absorbed",
+      "shareIntro": "The share of time absorbed is calculated as:",
+      "shareFormula": "Weekly friction hours ÷ contracted weekly hours",
+      "p1": "This approach values the time consumed using capacity cost principles drawn from Kaplan and Anderson's Time-Driven Activity-Based Costing.",
+      "p2": "ISEOR's research also documents the economic effects of dysfunctions in work organization, time management, communication, and coordination. This simplified calculator is not an ISEOR diagnosis.",
+      "p3": "It divides by contracted hours rather than practical capacity, which runs at roughly 80 to 85 percent of theoretical. The estimate is therefore deliberately conservative.",
+      "sourcesLabel": "Sources",
+      "sourceTdabc": "Harvard Business School · Time-Driven Activity-Based Costing",
+      "sourceIseor": "ISEOR · Socio-economic intervention",
+      "legal": "This is an indicative, non-contractual estimate based solely on the information entered. It is not a guaranteed saving or a promise of revenue or growth."
     }
   }
 }

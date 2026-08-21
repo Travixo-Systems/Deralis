@@ -67,7 +67,7 @@
     "page": {
       "hero": {
         "eyebrow": "",
-        "h1": "<strong>Optimisez vos opérations. Accélérez votre croissance.</strong>",
+        "h1": "<em>Optimisez</em> vos opérations. Accélérez votre <em>croissance</em>.",
         "subhead1": "Je conçois des solutions où le travail et l’information avancent ensemble d’une personne à l’autre, avec les équipes et les outils déjà en place.",
         "subhead2": "Chaque demande, validation, commande ou relance a un responsable, un statut et une prochaine action. Vos équipes savent ce qui avance, ce qui bloque et qui doit agir.",
         "ctaPrimary": "Voir ce que couvre le diagnostic →",
@@ -106,6 +106,11 @@
         "card3": {
           "title": "La croissance qui surcharge l’équipe",
           "description": "Quand l’activité augmente, les messages, contrôles et relances augmentent aussi. Sans meilleure organisation, une partie de la capacité supplémentaire est absorbée par la coordination."
+        },
+        "calculatorCta": {
+          "eyebrow": "Estimation gratuite · 2 minutes · Sans inscription",
+          "title": "Chiffrez ce que ces frictions mobilisent chez vous.",
+          "button": "Faire l’estimation →"
         }
       },
       "flow": {
@@ -980,6 +985,11 @@
         "sub": "Un diagnostic. Un dossier. Une décision que vous pouvez défendre.",
         "cta": "Prendre une décision · 1 280 € →",
         "meta": "Français ou anglais. NDA sur demande."
+      },
+      "estimateBanner": {
+        "eyebrow": "Votre estimation indicative",
+        "body": "{amount} de capacité annuelle mobilisée, soit {rate} du temps payé de l’équipe concernée. Le diagnostic permet de vérifier ce montant et d’identifier la part réellement évitable, valorisable et techniquement corrigeable.",
+        "recalculate": "Refaire l’estimation"
       }
     }
   },
@@ -1024,6 +1034,73 @@
       "h2": "Commencez par comprendre ce qui doit être construit.",
       "sub": "Deux jours. Cinq jours. Un dossier que vous gardez, quoi qu’il arrive ensuite.",
       "cta": "Prendre une décision · 1 280 € →"
+    }
+  },
+  "frictions": {
+    "metadata": {
+      "title": "Calculateur de frictions opérationnelles",
+      "description": "Estimez la valeur annuelle du temps de travail absorbé par les ressaisies, les recherches d’information, les relances internes et les passages de relais."
+    },
+    "hero": {
+      "h1": "Où part votre temps payé ?",
+      "sub": "Estimez la valeur annuelle absorbée par les ressaisies, les recherches d’information, les relances internes et les passages de relais.",
+      "meta": "Estimation gratuite · 2 minutes · Sans inscription"
+    },
+    "form": {
+      "title": "Faites votre estimation",
+      "people": {
+        "label": "Nombre de personnes concernées",
+        "help": "Combien de personnes rencontrent régulièrement ces frictions ?",
+        "help2": "Ne comptez pas tout l’effectif si seule une partie de l’équipe est concernée."
+      },
+      "cost": {
+        "label": "Coût employeur annuel moyen par personne",
+        "help": "Salaire brut annuel et cotisations patronales.",
+        "help2": "Utilisez de préférence une moyenne communiquée par votre paie ou votre comptabilité."
+      },
+      "friction": {
+        "label": "Temps absorbé par personne et par semaine",
+        "help": "Combien d’heures une personne consacre-t-elle chaque semaine aux ressaisies, recherches d’information, relances internes, vérifications et passages de relais évitables ?",
+        "help2": "Comptez uniquement le temps que vous pensez raisonnablement évitable.",
+        "warning": "Vérifiez que vous avez indiqué le temps hebdomadaire par personne, et non le total de l’équipe."
+      },
+      "hours": {
+        "label": "Durée hebdomadaire de travail",
+        "help": "Nombre d’heures contractuelles travaillées chaque semaine.",
+        "help2": "Pour un forfait-jours, indiquez une base hebdomadaire équivalente."
+      },
+      "submit": "Calculer",
+      "invalid": "Vérifiez vos saisies. Le temps absorbé ne peut pas dépasser la durée hebdomadaire de travail.",
+      "privacy": "Le calcul se fait entièrement dans votre navigateur. Aucune de vos données n’est envoyée, enregistrée ou transmise à un service tiers."
+    },
+    "result": {
+      "eyebrow": "Votre estimation",
+      "unit": "par an",
+      "caption": "La valeur du temps de travail payé mobilisé par ces frictions.",
+      "rateLine": "Cela représente environ {rate} du temps de travail de l’équipe concernée.",
+      "disclaimer": "Ce montant ne constitue pas une perte comptable ou une sortie de trésorerie. Il valorise la part du coût employeur correspondant au temps déclaré. La part réellement récupérable dépend des processus, des volumes, des contraintes et de l’usage qui serait fait du temps libéré.",
+      "edit": "Modifier l’estimation"
+    },
+    "next": {
+      "title": "Ce chiffre est un point de départ",
+      "p1": "Il ne montre pas encore quelles frictions peuvent réellement être supprimées, ni si leur correction justifie un investissement.",
+      "p2": "Pendant le diagnostic, j’examine les flux réels, vérifie les volumes et identifie la capacité effectivement récupérable. Le résultat permet de décider ce qu’il faut corriger, dans quel ordre et sous quelles conditions économiques.",
+      "cta": "Identifier la part réellement récupérable →",
+      "ctaMeta": "Diagnostic opérationnel · 1 280 € · Deux jours"
+    },
+    "method": {
+      "title": "Comment le calcul fonctionne",
+      "intro": "Le résultat utilise la formule suivante :",
+      "formula": "Personnes concernées × coût employeur annuel moyen × part du temps hebdomadaire absorbée",
+      "shareIntro": "La part de temps absorbée correspond à :",
+      "shareFormula": "Heures de friction par semaine ÷ heures contractuelles par semaine",
+      "p1": "Cette logique de valorisation du temps consommé par le coût de capacité s’appuie sur le Time-Driven Activity-Based Costing de Kaplan et Anderson.",
+      "p2": "Les travaux de l’ISEOR documentent également les effets économiques des dysfonctionnements liés à l’organisation du travail, à la gestion du temps et à la communication-coordination. Ce calcul simplifié ne constitue toutefois pas un diagnostic ISEOR.",
+      "p3": "Le calcul divise par la durée contractuelle et non par la capacité pratique, qui représente environ 80 à 85 % de la durée théorique. L’estimation est donc volontairement prudente.",
+      "sourcesLabel": "Sources",
+      "sourceTdabc": "Harvard Business School · Time-Driven Activity-Based Costing",
+      "sourceIseor": "ISEOR · Intervention socio-économique",
+      "legal": "Estimation indicative et non contractuelle, fondée exclusivement sur les données saisies. Elle ne constitue ni une économie garantie, ni une promesse de chiffre d’affaires ou de croissance."
     }
   }
 }

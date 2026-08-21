@@ -84,6 +84,11 @@
 
   /* Layout metrics (keep in sync with SiteNav: 22px padding × 2 + 22px content + 1px border) */
   --nav-height: 66px;
+
+  /* Inset that floats the cards on the gridded canvas. The header and the
+     footer's card zone cancel it with .shell-bleed so they reach both edges
+     of the viewport; anything else stays inset. Change it here only. */
+  --shell-inset: 28px;
   --mobile-menu-offset: 70px;
 
   /* Spacing */
@@ -171,7 +176,7 @@ body {
   color: var(--text-primary);
   font-size: 16px;
   line-height: 1.55;
-  padding: 28px;
+  padding: var(--shell-inset);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -179,10 +184,58 @@ body {
 }
 
 @media (max-width: 960px) {
+  :root {
+    --shell-inset: 14px;
+  }
+
   body {
     background-size: 40px 40px;
-    padding: 14px;
   }
+}
+
+/* Homepage cost-section invitation to the friction estimator. */
+.cost-cta-panel:hover {
+  background: var(--card-paper) !important;
+  transform: translateY(-1px);
+}
+
+.cost-cta-eyebrow,
+.cost-cta-title {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  /* Type steps down 4 from the original scale here against 2 on desktop, and the
+     box tightens: at this width the panel is read at arm's length on a small
+     screen, where the desktop padding leaves it taller than its content needs. */
+  .cost-cta-panel {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    padding: 18px 20px !important;
+  }
+
+  .cost-cta-eyebrow {
+    font-size: 8px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .cost-cta-title {
+    font-size: 17px !important;
+  }
+
+  .cost-cta-panel > span:last-child {
+    font-size: 10px !important;
+    padding: 12px 20px !important;
+  }
+}
+
+/* Cancels the body inset so an element spans the full viewport width.
+   Negative margins rather than 100vw: 100vw includes the scrollbar and would
+   cause horizontal overflow. */
+.shell-bleed {
+  margin-left: calc(-1 * var(--shell-inset));
+  margin-right: calc(-1 * var(--shell-inset));
 }
 
 /* ========== ITALIC ACCENT (display text only) ========== */

@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "", changeFrequency: "weekly", priority: 1 },
     { path: "/methode", changeFrequency: "monthly", priority: 0.9 },
     { path: "/diagnostic", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/frictions-operationnelles", changeFrequency: "monthly", priority: 0.8 },
     { path: "/projects", changeFrequency: "weekly", priority: 0.8 },
     { path: "/projects/travixo", changeFrequency: "monthly", priority: 0.7 },
     { path: "/about", changeFrequency: "monthly", priority: 0.8 },

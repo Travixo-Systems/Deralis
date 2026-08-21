@@ -9,7 +9,7 @@ export default function SiteFooter() {
   return (
     <>
       {/* ZONE 1: weighted brand + contact */}
-      <div style={zone1Wrap}>
+      <div style={zone1Wrap} className="shell-bleed">
         <div style={zone1Inner} className="footer-zone1-grid">
           {/* Left: logo + wordmark + tagline */}
           <div>
