@@ -70,7 +70,7 @@ const ctaPanelStyle: CSSProperties = {
 };
 
 const ctaEyebrowStyle: CSSProperties = {
-  fontSize: 12,
+  fontSize: 10,
   textTransform: "uppercase",
   letterSpacing: "0.12em",
   fontWeight: 600,
@@ -80,7 +80,7 @@ const ctaEyebrowStyle: CSSProperties = {
 
 const ctaTitleStyle: CSSProperties = {
   fontFamily: "var(--font-fraunces), Georgia, serif",
-  fontSize: 21,
+  fontSize: 19,
   fontWeight: 500,
   lineHeight: 1.25,
   letterSpacing: "-0.01em",
@@ -96,7 +96,7 @@ const ctaButtonStyle: CSSProperties = {
   padding: "15px 26px",
   background: "var(--text-primary)",
   color: "var(--canvas)",
-  fontSize: 14,
+  fontSize: 12,
   fontWeight: 500,
   borderRadius: "var(--radius-button)",
   whiteSpace: "nowrap",
