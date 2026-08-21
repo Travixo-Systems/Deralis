@@ -17,7 +17,7 @@ const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "audit.page" });
+  const t = await getTranslations({ locale, namespace: "diagnostic.page" });
   const title = t("metadata.title");
   const description = t("metadata.description");
   return {
@@ -52,7 +52,7 @@ export default async function AuditPage({ params }: Props) {
 
 /* ========== Card 1: Hero (warm) ========== */
 function AuditHero() {
-  const t = useTranslations("audit.page.hero");
+  const t = useTranslations("diagnostic.page.hero");
 
   return (
     <DsCard>
@@ -124,7 +124,7 @@ function PdfContent({ title, section, section2 }: { title: string; section: stri
 
 /* ========== Card 2: Recognition (warm) ========== */
 function RecognitionCard() {
-  const t = useTranslations("audit.page.recognition");
+  const t = useTranslations("diagnostic.page.recognition");
   const symptoms: string[] = t.raw("symptoms");
 
   return (
@@ -160,7 +160,7 @@ function RecognitionCard() {
 
 /* ========== Card 3: Deliverable (paper) ========== */
 function DeliverableCard() {
-  const t = useTranslations("audit.page.deliverable");
+  const t = useTranslations("diagnostic.page.deliverable");
   const items: string[] = t.raw("items");
   const guarantees: string[] = t.raw("guarantees");
 
@@ -199,7 +199,7 @@ function DeliverableCard() {
 
 /* ========== Card 4: Example (dark peak). PAPER→DARK adjacency intentional ========== */
 function ExamplePeak() {
-  const t = useTranslations("audit.page.example");
+  const t = useTranslations("diagnostic.page.example");
   const locale = useLocale();
   const downloadFilename = locale === "fr" ? "deralis-exemple-audit.pdf" : "deralis-audit-example.pdf";
 
@@ -263,8 +263,8 @@ function ExamplePeak() {
 
 /* ========== Card 5: Not-for + Guarantee (warm) ========== */
 function NotForAndGuaranteeCard() {
-  const tNot = useTranslations("audit.page.notFor");
-  const tG = useTranslations("audit.page.guarantee");
+  const tNot = useTranslations("diagnostic.page.notFor");
+  const tG = useTranslations("diagnostic.page.guarantee");
   const items: string[] = tNot.raw("items");
 
   return (
@@ -291,7 +291,7 @@ function NotForAndGuaranteeCard() {
 
 /* ========== Card 6: Process (warm, medium) ========== */
 function ProcessCard() {
-  const t = useTranslations("audit.page.process");
+  const t = useTranslations("diagnostic.page.process");
 
   return (
     <DsCardMedium>
@@ -311,7 +311,7 @@ function ProcessCard() {
 
 /* ========== Card 7: Final CTA (warm, final) ========== */
 function AuditFinalCTA() {
-  const t = useTranslations("audit.page.finalCta");
+  const t = useTranslations("diagnostic.page.finalCta");
 
   return (
     <DsCardFinal>

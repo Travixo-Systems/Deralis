@@ -75,7 +75,7 @@ That is the only honest way to have this conversation.
 
 ## If you are stuck on this decision
 
-If you are sitting on a stack of tools that almost work and you are not sure whether to keep patching or build something real, the audit settles it. [See what the audit covers →](/audit)
+If you are sitting on a stack of tools that almost work and you are not sure whether to keep patching or build something real, the diagnostic settles it. [See what the diagnostic covers →](/diagnostic)
 
 Bring your current setup. Tell me what is breaking. I will give you an honest read on whether you need a custom build or a better off-the-shelf configuration.
 

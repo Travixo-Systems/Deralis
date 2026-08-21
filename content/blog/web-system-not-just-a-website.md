@@ -190,7 +190,7 @@ If your setup looks solid but still requires effort to keep things aligned, the 
 
 It is how they work together.
 
-That is what the decision audit maps. [See what the audit covers →](/audit)
+That is what the operational diagnostic maps. [See what the diagnostic covers →](/diagnostic)
 
 We will map how things currently move, where they slow down, and where they split.
 

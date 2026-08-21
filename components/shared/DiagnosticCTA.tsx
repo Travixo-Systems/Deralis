@@ -2,7 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { STRIPE_AUDIT_LINK } from "@/lib/checkout";
 import { useTranslations } from "next-intl";
 
-type AuditCTAProps = {
+type DiagnosticCTAProps = {
   headlineOverride?: string;
   bodyOverride?: string;
   noteOverride?: string;
@@ -18,8 +18,8 @@ type AuditCTAProps = {
 const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
 const stripeLink = STRIPE_AUDIT_LINK;
 
-export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride, eyebrowOverride, destination = false, showDiscoveryCta = false }: AuditCTAProps) {
-  const t = useTranslations("common.auditCta");
+export default function DiagnosticCTA({ headlineOverride, bodyOverride, noteOverride, eyebrowOverride, destination = false, showDiscoveryCta = false }: DiagnosticCTAProps) {
+  const t = useTranslations("common.diagnosticCta");
   const tActions = useTranslations("common.actions");
   const tDiscovery = useTranslations("common.discoveryCall");
 
@@ -50,7 +50,7 @@ export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride,
               href={stripeLink}
               className="group inline-flex items-center gap-2.5 px-[30px] py-[18px] bg-ink text-bg-cta text-[15px] font-medium rounded-lg hover:bg-accent transition-colors no-underline"
             >
-              {tActions("startAudit")}
+              {tActions("startDiagnostic")}
               <span
                 aria-hidden="true"
                 className="transition-transform duration-[180ms] group-hover:translate-x-[3px]"
@@ -60,10 +60,10 @@ export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride,
             </a>
           ) : (
             <Link
-              href="/audit"
+              href="/diagnostic"
               className="group inline-flex items-center gap-2.5 px-[30px] py-[18px] bg-ink text-bg-cta text-[15px] font-medium rounded-lg hover:bg-accent transition-colors no-underline"
             >
-              {tActions("discoverAudit")}
+              {tActions("discoverDiagnostic")}
               <span
                 aria-hidden="true"
                 className="transition-transform duration-[180ms] group-hover:translate-x-[3px]"

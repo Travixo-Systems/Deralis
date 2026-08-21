@@ -4,8 +4,8 @@ import { Link } from "@/i18n/navigation";
 import DsCard from "@/components/shared/DsCard";
 import RichText from "@/components/shared/RichText";
 
-export default function BlogAuditCtaCard() {
-  const t = useTranslations("common.auditCta");
+export default function BlogDiagnosticCtaCard() {
+  const t = useTranslations("common.diagnosticCta");
 
   return (
     <DsCard>
@@ -16,7 +16,7 @@ export default function BlogAuditCtaCard() {
         </h2>
         <p style={body}>{t("body1")}</p>
         <p style={body}>{t("body2")}</p>
-        <Link href="/audit" style={cta}>
+        <Link href="/diagnostic" style={cta}>
           {t("ctaLabel")}
         </Link>
         <span style={metaLine}>{t("ctaMeta")}</span>

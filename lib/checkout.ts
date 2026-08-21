@@ -1,5 +1,10 @@
 /**
- * Stripe payment link for the decision audit.
+ * Stripe payment link for the operational diagnostic.
+ *
+ * The variable is still named ..._AUDIT_LINK: the offer was renamed in August
+ * 2026, but the name is already configured in the deploy environment and
+ * renaming it would break the build until someone re-adds it. Not worth it for
+ * a name only maintainers see.
  *
  * Set NEXT_PUBLIC_STRIPE_AUDIT_LINK in the deploy environment. Use the live
  * link in production and a test-mode link (buy.stripe.com/test_...) elsewhere,

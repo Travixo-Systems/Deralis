@@ -80,9 +80,9 @@ If this article felt familiar, you already know you have a problem. You do not n
 
 What most people need is someone to sit down with them and ask the right questions. What does your current process actually look like? Where does work fall through the cracks? What would "fixed" feel like in practice?
 
-That is what the decision audit is for.
+That is what the operational diagnostic is for.
 
-If you want to map out what a custom tool could look like for your business, that is where it starts. [See what the audit covers →](/audit)
+If you want to map out what a custom tool could look like for your business, that is where it starts. [See what the diagnostic covers →](/diagnostic)
 
 Fixed price. You keep the dossier, whatever you decide to do next.
 

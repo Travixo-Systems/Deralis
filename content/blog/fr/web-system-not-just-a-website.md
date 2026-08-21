@@ -190,7 +190,7 @@ Si votre configuration a l'air solide mais demande encore des efforts pour garde
 
 C'est la façon dont ils fonctionnent ensemble.
 
-C'est ce que l'audit de décision cartographie. [Voir ce que couvre l'audit →](/audit)
+C'est ce que le diagnostic opérationnel cartographie. [Voir ce que couvre le diagnostic →](/diagnostic)
 
 On fera le point sur la façon dont les choses circulent aujourd'hui, où elles ralentissent, et où elles se dispersent.
 

@@ -125,8 +125,8 @@ export default function SiteNav() {
           </div>
 
           {/* Audit pill */}
-          <Link href="/audit" style={auditPill} className="audit-pill">
-            {tActions("discoverAudit")}
+          <Link href="/diagnostic" style={diagnosticPill} className="diagnostic-pill">
+            {tActions("discoverDiagnostic")}
           </Link>
         </div>
 
@@ -165,7 +165,7 @@ export default function SiteNav() {
         open={open}
         onClose={() => setOpen(false)}
         links={mobileLinks}
-        auditCta={{ href: "/audit", label: tActions("discoverAudit") }}
+        auditCta={{ href: "/diagnostic", label: tActions("discoverDiagnostic") }}
       />
     </header>
   );
@@ -245,7 +245,7 @@ const localeBtn: CSSProperties = {
   transition: "color 200ms ease",
 };
 
-const auditPill: CSSProperties = {
+const diagnosticPill: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
   padding: "10px 20px",

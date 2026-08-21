@@ -110,7 +110,7 @@ const factValStyle: CSSProperties = {
 const FACT_KEYS = ["duree", "livrable", "prix", "garantie", "langue"] as const;
 
 export default function ClimaxPeak() {
-  const t = useTranslations("common.auditCta");
+  const t = useTranslations("common.diagnosticCta");
   const tActions = useTranslations("common.actions");
 
   return (
@@ -133,12 +133,12 @@ export default function ClimaxPeak() {
               >
                 {tActions("bookCall")}
               </a>
-              <Link href="/audit" style={ctaSecondaryPeakStyle}>
+              <Link href="/diagnostic" style={ctaSecondaryPeakStyle}>
                 {t("ctaLabel")}
               </Link>
             </>
           ) : (
-            <Link href="/audit" style={ctaPeakStyle}>
+            <Link href="/diagnostic" style={ctaPeakStyle}>
               {t("ctaLabel")}
             </Link>
           )}

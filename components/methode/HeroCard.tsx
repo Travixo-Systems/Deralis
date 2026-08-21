@@ -18,7 +18,7 @@ export default function HeroCard() {
             <RichText html={t.raw("h1")} />
           </h1>
           <p style={sub}>{t("sub")}</p>
-          <Link href="/audit" style={ctaPrimary}>{t("ctaPrimary")}</Link>
+          <Link href="/diagnostic" style={ctaPrimary}>{t("ctaPrimary")}</Link>
         </div>
 
         {/* Right: stages pull-out, distinct from homepage AnchorBlock */}

@@ -73,9 +73,9 @@ Vous n'avez pas besoin de tout automatiser d'un coup. Vous avez besoin de commen
 
 ## Si vous voulez savoir par où commencer
 
-Si vous pouvez lister trois tâches que votre équipe fait manuellement chaque jour, l'audit dit laquelle vaut la peine d'être automatisée en premier, ce que ça demanderait de construire, et ce qu'il ne faut pas construire.
+Si vous pouvez lister trois tâches que votre équipe fait manuellement chaque jour, le diagnostic dit laquelle vaut la peine d'être automatisée en premier, ce que ça demanderait de construire, et ce qu'il ne faut pas construire.
 
-[Voir ce que couvre l'audit →](/audit)
+[Voir ce que couvre le diagnostic →](/diagnostic)
 
 Amenez la liste. C'est toute la préparation dont vous avez besoin.
 

@@ -11,8 +11,8 @@
       "viewOurWork": "Voir mes réalisations",
       "sending": "Envoi en cours...",
       "changeLanguage": "Changer de langue",
-      "discoverAudit": "Découvrez l’audit",
-      "startAudit": "Démarrez l’audit (1 280 €)",
+      "discoverDiagnostic": "Découvrez le diagnostic",
+      "startDiagnostic": "Démarrez le diagnostic (1 280 €)",
       "bookCall": "Réserver l’appel →"
     },
     "footer": {
@@ -24,8 +24,8 @@
       "privacyLink": "Confidentialité",
       "email": "contact@deralis.digital"
     },
-    "auditCta": {
-      "eyebrow": "Commencez par un audit de décision",
+    "diagnosticCta": {
+      "eyebrow": "Commencez par un diagnostic opérationnel",
       "headline": "Rien n’est construit sans valeur claire pour votre activité.",
       "body1": "Pendant deux jours, j’analyse avec vous le fonctionnement réel : qui reçoit quoi, qui décide, où le travail attend et ce qui doit être vérifié ou relancé. Le dossier dit quoi corriger en premier, quoi construire, et ce qu’il ne faut pas construire.",
       "body2": "Si vous construisez ensuite, 500 € sont déduits du développement.",
@@ -58,7 +58,7 @@
     "discoveryCall": {
       "eyebrow": "Pas encore sûr ?",
       "headline": "Si vous hésitez, parlons-en d’abord.",
-      "body": "Trente minutes pour voir si l’audit est pertinent pour vous. Si ce n’est pas le cas, je vous le dis. Pas de livrable, pas de pression.",
+      "body": "Trente minutes pour voir si le diagnostic est pertinent pour vous. Si ce n’est pas le cas, je vous le dis. Pas de livrable, pas de pression.",
       "ctaLabel": "Réserver l’appel →"
     },
     "screenshotDisclaimer": "Produit Deralis, en ligne. Données de démonstration."
@@ -70,7 +70,7 @@
         "h1": "<strong>Optimisez vos opérations. Accélérez votre croissance.</strong>",
         "subhead1": "Je conçois des solutions où le travail et l’information avancent ensemble d’une personne à l’autre, avec les équipes et les outils déjà en place.",
         "subhead2": "Chaque demande, validation, commande ou relance a un responsable, un statut et une prochaine action. Vos équipes savent ce qui avance, ce qui bloque et qui doit agir.",
-        "ctaPrimary": "Voir ce que couvre l’audit →",
+        "ctaPrimary": "Voir ce que couvre le diagnostic →",
         "ctaSecondary": "Voir mes réalisations",
         "anchor": {
           "tab": "Ce que j’ai construit",
@@ -159,11 +159,11 @@
       "howIWork": {
         "eyebrow": "Comment je travaille",
         "title": "Un processus séquentiel, pas un menu d’options.",
-        "intro": "Je commence par l’audit. S’il ne montre pas de valeur claire, rien n’est construit.",
+        "intro": "Je commence par le diagnostic. S’il ne montre pas de valeur claire, rien n’est construit.",
         "items": {
           "1": {
             "num": "01",
-            "title": "Audit de décision",
+            "title": "Diagnostic opérationnel",
             "description": "Je cartographie le fonctionnement réel. Deux jours, sur site quand c’est utile. Dossier livré sous cinq jours ouvrés."
           },
           "2": {
@@ -314,7 +314,7 @@
       },
       "finalCta": {
         "title": "Chaque projet ici a commencé par un problème que quelqu’un pouvait <em>nommer</em>.",
-        "body": "Le déclencheur est presque toujours le même. Le travail avance, mais il faut chercher l’information, vérifier l’avancement et relancer pour obtenir une réponse, et les outils en place n’allaient pas régler ça tout seuls. L’audit de décision est là où cette conversation commence.",
+        "body": "Le déclencheur est presque toujours le même. Le travail avance, mais il faut chercher l’information, vérifier l’avancement et relancer pour obtenir une réponse, et les outils en place n’allaient pas régler ça tout seuls. Le diagnostic opérationnel est là où cette conversation commence.",
         "note": "Prix fixe. Bilingue français et anglais. Un seul interlocuteur, de l’analyse à la mise en production."
       }
     }
@@ -355,8 +355,8 @@
         "title": "Trois <em>principes</em>, sans exception.",
         "intro": "Chaque mission passe par la même logique. Chaque principe existe parce que s’en passer a déjà coûté du temps et de l’argent à quelqu’un.",
         "p1": {
-          "title": "L’audit en premier",
-          "body": "L’audit de décision à 1 280 € est la seule porte d’entrée. Rien n’est construit avant. L’audit définit quoi corriger en premier, quoi construire et dans quel ordre, et 500 € sont déduits du projet s’il est lancé."
+          "title": "Le diagnostic en premier",
+          "body": "Le diagnostic opérationnel à 1 280 € est la seule porte d’entrée. Rien n’est construit avant. Le diagnostic définit quoi corriger en premier, quoi construire et dans quel ordre, et 500 € sont déduits du projet s’il est lancé."
         },
         "p2": {
           "title": "Définir ce qui doit être livré avant de commencer",
@@ -377,7 +377,7 @@
         },
         "card2": {
           "title": "Deralis Digital",
-          "body": "Structure d’ingénierie indépendante. Modèle audit-first. France, Royaume-Uni, États-Unis."
+          "body": "Structure d’ingénierie indépendante. Le diagnostic d’abord, la construction ensuite. France, Royaume-Uni, États-Unis."
         }
       }
     }
@@ -410,12 +410,12 @@
     "page": {
       "metadata": {
         "title": "Contact",
-        "description": "Parlez-moi avant de réserver un audit de décision. Structure d’ingénierie indépendante basée en Île-de-France, travail à travers la France et à distance."
+        "description": "Parlez-moi avant de réserver un diagnostic opérationnel. Structure d’ingénierie indépendante basée en Île-de-France, travail à travers la France et à distance."
       },
       "hero": {
         "eyebrow": "Contact",
         "title": "Écrivez-moi directement.",
-        "sub": "Pour les questions qui ne passent pas par un formulaire d’audit. Partenariats, NDA, langue de travail, ou simplement parce que vous préférez écrire."
+        "sub": "Pour les questions qui ne passent pas par le formulaire de diagnostic. Partenariats, NDA, langue de travail, ou simplement parce que vous préférez écrire."
       },
       "form": {
         "nameLabel": "Nom",
@@ -642,7 +642,7 @@
         "title": "4. Conditions de paiement",
         "intro": "Les modalités précises de paiement sont définies dans chaque contrat de projet. Sauf disposition contraire :",
         "items": [
-          "Les audits système nécessitent un règlement à l’avance",
+          "Les diagnostics opérationnels nécessitent un règlement à l’avance",
           "Les projets de développement peuvent être facturés par étapes (acompte, jalons, solde)",
           "Le travail démarre généralement après réception du premier paiement convenu"
         ],
@@ -866,16 +866,16 @@
       "readMore": "Lire →"
     }
   },
-  "audit": {
+  "diagnostic": {
     "page": {
       "metadata": {
-        "title": "Audit de décision · 1 280 €",
+        "title": "Diagnostic opérationnel · 1 280 €",
         "description": "Quoi construire, dans quel ordre, et ce qu’il ne faut pas construire. Deux jours d’analyse, dossier livré sous cinq jours ouvrés."
       },
       "hero": {
-        "eyebrow": "Audit de décision · 1 280 €",
-        "h1": "Vous savez que quelque chose vous ralentit. L’audit montre où le temps se perd, pourquoi, et quoi corriger en premier.",
-        "sub": "<strong>Audit de décision :</strong> quoi construire, dans quel ordre, et ce qu’il ne faut pas construire.",
+        "eyebrow": "Diagnostic opérationnel · 1 280 €",
+        "h1": "Vous savez que quelque chose vous ralentit. Le diagnostic montre où le temps se perd, pourquoi, et quoi corriger en premier.",
+        "sub": "<strong>Diagnostic opérationnel :</strong> quoi construire, dans quel ordre, et ce qu’il ne faut pas construire.",
         "offer": {
           "tab": "L’offre",
           "line1": "<strong>Deux jours</strong> d’analyse, sur site quand c’est utile, à distance sinon",
@@ -901,13 +901,13 @@
         ],
         "closing1": "À ce stade, la question n’est plus est-ce qu’on a un problème. Vous le savez déjà.",
         "closing2": "La question est : quel est le bon premier mouvement. Un nouveau logiciel ? Un changement de process ? Rien du tout ? Faut-il construire, acheter, ou mieux utiliser ce qui est déjà là ?",
-        "closing3": "C’est la question à laquelle l’audit répond. Pas en théorie. Sur votre opération, avec vos contraintes, en cinq jours ouvrés.",
+        "closing3": "C’est la question à laquelle le diagnostic répond. Pas en théorie. Sur votre opération, avec vos contraintes, en cinq jours ouvrés.",
         "cta": "Prendre une décision · 1 280 € →"
       },
       "deliverable": {
         "tab": "Ce que vous aurez en main",
         "h3": "Un dossier de décision.",
-        "negations": "Pas un rapport. Pas un audit théorique. Pas un deck de slides.",
+        "negations": "Pas un rapport. Pas une analyse théorique. Pas un deck de slides.",
         "lede": "Court, structuré, signé. Écrit pour être relu par quelqu’un qui n’était pas présent.",
         "bodyLabel": "À l’intérieur",
         "items": [
@@ -929,26 +929,26 @@
         "eyebrow": "Un exemple concret",
         "h2": "Un vrai dossier. Ouvert. Dans vos mains avant de <em>décider</em>.",
         "body1": "<strong>Même format, même structure, même niveau de détail</strong> que ce que vous recevriez.",
-        "body2": "Lisez-le avant de décider si l’audit est pour vous.",
+        "body2": "Lisez-le avant de décider si le diagnostic est pour vous.",
         "pagesMeta": "Cinq pages · PDF · Anonymisé",
         "cta": "Télécharger l’exemple (PDF) ↓",
         "meta": "Pas de formulaire. Pas d’email à laisser."
       },
       "notFor": {
         "h3": "Pas pour vous si…",
-        "intro": "Dans les cas suivants, l’audit n’a pas de sens. Ne le réservez pas.",
+        "intro": "Dans les cas suivants, le diagnostic n’a pas de sens. Ne le réservez pas.",
         "items": [
           "Vous cherchez un site vitrine. WordPress, Webflow, Framer, autre chose.",
           "Vous voulez commencer à construire avant que le problème soit défini.",
           "Vous ne pouvez montrer aucun exemple concret : pas un dossier qui traîne, pas une validation qui bloque, pas un client qui relance.",
-          "Vous comptez sauter l’audit et passer directement à la construction.",
+          "Vous comptez sauter le diagnostic et passer directement à la construction.",
           "Il n’y a pas de friction opérationnelle à résoudre."
         ]
       },
       "guarantee": {
         "h3": "Et si je me trompe ?",
         "p1": "Si en cours de route je constate que je ne suis pas la bonne personne pour vous aider, je rembourse l’intégralité des 1 280 €. Sans discussion, sans paiement partiel, sans tentative de vous vendre autre chose.",
-        "p2": "Dans le cas contraire, l’audit n’est pas remboursable. Parce que l’audit est le travail, pas une étape commerciale. Le dossier existe pour que vous puissiez prendre des décisions que vous ne pouviez pas prendre avant. Cette valeur est livrée que vous me confiiez la suite ou non, et c’est précisément l’objectif."
+        "p2": "Dans le cas contraire, le diagnostic n’est pas remboursable. Parce que le diagnostic est le travail, pas une étape commerciale. Le dossier existe pour que vous puissiez prendre des décisions que vous ne pouviez pas prendre avant. Cette valeur est livrée que vous me confiiez la suite ou non, et c’est précisément l’objectif."
       },
       "process": {
         "intro": "Quatre étapes. Dossier livré sous cinq jours ouvrés après l’analyse.",
@@ -965,7 +965,7 @@
           },
           {
             "num": "03",
-            "title": "Audit",
+            "title": "Diagnostic",
             "desc": "Structure fixe. J’identifie avec vous les points clés et formalise les éléments nécessaires."
           },
           {
@@ -977,7 +977,7 @@
       },
       "finalCta": {
         "h2": "Prendre une décision avant de construire.",
-        "sub": "Un audit. Un dossier. Une décision que vous pouvez défendre.",
+        "sub": "Un diagnostic. Un dossier. Une décision que vous pouvez défendre.",
         "cta": "Prendre une décision · 1 280 € →",
         "meta": "Français ou anglais. NDA sur demande."
       }
@@ -986,16 +986,16 @@
   "methode": {
     "metadata": {
       "title": "Méthode",
-      "description": "Trois étapes : audit, système, extensions. Rien n’est construit avant que le fonctionnement réel soit compris. Aucune étape ne peut être sautée."
+      "description": "Trois étapes : diagnostic, système, extensions. Rien n’est construit avant que le fonctionnement réel soit compris. Aucune étape ne peut être sautée."
     },
     "hero": {
       "eyebrow": "Méthode",
       "h1": "D’abord comprendre. Puis décider. Seulement après, <em>construire</em>.",
       "sub": "Trois étapes. Chacune ouvre la suivante. Aucune ne peut être sautée.",
-      "ctaPrimary": "Commencer par l’audit →",
+      "ctaPrimary": "Commencer par le diagnostic →",
       "anchorTab": "Ce que vous obtenez",
       "stageNames": [
-        "Audit",
+        "Diagnostic",
         "Système",
         "Extensions"
       ]
@@ -1004,10 +1004,10 @@
       "intro": "Rien n’est construit avant que le fonctionnement réel soit cartographié.",
       "stage1": {
         "num": "01",
-        "title": "Audit",
+        "title": "Diagnostic",
         "desc": "Pendant deux jours, j’analyse avec vous le travail réel : qui reçoit quoi, qui décide, où ça attend, ce qui doit être vérifié ou relancé. Le livrable est un dossier de décision, pas un rapport.",
         "metadata": "Deux jours · dossier sous 5 jours ouvrés",
-        "cta": "Démarrer l’audit →"
+        "cta": "Démarrer le diagnostic →"
       },
       "stage2": {
         "num": "02",

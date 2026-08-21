@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import fs from "fs";
 import path from "path";
-import AuditCTA from "@/components/shared/AuditCTA";
+import DiagnosticCTA from "@/components/shared/DiagnosticCTA";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 type Props = {
@@ -125,7 +125,7 @@ function renderInline(text: string) {
     if (match[1] && match[2]) {
       const label = match[1];
       const href = match[2];
-      // Internal hrefs are written locale-agnostically ("/audit", never "/fr/audit");
+      // Internal hrefs are written locale-agnostically ("/diagnostic", never "/fr/audit");
       // the i18n Link adds the locale prefix. Anything else is treated as external.
       parts.push(
         href.startsWith("/") ? (
@@ -397,7 +397,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      <AuditCTA />
+      <DiagnosticCTA />
     </>
   );
 }

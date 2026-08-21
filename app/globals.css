@@ -237,7 +237,7 @@ main > :first-child {
 
 /* ========== HEADER / NAV ========== */
 @layer components {
-  .audit-pill:hover {
+  .diagnostic-pill:hover {
     background: var(--text-primary);
     color: var(--canvas);
   }

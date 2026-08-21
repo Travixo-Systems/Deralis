@@ -12,7 +12,7 @@ export default function StagesCard() {
       <p style={introP}>{t("intro")}</p>
 
       <ol style={stageList}>
-        <Stage num={t("stage1.num")} title={t("stage1.title")} desc={t("stage1.desc")} metadata={t("stage1.metadata")} cta={t("stage1.cta")} ctaHref="/audit" />
+        <Stage num={t("stage1.num")} title={t("stage1.title")} desc={t("stage1.desc")} metadata={t("stage1.metadata")} cta={t("stage1.cta")} ctaHref="/diagnostic" />
         <FlowConnectorVertical />
         <Stage num={t("stage2.num")} title={t("stage2.title")} desc={t("stage2.desc")} />
         <FlowConnectorVertical />

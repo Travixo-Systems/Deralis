@@ -161,7 +161,7 @@ function BuildingCard() {
 
 /* ========== Card 5: Climax (dark peak) ========== */
 function AboutClimax() {
-  const t = useTranslations("common.auditCta");
+  const t = useTranslations("common.diagnosticCta");
   return (
     <DsCardPeak>
       <div className="grid-climax">
@@ -172,7 +172,7 @@ function AboutClimax() {
           </h2>
           <p style={{ fontSize: 16, lineHeight: 1.6, color: "var(--text-on-peak-muted)", marginBottom: 14, maxWidth: "42ch" }}>{t("body1")}</p>
           <p style={{ fontSize: 16, lineHeight: 1.6, color: "var(--text-on-peak-muted)", marginBottom: 32, maxWidth: "42ch" }}>{t("body2")}</p>
-          <Link href="/audit" style={ctaPeak}>{t("ctaLabel")}</Link>
+          <Link href="/diagnostic" style={ctaPeak}>{t("ctaLabel")}</Link>
           <span style={{ display: "block", marginTop: 14, fontSize: 12, color: "var(--text-on-peak-dim)", fontStyle: "italic" }}>{t("ctaMeta")}</span>
         </div>
       </div>

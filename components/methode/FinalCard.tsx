@@ -10,7 +10,7 @@ export default function FinalCard() {
     <DsCardFinal>
       <h2 style={h2}>{t("h2")}</h2>
       <p style={sub}>{t("sub")}</p>
-      <Link href="/audit" style={ctaPrimary}>{t("cta")}</Link>
+      <Link href="/diagnostic" style={ctaPrimary}>{t("cta")}</Link>
     </DsCardFinal>
   );
 }
