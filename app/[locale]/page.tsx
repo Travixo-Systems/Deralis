@@ -7,6 +7,7 @@ import ExclusionPeak from "@/components/home/ExclusionPeak";
 import HomeCaseStudy from "@/components/home/HomeCaseStudy";
 import HowIWork from "@/components/home/HowIWork";
 import ClimaxPeak from "@/components/home/ClimaxPeak";
+import AnimateIn from "@/components/shared/AnimateIn";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -56,12 +57,24 @@ export default async function Home({ params }: Props) {
   return (
     <>
       <HomeHero />
-      <CostSection />
-      <WhoSection />
-      <ExclusionPeak />
-      <HomeCaseStudy />
-      <HowIWork />
-      <ClimaxPeak />
+      <AnimateIn>
+        <CostSection />
+      </AnimateIn>
+      <AnimateIn>
+        <WhoSection />
+      </AnimateIn>
+      <AnimateIn>
+        <ExclusionPeak />
+      </AnimateIn>
+      <AnimateIn>
+        <HomeCaseStudy />
+      </AnimateIn>
+      <AnimateIn>
+        <HowIWork />
+      </AnimateIn>
+      <AnimateIn>
+        <ClimaxPeak />
+      </AnimateIn>
     </>
   );
 }
