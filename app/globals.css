@@ -692,6 +692,69 @@ main > :first-child {
   }
 }
 
+/* ========== SCROLL DRIVEN DEPTH ==========
+   Everything here is decorative and gated behind @supports. Firefox still has
+   animation-timeline behind a flag (layout.css.scroll-driven-animations.enabled,
+   off in stable), so roughly 15 percent of visitors get the unanimated state.
+   That state is the normal, fully visible page, never a hidden one. */
+
+@supports (animation-timeline: scroll()) {
+  /* Header lifts off the page once you have scrolled past the hero. No JS,
+     and it cannot desynchronise from the scroll position the way a scroll
+     listener can. */
+  @media (prefers-reduced-motion: no-preference) {
+    header.shell-bleed {
+      animation: nav-lift linear both;
+      animation-timeline: scroll();
+      animation-range: 0 220px;
+    }
+  }
+
+  @keyframes nav-lift {
+    from {
+      box-shadow: 0 0 0 rgba(20, 17, 13, 0);
+    }
+    to {
+      box-shadow: 0 6px 20px rgba(20, 17, 13, 0.07);
+    }
+  }
+
+  :root[data-theme="dark"] header.shell-bleed {
+    animation-name: nav-lift-dark;
+  }
+
+  @keyframes nav-lift-dark {
+    from {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    to {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+@supports (animation-timeline: view()) {
+  /* Slow shadow bloom as a peak card crosses the viewport. Depth rather than
+     decoration: the dark cards are the moments the page is built around.
+     Shadow only, so nothing here can move layout or affect CLS. */
+  @media (prefers-reduced-motion: no-preference) {
+    .ds-card-peak {
+      animation: peak-bloom linear both;
+      animation-timeline: view();
+      animation-range: entry 15% cover 45%;
+    }
+  }
+
+  @keyframes peak-bloom {
+    from {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    }
+    to {
+      box-shadow: var(--peak-shadow);
+    }
+  }
+}
+
 /* ========== MOTION ========== */
 /* Reduced motion means less movement, not a different layout.
    Durations are collapsed so nothing animates, but transform itself is left
