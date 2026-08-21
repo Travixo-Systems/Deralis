@@ -7,6 +7,7 @@ import RichText from "@/components/shared/RichText";
 import ScreenshotDisclaimer from "@/components/shared/ScreenshotDisclaimer";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
+import AnimateIn from "@/components/shared/AnimateIn";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -35,11 +36,21 @@ export default async function ProjectsPage({ params }: Props) {
   return (
     <>
       <ProjectsHero />
-      <TraviXOCaseStudy />
-      <ProjectsClimax />
-      <GovPortalCaseStudy />
-      <ConceptsCard />
-      <ProjectsFinalCTA />
+      <AnimateIn>
+        <TraviXOCaseStudy />
+      </AnimateIn>
+      <AnimateIn>
+        <ProjectsClimax />
+      </AnimateIn>
+      <AnimateIn>
+        <GovPortalCaseStudy />
+      </AnimateIn>
+      <AnimateIn>
+        <ConceptsCard />
+      </AnimateIn>
+      <AnimateIn>
+        <ProjectsFinalCTA />
+      </AnimateIn>
     </>
   );
 }

@@ -8,6 +8,7 @@ import TabLabel from "@/components/shared/TabLabel";
 import RichText from "@/components/shared/RichText";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
+import AnimateIn from "@/components/shared/AnimateIn";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -42,12 +43,24 @@ export default async function DiagnosticPage({ params }: Props) {
     <>
       <EstimateBanner />
       <DiagnosticHero />
-      <RecognitionCard />
-      <DeliverableCard />
-      <ExamplePeak />
-      <NotForAndGuaranteeCard />
-      <ProcessCard />
-      <DiagnosticFinalCTA />
+      <AnimateIn>
+        <RecognitionCard />
+      </AnimateIn>
+      <AnimateIn>
+        <DeliverableCard />
+      </AnimateIn>
+      <AnimateIn>
+        <ExamplePeak />
+      </AnimateIn>
+      <AnimateIn>
+        <NotForAndGuaranteeCard />
+      </AnimateIn>
+      <AnimateIn>
+        <ProcessCard />
+      </AnimateIn>
+      <AnimateIn>
+        <DiagnosticFinalCTA />
+      </AnimateIn>
     </>
   );
 }

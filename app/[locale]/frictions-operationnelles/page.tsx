@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import DsCard, { DsCardPaper } from "@/components/shared/DsCard";
 import FrictionCalculator from "@/components/frictions/FrictionCalculator";
 import type { CSSProperties } from "react";
+import AnimateIn from "@/components/shared/AnimateIn";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -170,7 +171,9 @@ export default async function FrictionsPage({ params }: Props) {
     <>
       <Hero />
       <FrictionCalculator />
-      <Method />
+      <AnimateIn>
+        <Method />
+      </AnimateIn>
     </>
   );
 }

@@ -5,6 +5,7 @@ import DsCard, { DsCardPeak } from "@/components/shared/DsCard";
 import RichText from "@/components/shared/RichText";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
+import AnimateIn from "@/components/shared/AnimateIn";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -33,10 +34,18 @@ export default async function AboutPage({ params }: Props) {
   return (
     <>
       <AboutHero />
-      <BackgroundCard />
-      <PrinciplesCard />
-      <BuildingCard />
-      <AboutClimax />
+      <AnimateIn>
+        <BackgroundCard />
+      </AnimateIn>
+      <AnimateIn>
+        <PrinciplesCard />
+      </AnimateIn>
+      <AnimateIn>
+        <BuildingCard />
+      </AnimateIn>
+      <AnimateIn>
+        <AboutClimax />
+      </AnimateIn>
     </>
   );
 }
