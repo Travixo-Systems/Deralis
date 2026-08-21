@@ -27,7 +27,7 @@
     "auditCta": {
       "eyebrow": "Commencez par un audit de décision",
       "headline": "Rien n’est construit sans valeur claire pour votre activité.",
-      "body1": "L’audit cartographie votre fonctionnement actuel, identifie les écarts structurels, et définit quoi construire, dans quel ordre, et ce qu’il ne faut pas construire.",
+      "body1": "Pendant deux jours, j’analyse avec vous le fonctionnement réel : qui reçoit quoi, qui décide, où le travail attend et ce qui doit être vérifié ou relancé. Le dossier dit quoi corriger en premier, quoi construire, et ce qu’il ne faut pas construire.",
       "body2": "Si vous construisez ensuite, 500 € sont déduits du développement.",
       "note": "Prix fixe. Sans suite obligatoire.",
       "facts": {
@@ -159,7 +159,7 @@
       "howIWork": {
         "eyebrow": "Comment je travaille",
         "title": "Un processus séquentiel, pas un menu d’options.",
-        "intro": "Chaque étape existe parce que la précédente l’a méritée. Rien n’est présumé, rien n’est sauté.",
+        "intro": "Je commence par l’audit. S’il ne montre pas de valeur claire, rien n’est construit.",
         "items": {
           "1": {
             "num": "01",
@@ -169,12 +169,12 @@
           "2": {
             "num": "02",
             "title": "Système sur mesure",
-            "description": "La construction principale. Un système unique qui montre où en est le travail."
+            "description": "La première version utile. Elle résout le point de friction prioritaire et donne à chacun l’information nécessaire pour agir."
           },
           "3": {
             "num": "03",
             "title": "Extensions",
-            "description": "Automatisation, intégrations et flux, sur la base existante."
+            "description": "Ce qui vient ensuite, une fois la première version en service et seulement si l’usage le justifie."
           },
           "4": {
             "num": "04",
@@ -329,7 +329,7 @@
         "eyebrow": "Structure d’ingénierie de systèmes indépendante",
         "title": "À propos de <em>Deralis</em> Digital.",
         "sub1": "Je construis les systèmes opérationnels dont les entreprises établies ont besoin pour continuer à tourner quand leurs outils et processus <em>ne suivent plus</em>.",
-        "sub2": "Deralis Digital est une structure d’ingénierie indépendante. Je travaille avec des entreprises rentables et opérationnelles où la circulation de l’information entre les personnes et les outils est devenue le goulot d’étranglement. Pas des sites web. Pas de templates. Des systèmes qui montrent où en est le travail, ce qui est bloqué, et ce qui doit être fait ensuite.",
+        "sub2": "Deralis Digital est une structure d’ingénierie indépendante. Je travaille avec des entreprises rentables et opérationnelles où le travail ralentit parce qu’il faut chercher l’information, vérifier l’avancement et relancer pour obtenir une réponse. Pas des sites web. Pas de templates. Des systèmes qui montrent qui s’occupe de quoi, où ça en est et ce qui doit suivre.",
         "sub3": "J’ai travaillé à l’intérieur de vraies entreprises où le système n’est pas visible, mais les conséquences le sont. C’est de cette expérience que vient TraviXO Systems, un logiciel de conformité VGP pour le secteur français de la location de matériel.",
         "sub4": "C’est ce qui façonne ma façon de travailler : on ne peut pas concevoir un système pour un fonctionnement qu’on ne comprend pas.",
         "ctaSecondary": "Voir comment je travaille →"
@@ -874,7 +874,7 @@
       },
       "hero": {
         "eyebrow": "Audit de décision · 1 280 €",
-        "h1": "Vos outils tiennent. Votre opération, non.",
+        "h1": "Vous savez que quelque chose vous ralentit. L’audit montre où le temps se perd, pourquoi, et quoi corriger en premier.",
         "sub": "<strong>Audit de décision :</strong> quoi construire, dans quel ordre, et ce qu’il ne faut pas construire.",
         "offer": {
           "tab": "L’offre",
@@ -897,7 +897,7 @@
           "Le CRM dit une chose, l’ERP une autre, et l’équipe finit par vérifier ailleurs.",
           "Pour trancher une question simple, il faut croiser plusieurs sources avant d’avoir confiance.",
           "Les cas particuliers vivent ailleurs : fichiers perso, mails, mémoire individuelle.",
-          "Vos outils existent. Le système, lui, reste fragile."
+          "Quand quelqu’un est absent, plus personne ne sait où en sont ses dossiers."
         ],
         "closing1": "À ce stade, la question n’est plus est-ce qu’on a un problème. Vous le savez déjà.",
         "closing2": "La question est : quel est le bon premier mouvement. Un nouveau logiciel ? Un changement de process ? Rien du tout ? Faut-il construire, acheter, ou mieux utiliser ce qui est déjà là ?",
@@ -1005,23 +1005,23 @@
       "stage1": {
         "num": "01",
         "title": "Audit",
-        "desc": "Je cartographie votre fonctionnement réel. Où l’information circule, où elle s’arrête, où elle se duplique. Le livrable est un dossier de décision, pas un rapport.",
+        "desc": "Pendant deux jours, j’analyse avec vous le travail réel : qui reçoit quoi, qui décide, où ça attend, ce qui doit être vérifié ou relancé. Le livrable est un dossier de décision, pas un rapport.",
         "metadata": "Deux jours · dossier sous 5 jours ouvrés",
         "cta": "Démarrer l’audit →"
       },
       "stage2": {
         "num": "02",
         "title": "Système",
-        "desc": "Le premier système réel, construit à partir du dossier. Un seul, pas trois. Celui sans lequel rien d’autre ne tient."
+        "desc": "La première version utile, construite à partir du dossier. Une seule, pas trois. Celle sans laquelle rien d’autre ne tient."
       },
       "stage3": {
         "num": "03",
         "title": "Extensions",
-        "desc": "Une intégration, une automatisation, un flux supplémentaire. Toujours sur ce qui existe déjà. Jamais la première chose."
+        "desc": "Ce qui vient ensuite, une fois la première version en service. Toujours sur ce qui existe déjà. Jamais la première chose."
       }
     },
     "finalCta": {
-      "h2": "Commencez par comprendre ce qui doit être construit..",
+      "h2": "Commencez par comprendre ce qui doit être construit.",
       "sub": "Deux jours. Cinq jours. Un dossier que vous gardez, quoi qu’il arrive ensuite.",
       "cta": "Prendre une décision · 1 280 € →"
     }
