@@ -607,10 +607,26 @@ main > :first-child {
 }
 
 /* ========== MOTION ========== */
+/* Reduced motion means less movement, not a different layout.
+   Durations are collapsed so nothing animates, but transform itself is left
+   alone: a blanket "transform: none !important" also flattens static
+   transforms that carry meaning (the hamburger to X rotation in SiteNav, the
+   rotated paper mocks on /diagnostic) and, being !important in a stylesheet,
+   it outranks the inline styles that set them. Components opt their own
+   motion out below and alongside their rules. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition-duration: 0ms !important;
     animation-duration: 0ms !important;
-    transform: none !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Hover lifts: keep the colour response, drop the movement. */
+  .cost-cta-panel:hover {
+    transform: none;
+  }
+  .hero-anchor-item:hover {
+    transform: none;
   }
 }
