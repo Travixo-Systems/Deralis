@@ -107,6 +107,11 @@
           "title": "Growth that overloads the team",
           "description": "When activity rises, so do the messages, the checks and the chasing. Without better organisation, part of the extra capacity is absorbed by coordination."
         },
+        "worked": {
+          "label": "An order of magnitude",
+          "inputs": "10 people · €45,000 annual employer cost · 2 hours a week spent searching, checking and chasing",
+          "output": "€25,714 of annual capacity absorbed. A hypothesis, not your number."
+        },
         "calculatorCta": {
           "eyebrow": "Free estimate · 2 minutes · No sign-up",
           "title": "Put a figure on what this friction absorbs in your business.",
@@ -843,7 +848,8 @@
       },
       "screenshots": {
         "lead": {
-          "alt": "TraviXO Systems compliance dashboard overview"
+          "alt": "TraviXO Systems compliance dashboard overview",
+          "caption": "106 overdue inspections, which the product converts into €1,590,000 of fine exposure. The conversion is the point: an operational state becomes a quantified consequence."
         },
         "equipmentRegister": {
           "alt": "TraviXO equipment fleet view with real-time status tracking and category filters"

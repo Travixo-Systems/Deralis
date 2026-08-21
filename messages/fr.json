@@ -107,6 +107,11 @@
           "title": "La croissance qui surcharge l’équipe",
           "description": "Quand l’activité augmente, les messages, contrôles et relances augmentent aussi. Sans meilleure organisation, une partie de la capacité supplémentaire est absorbée par la coordination."
         },
+        "worked": {
+          "label": "Un ordre de grandeur",
+          "inputs": "10 personnes · 45 000 € de coût employeur annuel · 2 heures par semaine passées à chercher, vérifier et relancer",
+          "output": "25 714 € de capacité annuelle mobilisée. Une hypothèse, pas votre chiffre."
+        },
         "calculatorCta": {
           "eyebrow": "Estimation gratuite · 2 minutes · Sans inscription",
           "title": "Chiffrez ce que ces frictions mobilisent chez vous.",
@@ -843,7 +848,8 @@
       },
       "screenshots": {
         "lead": {
-          "alt": "Vue d’ensemble du tableau de bord de conformité TraviXO Systems"
+          "alt": "Vue d’ensemble du tableau de bord de conformité TraviXO Systems",
+          "caption": "106 inspections en retard, que le produit convertit en 1 590 000 € de risque d’amende. La conversion est le point : un état opérationnel devient une conséquence chiffrée."
         },
         "equipmentRegister": {
           "alt": "Vue de la flotte d’équipements TraviXO avec suivi d’état en temps réel et filtres par catégorie"
