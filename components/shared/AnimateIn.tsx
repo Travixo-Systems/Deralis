@@ -19,6 +19,12 @@ type AnimateInProps = {
   variant?: "fade-up" | "fade" | "rise" | "slide-left" | "slide-right" | "zoom";
   /** Element to render. Use "li", "article" and friends inside lists or grids. */
   as?: ElementType;
+  /**
+   * Grows the observer's trigger area. Positive values fire before the element
+   * reaches the viewport, so it is already fading in as it arrives. A negative
+   * margin waits until the element is inside the viewport, which means a fast
+   * scroller can meet a section that is still at opacity 0.
+   */
   rootMargin?: string;
   style?: CSSProperties;
 };
@@ -86,7 +92,7 @@ export default function AnimateIn({
   staggerCount,
   variant = "fade-up",
   as: Tag = "div",
-  rootMargin = "-60px",
+  rootMargin = "200px 0px",
   style,
 }: AnimateInProps) {
   const ref = useRef<HTMLElement>(null);
