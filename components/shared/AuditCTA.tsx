@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import { STRIPE_AUDIT_LINK } from "@/lib/checkout";
 import { useTranslations } from "next-intl";
 
 type AuditCTAProps = {
@@ -12,23 +13,10 @@ type AuditCTAProps = {
   showDiscoveryCta?: boolean;
 };
 
-// NEXT_PUBLIC_* values are inlined into the client bundle during `next build`,
-// so build time is the only place a missing one can be caught before it ships.
-//
-// The paid audit CTA is revenue-critical: a missing link previously rendered
-// href="#", a button that silently does nothing. Fail the production build
-// instead. Dev is left alone so the app still runs without secrets configured.
-const stripeLink = process.env.NEXT_PUBLIC_STRIPE_AUDIT_LINK;
-if (process.env.NODE_ENV === "production" && !stripeLink) {
-  throw new Error(
-    "NEXT_PUBLIC_STRIPE_AUDIT_LINK is not set. The paid audit CTA would ship as a " +
-      "dead link. Set it in the build environment before deploying."
-  );
-}
-
 // The discovery call is a secondary de-risk path, not the offer. It is optional:
 // when unset the link is simply not rendered, never rendered as href="#".
 const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
+const stripeLink = STRIPE_AUDIT_LINK;
 
 export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride, eyebrowOverride, destination = false, showDiscoveryCta = false }: AuditCTAProps) {
   const t = useTranslations("common.auditCta");
@@ -59,7 +47,7 @@ export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride,
         <div className="flex flex-col items-start gap-4 max-md:mt-2">
           {destination ? (
             <a
-              href={stripeLink ?? "#"}
+              href={stripeLink}
               className="group inline-flex items-center gap-2.5 px-[30px] py-[18px] bg-ink text-bg-cta text-[15px] font-medium rounded-lg hover:bg-accent transition-colors no-underline"
             >
               {tActions("startAudit")}

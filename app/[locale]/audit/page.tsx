@@ -1,4 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
+import { STRIPE_AUDIT_LINK } from "@/lib/checkout";
 import { getTranslations } from "next-intl/server";
 import { useTranslations, useLocale } from "next-intl";
 import DsCard, { DsCardPeak, DsCardPaper, DsCardMedium, DsCardFinal } from "@/components/shared/DsCard";
@@ -11,7 +12,7 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const stripeLink = process.env.NEXT_PUBLIC_STRIPE_AUDIT_LINK || "#";
+const stripeLink = STRIPE_AUDIT_LINK;
 const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
 
 export async function generateMetadata({ params }: Props) {
