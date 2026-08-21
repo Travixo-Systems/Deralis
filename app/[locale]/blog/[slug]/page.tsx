@@ -107,10 +107,14 @@ function markdownToBlocks(md: string): Block[] {
   return blocks;
 }
 
+const inlineLinkClass =
+  "text-accent underline underline-offset-[3px] decoration-1 hover:decoration-2 transition-all";
+
 function renderInline(text: string) {
   const parts: (string | React.ReactElement)[] = [];
-  // Handle **bold** and *italic* and `code`
-  const regex = /\*\*(.*?)\*\*|\*(.*?)\*|`([^`]+)`/g;
+  // Handle [label](href), **bold**, *italic* and `code`.
+  // Links come first so bracket syntax is consumed before emphasis is scanned.
+  const regex = /\[([^\]]+)\]\(([^)]+)\)|\*\*(.*?)\*\*|\*(.*?)\*|`([^`]+)`/g;
   let lastIndex = 0;
   let match;
 
@@ -118,14 +122,36 @@ function renderInline(text: string) {
     if (match.index > lastIndex) {
       parts.push(text.slice(lastIndex, match.index));
     }
-    if (match[1]) {
-      parts.push(<strong key={match.index} className="font-medium text-ink">{match[1]}</strong>);
-    } else if (match[2]) {
-      parts.push(<em key={match.index}>{match[2]}</em>);
+    if (match[1] && match[2]) {
+      const label = match[1];
+      const href = match[2];
+      // Internal hrefs are written locale-agnostically ("/audit", never "/fr/audit");
+      // the i18n Link adds the locale prefix. Anything else is treated as external.
+      parts.push(
+        href.startsWith("/") ? (
+          <Link key={match.index} href={href} className={inlineLinkClass}>
+            {label}
+          </Link>
+        ) : (
+          <a
+            key={match.index}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={inlineLinkClass}
+          >
+            {label}
+          </a>
+        )
+      );
     } else if (match[3]) {
+      parts.push(<strong key={match.index} className="font-medium text-ink">{match[3]}</strong>);
+    } else if (match[4]) {
+      parts.push(<em key={match.index}>{match[4]}</em>);
+    } else if (match[5]) {
       parts.push(
         <code key={match.index} className="text-[15px] bg-bg-deep border border-border-default rounded px-1.5 py-0.5 font-mono">
-          {match[3]}
+          {match[5]}
         </code>
       );
     }
@@ -189,8 +215,21 @@ export default async function BlogPostPage({ params }: Props) {
 
   const localePath = path.join(process.cwd(), "content", "blog", locale, `${slug}.md`);
   const defaultPath = path.join(process.cwd(), "content", "blog", `${slug}.md`);
-  const filePath = fs.existsSync(localePath) ? localePath : defaultPath;
+  const hasLocaleFile = fs.existsSync(localePath);
+  const filePath = hasLocaleFile ? localePath : defaultPath;
   if (!fs.existsSync(filePath)) notFound();
+
+  // Falling back across locales serves body text in the wrong language under the
+  // right lang/hreflang/og:locale, which search engines and readers both punish.
+  // The fallback is kept so a missing translation never 404s, but it must be loud.
+  if (!hasLocaleFile && locale !== "en") {
+    console.warn(
+      `[blog] No ${locale} translation for "${slug}". Serving the English body at ` +
+      `/${locale}/blog/${slug}, which advertises lang="${locale}". ` +
+      `Translate content/blog/${locale}/${slug}.md, or remove the post from the ` +
+      `${locale} listing and sitemap.`
+    );
+  }
 
   const raw = fs.readFileSync(filePath, "utf-8");
   const { metadata, body } = parseFrontmatter(raw);

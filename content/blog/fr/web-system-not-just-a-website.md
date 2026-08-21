@@ -190,7 +190,7 @@ Si votre configuration a l'air solide mais demande encore des efforts pour garde
 
 C'est la façon dont ils fonctionnent ensemble.
 
-Réservez 30 minutes ici : calendly.com/deralisdigital/discovery
+C'est ce que l'audit de décision cartographie. [Voir ce que couvre l'audit →](/audit)
 
 On fera le point sur la façon dont les choses circulent aujourd'hui, où elles ralentissent, et où elles se dispersent.
 

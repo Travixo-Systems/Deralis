@@ -65,6 +65,6 @@ Ce n'est pas un produit simple. La stack le gère sans problème. C'est la recom
 
 ## Si vous évaluez votre stack
 
-Si vous démarrez un nouveau projet et que vous cherchez sur quoi construire, ou si vous avez hérité de quelque chose et voulez un deuxième avis sur la pertinence de la fondation, réservez 30 minutes ici : calendly.com/deralisdigital/discovery
+Si vous démarrez un nouveau projet et que vous cherchez sur quoi construire, ou si vous avez hérité de quelque chose et voulez un deuxième avis sur la pertinence de la fondation, commencez par l'audit : il établit ce qu'il faut construire avant de choisir avec quoi le construire. [Voir ce que couvre l'audit →](/audit)
 
 Je vous donnerai une réponse franche basée sur ce que vous construisez réellement, pas un argumentaire pour ce que je préfère utiliser.
