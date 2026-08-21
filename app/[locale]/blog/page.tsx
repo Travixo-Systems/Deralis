@@ -7,7 +7,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import BlogHeroCard from "@/components/blog/BlogHeroCard";
 import FeaturedPostCard from "@/components/blog/FeaturedPostCard";
 import PostListCard from "@/components/blog/PostListCard";
-import BlogAuditCtaCard from "@/components/blog/BlogAuditCtaCard";
+import BlogDiagnosticCtaCard from "@/components/blog/BlogDiagnosticCtaCard";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -45,7 +45,7 @@ export default async function BlogPage({ params }: Props) {
       <BlogHeroCard />
       <FeaturedPostCard />
       <PostListCard />
-      <BlogAuditCtaCard />
+      <BlogDiagnosticCtaCard />
     </>
   );
 }

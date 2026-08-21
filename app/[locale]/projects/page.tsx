@@ -58,7 +58,7 @@ function ProjectsHero() {
         <p style={sub}>{t("sub2")}</p>
       </div>
       <div style={{ display: "flex", gap: 18, alignItems: "center", flexWrap: "wrap" }}>
-        <Link href="/audit" style={ctaPrimary}>{tActions("discoverAudit")}</Link>
+        <Link href="/diagnostic" style={ctaPrimary}>{tActions("discoverDiagnostic")}</Link>
         <a href="#travixo" style={ctaSecondary}>{t("ctaSecondary")}</a>
       </div>
     </DsCard>
@@ -103,7 +103,7 @@ function TraviXOCaseStudy() {
 }
 
 function ProjectsClimax() {
-  const t = useTranslations("common.auditCta");
+  const t = useTranslations("common.diagnosticCta");
   return (
     <DsCardPeak>
       <div className="grid-climax">
@@ -114,7 +114,7 @@ function ProjectsClimax() {
           </h2>
           <p style={{ fontSize: 16, lineHeight: 1.6, color: "var(--text-on-peak-muted)", marginBottom: 14, maxWidth: "42ch" }}>{t("body1")}</p>
           <p style={{ fontSize: 16, lineHeight: 1.6, color: "var(--text-on-peak-muted)", marginBottom: 32, maxWidth: "42ch" }}>{t("body2")}</p>
-          <Link href="/audit" style={ctaPeak}>{t("ctaLabel")}</Link>
+          <Link href="/diagnostic" style={ctaPeak}>{t("ctaLabel")}</Link>
           <span style={{ display: "block", marginTop: 14, fontSize: 12, color: "var(--text-on-peak-dim)", fontStyle: "italic" }}>{t("ctaMeta")}</span>
         </div>
       </div>
@@ -209,7 +209,7 @@ function ProjectsFinalCTA() {
       </h2>
       <p style={{ fontSize: 16, color: "var(--text-secondary)", maxWidth: "52ch", margin: "0 auto 36px", lineHeight: 1.55 }}>{t("body")}</p>
       <div style={{ display: "flex", gap: 18, justifyContent: "center", flexWrap: "wrap" }}>
-        <Link href="/audit" style={ctaPrimary}>{tActions("discoverAudit")}</Link>
+        <Link href="/diagnostic" style={ctaPrimary}>{tActions("discoverDiagnostic")}</Link>
         <a href="mailto:contact@deralis.digital" style={ctaSecondary}>contact@deralis.digital</a>
       </div>
       <p style={{ marginTop: 24, fontSize: 13, color: "var(--text-muted)" }}>{t("note")}</p>

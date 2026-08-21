@@ -97,7 +97,7 @@ export function LocalBusinessJsonLd() {
       "Custom Systems",
       "Workflow Automation",
       "SaaS Development",
-      "Systems Audit",
+      "Operational Diagnostic",
     ],
   };
 
@@ -130,7 +130,7 @@ export function ServicesJsonLd() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Systems Audit",
+            name: "Operational Diagnostic",
             description:
               "Structured mapping of your current operation to define what to build and in what order.",
           },

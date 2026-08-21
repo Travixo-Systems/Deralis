@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import HomeHero from "@/components/home/HomeHero";
+import CostSection from "@/components/home/CostSection";
 import WhoSection from "@/components/home/WhoSection";
 import ExclusionPeak from "@/components/home/ExclusionPeak";
 import HomeCaseStudy from "@/components/home/HomeCaseStudy";
@@ -15,11 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const isEn = locale === "en";
   const fullTitle = isEn
-    ? "Deralis Digital · Systems that replace disconnected tools and manual coordination"
-    : "Deralis Digital · Des systèmes qui remplacent les outils déconnectés et la coordination manuelle";
+    ? "Deralis Digital · Clearer operations, faster growth"
+    : "Deralis Digital · Optimisez vos opérations, accélérez votre croissance";
   const description = isEn
-    ? "I design and build operational systems that replace disconnected tools and manual coordination in growing businesses."
-    : "Je conçois et construis des systèmes opérationnels qui remplacent les outils déconnectés et la coordination manuelle dans des entreprises en croissance.";
+    ? "I design solutions that keep work and information moving together from one person to the next, using the teams and tools you already have. Two day operational diagnostic, dossier within five business days."
+    : "Je conçois des solutions où le travail et l'information avancent ensemble d'une personne à l'autre, avec les équipes et les outils déjà en place. Diagnostic opérationnel en deux jours, dossier sous cinq jours ouvrés.";
   return {
     title: { absolute: fullTitle },
     description,
@@ -55,6 +56,7 @@ export default async function Home({ params }: Props) {
   return (
     <>
       <HomeHero />
+      <CostSection />
       <WhoSection />
       <ExclusionPeak />
       <HomeCaseStudy />

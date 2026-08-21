@@ -6,7 +6,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
-import { sendAuditConfirmationEmail } from "@/lib/audit-emails";
+import { sendDiagnosticConfirmationEmail } from "@/lib/diagnostic-emails";
 
 function verifyStripeSignature(
   payload: string,
@@ -79,8 +79,8 @@ export async function POST(request: NextRequest) {
     const language = country === "FR" ? "fr" : "en";
 
     if (email) {
-      sendAuditConfirmationEmail(email, name, language).catch((err) =>
-        console.error("Failed to send audit confirmation email:", err)
+      sendDiagnosticConfirmationEmail(email, name, language).catch((err) =>
+        console.error("Failed to send diagnostic confirmation email:", err)
       );
     } else {
       console.error(

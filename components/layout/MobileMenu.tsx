@@ -14,7 +14,7 @@ type MobileMenuProps = {
   open: boolean;
   onClose: () => void;
   links: ReadonlyArray<NavLink>;
-  auditCta?: { href: string; label: string };
+  diagnosticCta?: { href: string; label: string };
   ref?: Ref<HTMLDivElement>;
 };
 
@@ -22,7 +22,7 @@ export default function MobileMenu({
   open,
   onClose,
   links,
-  auditCta,
+  diagnosticCta,
   ref,
 }: MobileMenuProps) {
   if (!open) return null;
@@ -69,10 +69,10 @@ export default function MobileMenu({
           </li>
         ))}
       </ul>
-      {auditCta && (
+      {diagnosticCta && (
         <div style={{ padding: "12px 14px 4px" }}>
           <Link
-            href={auditCta.href}
+            href={diagnosticCta.href}
             onClick={onClose}
             style={{
               display: "flex",
@@ -91,7 +91,7 @@ export default function MobileMenu({
               transition: "background-color 200ms ease, color 200ms ease, border-color 450ms ease",
             }}
           >
-            {auditCta.label}
+            {diagnosticCta.label}
           </Link>
         </div>
       )}

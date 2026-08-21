@@ -16,7 +16,11 @@ cd "$REPO_ROOT"
 # The actual characters we're hunting (embedded literally so grep/rg can match)
 EM_DASH=$'\xe2\x80\x94'   # U+2014
 EN_DASH=$'\xe2\x80\x93'   # U+2013
-PATTERN="[${EM_DASH}${EN_DASH}]"
+# NOTE: do NOT build a bracket expression from these. Without a UTF-8 locale,
+# grep treats [EM_DASH EN_DASH] as a class of the individual BYTES
+# \xe2 \x80 \x94 \x93, so every character sharing a byte matches: arrows
+# (U+2192 = \xe2\x86\x92), the euro sign, emoji. Use fixed-string matching on
+# each whole character instead, which is locale-independent.
 
 # This script's own path (it must contain the dash characters to detect them)
 SELF_REL="scripts/check-em-dashes.sh"
@@ -89,7 +93,7 @@ for f in "${files[@]}"; do
     violations=$((violations + 1))
     file_hits=$((file_hits + 1))
     echo "$line"
-  done < <(grep -n "$PATTERN" "$f" 2>/dev/null | sed "s|^|$f:|")
+  done < <(grep -nF -e "$EM_DASH" -e "$EN_DASH" "$f" 2>/dev/null | sed "s|^|$f:|")
   if [[ $file_hits -gt 0 ]]; then
     violating_files=$((violating_files + 1))
   fi

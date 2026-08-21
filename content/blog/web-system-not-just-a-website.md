@@ -190,7 +190,7 @@ If your setup looks solid but still requires effort to keep things aligned, the 
 
 It is how they work together.
 
-Book 30 minutes here: calendly.com/deralisdigital/discovery
+That is what the operational diagnostic maps. [See what the diagnostic covers →](/diagnostic)
 
 We will map how things currently move, where they slow down, and where they split.
 

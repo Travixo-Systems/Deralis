@@ -80,10 +80,10 @@ If this article felt familiar, you already know you have a problem. You do not n
 
 What most people need is someone to sit down with them and ask the right questions. What does your current process actually look like? Where does work fall through the cracks? What would "fixed" feel like in practice?
 
-That is what a discovery call is for.
+That is what the operational diagnostic is for.
 
-If you want to map out what a custom tool could look like for your business, book 30 minutes here: calendly.com/deralisdigital/discovery
+If you want to map out what a custom tool could look like for your business, that is where it starts. [See what the diagnostic covers →](/diagnostic)
 
-No pitch, no proposal. Just a conversation about how you actually work.
+Fixed price. You keep the dossier, whatever you decide to do next.
 
 One question to leave you with: if you tracked every hour your team spent moving information from one place to another this week, what would that number be?

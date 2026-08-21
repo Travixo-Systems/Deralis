@@ -197,8 +197,8 @@ Sent from deralis.digital contact form
       ? "Message bien re\u00e7u. Je vous r\u00e9ponds bient\u00f4t"
       : "Got your message. I'll reply soon";
     const replyBody = isFr
-      ? `Merci pour votre message. Je lis chaque message personnellement et je vous r\u00e9ponds sous 2 jours ouvr\u00e9s.\n\nSi vous savez d\u00e9j\u00e0 que vous souhaitez avancer, l'audit est la voie la plus directe\u00a0:\n${siteUrl}/fr/audit\n\nUwa\nDeralis Digital`
-      : `Thanks for your message. I read every contact form submission personally and I'll reply within 2 working days.\n\nIf you already know you want to move forward, the audit is the faster path:\n${siteUrl}/audit\n\nUwa\nDeralis Digital`;
+      ? `Merci pour votre message. Je lis chaque message personnellement et je vous r\u00e9ponds sous 2 jours ouvr\u00e9s.\n\nSi vous savez d\u00e9j\u00e0 que vous souhaitez avancer, le diagnostic est la voie la plus directe\u00a0:\n${siteUrl}/fr/diagnostic\n\nUwa\nDeralis Digital`
+      : `Thanks for your message. I read every contact form submission personally and I'll reply within 2 working days.\n\nIf you already know you want to move forward, the diagnostic is the faster path:\n${siteUrl}/diagnostic\n\nUwa\nDeralis Digital`;
 
     resend.emails
       .send({

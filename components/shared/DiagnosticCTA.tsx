@@ -1,22 +1,25 @@
 import { Link } from "@/i18n/navigation";
+import { STRIPE_AUDIT_LINK } from "@/lib/checkout";
 import { useTranslations } from "next-intl";
 
-type AuditCTAProps = {
+type DiagnosticCTAProps = {
   headlineOverride?: string;
   bodyOverride?: string;
   noteOverride?: string;
   eyebrowOverride?: string;
-  /** When true, renders destination-page CTA (Stripe link, startAudit label) */
+  /** When true, renders destination-page CTA (Stripe link, startDiagnostic label) */
   destination?: boolean;
   /** When true, renders the subordinate discovery-call ("Book the call") link below the primary CTA */
   showDiscoveryCta?: boolean;
 };
 
-const stripeLink = process.env.NEXT_PUBLIC_STRIPE_AUDIT_LINK || "#";
-const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK || "#";
+// The discovery call is a secondary de-risk path, not the offer. It is optional:
+// when unset the link is simply not rendered, never rendered as href="#".
+const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
+const stripeLink = STRIPE_AUDIT_LINK;
 
-export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride, eyebrowOverride, destination = false, showDiscoveryCta = false }: AuditCTAProps) {
-  const t = useTranslations("common.auditCta");
+export default function DiagnosticCTA({ headlineOverride, bodyOverride, noteOverride, eyebrowOverride, destination = false, showDiscoveryCta = false }: DiagnosticCTAProps) {
+  const t = useTranslations("common.diagnosticCta");
   const tActions = useTranslations("common.actions");
   const tDiscovery = useTranslations("common.discoveryCall");
 
@@ -47,7 +50,7 @@ export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride,
               href={stripeLink}
               className="group inline-flex items-center gap-2.5 px-[30px] py-[18px] bg-ink text-bg-cta text-[15px] font-medium rounded-lg hover:bg-accent transition-colors no-underline"
             >
-              {tActions("startAudit")}
+              {tActions("startDiagnostic")}
               <span
                 aria-hidden="true"
                 className="transition-transform duration-[180ms] group-hover:translate-x-[3px]"
@@ -57,10 +60,10 @@ export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride,
             </a>
           ) : (
             <Link
-              href="/audit"
+              href="/diagnostic"
               className="group inline-flex items-center gap-2.5 px-[30px] py-[18px] bg-ink text-bg-cta text-[15px] font-medium rounded-lg hover:bg-accent transition-colors no-underline"
             >
-              {tActions("discoverAudit")}
+              {tActions("discoverDiagnostic")}
               <span
                 aria-hidden="true"
                 className="transition-transform duration-[180ms] group-hover:translate-x-[3px]"
@@ -69,7 +72,7 @@ export default function AuditCTA({ headlineOverride, bodyOverride, noteOverride,
               </span>
             </Link>
           )}
-          {showDiscoveryCta && (
+          {showDiscoveryCta && discoveryCallLink && (
             <a
               href={discoveryCallLink}
               target="_blank"

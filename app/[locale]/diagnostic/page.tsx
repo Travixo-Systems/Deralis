@@ -1,4 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
+import { STRIPE_AUDIT_LINK } from "@/lib/checkout";
 import { getTranslations } from "next-intl/server";
 import { useTranslations, useLocale } from "next-intl";
 import DsCard, { DsCardPeak, DsCardPaper, DsCardMedium, DsCardFinal } from "@/components/shared/DsCard";
@@ -11,12 +12,12 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const stripeLink = process.env.NEXT_PUBLIC_STRIPE_AUDIT_LINK || "#";
+const stripeLink = STRIPE_AUDIT_LINK;
 const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "audit.page" });
+  const t = await getTranslations({ locale, namespace: "diagnostic.page" });
   const title = t("metadata.title");
   const description = t("metadata.description");
   return {
@@ -26,36 +27,36 @@ export async function generateMetadata({ params }: Props) {
       title,
       description,
       type: "website" as const,
-      url: `https://www.deralis.digital/${locale}/audit`,
+      url: `https://www.deralis.digital/${locale}/diagnostic`,
       images: [{ url: "https://www.deralis.digital/og-image.png", width: 1200, height: 630, alt: "Deralis Digital" }],
     },
   };
 }
 
-export default async function AuditPage({ params }: Props) {
+export default async function DiagnosticPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   return (
     <>
-      <AuditHero />
+      <DiagnosticHero />
       <RecognitionCard />
       <DeliverableCard />
       <ExamplePeak />
       <NotForAndGuaranteeCard />
       <ProcessCard />
-      <AuditFinalCTA />
+      <DiagnosticFinalCTA />
     </>
   );
 }
 
 /* ========== Card 1: Hero (warm) ========== */
-function AuditHero() {
-  const t = useTranslations("audit.page.hero");
+function DiagnosticHero() {
+  const t = useTranslations("diagnostic.page.hero");
 
   return (
     <DsCard>
-      <div className="grid-audit-hero">
+      <div className="grid-diagnostic-hero">
         <div>
           <p style={eyebrow}>{t("eyebrow")}</p>
           <h1 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "var(--fs-h1)", fontWeight: 500, lineHeight: 1.02, letterSpacing: "-0.02em", marginBottom: 26, maxWidth: "12ch" }} className="hero-h1-responsive">
@@ -123,7 +124,7 @@ function PdfContent({ title, section, section2 }: { title: string; section: stri
 
 /* ========== Card 2: Recognition (warm) ========== */
 function RecognitionCard() {
-  const t = useTranslations("audit.page.recognition");
+  const t = useTranslations("diagnostic.page.recognition");
   const symptoms: string[] = t.raw("symptoms");
 
   return (
@@ -159,7 +160,7 @@ function RecognitionCard() {
 
 /* ========== Card 3: Deliverable (paper) ========== */
 function DeliverableCard() {
-  const t = useTranslations("audit.page.deliverable");
+  const t = useTranslations("diagnostic.page.deliverable");
   const items: string[] = t.raw("items");
   const guarantees: string[] = t.raw("guarantees");
 
@@ -196,9 +197,9 @@ function DeliverableCard() {
   );
 }
 
-/* ========== Card 4: Example (dark peak) — PAPER→DARK adjacency intentional ========== */
+/* ========== Card 4: Example (dark peak). PAPER→DARK adjacency intentional ========== */
 function ExamplePeak() {
-  const t = useTranslations("audit.page.example");
+  const t = useTranslations("diagnostic.page.example");
   const locale = useLocale();
   const downloadFilename = locale === "fr" ? "deralis-exemple-audit.pdf" : "deralis-audit-example.pdf";
 
@@ -262,8 +263,8 @@ function ExamplePeak() {
 
 /* ========== Card 5: Not-for + Guarantee (warm) ========== */
 function NotForAndGuaranteeCard() {
-  const tNot = useTranslations("audit.page.notFor");
-  const tG = useTranslations("audit.page.guarantee");
+  const tNot = useTranslations("diagnostic.page.notFor");
+  const tG = useTranslations("diagnostic.page.guarantee");
   const items: string[] = tNot.raw("items");
 
   return (
@@ -290,7 +291,7 @@ function NotForAndGuaranteeCard() {
 
 /* ========== Card 6: Process (warm, medium) ========== */
 function ProcessCard() {
-  const t = useTranslations("audit.page.process");
+  const t = useTranslations("diagnostic.page.process");
 
   return (
     <DsCardMedium>
@@ -309,8 +310,8 @@ function ProcessCard() {
 }
 
 /* ========== Card 7: Final CTA (warm, final) ========== */
-function AuditFinalCTA() {
-  const t = useTranslations("audit.page.finalCta");
+function DiagnosticFinalCTA() {
+  const t = useTranslations("diagnostic.page.finalCta");
 
   return (
     <DsCardFinal>
@@ -359,7 +360,7 @@ const ctaDiscoveryStyle: CSSProperties = {
   color: "var(--text-secondary)", textDecoration: "none", transition: "color 200ms ease",
 };
 
-/* Subordinate discovery-call link beside the primary paid-audit CTA. Renders only when the link env is set. */
+/* Subordinate discovery-call link beside the primary paid diagnostic CTA. Renders only when the link env is set. */
 function DiscoveryCallLink() {
   const tActions = useTranslations("common.actions");
   if (!discoveryCallLink) return null;

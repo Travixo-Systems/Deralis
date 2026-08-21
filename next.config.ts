@@ -4,6 +4,20 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    // The offer was renamed from "audit" to "diagnostic" in August 2026.
+    // "Audit" reads in French as contrôle fiscal: something done to you to find
+    // fault, which is the wrong posture for a paid, voluntary engagement.
+    // localePrefix is 'as-needed', so English lives at /diagnostic and French at
+    // /fr/diagnostic. These are permanent so any link already shared keeps working
+    // and search engines transfer the old URL's signals.
+    return [
+      { source: "/audit", destination: "/diagnostic", permanent: true },
+      { source: "/fr/audit", destination: "/fr/diagnostic", permanent: true },
+      { source: "/en/audit", destination: "/diagnostic", permanent: true },
+    ];
+  },
+
   async headers() {
     return [
       {

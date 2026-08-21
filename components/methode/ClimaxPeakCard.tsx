@@ -4,11 +4,11 @@ import RichText from "@/components/shared/RichText";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
 
-// Reuses common.auditCta keys (home.climax.* equivalent per the spec)
+// Reuses common.diagnosticCta keys (home.climax.* equivalent per the spec)
 const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
 
 export default function ClimaxPeakCard() {
-  const t = useTranslations("common.auditCta");
+  const t = useTranslations("common.diagnosticCta");
   const tActions = useTranslations("common.actions");
   const FACT_KEYS = ["duree", "livrable", "prix", "garantie", "langue"] as const;
 
@@ -20,7 +20,7 @@ export default function ClimaxPeakCard() {
           <h2 style={h2}><RichText html={t.raw("headline")} /></h2>
           <p style={body}>{t("body1")}</p>
           <p style={body}>{t("body2")}</p>
-          <Link href="/audit" style={ctaPeak}>{t("ctaLabel")}</Link>
+          <Link href="/diagnostic" style={ctaPeak}>{t("ctaLabel")}</Link>
           {discoveryCallLink && (
             <a
               href={discoveryCallLink}

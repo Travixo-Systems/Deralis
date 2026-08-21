@@ -82,7 +82,7 @@ export default function SiteNav() {
           <span style={wordmark}>Deralis Digital</span>
         </Link>
 
-        {/* Right cluster: nav + locale + audit pill */}
+        {/* Right cluster: nav + locale + diagnostic pill */}
         <div style={rightCluster} className="nav-cluster-desktop">
           <nav style={navLinks}>
             {navItems.map(({ href, key }) => {
@@ -124,9 +124,9 @@ export default function SiteNav() {
             </button>
           </div>
 
-          {/* Audit pill */}
-          <Link href="/audit" style={auditPill} className="audit-pill">
-            {tActions("discoverAudit")}
+          {/* Diagnostic pill */}
+          <Link href="/diagnostic" style={diagnosticPill} className="diagnostic-pill">
+            {tActions("discoverDiagnostic")}
           </Link>
         </div>
 
@@ -165,7 +165,7 @@ export default function SiteNav() {
         open={open}
         onClose={() => setOpen(false)}
         links={mobileLinks}
-        auditCta={{ href: "/audit", label: tActions("discoverAudit") }}
+        diagnosticCta={{ href: "/diagnostic", label: tActions("discoverDiagnostic") }}
       />
     </header>
   );
@@ -245,7 +245,7 @@ const localeBtn: CSSProperties = {
   transition: "color 200ms ease",
 };
 
-const auditPill: CSSProperties = {
+const diagnosticPill: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
   padding: "10px 20px",
