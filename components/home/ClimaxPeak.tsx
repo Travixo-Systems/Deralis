@@ -59,7 +59,7 @@ const peakMetaStyle: CSSProperties = {
   fontStyle: "italic",
 };
 
-// Secondary (subordinate) audit link shown beneath the primary discovery CTA on the home surface
+// Secondary (subordinate) diagnostic link shown beneath the primary discovery CTA on the home surface
 const ctaSecondaryPeakStyle: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 
-// TODO: Reply email template (Resend) should include soft redirect to audit page.
+// TODO: Reply email template (Resend) should include soft redirect to diagnostic page.
 // See PHASE_5_CONTACT_PAGE_NOTES.md section (d).
 
 type FormState = "idle" | "submitting" | "success" | "error";

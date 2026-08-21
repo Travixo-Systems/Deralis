@@ -125,7 +125,7 @@ function renderInline(text: string) {
     if (match[1] && match[2]) {
       const label = match[1];
       const href = match[2];
-      // Internal hrefs are written locale-agnostically ("/diagnostic", never "/fr/audit");
+      // Internal hrefs are written locale-agnostically ("/diagnostic", never "/fr/diagnostic");
       // the i18n Link adds the locale prefix. Anything else is treated as external.
       parts.push(
         href.startsWith("/") ? (

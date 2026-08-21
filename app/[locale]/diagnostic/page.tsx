@@ -27,36 +27,36 @@ export async function generateMetadata({ params }: Props) {
       title,
       description,
       type: "website" as const,
-      url: `https://www.deralis.digital/${locale}/audit`,
+      url: `https://www.deralis.digital/${locale}/diagnostic`,
       images: [{ url: "https://www.deralis.digital/og-image.png", width: 1200, height: 630, alt: "Deralis Digital" }],
     },
   };
 }
 
-export default async function AuditPage({ params }: Props) {
+export default async function DiagnosticPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   return (
     <>
-      <AuditHero />
+      <DiagnosticHero />
       <RecognitionCard />
       <DeliverableCard />
       <ExamplePeak />
       <NotForAndGuaranteeCard />
       <ProcessCard />
-      <AuditFinalCTA />
+      <DiagnosticFinalCTA />
     </>
   );
 }
 
 /* ========== Card 1: Hero (warm) ========== */
-function AuditHero() {
+function DiagnosticHero() {
   const t = useTranslations("diagnostic.page.hero");
 
   return (
     <DsCard>
-      <div className="grid-audit-hero">
+      <div className="grid-diagnostic-hero">
         <div>
           <p style={eyebrow}>{t("eyebrow")}</p>
           <h1 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "var(--fs-h1)", fontWeight: 500, lineHeight: 1.02, letterSpacing: "-0.02em", marginBottom: 26, maxWidth: "12ch" }} className="hero-h1-responsive">
@@ -310,7 +310,7 @@ function ProcessCard() {
 }
 
 /* ========== Card 7: Final CTA (warm, final) ========== */
-function AuditFinalCTA() {
+function DiagnosticFinalCTA() {
   const t = useTranslations("diagnostic.page.finalCta");
 
   return (
@@ -360,7 +360,7 @@ const ctaDiscoveryStyle: CSSProperties = {
   color: "var(--text-secondary)", textDecoration: "none", transition: "color 200ms ease",
 };
 
-/* Subordinate discovery-call link beside the primary paid-audit CTA. Renders only when the link env is set. */
+/* Subordinate discovery-call link beside the primary paid diagnostic CTA. Renders only when the link env is set. */
 function DiscoveryCallLink() {
   const tActions = useTranslations("common.actions");
   if (!discoveryCallLink) return null;

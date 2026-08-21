@@ -7,7 +7,7 @@ type DiagnosticCTAProps = {
   bodyOverride?: string;
   noteOverride?: string;
   eyebrowOverride?: string;
-  /** When true, renders destination-page CTA (Stripe link, startAudit label) */
+  /** When true, renders destination-page CTA (Stripe link, startDiagnostic label) */
   destination?: boolean;
   /** When true, renders the subordinate discovery-call ("Book the call") link below the primary CTA */
   showDiscoveryCta?: boolean;

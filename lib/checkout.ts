@@ -18,7 +18,7 @@
  * so a missing value cannot be detected at runtime. It is validated at build
  * time instead, below.
  *
- * Keep the linked price consistent with common.auditCta in messages/{fr,en}.json.
+ * Keep the linked price consistent with common.diagnosticCta in messages/{fr,en}.json.
  */
 const link = process.env.NEXT_PUBLIC_STRIPE_AUDIT_LINK;
 

@@ -379,7 +379,7 @@ main > :first-child {
   .grid-proof { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: stretch; }
   .grid-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; z-index: 2; }
   .grid-process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-  .grid-audit-hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+  .grid-diagnostic-hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
 }
 
 /* ========== RESPONSIVE (<960px) ========== */
@@ -413,7 +413,7 @@ main > :first-child {
     .grid-2col-wide,
     .grid-proof,
     .grid-process,
-    .grid-audit-hero {
+    .grid-diagnostic-hero {
       grid-template-columns: 1fr;
       gap: 32px;
     }
