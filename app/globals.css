@@ -650,6 +650,48 @@ main > :first-child {
   }
 }
 
+/* ========== CTA MICRO-INTERACTION ==========
+   ctaPrimaryStyle in HomeHero already declared "transform 150ms ease" in its
+   transition list and then never set a transform, so the declaration named a
+   property nothing changed. These rules give it something to interpolate: a
+   lift on hover and a press on activation, so the button acknowledges the
+   click rather than only changing colour. */
+
+.cta-press {
+  transition: background-color 450ms ease, color 450ms ease, transform 150ms ease,
+    box-shadow 150ms ease;
+  will-change: transform;
+}
+.cta-press:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(20, 17, 13, 0.12);
+}
+.cta-press:active {
+  transform: translateY(1px);
+  box-shadow: none;
+  transition-duration: 60ms;
+}
+:root[data-theme="dark"] .cta-press:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Text links get the press without the lift: a shadow under a bare word
+   reads as a rendering fault rather than a button. */
+.cta-press-subtle {
+  transition: border-color 150ms ease, transform 120ms ease, color 150ms ease;
+}
+.cta-press-subtle:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-press:hover,
+  .cta-press:active,
+  .cta-press-subtle:active {
+    transform: none;
+  }
+}
+
 /* ========== MOTION ========== */
 /* Reduced motion means less movement, not a different layout.
    Durations are collapsed so nothing animates, but transform itself is left

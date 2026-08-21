@@ -20,7 +20,7 @@ export default function CTAPrimary({
     <Link
       href={href}
       className={cn(
-        "group inline-flex items-center gap-2.5 px-7 py-[17px] bg-ink text-bg text-[15px] font-medium rounded-lg transition-colors hover:bg-accent no-underline",
+        "cta-press group inline-flex items-center gap-2.5 px-7 py-[17px] bg-ink text-bg text-[15px] font-medium rounded-lg transition-colors hover:bg-accent no-underline",
         className
       )}
       {...rest}

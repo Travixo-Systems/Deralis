@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useCountUp } from "./useCountUp";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import DsCard, { DsCardPaper } from "@/components/shared/DsCard";
@@ -205,6 +206,7 @@ export default function FrictionCalculator() {
   const allFilled = [people, cost, friction, hours].every((v) => v.trim() !== "");
   const overThreshold = num(friction) > FRICTION_HOURS_WARNING_THRESHOLD;
   const showResult = submitted && result !== null;
+  const animatedAmount = useCountUp(result?.annualCapacityCost ?? 0, showResult);
 
   const onFirstInput = () => {
     if (!started) {
@@ -283,7 +285,8 @@ export default function FrictionCalculator() {
           </p>
           <div data-clarity-mask="true">
             <p style={amountStyle}>
-              {fmtMoney(result.annualCapacityCost)}{" "}
+              <span aria-hidden="true">{fmtMoney(Math.round(animatedAmount))}</span>
+              <span className="sr-only">{fmtMoney(result.annualCapacityCost)}</span>{" "}
               <span style={{ fontSize: "0.36em", fontWeight: 400 }}>{t("result.unit")}</span>
             </p>
             <p style={captionStyle}>{t("result.caption")}</p>
