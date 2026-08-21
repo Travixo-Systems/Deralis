@@ -8,6 +8,7 @@ import BlogHeroCard from "@/components/blog/BlogHeroCard";
 import FeaturedPostCard from "@/components/blog/FeaturedPostCard";
 import PostListCard from "@/components/blog/PostListCard";
 import BlogDiagnosticCtaCard from "@/components/blog/BlogDiagnosticCtaCard";
+import AnimateIn from "@/components/shared/AnimateIn";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -43,9 +44,15 @@ export default async function BlogPage({ params }: Props) {
   return (
     <>
       <BlogHeroCard />
-      <FeaturedPostCard />
-      <PostListCard />
-      <BlogDiagnosticCtaCard />
+      <AnimateIn>
+        <FeaturedPostCard />
+      </AnimateIn>
+      <AnimateIn>
+        <PostListCard />
+      </AnimateIn>
+      <AnimateIn>
+        <BlogDiagnosticCtaCard />
+      </AnimateIn>
     </>
   );
 }

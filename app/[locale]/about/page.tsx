@@ -154,12 +154,12 @@ function BuildingCard() {
       <h2 style={h2Style}><RichText html={t.raw("title")} /></h2>
       <p style={{ ...introP, marginBottom: 48, maxWidth: "58ch" }}>{t("intro")}</p>
 
-      <div className="grid-2col-wide">
-        <div style={internalCard}>
+      <div className="grid-2col-wide" data-cascade>
+        <div className="lift-card" style={internalCard}>
           <h3 style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 22, fontWeight: 500, color: "var(--text-primary)", marginBottom: 14 }}>{t("card1.title")}</h3>
           <p style={{ fontSize: 15, lineHeight: 1.65, color: "var(--text-secondary)" }}>{t("card1.body")}</p>
         </div>
-        <div style={internalCard}>
+        <div className="lift-card" style={internalCard}>
           <h3 style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 22, fontWeight: 500, color: "var(--text-primary)", marginBottom: 14 }}>{t("card2.title")}</h3>
           <p style={{ fontSize: 15, lineHeight: 1.65, color: "var(--text-secondary)" }}>{t("card2.body")}</p>
         </div>

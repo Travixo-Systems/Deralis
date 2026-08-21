@@ -366,7 +366,7 @@ export default async function BlogPostPage({ params }: Props) {
             eyebrow={tPost("moreStrip.eyebrow")}
             title={tPost("moreStrip.title")}
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 mt-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 mt-2" data-cascade>
             {otherPosts.map((post, i) => (
               <div
                 key={post.slug}

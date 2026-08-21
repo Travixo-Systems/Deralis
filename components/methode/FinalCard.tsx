@@ -2,13 +2,14 @@ import { useTranslations } from "next-intl";
 import { DsCardFinal } from "@/components/shared/DsCard";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
+import WordReveal from "@/components/shared/WordReveal";
 
 export default function FinalCard() {
   const t = useTranslations("methode.finalCta");
 
   return (
     <DsCardFinal>
-      <h2 style={h2}>{t("h2")}</h2>
+      <h2 style={h2} aria-label={t("h2")}><WordReveal>{t("h2")}</WordReveal></h2>
       <p style={sub}>{t("sub")}</p>
       <Link href="/diagnostic" style={ctaPrimary}>{t("cta")}</Link>
     </DsCardFinal>

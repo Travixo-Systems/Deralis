@@ -61,11 +61,8 @@ const flowDotStyle: CSSProperties = {
   width: 17,
   height: 17,
   borderRadius: "50%",
-  background: "var(--card-main)",
-  border: "2px solid var(--accent)",
   position: "relative",
   zIndex: 3,
-  transition: "background-color 450ms ease, border-color 450ms ease",
 };
 
 const flowNumStyle: CSSProperties = {
@@ -112,8 +109,8 @@ export default function HowIWork() {
         <div style={flowLineStyle} className="flow-line-responsive" />
         <div className="grid-flow" data-cascade>
           {ITEMS.map((item) => (
-            <div key={item} className="lift-step" style={flowStepStyle}>
-              <div style={flowDotStyle} className="flow-dot-responsive" />
+            <div key={item} className="lift-step flow-step" style={flowStepStyle} tabIndex={0}>
+              <div style={flowDotStyle} className="flow-dot-responsive flow-dot" />
               <div style={flowNumStyle}>{t(`items.${item}.num`)}</div>
               <div style={flowTitleStyle}>{t(`items.${item}.title`)}</div>
               <div style={flowDescStyle}>{t(`items.${item}.description`)}</div>

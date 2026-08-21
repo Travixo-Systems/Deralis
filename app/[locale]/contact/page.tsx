@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import DsCard, { DsCardFinal } from "@/components/shared/DsCard";
 import ContactForm from "@/components/contact/ContactForm";
 import type { CSSProperties } from "react";
+import AnimateIn from "@/components/shared/AnimateIn";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -30,8 +31,12 @@ export default async function ContactPage({ params }: Props) {
   return (
     <>
       <ContactHero />
-      <FormCard />
-      <ContactFinal />
+      <AnimateIn>
+        <FormCard />
+      </AnimateIn>
+      <AnimateIn>
+        <ContactFinal />
+      </AnimateIn>
     </>
   );
 }

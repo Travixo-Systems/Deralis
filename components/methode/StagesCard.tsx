@@ -33,9 +33,9 @@ function Stage({ num, title, desc, metadata, cta, ctaHref, isLast }: {
   num: string; title: string; desc: string; metadata?: string; cta?: string; ctaHref?: string; isLast?: boolean;
 }) {
   return (
-    <li style={{ ...stageItem, position: "relative" }}>
+    <li className="flow-step stage-item" style={{ ...stageItem, position: "relative" }} tabIndex={0}>
       <div style={dotWrap}>
-        <span style={dot} />
+        <span className="flow-dot" style={dot} />
       </div>
       <div style={{ paddingLeft: 28, maxWidth: "62ch" }}>
         <span style={stageNum}>{num}</span>
@@ -74,8 +74,7 @@ const dotWrap: CSSProperties = {
   position: "relative", zIndex: 2, flexShrink: 0, paddingTop: 8,
 };
 const dot: CSSProperties = {
-  width: 17, height: 17, borderRadius: "50%", background: "var(--card-main)",
-  border: "2px solid var(--accent)", transition: "background-color 450ms ease, border-color 450ms ease",
+  width: 17, height: 17, borderRadius: "50%",
 };
 const stageNum: CSSProperties = {
   display: "block", fontSize: 12, fontWeight: 700, color: "var(--text-muted)",

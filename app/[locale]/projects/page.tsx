@@ -8,6 +8,7 @@ import ScreenshotDisclaimer from "@/components/shared/ScreenshotDisclaimer";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
 import AnimateIn from "@/components/shared/AnimateIn";
+import WordReveal from "@/components/shared/WordReveal";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -140,7 +141,7 @@ function GovPortalCaseStudy() {
       <div className="grid-hero">
         <div>
           <p style={eyebrow}>{t("label")}</p>
-          <h2 style={h2Style}>{t("title")}</h2>
+          <h2 style={h2Style} aria-label={t("title")}><WordReveal>{t("title")}</WordReveal></h2>
           <p style={{ fontSize: 14, fontWeight: 500, color: "var(--text-muted)", marginBottom: 24 }}>{t("context")}</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 24 }}>
             <p style={sub}>{t("prose1")}</p>
@@ -179,12 +180,12 @@ function ConceptsCard() {
   return (
     <DsCard>
       <p style={eyebrow}>{t("eyebrow")}</p>
-      <h2 style={h2Style}>{t("title")}</h2>
+      <h2 style={h2Style} aria-label={t("title")}><WordReveal>{t("title")}</WordReveal></h2>
       <p style={{ ...sub, marginBottom: 48, maxWidth: "58ch" }}>{t("intro")}</p>
 
-      <div className="grid-2col">
+      <div className="grid-2col" data-cascade>
         {items.map((item) => (
-          <div key={item.num} style={conceptCard}>
+          <div key={item.num} className="lift-card" style={conceptCard}>
             <span style={livePill} aria-label="Live">LIVE</span>
             <span style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 16, fontWeight: 600, color: "var(--accent)", display: "block", marginBottom: 12 }}>{item.num}</span>
             <h3 style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 20, fontWeight: 500, color: "var(--text-primary)", marginBottom: 10, letterSpacing: "-0.01em" }}>{item.title}</h3>

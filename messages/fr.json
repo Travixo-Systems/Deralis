@@ -889,7 +889,8 @@
           "line4": "Remboursement si je ne suis pas le bon interlocuteur"
         },
         "cta": "Prendre une décision · 1 280 € →",
-        "meta": "Un exemple du dossier ci-dessous. Téléchargeable plus bas."
+        "meta": "Un exemple du dossier ci-dessous. Téléchargeable plus bas.",
+        "stackAriaLabel": "Voir le dossier exemple complet"
       },
       "recognition": {
         "h2": "Si vous êtes ici, ce n’est probablement pas par hasard.",

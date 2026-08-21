@@ -9,6 +9,7 @@ import RichText from "@/components/shared/RichText";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
 import AnimateIn from "@/components/shared/AnimateIn";
+import WordReveal from "@/components/shared/WordReveal";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -98,18 +99,25 @@ function DiagnosticHero() {
           <span style={metaStyle}>{t("meta")}</span>
         </div>
 
-        {/* PDF Stack */}
-        <div style={{ position: "relative", height: 380 }} className="pdf-stack-responsive">
-          <div style={{ ...pdfPage, top: 36, left: 62, transform: "rotate(5deg)", opacity: 0.55, boxShadow: "0 14px 34px rgba(0,0,0,0.18)" }}>
+        {/* PDF Stack. A link rather than a decorative mock: it looks like the
+            deliverable, so pointing at it and clicking should take you to the
+            full example further down the page. */}
+        <a
+          href="#exemple"
+          aria-label={t("stackAriaLabel")}
+          className="pdf-stack pdf-stack-responsive"
+          style={{ position: "relative", height: 440, display: "block", textDecoration: "none" }}
+        >
+          <div className="pdf-sheet pdf-sheet-3" style={{ ...pdfPage, top: 36, left: 62, opacity: 0.55, boxShadow: "0 14px 34px rgba(0,0,0,0.18)" }}>
             <PdfContent title="Ordre d'exécution" section="04 · Priorisation" />
           </div>
-          <div style={{ ...pdfPage, top: 18, left: 40, transform: "rotate(2deg)", opacity: 0.82, boxShadow: "0 18px 40px rgba(0,0,0,0.22)" }}>
+          <div className="pdf-sheet pdf-sheet-2" style={{ ...pdfPage, top: 18, left: 40, opacity: 0.82, boxShadow: "0 18px 40px rgba(0,0,0,0.22)" }}>
             <PdfContent title="Ce qui casse" section="02 · Diagnostic" />
           </div>
-          <div style={{ ...pdfPage, top: 0, left: 18, boxShadow: "var(--page-shadow)" }}>
+          <div className="pdf-sheet pdf-sheet-1" style={{ ...pdfPage, top: 0, left: 18, boxShadow: "var(--page-shadow)" }}>
             <PdfContent title="Quoi construire, dans quel ordre, et ce qu'il ne faut pas construire." section="01 · Situation" section2="02 · Ce qui casse" />
           </div>
-        </div>
+        </a>
       </div>
     </DsCard>
   );
@@ -144,7 +152,7 @@ function RecognitionCard() {
 
   return (
     <DsCard>
-      <h2 style={sectionH2}>{t("h2")}</h2>
+      <h2 style={sectionH2} aria-label={t("h2")}><WordReveal>{t("h2")}</WordReveal></h2>
       <p style={introP}>{t("intro1")}</p>
       <p style={{ ...introP, marginBottom: 0 }}>{t("intro2")}</p>
 
@@ -153,9 +161,9 @@ function RecognitionCard() {
       </blockquote>
 
       <p style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--text-muted)", marginBottom: 28, fontWeight: 600 }}>{t("symptomsLabel")}</p>
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760 }} data-cascade>
         {symptoms.map((s, i) => (
-          <div key={i} style={{ display: "flex", gap: 22, padding: "26px 30px", background: "var(--card-paper)", border: "1px solid var(--border-soft)", borderLeft: "3px solid var(--accent)", borderRadius: "var(--radius-internal)", fontSize: 16, lineHeight: 1.55, transition: "background-color 450ms ease, border-color 450ms ease, transform 150ms ease" }}>
+          <div key={i} className="lift-card" style={{ display: "flex", gap: 22, padding: "26px 30px", background: "var(--card-paper)", border: "1px solid var(--border-soft)", borderLeft: "3px solid var(--accent)", borderRadius: "var(--radius-internal)", fontSize: 16, lineHeight: 1.55 }}>
             <span style={{ flexShrink: 0, fontFamily: "var(--font-fraunces), serif", fontSize: 16, color: "var(--accent)", fontWeight: 600, paddingTop: 2, minWidth: 24, letterSpacing: "0.04em" }}>{String(i + 1).padStart(2, "0")}</span>
             <span>{s}</span>
           </div>
@@ -219,7 +227,7 @@ function ExamplePeak() {
   const downloadFilename = locale === "fr" ? "deralis-exemple-audit.pdf" : "deralis-audit-example.pdf";
 
   return (
-    <DsCardPeak>
+    <DsCardPeak id="exemple">
       <div className="grid-peak-example">
         <div>
           <p style={{ fontSize: "var(--fs-eyebrow)", textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--text-on-peak-dim)", marginBottom: 22, fontWeight: 600 }}>{t("eyebrow")}</p>
@@ -387,7 +395,7 @@ function DiscoveryCallLink() {
 }
 
 const pdfPage: CSSProperties = {
-  position: "absolute", width: 240, height: 320, background: "var(--paper-mock-bg)",
+  position: "absolute", width: 286, height: 381, background: "var(--paper-mock-bg)",
   border: "1px solid var(--paper-mock-border-strong)", padding: "18px 22px",
   fontFamily: "var(--font-ibm-plex-sans), sans-serif", color: "var(--paper-mock-ink)", borderRadius: 2,
 };

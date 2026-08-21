@@ -889,7 +889,8 @@
           "line4": "Refund if I’m not the right fit"
         },
         "cta": "Make a decision · €1,280 →",
-        "meta": "A sample report below. Downloadable further down."
+        "meta": "A sample report below. Downloadable further down.",
+        "stackAriaLabel": "See the full example dossier"
       },
       "recognition": {
         "h2": "If you’re here, it’s probably not by accident.",
