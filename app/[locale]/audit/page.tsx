@@ -196,7 +196,7 @@ function DeliverableCard() {
   );
 }
 
-/* ========== Card 4: Example (dark peak) — PAPER→DARK adjacency intentional ========== */
+/* ========== Card 4: Example (dark peak). PAPER→DARK adjacency intentional ========== */
 function ExamplePeak() {
   const t = useTranslations("audit.page.example");
   const locale = useLocale();

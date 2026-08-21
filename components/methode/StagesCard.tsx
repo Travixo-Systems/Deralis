@@ -19,7 +19,7 @@ export default function StagesCard() {
         <Stage num={t("stage3.num")} title={t("stage3.title")} desc={t("stage3.desc")} isLast />
       </ol>
 
-      {/* Secondary link — left-aligned with content, ~24px gap from last stage */}
+      {/* Secondary link, left-aligned with content, ~24px gap from last stage */}
       <div style={{ marginTop: 24, paddingLeft: 45 }}>
         <Link href="/projects" style={projectsLink}>
           {tActions("viewOurWork")} →

@@ -37,7 +37,7 @@ export default function SiteFooter() {
         </div>
       </div>
 
-      {/* ZONE 2: bare canvas strip — copyright + legal links */}
+      {/* ZONE 2: bare canvas strip, copyright + legal links */}
       <footer style={zone2Wrap}>
         <span style={{ fontWeight: 600, color: "var(--text-primary)", transition: "color 450ms ease" }}>
           {t("copyrightIndependent")}

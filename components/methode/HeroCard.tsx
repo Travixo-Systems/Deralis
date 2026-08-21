@@ -21,7 +21,7 @@ export default function HeroCard() {
           <Link href="/audit" style={ctaPrimary}>{t("ctaPrimary")}</Link>
         </div>
 
-        {/* Right: stages pull-out — distinct from homepage AnchorBlock */}
+        {/* Right: stages pull-out, distinct from homepage AnchorBlock */}
         <aside style={stagesBlock}>
           <TabLabel variant="default" heroSize style={{ left: 32, top: -10 }}>
             {t("anchorTab")}
