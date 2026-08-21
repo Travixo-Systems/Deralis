@@ -23,15 +23,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const eyebrowStyle: CSSProperties = {
-  fontSize: "var(--fs-eyebrow)",
-  textTransform: "uppercase",
-  letterSpacing: "0.14em",
-  color: "var(--text-muted)",
-  fontWeight: 600,
-  marginBottom: 18,
-};
-
 const h1Style: CSSProperties = {
   fontFamily: "var(--font-fraunces), Georgia, serif",
   fontSize: "var(--fs-h1)",
@@ -49,11 +40,10 @@ const subStyle: CSSProperties = {
   marginBottom: 18,
 };
 
-const introStyle: CSSProperties = {
-  fontSize: 17,
-  lineHeight: 1.6,
-  color: "var(--text-secondary)",
-  maxWidth: "58ch",
+const metaStyle: CSSProperties = {
+  fontSize: 13,
+  color: "var(--text-muted)",
+  letterSpacing: "0.02em",
 };
 
 const methodTitleStyle: CSSProperties = {
@@ -70,6 +60,39 @@ const methodPStyle: CSSProperties = {
   color: "var(--text-secondary)",
   maxWidth: "70ch",
   marginBottom: 14,
+};
+
+const sourcesLabelStyle: CSSProperties = {
+  fontSize: 12,
+  textTransform: "uppercase",
+  letterSpacing: "0.14em",
+  color: "var(--text-muted)",
+  fontWeight: 600,
+  marginTop: 26,
+  marginBottom: 10,
+};
+
+const sourcesListStyle: CSSProperties = {
+  listStyle: "none",
+  padding: 0,
+  margin: "0 0 22px",
+  fontSize: 14,
+  lineHeight: 1.9,
+};
+
+const sourceLinkStyle: CSSProperties = {
+  color: "var(--text-secondary)",
+  textDecoration: "underline",
+  textUnderlineOffset: 3,
+};
+
+const legalStyle: CSSProperties = {
+  fontSize: 12,
+  lineHeight: 1.65,
+  color: "var(--text-muted)",
+  maxWidth: "72ch",
+  paddingTop: 18,
+  borderTop: "1px solid var(--border-soft)",
 };
 
 const formulaStyle: CSSProperties = {
@@ -89,10 +112,9 @@ function Hero() {
   const t = useTranslations("frictions.hero");
   return (
     <DsCard>
-      <p style={eyebrowStyle}>{t("eyebrow")}</p>
       <h1 style={h1Style} className="hero-h1-responsive">{t("h1")}</h1>
       <p style={subStyle}>{t("sub")}</p>
-      <p style={introStyle}>{t("intro")}</p>
+      <p style={metaStyle}>{t("meta")}</p>
     </DsCard>
   );
 }
@@ -102,10 +124,41 @@ function Method() {
   return (
     <DsCardPaper>
       <h2 style={methodTitleStyle}>{t("title")}</h2>
+
+      <p style={methodPStyle}>{t("intro")}</p>
       <p style={formulaStyle}>{t("formula")}</p>
+      <p style={methodPStyle}>{t("shareIntro")}</p>
+      <p style={formulaStyle}>{t("shareFormula")}</p>
+
       <p style={methodPStyle}>{t("p1")}</p>
       <p style={methodPStyle}>{t("p2")}</p>
       <p style={methodPStyle}>{t("p3")}</p>
+
+      <p style={sourcesLabelStyle}>{t("sourcesLabel")}</p>
+      <ul style={sourcesListStyle}>
+        <li>
+          <a
+            style={sourceLinkStyle}
+            href="https://www.hbs.edu/ris/Publication%20Files/04-045_d62528d4-7931-4ea1-a205-d9683c639d6e.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("sourceTdabc")}
+          </a>
+        </li>
+        <li>
+          <a
+            style={sourceLinkStyle}
+            href="https://recherche.iseor.com/intervention_socioeconomique.asp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("sourceIseor")}
+          </a>
+        </li>
+      </ul>
+
+      <p style={legalStyle}>{t("legal")}</p>
     </DsCardPaper>
   );
 }
