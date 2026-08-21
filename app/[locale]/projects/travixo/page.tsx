@@ -88,6 +88,11 @@ function TraviXoHeroWithScreenshot() {
         />
       </div>
       <ScreenshotDisclaimer />
+      {/* The dashboard states a euro figure on screen at roughly 10px. Nobody
+          reads that. Naming it here is the whole argument of the site: software
+          turns an operational state into a number someone can act on. Attributed
+          to the product, on demonstration data, per the disclaimer above. */}
+      <p style={leadCaptionStyle}>{tScreenshots("lead.caption")}</p>
     </DsCard>
   );
 }
@@ -226,6 +231,7 @@ function TraviXoClimax() {
 const eyebrow: CSSProperties = { fontSize: "var(--fs-eyebrow)", textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--text-muted)", marginBottom: 20, fontWeight: 600 };
 const h1Style: CSSProperties = { fontFamily: "var(--font-fraunces), serif", fontSize: "var(--fs-h1)", fontWeight: 500, lineHeight: 1.02, letterSpacing: "-0.02em", marginBottom: 28, maxWidth: "20ch" };
 const h2Style: CSSProperties = { fontFamily: "var(--font-fraunces), serif", fontSize: "var(--fs-h2)", fontWeight: 500, lineHeight: 1.08, letterSpacing: "-0.015em", marginBottom: 20, maxWidth: "22ch" };
+const leadCaptionStyle: CSSProperties = { fontSize: 15, lineHeight: 1.6, color: "var(--text-primary)", marginTop: 14, maxWidth: "58ch", transition: "color 450ms ease" };
 const standfirst: CSSProperties = { fontSize: 20, fontWeight: 500, lineHeight: 1.5, color: "var(--text-primary)", maxWidth: "54ch" };
 const bodyP: CSSProperties = { fontSize: 17, lineHeight: 1.65, color: "var(--text-secondary)" };
 const ctaPeak: CSSProperties = {
