@@ -57,8 +57,8 @@
     },
     "discoveryCall": {
       "eyebrow": "Pas encore sûr ?",
-      "headline": "Commencez par un point gratuit.",
-      "body": "Trente minutes pour voir si c’est pertinent. Si ça ne l’est pas, je vous le dis. Pas de livrable, pas de pression.",
+      "headline": "Si vous hésitez, parlons-en d’abord.",
+      "body": "Trente minutes pour voir si l’audit est pertinent pour vous. Si ce n’est pas le cas, je vous le dis. Pas de livrable, pas de pression.",
       "ctaLabel": "Réserver l’appel →"
     },
     "screenshotDisclaimer": "Produit Deralis, en ligne. Données de démonstration."
@@ -314,7 +314,7 @@
       },
       "finalCta": {
         "title": "Chaque projet ici a commencé par un problème que quelqu’un pouvait <em>nommer</em>.",
-        "body": "Le déclencheur est presque toujours le même. Une perte de contrôle, de visibilité, ou de fluidité que les outils existants n’allaient pas régler tout seuls. L’audit système est là où cette conversation commence.",
+        "body": "Le déclencheur est presque toujours le même. Le travail avance, mais il faut chercher l’information, vérifier l’avancement et relancer pour obtenir une réponse, et les outils en place n’allaient pas régler ça tout seuls. L’audit de décision est là où cette conversation commence.",
         "note": "Prix fixe. Bilingue français et anglais. Un seul interlocuteur, de l’analyse à la mise en production."
       }
     }
@@ -353,10 +353,10 @@
       "principles": {
         "eyebrow": "Comment je travaille",
         "title": "Trois <em>principes</em>, sans exception.",
-        "intro": "Chaque mission passe par la même logique. Chaque principe existe parce que s’en passer a coûté à quelqu’un, quelque part, de l’argent qu’il n’avait pas besoin de dépenser.",
+        "intro": "Chaque mission passe par la même logique. Chaque principe existe parce que s’en passer a déjà coûté du temps et de l’argent à quelqu’un.",
         "p1": {
           "title": "L’audit en premier",
-          "body": "L’audit système à 1 280 € est la seule porte d’entrée. Rien n’est construit avant. L’audit définit quoi construire et dans quel ordre, et 500 € sont déduits du projet s’il est lancé."
+          "body": "L’audit de décision à 1 280 € est la seule porte d’entrée. Rien n’est construit avant. L’audit définit quoi corriger en premier, quoi construire et dans quel ordre, et 500 € sont déduits du projet s’il est lancé."
         },
         "p2": {
           "title": "Définir ce qui doit être livré avant de commencer",
@@ -410,7 +410,7 @@
     "page": {
       "metadata": {
         "title": "Contact",
-        "description": "Parlez-moi avant de réserver un audit système. Structure d’ingénierie de systèmes indépendante basée en Île-de-France, travail à travers la France et à distance."
+        "description": "Parlez-moi avant de réserver un audit de décision. Structure d’ingénierie indépendante basée en Île-de-France, travail à travers la France et à distance."
       },
       "hero": {
         "eyebrow": "Contact",
@@ -759,7 +759,7 @@
       },
       "eyebrow": "Réalisations / TraviXO Systems",
       "title": "Un système de conformité pour le secteur de la location de <em>matériel</em>.",
-      "standfirst": "Un SaaS multi-tenant en production qui gère les inspections VGP réglementaires pour les entreprises françaises de location de matériel. Construit en solo, ancré dans des contraintes industrielles réelles.",
+      "standfirst": "Un SaaS multi-tenant en ligne qui gère les inspections VGP réglementaires pour les entreprises françaises de location de matériel. Construit en solo, ancré dans des contraintes industrielles réelles.",
       "meta": {
         "category": "SaaS vertical",
         "role": "Fondateur solo, chaque ligne",
@@ -857,7 +857,7 @@
     "signatureBlock": {
       "eyebrow": "Écrit par",
       "name": "Uwa Ugboaja",
-      "bio": "Je construis les systèmes opérationnels sur lesquels les petites entreprises tournent, en travaillant en solo en français et en anglais depuis l’Île-de-France.",
+      "bio": "Je construis les systèmes opérationnels des entreprises établies, en solo, en français et en anglais, depuis l’Île-de-France.",
       "linkLabel": "En savoir plus sur ma façon de travailler →"
     },
     "moreStrip": {

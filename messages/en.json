@@ -57,8 +57,8 @@
     },
     "discoveryCall": {
       "eyebrow": "Not sure yet?",
-      "headline": "Start with a free fit-check.",
-      "body": "Thirty minutes to see if this is the right fit. If it isn’t, I’ll tell you. No deliverable, no pressure.",
+      "headline": "If you are unsure, let us talk first.",
+      "body": "Thirty minutes to see whether the audit is right for you. If it is not, I will say so. No deliverable, no pressure.",
       "ctaLabel": "Book the call →"
     },
     "screenshotDisclaimer": "Deralis product, running online. Demonstration data."
@@ -314,7 +314,7 @@
       },
       "finalCta": {
         "title": "Every project here started as a problem someone could <em>name</em>.",
-        "body": "The trigger is usually the same. A loss of control, visibility, or flow that the existing tools were never going to fix on their own. The systems audit is where that conversation starts.",
+        "body": "The trigger is usually the same. Work moves, but people have to search for information, check progress and chase for answers, and the existing tools were never going to fix that on their own. The decision audit is where that conversation starts.",
         "note": "Fixed price. Bilingual French and English. One point of contact, from analysis to production."
       }
     }
@@ -353,10 +353,10 @@
       "principles": {
         "eyebrow": "How I work",
         "title": "Three <em>principles</em>, no exceptions.",
-        "intro": "Every engagement runs through the same logic. Each principle exists because skipping it has cost someone, somewhere, money they did not need to spend.",
+        "intro": "Every engagement follows the same logic. Each principle exists because skipping it has already cost someone time and money.",
         "p1": {
           "title": "Audit first",
-          "body": "The €1,280 systems audit is the only way in. Nothing is built before that. The audit defines what to build and in what order, and €500 is deducted from the project if it proceeds."
+          "body": "The €1,280 decision audit is the only way in. Nothing is built before it. The audit defines what to fix first, what to build and in what order, and €500 comes off the project if it goes ahead."
         },
         "p2": {
           "title": "Define done before the work starts",
@@ -410,7 +410,7 @@
     "page": {
       "metadata": {
         "title": "Contact",
-        "description": "Talk to me before booking a Systems Audit. Independent systems engineering practice based in Île-de-France, working across France and remote."
+        "description": "Talk to me before booking a decision audit. Independent engineering practice based in Île-de-France, working across France and remotely."
       },
       "hero": {
         "eyebrow": "Contact",
@@ -857,7 +857,7 @@
     "signatureBlock": {
       "eyebrow": "Written by",
       "name": "Uwa Ugboaja",
-      "bio": "I build the operational systems small businesses run on, working independently in French and English from Île-de-France.",
+      "bio": "I build the operational systems established businesses run on, solo, in French and English, from Île-de-France.",
       "linkLabel": "More about how I work →"
     },
     "moreStrip": {
