@@ -755,6 +755,211 @@ main > :first-child {
   }
 }
 
+/* ========== PERFORMATIVE MOTION ==========
+   Everything below is opacity, transform, box-shadow or a masked gradient, so
+   none of it can move layout or cost CLS. Each effect degrades to the plain
+   page rather than to a broken one. */
+
+/* --- Card cascade -------------------------------------------------------
+   Direct children of a [data-cascade] container arrive in sequence. The delay
+   is pure CSS, so the cards stay server components: nothing here ships JS. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    [data-cascade] > * {
+      /* Safety here comes from the @supports gate, not the fill mode: an
+         engine without view() never sees this rule and renders the card
+         normally. Fill mode was measured and makes no difference to that. */
+      animation: card-arrive 620ms cubic-bezier(0.16, 1.02, 0.3, 1) both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 28%;
+    }
+    /* Stagger the range rather than the delay. On a scroll timeline, delay is
+       measured in scroll distance, so animation-delay would behave as a
+       distance offset and desynchronise from the cascade. */
+    [data-cascade] > *:nth-child(2) { animation-range: entry 5% cover 34%; }
+    [data-cascade] > *:nth-child(3) { animation-range: entry 5% cover 40%; }
+    [data-cascade] > *:nth-child(4) { animation-range: entry 5% cover 46%; }
+    [data-cascade] > *:nth-child(5) { animation-range: entry 5% cover 52%; }
+    [data-cascade] > *:nth-child(6) { animation-range: entry 5% cover 58%; }
+  }
+
+  @keyframes card-arrive {
+    from {
+      opacity: 0;
+      transform: translateY(42px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* --- Peak card sheen ----------------------------------------------------
+   A band of light travels across the dark cards as they cross the viewport.
+   Uses a masked pseudo element so it never touches the card's own paint, and
+   pointer-events stay off so it cannot intercept a click. */
+.ds-card-peak {
+  position: relative;
+  isolation: isolate;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .ds-card-peak::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      border-radius: inherit;
+      clip-path: inset(0 round var(--radius-card));
+      background: linear-gradient(
+        105deg,
+        transparent 38%,
+        rgba(247, 244, 237, 0.13) 48%,
+        rgba(247, 244, 237, 0.20) 50%,
+        rgba(247, 244, 237, 0.13) 52%,
+        transparent 62%
+      );
+      transform: translateX(-120%);
+      animation: sheen-sweep linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 70%;
+    }
+  }
+
+  @keyframes sheen-sweep {
+    to {
+      transform: translateX(120%);
+    }
+  }
+}
+
+/* --- Headline word reveal -----------------------------------------------
+   Words rise out of their own line box behind an overflow mask, so the text
+   appears to be lifted into place rather than faded in. Applied to section
+   headings only, never the hero h1, which is the LCP element. */
+.word-reveal {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.word-reveal > span {
+  display: inline-block;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .word-reveal > span {
+      animation: word-lift 700ms cubic-bezier(0.16, 1.02, 0.3, 1) both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+    .word-reveal:nth-of-type(2) > span { animation-range: entry 0% cover 34%; }
+    .word-reveal:nth-of-type(3) > span { animation-range: entry 0% cover 38%; }
+    .word-reveal:nth-of-type(4) > span { animation-range: entry 0% cover 42%; }
+    .word-reveal:nth-of-type(5) > span { animation-range: entry 0% cover 46%; }
+    .word-reveal:nth-of-type(6) > span { animation-range: entry 0% cover 50%; }
+    .word-reveal:nth-of-type(7) > span { animation-range: entry 0% cover 54%; }
+    .word-reveal:nth-of-type(8) > span { animation-range: entry 0% cover 58%; }
+  }
+
+  @keyframes word-lift {
+    from {
+      transform: translateY(105%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* --- Amplified hover ----------------------------------------------------
+   Replaces the 2px nudge with a lift that reads across the room. */
+.lift-card:hover {
+  transform: translateY(-6px) scale(1.012);
+  box-shadow: 0 22px 48px rgba(20, 17, 13, 0.13);
+}
+:root[data-theme="dark"] .lift-card:hover {
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.45);
+}
+.lift-card {
+  transition: transform 320ms cubic-bezier(0.16, 1.02, 0.3, 1),
+    box-shadow 320ms ease, border-color 320ms ease;
+}
+
+.lift-step {
+  transition: transform 320ms cubic-bezier(0.16, 1.02, 0.3, 1),
+    border-color 320ms ease;
+}
+.lift-step:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+/* --- CTA -----------------------------------------------------------------
+   A confident lift with a coloured glow, and a press that actually snaps. */
+.cta-press:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(20, 17, 13, 0.22);
+}
+:root[data-theme="dark"] .cta-press:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+}
+.cta-press:active {
+  transform: translateY(1px) scale(0.985);
+  transition-duration: 70ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lift-card:hover,
+  .lift-step:hover,
+  .cta-press:hover,
+  .cta-press:active {
+    transform: none;
+  }
+}
+
+/* --- Page transitions ---------------------------------------------------
+   Same document View Transitions. Baseline as of 2026: Chrome and Edge 111+,
+   Safari 18+, Firefox 144+. Browsers without it navigate normally, which is
+   the current behaviour, so there is nothing to fall back from.
+   Next.js drives this through its own router; the CSS below only describes
+   what the transition looks like. */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: vt-out 220ms cubic-bezier(0.4, 0, 1, 1) both;
+  }
+  ::view-transition-new(root) {
+    animation: vt-in 320ms cubic-bezier(0.16, 1.02, 0.3, 1) both;
+  }
+
+  @keyframes vt-out {
+    to {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes vt-in {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  }
+}
+
+/* Reduced motion still gets the crossfade, without the travel. */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 1ms;
+  }
+}
+
 /* ========== MOTION ========== */
 /* Reduced motion means less movement, not a different layout.
    Durations are collapsed so nothing animates, but transform itself is left

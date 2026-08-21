@@ -115,7 +115,7 @@ export default function CostSection() {
 
       <PullQuote html={t.raw("pullquote")} />
 
-      <div className="grid-3col">
+      <div className="grid-3col" data-cascade>
         {CARDS.map((c) => (
           <div key={c} className="lift-card" style={costCardStyle}>
             <h3 style={costCardH3Style}>{t(`${c}.title`)}</h3>

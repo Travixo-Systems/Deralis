@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import DsCard from "@/components/shared/DsCard";
 import type { CSSProperties } from "react";
+import WordReveal from "@/components/shared/WordReveal";
 
 const eyebrowStyle: CSSProperties = {
   fontSize: "var(--fs-eyebrow)",
@@ -102,12 +103,14 @@ export default function HowIWork() {
   return (
     <DsCard>
       <p style={eyebrowStyle}>{t("eyebrow")}</p>
-      <h2 style={h2Style}>{t("title")}</h2>
+      <h2 style={h2Style} aria-label={t("title")}>
+        <WordReveal>{t("title")}</WordReveal>
+      </h2>
       <p style={introStyle}>{t("intro")}</p>
 
       <div style={flowProcessStyle}>
         <div style={flowLineStyle} className="flow-line-responsive" />
-        <div className="grid-flow">
+        <div className="grid-flow" data-cascade>
           {ITEMS.map((item) => (
             <div key={item} className="lift-step" style={flowStepStyle}>
               <div style={flowDotStyle} className="flow-dot-responsive" />

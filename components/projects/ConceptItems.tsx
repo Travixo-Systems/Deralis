@@ -12,7 +12,7 @@ type ConceptItemsProps = {
 
 export default function ConceptItems({ items }: ConceptItemsProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-2">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-2" data-cascade>
       {items.map((item) => (
         <div
           key={item.num}
