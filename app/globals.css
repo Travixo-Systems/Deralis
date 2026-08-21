@@ -193,6 +193,25 @@ body {
   }
 }
 
+/* Homepage cost-section invitation to the friction estimator. */
+.cost-cta-panel:hover {
+  background: var(--card-paper) !important;
+  transform: translateY(-1px);
+}
+
+.cost-cta-eyebrow,
+.cost-cta-title {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .cost-cta-panel {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+}
+
 /* Cancels the body inset so an element spans the full viewport width.
    Negative margins rather than 100vw: 100vw includes the scrollbar and would
    cause horizontal overflow. */

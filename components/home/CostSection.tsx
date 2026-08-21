@@ -50,15 +50,56 @@ const costCardPStyle: CSSProperties = {
   margin: 0,
 };
 
-const calculatorLinkStyle: CSSProperties = {
-  display: "inline-block",
-  marginTop: 28,
-  fontSize: 15,
-  fontWeight: 500,
-  color: "var(--text-primary)",
+/* Reads as an offer rather than a footnote: the whole panel is the click target,
+   it leads with the cost of trying (free, two minutes), and it carries a real
+   button. Outlined rather than filled so it stays subordinate to the diagnostic
+   CTA further down the page. */
+const ctaPanelStyle: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: 28,
+  marginTop: 34,
+  padding: "26px 30px",
+  background: "var(--canvas)",
+  border: "1px solid var(--accent)",
+  borderRadius: "var(--radius-internal)",
   textDecoration: "none",
-  borderBottom: "1px solid var(--border-strong)",
-  paddingBottom: 3,
+  color: "inherit",
+  transition: "background-color 200ms ease, transform 150ms ease",
+};
+
+const ctaEyebrowStyle: CSSProperties = {
+  fontSize: 12,
+  textTransform: "uppercase",
+  letterSpacing: "0.12em",
+  fontWeight: 600,
+  color: "var(--accent)",
+  marginBottom: 8,
+};
+
+const ctaTitleStyle: CSSProperties = {
+  fontFamily: "var(--font-fraunces), Georgia, serif",
+  fontSize: 21,
+  fontWeight: 500,
+  lineHeight: 1.25,
+  letterSpacing: "-0.01em",
+  color: "var(--text-primary)",
+  maxWidth: "34ch",
+};
+
+const ctaButtonStyle: CSSProperties = {
+  flexShrink: 0,
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 10,
+  padding: "15px 26px",
+  background: "var(--text-primary)",
+  color: "var(--canvas)",
+  fontSize: 14,
+  fontWeight: 500,
+  borderRadius: "var(--radius-button)",
+  whiteSpace: "nowrap",
 };
 
 const CARDS = ["card1", "card2", "card3"] as const;
@@ -84,10 +125,22 @@ export default function CostSection() {
       </div>
 
       {/* Bridges the vocabulary: this section names coordination, the calculator
-          names friction. The link states the relationship rather than leaving a
+          names friction. The panel states the relationship rather than leaving a
           reader to cross the gap unaided. */}
-      <Link href="/frictions-operationnelles" style={calculatorLinkStyle}>
-        {t("calculatorLink")}
+      <Link
+        href="/frictions-operationnelles"
+        style={ctaPanelStyle}
+        className="cost-cta-panel"
+      >
+        <span>
+          <span style={ctaEyebrowStyle} className="cost-cta-eyebrow">
+            {t("calculatorCta.eyebrow")}
+          </span>
+          <span style={ctaTitleStyle} className="cost-cta-title">
+            {t("calculatorCta.title")}
+          </span>
+        </span>
+        <span style={ctaButtonStyle}>{t("calculatorCta.button")}</span>
       </Link>
     </DsCard>
   );

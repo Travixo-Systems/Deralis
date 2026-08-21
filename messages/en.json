@@ -107,7 +107,11 @@
           "title": "Growth that overloads the team",
           "description": "When activity rises, so do the messages, the checks and the chasing. Without better organisation, part of the extra capacity is absorbed by coordination."
         },
-        "calculatorLink": "Put a figure on what this friction absorbs in your business →"
+        "calculatorCta": {
+          "eyebrow": "Free estimate · 2 minutes · No sign-up",
+          "title": "Put a figure on what this friction absorbs in your business.",
+          "button": "Start the estimate →"
+        }
       },
       "flow": {
         "label": "How I work",

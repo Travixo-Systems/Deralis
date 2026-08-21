@@ -107,7 +107,11 @@
           "title": "La croissance qui surcharge l’équipe",
           "description": "Quand l’activité augmente, les messages, contrôles et relances augmentent aussi. Sans meilleure organisation, une partie de la capacité supplémentaire est absorbée par la coordination."
         },
-        "calculatorLink": "Chiffrez ce que ces frictions mobilisent chez vous →"
+        "calculatorCta": {
+          "eyebrow": "Estimation gratuite · 2 minutes · Sans inscription",
+          "title": "Chiffrez ce que ces frictions mobilisent chez vous.",
+          "button": "Faire l’estimation →"
+        }
       },
       "flow": {
         "label": "Comment je travaille",
