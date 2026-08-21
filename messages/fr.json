@@ -61,7 +61,7 @@
       "body": "Trente minutes pour voir si c’est pertinent. Si ça ne l’est pas, je vous le dis. Pas de livrable, pas de pression.",
       "ctaLabel": "Réserver l’appel →"
     },
-    "screenshotDisclaimer": "Produit Deralis en production. Données de démonstration."
+    "screenshotDisclaimer": "Produit Deralis, en ligne. Données de démonstration."
   },
   "home": {
     "page": {
@@ -75,12 +75,12 @@
         "anchor": {
           "tab": "Ce que j’ai construit",
           "travixoName": "TraviXO",
-          "travixoDesc": "SaaS multi-tenant de conformité VGP pour la location de matériel. En production.",
+          "travixoDesc": "SaaS multi-tenant de conformité VGP pour la location de matériel. Produit Deralis, en ligne.",
           "consulaireName": "Portail consulaire",
-          "consulaireDesc": "Système opérationnel pitché à un consulat parisien. Format white-label.",
+          "consulaireDesc": "Prototype de prise en charge des demandes, proposé à un consulat parisien. En ligne, non adopté.",
           "arcadiaName": "Arcadia Zoo V2",
-          "arcadiaDesc": "Refonte complète déployée. Next.js 15, Supabase, Vercel.",
-          "signature": "Indépendant. Bilingue. Une seule personne, chaque ligne de code.",
+          "arcadiaDesc": "Refonte complète, livrée et en ligne.",
+          "signature": "Indépendant. Bilingue. Un seul interlocuteur, de l’analyse à la mise en production.",
           "cardAriaLabel": "Voir toutes les réalisations"
         },
         "trajectory": {
@@ -178,10 +178,10 @@
       },
       "proof": {
         "eyebrow": "Ce que j’ai construit",
-        "h2": "Deux projets en production.",
-        "subtitle": "Un SaaS B2B multi-tenant en live. Une architecture opérationnelle pitchée, en format réutilisable. Construits en solo.",
+        "h2": "Tout ce que je montre fonctionne en ligne.",
+        "subtitle": "Un produit Deralis. Un prototype proposé à un consulat parisien. Plusieurs démonstrations accessibles maintenant. Le tout construit en solo.",
         "travixo": {
-          "tab": "En production",
+          "tab": "Produit Deralis",
           "url": "app.travixosystems.com / dashboard",
           "facts": {
             "stack": {
@@ -200,20 +200,20 @@
           "cta": "Détails techniques →"
         },
         "consulaire": {
-          "tab": "White-label",
-          "url": "portail-consulaire.vercel.app / admin",
+          "tab": "Prototype proposé",
+          "url": "government-portal-ashy.vercel.app / admin",
           "facts": {
             "stack": {
               "label": "Stack",
               "value": "Next.js · Supabase"
             },
             "format": {
-              "label": "Format",
-              "value": "White-label"
+              "label": "Type",
+              "value": "Prototype"
             },
             "origine": {
-              "label": "Origine",
-              "value": "Consulat parisien"
+              "label": "Statut",
+              "value": "Non adopté"
             }
           }
         }
@@ -235,12 +235,12 @@
     "page": {
       "metadata": {
         "title": "Réalisations",
-        "description": "Un système en production, une proposition spec, et une série de démos qui fonctionnent. Le travail tel qu’il se présente aujourd’hui, sans métriques inventées ni résultats clients fictifs."
+        "description": "Un produit Deralis, un prototype proposé à un consulat parisien, et plusieurs démonstrations accessibles maintenant. Le travail tel qu’il se présente aujourd’hui, sans métriques inventées ni résultats clients fictifs."
       },
       "hero": {
         "eyebrow": "Réalisations",
         "title": "Des systèmes concrets, conçus pour le <em>fonctionnement</em> réel des opérations.",
-        "sub1": "Un système en production, une proposition spec présentée à un acheteur réel, et une petite série de démos qui fonctionnent.",
+        "sub1": "Un produit Deralis. Un prototype proposé à un consulat parisien. Et plusieurs démonstrations accessibles maintenant.",
         "sub2": "Chacune est partie de la même observation. La plupart des entreprises ont déjà des outils. Ce qui leur manque, c’est un système.",
         "ctaSecondary": "Voir l’étude de cas"
       },
@@ -254,9 +254,9 @@
         "linkLabel": "Voir le système"
       },
       "govPortal": {
-        "label": "Proposition spec",
+        "label": "Prototype proposé",
         "title": "Portail consulaire",
-        "context": "Secteur public · MVP de prise en charge de passeports · Entre les mains de l’acheteur",
+        "context": "Secteur public · MVP de prise en charge de passeports · Non adopté",
         "prose1": "Un MVP de prise en charge des demandes de passeport que j’ai construit et proposé à un bureau consulaire parisien après avoir vécu leur processus moi-même. Leur flux existant exigeait un déplacement en personne pour des fichiers que j’avais déjà téléversés en ligne. L’écart entre ce que le système pouvait faire et ce que l’équipe était obligée de faire se voyait depuis la salle d’attente.",
         "prose2": "J’ai construit le flux numérique qui aurait comblé cet écart, et je l’ai proposé directement. La proposition est actuellement entre leurs mains.",
         "screenshot": {
@@ -303,7 +303,7 @@
       "finalCta": {
         "title": "Chaque projet ici a commencé par un problème que quelqu’un pouvait <em>nommer</em>.",
         "body": "Le déclencheur est presque toujours le même. Une perte de contrôle, de visibilité, ou de fluidité que les outils existants n’allaient pas régler tout seuls. L’audit système est là où cette conversation commence.",
-        "note": "Prix fixe. Bilingue français et anglais. Une seule personne, chaque ligne de code."
+        "note": "Prix fixe. Bilingue français et anglais. Un seul interlocuteur, de l’analyse à la mise en production."
       }
     }
   },
@@ -759,7 +759,7 @@
         "p1": "TraviXO Systems est un SaaS multi-tenant de conformité pour le secteur français de la location de matériel. Il suit les inspections réglementaires périodiques, le VGP, que toute entreprise de location en France est légalement tenue d’effectuer sur le matériel qu’elle met devant les clients.",
         "p2": "Les inspections oubliées sont un problème de responsabilité et un problème réglementaire, et la façon dont la plupart des entreprises de location les suivent aujourd’hui passe par un mélange de dossiers papier, de tableurs individuels, et de la mémoire de la personne qui est là depuis le plus longtemps.",
         "p3": "La compréhension qui sous-tend tout ça vient du temps passé à l’intérieur du secteur de la location de matériel, près de la façon dont ce travail se fait réellement. Le produit est façonné autour de ces flux plutôt qu’autour d’un template de conformité générique.",
-        "p4": "<strong>Construit en solo. En production. Tournant sur de vrais flux d’inspection en production.</strong>"
+        "p4": "<strong>Construit en solo. Déployé dans un environnement de production comme produit Deralis, sur le processus VGP réglementaire réel.</strong>"
       },
       "whatIBuilt": {
         "title": "Les pièces qui font fonctionner le système.",

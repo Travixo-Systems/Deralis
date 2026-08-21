@@ -61,7 +61,7 @@
       "body": "Thirty minutes to see if this is the right fit. If it isn’t, I’ll tell you. No deliverable, no pressure.",
       "ctaLabel": "Book the call →"
     },
-    "screenshotDisclaimer": "Deralis product in production. Demonstration data."
+    "screenshotDisclaimer": "Deralis product, running online. Demonstration data."
   },
   "home": {
     "page": {
@@ -70,12 +70,12 @@
         "anchor": {
           "tab": "What I’ve built",
           "travixoName": "TraviXO",
-          "travixoDesc": "Multi-tenant SaaS for VGP equipment compliance in the rental industry. In production.",
+          "travixoDesc": "Multi-tenant SaaS for VGP equipment compliance in the rental industry. A Deralis product, running online.",
           "consulaireName": "Consular portal",
-          "consulaireDesc": "Operational system pitched to a Paris consulate. White-label format.",
+          "consulaireDesc": "Request intake prototype, proposed to a Paris consulate. Online, not adopted.",
           "arcadiaName": "Arcadia Zoo V2",
-          "arcadiaDesc": "Full rebuild deployed. Next.js 15, Supabase, Vercel.",
-          "signature": "Independent. Bilingual. One person, every line of code.",
+          "arcadiaDesc": "Full rebuild, delivered and online.",
+          "signature": "Independent. Bilingual. One point of contact, from analysis to production.",
           "cardAriaLabel": "See all projects"
         },
         "h1": "<strong>Clearer operations. Faster growth.</strong>",
@@ -178,10 +178,10 @@
       },
       "proof": {
         "eyebrow": "What I’ve built",
-        "h2": "Two projects in production.",
-        "subtitle": "A multi-tenant B2B SaaS live. An operational architecture pitched, in reusable format. Built solo.",
+        "h2": "Everything I show is running online.",
+        "subtitle": "A Deralis product. A prototype proposed to a Paris consulate. Several demonstrations you can open right now. All built solo.",
         "travixo": {
-          "tab": "In production",
+          "tab": "Deralis product",
           "url": "app.travixosystems.com / dashboard",
           "facts": {
             "stack": {
@@ -200,20 +200,20 @@
           "cta": "Technical details →"
         },
         "consulaire": {
-          "tab": "White-label",
-          "url": "portail-consulaire.vercel.app / admin",
+          "tab": "Proposed prototype",
+          "url": "government-portal-ashy.vercel.app / admin",
           "facts": {
             "stack": {
               "label": "Stack",
               "value": "Next.js · Supabase"
             },
             "format": {
-              "label": "Format",
-              "value": "White-label"
+              "label": "Type",
+              "value": "Prototype"
             },
             "origine": {
-              "label": "Origin",
-              "value": "Paris consulate"
+              "label": "Status",
+              "value": "Not adopted"
             }
           }
         }
@@ -235,14 +235,13 @@
     "page": {
       "metadata": {
         "title": "Projects",
-        "description": "One live system, one spec pitch, and a set of working concept builds. The work as it actually stands today, with no fabricated metrics or invented client results."
+        "description": "A Deralis product, a prototype proposed to a Paris consulate, and several demonstrations you can open right now. The work as it actually stands, with no invented metrics or fictional client results."
       },
       "hero": {
         "eyebrow": "Projects",
         "title": "Real systems, built around how operations actually <em>run</em>.",
-        "sub1": "One live system, one spec pitch in front of a real buyer, and a small set of working concept builds.",
+        "sub1": "A Deralis product. A prototype proposed to a Paris consulate. And several demonstrations you can open right now.",
         "sub2": "Each one started from the same observation. Most businesses already have tools. They just do not have a system.",
-        "sub3": "No fabricated metrics. No client logos I have not earned.",
         "ctaSecondary": "See the case study"
       },
       "travixo": {
@@ -255,12 +254,11 @@
         "linkLabel": "See the system"
       },
       "govPortal": {
-        "label": "Spec pitch",
+        "label": "Proposed prototype",
         "title": "Consular portal",
-        "context": "Public sector · Passport intake MVP · Currently with the buyer",
+        "context": "Public sector · Passport intake MVP · Not adopted",
         "prose1": "A passport application intake MVP I built and pitched to a Paris consular office after going through their process myself. Their existing flow required an in-person trip for files I had already uploaded online. The gap between what the system could do and what the team was asked to do was visible from the waiting room.",
         "prose2": "I built the digital flow that would have closed the gap and proposed it directly. The proposal is currently with them.",
-        "note": "Spec pitch. Not a delivered engagement. Status updated when the buyer responds.",
         "screenshot": {
           "alt": "Consular portal intake flow showing document submission and status tracking"
         },
@@ -305,7 +303,7 @@
       "finalCta": {
         "title": "Every project here started as a problem someone could <em>name</em>.",
         "body": "The trigger is usually the same. A loss of control, visibility, or flow that the existing tools were never going to fix on their own. The systems audit is where that conversation starts.",
-        "note": "Fixed price. Bilingual French and English. One person, every line of code."
+        "note": "Fixed price. Bilingual French and English. One point of contact, from analysis to production."
       }
     }
   },
@@ -761,7 +759,7 @@
         "p1": "TraviXO Systems is a multi-tenant compliance SaaS for the French equipment rental industry. It tracks the periodic regulatory inspections, the VGP, that every rental company in France is legally required to perform on the equipment they put in front of customers.",
         "p2": "Missed inspections are a liability problem and a regulatory problem, and the way most rental companies track them today is through a mix of paper folders, individual spreadsheets, and the memory of whoever has been there longest.",
         "p3": "The understanding behind it comes from time spent inside the equipment rental industry, close to how this work actually gets done. The product is shaped around those workflows rather than around a generic compliance template.",
-        "p4": "Built solo. Live. Running real inspection workflows in production."
+        "p4": "Built solo. Deployed to a production environment as a Deralis product, covering the real regulatory VGP process."
       },
       "whatIBuilt": {
         "title": "The pieces that make the system work.",
