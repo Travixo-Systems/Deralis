@@ -445,7 +445,7 @@ main > :first-child {
   .grid-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .grid-2col-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
   .grid-proof { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: stretch; }
-  .grid-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; z-index: 2; }
+  .grid-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; z-index: 2; }
   .grid-process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
   .grid-diagnostic-hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
 }
@@ -635,6 +635,69 @@ main > :first-child {
     }
     .grid-flow > .flow-step:nth-child(even) {
       padding-left: 8px;
+    }
+
+    /* --------------------------------------------------------------------
+       THE FLOW IS THREE STEPS, NOT FOUR.
+
+       The cross above is a four quadrant figure: a step in each quadrant, a
+       node at each arm end, and node lighting keyed to :nth-child(5) through
+       (8) because the four node spans are children one to four. The process
+       is now three mandatory phases, with Suivi moved out of the sequence
+       and rendered below it as optional post-deployment support, so the
+       fourth quadrant is empty, :nth-child(8) never matches, and the bottom
+       node can never light.
+
+       Rather than leave a figure with a dangling arm, the flow falls back to
+       what a three step sequence reads as cleanly: one column, a spine down
+       the left, a dot per step. The cross is worth rebuilding for three; that
+       is a design decision, not a merge fix, so it is deliberately not
+       attempted here.
+       -------------------------------------------------------------------- */
+    .grid-flow {
+      grid-template-columns: 1fr;
+      gap: 34px;
+      padding-left: 26px;
+    }
+    /* One spine, running the height of the column. */
+    .grid-flow::before {
+      top: 8px;
+      bottom: 8px;
+      left: 4px;
+      width: 1px;
+      transform: none;
+    }
+    /* The horizontal arm and the four arm-end nodes belong to the cross. */
+    .grid-flow::after,
+    .flow-cross-node {
+      display: none !important;
+    }
+    /* Text reads left to right off the spine, not mirrored across a centre. */
+    .grid-flow > .flow-step:nth-child(odd),
+    .grid-flow > .flow-step:nth-child(odd) > *,
+    .grid-flow > .flow-step:nth-child(even),
+    .grid-flow > .flow-step:nth-child(even) > * {
+      text-align: left !important;
+    }
+    .grid-flow > .flow-step:nth-child(odd),
+    .grid-flow > .flow-step:nth-child(even) {
+      padding-left: 0;
+      padding-right: 0;
+      align-items: flex-start;
+    }
+    .grid-flow > .flow-step .flow-desc,
+    .grid-flow > .flow-step > div:last-child {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 40ch;
+    }
+    /* A dot per step, sitting on the spine. */
+    .grid-flow > .flow-step .flow-dot-responsive {
+      display: block !important;
+      position: absolute !important;
+      left: -26px;
+      top: 6px;
+      z-index: 3;
     }
 
     /* Pull quote mobile */

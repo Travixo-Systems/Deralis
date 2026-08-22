@@ -40,8 +40,10 @@ const flowProcessStyle: CSSProperties = {
 const flowLineStyle: CSSProperties = {
   position: "absolute",
   top: 16,
-  left: "12.5%",
-  right: "12.5%",
+  // Centres of the outer columns in a 3 column grid, so the connector starts
+  // and ends on the first and last dots rather than overshooting them.
+  left: "16.667%",
+  right: "16.667%",
   height: 1,
   background: "var(--border-strong)",
   zIndex: 1,
@@ -93,7 +95,47 @@ const flowDescStyle: CSSProperties = {
   maxWidth: "24ch",
 };
 
-const ITEMS = ["1", "2", "3", "4"] as const;
+// Three mandatory phases. Suivi is optional post-deployment support and is
+// rendered below, deliberately un-numbered, so the sequence stays honest:
+// an engagement can end at Extensions and most will.
+const optionalStyle: CSSProperties = {
+  marginTop: 56,
+  paddingTop: 26,
+  borderTop: "1px solid var(--border-soft)",
+  display: "flex",
+  flexWrap: "wrap",
+  alignItems: "baseline",
+  gap: "6px 14px",
+};
+
+const optionalLabelStyle: CSSProperties = {
+  fontSize: "var(--fs-eyebrow)",
+  textTransform: "uppercase",
+  letterSpacing: "0.12em",
+  fontWeight: 600,
+  color: "var(--text-muted)",
+  transition: "color 450ms ease",
+};
+
+const optionalTitleStyle: CSSProperties = {
+  fontFamily: "var(--font-fraunces), Georgia, serif",
+  fontSize: 19,
+  fontWeight: 500,
+  color: "var(--text-primary)",
+  letterSpacing: "-0.01em",
+};
+
+const optionalDescStyle: CSSProperties = {
+  fontSize: 14,
+  lineHeight: 1.55,
+  color: "var(--text-secondary)",
+  flexBasis: "100%",
+  maxWidth: "52ch",
+  margin: 0,
+  transition: "color 450ms ease",
+};
+
+const ITEMS = ["1", "2", "3"] as const;
 
 export default function HowIWork() {
   const t = useTranslations("home.page.howIWork");
@@ -133,6 +175,12 @@ export default function HowIWork() {
           ))}
         </div>
       </AutoDemo>
+
+      <div style={optionalStyle}>
+        <span style={optionalLabelStyle}>{t("optional.label")}</span>
+        <span style={optionalTitleStyle}>{t("optional.title")}</span>
+        <p style={optionalDescStyle}>{t("optional.description")}</p>
+      </div>
     </DsCard>
   );
 }

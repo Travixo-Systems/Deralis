@@ -133,14 +133,6 @@
           "detail4": "Never reached"
         }
       },
-      "flow": {
-        "label": "How I work",
-        "step1": "Clarify",
-        "step2": "Scope",
-        "step3": "Build first process",
-        "step4": "Expand gradually",
-        "step5": "Handoff"
-      },
       "who": {
         "eyebrow": "Who I work with",
         "card1": {
@@ -163,10 +155,10 @@
         },
         "card3": {
           "title": "Not for everyone",
-          "description": "Not for early-stage ideas, basic website requests, or projects where the problem has not been defined. If you cannot name what is broken, the timing is wrong.",
+          "description": "Not for early-stage ideas, and not for basic website requests. You do not need to have identified the cause: one real example is enough.",
           "tags": [
-            "Established business only",
-            "Problem must be defined",
+            "Established business",
+            "One concrete example is enough",
             "Decision-maker participates"
           ]
         },
@@ -193,19 +185,19 @@
           },
           "2": {
             "num": "02",
-            "title": "Custom System",
-            "description": "The first useful version. It solves the priority friction point and gives everyone the information they need to act."
+            "title": "First useful version",
+            "description": "It solves the priority friction point and gives everyone the information they need to act."
           },
           "3": {
             "num": "03",
             "title": "Extensions",
             "description": "What comes next, once the first version is in service and only if use justifies it."
-          },
-          "4": {
-            "num": "04",
-            "title": "Ongoing",
-            "description": "Maintenance and iterations, with no commitment or hidden fees."
           }
+        },
+        "optional": {
+          "label": "After go-live",
+          "title": "Ongoing support",
+          "description": "Maintenance and iterations, only where needed. No commitment, no hidden retainer."
         }
       },
       "finalCta": {
@@ -348,15 +340,15 @@
     "page": {
       "metadata": {
         "title": "About",
-        "description": "Deralis Digital is an independent engineering practice. I build operational systems for profitable businesses where the way information moves between people and tools has become the bottleneck."
+        "description": "I design the solutions that remove the time lost between people, teams and tools, using what is already in place. Independent engineering practice, Île-de-France."
       },
       "hero": {
-        "eyebrow": "Independent engineering practice · Île-de-France",
+        "eyebrow": "About · Île-de-France",
         "title": "About <em>Deralis</em> Digital.",
-        "sub1": "I build the operational systems established businesses need to keep running when their tools and processes <em>stop keeping up</em>.",
-        "sub2": "Deralis Digital is an independent engineering practice. I work with profitable, operating businesses where work slows down because people have to search for information, check progress and chase for answers. Not websites. Not templates. Systems that show who owns what, where it stands and what happens next.",
+        "sub1": "In established businesses, work slows down where it passes from one person to the next: someone has to search for information, check progress and chase for an answer. I design the solutions that <em>remove that time</em>.",
+        "sub2": "I work with profitable, operating businesses. Every request, approval, order or follow up has an owner, a status and a next action. Not websites. Not templates.",
         "sub3": "I’ve worked inside real businesses where the system isn’t visible, but the consequences are. That experience is what TraviXO Systems comes from, a VGP compliance software for the French equipment rental industry.",
-        "sub4": "It shapes how I work: you cannot design a system for an operation you do not understand.",
+        "sub4": "Deralis Digital is an independent engineering practice. I build it myself, from the diagnostic through to production, and what I deliver stays documented, transferable and maintainable by another developer. You cannot design a system for an operation you do not understand.",
         "ctaSecondary": "See how I work"
       },
       "background": {
@@ -410,7 +402,7 @@
   "contact": {
     "metadata": {
       "title": "Contact",
-      "description": "Get in touch with Deralis Digital. Let’s discuss your project and build something real."
+      "description": "Contact Deralis Digital to talk about what is costing you time today, and what should be fixed first."
     },
     "hero": {},
     "form": {
@@ -435,7 +427,7 @@
     "page": {
       "metadata": {
         "title": "Contact",
-        "description": "Talk to me before booking an operational diagnostic. Independent engineering practice based in Île-de-France, working across France and remotely."
+        "description": "Talk to me before booking an operational diagnostic. I remove the time lost between people, teams and tools. Independent engineering practice in Île-de-France, working remotely across France."
       },
       "hero": {
         "eyebrow": "Contact",
@@ -465,7 +457,7 @@
   "blog": {
     "hero": {
       "h1": "From <em>practice</em>.",
-      "subtitle": "Notes on operations, software, and what it actually takes to build systems that work."
+      "subtitle": "Notes on what makes a working business lose time, and on what wins it back."
     },
     "categories": {
       "strategy": "Strategy",
@@ -502,7 +494,7 @@
     "page": {
       "metadata": {
         "title": "Blog",
-        "description": "From the practice. Notes on operations, software, and what it actually takes to build systems that work."
+        "description": "From real conditions. Notes on what makes a working business lose time, and on what wins it back."
       }
     },
     "eyebrow": "Blog",
@@ -883,7 +875,7 @@
     "signatureBlock": {
       "eyebrow": "Written by",
       "name": "Uwa Ugboaja",
-      "bio": "I build the operational systems established businesses run on, solo, in French and English, from Île-de-France.",
+      "bio": "I design the solutions that remove the time lost between people, teams and tools. Solo, in French and English, from Île-de-France.",
       "linkLabel": "More about how I work"
     },
     "moreStrip": {
@@ -1014,7 +1006,7 @@
       },
       "estimateBanner": {
         "eyebrow": "Your indicative estimate",
-        "body": "{amount} of annual capacity absorbed, or {rate} of the paid time of the team concerned. The diagnostic checks that figure and identifies the share that is genuinely avoidable, worth recovering and technically fixable.",
+        "body": "{amount} of annual capacity absorbed, or {rate} of the paid time of the team concerned. The diagnostic tests that estimate against how your operation actually works and identifies the frictions to address first.",
         "recalculate": "Redo the estimate"
       }
     }
@@ -1031,8 +1023,8 @@
       "ctaPrimary": "Start with the diagnostic",
       "anchorTab": "What you get",
       "stageNames": [
-        "Diagnostic",
-        "System",
+        "Operational diagnostic",
+        "First useful version",
         "Extensions"
       ]
     },
@@ -1040,15 +1032,15 @@
       "intro": "Nothing is built until how the operation actually works is mapped.",
       "stage1": {
         "num": "01",
-        "title": "Diagnostic",
+        "title": "Operational diagnostic",
         "desc": "For two days I work through the real work with you: who receives what, who decides, where things wait, what has to be checked or chased. The deliverable is a decision dossier, not a report.",
         "metadata": "Two days · dossier within 5 business days",
         "cta": "Start the diagnostic"
       },
       "stage2": {
         "num": "02",
-        "title": "System",
-        "desc": "The first useful version, built from the dossier. One, not three. The one nothing else holds without."
+        "title": "First useful version",
+        "desc": "Built from the dossier. One, not three. The one nothing else holds without."
       },
       "stage3": {
         "num": "03",
@@ -1110,7 +1102,7 @@
     "next": {
       "title": "This number is a starting point",
       "p1": "It does not yet show which frictions can genuinely be removed or whether fixing them would justify the investment.",
-      "p2": "During the diagnostic, I examine the real workflows, verify the volumes, and identify the capacity that could realistically be recovered. The result shows what should be fixed, in what order, and under which economic conditions.",
+      "p2": "During the diagnostic, I examine the real workflows, verify the volumes, and identify the frictions where action is genuinely possible. The result shows what to fix, in what order, and against which operational priorities.",
       "cta": "Identify what can actually be recovered",
       "ctaMeta": "Operational diagnostic · €1,280 · Two days"
     },
