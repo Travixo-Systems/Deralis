@@ -2,6 +2,7 @@ import { useLocale } from "next-intl";
 import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import DsCard from "@/components/shared/DsCard";
+import AutoDemo from "@/components/shared/AutoDemo";
 import {
   formatBlogDate,
   formatReadTimeCompact,
@@ -20,7 +21,7 @@ export default function PostListCard() {
 
   return (
     <DsCard>
-      <div className="post-grid">
+      <AutoDemo stepSelector=".dpc" holdMs={750} gapMs={130} startDelayMs={400} className="post-grid">
         {posts.map((post, i) => {
           const isLastOrphan = isOddCount && i === posts.length - 1;
           return (
@@ -33,7 +34,7 @@ export default function PostListCard() {
             </Link>
           );
         })}
-      </div>
+      </AutoDemo>
     </DsCard>
   );
 }
