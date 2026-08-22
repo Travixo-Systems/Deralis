@@ -1,3 +1,5 @@
+import AutoDemo from "@/components/shared/AutoDemo";
+
 type ConceptItem = {
   num: string;
   title: string;
@@ -12,7 +14,13 @@ type ConceptItemsProps = {
 
 export default function ConceptItems({ items }: ConceptItemsProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-2" data-cascade>
+    <AutoDemo
+      stepSelector=".lift-step"
+      holdMs={800}
+      gapMs={140}
+      startDelayMs={400}
+      className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-2"
+    >
       {items.map((item) => (
         <div
           key={item.num}
@@ -31,12 +39,12 @@ export default function ConceptItems({ items }: ConceptItemsProps) {
             href={item.linkHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-[14px] font-medium text-ink no-underline border-b border-border-warm pb-[3px] self-start mt-auto hover:text-accent hover:border-accent transition-colors"
+            className="inline-flex items-center gap-1.5 text-[14px] font-medium text-accent no-underline border-b border-accent/40 pb-[3px] self-start mt-auto hover:border-accent transition-colors"
           >
             {item.linkLabel}
           </a>
         </div>
       ))}
-    </div>
+    </AutoDemo>
   );
 }

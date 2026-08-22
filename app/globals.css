@@ -345,12 +345,14 @@ main > :first-child {
   padding: 22px 24px;
   transition: border-left-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
 }
-.dpc:hover {
+.dpc:hover,
+.dpc.is-auto-active {
   border-left-color: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(20, 17, 13, 0.06);
 }
-:root[data-theme="dark"] .dpc:hover {
+:root[data-theme="dark"] .dpc:hover,
+:root[data-theme="dark"] .dpc.is-auto-active {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
 }
 .dpc:focus-visible {
@@ -484,16 +486,155 @@ main > :first-child {
       gap: 32px;
     }
 
-    /* Flow: 2 columns on mobile */
+    /* Flow below 960px: a cross rather than a bare 2 by 2 grid.
+       The horizontal rule and its dots were simply hidden here, which left
+       four numbered blocks with nothing tying them together and no sign that
+       the four steps are a sequence. The rule now runs vertically down the
+       centre of the grid, the dots sit on it, and each step reads as hanging
+       off that spine. */
     .grid-flow {
       grid-template-columns: 1fr 1fr;
-      gap: 48px 24px;
+      gap: 52px 34px;
+      position: relative;
     }
+
+    /* The cross. Two rules meeting at the centre of the grid, with a step in
+       each quadrant and a node at the end of each arm, so the four steps read
+       as one figure rather than four loose blocks. */
+    .grid-flow::before,
+    .grid-flow::after {
+      content: "";
+      position: absolute;
+      background: var(--border-strong);
+      z-index: 1;
+    }
+    /* The arms stop short of the block edges. Run to the full width and
+       height they read as a divider splitting the section in four rather
+       than as one figure sitting at its centre. Inset by a quarter on each
+       side, so each arm spans the middle half of its axis. */
+    .grid-flow::before {
+      top: 25%;
+      bottom: 25%;
+      left: 50%;
+      width: 1px;
+      transform: translateX(-50%);
+    }
+    .grid-flow::after {
+      left: 25%;
+      right: 25%;
+      top: 50%;
+      height: 1px;
+      transform: translateY(-50%);
+    }
+
     .flow-line-responsive {
       display: none !important;
     }
+
+    /* The dots come back, sitting against the spine: the left column's dot on
+       its right edge, the right column's on its left. */
     .flow-dot-responsive {
+      display: block !important;
+      position: absolute !important;
+      top: 0;
+      z-index: 3;
+    }
+    .grid-flow > .flow-step {
+      position: relative;
+      padding-top: 4px;
+    }
+    /* The four nodes sit at the ends of the two arms: top and bottom of the
+       vertical, left and right of the horizontal. They are drawn on the grid
+       rather than on the steps, so they stay on the arms no matter how tall
+       a step's text runs. */
+    .grid-flow > .flow-step .flow-dot-responsive {
       display: none !important;
+    }
+
+    .flow-cross-node {
+      display: block;
+      position: absolute;
+      grid-area: 1 / 1;
+      /* The nodes are direct children of a [data-cascade] row, so they were
+         picking up the card-arrive animation. That animation sets transform,
+         which overrode the translate that centres each node on its arm and
+         left every one of them offset by half its own width. */
+      animation: none !important;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--card-main);
+      border: 2px solid var(--accent);
+      z-index: 3;
+    }
+    /* A node at each of the four arm ends, centred on the line rather than
+       sitting beside it: each is pulled back by half its own size on both
+       axes, so the arm passes through its middle. */
+    .flow-cross-node-top {
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .flow-cross-node-bottom {
+      bottom: 25%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+    .flow-cross-node-left {
+      left: 25%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .flow-cross-node-right {
+      right: 25%;
+      top: 50%;
+      transform: translate(50%, -50%);
+    }
+
+    /* Each node answers its own quadrant. Hovering or focusing a step fills
+       the node on the arm nearest it, so the mark tracks where you are the
+       same way the row of dots does on a wide screen. */
+    .flow-cross-node {
+      transition: background-color 240ms ease, border-color 240ms ease,
+        transform 260ms cubic-bezier(0.16, 1.02, 0.3, 1);
+    }
+    /* The four node spans are children one to four, so the steps are five to
+       eight. Each step lights the node on the arm beside its own quadrant:
+       step one top left lights the top, step two top right the right, and so
+       on clockwise. */
+    .grid-flow:has(> .flow-step:nth-child(5).is-auto-active) .flow-cross-node-top,
+    .grid-flow:has(> .flow-step:nth-child(6).is-auto-active) .flow-cross-node-right,
+    .grid-flow:has(> .flow-step:nth-child(7).is-auto-active) .flow-cross-node-left,
+    .grid-flow:has(> .flow-step:nth-child(8).is-auto-active) .flow-cross-node-bottom,
+    .grid-flow:has(> .flow-step:nth-child(5):hover) .flow-cross-node-top,
+    .grid-flow:has(> .flow-step:nth-child(5):focus-visible) .flow-cross-node-top,
+    .grid-flow:has(> .flow-step:nth-child(6):hover) .flow-cross-node-right,
+    .grid-flow:has(> .flow-step:nth-child(6):focus-visible) .flow-cross-node-right,
+    .grid-flow:has(> .flow-step:nth-child(7):hover) .flow-cross-node-left,
+    .grid-flow:has(> .flow-step:nth-child(7):focus-visible) .flow-cross-node-left,
+    .grid-flow:has(> .flow-step:nth-child(8):hover) .flow-cross-node-bottom,
+    .grid-flow:has(> .flow-step:nth-child(8):focus-visible) .flow-cross-node-bottom {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform-origin: center;
+    }
+
+    /* Text leans toward its own side of the spine, which is what makes the
+       arrangement read as a cross rather than a stack. The step sets
+       text-align inline, so these need the extra weight. */
+    .grid-flow > .flow-step:nth-child(odd),
+    .grid-flow > .flow-step:nth-child(odd) > * {
+      text-align: right !important;
+    }
+    .grid-flow > .flow-step:nth-child(even),
+    .grid-flow > .flow-step:nth-child(even) > * {
+      text-align: left !important;
+    }
+    .grid-flow > .flow-step:nth-child(odd) {
+      padding-right: 8px;
+    }
+    .grid-flow > .flow-step:nth-child(even) {
+      padding-left: 8px;
     }
 
     /* Pull quote mobile */
@@ -627,11 +768,13 @@ main > :first-child {
 .lift-card {
   transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 }
-.lift-card:hover {
+.lift-card:hover,
+.lift-card.is-auto-active {
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(20, 17, 13, 0.07);
 }
-:root[data-theme="dark"] .lift-card:hover {
+:root[data-theme="dark"] .lift-card:hover,
+:root[data-theme="dark"] .lift-card.is-auto-active {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
 }
 .lift-card:focus-visible,
@@ -645,7 +788,8 @@ main > :first-child {
 .lift-step {
   transition: transform 200ms ease, border-color 200ms ease;
 }
-.lift-step:hover {
+.lift-step:hover,
+.lift-step.is-auto-active {
   transform: translateY(-2px);
   border-color: var(--accent);
 }
@@ -814,6 +958,7 @@ main > :first-child {
 .ds-card-peak {
   position: relative;
   isolation: isolate;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -834,7 +979,12 @@ main > :first-child {
         rgba(247, 244, 237, 0.13) 52%,
         transparent 62%
       );
-      transform: translateX(-120%);
+      /* The band moves by background-position, not by translating the layer.
+         A translated layer extended the document scroll width and let the
+         page drag sideways on tablets; clipping the card to contain it also
+         clipped the pinking teeth, which sit outside the card by design. */
+      background-size: 260% 100%;
+      background-position: 130% 0;
       animation: sheen-sweep linear both;
       animation-timeline: view();
       animation-range: entry 10% cover 70%;
@@ -843,7 +993,7 @@ main > :first-child {
 
   @keyframes sheen-sweep {
     to {
-      transform: translateX(120%);
+      background-position: -30% 0;
     }
   }
 }
@@ -892,11 +1042,13 @@ main > :first-child {
 
 /* --- Amplified hover ----------------------------------------------------
    Replaces the 2px nudge with a lift that reads across the room. */
-.lift-card:hover {
+.lift-card:hover,
+.lift-card.is-auto-active {
   transform: translateY(-6px) scale(1.012);
   box-shadow: 0 22px 48px rgba(20, 17, 13, 0.13);
 }
-:root[data-theme="dark"] .lift-card:hover {
+:root[data-theme="dark"] .lift-card:hover,
+:root[data-theme="dark"] .lift-card.is-auto-active {
   box-shadow: 0 22px 48px rgba(0, 0, 0, 0.45);
 }
 .lift-card {
@@ -908,7 +1060,8 @@ main > :first-child {
   transition: transform 320ms cubic-bezier(0.16, 1.02, 0.3, 1),
     border-color 320ms ease;
 }
-.lift-step:hover {
+.lift-step:hover,
+.lift-step.is-auto-active {
   transform: translateY(-6px);
   border-color: var(--accent);
 }
@@ -999,7 +1152,8 @@ main > :first-child {
 
 .flow-step:hover .flow-dot,
 .flow-step:focus-visible .flow-dot,
-.flow-step:active .flow-dot {
+.flow-step:active .flow-dot,
+.flow-step.is-auto-active .flow-dot {
   background: var(--accent);
   border-color: var(--accent);
   transform: scale(1.45);
@@ -1056,17 +1210,20 @@ main > :first-child {
 /* Fan: each sheet rotates and slides a little further than the one above it,
    so the stack opens like paper rather than sliding as one block. */
 .pdf-stack:hover .pdf-sheet-1,
-.pdf-stack:focus-visible .pdf-sheet-1 {
+.pdf-stack:focus-visible .pdf-sheet-1,
+.pdf-stack.is-auto-active .pdf-sheet-1 {
   transform: translate(-10px, -14px) rotate(-2.5deg);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.26);
 }
 .pdf-stack:hover .pdf-sheet-2,
-.pdf-stack:focus-visible .pdf-sheet-2 {
+.pdf-stack:focus-visible .pdf-sheet-2,
+.pdf-stack.is-auto-active .pdf-sheet-2 {
   transform: rotate(7deg) translate(16px, 4px);
   opacity: 0.95;
 }
 .pdf-stack:hover .pdf-sheet-3,
-.pdf-stack:focus-visible .pdf-sheet-3 {
+.pdf-stack:focus-visible .pdf-sheet-3,
+.pdf-stack.is-auto-active .pdf-sheet-3 {
   transform: rotate(13deg) translate(34px, 12px);
   opacity: 0.8;
 }
@@ -1165,7 +1322,9 @@ html {
   align-items: center;
   gap: 6px;
   padding: 8px 8px 8px 18px;
-  background: var(--card-main);
+  background: color-mix(in srgb, var(--card-main) 86%, transparent);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  backdrop-filter: blur(12px) saturate(1.2);
   border: 1px solid var(--border-strong);
   border-radius: 999px;
   box-shadow: 0 18px 40px rgba(20, 17, 13, 0.16);
@@ -1226,18 +1385,16 @@ html {
 
 @media (max-width: 520px) {
   .sticky-cta {
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    transform: translateY(140%);
-    justify-content: space-between;
-  }
-  .sticky-cta.is-visible {
-    transform: translateY(0);
+    bottom: 14px;
+    padding: 6px 6px 6px 16px;
+    max-width: calc(100vw - 32px);
   }
   .sticky-cta-link {
     font-size: 13px;
-    white-space: normal;
+  }
+  .sticky-cta-close {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -1261,8 +1418,6 @@ html {
   height: auto;
   max-width: 760px;
   margin: 8px auto 0;
-  /* Not overflow: visible. The figure sits in a scroll container, and painting
-     outside it would push past the viewport edge and scroll the page instead. */
   overflow: hidden;
   color: var(--text-primary);
 }
@@ -1336,35 +1491,14 @@ html {
 
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
-    .coord-fig .dot {
-      animation: coord-travel cubic-bezier(0.15, 0.85, 0.2, 1) both;
-      animation-timeline: view();
-      animation-range: entry 15% cover 55%;
-    }
-    .coord-fig .return {
-      stroke-dasharray: 260;
-      animation: coord-draw linear both;
-      animation-timeline: view();
-      animation-range: entry 30% cover 65%;
-    }
-    /* The pulse is time based on purpose: a stall is an ongoing condition, so
-       it keeps breathing rather than resolving once and stopping. */
+    /* The figure is driven by CoordinationTrace, which plays the sweep twice
+       when the section arrives and then hands over to the pointer. A scroll
+       timeline on the same properties would fight that, dragging the marker
+       backwards whenever the reader scrolled up, so only the pulse is left
+       here: it is time based and belongs to the stalled node rather than to
+       the sweep. */
     .coord-fig .pulse {
       animation: coord-pulse 2.4s ease-out infinite;
-    }
-
-    /* Segments colour in one after the other, tracking the request. Staggered
-       on animation-range rather than delay: on a scroll timeline a delay is
-       measured in scroll distance, so it would drift out of step. */
-    .coord-fig .link-fill-1 {
-      animation: coord-link linear both;
-      animation-timeline: view();
-      animation-range: entry 15% cover 35%;
-    }
-    .coord-fig .link-fill-2 {
-      animation: coord-link linear both;
-      animation-timeline: view();
-      animation-range: entry 28% cover 52%;
     }
   }
 
@@ -1390,6 +1524,14 @@ html {
     100% {
       transform: scale(1.45);
       opacity: 0;
+    }
+  }
+  @keyframes coord-node-fill {
+    from {
+      fill: var(--card-main);
+    }
+    to {
+      fill: var(--accent);
     }
   }
   @keyframes coord-link {
@@ -1420,18 +1562,33 @@ html {
    legible minimum and let the row scroll sideways inside its own container.
    The page itself never scrolls horizontally. */
 .coord-fig-scroll {
-  overflow-x: auto;
-  overflow-y: hidden;
+  /* Deliberately not a scroll container. An overflow value here makes this
+     the figure's nearest scrollable ancestor, and a view() timeline resolves
+     against that rather than the document: the wrapper never scrolls
+     vertically, so the timeline froze and every scroll driven animation in
+     the figure sat at a fixed progress. It looked correct on desktop only
+     because the wrapper is not scrollable at that width.
+
+     The figure is hidden below 640px rather than scrolled sideways, so this
+     wrapper has nothing left to scroll. */
   margin: 8px 0 0;
-  padding-bottom: 4px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
 }
 
-@media (max-width: 620px) {
-  .coord-fig {
-    min-width: 560px;
+/* Below 640px the figure cannot hold its minimum legible size inside the
+   card, so it has to be scrolled sideways to be read at all. A diagram you
+   have to drag is worse than no diagram: the sentence above already carries
+   the point, so it is hidden rather than cropped. */
+@media (max-width: 640px) {
+  .coord-fig-scroll {
+    display: none;
   }
+}
+
+/* The 560px minimum and the larger type belonged to the sideways scrolling
+   version. The figure is hidden below 640px now rather than scrolled, so
+   these applied to a range that no longer renders it. Kept only as the type
+   scale for the narrowest width at which the figure still shows. */
+@media (max-width: 720px) {
   .coord-fig text {
     font-size: 24px;
   }
@@ -1700,11 +1857,26 @@ html {
   border-radius: 0 !important;
 }
 
-/* Teeth retract at the same 960px breakpoint where the cards re-round, so a
-   rounded card is never left wearing square teeth. */
-/* Below the teeth breakpoint the cards go back to their normal rounded shape.
-   Matches the specificity used above so it wins in turn. */
+/* The teeth were hidden below 960px on the assumption there was no room.
+   Measured: the card leaves 14px each side all the way down to 393px and the
+   strips need 13px, so they stay on through tablet and phone. Only the tooth
+   shrinks, to keep the pitch proportionate to a narrower card. */
 @media (max-width: 960px) {
+  .pinked-edge {
+    --tooth: 16px;
+    width: 12px;
+  }
+  .pinked-edge-left {
+    left: -11px;
+  }
+  .pinked-edge-right {
+    right: -11px;
+  }
+}
+
+/* Below this the card is too narrow to give the teeth room without crowding
+   the text, so they retract and the cards return to their rounded shape. */
+@media (max-width: 380px) {
   .pinked-edge {
     display: none;
   }
@@ -1834,6 +2006,65 @@ html {
   }
   .symptom-mark::after {
     transition: none;
+  }
+}
+
+/* The cross nodes only exist below 960px, where the flow folds into a cross.
+   Above that the original single row and its own dots take over. Scoped to a
+   min-width query rather than left unconditional: this rule sits later in the
+   file than the one that shows them, so an unscoped hide would win. */
+@media (min-width: 961px) {
+  .flow-cross-node {
+    display: none;
+  }
+}
+
+/* --- Process flow on a phone ---------------------------------------------
+   Two columns at 390px left roughly 120px of measure per step, which broke
+   "Custom System" onto two lines and its body copy to two or three words per
+   line. Below 560px the steps stack instead, and the spine moves to the left
+   as a rail so the sequence still reads as connected. */
+@media (max-width: 560px) {
+  .grid-flow {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+    padding-left: 26px;
+  }
+  /* Stacked below 560px, so the cross becomes a single left rail: a
+     horizontal arm across a one column stack would cut through the text
+     rather than connect anything. */
+  .grid-flow::before {
+    left: 7px !important;
+    transform: none !important;
+  }
+  .grid-flow::after {
+    display: none !important;
+  }
+  .flow-cross-node-left,
+  .flow-cross-node-right {
+    display: none !important;
+  }
+  .flow-cross-node-top,
+  .flow-cross-node-bottom {
+    left: 7px !important;
+  }
+  .grid-flow > .flow-step:nth-child(odd),
+  .grid-flow > .flow-step:nth-child(odd) > *,
+  .grid-flow > .flow-step:nth-child(even),
+  .grid-flow > .flow-step:nth-child(even) > * {
+    text-align: left !important;
+  }
+  .grid-flow > .flow-step {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  /* Every step gets its own mark on the rail here, since they no longer
+     share a row. */
+  .grid-flow > .flow-step .flow-dot-responsive {
+    display: block !important;
+    left: -26px !important;
+    right: auto !important;
+    top: 8px !important;
   }
 }
 

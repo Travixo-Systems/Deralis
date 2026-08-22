@@ -9,6 +9,7 @@ import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
 import AnimateIn from "@/components/shared/AnimateIn";
 import WordReveal from "@/components/shared/WordReveal";
+import AutoDemo from "@/components/shared/AutoDemo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -183,17 +184,23 @@ function ConceptsCard() {
       <h2 style={h2Style} aria-label={t("title")}><WordReveal>{t("title")}</WordReveal></h2>
       <p style={{ ...sub, marginBottom: 48, maxWidth: "58ch" }}>{t("intro")}</p>
 
-      <div className="grid-2col" data-cascade>
+      <AutoDemo
+        stepSelector=".lift-card"
+        holdMs={800}
+        gapMs={140}
+        startDelayMs={400}
+        className="grid-2col"
+      >
         {items.map((item) => (
           <div key={item.num} className="lift-card" style={conceptCard}>
             <span style={livePill} aria-label="Live">LIVE</span>
             <span style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 16, fontWeight: 600, color: "var(--accent)", display: "block", marginBottom: 12 }}>{item.num}</span>
             <h3 style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 20, fontWeight: 500, color: "var(--text-primary)", marginBottom: 10, letterSpacing: "-0.01em" }}>{item.title}</h3>
             <p style={{ fontSize: 14, lineHeight: 1.6, color: "var(--text-secondary)", marginBottom: 16 }}>{item.desc}</p>
-            <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 500, color: "var(--text-primary)", textDecoration: "none", borderBottom: "1px solid var(--border-strong)", paddingBottom: 2 }}>{item.linkLabel}</a>
+            <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 500, color: "var(--accent)", textDecoration: "none", borderBottom: "1px solid color-mix(in srgb, var(--accent) 40%, transparent)", paddingBottom: 2 }}>{item.linkLabel}</a>
           </div>
         ))}
-      </div>
+      </AutoDemo>
 
       <p style={alsoLine}>
         {t("alsoPrefix")}
@@ -241,7 +248,9 @@ const ctaPrimary: CSSProperties = {
 };
 const ctaSecondary: CSSProperties = {
   display: "inline-flex", alignItems: "center", gap: 6, padding: "16px 4px",
-  color: "var(--text-primary)", fontSize: 14, fontWeight: 500, textDecoration: "none",
+  // Accent rather than body colour: these are the links out to the live builds,
+  // and they read as prose otherwise.
+  color: "var(--accent)", fontSize: 14, fontWeight: 500, textDecoration: "none",
 };
 const ctaPeak: CSSProperties = {
   display: "inline-flex", alignItems: "center", gap: 12, padding: "18px 32px",

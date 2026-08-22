@@ -22,6 +22,12 @@ const DOT_PARKED = -100;
 /** How close, in viewBox units, the marker gets before a diamond absorbs it. */
 const ABSORB_RADIUS = 30;
 
+/** Automatic playback: where the marker starts and stops, and how long it
+    takes. Slow enough to follow rather than a flicker. */
+const SWEEP_FROM = 60;
+const SWEEP_TO = 470;
+const SWEEP_MS = 2200;
+
 /**
  * Lets the pointer draw the figure.
  *
@@ -43,9 +49,18 @@ export default function CoordinationTrace({ children }: { children: ReactNode })
     if (!svg) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    // A coarse pointer cannot hover, so tracking would only ever fire on tap.
-    // Those visitors keep the scroll driven animation and the tap states.
-    if (!window.matchMedia("(hover: hover)").matches) return;
+
+    // No media query gate here on purpose. Gating on any-pointer: fine meant a
+    // tablet reported as touch capable never bound the trace at all, so a
+    // tablet driven by a mouse or a trackpad got hollow diamonds, grey lines
+    // and no cursor following, while the same hardware on a desktop viewport
+    // got the full effect. Whether a pointer can trace is a property of the
+    // pointer, not of the device, so it is decided per event below: a mouse or
+    // a pen traces, a finger scrolls.
+    //
+    // The traced class, which switches the scroll driven fill off, is only
+    // applied once a real cursor actually arrives, so a touch only visitor
+    // keeps the scroll animation untouched.
 
     const dot = svg.querySelector<SVGPathElement>(".dot");
     const fills = SEGMENTS.map((s) =>
@@ -104,21 +119,84 @@ export default function CoordinationTrace({ children }: { children: ReactNode })
     };
 
     const onMove = (event: PointerEvent) => {
+      // A touch drag is the reader scrolling the page, not tracing the figure.
+      if (event.pointerType === "touch") return;
       const rect = svg.getBoundingClientRect();
       if (rect.width === 0) return;
+      arm();
       paint(((event.clientX - rect.left) / rect.width) * VIEWBOX_WIDTH);
     };
 
-    // Marks the figure as pointer driven, which switches off the scroll
-    // timeline so the two cannot fight over the same properties.
-    host.classList.add("is-traced-host");
-    reset();
+    // Applied on first cursor contact rather than on mount, so a device that
+    // only ever receives touch keeps its scroll driven animation.
+    let armed = false;
+    const arm = () => {
+      if (armed) return;
+      armed = true;
+      host.classList.add("is-traced-host");
+      reset();
+    };
+
+    const onLeave = (event: PointerEvent) => {
+      if (event.pointerType === "touch") return;
+      reset();
+    };
+
+    // --- Automatic playback -------------------------------------------------
+    // The same drawing the pointer produces, played by itself when the figure
+    // reaches the viewport, twice, so a reader who never hovers still sees the
+    // request travel and stall. Driven by a timer rather than a scroll
+    // timeline, so it plays at its own pace instead of only moving while the
+    // reader happens to be scrolling.
+    let raf = 0;
+    let playing = false;
+
+    const playOnce = () =>
+      new Promise<void>((resolve) => {
+        const start = performance.now();
+        const step = (now: number) => {
+          const t = Math.min(1, (now - start) / SWEEP_MS);
+          // Ease out, so the marker slows as it reaches the stalled node.
+          const eased = 1 - Math.pow(1 - t, 2);
+          paint(SWEEP_FROM + (SWEEP_TO - SWEEP_FROM) * eased);
+          if (t < 1) raf = requestAnimationFrame(step);
+          else resolve();
+        };
+        raf = requestAnimationFrame(step);
+      });
+
+    const playTwice = async () => {
+      if (playing) return;
+      playing = true;
+      host.classList.add("is-traced-host");
+      for (let i = 0; i < 2; i++) {
+        reset();
+        await new Promise((r) => setTimeout(r, i === 0 ? 240 : 520));
+        await playOnce();
+        await new Promise((r) => setTimeout(r, 700));
+      }
+      // Left drawn at the end rather than reset, so the figure keeps the state
+      // the animation just explained.
+      paint(SWEEP_TO);
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        io.disconnect();
+        playTwice();
+      },
+      { threshold: 0.55 }
+    );
+    io.observe(svg);
 
     svg.addEventListener("pointermove", onMove);
-    svg.addEventListener("pointerleave", reset);
+    svg.addEventListener("pointerleave", onLeave);
     return () => {
+      io.disconnect();
+      cancelAnimationFrame(raf);
       svg.removeEventListener("pointermove", onMove);
-      svg.removeEventListener("pointerleave", reset);
+      svg.removeEventListener("pointerleave", onLeave);
       host.classList.remove("is-traced-host");
     };
   }, []);

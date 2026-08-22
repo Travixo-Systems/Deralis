@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import DsCard from "@/components/shared/DsCard";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
+import AutoDemo from "@/components/shared/AutoDemo";
 
 export default function StagesCard() {
   const t = useTranslations("methode.stages");
@@ -11,6 +12,7 @@ export default function StagesCard() {
     <DsCard>
       <p style={introP}>{t("intro")}</p>
 
+      <AutoDemo stepSelector=".flow-step" holdMs={950} gapMs={180} startDelayMs={450}>
       <ol style={stageList}>
         <Stage num={t("stage1.num")} title={t("stage1.title")} desc={t("stage1.desc")} metadata={t("stage1.metadata")} cta={t("stage1.cta")} ctaHref="/diagnostic" />
         <FlowConnectorVertical />
@@ -18,6 +20,7 @@ export default function StagesCard() {
         <FlowConnectorVertical />
         <Stage num={t("stage3.num")} title={t("stage3.title")} desc={t("stage3.desc")} isLast />
       </ol>
+      </AutoDemo>
 
       {/* Secondary link, left-aligned with content, ~24px gap from last stage */}
       <div style={{ marginTop: 24, paddingLeft: 45 }}>

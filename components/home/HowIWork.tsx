@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import DsCard from "@/components/shared/DsCard";
 import type { CSSProperties } from "react";
 import WordReveal from "@/components/shared/WordReveal";
+import AutoDemo from "@/components/shared/AutoDemo";
 
 const eyebrowStyle: CSSProperties = {
   fontSize: "var(--fs-eyebrow)",
@@ -105,11 +106,23 @@ export default function HowIWork() {
       </h2>
       <p style={introStyle}>{t("intro")}</p>
 
-      <div style={flowProcessStyle}>
+      <AutoDemo
+        stepSelector=".flow-step"
+        holdMs={950}
+        gapMs={180}
+        startDelayMs={450}
+        style={flowProcessStyle}
+      >
         <div style={flowLineStyle} className="flow-line-responsive flow-line">
           <span className="flow-line-fill" aria-hidden="true" />
         </div>
         <div className="grid-flow" data-cascade>
+          {/* Nodes at the four arm ends of the cross. Only drawn below 960px,
+              where the flow becomes a cross rather than a single row. */}
+          <span className="flow-cross-node flow-cross-node-top" aria-hidden="true" />
+          <span className="flow-cross-node flow-cross-node-bottom" aria-hidden="true" />
+          <span className="flow-cross-node flow-cross-node-left" aria-hidden="true" />
+          <span className="flow-cross-node flow-cross-node-right" aria-hidden="true" />
           {ITEMS.map((item) => (
             <div key={item} className="lift-step flow-step" style={flowStepStyle} tabIndex={0}>
               <div style={flowDotStyle} className="flow-dot-responsive flow-dot" />
@@ -119,7 +132,7 @@ export default function HowIWork() {
             </div>
           ))}
         </div>
-      </div>
+      </AutoDemo>
     </DsCard>
   );
 }
