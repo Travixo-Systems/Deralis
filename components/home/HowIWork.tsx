@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import DsCard from "@/components/shared/DsCard";
 import type { CSSProperties } from "react";
 import WordReveal from "@/components/shared/WordReveal";
+import AutoDemo from "@/components/shared/AutoDemo";
 
 const eyebrowStyle: CSSProperties = {
   fontSize: "var(--fs-eyebrow)",
@@ -105,7 +106,13 @@ export default function HowIWork() {
       </h2>
       <p style={introStyle}>{t("intro")}</p>
 
-      <div style={flowProcessStyle}>
+      <AutoDemo
+        stepSelector=".flow-step"
+        holdMs={950}
+        gapMs={180}
+        startDelayMs={450}
+        style={flowProcessStyle}
+      >
         <div style={flowLineStyle} className="flow-line-responsive flow-line">
           <span className="flow-line-fill" aria-hidden="true" />
         </div>
@@ -125,7 +132,7 @@ export default function HowIWork() {
             </div>
           ))}
         </div>
-      </div>
+      </AutoDemo>
     </DsCard>
   );
 }

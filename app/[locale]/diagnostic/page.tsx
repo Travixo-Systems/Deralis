@@ -11,6 +11,7 @@ import type { CSSProperties } from "react";
 import AnimateIn from "@/components/shared/AnimateIn";
 import WordReveal from "@/components/shared/WordReveal";
 import SymptomChecklist from "@/components/diagnostic/SymptomChecklist";
+import AutoDemo from "@/components/shared/AutoDemo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -103,6 +104,7 @@ function DiagnosticHero() {
         {/* PDF Stack. A link rather than a decorative mock: it looks like the
             deliverable, so pointing at it and clicking should take you to the
             full example further down the page. */}
+        <AutoDemo stepSelector=".pdf-stack" holdMs={1600} gapMs={900} startDelayMs={600}>
         <a
           href="#exemple"
           aria-label={t("stackAriaLabel")}
@@ -119,6 +121,7 @@ function DiagnosticHero() {
             <PdfContent title="Quoi construire, dans quel ordre, et ce qu'il ne faut pas construire." section="01 · Situation" section2="02 · Ce qui casse" />
           </div>
         </a>
+        </AutoDemo>
       </div>
     </DsCard>
   );

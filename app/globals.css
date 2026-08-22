@@ -600,6 +600,10 @@ main > :first-child {
        eight. Each step lights the node on the arm beside its own quadrant:
        step one top left lights the top, step two top right the right, and so
        on clockwise. */
+    .grid-flow:has(> .flow-step:nth-child(5).is-auto-active) .flow-cross-node-top,
+    .grid-flow:has(> .flow-step:nth-child(6).is-auto-active) .flow-cross-node-right,
+    .grid-flow:has(> .flow-step:nth-child(7).is-auto-active) .flow-cross-node-left,
+    .grid-flow:has(> .flow-step:nth-child(8).is-auto-active) .flow-cross-node-bottom,
     .grid-flow:has(> .flow-step:nth-child(5):hover) .flow-cross-node-top,
     .grid-flow:has(> .flow-step:nth-child(5):focus-visible) .flow-cross-node-top,
     .grid-flow:has(> .flow-step:nth-child(6):hover) .flow-cross-node-right,
@@ -1140,7 +1144,8 @@ main > :first-child {
 
 .flow-step:hover .flow-dot,
 .flow-step:focus-visible .flow-dot,
-.flow-step:active .flow-dot {
+.flow-step:active .flow-dot,
+.flow-step.is-auto-active .flow-dot {
   background: var(--accent);
   border-color: var(--accent);
   transform: scale(1.45);
@@ -1197,17 +1202,20 @@ main > :first-child {
 /* Fan: each sheet rotates and slides a little further than the one above it,
    so the stack opens like paper rather than sliding as one block. */
 .pdf-stack:hover .pdf-sheet-1,
-.pdf-stack:focus-visible .pdf-sheet-1 {
+.pdf-stack:focus-visible .pdf-sheet-1,
+.pdf-stack.is-auto-active .pdf-sheet-1 {
   transform: translate(-10px, -14px) rotate(-2.5deg);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.26);
 }
 .pdf-stack:hover .pdf-sheet-2,
-.pdf-stack:focus-visible .pdf-sheet-2 {
+.pdf-stack:focus-visible .pdf-sheet-2,
+.pdf-stack.is-auto-active .pdf-sheet-2 {
   transform: rotate(7deg) translate(16px, 4px);
   opacity: 0.95;
 }
 .pdf-stack:hover .pdf-sheet-3,
-.pdf-stack:focus-visible .pdf-sheet-3 {
+.pdf-stack:focus-visible .pdf-sheet-3,
+.pdf-stack.is-auto-active .pdf-sheet-3 {
   transform: rotate(13deg) translate(34px, 12px);
   opacity: 0.8;
 }
