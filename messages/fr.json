@@ -120,7 +120,11 @@
           "node4": "Livraison",
           "stalled": "en attente",
           "followUp": "relance",
-          "title": "Une demande passe d'une personne à l'autre puis reste bloquée en attente d'une validation, ce qui oblige le client à relancer."
+          "title": "Une demande passe d'une personne à l'autre puis reste bloquée en attente d'une validation, ce qui oblige le client à relancer.",
+          "detail1": "Un client demande quelque chose",
+          "detail2": "Ça passe à la personne suivante",
+          "detail3": "Ça attend ici une décision",
+          "detail4": "Ce que le client attend"
         }
       },
       "flow": {

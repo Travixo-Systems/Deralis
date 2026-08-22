@@ -1424,6 +1424,99 @@ html {
   }
 }
 
+/* --- Coordination diagram interaction ------------------------------------
+   The same behaviour as the 01 to 04 process dots, applied to the diamonds:
+   pointing at or focusing a step fills it, grows it and rings it, and a short
+   description fades in above. Pure CSS on a focusable group, so the figure
+   stays a server component and ships no JavaScript. */
+.coord-node {
+  cursor: default;
+  outline: none;
+}
+
+/* An invisible, generous hit target. The diamond is a thin outline and would
+   otherwise be difficult to point at and near impossible to tap. */
+.coord-hit {
+  fill: transparent;
+  pointer-events: all;
+}
+
+.coord-node .node,
+.coord-node .stall-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: fill 240ms ease, stroke 240ms ease, stroke-width 240ms ease,
+    transform 300ms cubic-bezier(0.16, 1.02, 0.3, 1);
+}
+
+.coord-node .coord-label {
+  transition: fill 240ms ease;
+}
+
+.coord-node:hover .node,
+.coord-node:focus-visible .node {
+  fill: var(--accent);
+  stroke: var(--accent);
+  transform: scale(1.18);
+}
+
+/* The stalled node is already accent stroked, so it deepens and grows rather
+   than changing colour, which would erase the distinction it carries. */
+.coord-node.is-stalled:hover .stall-node,
+.coord-node.is-stalled:focus-visible .stall-node {
+  fill: var(--accent);
+  stroke-width: 3.4;
+  transform: scale(1.18);
+}
+
+.coord-node:hover .coord-label,
+.coord-node:focus-visible .coord-label {
+  fill: var(--accent);
+}
+
+.coord-node:active .node,
+.coord-node.is-stalled:active .stall-node {
+  transform: scale(1.06);
+  transition-duration: 90ms;
+}
+
+/* The description rests hidden and lifts in on engagement. */
+.coord-detail {
+  font-size: 15px;
+  fill: var(--text-muted);
+  opacity: 0;
+  transform: translateY(6px);
+  transform-box: fill-box;
+  transform-origin: center;
+  pointer-events: none;
+  transition: opacity 240ms ease, transform 300ms cubic-bezier(0.16, 1.02, 0.3, 1);
+}
+.coord-node:hover .coord-detail,
+.coord-node:focus-visible .coord-detail {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.coord-node:focus-visible .coord-hit {
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 4 4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coord-node:hover .node,
+  .coord-node:focus-visible .node,
+  .coord-node.is-stalled:hover .stall-node,
+  .coord-node.is-stalled:focus-visible .stall-node,
+  .coord-node:active .node,
+  .coord-node.is-stalled:active .stall-node {
+    transform: none;
+  }
+  .coord-detail {
+    transform: none;
+  }
+}
+
 /* ========== MOTION ========== */
 /* Reduced motion means less movement, not a different layout.
    Durations are collapsed so nothing animates, but transform itself is left

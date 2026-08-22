@@ -115,11 +115,11 @@ export default function CostSection() {
       <p style={introStyle}>{t("intro2")}</p>
 
       <CoordinationDiagram
-        labels={[
-          t("diagram.node1"),
-          t("diagram.node2"),
-          t("diagram.node3"),
-          t("diagram.node4"),
+        nodes={[
+          { x: 90, label: t("diagram.node1"), detail: t("diagram.detail1") },
+          { x: 270, label: t("diagram.node2"), detail: t("diagram.detail2") },
+          { x: 450, label: t("diagram.node3"), detail: t("diagram.detail3"), stalled: true },
+          { x: 630, label: t("diagram.node4"), detail: t("diagram.detail4") },
         ]}
         stalledLabel={t("diagram.stalled")}
         followUpLabel={t("diagram.followUp")}
