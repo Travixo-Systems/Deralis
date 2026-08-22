@@ -1478,13 +1478,13 @@ html {
     .coord-fig .dot {
       animation: coord-travel cubic-bezier(0.15, 0.85, 0.2, 1) both;
       animation-timeline: view();
-      animation-range: entry 25% contain 65%;
+      animation-range: contain 20% contain 95%;
     }
     .coord-fig .return {
       stroke-dasharray: 260;
       animation: coord-draw linear both;
       animation-timeline: view();
-      animation-range: entry 40% contain 80%;
+      animation-range: contain 40% contain 100%;
     }
     /* The pulse is time based on purpose: a stall is an ongoing condition, so
        it keeps breathing rather than resolving once and stopping. */
@@ -1498,12 +1498,12 @@ html {
     .coord-fig .link-fill-1 {
       animation: coord-link linear both;
       animation-timeline: view();
-      animation-range: entry 25% contain 35%;
+      animation-range: contain 20% contain 60%;
     }
     .coord-fig .link-fill-2 {
       animation: coord-link linear both;
       animation-timeline: view();
-      animation-range: entry 45% contain 60%;
+      animation-range: contain 45% contain 90%;
     }
   }
 
