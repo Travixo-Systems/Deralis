@@ -1402,8 +1402,6 @@ html {
   height: auto;
   max-width: 760px;
   margin: 8px auto 0;
-  /* Not overflow: visible. The figure sits in a scroll container, and painting
-     outside it would push past the viewport edge and scroll the page instead. */
   overflow: hidden;
   color: var(--text-primary);
 }
@@ -1480,13 +1478,13 @@ html {
     .coord-fig .dot {
       animation: coord-travel cubic-bezier(0.15, 0.85, 0.2, 1) both;
       animation-timeline: view();
-      animation-range: entry 20% entry 100%;
+      animation-range: entry 25% contain 65%;
     }
     .coord-fig .return {
       stroke-dasharray: 260;
       animation: coord-draw linear both;
       animation-timeline: view();
-      animation-range: entry 35% entry 100%;
+      animation-range: entry 40% contain 80%;
     }
     /* The pulse is time based on purpose: a stall is an ongoing condition, so
        it keeps breathing rather than resolving once and stopping. */
@@ -1500,12 +1498,12 @@ html {
     .coord-fig .link-fill-1 {
       animation: coord-link linear both;
       animation-timeline: view();
-      animation-range: entry 20% entry 70%;
+      animation-range: entry 25% contain 35%;
     }
     .coord-fig .link-fill-2 {
       animation: coord-link linear both;
       animation-timeline: view();
-      animation-range: entry 45% entry 95%;
+      animation-range: entry 45% contain 60%;
     }
   }
 
@@ -1561,12 +1559,16 @@ html {
    legible minimum and let the row scroll sideways inside its own container.
    The page itself never scrolls horizontally. */
 .coord-fig-scroll {
-  overflow-x: auto;
-  overflow-y: hidden;
+  /* Deliberately not a scroll container. An overflow value here makes this
+     the figure's nearest scrollable ancestor, and a view() timeline resolves
+     against that rather than the document: the wrapper never scrolls
+     vertically, so the timeline froze and every scroll driven animation in
+     the figure sat at a fixed progress. It looked correct on desktop only
+     because the wrapper is not scrollable at that width.
+
+     The figure is hidden below 640px rather than scrolled sideways, so this
+     wrapper has nothing left to scroll. */
   margin: 8px 0 0;
-  padding-bottom: 4px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
 }
 
 /* Below 640px the figure cannot hold its minimum legible size inside the
@@ -1579,10 +1581,11 @@ html {
   }
 }
 
-@media (max-width: 620px) {
-  .coord-fig {
-    min-width: 560px;
-  }
+/* The 560px minimum and the larger type belonged to the sideways scrolling
+   version. The figure is hidden below 640px now rather than scrolled, so
+   these applied to a range that no longer renders it. Kept only as the type
+   scale for the narrowest width at which the figure still shows. */
+@media (max-width: 720px) {
   .coord-fig text {
     font-size: 24px;
   }
