@@ -46,7 +46,6 @@ const ctaPeakStyle: CSSProperties = {
   borderRadius: "var(--radius-button)",
   cursor: "pointer",
   fontFamily: "inherit",
-  marginTop: 32,
   textDecoration: "none",
   transition: "background-color 450ms ease, color 450ms ease, transform 150ms ease",
 };
@@ -64,7 +63,6 @@ const ctaSecondaryPeakStyle: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
   gap: 8,
-  marginTop: 16,
   fontSize: 14,
   fontWeight: 500,
   color: "var(--text-on-peak-muted)",
@@ -124,7 +122,7 @@ export default function ClimaxPeak() {
           <p style={bodyStyle}>{t("body1")}</p>
           <p style={bodyStyle}>{t("body2")}</p>
           {discoveryCallLink ? (
-            <>
+            <div className="peak-cta-row">
               <a
                 href={discoveryCallLink}
                 target="_blank"
@@ -136,7 +134,7 @@ export default function ClimaxPeak() {
               <Link href="/diagnostic" style={ctaSecondaryPeakStyle}>
                 {t("ctaLabel")}
               </Link>
-            </>
+            </div>
           ) : (
             <Link href="/diagnostic" style={ctaPeakStyle}>
               {t("ctaLabel")}
