@@ -56,6 +56,12 @@
       "ctaLabel": "Prendre une décision · 1 280 €",
       "ctaMeta": "Prix fixe. Sans suite obligatoire."
     },
+    "orderOfMagnitude": {
+      "label": "Un ordre de grandeur",
+      "inputs": "{people} personnes · {cost} de coût employeur annuel · {hours} heures par semaine passées à chercher, vérifier et relancer",
+      "output": "{amount} de capacité annuelle mobilisée. Une hypothèse, pas votre chiffre.",
+      "outputDiagnostic": "{amount} de capacité annuelle mobilisée. Une hypothèse, pas votre chiffre : le diagnostic identifie où ce temps part chez vous, et quoi corriger en premier."
+    },
     "discoveryCall": {
       "eyebrow": "Pas encore sûr ?",
       "headline": "Si vous hésitez, parlons-en d’abord.",
@@ -107,11 +113,6 @@
         "card3": {
           "title": "La croissance qui surcharge l’équipe",
           "description": "Quand l’activité augmente, les messages, contrôles et relances augmentent aussi. Sans meilleure organisation, une partie de la capacité supplémentaire est absorbée par la coordination."
-        },
-        "worked": {
-          "label": "Un ordre de grandeur",
-          "inputs": "10 personnes · 45 000 € de coût employeur annuel · 2 heures par semaine passées à chercher, vérifier et relancer",
-          "output": "25 714 € de capacité annuelle mobilisée. Une hypothèse, pas votre chiffre."
         },
         "calculatorCta": {
           "eyebrow": "Estimation gratuite · 2 minutes · Sans inscription",
@@ -209,7 +210,7 @@
       },
       "finalCta": {
         "headline": "Si quelque chose <em>casse</em>, je peux vous montrer comment le réparer.",
-        "description": "Avant tout devis, je cartographie le fonctionnement réel de votre système. Ensuite, nous décidons ensemble s’il vaut la peine de le construire.",
+        "description": "Avant tout devis, je cartographie le fonctionnement réel de votre système. Ensuite, vous décidez, avec mon avis, s’il vaut la peine d’être construit.",
         "note": "Un autre développeur peut reprendre sans tout reconstruire."
       },
       "proof": {
@@ -1064,11 +1065,11 @@
   "frictions": {
     "metadata": {
       "title": "Calculateur de frictions opérationnelles",
-      "description": "Estimez la valeur annuelle du temps de travail absorbé par les ressaisies, les recherches d’information, les relances internes et les passages de relais."
+      "description": "Estimez la valeur annuelle du temps de travail absorbé par les ressaisies, les recherches d’information, les relances entre collègues et les passages de relais."
     },
     "hero": {
       "h1": "Où part votre temps payé ?",
-      "sub": "Estimez la valeur annuelle absorbée par les ressaisies, les recherches d’information, les relances internes et les passages de relais.",
+      "sub": "Estimez la valeur annuelle absorbée par les ressaisies, les recherches d’information, les relances entre collègues et les passages de relais.",
       "meta": "Estimation gratuite · 2 minutes · Sans inscription"
     },
     "form": {
@@ -1085,7 +1086,7 @@
       },
       "friction": {
         "label": "Temps absorbé par personne et par semaine",
-        "help": "Combien d’heures une personne consacre-t-elle chaque semaine aux ressaisies, recherches d’information, relances internes, vérifications et passages de relais évitables ?",
+        "help": "Combien d’heures une personne consacre-t-elle chaque semaine aux ressaisies, recherches d’information, relances entre collègues et vérifications de ce qui a déjà été fait ?",
         "help2": "Comptez uniquement le temps que vous pensez raisonnablement évitable.",
         "warning": "Vérifiez que vous avez indiqué le temps hebdomadaire par personne, et non le total de l’équipe."
       },

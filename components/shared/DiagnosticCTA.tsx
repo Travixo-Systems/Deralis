@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { STRIPE_AUDIT_LINK } from "@/lib/checkout";
 import { useTranslations } from "next-intl";
+import OrderOfMagnitude from "@/components/shared/OrderOfMagnitude";
 
 type DiagnosticCTAProps = {
   headlineOverride?: string;
@@ -43,6 +44,11 @@ export default function DiagnosticCTA({ headlineOverride, bodyOverride, noteOver
               </>
             )}
           </div>
+
+          {/* An article is a cold entry point: a reader arriving from search has
+              not seen the homepage argument, so the price would land here with
+              no denominator behind it. */}
+          <OrderOfMagnitude style={{ marginTop: 28, maxWidth: 580 }} />
         </div>
         <div className="flex flex-col items-start gap-4 max-md:mt-2">
           {destination ? (

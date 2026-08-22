@@ -8,6 +8,8 @@ import DsCard, { DsCardPaper } from "@/components/shared/DsCard";
 import { trackEvent } from "@/lib/analytics";
 import {
   calculateCoordinationCost,
+  formatEuros,
+  formatRate,
   FRICTION_HOURS_WARNING_THRESHOLD,
 } from "@/lib/coordination-cost";
 import type { CSSProperties } from "react";
@@ -237,11 +239,8 @@ export default function FrictionCalculator() {
     trackEvent("diagnostic_cta_clicked", { from: "friction_calculator" });
   };
 
-  const tag = locale === "fr" ? "fr-FR" : "en-GB";
-  const fmtMoney = (n: number) =>
-    new Intl.NumberFormat(tag, { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n);
-  const fmtRate = (n: number) =>
-    new Intl.NumberFormat(tag, { style: "percent", minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(n);
+  const fmtMoney = (n: number) => formatEuros(n, locale);
+  const fmtRate = (n: number) => formatRate(n, locale);
 
   const field = (
     key: FieldKey,

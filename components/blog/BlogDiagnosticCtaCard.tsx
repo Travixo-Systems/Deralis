@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import DsCard from "@/components/shared/DsCard";
 import RichText from "@/components/shared/RichText";
+import OrderOfMagnitude from "@/components/shared/OrderOfMagnitude";
 
 export default function BlogDiagnosticCtaCard() {
   const t = useTranslations("common.diagnosticCta");
@@ -16,6 +17,12 @@ export default function BlogDiagnosticCtaCard() {
         </h2>
         <p style={body}>{t("body1")}</p>
         <p style={body}>{t("body2")}</p>
+
+        {/* An article is a cold entry point: a reader arriving from search has
+            not seen the homepage argument, so the price would land here with no
+            denominator behind it. */}
+        <OrderOfMagnitude style={{ marginTop: 26, marginBottom: 4 }} />
+
         <Link href="/diagnostic" style={cta}>
           {t("ctaLabel")}
         </Link>

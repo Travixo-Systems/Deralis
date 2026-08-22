@@ -66,3 +66,42 @@ export function calculateCoordinationCost({
 
   return { frictionRate, annualCapacityCost };
 }
+
+/**
+ * The published worked example. One definition, so the homepage, the diagnostic
+ * page and the blog CTA cannot state three different figures, and so the copy
+ * cannot drift from the formula above: the euro amount shown to a reader is
+ * computed by calculateCoordinationCost, never typed into a message file.
+ *
+ * Deliberately modest. A reader who recognises himself in a larger number is
+ * not helped by being shown a larger one first.
+ */
+export const WORKED_EXAMPLE: CoordinationCostInput = {
+  affectedPeople: 10,
+  annualEmployerCost: 45000,
+  frictionHoursPerWeek: 2,
+  weeklyWorkingHours: 35,
+};
+
+function tag(locale: string): string {
+  return locale === "fr" ? "fr-FR" : "en-GB";
+}
+
+/** Whole euros. Shared so the calculator, the estimate banner and the worked
+ *  example all render money the same way. */
+export function formatEuros(value: number, locale: string): string {
+  return new Intl.NumberFormat(tag(locale), {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: 0,
+  }).format(value);
+}
+
+/** One decimal place, matching the rate the calculator reports. */
+export function formatRate(value: number, locale: string): string {
+  return new Intl.NumberFormat(tag(locale), {
+    style: "percent",
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1,
+  }).format(value);
+}

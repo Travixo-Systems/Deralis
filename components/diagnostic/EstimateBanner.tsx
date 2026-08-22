@@ -4,6 +4,7 @@ import { useSyncExternalStore } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ESTIMATE_STORAGE_KEY } from "@/components/frictions/FrictionCalculator";
+import { formatEuros, formatRate } from "@/lib/coordination-cost";
 import type { CSSProperties } from "react";
 
 type Estimate = { annualCapacityCost: number; frictionRate: number; calculatedAt: string };
@@ -100,17 +101,8 @@ export default function EstimateBanner() {
 
   if (!estimate) return null;
 
-  const tag = locale === "fr" ? "fr-FR" : "en-GB";
-  const amount = new Intl.NumberFormat(tag, {
-    style: "currency",
-    currency: "EUR",
-    maximumFractionDigits: 0,
-  }).format(estimate.annualCapacityCost);
-  const rate = new Intl.NumberFormat(tag, {
-    style: "percent",
-    minimumFractionDigits: 1,
-    maximumFractionDigits: 1,
-  }).format(estimate.frictionRate);
+  const amount = formatEuros(estimate.annualCapacityCost, locale);
+  const rate = formatRate(estimate.frictionRate, locale);
 
   return (
     <aside style={bannerStyle} data-clarity-mask="true">

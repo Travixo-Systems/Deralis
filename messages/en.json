@@ -56,6 +56,12 @@
       "ctaLabel": "Make a decision · €1,280",
       "ctaMeta": "Fixed price. No forced follow-up."
     },
+    "orderOfMagnitude": {
+      "label": "An order of magnitude",
+      "inputs": "{people} people · {cost} annual employer cost · {hours} hours a week spent searching, checking and chasing",
+      "output": "{amount} of annual capacity absorbed. A hypothesis, not your number.",
+      "outputDiagnostic": "{amount} of annual capacity absorbed. A hypothesis, not your number: the diagnostic identifies where that time goes in your operation, and what to fix first."
+    },
     "discoveryCall": {
       "eyebrow": "Not sure yet?",
       "headline": "If you are unsure, let us talk first.",
@@ -107,11 +113,6 @@
         "card3": {
           "title": "Growth that overloads the team",
           "description": "When activity rises, so do the messages, the checks and the chasing. Without better organisation, part of the extra capacity is absorbed by coordination."
-        },
-        "worked": {
-          "label": "An order of magnitude",
-          "inputs": "10 people · €45,000 annual employer cost · 2 hours a week spent searching, checking and chasing",
-          "output": "€25,714 of annual capacity absorbed. A hypothesis, not your number."
         },
         "calculatorCta": {
           "eyebrow": "Free estimate · 2 minutes · No sign-up",
@@ -209,7 +210,7 @@
       },
       "finalCta": {
         "headline": "If something <em>breaks</em>, I can show you how to fix it.",
-        "description": "Before any estimate, I map how your system actually works. Then we decide together whether it’s worth building.",
+        "description": "Before any estimate, I map how your system actually works. Then you decide, with my read on it, whether it is worth building.",
         "note": "Another developer can take over without rebuilding everything."
       },
       "proof": {
@@ -1064,11 +1065,11 @@
   "frictions": {
     "metadata": {
       "title": "Operational Friction Calculator",
-      "description": "Estimate the annual value of working time absorbed by duplicate data entry, information searches, internal follow-ups, and unclear handoffs."
+      "description": "Estimate the annual value of working time absorbed by duplicate data entry, information searches, chasing colleagues, and unclear handoffs."
     },
     "hero": {
       "h1": "Where does your paid time go?",
-      "sub": "Estimate the annual value absorbed by duplicate data entry, information searches, internal follow-ups, and unclear handoffs.",
+      "sub": "Estimate the annual value absorbed by duplicate data entry, information searches, chasing colleagues, and unclear handoffs.",
       "meta": "Free estimate · 2 minutes · No sign-up"
     },
     "form": {
@@ -1085,7 +1086,7 @@
       },
       "friction": {
         "label": "Time absorbed per person each week",
-        "help": "How many hours does one person spend each week re-entering data, searching for information, following up internally, checking statuses, or managing avoidable handoffs?",
+        "help": "How many hours does one person spend each week re-entering data, searching for information, chasing colleagues, and checking what has already been done?",
         "help2": "Only include time you believe could reasonably be avoided.",
         "warning": "Check that this is hours per person per week, not the team total."
       },

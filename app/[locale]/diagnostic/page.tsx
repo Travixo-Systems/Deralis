@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { STRIPE_AUDIT_LINK } from "@/lib/checkout";
 import EstimateBanner from "@/components/diagnostic/EstimateBanner";
+import OrderOfMagnitude from "@/components/shared/OrderOfMagnitude";
 import { getTranslations } from "next-intl/server";
 import { useTranslations, useLocale } from "next-intl";
 import DsCard, { DsCardPeak, DsCardPaper, DsCardMedium, DsCardFinal } from "@/components/shared/DsCard";
@@ -171,7 +172,12 @@ function RecognitionCard() {
         counts={[t("count1"), t("count2"), t("count3")]}
       />
 
-      <div style={{ marginTop: 48, maxWidth: "58ch" }}>
+      {/* Recognise, then what that recognition is worth, then the question,
+          then the price. Without this the reader met 1 280 € seven times on
+          this page with no figure to weigh it against. */}
+      <OrderOfMagnitude outputKey="outputDiagnostic" style={{ marginTop: 44, maxWidth: "62ch" }} />
+
+      <div style={{ marginTop: 40, maxWidth: "58ch" }}>
         <p style={introP}>{t("closing1")}</p>
         <p style={introP}>{t("closing2")}</p>
         <p style={{ ...introP, marginBottom: 32 }}>{t("closing3")}</p>

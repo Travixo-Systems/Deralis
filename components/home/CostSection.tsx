@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import DsCard from "@/components/shared/DsCard";
 import { Link } from "@/i18n/navigation";
 import PullQuote from "@/components/shared/PullQuote";
+import OrderOfMagnitude from "@/components/shared/OrderOfMagnitude";
 import type { CSSProperties } from "react";
 import CoordinationDiagram from "@/components/home/CoordinationDiagram";
 import CoordinationTrace from "@/components/home/CoordinationTrace";
@@ -50,44 +51,6 @@ const costCardPStyle: CSSProperties = {
   lineHeight: 1.6,
   color: "var(--text-secondary)",
   margin: 0,
-};
-
-/* The audit finding this answers: every euro figure on the site was a price I
-   charge, so a reader had no denominator to weigh 1 280 € against. This puts one
-   number in front of him before he clicks anything. Inputs are shown so the
-   arithmetic is checkable, and it is labelled a hypothesis because it is one. */
-const workedStyle: CSSProperties = {
-  marginTop: 30,
-  paddingLeft: 18,
-  borderLeft: "2px solid var(--accent)",
-};
-
-const workedLabelStyle: CSSProperties = {
-  fontSize: "var(--fs-eyebrow)",
-  textTransform: "uppercase",
-  letterSpacing: "0.12em",
-  fontWeight: 600,
-  color: "var(--text-muted)",
-  marginBottom: 10,
-  transition: "color 450ms ease",
-};
-
-const workedInputsStyle: CSSProperties = {
-  fontFamily: "var(--font-ibm-plex-mono), ui-monospace, monospace",
-  fontSize: 13,
-  lineHeight: 1.6,
-  color: "var(--text-secondary)",
-  marginBottom: 8,
-  transition: "color 450ms ease",
-};
-
-const workedOutputStyle: CSSProperties = {
-  fontSize: 16,
-  lineHeight: 1.55,
-  color: "var(--text-primary)",
-  fontWeight: 500,
-  margin: 0,
-  transition: "color 450ms ease",
 };
 
 /* Reads as an offer rather than a footnote: the whole panel is the click target,
@@ -179,11 +142,7 @@ export default function CostSection() {
         ))}
       </div>
 
-      <div style={workedStyle} className="cost-worked">
-        <p style={workedLabelStyle}>{t("worked.label")}</p>
-        <p style={workedInputsStyle}>{t("worked.inputs")}</p>
-        <p style={workedOutputStyle}>{t("worked.output")}</p>
-      </div>
+      <OrderOfMagnitude style={{ marginTop: 30 }} />
 
       {/* Bridges the vocabulary: this section names coordination, the calculator
           names friction. The panel states the relationship rather than leaving a
