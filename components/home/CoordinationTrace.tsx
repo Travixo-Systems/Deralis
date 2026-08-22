@@ -43,16 +43,18 @@ export default function CoordinationTrace({ children }: { children: ReactNode })
     if (!svg) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    // Tracking needs a pointer that can hover. "any-pointer: fine" rather than
-    // "hover: hover" so a tablet with a mouse or a stylus gets it too: the
-    // stricter query treats every touch capable device as unable to hover,
-    // which left tablets with a static figure even when driven by a trackpad.
+
+    // No media query gate here on purpose. Gating on any-pointer: fine meant a
+    // tablet reported as touch capable never bound the trace at all, so a
+    // tablet driven by a mouse or a trackpad got hollow diamonds, grey lines
+    // and no cursor following, while the same hardware on a desktop viewport
+    // got the full effect. Whether a pointer can trace is a property of the
+    // pointer, not of the device, so it is decided per event below: a mouse or
+    // a pen traces, a finger scrolls.
     //
-    // Without this the host still took the traced class, which switches off
-    // the scroll driven fill, while touch events were ignored: a touch tablet
-    // ended up with lines that never filled and diamonds that only responded
-    // to a tap.
-    if (!window.matchMedia("(any-pointer: fine)").matches) return;
+    // The traced class, which switches the scroll driven fill off, is only
+    // applied once a real cursor actually arrives, so a touch only visitor
+    // keeps the scroll animation untouched.
 
     const dot = svg.querySelector<SVGPathElement>(".dot");
     const fills = SEGMENTS.map((s) =>
@@ -111,24 +113,34 @@ export default function CoordinationTrace({ children }: { children: ReactNode })
     };
 
     const onMove = (event: PointerEvent) => {
-      // A touch drag is the reader scrolling the figure sideways, not tracing
-      // it, so those events are left alone.
+      // A touch drag is the reader scrolling the page, not tracing the figure.
       if (event.pointerType === "touch") return;
       const rect = svg.getBoundingClientRect();
       if (rect.width === 0) return;
+      arm();
       paint(((event.clientX - rect.left) / rect.width) * VIEWBOX_WIDTH);
     };
 
-    // Marks the figure as pointer driven, which switches off the scroll
-    // timeline so the two cannot fight over the same properties.
-    host.classList.add("is-traced-host");
-    reset();
+    // Applied on first cursor contact rather than on mount, so a device that
+    // only ever receives touch keeps its scroll driven animation.
+    let armed = false;
+    const arm = () => {
+      if (armed) return;
+      armed = true;
+      host.classList.add("is-traced-host");
+      reset();
+    };
+
+    const onLeave = (event: PointerEvent) => {
+      if (event.pointerType === "touch") return;
+      reset();
+    };
 
     svg.addEventListener("pointermove", onMove);
-    svg.addEventListener("pointerleave", reset);
+    svg.addEventListener("pointerleave", onLeave);
     return () => {
       svg.removeEventListener("pointermove", onMove);
-      svg.removeEventListener("pointerleave", reset);
+      svg.removeEventListener("pointerleave", onLeave);
       host.classList.remove("is-traced-host");
     };
   }, []);
