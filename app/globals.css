@@ -814,6 +814,12 @@ main > :first-child {
 .ds-card-peak {
   position: relative;
   isolation: isolate;
+  /* The sheen sweeps from -120% to +120% of the card. Without containment
+     that band extends the document scroll width, which on a tablet sized card
+     let the whole page scroll roughly 900px sideways. The overflow is clipped
+     horizontally only, so the TabLabel eyebrows that overhang the top edge by
+     design still show. */
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -1700,11 +1706,26 @@ html {
   border-radius: 0 !important;
 }
 
-/* Teeth retract at the same 960px breakpoint where the cards re-round, so a
-   rounded card is never left wearing square teeth. */
-/* Below the teeth breakpoint the cards go back to their normal rounded shape.
-   Matches the specificity used above so it wins in turn. */
+/* The teeth were hidden below 960px on the assumption there was no room.
+   Measured: the card leaves 14px each side all the way down to 393px and the
+   strips need 13px, so they stay on through tablet and phone. Only the tooth
+   shrinks, to keep the pitch proportionate to a narrower card. */
 @media (max-width: 960px) {
+  .pinked-edge {
+    --tooth: 16px;
+    width: 12px;
+  }
+  .pinked-edge-left {
+    left: -11px;
+  }
+  .pinked-edge-right {
+    right: -11px;
+  }
+}
+
+/* Below this the card is too narrow to give the teeth room without crowding
+   the text, so they retract and the cards return to their rounded shape. */
+@media (max-width: 380px) {
   .pinked-edge {
     display: none;
   }
