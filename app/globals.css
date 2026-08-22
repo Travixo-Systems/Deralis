@@ -506,18 +506,20 @@ main > :first-child {
       background: var(--border-strong);
       z-index: 1;
     }
-    /* Both arms run the full width and height of the block, so the cross
-       reaches the edges rather than stopping short of them. */
+    /* The arms stop short of the block edges. Run to the full width and
+       height they read as a divider splitting the section in four rather
+       than as one figure sitting at its centre. Inset by a quarter on each
+       side, so each arm spans the middle half of its axis. */
     .grid-flow::before {
-      top: 0;
-      bottom: 0;
+      top: 25%;
+      bottom: 25%;
       left: 50%;
       width: 1px;
       transform: translateX(-50%);
     }
     .grid-flow::after {
-      left: 0;
-      right: 0;
+      left: 25%;
+      right: 25%;
       top: 50%;
       height: 1px;
       transform: translateY(-50%);
@@ -567,22 +569,22 @@ main > :first-child {
        sitting beside it: each is pulled back by half its own size on both
        axes, so the arm passes through its middle. */
     .flow-cross-node-top {
-      top: 0;
+      top: 25%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
     .flow-cross-node-bottom {
-      bottom: 0;
+      bottom: 25%;
       left: 50%;
       transform: translate(-50%, 50%);
     }
     .flow-cross-node-left {
-      left: 0;
+      left: 25%;
       top: 50%;
       transform: translate(-50%, -50%);
     }
     .flow-cross-node-right {
-      right: 0;
+      right: 25%;
       top: 50%;
       transform: translate(50%, -50%);
     }
