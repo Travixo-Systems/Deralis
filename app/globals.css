@@ -936,6 +936,17 @@ main > :first-child {
   }
 }
 
+/* A cascading card also carries the arrival animation, and an animation with
+   a fill always outranks a hover transition, so the lift never showed on
+   anything inside a [data-cascade] row. Dropping the animation on hover hands
+   transform back to the transition; pausing it is not enough, since a paused
+   animation still owns the property. The arrival has finished long before a
+   pointer can reach the card. */
+[data-cascade] > .lift-card:hover,
+[data-cascade] > .lift-step:hover {
+  animation: none;
+}
+
 /* --- Page transitions ---------------------------------------------------
    Same document View Transitions. Baseline as of 2026: Chrome and Edge 111+,
    Safari 18+, Firefox 144+. Browsers without it navigate normally, which is

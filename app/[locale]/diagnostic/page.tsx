@@ -94,7 +94,7 @@ function DiagnosticHero() {
             ))}
           </div>
 
-          <a href={stripeLink} style={ctaPrimary}>{t("cta")}</a>
+          <a href={stripeLink} className="cta-press" style={ctaPrimary}>{t("cta")}</a>
           <DiscoveryCallLink />
           <span style={metaStyle}>{t("meta")}</span>
         </div>
@@ -174,7 +174,7 @@ function RecognitionCard() {
         <p style={introP}>{t("closing1")}</p>
         <p style={introP}>{t("closing2")}</p>
         <p style={{ ...introP, marginBottom: 32 }}>{t("closing3")}</p>
-        <a href={stripeLink} style={ctaPrimary}>{t("cta")}</a>
+        <a href={stripeLink} className="cta-press" style={ctaPrimary}>{t("cta")}</a>
         <DiscoveryCallLink />
       </div>
     </DsCard>
@@ -321,9 +321,9 @@ function ProcessCard() {
   return (
     <DsCardMedium>
       <p style={{ ...introP, marginBottom: 40 }}>{t("intro")}</p>
-      <div className="grid-process">
+      <div className="grid-process" data-cascade>
         {([0, 1, 2, 3] as const).map((i) => (
-          <div key={i} style={{ paddingTop: 20, borderTop: "1px solid var(--border-soft)" }}>
+          <div key={i} className="lift-step" style={{ paddingTop: 20, borderTop: "1px solid var(--border-soft)" }}>
             <span style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 28, fontWeight: 500, color: "var(--accent)", display: "block", marginBottom: 8 }}>{t(`steps.${i}.num`)}</span>
             <span style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 18, fontWeight: 500, display: "block", marginBottom: 8, color: "var(--text-primary)" }}>{t(`steps.${i}.title`)}</span>
             <span style={{ fontSize: 13, lineHeight: 1.55, color: "var(--text-secondary)" }}>{t(`steps.${i}.desc`)}</span>
@@ -340,13 +340,13 @@ function DiagnosticFinalCTA() {
 
   return (
     <DsCardFinal>
-      <h2 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(30px, 4vw, 42px)", fontWeight: 500, lineHeight: 1.1, margin: "0 auto 16px", letterSpacing: "-0.02em", maxWidth: "22ch" }}>
-        {t("h2")}
+      <h2 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(30px, 4vw, 42px)", fontWeight: 500, lineHeight: 1.1, margin: "0 auto 16px", letterSpacing: "-0.02em", maxWidth: "22ch" }} aria-label={t("h2")}>
+        <WordReveal>{t("h2")}</WordReveal>
       </h2>
       <p style={{ fontSize: 16, color: "var(--text-secondary)", maxWidth: "52ch", margin: "0 auto 36px", lineHeight: 1.55 }}>
         {t("sub")}
       </p>
-      <a href={stripeLink} style={ctaPrimary}>{t("cta")}</a>
+      <a href={stripeLink} className="cta-press" style={ctaPrimary}>{t("cta")}</a>
       <DiscoveryCallLink />
       <p style={{ marginTop: 14, fontSize: 12, color: "var(--text-muted)", fontStyle: "italic" }}>{t("meta")}</p>
     </DsCardFinal>
@@ -390,7 +390,7 @@ function DiscoveryCallLink() {
   const tActions = useTranslations("common.actions");
   if (!discoveryCallLink) return null;
   return (
-    <a href={discoveryCallLink} target="_blank" rel="noopener noreferrer" style={ctaDiscoveryStyle}>
+    <a href={discoveryCallLink} target="_blank" rel="noopener noreferrer" className="cta-press-subtle" style={ctaDiscoveryStyle}>
       {tActions("bookCall")}
     </a>
   );
