@@ -93,7 +93,7 @@ function TraviXOCaseStudy() {
             <p style={sub}>{t("prose3")}</p>
             <p style={sub}>{t("prose4")}</p>
           </div>
-          <Link href="/projects/travixo" style={ctaSecondary}>{t("linkLabel")} →</Link>
+          <Link href="/projects/travixo" style={ctaSecondary}>{t("linkLabel")}</Link>
         </div>
         <div>
           <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
@@ -147,7 +147,7 @@ function GovPortalCaseStudy() {
             <p style={sub}>{t("prose1")}</p>
             <p style={sub}>{t("prose2")}</p>
           </div>
-          <a href={t("url")} target="_blank" rel="noopener noreferrer" style={ctaSecondary}>{t("viewBuildLabel")} →</a>
+          <a href={t("url")} target="_blank" rel="noopener noreferrer" style={ctaSecondary}>{t("viewBuildLabel")}</a>
         </div>
         <div>
           <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
@@ -190,7 +190,7 @@ function ConceptsCard() {
             <span style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 16, fontWeight: 600, color: "var(--accent)", display: "block", marginBottom: 12 }}>{item.num}</span>
             <h3 style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 20, fontWeight: 500, color: "var(--text-primary)", marginBottom: 10, letterSpacing: "-0.01em" }}>{item.title}</h3>
             <p style={{ fontSize: 14, lineHeight: 1.6, color: "var(--text-secondary)", marginBottom: 16 }}>{item.desc}</p>
-            <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 500, color: "var(--text-primary)", textDecoration: "none", borderBottom: "1px solid var(--border-strong)", paddingBottom: 2 }}>{item.linkLabel} →</a>
+            <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 500, color: "var(--text-primary)", textDecoration: "none", borderBottom: "1px solid var(--border-strong)", paddingBottom: 2 }}>{item.linkLabel}</a>
           </div>
         ))}
       </div>

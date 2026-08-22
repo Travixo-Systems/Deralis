@@ -34,7 +34,6 @@ export default function ConceptItems({ items }: ConceptItemsProps) {
             className="inline-flex items-center gap-1.5 text-[14px] font-medium text-ink no-underline border-b border-border-warm pb-[3px] self-start mt-auto hover:text-accent hover:border-accent transition-colors"
           >
             {item.linkLabel}
-            <span aria-hidden="true">→</span>
           </a>
         </div>
       ))}

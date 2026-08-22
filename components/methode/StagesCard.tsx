@@ -22,7 +22,7 @@ export default function StagesCard() {
       {/* Secondary link, left-aligned with content, ~24px gap from last stage */}
       <div style={{ marginTop: 24, paddingLeft: 45 }}>
         <Link href="/projects" style={projectsLink}>
-          {tActions("viewOurWork")} →
+          {tActions("viewOurWork")}
         </Link>
       </div>
     </DsCard>

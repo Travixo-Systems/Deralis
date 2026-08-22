@@ -380,7 +380,7 @@ const metaStyle: CSSProperties = {
 
 const ctaDiscoveryStyle: CSSProperties = {
   display: "inline-flex", alignItems: "center", gap: 8, marginLeft: 18, fontSize: 14, fontWeight: 500,
-  color: "var(--text-secondary)", textDecoration: "none", transition: "color 200ms ease",
+  color: "var(--accent)", textDecoration: "none", transition: "color 200ms ease",
 };
 
 /* Subordinate discovery-call link beside the primary paid diagnostic CTA. Renders only when the link env is set. */

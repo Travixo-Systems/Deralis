@@ -65,7 +65,7 @@ const ctaSecondaryPeakStyle: CSSProperties = {
   gap: 8,
   fontSize: 14,
   fontWeight: 500,
-  color: "var(--text-on-peak-muted)",
+  color: "var(--link-on-peak)",
   textDecoration: "none",
   fontFamily: "inherit",
   transition: "color 200ms ease",

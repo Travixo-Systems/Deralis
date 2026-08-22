@@ -70,7 +70,7 @@ const ctaPeak: CSSProperties = {
 };
 const ctaSecondary: CSSProperties = {
   display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 500,
-  color: "var(--text-on-peak-muted)", textDecoration: "none", transition: "color 200ms ease",
+  color: "var(--link-on-peak)", textDecoration: "none", transition: "color 200ms ease",
 };
 const meta: CSSProperties = {
   display: "block", marginTop: 14, fontSize: 12, color: "var(--text-on-peak-dim)", fontStyle: "italic",

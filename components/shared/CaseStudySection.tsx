@@ -79,7 +79,6 @@ export default function CaseStudySection({
                 className="inline-flex items-center gap-2 text-[15px] font-medium text-ink no-underline border-b border-ink pb-[3px] hover:text-accent hover:border-accent transition-colors"
               >
                 {closing.label}
-                <span aria-hidden="true">→</span>
               </a>
             ) : (
               <Link
@@ -87,7 +86,6 @@ export default function CaseStudySection({
                 className="inline-flex items-center gap-2 text-[15px] font-medium text-ink no-underline border-b border-ink pb-[3px] hover:text-accent hover:border-accent transition-colors"
               >
                 {closing.label}
-                <span aria-hidden="true">→</span>
               </Link>
             )
           ) : (
@@ -103,7 +101,6 @@ export default function CaseStudySection({
                   className="inline-flex items-center gap-2 text-[15px] font-medium text-ink no-underline border-b border-ink pb-[3px] hover:text-accent hover:border-accent transition-colors mt-4"
                 >
                   {closing.link.label}
-                  <span aria-hidden="true">→</span>
                 </a>
               )}
             </div>

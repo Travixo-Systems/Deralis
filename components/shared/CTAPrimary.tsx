@@ -5,6 +5,7 @@ import type { ComponentProps, ReactNode } from "react";
 type CTAPrimaryProps = {
   href: string;
   children: ReactNode;
+  /** Off by default. The labels say what happens; the glyph added nothing. */
   showArrow?: boolean;
   className?: string;
 } & Omit<ComponentProps<typeof Link>, "href" | "children" | "className">;
@@ -12,7 +13,7 @@ type CTAPrimaryProps = {
 export default function CTAPrimary({
   href,
   children,
-  showArrow = true,
+  showArrow = false,
   className,
   ...rest
 }: CTAPrimaryProps) {
