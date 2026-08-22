@@ -1235,6 +1235,195 @@ html {
   }
 }
 
+/* --- Coordination diagram -----------------------------------------------
+   A request moving between people and stalling at approval. Styles live here
+   rather than inside the SVG so they can read the theme tokens directly and
+   so the reduced-motion and unsupported paths are handled in one place. */
+.coord-fig {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 760px;
+  margin: 8px auto 0;
+  /* Not overflow: visible. The figure sits in a scroll container, and painting
+     outside it would push past the viewport edge and scroll the page instead. */
+  overflow: hidden;
+  color: var(--text-primary);
+}
+
+.coord-fig text {
+  font-family: var(--font-ibm-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.01em;
+  fill: currentColor;
+}
+.coord-fig .muted {
+  font-size: 17px;
+  fill: var(--text-muted);
+}
+.coord-fig .node {
+  fill: var(--card-main);
+  stroke: currentColor;
+  stroke-width: 2.6;
+}
+.coord-fig .link {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}
+.coord-fig .accent {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.8;
+  stroke-linecap: round;
+}
+.coord-fig .stall-node {
+  fill: var(--card-main);
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+.coord-fig .pulse {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.2;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.coord-fig .dot {
+  fill: var(--accent);
+  offset-path: path("M128 66 H412");
+  /* Rests at the end of its path, so a browser without scroll timelines shows
+     the request already arrived at the stalled node rather than nothing. */
+  offset-distance: 100%;
+  offset-rotate: 0deg;
+}
+
+/* The return arrow is drawn statically when nothing animates it, so the
+   figure always reads as complete. */
+.coord-fig .return {
+  stroke-dasharray: none;
+}
+
+/* Accent overlay on each segment. It rests fully drawn, so a browser with no
+   scroll timeline shows a completed path rather than a broken one, and the
+   animation only removes and restores the dash. */
+.coord-fig .link-fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-dasharray: 104;
+  stroke-dashoffset: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .coord-fig .dot {
+      animation: coord-travel cubic-bezier(0.15, 0.85, 0.2, 1) both;
+      animation-timeline: view();
+      animation-range: entry 15% cover 55%;
+    }
+    .coord-fig .return {
+      stroke-dasharray: 260;
+      animation: coord-draw linear both;
+      animation-timeline: view();
+      animation-range: entry 30% cover 65%;
+    }
+    /* The pulse is time based on purpose: a stall is an ongoing condition, so
+       it keeps breathing rather than resolving once and stopping. */
+    .coord-fig .pulse {
+      animation: coord-pulse 2.4s ease-out infinite;
+    }
+
+    /* Segments colour in one after the other, tracking the request. Staggered
+       on animation-range rather than delay: on a scroll timeline a delay is
+       measured in scroll distance, so it would drift out of step. */
+    .coord-fig .link-fill-1 {
+      animation: coord-link linear both;
+      animation-timeline: view();
+      animation-range: entry 15% cover 35%;
+    }
+    .coord-fig .link-fill-2 {
+      animation: coord-link linear both;
+      animation-timeline: view();
+      animation-range: entry 28% cover 52%;
+    }
+  }
+
+  @keyframes coord-travel {
+    0% {
+      offset-distance: 0%;
+    }
+    72% {
+      offset-distance: 90%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+  @keyframes coord-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(1.45);
+      opacity: 0;
+    }
+  }
+  @keyframes coord-link {
+    from {
+      stroke-dashoffset: 104;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes coord-draw {
+    0% {
+      stroke-dashoffset: 260;
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+}
+
+/* Below roughly 620px the figure would scale down until the labels collide
+   and the type is unreadable. Rather than shrink it further, hold it at a
+   legible minimum and let the row scroll sideways inside its own container.
+   The page itself never scrolls horizontally. */
+.coord-fig-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 8px 0 0;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+@media (max-width: 620px) {
+  .coord-fig {
+    min-width: 560px;
+  }
+  .coord-fig text {
+    font-size: 24px;
+  }
+  .coord-fig .muted {
+    font-size: 19px;
+  }
+}
+
 /* ========== MOTION ========== */
 /* Reduced motion means less movement, not a different layout.
    Durations are collapsed so nothing animates, but transform itself is left

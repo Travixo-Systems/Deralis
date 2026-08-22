@@ -112,6 +112,15 @@
           "eyebrow": "Free estimate · 2 minutes · No sign-up",
           "title": "Put a figure on what this friction absorbs in your business.",
           "button": "Start the estimate →"
+        },
+        "diagram": {
+          "node1": "Request",
+          "node2": "Handover",
+          "node3": "Approval",
+          "node4": "Delivery",
+          "stalled": "stalled",
+          "followUp": "follow-up",
+          "title": "A request passes from one person to the next and stalls waiting for an approval, sending the customer back to follow up."
         }
       },
       "flow": {

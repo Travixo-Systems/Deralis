@@ -3,6 +3,7 @@ import DsCard from "@/components/shared/DsCard";
 import { Link } from "@/i18n/navigation";
 import PullQuote from "@/components/shared/PullQuote";
 import type { CSSProperties } from "react";
+import CoordinationDiagram from "@/components/home/CoordinationDiagram";
 
 const eyebrowStyle: CSSProperties = {
   fontSize: "var(--fs-eyebrow)",
@@ -112,6 +113,18 @@ export default function CostSection() {
       <p style={eyebrowStyle}>{t("eyebrow")}</p>
       <p style={introStyle}>{t("intro1")}</p>
       <p style={introStyle}>{t("intro2")}</p>
+
+      <CoordinationDiagram
+        labels={[
+          t("diagram.node1"),
+          t("diagram.node2"),
+          t("diagram.node3"),
+          t("diagram.node4"),
+        ]}
+        stalledLabel={t("diagram.stalled")}
+        followUpLabel={t("diagram.followUp")}
+        title={t("diagram.title")}
+      />
 
       <PullQuote html={t.raw("pullquote")} />
 

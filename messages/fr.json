@@ -112,6 +112,15 @@
           "eyebrow": "Estimation gratuite · 2 minutes · Sans inscription",
           "title": "Chiffrez ce que ces frictions mobilisent chez vous.",
           "button": "Faire l’estimation →"
+        },
+        "diagram": {
+          "node1": "Demande",
+          "node2": "Transfert",
+          "node3": "Validation",
+          "node4": "Livraison",
+          "stalled": "en attente",
+          "followUp": "relance",
+          "title": "Une demande passe d'une personne à l'autre puis reste bloquée en attente d'une validation, ce qui oblige le client à relancer."
         }
       },
       "flow": {
