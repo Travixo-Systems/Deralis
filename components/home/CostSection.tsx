@@ -110,26 +110,27 @@ export default function CostSection() {
   const t = useTranslations("home.page.cost");
 
   return (
-    <DsCard>
+    <DsCard className="cost-card">
       <p style={eyebrowStyle}>{t("eyebrow")}</p>
       <p style={introStyle}>{t("intro1")}</p>
-      <p style={introStyle}>{t("intro2")}</p>
+
+      <PullQuote html={t.raw("pullquote")} />
 
       <CoordinationTrace>
         <CoordinationDiagram
-        nodes={[
-          { x: 90, label: t("diagram.node1"), detail: t("diagram.detail1") },
-          { x: 270, label: t("diagram.node2"), detail: t("diagram.detail2") },
-          { x: 450, label: t("diagram.node3"), detail: t("diagram.detail3"), stalled: true },
-          { x: 630, label: t("diagram.node4"), detail: t("diagram.detail4") },
-        ]}
-        stalledLabel={t("diagram.stalled")}
-        followUpLabel={t("diagram.followUp")}
+          nodes={[
+            { x: 90, label: t("diagram.node1"), detail: t("diagram.detail1") },
+            { x: 270, label: t("diagram.node2"), detail: t("diagram.detail2") },
+            { x: 450, label: t("diagram.node3"), detail: t("diagram.detail3"), stalled: true },
+            { x: 630, label: t("diagram.node4"), detail: t("diagram.detail4") },
+          ]}
+          stalledLabel={t("diagram.stalled")}
+          followUpLabel={t("diagram.followUp")}
           title={t("diagram.title")}
         />
       </CoordinationTrace>
 
-      <PullQuote html={t.raw("pullquote")} />
+      <p style={introStyle}>{t("intro2")}</p>
 
       <div className="grid-3col" data-cascade>
         {CARDS.map((c) => (

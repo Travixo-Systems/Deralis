@@ -1582,6 +1582,21 @@ html {
   }
 }
 
+/* --- Cost section density ------------------------------------------------
+   This section carries the most in one card: prose, a pull quote, the
+   diagram, three cards and an invitation. At the shared 64px padding it ran
+   to 1.4 viewports, so the argument could never be seen whole. Scoped rather
+   than changing --pad-card-large, which every DsCard on the site uses. */
+.cost-card {
+  padding: 48px 56px !important;
+}
+
+@media (max-width: 960px) {
+  .cost-card {
+    padding: 32px 24px !important;
+  }
+}
+
 /* ========== MOTION ========== */
 /* Reduced motion means less movement, not a different layout.
    Durations are collapsed so nothing animates, but transform itself is left
