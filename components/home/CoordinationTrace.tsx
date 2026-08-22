@@ -22,6 +22,12 @@ const DOT_PARKED = -100;
 /** How close, in viewBox units, the marker gets before a diamond absorbs it. */
 const ABSORB_RADIUS = 30;
 
+/** Automatic playback: where the marker starts and stops, and how long it
+    takes. Slow enough to follow rather than a flicker. */
+const SWEEP_FROM = 60;
+const SWEEP_TO = 470;
+const SWEEP_MS = 2200;
+
 /**
  * Lets the pointer draw the figure.
  *
@@ -136,9 +142,59 @@ export default function CoordinationTrace({ children }: { children: ReactNode })
       reset();
     };
 
+    // --- Automatic playback -------------------------------------------------
+    // The same drawing the pointer produces, played by itself when the figure
+    // reaches the viewport, twice, so a reader who never hovers still sees the
+    // request travel and stall. Driven by a timer rather than a scroll
+    // timeline, so it plays at its own pace instead of only moving while the
+    // reader happens to be scrolling.
+    let raf = 0;
+    let playing = false;
+
+    const playOnce = () =>
+      new Promise<void>((resolve) => {
+        const start = performance.now();
+        const step = (now: number) => {
+          const t = Math.min(1, (now - start) / SWEEP_MS);
+          // Ease out, so the marker slows as it reaches the stalled node.
+          const eased = 1 - Math.pow(1 - t, 2);
+          paint(SWEEP_FROM + (SWEEP_TO - SWEEP_FROM) * eased);
+          if (t < 1) raf = requestAnimationFrame(step);
+          else resolve();
+        };
+        raf = requestAnimationFrame(step);
+      });
+
+    const playTwice = async () => {
+      if (playing) return;
+      playing = true;
+      host.classList.add("is-traced-host");
+      for (let i = 0; i < 2; i++) {
+        reset();
+        await new Promise((r) => setTimeout(r, i === 0 ? 240 : 520));
+        await playOnce();
+        await new Promise((r) => setTimeout(r, 700));
+      }
+      // Left drawn at the end rather than reset, so the figure keeps the state
+      // the animation just explained.
+      paint(SWEEP_TO);
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        io.disconnect();
+        playTwice();
+      },
+      { threshold: 0.55 }
+    );
+    io.observe(svg);
+
     svg.addEventListener("pointermove", onMove);
     svg.addEventListener("pointerleave", onLeave);
     return () => {
+      io.disconnect();
+      cancelAnimationFrame(raf);
       svg.removeEventListener("pointermove", onMove);
       svg.removeEventListener("pointerleave", onLeave);
       host.classList.remove("is-traced-host");

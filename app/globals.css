@@ -1475,54 +1475,14 @@ html {
 
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
-    .coord-fig .dot {
-      animation: coord-travel cubic-bezier(0.15, 0.85, 0.2, 1) both;
-      animation-timeline: view();
-      animation-range: contain 25% contain 100%;
-    }
-    .coord-fig .return {
-      stroke-dasharray: 260;
-      animation: coord-draw linear both;
-      animation-timeline: view();
-      animation-range: contain 70% contain 100%;
-    }
-    /* The pulse is time based on purpose: a stall is an ongoing condition, so
-       it keeps breathing rather than resolving once and stopping. */
+    /* The figure is driven by CoordinationTrace, which plays the sweep twice
+       when the section arrives and then hands over to the pointer. A scroll
+       timeline on the same properties would fight that, dragging the marker
+       backwards whenever the reader scrolled up, so only the pulse is left
+       here: it is time based and belongs to the stalled node rather than to
+       the sweep. */
     .coord-fig .pulse {
       animation: coord-pulse 2.4s ease-out infinite;
-    }
-
-    /* Segments colour in one after the other, tracking the request. Staggered
-       on animation-range rather than delay: on a scroll timeline a delay is
-       measured in scroll distance, so it would drift out of step. */
-    .coord-fig .link-fill-1 {
-      animation: coord-link linear both;
-      animation-timeline: view();
-      animation-range: contain 25% contain 55%;
-    }
-    .coord-fig .link-fill-2 {
-      animation: coord-link linear both;
-      animation-timeline: view();
-      animation-range: contain 60% contain 95%;
-    }
-
-    /* Each diamond fills as the request reaches it, staged behind the segment
-       that leads into it, so the sequence reads left to right. Delivery is
-       never filled: it is the step the request does not reach. */
-    .coord-fig .coord-node-90 .node {
-      animation: coord-node-fill linear both;
-      animation-timeline: view();
-      animation-range: contain 20% contain 30%;
-    }
-    .coord-fig .coord-node-270 .node {
-      animation: coord-node-fill linear both;
-      animation-timeline: view();
-      animation-range: contain 55% contain 65%;
-    }
-    .coord-fig .coord-node-450 .stall-node {
-      animation: coord-node-fill linear both;
-      animation-timeline: view();
-      animation-range: contain 92% contain 100%;
     }
   }
 
