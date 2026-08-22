@@ -110,6 +110,12 @@ export default function HowIWork() {
           <span className="flow-line-fill" aria-hidden="true" />
         </div>
         <div className="grid-flow" data-cascade>
+          {/* Nodes at the four arm ends of the cross. Only drawn below 960px,
+              where the flow becomes a cross rather than a single row. */}
+          <span className="flow-cross-node flow-cross-node-top" aria-hidden="true" />
+          <span className="flow-cross-node flow-cross-node-bottom" aria-hidden="true" />
+          <span className="flow-cross-node flow-cross-node-left" aria-hidden="true" />
+          <span className="flow-cross-node flow-cross-node-right" aria-hidden="true" />
           {ITEMS.map((item) => (
             <div key={item} className="lift-step flow-step" style={flowStepStyle} tabIndex={0}>
               <div style={flowDotStyle} className="flow-dot-responsive flow-dot" />

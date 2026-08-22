@@ -47,6 +47,12 @@ export default function CoordinationTrace({ children }: { children: ReactNode })
     // "hover: hover" so a tablet with a mouse or a stylus gets it too: the
     // stricter query treats every touch capable device as unable to hover,
     // which left tablets with a static figure even when driven by a trackpad.
+    //
+    // Without this the host still took the traced class, which switches off
+    // the scroll driven fill, while touch events were ignored: a touch tablet
+    // ended up with lines that never filled and diamonds that only responded
+    // to a tap.
+    if (!window.matchMedia("(any-pointer: fine)").matches) return;
 
     const dot = svg.querySelector<SVGPathElement>(".dot");
     const fills = SEGMENTS.map((s) =>
