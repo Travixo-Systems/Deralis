@@ -292,8 +292,10 @@ function NotForAndGuaranteeCard() {
 
   return (
     <DsCard>
-      <div className="grid-2col-wide">
-        <div>
+      <div className="grid-2col-wide pinked-row">
+        <div className="pinked pinked-column">
+          <span className="pinked-edge pinked-edge-left" aria-hidden="true" />
+          <span className="pinked-edge pinked-edge-right" aria-hidden="true" />
           <h3 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "var(--fs-h3)", fontWeight: 500, lineHeight: 1.2, marginBottom: 16 }}>{tNot("h3")}</h3>
           <p style={{ fontSize: 15, lineHeight: 1.55, color: "var(--text-secondary)", marginBottom: 28 }}>{tNot("intro")}</p>
           {items.map((item, i) => (

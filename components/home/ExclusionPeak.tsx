@@ -57,7 +57,10 @@ export default function ExclusionPeak() {
   const tags: string[] = t.raw("tags");
 
   return (
-    <DsCardPeak>
+    <DsCardPeak className="pinked">
+      <span className="pinked-edge pinked-edge-left" aria-hidden="true" />
+      <span className="pinked-edge pinked-edge-right" aria-hidden="true" />
+
       <TabLabel variant="on-peak" style={{ left: 56 }}>
         {t("eyebrow")}
       </TabLabel>

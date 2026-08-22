@@ -593,7 +593,6 @@ main > :first-child {
 
 
 
-
 /* ========== HERO ANCHOR (proof card) ========== */
 @layer components {
   .hero-anchor { transition: box-shadow 280ms ease; }
@@ -1620,6 +1619,91 @@ html {
     gap: 16px;
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+/* A pinked column inside a shared card. It needs its own surface, otherwise
+   the teeth have nothing to cut out of and would be invisible against the
+   card behind them. */
+/* The guarantee sits beside a shorter pinked swatch, so centring it against
+   that block stops it reading as top aligned text floating next to a card.
+   Scoped to this row rather than changing .grid-2col-wide, which other
+   sections use with genuinely top aligned columns. */
+.pinked-row {
+  align-items: center;
+}
+
+.pinked-column {
+  /* The accent surface rather than paper. Paper cut out of paper left the
+     teeth almost invisible: the cut only reads when the swatch is a different
+     material from the card it was cut from. */
+  background: var(--card-accent);
+  padding: 30px 32px;
+}
+
+
+/* --- Pinking shear edges -------------------------------------------------
+   A cut edge on the sections that are about cutting: who this is not for.
+   The teeth live on pseudo elements at the left and right edges rather than
+   on the card itself. Masking the card directly, which is what the common
+   snippet does, shreds the whole box: the text turns to lattice, the shadow
+   stops painting and any overhanging TabLabel is destroyed.
+
+   background: inherit means the teeth pick up whatever surface the card
+   carries, so they follow the theme without a second set of colour rules. */
+.pinked {
+  position: relative;
+}
+
+/* Real elements rather than ::before and ::after. The peak card already uses
+   ::after for the sheen sweep, which sets inset: 0 and would stretch a tooth
+   strip across the whole card. Two effects cannot share one pseudo element. */
+.pinked-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  background: inherit;
+  pointer-events: none;
+  --tooth: 22px;
+}
+.pinked-edge-left {
+  left: -13px;
+  -webkit-mask: conic-gradient(from -45deg at 0 50%, #0000 0 90deg, #000 0) 50% / 100% var(--tooth);
+  mask: conic-gradient(from -45deg at 0 50%, #0000 0 90deg, #000 0) 50% / 100% var(--tooth);
+}
+.pinked-edge-right {
+  right: -13px;
+  -webkit-mask: conic-gradient(from 135deg at 100% 50%, #0000 0 90deg, #000 0) 50% / 100% var(--tooth);
+  mask: conic-gradient(from 135deg at 100% 50%, #0000 0 90deg, #000 0) 50% / 100% var(--tooth);
+}
+
+/* Square corners: rounded ones leave a notch where the teeth meet the radius.
+   DsCard sets its radius inline and the responsive block re-rounds cards with
+   !important at narrower widths, so this needs both the flag and enough
+   specificity to outrank a later rule of equal weight. */
+.pinked.pinked,
+.ds-card-peak.pinked,
+.ds-card.pinked,
+.pinked-column.pinked-column {
+  border-radius: 0 !important;
+}
+
+/* Teeth retract at the same 960px breakpoint where the cards re-round, so a
+   rounded card is never left wearing square teeth. */
+/* Below the teeth breakpoint the cards go back to their normal rounded shape.
+   Matches the specificity used above so it wins in turn. */
+@media (max-width: 960px) {
+  .pinked-edge {
+    display: none;
+  }
+  .pinked.pinked,
+  .ds-card-peak.pinked,
+  .ds-card.pinked {
+    border-radius: var(--radius-card) !important;
+  }
+  .pinked-column.pinked-column {
+    border-radius: var(--radius-internal) !important;
   }
 }
 
