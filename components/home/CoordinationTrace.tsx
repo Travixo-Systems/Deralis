@@ -43,9 +43,10 @@ export default function CoordinationTrace({ children }: { children: ReactNode })
     if (!svg) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    // A coarse pointer cannot hover, so tracking would only ever fire on tap.
-    // Those visitors keep the scroll driven animation and the tap states.
-    if (!window.matchMedia("(hover: hover)").matches) return;
+    // Tracking needs a pointer that can hover. "any-pointer: fine" rather than
+    // "hover: hover" so a tablet with a mouse or a stylus gets it too: the
+    // stricter query treats every touch capable device as unable to hover,
+    // which left tablets with a static figure even when driven by a trackpad.
 
     const dot = svg.querySelector<SVGPathElement>(".dot");
     const fills = SEGMENTS.map((s) =>
@@ -104,6 +105,9 @@ export default function CoordinationTrace({ children }: { children: ReactNode })
     };
 
     const onMove = (event: PointerEvent) => {
+      // A touch drag is the reader scrolling the figure sideways, not tracing
+      // it, so those events are left alone.
+      if (event.pointerType === "touch") return;
       const rect = svg.getBoundingClientRect();
       if (rect.width === 0) return;
       paint(((event.clientX - rect.left) / rect.width) * VIEWBOX_WIDTH);
