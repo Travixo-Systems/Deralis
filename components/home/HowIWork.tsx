@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import DsCard from "@/components/shared/DsCard";
 import type { CSSProperties } from "react";
+import WordReveal from "@/components/shared/WordReveal";
 
 const eyebrowStyle: CSSProperties = {
   fontSize: "var(--fs-eyebrow)",
@@ -60,11 +61,8 @@ const flowDotStyle: CSSProperties = {
   width: 17,
   height: 17,
   borderRadius: "50%",
-  background: "var(--card-main)",
-  border: "2px solid var(--accent)",
   position: "relative",
   zIndex: 3,
-  transition: "background-color 450ms ease, border-color 450ms ease",
 };
 
 const flowNumStyle: CSSProperties = {
@@ -102,15 +100,19 @@ export default function HowIWork() {
   return (
     <DsCard>
       <p style={eyebrowStyle}>{t("eyebrow")}</p>
-      <h2 style={h2Style}>{t("title")}</h2>
+      <h2 style={h2Style} aria-label={t("title")}>
+        <WordReveal>{t("title")}</WordReveal>
+      </h2>
       <p style={introStyle}>{t("intro")}</p>
 
       <div style={flowProcessStyle}>
-        <div style={flowLineStyle} className="flow-line-responsive" />
-        <div className="grid-flow">
+        <div style={flowLineStyle} className="flow-line-responsive flow-line">
+          <span className="flow-line-fill" aria-hidden="true" />
+        </div>
+        <div className="grid-flow" data-cascade>
           {ITEMS.map((item) => (
-            <div key={item} style={flowStepStyle}>
-              <div style={flowDotStyle} className="flow-dot-responsive" />
+            <div key={item} className="lift-step flow-step" style={flowStepStyle} tabIndex={0}>
+              <div style={flowDotStyle} className="flow-dot-responsive flow-dot" />
               <div style={flowNumStyle}>{t(`items.${item}.num`)}</div>
               <div style={flowTitleStyle}>{t(`items.${item}.title`)}</div>
               <div style={flowDescStyle}>{t(`items.${item}.description`)}</div>

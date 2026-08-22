@@ -82,8 +82,8 @@ export default function WhoSection() {
 
       <PullQuote html={t.raw("pullquote")} />
 
-      <div className="grid-2col">
-        <div style={whoCardStyle}>
+      <div className="grid-2col" data-cascade>
+        <div className="lift-card" style={whoCardStyle}>
           <h3 style={whoCardH3Style}>{t("card1.title")}</h3>
           <p style={whoCardPStyle}>{t("card1.description")}</p>
           <div style={tagsStyle}>
@@ -92,7 +92,7 @@ export default function WhoSection() {
             ))}
           </div>
         </div>
-        <div style={whoCardStyle}>
+        <div className="lift-card" style={whoCardStyle}>
           <h3 style={whoCardH3Style}>{t("card2.title")}</h3>
           <p style={whoCardPStyle}>{t("card2.description")}</p>
           <div style={tagsStyle}>

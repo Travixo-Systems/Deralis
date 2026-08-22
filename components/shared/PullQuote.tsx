@@ -11,14 +11,17 @@ export default function PullQuote({ html, style }: PullQuoteProps) {
       className="pull-quote"
       style={{
         fontFamily: "var(--font-fraunces), Georgia, serif",
-        fontSize: "clamp(40px, 5vw, 56px)",
+        // Capped below the h1 at 52px. At 56px this aside was the largest
+        // text on the site, outranking the page title and every section
+        // heading, which is what made it read as out of place.
+        fontSize: "clamp(30px, 3.4vw, 42px)",
         fontWeight: 400,
-        lineHeight: 1.08,
-        letterSpacing: "-0.025em",
-        margin: "68px 0 72px",
+        lineHeight: 1.12,
+        letterSpacing: "-0.02em",
+        margin: "34px 0 36px",
         paddingLeft: 40,
         borderLeft: "4px solid var(--accent)",
-        maxWidth: "20ch",
+        maxWidth: "26ch",
         transition: "color 450ms ease, border-color 450ms ease",
         ...style,
       }}

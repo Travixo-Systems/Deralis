@@ -7,6 +7,8 @@ import RichText from "@/components/shared/RichText";
 import ScreenshotDisclaimer from "@/components/shared/ScreenshotDisclaimer";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
+import AnimateIn from "@/components/shared/AnimateIn";
+import WordReveal from "@/components/shared/WordReveal";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -35,11 +37,21 @@ export default async function ProjectsPage({ params }: Props) {
   return (
     <>
       <ProjectsHero />
-      <TraviXOCaseStudy />
-      <ProjectsClimax />
-      <GovPortalCaseStudy />
-      <ConceptsCard />
-      <ProjectsFinalCTA />
+      <AnimateIn>
+        <TraviXOCaseStudy />
+      </AnimateIn>
+      <AnimateIn>
+        <ProjectsClimax />
+      </AnimateIn>
+      <AnimateIn>
+        <GovPortalCaseStudy />
+      </AnimateIn>
+      <AnimateIn>
+        <ConceptsCard />
+      </AnimateIn>
+      <AnimateIn>
+        <ProjectsFinalCTA />
+      </AnimateIn>
     </>
   );
 }
@@ -81,7 +93,7 @@ function TraviXOCaseStudy() {
             <p style={sub}>{t("prose3")}</p>
             <p style={sub}>{t("prose4")}</p>
           </div>
-          <Link href="/projects/travixo" style={ctaSecondary}>{t("linkLabel")} →</Link>
+          <Link href="/projects/travixo" style={ctaSecondary}>{t("linkLabel")}</Link>
         </div>
         <div>
           <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
@@ -129,13 +141,13 @@ function GovPortalCaseStudy() {
       <div className="grid-hero">
         <div>
           <p style={eyebrow}>{t("label")}</p>
-          <h2 style={h2Style}>{t("title")}</h2>
+          <h2 style={h2Style} aria-label={t("title")}><WordReveal>{t("title")}</WordReveal></h2>
           <p style={{ fontSize: 14, fontWeight: 500, color: "var(--text-muted)", marginBottom: 24 }}>{t("context")}</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 24 }}>
             <p style={sub}>{t("prose1")}</p>
             <p style={sub}>{t("prose2")}</p>
           </div>
-          <a href={t("url")} target="_blank" rel="noopener noreferrer" style={ctaSecondary}>{t("viewBuildLabel")} →</a>
+          <a href={t("url")} target="_blank" rel="noopener noreferrer" style={ctaSecondary}>{t("viewBuildLabel")}</a>
         </div>
         <div>
           <div style={{ background: "var(--card-paper)", border: "1px solid var(--border-strong)", borderRadius: "var(--radius-internal)", overflow: "hidden", boxShadow: "var(--tile-shadow)" }}>
@@ -168,17 +180,17 @@ function ConceptsCard() {
   return (
     <DsCard>
       <p style={eyebrow}>{t("eyebrow")}</p>
-      <h2 style={h2Style}>{t("title")}</h2>
+      <h2 style={h2Style} aria-label={t("title")}><WordReveal>{t("title")}</WordReveal></h2>
       <p style={{ ...sub, marginBottom: 48, maxWidth: "58ch" }}>{t("intro")}</p>
 
-      <div className="grid-2col">
+      <div className="grid-2col" data-cascade>
         {items.map((item) => (
-          <div key={item.num} style={conceptCard}>
+          <div key={item.num} className="lift-card" style={conceptCard}>
             <span style={livePill} aria-label="Live">LIVE</span>
             <span style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 16, fontWeight: 600, color: "var(--accent)", display: "block", marginBottom: 12 }}>{item.num}</span>
             <h3 style={{ fontFamily: "var(--font-fraunces), serif", fontSize: 20, fontWeight: 500, color: "var(--text-primary)", marginBottom: 10, letterSpacing: "-0.01em" }}>{item.title}</h3>
             <p style={{ fontSize: 14, lineHeight: 1.6, color: "var(--text-secondary)", marginBottom: 16 }}>{item.desc}</p>
-            <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 500, color: "var(--text-primary)", textDecoration: "none", borderBottom: "1px solid var(--border-strong)", paddingBottom: 2 }}>{item.linkLabel} →</a>
+            <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, fontWeight: 500, color: "var(--text-primary)", textDecoration: "none", borderBottom: "1px solid var(--border-strong)", paddingBottom: 2 }}>{item.linkLabel}</a>
           </div>
         ))}
       </div>

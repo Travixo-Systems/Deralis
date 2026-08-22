@@ -18,7 +18,7 @@ export default function CTASecondary({
     <Link
       href={href}
       className={cn(
-        "text-[15px] font-medium text-ink no-underline border-b border-transparent pb-[2px] hover:border-ink transition-[border-color] duration-150",
+        "cta-press-subtle text-[15px] font-medium text-ink no-underline border-b border-transparent pb-[2px] hover:border-ink transition-[border-color] duration-150",
         className
       )}
       {...rest}

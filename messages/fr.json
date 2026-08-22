@@ -13,7 +13,8 @@
       "changeLanguage": "Changer de langue",
       "discoverDiagnostic": "Découvrez le diagnostic",
       "startDiagnostic": "Démarrez le diagnostic (1 280 €)",
-      "bookCall": "Réserver l’appel →"
+      "bookCall": "Réserver l’appel",
+      "dismiss": "Masquer"
     },
     "footer": {
       "tagline": "Je fais en sorte que le travail ne se perde plus entre les personnes, les équipes et les outils.",
@@ -52,14 +53,14 @@
           "value": "Français ou anglais"
         }
       },
-      "ctaLabel": "Prendre une décision · 1 280 € →",
+      "ctaLabel": "Prendre une décision · 1 280 €",
       "ctaMeta": "Prix fixe. Sans suite obligatoire."
     },
     "discoveryCall": {
       "eyebrow": "Pas encore sûr ?",
       "headline": "Si vous hésitez, parlons-en d’abord.",
       "body": "Trente minutes pour voir si le diagnostic est pertinent pour vous. Si ce n’est pas le cas, je vous le dis. Pas de livrable, pas de pression.",
-      "ctaLabel": "Réserver l’appel →"
+      "ctaLabel": "Réserver l’appel"
     },
     "screenshotDisclaimer": "Produit Deralis, en ligne. Données de démonstration."
   },
@@ -70,7 +71,7 @@
         "h1": "<em>Optimisez</em> vos opérations. Accélérez votre <em>croissance</em>.",
         "subhead1": "Je conçois des solutions où le travail et l’information avancent ensemble d’une personne à l’autre, avec les équipes et les outils déjà en place.",
         "subhead2": "Chaque demande, validation, commande ou relance a un responsable, un statut et une prochaine action. Vos équipes savent ce qui avance, ce qui bloque et qui doit agir.",
-        "ctaPrimary": "Voir ce que couvre le diagnostic →",
+        "ctaPrimary": "Voir ce que couvre le diagnostic",
         "ctaSecondary": "Voir mes réalisations",
         "anchor": {
           "tab": "Ce que j’ai construit",
@@ -93,7 +94,7 @@
       "cost": {
         "eyebrow": "Ce que la coordination absorbe",
         "intro1": "Vos équipes travaillent. Une partie de leur temps sert à livrer pour les clients. Une autre sert à coordonner le travail lui-même.",
-        "intro2": "Une demande arrive. Quelqu’un la transfère. Une autre personne attend une validation. Le client relance. Le responsable cherche la dernière information.",
+        "intro2": "Pendant ce temps, quelqu'un cherche la dernière version, et le client attend une réponse que personne ne porte.",
         "pullquote": "Une partie de ce temps est nécessaire. Le reste est <em>récupérable</em>.",
         "card1": {
           "title": "Le temps absorbé par la coordination",
@@ -115,7 +116,20 @@
         "calculatorCta": {
           "eyebrow": "Estimation gratuite · 2 minutes · Sans inscription",
           "title": "Chiffrez ce que ces frictions mobilisent chez vous.",
-          "button": "Faire l’estimation →"
+          "button": "Faire l’estimation"
+        },
+        "diagram": {
+          "node1": "Demande",
+          "node2": "Transfert",
+          "node3": "Validation",
+          "node4": "Livraison",
+          "stalled": "en attente",
+          "followUp": "relance",
+          "title": "Une demande passe d'une personne à l'autre puis reste bloquée en attente d'une validation, ce qui oblige le client à relancer.",
+          "detail1": "Demandé",
+          "detail2": "Transmis",
+          "detail3": "En attente d'une décision",
+          "detail4": "Jamais atteint"
         }
       },
       "flow": {
@@ -219,7 +233,7 @@
               "value": "Solo · 2024"
             }
           },
-          "cta": "Détails techniques →"
+          "cta": "Détails techniques"
         },
         "consulaire": {
           "tab": "Prototype proposé",
@@ -342,7 +356,7 @@
         "sub2": "Deralis Digital est une structure d’ingénierie indépendante. Je travaille avec des entreprises rentables et opérationnelles où le travail ralentit parce qu’il faut chercher l’information, vérifier l’avancement et relancer pour obtenir une réponse. Pas des sites web. Pas de templates. Des systèmes qui montrent qui s’occupe de quoi, où ça en est et ce qui doit suivre.",
         "sub3": "J’ai travaillé à l’intérieur de vraies entreprises où le système n’est pas visible, mais les conséquences le sont. C’est de cette expérience que vient TraviXO Systems, un logiciel de conformité VGP pour le secteur français de la location de matériel.",
         "sub4": "C’est ce qui façonne ma façon de travailler : on ne peut pas concevoir un système pour un fonctionnement qu’on ne comprend pas.",
-        "ctaSecondary": "Voir comment je travaille →"
+        "ctaSecondary": "Voir comment je travaille"
       },
       "background": {
         "eyebrow": "Parcours",
@@ -500,7 +514,7 @@
     },
     "featured": {
       "eyebrow": "Le plus récent",
-      "cta": "Lire l’article →"
+      "cta": "Lire l’article"
     }
   },
   "privacy": {
@@ -869,12 +883,12 @@
       "eyebrow": "Écrit par",
       "name": "Uwa Ugboaja",
       "bio": "Je construis les systèmes opérationnels des entreprises établies, en solo, en français et en anglais, depuis l’Île-de-France.",
-      "linkLabel": "En savoir plus sur ma façon de travailler →"
+      "linkLabel": "En savoir plus sur ma façon de travailler"
     },
     "moreStrip": {
       "eyebrow": "D’autres choses depuis la pratique",
       "title": "D’autres choses que j’ai écrites.",
-      "readMore": "Lire →"
+      "readMore": "Lire"
     }
   },
   "diagnostic": {
@@ -894,8 +908,9 @@
           "line3": "<strong>1 280 €</strong>, 500 € déduits si vous construisez ensuite",
           "line4": "Remboursement si je ne suis pas le bon interlocuteur"
         },
-        "cta": "Prendre une décision · 1 280 € →",
-        "meta": "Un exemple du dossier ci-dessous. Téléchargeable plus bas."
+        "cta": "Prendre une décision · 1 280 €",
+        "meta": "Un exemple du dossier ci-dessous. Téléchargeable plus bas.",
+        "stackAriaLabel": "Voir le dossier exemple complet"
       },
       "recognition": {
         "h2": "Si vous êtes ici, ce n’est probablement pas par hasard.",
@@ -913,7 +928,11 @@
         "closing1": "À ce stade, la question n’est plus est-ce qu’on a un problème. Vous le savez déjà.",
         "closing2": "La question est : quel est le bon premier mouvement. Un nouveau logiciel ? Un changement de process ? Rien du tout ? Faut-il construire, acheter, ou mieux utiliser ce qui est déjà là ?",
         "closing3": "C’est la question à laquelle le diagnostic répond. Pas en théorie. Sur votre opération, avec vos contraintes, en cinq jours ouvrés.",
-        "cta": "Prendre une décision · 1 280 € →"
+        "cta": "Prendre une décision · 1 280 €",
+        "hint": "Cochez celles que vous reconnaissez.",
+        "count1": "Une seule suffit pour que ça vaille un examen.",
+        "count2": "Deux, et le coût se répète déjà chaque semaine.",
+        "count3": "Trois ou plus, c'est un problème de système, pas de personnes."
       },
       "deliverable": {
         "tab": "Ce que vous aurez en main",
@@ -989,7 +1008,7 @@
       "finalCta": {
         "h2": "Prendre une décision avant de construire.",
         "sub": "Un diagnostic. Un dossier. Une décision que vous pouvez défendre.",
-        "cta": "Prendre une décision · 1 280 € →",
+        "cta": "Prendre une décision · 1 280 €",
         "meta": "Français ou anglais. NDA sur demande."
       },
       "estimateBanner": {
@@ -1008,7 +1027,7 @@
       "eyebrow": "Méthode",
       "h1": "D’abord comprendre. Puis décider. Seulement après, <em>construire</em>.",
       "sub": "Trois étapes. Chacune ouvre la suivante. Aucune ne peut être sautée.",
-      "ctaPrimary": "Commencer par le diagnostic →",
+      "ctaPrimary": "Commencer par le diagnostic",
       "anchorTab": "Ce que vous obtenez",
       "stageNames": [
         "Diagnostic",
@@ -1023,7 +1042,7 @@
         "title": "Diagnostic",
         "desc": "Pendant deux jours, j’analyse avec vous le travail réel : qui reçoit quoi, qui décide, où ça attend, ce qui doit être vérifié ou relancé. Le livrable est un dossier de décision, pas un rapport.",
         "metadata": "Deux jours · dossier sous 5 jours ouvrés",
-        "cta": "Démarrer le diagnostic →"
+        "cta": "Démarrer le diagnostic"
       },
       "stage2": {
         "num": "02",
@@ -1039,7 +1058,7 @@
     "finalCta": {
       "h2": "Commencez par comprendre ce qui doit être construit.",
       "sub": "Deux jours. Cinq jours. Un dossier que vous gardez, quoi qu’il arrive ensuite.",
-      "cta": "Prendre une décision · 1 280 € →"
+      "cta": "Prendre une décision · 1 280 €"
     }
   },
   "frictions": {
@@ -1091,7 +1110,7 @@
       "title": "Ce chiffre est un point de départ",
       "p1": "Il ne montre pas encore quelles frictions peuvent réellement être supprimées, ni si leur correction justifie un investissement.",
       "p2": "Pendant le diagnostic, j’examine les flux réels, vérifie les volumes et identifie la capacité effectivement récupérable. Le résultat permet de décider ce qu’il faut corriger, dans quel ordre et sous quelles conditions économiques.",
-      "cta": "Identifier la part réellement récupérable →",
+      "cta": "Identifier la part réellement récupérable",
       "ctaMeta": "Diagnostic opérationnel · 1 280 € · Deux jours"
     },
     "method": {

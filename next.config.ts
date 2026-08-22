@@ -4,6 +4,13 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Same document View Transitions on route changes. Browsers without
+    // support navigate exactly as they do now, so there is no fallback to
+    // build: the effect is additive.
+    viewTransition: true,
+  },
+
   async redirects() {
     // The offer was renamed from "audit" to "diagnostic" in August 2026.
     // "Audit" reads in French as contrôle fiscal: something done to you to find

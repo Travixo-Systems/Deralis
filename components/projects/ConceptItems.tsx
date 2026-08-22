@@ -12,11 +12,11 @@ type ConceptItemsProps = {
 
 export default function ConceptItems({ items }: ConceptItemsProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-2">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-2" data-cascade>
       {items.map((item) => (
         <div
           key={item.num}
-          className="pt-6 border-t border-border-warm flex flex-col max-md:pt-5"
+          className="lift-step pt-6 border-t border-border-warm flex flex-col max-md:pt-5"
         >
           <p className="text-[13px] text-ink-3 font-medium tracking-[0.04em] mb-3">
             {item.num}
@@ -34,7 +34,6 @@ export default function ConceptItems({ items }: ConceptItemsProps) {
             className="inline-flex items-center gap-1.5 text-[14px] font-medium text-ink no-underline border-b border-border-warm pb-[3px] self-start mt-auto hover:text-accent hover:border-accent transition-colors"
           >
             {item.linkLabel}
-            <span aria-hidden="true">→</span>
           </a>
         </div>
       ))}

@@ -3,6 +3,7 @@ import { DsCardPeak } from "@/components/shared/DsCard";
 import TabLabel from "@/components/shared/TabLabel";
 import RichText from "@/components/shared/RichText";
 import type { CSSProperties } from "react";
+import WordReveal from "@/components/shared/WordReveal";
 
 // Grid layout via CSS class .grid-peak (responsive handled in globals.css)
 
@@ -56,7 +57,10 @@ export default function ExclusionPeak() {
   const tags: string[] = t.raw("tags");
 
   return (
-    <DsCardPeak>
+    <DsCardPeak className="pinked">
+      <span className="pinked-edge pinked-edge-left" aria-hidden="true" />
+      <span className="pinked-edge pinked-edge-right" aria-hidden="true" />
+
       <TabLabel variant="on-peak" style={{ left: 56 }}>
         {t("eyebrow")}
       </TabLabel>
@@ -64,7 +68,9 @@ export default function ExclusionPeak() {
       <div className="grid-peak">
         <div>
           <p style={peakEyebrowStyle}>{t("eyebrow")}</p>
-          <h2 style={h2Style}>{t("headline")}</h2>
+          <h2 style={h2Style} aria-label={t("headline")}>
+            <WordReveal>{t("headline")}</WordReveal>
+          </h2>
         </div>
         <div>
           <p style={bodyStyle}>{t("body1")}</p>

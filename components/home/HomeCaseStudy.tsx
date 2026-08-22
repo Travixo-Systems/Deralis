@@ -4,6 +4,7 @@ import TabLabel from "@/components/shared/TabLabel";
 import ScreenshotDisclaimer from "@/components/shared/ScreenshotDisclaimer";
 import Image from "next/image";
 import type { CSSProperties } from "react";
+import WordReveal from "@/components/shared/WordReveal";
 
 const proofIntroStyle: CSSProperties = {
   textAlign: "center",
@@ -167,7 +168,9 @@ export default function HomeCaseStudy() {
     <DsCard>
       <div style={proofIntroStyle}>
         <p style={eyebrowStyle}>{t("eyebrow")}</p>
-        <h2 style={h2Style}>{t("h2")}</h2>
+        <h2 style={h2Style} aria-label={t("h2")}>
+          <WordReveal>{t("h2")}</WordReveal>
+        </h2>
         <p style={subtitleStyle}>{t("subtitle")}</p>
       </div>
 

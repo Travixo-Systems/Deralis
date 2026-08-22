@@ -6,6 +6,11 @@
   --canvas: #EDE7D8;
   --card-main: #F7F4ED;
   --card-paper: #FDFBF4;
+  /* A third surface. The palette was two tones, cream and near black, which
+     made long pages read as one continuous slab. This is used sparingly, on
+     panels that invite an action. */
+  --card-accent: #EDF1F6;
+  --card-accent-border: rgba(27, 58, 92, 0.16);
   --card-peak: #1A1D1B;
 
   /* Text */
@@ -16,6 +21,10 @@
   --text-on-peak: #F7F4ED;
   --text-on-peak-muted: rgba(247, 244, 237, 0.78);
   --text-on-peak-dim: rgba(247, 244, 237, 0.65);
+  /* Clickable text on the dark peak cards. The light theme accent (#1B3A5C)
+     reaches only 1.46:1 against #1A1D1B, far under the 4.5 AA needs, so the
+     link colour is the lighter blue at 4.68:1 instead. */
+  --link-on-peak: #5E8BAE;
 
   /* Accent */
   --accent: #1B3A5C;
@@ -74,7 +83,7 @@
   --fs-body: 16px;
   --fs-body-sm: 15px;
   --fs-intro: 17px;
-  --fs-eyebrow: 12px;
+  --fs-eyebrow: 13px;
   --fs-tab: 10px;
   --fs-tab-hero: 11px;
   --fs-nav: 13px;
@@ -104,6 +113,8 @@
   --canvas: #1A1D1B;
   --card-main: #272320;
   --card-paper: #2F2A24;
+  --card-accent: #232C34;
+  --card-accent-border: rgba(94, 139, 174, 0.26);
   --card-peak: #EDE7D8;
 
   --text-primary: #EDE7D8;
@@ -113,6 +124,8 @@
   --text-on-peak: #14110D;
   --text-on-peak-muted: rgba(20, 17, 13, 0.78);
   --text-on-peak-dim: rgba(20, 17, 13, 0.65);
+  /* The peak card is the light surface in this theme, so the link goes dark. */
+  --link-on-peak: #1B3A5C;
 
   --accent: #5E8BAE;
 
@@ -580,7 +593,6 @@ main > :first-child {
 
 
 
-
 /* ========== HERO ANCHOR (proof card) ========== */
 @layer components {
   .hero-anchor { transition: box-shadow 280ms ease; }
@@ -606,11 +618,1246 @@ main > :first-child {
   .hero-anchor-overlay:focus-visible { outline: none; }
 }
 
+/* ========== HOVER RESPONSE ==========
+   Follows the .dpc pattern above: a small lift, a shadow step up, a visible
+   focus ring, and a reduced-motion opt-out that drops the movement while
+   keeping the colour response. Kept to translateY and box-shadow so it stays
+   on the compositor and never affects layout. */
+
+.lift-card {
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+.lift-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(20, 17, 13, 0.07);
+}
+:root[data-theme="dark"] .lift-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+.lift-card:focus-visible,
+.lift-card a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Process steps and concept items sit on a rule rather than in a filled card,
+   so they take the border accent instead of a shadow. */
+.lift-step {
+  transition: transform 200ms ease, border-color 200ms ease;
+}
+.lift-step:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+.lift-step:focus-visible,
+.lift-step a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lift-card:hover,
+  .lift-step:hover {
+    transform: none;
+  }
+}
+
+/* ========== CTA MICRO-INTERACTION ==========
+   ctaPrimaryStyle in HomeHero already declared "transform 150ms ease" in its
+   transition list and then never set a transform, so the declaration named a
+   property nothing changed. These rules give it something to interpolate: a
+   lift on hover and a press on activation, so the button acknowledges the
+   click rather than only changing colour. */
+
+.cta-press {
+  transition: background-color 450ms ease, color 450ms ease, transform 150ms ease,
+    box-shadow 150ms ease;
+  will-change: transform;
+}
+.cta-press:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(20, 17, 13, 0.12);
+}
+.cta-press:active {
+  transform: translateY(1px);
+  box-shadow: none;
+  transition-duration: 60ms;
+}
+:root[data-theme="dark"] .cta-press:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Text links get the press without the lift: a shadow under a bare word
+   reads as a rendering fault rather than a button. */
+.cta-press-subtle {
+  transition: border-color 150ms ease, transform 120ms ease, color 150ms ease;
+}
+.cta-press-subtle:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-press:hover,
+  .cta-press:active,
+  .cta-press-subtle:active {
+    transform: none;
+  }
+}
+
+/* ========== SCROLL DRIVEN DEPTH ==========
+   Everything here is decorative and gated behind @supports. Firefox still has
+   animation-timeline behind a flag (layout.css.scroll-driven-animations.enabled,
+   off in stable), so roughly 15 percent of visitors get the unanimated state.
+   That state is the normal, fully visible page, never a hidden one. */
+
+@supports (animation-timeline: scroll()) {
+  /* Header lifts off the page once you have scrolled past the hero. No JS,
+     and it cannot desynchronise from the scroll position the way a scroll
+     listener can. */
+  @media (prefers-reduced-motion: no-preference) {
+    header.shell-bleed {
+      animation: nav-lift linear both;
+      animation-timeline: scroll();
+      animation-range: 0 220px;
+    }
+  }
+
+  @keyframes nav-lift {
+    from {
+      box-shadow: 0 0 0 rgba(20, 17, 13, 0);
+    }
+    to {
+      box-shadow: 0 6px 20px rgba(20, 17, 13, 0.07);
+    }
+  }
+
+  :root[data-theme="dark"] header.shell-bleed {
+    animation-name: nav-lift-dark;
+  }
+
+  @keyframes nav-lift-dark {
+    from {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    to {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+@supports (animation-timeline: view()) {
+  /* Slow shadow bloom as a peak card crosses the viewport. Depth rather than
+     decoration: the dark cards are the moments the page is built around.
+     Shadow only, so nothing here can move layout or affect CLS. */
+  @media (prefers-reduced-motion: no-preference) {
+    .ds-card-peak {
+      animation: peak-bloom linear both;
+      animation-timeline: view();
+      animation-range: entry 15% cover 45%;
+    }
+  }
+
+  @keyframes peak-bloom {
+    from {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    }
+    to {
+      box-shadow: var(--peak-shadow);
+    }
+  }
+}
+
+/* ========== PERFORMATIVE MOTION ==========
+   Everything below is opacity, transform, box-shadow or a masked gradient, so
+   none of it can move layout or cost CLS. Each effect degrades to the plain
+   page rather than to a broken one. */
+
+/* --- Card cascade -------------------------------------------------------
+   Direct children of a [data-cascade] container arrive in sequence. The delay
+   is pure CSS, so the cards stay server components: nothing here ships JS. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    [data-cascade] > * {
+      /* Safety here comes from the @supports gate, not the fill mode: an
+         engine without view() never sees this rule and renders the card
+         normally. Fill mode was measured and makes no difference to that. */
+      animation: card-arrive 620ms cubic-bezier(0.16, 1.02, 0.3, 1) both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 28%;
+    }
+    /* Stagger the range rather than the delay. On a scroll timeline, delay is
+       measured in scroll distance, so animation-delay would behave as a
+       distance offset and desynchronise from the cascade. */
+    [data-cascade] > *:nth-child(2) { animation-range: entry 5% cover 34%; }
+    [data-cascade] > *:nth-child(3) { animation-range: entry 5% cover 40%; }
+    [data-cascade] > *:nth-child(4) { animation-range: entry 5% cover 46%; }
+    [data-cascade] > *:nth-child(5) { animation-range: entry 5% cover 52%; }
+    [data-cascade] > *:nth-child(6) { animation-range: entry 5% cover 58%; }
+  }
+
+  @keyframes card-arrive {
+    from {
+      opacity: 0;
+      transform: translateY(42px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* --- Peak card sheen ----------------------------------------------------
+   A band of light travels across the dark cards as they cross the viewport.
+   Uses a masked pseudo element so it never touches the card's own paint, and
+   pointer-events stay off so it cannot intercept a click. */
+.ds-card-peak {
+  position: relative;
+  isolation: isolate;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .ds-card-peak::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      border-radius: inherit;
+      clip-path: inset(0 round var(--radius-card));
+      background: linear-gradient(
+        105deg,
+        transparent 38%,
+        rgba(247, 244, 237, 0.13) 48%,
+        rgba(247, 244, 237, 0.20) 50%,
+        rgba(247, 244, 237, 0.13) 52%,
+        transparent 62%
+      );
+      transform: translateX(-120%);
+      animation: sheen-sweep linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 70%;
+    }
+  }
+
+  @keyframes sheen-sweep {
+    to {
+      transform: translateX(120%);
+    }
+  }
+}
+
+/* --- Headline word reveal -----------------------------------------------
+   Words rise out of their own line box behind an overflow mask, so the text
+   appears to be lifted into place rather than faded in. Applied to section
+   headings only, never the hero h1, which is the LCP element. */
+.word-reveal {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.word-reveal > span {
+  display: inline-block;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .word-reveal > span {
+      animation: word-lift 700ms cubic-bezier(0.16, 1.02, 0.3, 1) both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+    .word-reveal:nth-of-type(2) > span { animation-range: entry 0% cover 34%; }
+    .word-reveal:nth-of-type(3) > span { animation-range: entry 0% cover 38%; }
+    .word-reveal:nth-of-type(4) > span { animation-range: entry 0% cover 42%; }
+    .word-reveal:nth-of-type(5) > span { animation-range: entry 0% cover 46%; }
+    .word-reveal:nth-of-type(6) > span { animation-range: entry 0% cover 50%; }
+    .word-reveal:nth-of-type(7) > span { animation-range: entry 0% cover 54%; }
+    .word-reveal:nth-of-type(8) > span { animation-range: entry 0% cover 58%; }
+  }
+
+  @keyframes word-lift {
+    from {
+      transform: translateY(105%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* --- Amplified hover ----------------------------------------------------
+   Replaces the 2px nudge with a lift that reads across the room. */
+.lift-card:hover {
+  transform: translateY(-6px) scale(1.012);
+  box-shadow: 0 22px 48px rgba(20, 17, 13, 0.13);
+}
+:root[data-theme="dark"] .lift-card:hover {
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.45);
+}
+.lift-card {
+  transition: transform 320ms cubic-bezier(0.16, 1.02, 0.3, 1),
+    box-shadow 320ms ease, border-color 320ms ease;
+}
+
+.lift-step {
+  transition: transform 320ms cubic-bezier(0.16, 1.02, 0.3, 1),
+    border-color 320ms ease;
+}
+.lift-step:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+/* --- CTA -----------------------------------------------------------------
+   A confident lift with a coloured glow, and a press that actually snaps. */
+.cta-press:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(20, 17, 13, 0.22);
+}
+:root[data-theme="dark"] .cta-press:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+}
+.cta-press:active {
+  transform: translateY(1px) scale(0.985);
+  transition-duration: 70ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lift-card:hover,
+  .lift-step:hover,
+  .cta-press:hover,
+  .cta-press:active {
+    transform: none;
+  }
+}
+
+/* A cascading card also carries the arrival animation, and an animation with
+   a fill always outranks a hover transition, so the lift never showed on
+   anything inside a [data-cascade] row. Dropping the animation on hover hands
+   transform back to the transition; pausing it is not enough, since a paused
+   animation still owns the property. The arrival has finished long before a
+   pointer can reach the card. */
+[data-cascade] > .lift-card:hover,
+[data-cascade] > .lift-step:hover {
+  animation: none;
+}
+
+/* --- Page transitions ---------------------------------------------------
+   Same document View Transitions. Baseline as of 2026: Chrome and Edge 111+,
+   Safari 18+, Firefox 144+. Browsers without it navigate normally, which is
+   the current behaviour, so there is nothing to fall back from.
+   Next.js drives this through its own router; the CSS below only describes
+   what the transition looks like. */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: vt-out 220ms cubic-bezier(0.4, 0, 1, 1) both;
+  }
+  ::view-transition-new(root) {
+    animation: vt-in 320ms cubic-bezier(0.16, 1.02, 0.3, 1) both;
+  }
+
+  @keyframes vt-out {
+    to {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes vt-in {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  }
+}
+
+/* Reduced motion still gets the crossfade, without the travel. */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 1ms;
+  }
+}
+
+/* --- Process flow dots --------------------------------------------------
+   The circles read as a static diagram until you point at them. Hovering or
+   focusing a step fills its dot and grows it, so the marker tracks where you
+   are in the sequence. Not draggable: the order 01 to 04 is the meaning, so a
+   drag handle would promise a rearrangement that does nothing. */
+.flow-dot {
+  /* Resting appearance lives here, not inline: an inline background would
+     outrank the hover rule and the dot would never fill. */
+  background: var(--card-main);
+  border: 2px solid var(--accent);
+  transition: background-color 240ms ease, border-color 240ms ease,
+    transform 260ms cubic-bezier(0.16, 1.02, 0.3, 1), box-shadow 260ms ease;
+}
+
+.flow-step:hover .flow-dot,
+.flow-step:focus-visible .flow-dot,
+.flow-step:active .flow-dot {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.45);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+/* Pressing settles the dot, so a click feels like it lands. */
+.flow-step:active .flow-dot {
+  transform: scale(1.2);
+  transition-duration: 80ms;
+}
+
+.flow-step {
+  outline: none;
+  cursor: default;
+}
+.flow-step:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-step:hover .flow-dot,
+  .flow-step:focus-visible .flow-dot,
+  .flow-step:active .flow-dot {
+    transform: none;
+  }
+}
+
+/* --- Dossier preview ----------------------------------------------------
+   The stack looks like the thing being sold, so it behaves like a control:
+   pointing at it fans the sheets apart and lifts the top page, and clicking
+   takes you to the full example further down. */
+.pdf-stack {
+  cursor: pointer;
+  border-radius: 10px;
+}
+.pdf-sheet {
+  transition: transform 420ms cubic-bezier(0.16, 1.02, 0.3, 1),
+    box-shadow 420ms ease, opacity 420ms ease;
+  will-change: transform;
+}
+
+/* Resting rotations live here rather than inline. An inline transform would
+   outrank the hover rules and the fan would never open. */
+.pdf-sheet-2 {
+  transform: rotate(2deg);
+}
+.pdf-sheet-3 {
+  transform: rotate(5deg);
+}
+
+/* Fan: each sheet rotates and slides a little further than the one above it,
+   so the stack opens like paper rather than sliding as one block. */
+.pdf-stack:hover .pdf-sheet-1,
+.pdf-stack:focus-visible .pdf-sheet-1 {
+  transform: translate(-10px, -14px) rotate(-2.5deg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.26);
+}
+.pdf-stack:hover .pdf-sheet-2,
+.pdf-stack:focus-visible .pdf-sheet-2 {
+  transform: rotate(7deg) translate(16px, 4px);
+  opacity: 0.95;
+}
+.pdf-stack:hover .pdf-sheet-3,
+.pdf-stack:focus-visible .pdf-sheet-3 {
+  transform: rotate(13deg) translate(34px, 12px);
+  opacity: 0.8;
+}
+
+/* The press collapses the fan slightly, so the click reads as a push. */
+.pdf-stack:active .pdf-sheet-1 {
+  transform: translate(-4px, -4px) rotate(-1deg);
+  transition-duration: 90ms;
+}
+.pdf-stack:active .pdf-sheet-2 {
+  transform: rotate(4deg) translate(6px, 2px);
+  transition-duration: 90ms;
+}
+.pdf-stack:active .pdf-sheet-3 {
+  transform: rotate(8deg) translate(14px, 6px);
+  transition-duration: 90ms;
+}
+
+.pdf-stack:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 10px;
+}
+
+/* Smooth the jump to the example, and keep the sticky header from covering
+   the heading it lands on. */
+html {
+  scroll-behavior: smooth;
+}
+#exemple {
+  scroll-margin-top: 96px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .pdf-stack:hover .pdf-sheet-1,
+  .pdf-stack:focus-visible .pdf-sheet-1,
+  .pdf-stack:hover .pdf-sheet-2,
+  .pdf-stack:focus-visible .pdf-sheet-2,
+  .pdf-stack:hover .pdf-sheet-3,
+  .pdf-stack:focus-visible .pdf-sheet-3,
+  .pdf-stack:active .pdf-sheet-1,
+  .pdf-stack:active .pdf-sheet-2,
+  .pdf-stack:active .pdf-sheet-3 {
+    transform: none;
+  }
+}
+
+/* --- Process line progress ----------------------------------------------
+   The connecting rule fills as the section crosses the viewport, so the
+   sequence reads as something you move through rather than a static rule.
+   Scale on the x axis only, which stays on the compositor and cannot affect
+   layout. */
+.flow-line {
+  overflow: hidden;
+}
+.flow-line-fill {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .flow-line-fill {
+      animation: line-fill linear both;
+      animation-timeline: view();
+      animation-range: entry 30% cover 60%;
+    }
+  }
+
+  @keyframes line-fill {
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* Without a view timeline the rule simply stays as it was: the fill is an
+   addition, never the thing that makes the line visible. */
+
+/* --- Sticky prompt ------------------------------------------------------
+   Appears once the hero is gone. Transform and opacity only, and it is taken
+   out of the layout entirely when hidden so it cannot trap a pointer or a
+   tab stop. */
+.sticky-cta {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 8px 8px 18px;
+  background: var(--card-main);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  box-shadow: 0 18px 40px rgba(20, 17, 13, 0.16);
+  transform: translate(-50%, 140%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 420ms cubic-bezier(0.16, 1.02, 0.3, 1),
+    opacity 300ms ease, visibility 0s linear 420ms,
+    background-color 450ms ease, border-color 450ms ease;
+}
+.sticky-cta.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+:root[data-theme="dark"] .sticky-cta {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.sticky-cta-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 8px 4px;
+  transition: color 200ms ease;
+}
+.sticky-cta-link:hover {
+  color: var(--accent);
+}
+
+.sticky-cta-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.sticky-cta-close:hover {
+  background: var(--border-soft);
+  color: var(--text-primary);
+}
+.sticky-cta-link:focus-visible,
+.sticky-cta-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 520px) {
+  .sticky-cta {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    transform: translateY(140%);
+    justify-content: space-between;
+  }
+  .sticky-cta.is-visible {
+    transform: translateY(0);
+  }
+  .sticky-cta-link {
+    font-size: 13px;
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-cta {
+    transition: opacity 200ms ease, visibility 0s linear 200ms;
+    transform: translate(-50%, 0);
+  }
+  .sticky-cta.is-visible {
+    transform: translate(-50%, 0);
+  }
+}
+
+/* --- Coordination diagram -----------------------------------------------
+   A request moving between people and stalling at approval. Styles live here
+   rather than inside the SVG so they can read the theme tokens directly and
+   so the reduced-motion and unsupported paths are handled in one place. */
+.coord-fig {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 760px;
+  margin: 8px auto 0;
+  /* Not overflow: visible. The figure sits in a scroll container, and painting
+     outside it would push past the viewport edge and scroll the page instead. */
+  overflow: hidden;
+  color: var(--text-primary);
+}
+
+.coord-fig text {
+  font-family: var(--font-ibm-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.01em;
+  fill: currentColor;
+}
+.coord-fig .muted {
+  font-size: 17px;
+  fill: var(--text-muted);
+}
+.coord-fig .node {
+  fill: var(--card-main);
+  stroke: currentColor;
+  stroke-width: 2.6;
+}
+.coord-fig .link {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+}
+.coord-fig .accent {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.8;
+  stroke-linecap: round;
+}
+.coord-fig .stall-node {
+  fill: var(--card-main);
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+.coord-fig .pulse {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.2;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.coord-fig .dot {
+  fill: var(--accent);
+  offset-path: path("M128 66 H412");
+  /* Rests at the end of its path, so a browser without scroll timelines shows
+     the request already arrived at the stalled node rather than nothing. */
+  offset-distance: 100%;
+  offset-rotate: 0deg;
+}
+
+/* The return arrow is drawn statically when nothing animates it, so the
+   figure always reads as complete. */
+.coord-fig .return {
+  stroke-dasharray: none;
+}
+
+/* Accent overlay on each segment. It rests fully drawn, so a browser with no
+   scroll timeline shows a completed path rather than a broken one, and the
+   animation only removes and restores the dash. */
+.coord-fig .link-fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-dasharray: 104;
+  stroke-dashoffset: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .coord-fig .dot {
+      animation: coord-travel cubic-bezier(0.15, 0.85, 0.2, 1) both;
+      animation-timeline: view();
+      animation-range: entry 15% cover 55%;
+    }
+    .coord-fig .return {
+      stroke-dasharray: 260;
+      animation: coord-draw linear both;
+      animation-timeline: view();
+      animation-range: entry 30% cover 65%;
+    }
+    /* The pulse is time based on purpose: a stall is an ongoing condition, so
+       it keeps breathing rather than resolving once and stopping. */
+    .coord-fig .pulse {
+      animation: coord-pulse 2.4s ease-out infinite;
+    }
+
+    /* Segments colour in one after the other, tracking the request. Staggered
+       on animation-range rather than delay: on a scroll timeline a delay is
+       measured in scroll distance, so it would drift out of step. */
+    .coord-fig .link-fill-1 {
+      animation: coord-link linear both;
+      animation-timeline: view();
+      animation-range: entry 15% cover 35%;
+    }
+    .coord-fig .link-fill-2 {
+      animation: coord-link linear both;
+      animation-timeline: view();
+      animation-range: entry 28% cover 52%;
+    }
+  }
+
+  @keyframes coord-travel {
+    0% {
+      offset-distance: 0%;
+    }
+    72% {
+      offset-distance: 90%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+  @keyframes coord-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(1.45);
+      opacity: 0;
+    }
+  }
+  @keyframes coord-link {
+    from {
+      stroke-dashoffset: 104;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes coord-draw {
+    0% {
+      stroke-dashoffset: 260;
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+}
+
+/* Below roughly 620px the figure would scale down until the labels collide
+   and the type is unreadable. Rather than shrink it further, hold it at a
+   legible minimum and let the row scroll sideways inside its own container.
+   The page itself never scrolls horizontally. */
+.coord-fig-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 8px 0 0;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+@media (max-width: 620px) {
+  .coord-fig {
+    min-width: 560px;
+  }
+  .coord-fig text {
+    font-size: 24px;
+  }
+  .coord-fig .muted {
+    font-size: 19px;
+  }
+}
+
+/* --- Coordination diagram interaction ------------------------------------
+   The same behaviour as the 01 to 04 process dots, applied to the diamonds:
+   pointing at or focusing a step fills it, grows it and rings it, and a short
+   description fades in above. Pure CSS on a focusable group, so the figure
+   stays a server component and ships no JavaScript. */
+.coord-node {
+  cursor: default;
+  outline: none;
+}
+
+/* An invisible, generous hit target. The diamond is a thin outline and would
+   otherwise be difficult to point at and near impossible to tap. */
+.coord-hit {
+  fill: transparent;
+  pointer-events: all;
+}
+
+.coord-node .node,
+.coord-node .stall-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: fill 240ms ease, stroke 240ms ease, stroke-width 240ms ease,
+    transform 300ms cubic-bezier(0.16, 1.02, 0.3, 1);
+}
+
+.coord-node .coord-label {
+  transition: fill 240ms ease;
+}
+
+.coord-node:hover .node,
+.coord-node:focus-visible .node {
+  fill: var(--accent);
+  stroke: var(--accent);
+  transform: scale(1.18);
+}
+
+/* The stalled node is already accent stroked, so it deepens and grows rather
+   than changing colour, which would erase the distinction it carries. */
+.coord-node.is-stalled:hover .stall-node,
+.coord-node.is-stalled:focus-visible .stall-node {
+  fill: var(--accent);
+  stroke-width: 3.4;
+  transform: scale(1.18);
+}
+
+.coord-node:hover .coord-label,
+.coord-node:focus-visible .coord-label {
+  fill: var(--accent);
+}
+
+.coord-node:active .node,
+.coord-node.is-stalled:active .stall-node {
+  transform: scale(1.06);
+  transition-duration: 90ms;
+}
+
+/* The description rests hidden and lifts in on engagement. */
+.coord-detail {
+  font-size: 13px;
+  fill: var(--text-muted);
+  opacity: 0;
+  transform: translateY(6px);
+  transform-box: fill-box;
+  transform-origin: center;
+  pointer-events: none;
+  transition: opacity 240ms ease, transform 300ms cubic-bezier(0.16, 1.02, 0.3, 1);
+}
+.coord-node:hover .coord-detail,
+.coord-node:focus-visible .coord-detail {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.coord-node:focus-visible .coord-hit {
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 4 4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coord-node:hover .node,
+  .coord-node:focus-visible .node,
+  .coord-node.is-stalled:hover .stall-node,
+  .coord-node.is-stalled:focus-visible .stall-node,
+  .coord-node:active .node,
+  .coord-node.is-stalled:active .stall-node {
+    transform: none;
+  }
+  .coord-detail {
+    transform: none;
+  }
+}
+
+/* --- Pointer traced diagram ---------------------------------------------
+   While the pointer is over the figure it draws the flow: the marker follows
+   the cursor, the line fills behind it, and each diamond fills once the
+   segment into it completes. The scroll driven version is switched off for
+   the duration so the two cannot fight over the same properties. */
+.is-traced-host .coord-fig .link-fill,
+.is-traced-host .coord-fig .dot {
+  animation: none !important;
+}
+
+.is-traced-host .coord-fig .dot {
+  /* Positioned by the trace rather than by offset-path, which cannot be
+     driven from a pointer. Parked off canvas until the cursor arrives. */
+  offset-path: none;
+  transform: translate(-100px, 66px);
+  transition: transform 90ms linear;
+}
+
+.is-traced-host .coord-fig .link-fill {
+  transition: stroke-dashoffset 120ms linear;
+}
+
+/* A diamond the trace has reached. Same accent fill as the hover state, so
+   sweeping across the row and pointing at one node agree with each other. */
+.coord-fig .node.is-traced,
+.coord-fig .stall-node.is-traced {
+  fill: var(--accent);
+  transition: fill 200ms ease;
+}
+
+/* The moment of arrival: the marker shrinks out at the centre and the diamond
+   swells to take it in, so the request lands rather than sliding underneath. */
+.coord-fig .dot.is-absorbed {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  transition: transform 90ms linear, opacity 160ms ease 60ms;
+}
+
+.coord-fig .node.is-absorbing,
+.coord-fig .stall-node.is-absorbing {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: coord-absorb 460ms cubic-bezier(0.16, 1.02, 0.3, 1);
+}
+
+@keyframes coord-absorb {
+  0% {
+    transform: scale(1);
+  }
+  38% {
+    transform: scale(1.24);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coord-fig .node.is-absorbing,
+  .coord-fig .stall-node.is-absorbing {
+    animation: none;
+  }
+}
+
+/* --- Cost section density ------------------------------------------------
+   This section carries the most in one card: prose, a pull quote, the
+   diagram, three cards and an invitation. At the shared 64px padding it ran
+   to 1.4 viewports, so the argument could never be seen whole. Scoped rather
+   than changing --pad-card-large, which every DsCard on the site uses. */
+.cost-card {
+  padding: 48px 56px !important;
+}
+
+@media (max-width: 960px) {
+  .cost-card {
+    padding: 32px 24px !important;
+  }
+}
+
+/* --- Peak card action row ------------------------------------------------
+   The two actions were inline siblings with no gap and different top
+   margins, so the primary button and the secondary link ran into each other.
+   A flex row separates them and puts them on one baseline. */
+.peak-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+@media (max-width: 640px) {
+  .peak-cta-row {
+    gap: 16px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* A pinked column inside a shared card. It needs its own surface, otherwise
+   the teeth have nothing to cut out of and would be invisible against the
+   card behind them. */
+/* The guarantee sits beside a shorter pinked swatch, so centring it against
+   that block stops it reading as top aligned text floating next to a card.
+   Scoped to this row rather than changing .grid-2col-wide, which other
+   sections use with genuinely top aligned columns. */
+.pinked-row {
+  align-items: center;
+}
+
+.pinked-column {
+  /* The accent surface rather than paper. Paper cut out of paper left the
+     teeth almost invisible: the cut only reads when the swatch is a different
+     material from the card it was cut from. */
+  background: var(--card-accent);
+  padding: 30px 32px;
+}
+
+
+/* --- Pinking shear edges -------------------------------------------------
+   A cut edge on the sections that are about cutting: who this is not for.
+   The teeth live on pseudo elements at the left and right edges rather than
+   on the card itself. Masking the card directly, which is what the common
+   snippet does, shreds the whole box: the text turns to lattice, the shadow
+   stops painting and any overhanging TabLabel is destroyed.
+
+   background: inherit means the teeth pick up whatever surface the card
+   carries, so they follow the theme without a second set of colour rules. */
+.pinked {
+  position: relative;
+}
+
+/* Real elements rather than ::before and ::after. The peak card already uses
+   ::after for the sheen sweep, which sets inset: 0 and would stretch a tooth
+   strip across the whole card. Two effects cannot share one pseudo element. */
+.pinked-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  background: inherit;
+  pointer-events: none;
+  --tooth: 22px;
+}
+.pinked-edge-left {
+  left: -13px;
+  -webkit-mask: conic-gradient(from -45deg at 0 50%, #0000 0 90deg, #000 0) 50% / 100% var(--tooth);
+  mask: conic-gradient(from -45deg at 0 50%, #0000 0 90deg, #000 0) 50% / 100% var(--tooth);
+}
+.pinked-edge-right {
+  right: -13px;
+  -webkit-mask: conic-gradient(from 135deg at 100% 50%, #0000 0 90deg, #000 0) 50% / 100% var(--tooth);
+  mask: conic-gradient(from 135deg at 100% 50%, #0000 0 90deg, #000 0) 50% / 100% var(--tooth);
+}
+
+/* Square corners: rounded ones leave a notch where the teeth meet the radius.
+   DsCard sets its radius inline and the responsive block re-rounds cards with
+   !important at narrower widths, so this needs both the flag and enough
+   specificity to outrank a later rule of equal weight. */
+.pinked.pinked,
+.ds-card-peak.pinked,
+.ds-card.pinked,
+.pinked-column.pinked-column {
+  border-radius: 0 !important;
+}
+
+/* Teeth retract at the same 960px breakpoint where the cards re-round, so a
+   rounded card is never left wearing square teeth. */
+/* Below the teeth breakpoint the cards go back to their normal rounded shape.
+   Matches the specificity used above so it wins in turn. */
+@media (max-width: 960px) {
+  .pinked-edge {
+    display: none;
+  }
+  .pinked.pinked,
+  .ds-card-peak.pinked,
+  .ds-card.pinked {
+    border-radius: var(--radius-card) !important;
+  }
+  .pinked-column.pinked-column {
+    border-radius: var(--radius-internal) !important;
+  }
+}
+
+/* --- Recognition symptoms ------------------------------------------------
+   Five signs a reader ticks, not a numbered sequence. Numbering implied an
+   order these do not have, and invited the question of why one outranks
+   another. Two columns because a single narrow stack left a third of the card
+   empty and ran the section past 1400px. */
+.symptom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 980px;
+}
+
+/* An odd last item spans the row rather than leaving a gap beside it. */
+.symptom-grid > li:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.symptom-button {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 20px 22px;
+  background: var(--card-paper);
+  border: 1px solid var(--border-soft);
+  border-left: 3px solid var(--border-strong);
+  border-radius: var(--radius-internal);
+  font: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color 200ms ease, background-color 200ms ease,
+    transform 240ms cubic-bezier(0.16, 1.02, 0.3, 1), box-shadow 240ms ease;
+}
+.symptom-button:hover {
+  transform: translateY(-2px);
+  border-left-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(20, 17, 13, 0.07);
+}
+:root[data-theme="dark"] .symptom-button:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
+}
+.symptom-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* The mark replaces the number. Empty until ticked, so the row reads as
+   something waiting for an answer. */
+.symptom-mark {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 3px;
+  position: relative;
+  transition: background-color 200ms ease, border-color 200ms ease;
+}
+.symptom-mark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--canvas);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(0);
+  transition: transform 220ms cubic-bezier(0.16, 1.02, 0.3, 1);
+}
+
+.symptom.is-ticked .symptom-button {
+  border-left-color: var(--accent);
+  background: var(--card-accent);
+  color: var(--text-primary);
+}
+.symptom.is-ticked .symptom-mark {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.symptom.is-ticked .symptom-mark::after {
+  transform: rotate(45deg) scale(1);
+}
+
+.symptom-response {
+  margin-top: 22px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  font-style: italic;
+  min-height: 1.6em;
+  transition: color 250ms ease;
+}
+
+@media (max-width: 820px) {
+  .symptom-grid {
+    grid-template-columns: 1fr;
+  }
+  .symptom-grid > li:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .symptom-button:hover {
+    transform: none;
+  }
+  .symptom-mark::after {
+    transition: none;
+  }
+}
+
 /* ========== MOTION ========== */
+/* Reduced motion means less movement, not a different layout.
+   Durations are collapsed so nothing animates, but transform itself is left
+   alone: a blanket "transform: none !important" also flattens static
+   transforms that carry meaning (the hamburger to X rotation in SiteNav, the
+   rotated paper mocks on /diagnostic) and, being !important in a stylesheet,
+   it outranks the inline styles that set them. Components opt their own
+   motion out below and alongside their rules. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition-duration: 0ms !important;
     animation-duration: 0ms !important;
-    transform: none !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Hover lifts: keep the colour response, drop the movement. */
+  .cost-cta-panel:hover {
+    transform: none;
+  }
+  .hero-anchor-item:hover {
+    transform: none;
   }
 }

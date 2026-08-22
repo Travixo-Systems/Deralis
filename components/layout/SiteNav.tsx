@@ -251,7 +251,7 @@ const diagnosticPill: CSSProperties = {
   padding: "10px 20px",
   background: "transparent",
   color: "var(--text-primary)",
-  border: "1px solid var(--text-primary)",
+  border: "1px solid var(--accent)",
   borderRadius: 100,
   fontFamily: "var(--font-ibm-plex-sans), sans-serif",
   fontSize: 13,

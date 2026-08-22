@@ -3,6 +3,8 @@ import DsCard from "@/components/shared/DsCard";
 import { Link } from "@/i18n/navigation";
 import PullQuote from "@/components/shared/PullQuote";
 import type { CSSProperties } from "react";
+import CoordinationDiagram from "@/components/home/CoordinationDiagram";
+import CoordinationTrace from "@/components/home/CoordinationTrace";
 
 const eyebrowStyle: CSSProperties = {
   fontSize: "var(--fs-eyebrow)",
@@ -99,8 +101,8 @@ const ctaPanelStyle: CSSProperties = {
   gap: 28,
   marginTop: 34,
   padding: "26px 30px",
-  background: "var(--canvas)",
-  border: "1px solid var(--accent)",
+  background: "var(--card-accent)",
+  border: "1px solid var(--card-accent-border)",
   borderRadius: "var(--radius-internal)",
   textDecoration: "none",
   color: "inherit",
@@ -146,16 +148,31 @@ export default function CostSection() {
   const t = useTranslations("home.page.cost");
 
   return (
-    <DsCard>
+    <DsCard className="cost-card">
       <p style={eyebrowStyle}>{t("eyebrow")}</p>
       <p style={introStyle}>{t("intro1")}</p>
-      <p style={introStyle}>{t("intro2")}</p>
 
       <PullQuote html={t.raw("pullquote")} />
 
-      <div className="grid-3col">
+      <CoordinationTrace>
+        <CoordinationDiagram
+          nodes={[
+            { x: 90, label: t("diagram.node1"), detail: t("diagram.detail1") },
+            { x: 270, label: t("diagram.node2"), detail: t("diagram.detail2") },
+            { x: 450, label: t("diagram.node3"), detail: t("diagram.detail3"), stalled: true },
+            { x: 630, label: t("diagram.node4"), detail: t("diagram.detail4") },
+          ]}
+          stalledLabel={t("diagram.stalled")}
+          followUpLabel={t("diagram.followUp")}
+          title={t("diagram.title")}
+        />
+      </CoordinationTrace>
+
+      <p style={introStyle}>{t("intro2")}</p>
+
+      <div className="grid-3col" data-cascade>
         {CARDS.map((c) => (
-          <div key={c} style={costCardStyle}>
+          <div key={c} className="lift-card" style={costCardStyle}>
             <h3 style={costCardH3Style}>{t(`${c}.title`)}</h3>
             <p style={costCardPStyle}>{t(`${c}.description`)}</p>
           </div>

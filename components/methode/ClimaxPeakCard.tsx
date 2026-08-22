@@ -20,17 +20,19 @@ export default function ClimaxPeakCard() {
           <h2 style={h2}><RichText html={t.raw("headline")} /></h2>
           <p style={body}>{t("body1")}</p>
           <p style={body}>{t("body2")}</p>
-          <Link href="/diagnostic" style={ctaPeak}>{t("ctaLabel")}</Link>
-          {discoveryCallLink && (
-            <a
-              href={discoveryCallLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={ctaSecondary}
-            >
-              {tActions("bookCall")}
-            </a>
-          )}
+          <div className="peak-cta-row">
+            <Link href="/diagnostic" style={ctaPeak}>{t("ctaLabel")}</Link>
+            {discoveryCallLink && (
+              <a
+                href={discoveryCallLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={ctaSecondary}
+              >
+                {tActions("bookCall")}
+              </a>
+            )}
+          </div>
           <span style={meta}>{t("ctaMeta")}</span>
         </div>
 
@@ -64,11 +66,11 @@ const body: CSSProperties = {
 const ctaPeak: CSSProperties = {
   display: "inline-flex", alignItems: "center", gap: 12, padding: "18px 32px",
   background: "var(--text-on-peak)", color: "var(--card-peak)", fontSize: 14, fontWeight: 600,
-  borderRadius: "var(--radius-button)", textDecoration: "none", marginTop: 18,
+  borderRadius: "var(--radius-button)", textDecoration: "none",
 };
 const ctaSecondary: CSSProperties = {
-  display: "inline-flex", alignItems: "center", gap: 8, marginLeft: 18, fontSize: 14, fontWeight: 500,
-  color: "var(--text-on-peak-muted)", textDecoration: "none", transition: "color 200ms ease",
+  display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 500,
+  color: "var(--link-on-peak)", textDecoration: "none", transition: "color 200ms ease",
 };
 const meta: CSSProperties = {
   display: "block", marginTop: 14, fontSize: 12, color: "var(--text-on-peak-dim)", fontStyle: "italic",

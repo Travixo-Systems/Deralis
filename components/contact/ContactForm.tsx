@@ -239,7 +239,6 @@ export default function ContactForm() {
           }}
         >
           {state === "submitting" ? tActions("sending") : t("submitButton")}
-          {state !== "submitting" && <span aria-hidden="true">→</span>}
         </button>
       </div>
     </form>

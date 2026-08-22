@@ -51,12 +51,6 @@ export default function DiagnosticCTA({ headlineOverride, bodyOverride, noteOver
               className="group inline-flex items-center gap-2.5 px-[30px] py-[18px] bg-ink text-bg-cta text-[15px] font-medium rounded-lg hover:bg-accent transition-colors no-underline"
             >
               {tActions("startDiagnostic")}
-              <span
-                aria-hidden="true"
-                className="transition-transform duration-[180ms] group-hover:translate-x-[3px]"
-              >
-                →
-              </span>
             </a>
           ) : (
             <Link
@@ -64,12 +58,6 @@ export default function DiagnosticCTA({ headlineOverride, bodyOverride, noteOver
               className="group inline-flex items-center gap-2.5 px-[30px] py-[18px] bg-ink text-bg-cta text-[15px] font-medium rounded-lg hover:bg-accent transition-colors no-underline"
             >
               {tActions("discoverDiagnostic")}
-              <span
-                aria-hidden="true"
-                className="transition-transform duration-[180ms] group-hover:translate-x-[3px]"
-              >
-                →
-              </span>
             </Link>
           )}
           {showDiscoveryCta && discoveryCallLink && (
@@ -79,13 +67,7 @@ export default function DiagnosticCTA({ headlineOverride, bodyOverride, noteOver
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 text-[15px] font-medium text-ink-cool hover:text-accent transition-colors no-underline"
             >
-              {tDiscovery("ctaLabel").replace(/\s*→\s*$/, "")}
-              <span
-                aria-hidden="true"
-                className="transition-transform duration-[180ms] group-hover:translate-x-[3px]"
-              >
-                →
-              </span>
+              {tDiscovery("ctaLabel")}
             </a>
           )}
           <p className="text-[13px] text-ink-cool-muted">{noteOverride || t("note")}</p>

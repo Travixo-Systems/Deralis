@@ -8,6 +8,9 @@ import TabLabel from "@/components/shared/TabLabel";
 import RichText from "@/components/shared/RichText";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
+import AnimateIn from "@/components/shared/AnimateIn";
+import WordReveal from "@/components/shared/WordReveal";
+import SymptomChecklist from "@/components/diagnostic/SymptomChecklist";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -42,12 +45,24 @@ export default async function DiagnosticPage({ params }: Props) {
     <>
       <EstimateBanner />
       <DiagnosticHero />
-      <RecognitionCard />
-      <DeliverableCard />
-      <ExamplePeak />
-      <NotForAndGuaranteeCard />
-      <ProcessCard />
-      <DiagnosticFinalCTA />
+      <AnimateIn>
+        <RecognitionCard />
+      </AnimateIn>
+      <AnimateIn>
+        <DeliverableCard />
+      </AnimateIn>
+      <AnimateIn>
+        <ExamplePeak />
+      </AnimateIn>
+      <AnimateIn>
+        <NotForAndGuaranteeCard />
+      </AnimateIn>
+      <AnimateIn>
+        <ProcessCard />
+      </AnimateIn>
+      <AnimateIn>
+        <DiagnosticFinalCTA />
+      </AnimateIn>
     </>
   );
 }
@@ -80,23 +95,30 @@ function DiagnosticHero() {
             ))}
           </div>
 
-          <a href={stripeLink} style={ctaPrimary}>{t("cta")}</a>
+          <a href={stripeLink} className="cta-press" style={ctaPrimary}>{t("cta")}</a>
           <DiscoveryCallLink />
           <span style={metaStyle}>{t("meta")}</span>
         </div>
 
-        {/* PDF Stack */}
-        <div style={{ position: "relative", height: 380 }} className="pdf-stack-responsive">
-          <div style={{ ...pdfPage, top: 36, left: 62, transform: "rotate(5deg)", opacity: 0.55, boxShadow: "0 14px 34px rgba(0,0,0,0.18)" }}>
+        {/* PDF Stack. A link rather than a decorative mock: it looks like the
+            deliverable, so pointing at it and clicking should take you to the
+            full example further down the page. */}
+        <a
+          href="#exemple"
+          aria-label={t("stackAriaLabel")}
+          className="pdf-stack pdf-stack-responsive"
+          style={{ position: "relative", height: 440, display: "block", textDecoration: "none" }}
+        >
+          <div className="pdf-sheet pdf-sheet-3" style={{ ...pdfPage, top: 36, left: 62, opacity: 0.55, boxShadow: "0 14px 34px rgba(0,0,0,0.18)" }}>
             <PdfContent title="Ordre d'exécution" section="04 · Priorisation" />
           </div>
-          <div style={{ ...pdfPage, top: 18, left: 40, transform: "rotate(2deg)", opacity: 0.82, boxShadow: "0 18px 40px rgba(0,0,0,0.22)" }}>
+          <div className="pdf-sheet pdf-sheet-2" style={{ ...pdfPage, top: 18, left: 40, opacity: 0.82, boxShadow: "0 18px 40px rgba(0,0,0,0.22)" }}>
             <PdfContent title="Ce qui casse" section="02 · Diagnostic" />
           </div>
-          <div style={{ ...pdfPage, top: 0, left: 18, boxShadow: "var(--page-shadow)" }}>
+          <div className="pdf-sheet pdf-sheet-1" style={{ ...pdfPage, top: 0, left: 18, boxShadow: "var(--page-shadow)" }}>
             <PdfContent title="Quoi construire, dans quel ordre, et ce qu'il ne faut pas construire." section="01 · Situation" section2="02 · Ce qui casse" />
           </div>
-        </div>
+        </a>
       </div>
     </DsCard>
   );
@@ -131,7 +153,7 @@ function RecognitionCard() {
 
   return (
     <DsCard>
-      <h2 style={sectionH2}>{t("h2")}</h2>
+      <h2 style={sectionH2} aria-label={t("h2")}><WordReveal>{t("h2")}</WordReveal></h2>
       <p style={introP}>{t("intro1")}</p>
       <p style={{ ...introP, marginBottom: 0 }}>{t("intro2")}</p>
 
@@ -140,20 +162,17 @@ function RecognitionCard() {
       </blockquote>
 
       <p style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--text-muted)", marginBottom: 28, fontWeight: 600 }}>{t("symptomsLabel")}</p>
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760 }}>
-        {symptoms.map((s, i) => (
-          <div key={i} style={{ display: "flex", gap: 22, padding: "26px 30px", background: "var(--card-paper)", border: "1px solid var(--border-soft)", borderLeft: "3px solid var(--accent)", borderRadius: "var(--radius-internal)", fontSize: 16, lineHeight: 1.55, transition: "background-color 450ms ease, border-color 450ms ease, transform 150ms ease" }}>
-            <span style={{ flexShrink: 0, fontFamily: "var(--font-fraunces), serif", fontSize: 16, color: "var(--accent)", fontWeight: 600, paddingTop: 2, minWidth: 24, letterSpacing: "0.04em" }}>{String(i + 1).padStart(2, "0")}</span>
-            <span>{s}</span>
-          </div>
-        ))}
-      </div>
+      <SymptomChecklist
+        symptoms={symptoms}
+        hint={t("hint")}
+        counts={[t("count1"), t("count2"), t("count3")]}
+      />
 
       <div style={{ marginTop: 48, maxWidth: "58ch" }}>
         <p style={introP}>{t("closing1")}</p>
         <p style={introP}>{t("closing2")}</p>
         <p style={{ ...introP, marginBottom: 32 }}>{t("closing3")}</p>
-        <a href={stripeLink} style={ctaPrimary}>{t("cta")}</a>
+        <a href={stripeLink} className="cta-press" style={ctaPrimary}>{t("cta")}</a>
         <DiscoveryCallLink />
       </div>
     </DsCard>
@@ -206,7 +225,7 @@ function ExamplePeak() {
   const downloadFilename = locale === "fr" ? "deralis-exemple-audit.pdf" : "deralis-audit-example.pdf";
 
   return (
-    <DsCardPeak>
+    <DsCardPeak id="exemple">
       <div className="grid-peak-example">
         <div>
           <p style={{ fontSize: "var(--fs-eyebrow)", textTransform: "uppercase", letterSpacing: "0.14em", color: "var(--text-on-peak-dim)", marginBottom: 22, fontWeight: 600 }}>{t("eyebrow")}</p>
@@ -271,8 +290,10 @@ function NotForAndGuaranteeCard() {
 
   return (
     <DsCard>
-      <div className="grid-2col-wide">
-        <div>
+      <div className="grid-2col-wide pinked-row">
+        <div className="pinked pinked-column">
+          <span className="pinked-edge pinked-edge-left" aria-hidden="true" />
+          <span className="pinked-edge pinked-edge-right" aria-hidden="true" />
           <h3 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "var(--fs-h3)", fontWeight: 500, lineHeight: 1.2, marginBottom: 16 }}>{tNot("h3")}</h3>
           <p style={{ fontSize: 15, lineHeight: 1.55, color: "var(--text-secondary)", marginBottom: 28 }}>{tNot("intro")}</p>
           {items.map((item, i) => (
@@ -298,9 +319,9 @@ function ProcessCard() {
   return (
     <DsCardMedium>
       <p style={{ ...introP, marginBottom: 40 }}>{t("intro")}</p>
-      <div className="grid-process">
+      <div className="grid-process" data-cascade>
         {([0, 1, 2, 3] as const).map((i) => (
-          <div key={i} style={{ paddingTop: 20, borderTop: "1px solid var(--border-soft)" }}>
+          <div key={i} className="lift-step" style={{ paddingTop: 20, borderTop: "1px solid var(--border-soft)" }}>
             <span style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 28, fontWeight: 500, color: "var(--accent)", display: "block", marginBottom: 8 }}>{t(`steps.${i}.num`)}</span>
             <span style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 18, fontWeight: 500, display: "block", marginBottom: 8, color: "var(--text-primary)" }}>{t(`steps.${i}.title`)}</span>
             <span style={{ fontSize: 13, lineHeight: 1.55, color: "var(--text-secondary)" }}>{t(`steps.${i}.desc`)}</span>
@@ -317,13 +338,13 @@ function DiagnosticFinalCTA() {
 
   return (
     <DsCardFinal>
-      <h2 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(30px, 4vw, 42px)", fontWeight: 500, lineHeight: 1.1, margin: "0 auto 16px", letterSpacing: "-0.02em", maxWidth: "22ch" }}>
-        {t("h2")}
+      <h2 style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(30px, 4vw, 42px)", fontWeight: 500, lineHeight: 1.1, margin: "0 auto 16px", letterSpacing: "-0.02em", maxWidth: "22ch" }} aria-label={t("h2")}>
+        <WordReveal>{t("h2")}</WordReveal>
       </h2>
       <p style={{ fontSize: 16, color: "var(--text-secondary)", maxWidth: "52ch", margin: "0 auto 36px", lineHeight: 1.55 }}>
         {t("sub")}
       </p>
-      <a href={stripeLink} style={ctaPrimary}>{t("cta")}</a>
+      <a href={stripeLink} className="cta-press" style={ctaPrimary}>{t("cta")}</a>
       <DiscoveryCallLink />
       <p style={{ marginTop: 14, fontSize: 12, color: "var(--text-muted)", fontStyle: "italic" }}>{t("meta")}</p>
     </DsCardFinal>
@@ -359,7 +380,7 @@ const metaStyle: CSSProperties = {
 
 const ctaDiscoveryStyle: CSSProperties = {
   display: "inline-flex", alignItems: "center", gap: 8, marginLeft: 18, fontSize: 14, fontWeight: 500,
-  color: "var(--text-secondary)", textDecoration: "none", transition: "color 200ms ease",
+  color: "var(--accent)", textDecoration: "none", transition: "color 200ms ease",
 };
 
 /* Subordinate discovery-call link beside the primary paid diagnostic CTA. Renders only when the link env is set. */
@@ -367,14 +388,14 @@ function DiscoveryCallLink() {
   const tActions = useTranslations("common.actions");
   if (!discoveryCallLink) return null;
   return (
-    <a href={discoveryCallLink} target="_blank" rel="noopener noreferrer" style={ctaDiscoveryStyle}>
+    <a href={discoveryCallLink} target="_blank" rel="noopener noreferrer" className="cta-press-subtle" style={ctaDiscoveryStyle}>
       {tActions("bookCall")}
     </a>
   );
 }
 
 const pdfPage: CSSProperties = {
-  position: "absolute", width: 240, height: 320, background: "var(--paper-mock-bg)",
+  position: "absolute", width: 286, height: 381, background: "var(--paper-mock-bg)",
   border: "1px solid var(--paper-mock-border-strong)", padding: "18px 22px",
   fontFamily: "var(--font-ibm-plex-sans), sans-serif", color: "var(--paper-mock-ink)", borderRadius: 2,
 };

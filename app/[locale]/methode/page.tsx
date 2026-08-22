@@ -4,6 +4,7 @@ import HeroCard from "@/components/methode/HeroCard";
 import StagesCard from "@/components/methode/StagesCard";
 import ClimaxPeakCard from "@/components/methode/ClimaxPeakCard";
 import FinalCard from "@/components/methode/FinalCard";
+import AnimateIn from "@/components/shared/AnimateIn";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -32,9 +33,15 @@ export default async function MethodePage({ params }: Props) {
   return (
     <>
       <HeroCard />
-      <StagesCard />
-      <ClimaxPeakCard />
-      <FinalCard />
+      <AnimateIn>
+        <StagesCard />
+      </AnimateIn>
+      <AnimateIn>
+        <ClimaxPeakCard />
+      </AnimateIn>
+      <AnimateIn>
+        <FinalCard />
+      </AnimateIn>
     </>
   );
 }
