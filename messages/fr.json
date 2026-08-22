@@ -922,7 +922,11 @@
         "closing1": "À ce stade, la question n’est plus est-ce qu’on a un problème. Vous le savez déjà.",
         "closing2": "La question est : quel est le bon premier mouvement. Un nouveau logiciel ? Un changement de process ? Rien du tout ? Faut-il construire, acheter, ou mieux utiliser ce qui est déjà là ?",
         "closing3": "C’est la question à laquelle le diagnostic répond. Pas en théorie. Sur votre opération, avec vos contraintes, en cinq jours ouvrés.",
-        "cta": "Prendre une décision · 1 280 €"
+        "cta": "Prendre une décision · 1 280 €",
+        "hint": "Cochez celles que vous reconnaissez.",
+        "count1": "Une seule suffit pour que ça vaille un examen.",
+        "count2": "Deux, et le coût se répète déjà chaque semaine.",
+        "count3": "Trois ou plus, c'est un problème de système, pas de personnes."
       },
       "deliverable": {
         "tab": "Ce que vous aurez en main",

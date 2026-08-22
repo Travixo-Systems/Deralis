@@ -10,6 +10,7 @@ import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
 import AnimateIn from "@/components/shared/AnimateIn";
 import WordReveal from "@/components/shared/WordReveal";
+import SymptomChecklist from "@/components/diagnostic/SymptomChecklist";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -161,14 +162,11 @@ function RecognitionCard() {
       </blockquote>
 
       <p style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--text-muted)", marginBottom: 28, fontWeight: 600 }}>{t("symptomsLabel")}</p>
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760 }} data-cascade>
-        {symptoms.map((s, i) => (
-          <div key={i} className="lift-card" style={{ display: "flex", gap: 22, padding: "26px 30px", background: "var(--card-paper)", border: "1px solid var(--border-soft)", borderLeft: "3px solid var(--accent)", borderRadius: "var(--radius-internal)", fontSize: 16, lineHeight: 1.55 }}>
-            <span style={{ flexShrink: 0, fontFamily: "var(--font-fraunces), serif", fontSize: 16, color: "var(--accent)", fontWeight: 600, paddingTop: 2, minWidth: 24, letterSpacing: "0.04em" }}>{String(i + 1).padStart(2, "0")}</span>
-            <span>{s}</span>
-          </div>
-        ))}
-      </div>
+      <SymptomChecklist
+        symptoms={symptoms}
+        hint={t("hint")}
+        counts={[t("count1"), t("count2"), t("count3")]}
+      />
 
       <div style={{ marginTop: 48, maxWidth: "58ch" }}>
         <p style={introP}>{t("closing1")}</p>
