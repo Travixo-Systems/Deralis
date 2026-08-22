@@ -1482,7 +1482,7 @@ html {
 
 /* The description rests hidden and lifts in on engagement. */
 .coord-detail {
-  font-size: 15px;
+  font-size: 13px;
   fill: var(--text-muted);
   opacity: 0;
   transform: translateY(6px);
@@ -1514,6 +1514,71 @@ html {
   }
   .coord-detail {
     transform: none;
+  }
+}
+
+/* --- Pointer traced diagram ---------------------------------------------
+   While the pointer is over the figure it draws the flow: the marker follows
+   the cursor, the line fills behind it, and each diamond fills once the
+   segment into it completes. The scroll driven version is switched off for
+   the duration so the two cannot fight over the same properties. */
+.is-traced-host .coord-fig .link-fill,
+.is-traced-host .coord-fig .dot {
+  animation: none !important;
+}
+
+.is-traced-host .coord-fig .dot {
+  /* Positioned by the trace rather than by offset-path, which cannot be
+     driven from a pointer. Parked off canvas until the cursor arrives. */
+  offset-path: none;
+  transform: translate(-100px, 66px);
+  transition: transform 90ms linear;
+}
+
+.is-traced-host .coord-fig .link-fill {
+  transition: stroke-dashoffset 120ms linear;
+}
+
+/* A diamond the trace has reached. Same accent fill as the hover state, so
+   sweeping across the row and pointing at one node agree with each other. */
+.coord-fig .node.is-traced,
+.coord-fig .stall-node.is-traced {
+  fill: var(--accent);
+  transition: fill 200ms ease;
+}
+
+/* The moment of arrival: the marker shrinks out at the centre and the diamond
+   swells to take it in, so the request lands rather than sliding underneath. */
+.coord-fig .dot.is-absorbed {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  transition: transform 90ms linear, opacity 160ms ease 60ms;
+}
+
+.coord-fig .node.is-absorbing,
+.coord-fig .stall-node.is-absorbing {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: coord-absorb 460ms cubic-bezier(0.16, 1.02, 0.3, 1);
+}
+
+@keyframes coord-absorb {
+  0% {
+    transform: scale(1);
+  }
+  38% {
+    transform: scale(1.24);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coord-fig .node.is-absorbing,
+  .coord-fig .stall-node.is-absorbing {
+    animation: none;
   }
 }
 

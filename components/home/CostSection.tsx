@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import PullQuote from "@/components/shared/PullQuote";
 import type { CSSProperties } from "react";
 import CoordinationDiagram from "@/components/home/CoordinationDiagram";
+import CoordinationTrace from "@/components/home/CoordinationTrace";
 
 const eyebrowStyle: CSSProperties = {
   fontSize: "var(--fs-eyebrow)",
@@ -114,7 +115,8 @@ export default function CostSection() {
       <p style={introStyle}>{t("intro1")}</p>
       <p style={introStyle}>{t("intro2")}</p>
 
-      <CoordinationDiagram
+      <CoordinationTrace>
+        <CoordinationDiagram
         nodes={[
           { x: 90, label: t("diagram.node1"), detail: t("diagram.detail1") },
           { x: 270, label: t("diagram.node2"), detail: t("diagram.detail2") },
@@ -123,8 +125,9 @@ export default function CostSection() {
         ]}
         stalledLabel={t("diagram.stalled")}
         followUpLabel={t("diagram.followUp")}
-        title={t("diagram.title")}
-      />
+          title={t("diagram.title")}
+        />
+      </CoordinationTrace>
 
       <PullQuote html={t.raw("pullquote")} />
 

@@ -121,10 +121,10 @@
           "stalled": "stalled",
           "followUp": "follow-up",
           "title": "A request passes from one person to the next and stalls waiting for an approval, sending the customer back to follow up.",
-          "detail1": "A customer asks for something",
-          "detail2": "It moves to the next person",
-          "detail3": "It waits here for a decision",
-          "detail4": "What the customer is waiting for"
+          "detail1": "Asked for",
+          "detail2": "Passed on",
+          "detail3": "Waiting on a decision",
+          "detail4": "Never reached"
         }
       },
       "flow": {

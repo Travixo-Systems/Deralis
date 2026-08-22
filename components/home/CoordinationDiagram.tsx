@@ -40,7 +40,6 @@ export default function CoordinationDiagram({
   return (
     <div className="coord-fig-scroll">
       <svg viewBox="0 0 720 210" role="img" aria-label={title} className="coord-fig" style={style}>
-        <title>{title}</title>
         <g className="fig">
           <path className="link" d="M128 66 H232" />
           <path className="link" d="M308 66 H412" />
@@ -59,7 +58,7 @@ export default function CoordinationDiagram({
           {nodes.map((n) => (
             <g
               key={n.label}
-              className={`coord-node ${n.stalled ? "is-stalled" : ""}`}
+              className={`coord-node coord-node-${n.x} ${n.stalled ? "is-stalled" : ""}`}
               tabIndex={0}
               role="group"
               aria-label={`${n.label}. ${n.detail}`}
