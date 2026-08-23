@@ -156,9 +156,7 @@
             "La personne qui décide participe"
           ]
         },
-        "pullquote": "Des entreprises établies dont le fonctionnement a dépassé <em>les outils qui le tiennent</em>.",
-        "intro1": "La personne qui peut décider d’y remédier fait partie de l’échange.",
-        "intro2": "Si ce n’est pas vous, le moment n’est pas le bon."
+        "pullquote": "Des entreprises établies dont le fonctionnement a dépassé <em>les outils qui le tiennent</em>."
       },
       "casestudy": {
         "label": "Étude de cas",
@@ -1067,23 +1065,27 @@
       "people": {
         "label": "Nombre de personnes concernées",
         "help": "Combien de personnes rencontrent régulièrement ces frictions ?",
-        "help2": "Ne comptez pas tout l’effectif si seule une partie de l’équipe est concernée."
+        "help2": "Ne comptez pas tout l’effectif si seule une partie de l’équipe est concernée.",
+        "unit": "personnes"
       },
       "cost": {
         "label": "Coût employeur annuel moyen par personne",
         "help": "Salaire brut annuel et cotisations patronales.",
-        "help2": "Utilisez de préférence une moyenne communiquée par votre paie ou votre comptabilité."
+        "help2": "Utilisez de préférence une moyenne communiquée par votre paie ou votre comptabilité.",
+        "unit": "€ / an"
       },
       "friction": {
         "label": "Temps absorbé par personne et par semaine",
         "help": "Combien d’heures une personne consacre-t-elle chaque semaine aux ressaisies, recherches d’information, relances entre collègues, vérifications et passages de relais évitables ?",
         "help2": "Comptez uniquement le temps que vous pensez raisonnablement évitable.",
-        "warning": "Vérifiez que vous avez indiqué le temps hebdomadaire par personne, et non le total de l’équipe."
+        "warning": "Vérifiez que vous avez indiqué le temps hebdomadaire par personne, et non le total de l’équipe.",
+        "unit": "h / semaine"
       },
       "hours": {
         "label": "Durée hebdomadaire de travail",
         "help": "Nombre d’heures contractuelles travaillées chaque semaine.",
-        "help2": "Pour un forfait-jours, indiquez une base hebdomadaire équivalente."
+        "help2": "Pour un forfait-jours, indiquez une base hebdomadaire équivalente.",
+        "unit": "h / semaine"
       },
       "submit": "Calculer",
       "invalid": "Vérifiez vos saisies. Le temps absorbé ne peut pas dépasser la durée hebdomadaire de travail.",

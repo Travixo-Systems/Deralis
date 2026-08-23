@@ -50,12 +50,34 @@ const inputStyle: CSSProperties = {
   width: "100%",
   maxWidth: 320,
   padding: "13px 14px",
+  paddingRight: 104,
   fontSize: 16,
   fontFamily: "inherit",
   color: "var(--text-primary)",
   background: "var(--canvas)",
   border: "1px solid var(--border-strong)",
   borderRadius: "var(--radius-internal)",
+};
+
+/* The unit lives inside the box rather than in the label, so it is still
+   there while the field is being filled in. It is not focusable and is
+   hidden from screen readers, which get the same information from the
+   label and help text. */
+const inputWrapStyle: CSSProperties = {
+  position: "relative",
+  width: "100%",
+  maxWidth: 320,
+};
+
+const unitStyle: CSSProperties = {
+  position: "absolute",
+  right: 14,
+  top: "50%",
+  transform: "translateY(-50%)",
+  fontSize: 13,
+  color: "var(--text-muted)",
+  pointerEvents: "none",
+  transition: "color 450ms ease",
 };
 
 const fieldStyle: CSSProperties = { marginBottom: 30 };
@@ -255,23 +277,26 @@ export default function FrictionCalculator() {
       </label>
       <p style={helpStyle}>{t(`form.${key}.help`)}</p>
       <p style={helpMutedStyle}>{t(`form.${key}.help2`)}</p>
-      <input
-        id={`fc-${key}`}
-        style={inputStyle}
-        type="number"
-        inputMode="decimal"
-        value={value}
-        min={opts.min}
-        step={opts.step}
-        // Keeps the visitor's figures out of Clarity session replay. The route is
-        // also excluded from Clarity entirely; this is the second layer.
-        data-clarity-mask="true"
-        onChange={(e) => {
-          onFirstInput();
-          setValue(e.target.value);
-          if (submitted) setSubmitted(false);
-        }}
-      />
+      <div style={inputWrapStyle}>
+        <input
+          id={`fc-${key}`}
+          style={inputStyle}
+          type="number"
+          inputMode="decimal"
+          value={value}
+          min={opts.min}
+          step={opts.step}
+          // Keeps the visitor's figures out of Clarity session replay. The route is
+          // also excluded from Clarity entirely; this is the second layer.
+          data-clarity-mask="true"
+          onChange={(e) => {
+            onFirstInput();
+            setValue(e.target.value);
+            if (submitted) setSubmitted(false);
+          }}
+        />
+        <span style={unitStyle} aria-hidden="true">{t(`form.${key}.unit`)}</span>
+      </div>
       {key === "friction" && overThreshold && <p style={noticeStyle}>{t("form.friction.warning")}</p>}
     </div>
   );

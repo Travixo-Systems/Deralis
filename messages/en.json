@@ -156,9 +156,7 @@
             "The decision-maker is involved"
           ]
         },
-        "pullquote": "Established businesses where the operation has outgrown <em>the tools holding it together</em>.",
-        "intro1": "The person who can decide to fix this is in the room.",
-        "intro2": "If that’s not you, this is the wrong time."
+        "pullquote": "Established businesses where the operation has outgrown <em>the tools holding it together</em>."
       },
       "casestudy": {
         "label": "Case study",
@@ -1067,23 +1065,27 @@
       "people": {
         "label": "People affected",
         "help": "How many people regularly encounter these frictions?",
-        "help2": "Do not include the entire workforce when only part of the team is affected."
+        "help2": "Do not include the entire workforce when only part of the team is affected.",
+        "unit": "people"
       },
       "cost": {
         "label": "Average annual employer cost per person",
         "help": "Annual gross salary plus employer contributions.",
-        "help2": "Use an average supplied by payroll or accounting whenever possible."
+        "help2": "Use an average supplied by payroll or accounting whenever possible.",
+        "unit": "€ / year"
       },
       "friction": {
         "label": "Time absorbed per person each week",
         "help": "How many hours does one person spend each week re-entering data, searching for information, following up with colleagues, checking statuses, or managing avoidable handoffs?",
         "help2": "Only include time you believe could reasonably be avoided.",
-        "warning": "Check that this is hours per person per week, not the team total."
+        "warning": "Check that this is hours per person per week, not the team total.",
+        "unit": "h / week"
       },
       "hours": {
         "label": "Contracted weekly hours",
         "help": "The number of hours each person is contracted to work per week.",
-        "help2": "For day-rate contracts, enter an equivalent weekly basis."
+        "help2": "For day-rate contracts, enter an equivalent weekly basis.",
+        "unit": "h / week"
       },
       "submit": "Calculate",
       "invalid": "Check your entries. Time absorbed cannot exceed contracted weekly hours.",
