@@ -47,7 +47,7 @@ export function WebSiteJsonLd() {
     publisher: {
       "@id": "https://deralis.digital/#organization",
     },
-    inLanguage: "en-US",
+    inLanguage: ["fr-FR", "en-GB"],
   };
 
   return (

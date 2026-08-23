@@ -8,6 +8,7 @@ import HomeCaseStudy from "@/components/home/HomeCaseStudy";
 import HowIWork from "@/components/home/HowIWork";
 import ClimaxPeak from "@/components/home/ClimaxPeak";
 import AnimateIn from "@/components/shared/AnimateIn";
+import { localeUrl } from "@/i18n/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: fullTitle,
       description,
       type: "website",
-      url: isEn ? "https://www.deralis.digital" : `https://www.deralis.digital/${locale}`,
+      url: localeUrl(locale),
       siteName: "Deralis Digital",
       locale: isEn ? "en_US" : "fr_FR",
       images: [

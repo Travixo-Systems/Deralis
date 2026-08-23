@@ -1,8 +1,9 @@
 import { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
+import { routing } from "@/i18n/routing";
+import { BASE_URL, localeUrl } from "@/i18n/urls";
 
-const BASE_URL = "https://www.deralis.digital";
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
 type Page = {
@@ -60,33 +61,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   return pages.flatMap((page) => {
-    const fr = hasFrench(page.path);
-    const languages: Record<string, string> = {
-      en: `${BASE_URL}${page.path}`,
-      "x-default": `${BASE_URL}${page.path}`,
-    };
-    if (fr) languages.fr = `${BASE_URL}/fr${page.path}`;
+    // Only advertise a locale whose content actually exists. hreflang pointing
+    // at a route that falls back to the other language is a mismatch search
+    // engines penalise.
+    const locales = routing.locales.filter((l) => l !== "fr" || hasFrench(page.path));
 
-    const entries: MetadataRoute.Sitemap = [
-      {
-        url: `${BASE_URL}${page.path}`,
-        lastModified,
-        changeFrequency: page.changeFrequency,
-        priority: page.priority,
-        alternates: { languages },
-      },
-    ];
+    const languages: Record<string, string> = {};
+    for (const l of locales) languages[l] = localeUrl(l, page.path);
+    languages["x-default"] = localeUrl(routing.defaultLocale, page.path);
 
-    if (fr) {
-      entries.push({
-        url: `${BASE_URL}/fr${page.path}`,
-        lastModified,
-        changeFrequency: page.changeFrequency,
-        priority: page.priority,
-        alternates: { languages },
-      });
-    }
-
-    return entries;
+    return locales.map((l) => ({
+      url: localeUrl(l, page.path),
+      lastModified,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+      alternates: { languages },
+    }));
   });
 }
