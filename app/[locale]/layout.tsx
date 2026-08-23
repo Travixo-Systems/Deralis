@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { localeUrl, alternateLanguages } from "@/i18n/urls";
 import SiteNav from "@/components/layout/SiteNav";
 import SiteFooter from "@/components/layout/SiteFooter";
 import StickyCTA from "@/components/layout/StickyCTA";
@@ -70,38 +71,20 @@ export async function generateMetadata({
     },
   };
 
+  /* Feeds the default meta description, og:description and twitter:description.
+     Pages that set their own description override the first but not the other
+     two, so this string is what surfaced as twitter:description site-wide. Kept
+     inside a 150 character budget so the offer is not the part that gets cut. */
   const descriptions = {
-    fr: "Cabinet d'ingénierie des systèmes indépendant. Je construis les systèmes opérationnels pour les entreprises dont les outils ont dépassé la façon dont l'information circule entre eux.",
-    en: "Independent systems engineering practice. I build the operational systems that fix businesses whose tools have outgrown the way information moves between them.",
+    fr: "Réduisez le temps perdu à chercher l’information, suivre l’avancement et relancer. Diagnostic opérationnel Deralis en deux jours.",
+    en: "Reduce time lost searching for information, checking progress and following up. Two-day operational diagnostic from Deralis Digital.",
   };
 
   const localeKey = locale as keyof typeof titles;
 
   return {
-    title: titles[localeKey] || titles.en,
-    description: descriptions[localeKey] || descriptions.en,
-    keywords:
-      locale === "fr"
-        ? [
-            "développement web",
-            "agence web France",
-            "transformation digitale",
-            "automatisation IA",
-            "applications web sur mesure",
-            "développeur Next.js",
-            "développeur Supabase",
-            "développement SaaS",
-          ]
-        : [
-            "web development agency",
-            "digital transformation",
-            "AI workflow automation",
-            "custom web applications",
-            "Next.js developer",
-            "Supabase developer",
-            "SaaS development",
-            "web agency France",
-          ],
+    title: titles[localeKey] || titles[routing.defaultLocale],
+    description: descriptions[localeKey] || descriptions[routing.defaultLocale],
     authors: [{ name: "Deralis Digital" }],
     creator: "Deralis Digital",
     icons: {
@@ -115,13 +98,10 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: locale === "fr" ? "fr_FR" : "en_US",
-      url:
-        locale === "en"
-          ? "https://www.deralis.digital"
-          : `https://www.deralis.digital/${locale}`,
+      url: localeUrl(locale),
       siteName: "Deralis Digital",
-      title: titles[localeKey]?.default || titles.en.default,
-      description: descriptions[localeKey] || descriptions.en,
+      title: titles[localeKey]?.default || titles[routing.defaultLocale].default,
+      description: descriptions[localeKey] || descriptions[routing.defaultLocale],
       images: [
         {
           url: "/og-image.png",
@@ -133,8 +113,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[localeKey]?.default || titles.en.default,
-      description: descriptions[localeKey] || descriptions.en,
+      title: titles[localeKey]?.default || titles[routing.defaultLocale].default,
+      description: descriptions[localeKey] || descriptions[routing.defaultLocale],
       images: ["/og-image.png"],
     },
     robots: {
@@ -149,14 +129,8 @@ export async function generateMetadata({
       },
     },
     alternates: {
-      canonical:
-        locale === "en"
-          ? "https://www.deralis.digital"
-          : `https://www.deralis.digital/${locale}`,
-      languages: {
-        en: "https://www.deralis.digital",
-        fr: "https://www.deralis.digital/fr",
-      },
+      canonical: localeUrl(locale),
+      languages: alternateLanguages(),
     },
   };
 }
@@ -201,28 +175,14 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <link
-          rel="canonical"
-          href={
-            locale === "en"
-              ? "https://www.deralis.digital"
-              : `https://www.deralis.digital/${locale}`
-          }
-        />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href="https://www.deralis.digital"
-        />
-        <link
-          rel="alternate"
-          hrefLang="fr"
-          href="https://www.deralis.digital/fr"
-        />
+        <link rel="canonical" href={localeUrl(locale)} />
+        {routing.locales.map((l) => (
+          <link key={l} rel="alternate" hrefLang={l} href={localeUrl(l)} />
+        ))}
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://www.deralis.digital"
+          href={localeUrl(routing.defaultLocale)}
         />
         <script
           dangerouslySetInnerHTML={{

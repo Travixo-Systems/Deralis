@@ -79,9 +79,9 @@
           "signature": "Independent. Bilingual. One point of contact, from analysis to production.",
           "cardAriaLabel": "See all projects"
         },
-        "h1": "<em>Clearer</em> operations. Faster <em>growth</em>.",
-        "subhead1": "I design solutions that keep work and information moving together from one person to the next, using the teams and tools you already have.",
-        "subhead2": "Every request, approval, order or follow up has an owner, a status and a next action. Your teams know what is moving, what is blocked and who needs to act.",
+        "h1": "Give time back to what <em>makes money</em>.",
+        "subhead1": "I design solutions that fit the teams and tools you already have, so everyone knows who is handling what, where the work stands, and what needs to happen next.",
+        "subhead2": "Less time spent searching for information, checking progress, and chasing answers.",
         "ctaPrimary": "See what the diagnostic covers",
         "ctaSecondary": "View my work",
         "ctaCaption": "Two days · €1,280 · €500 deducted if you build",
@@ -132,14 +132,6 @@
           "detail4": "Never reached"
         }
       },
-      "flow": {
-        "label": "How I work",
-        "step1": "Clarify",
-        "step2": "Scope",
-        "step3": "Build first process",
-        "step4": "Expand gradually",
-        "step5": "Handoff"
-      },
       "who": {
         "eyebrow": "Who I work with",
         "card1": {
@@ -162,16 +154,14 @@
         },
         "card3": {
           "title": "Not for everyone",
-          "description": "Not for early-stage ideas, basic website requests, or projects where the problem has not been defined. If you cannot name what is broken, the timing is wrong.",
+          "description": "Not for a business that is still only an idea, or for a basic website project. You do not need to know what is causing the problem. One real example is enough.",
           "tags": [
-            "Established business only",
-            "Problem must be defined",
-            "Decision-maker participates"
+            "Profitable business already operating",
+            "One real example is enough",
+            "The decision-maker is involved"
           ]
         },
-        "pullquote": "Established businesses where the operation has outgrown <em>the tools holding it together</em>.",
-        "intro1": "The person who can decide to fix this is in the room.",
-        "intro2": "If that’s not you, this is the wrong time."
+        "pullquote": "Established businesses where the operation has outgrown <em>the tools holding it together</em>."
       },
       "casestudy": {
         "label": "Case study",
@@ -192,24 +182,24 @@
           },
           "2": {
             "num": "02",
-            "title": "Custom System",
-            "description": "The first useful version. It solves the priority friction point and gives everyone the information they need to act."
+            "title": "First useful version",
+            "description": "It first tackles the problem that costs your team the most time. Everyone can see where the work stands and what they need to do next."
           },
           "3": {
             "num": "03",
             "title": "Extensions",
             "description": "What comes next, once the first version is in service and only if use justifies it."
-          },
-          "4": {
-            "num": "04",
-            "title": "Ongoing",
-            "description": "Maintenance and iterations, with no commitment or hidden fees."
           }
+        },
+        "support": {
+          "eyebrow": "Once the first version is live",
+          "title": "Ongoing support",
+          "description": "Maintenance and improvements, only when you need them. No long-term commitment and no hidden monthly fee."
         }
       },
       "finalCta": {
-        "headline": "If something <em>breaks</em>, I can show you how to fix it.",
-        "description": "Before any estimate, I map how your system actually works. Then we decide together whether it’s worth building.",
+        "headline": "Before I build anything, I show you where your team is <em>losing time</em>.",
+        "description": "Before I give you a price for building the solution, I study how the work actually happens. I then show you what is worth building and what should not be built. The final decision is yours.",
         "note": "Another developer can take over without rebuilding everything."
       },
       "proof": {
@@ -260,9 +250,9 @@
         "body1": "Not for an idea with no real activity yet, not for a brochure-site request, and not for adding automation with no real situation to point at.",
         "body2": "<strong>You do not need to know the cause.</strong> One real example is enough: a file that drags, an approval that stalls, a customer who has to chase.",
         "tags": [
-          "Established business",
-          "One concrete example is enough",
-          "Decision-maker participates"
+          "Profitable business already operating",
+          "One real example is enough",
+          "The decision-maker is involved"
         ]
       }
     }
@@ -277,7 +267,7 @@
         "eyebrow": "Projects",
         "title": "Real systems, built around how operations actually <em>run</em>.",
         "sub1": "A Deralis product. A prototype proposed to a Paris consulate. And several demonstrations you can open right now.",
-        "sub2": "Each one started from the same observation. Most businesses already have tools. They just do not have a system.",
+        "sub2": "All these projects started with the same observation. Most businesses already have the tools they need. The problem is that work still gets lost when it moves from one tool to another.",
         "ctaSecondary": "See the case study"
       },
       "travixo": {
@@ -347,15 +337,15 @@
     "page": {
       "metadata": {
         "title": "About",
-        "description": "Deralis Digital is an independent engineering practice. I build operational systems for profitable businesses where the way information moves between people and tools has become the bottleneck."
+        "description": "I help profitable businesses reduce time lost searching for information, checking progress and following up. Independent engineering practice in Île-de-France."
       },
       "hero": {
-        "eyebrow": "Independent engineering practice · Île-de-France",
+        "eyebrow": "About · Île-de-France",
         "title": "About <em>Deralis</em> Digital.",
-        "sub1": "I build the operational systems established businesses need to keep running when their tools and processes <em>stop keeping up</em>.",
-        "sub2": "Deralis Digital is an independent engineering practice. I work with profitable, operating businesses where work slows down because people have to search for information, check progress and chase for answers. Not websites. Not templates. Systems that show who owns what, where it stands and what happens next.",
+        "sub1": "In an established business, work often slows down when it passes from one person to another. People have to look for information, ask for updates and follow up to get an answer. I design solutions that let everyone see where the work stands and what they need to do next. The team spends <em>less time</em> searching and following up.",
+        "sub2": "I work with profitable businesses that are already operating. In the solutions I build, every request, approval, order or follow-up clearly shows who owns it, where it stands and what needs to happen next. I do not sell basic websites or ready-made solutions.",
         "sub3": "I’ve worked inside real businesses where the system isn’t visible, but the consequences are. That experience is what TraviXO Systems comes from, a VGP compliance software for the French equipment rental industry.",
-        "sub4": "It shapes how I work: you cannot design a system for an operation you do not understand.",
+        "sub4": "Deralis Digital is an independent engineering practice. I handle every stage myself, from the diagnostic to launch. Everything I deliver is documented so another developer can understand, maintain and improve it. Before I can build something useful, I first need to understand how your work actually happens.",
         "ctaSecondary": "See how I work"
       },
       "background": {
@@ -409,7 +399,7 @@
   "contact": {
     "metadata": {
       "title": "Contact",
-      "description": "Get in touch with Deralis Digital. Let’s discuss your project and build something real."
+      "description": "Contact Deralis Digital to discuss where your team is losing time and what should be fixed first."
     },
     "hero": {},
     "form": {
@@ -434,7 +424,7 @@
     "page": {
       "metadata": {
         "title": "Contact",
-        "description": "Talk to me before booking an operational diagnostic. Independent engineering practice based in Île-de-France, working across France and remotely."
+        "description": "Tell me what is costing your team time. Based in Île-de-France, I work remotely across France."
       },
       "hero": {
         "eyebrow": "Contact",
@@ -501,7 +491,7 @@
     "page": {
       "metadata": {
         "title": "Blog",
-        "description": "From the practice. Notes on operations, software, and what it actually takes to build systems that work."
+        "description": "Real situations, problems that waste time and practical ways to make work easier to follow."
       }
     },
     "eyebrow": "Blog",
@@ -882,7 +872,7 @@
     "signatureBlock": {
       "eyebrow": "Written by",
       "name": "Uwa Ugboaja",
-      "bio": "I build the operational systems established businesses run on, solo, in French and English, from Île-de-France.",
+      "bio": "I design and build solutions that reduce time spent searching for information, checking progress and following up. I work solo, in French and English, from Île-de-France.",
       "linkLabel": "More about how I work"
     },
     "moreStrip": {
@@ -932,7 +922,7 @@
         "hint": "Tick the ones you recognise.",
         "count1": "One is enough to be worth looking at.",
         "count2": "Two usually means the cost is already recurring.",
-        "count3": "Three or more is a system problem, not a people problem."
+        "count3": "Recognise three or more? The problem is probably not caused by one person. It comes from the way the work is organised."
       },
       "deliverable": {
         "tab": "What you’ll have in hand",
@@ -1013,7 +1003,7 @@
       },
       "estimateBanner": {
         "eyebrow": "Your indicative estimate",
-        "body": "{amount} of annual capacity absorbed, or {rate} of the paid time of the team concerned. The diagnostic checks that figure and identifies the share that is genuinely avoidable, worth recovering and technically fixable.",
+        "body": "This represents about {amount} in paid work time each year, or {rate} of the affected team’s paid time. This figure is still an estimate. The diagnostic checks what is really happening and shows which problems to address first.",
         "recalculate": "Redo the estimate"
       }
     }
@@ -1021,7 +1011,7 @@
   "methode": {
     "metadata": {
       "title": "Method",
-      "description": "Three stages: diagnostic, system, extensions. Nothing is built until the real operation is understood. No stage can be skipped."
+      "description": "Three stages: operational diagnostic, first useful version, extensions. Nothing is built until the real operation is understood. No stage can be skipped."
     },
     "hero": {
       "eyebrow": "Method",
@@ -1030,8 +1020,8 @@
       "ctaPrimary": "Start with the diagnostic",
       "anchorTab": "What you get",
       "stageNames": [
-        "Diagnostic",
-        "System",
+        "Operational diagnostic",
+        "First useful version",
         "Extensions"
       ]
     },
@@ -1039,15 +1029,15 @@
       "intro": "Nothing is built until how the operation actually works is mapped.",
       "stage1": {
         "num": "01",
-        "title": "Diagnostic",
+        "title": "Operational diagnostic",
         "desc": "For two days I work through the real work with you: who receives what, who decides, where things wait, what has to be checked or chased. The deliverable is a decision dossier, not a report.",
         "metadata": "Two days · dossier within 5 business days",
         "cta": "Start the diagnostic"
       },
       "stage2": {
         "num": "02",
-        "title": "System",
-        "desc": "The first useful version, built from the dossier. One, not three. The one nothing else holds without."
+        "title": "First useful version",
+        "desc": "Using the diagnostic report, I first build the version that solves the most important problem. Not three tools at once. One solid foundation that can be improved later."
       },
       "stage3": {
         "num": "03",
@@ -1059,16 +1049,21 @@
       "h2": "Start by understanding what needs building.",
       "sub": "Two days. Five days. The document is yours, whatever happens next.",
       "cta": "Make a decision · €1,280"
+    },
+    "support": {
+      "eyebrow": "Once the first version is live",
+      "title": "Ongoing support",
+      "description": "Maintenance and improvements, only when you need them. No long-term commitment and no hidden monthly fee."
     }
   },
   "frictions": {
     "metadata": {
       "title": "Operational Friction Calculator",
-      "description": "Estimate the annual value of working time absorbed by duplicate data entry, information searches, internal follow-ups, and unclear handoffs."
+      "description": "Estimate the annual value of working time absorbed by duplicate data entry, information searches, following up with colleagues, and unclear handoffs."
     },
     "hero": {
       "h1": "Where does your paid time go?",
-      "sub": "Estimate the annual value absorbed by duplicate data entry, information searches, internal follow-ups, and unclear handoffs.",
+      "sub": "Estimate the annual value absorbed by duplicate data entry, information searches, following up with colleagues, and unclear handoffs.",
       "meta": "Free estimate · 2 minutes · No sign-up"
     },
     "form": {
@@ -1076,23 +1071,27 @@
       "people": {
         "label": "People affected",
         "help": "How many people regularly encounter these frictions?",
-        "help2": "Do not include the entire workforce when only part of the team is affected."
+        "help2": "Do not include the entire workforce when only part of the team is affected.",
+        "unit": "people"
       },
       "cost": {
         "label": "Average annual employer cost per person",
         "help": "Annual gross salary plus employer contributions.",
-        "help2": "Use an average supplied by payroll or accounting whenever possible."
+        "help2": "Use an average supplied by payroll or accounting whenever possible.",
+        "unit": "€ / year"
       },
       "friction": {
         "label": "Time absorbed per person each week",
-        "help": "How many hours does one person spend each week re-entering data, searching for information, following up internally, checking statuses, or managing avoidable handoffs?",
+        "help": "How many hours does one person spend each week re-entering data, searching for information, following up with colleagues, checking statuses, or managing avoidable handoffs?",
         "help2": "Only include time you believe could reasonably be avoided.",
-        "warning": "Check that this is hours per person per week, not the team total."
+        "warning": "Check that this is hours per person per week, not the team total.",
+        "unit": "h / week"
       },
       "hours": {
         "label": "Contracted weekly hours",
         "help": "The number of hours each person is contracted to work per week.",
-        "help2": "For day-rate contracts, enter an equivalent weekly basis."
+        "help2": "For day-rate contracts, enter an equivalent weekly basis.",
+        "unit": "h / week"
       },
       "submit": "Calculate",
       "invalid": "Check your entries. Time absorbed cannot exceed contracted weekly hours.",
@@ -1109,7 +1108,7 @@
     "next": {
       "title": "This number is a starting point",
       "p1": "It does not yet show which frictions can genuinely be removed or whether fixing them would justify the investment.",
-      "p2": "During the diagnostic, I examine the real workflows, verify the volumes, and identify the capacity that could realistically be recovered. The result shows what should be fixed, in what order, and under which economic conditions.",
+      "p2": "During the diagnostic, I look at how the work really happens: how many requests or jobs move through the business, where they slow down and which problems can actually be fixed. You then know what to fix first, and why.",
       "cta": "Identify what can actually be recovered",
       "ctaMeta": "Operational diagnostic · €1,280 · Two days"
     },

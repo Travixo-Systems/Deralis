@@ -12,15 +12,6 @@ const eyebrowStyle: CSSProperties = {
   transition: "color 450ms ease",
 };
 
-const introStyle: CSSProperties = {
-  fontSize: 19,
-  lineHeight: 1.55,
-  color: "var(--text-secondary)",
-  maxWidth: "60ch",
-  marginBottom: 14,
-  transition: "color 450ms ease",
-};
-
 // Grid layout via CSS class .grid-2col (responsive handled in globals.css)
 
 const whoCardStyle: CSSProperties = {
@@ -77,8 +68,6 @@ export default function WhoSection() {
   return (
     <DsCard>
       <p style={eyebrowStyle}>{t("eyebrow")}</p>
-      <p style={introStyle}>{t("intro1")}</p>
-      <p style={introStyle}>{t("intro2")}</p>
 
       <PullQuote html={t.raw("pullquote")} />
 

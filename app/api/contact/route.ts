@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { routing } from "@/i18n/routing";
 
 const MAX_NAME = 200;
 const MAX_EMAIL = 200;
@@ -193,12 +194,17 @@ Sent from deralis.digital contact form
     // Send auto-reply to buyer (non-blocking)
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://deralisdigital.com";
     const isFr = locale === "fr";
+    // The default locale is served unprefixed, so the path follows the routing
+    // config rather than hardcoding which language owns the bare domain.
+    const diagnosticUrl = `${siteUrl}${
+      locale === routing.defaultLocale ? "" : `/${locale}`
+    }/diagnostic`;
     const replySubject = isFr
       ? "Message bien re\u00e7u. Je vous r\u00e9ponds bient\u00f4t"
       : "Got your message. I'll reply soon";
     const replyBody = isFr
-      ? `Merci pour votre message. Je lis chaque message personnellement et je vous r\u00e9ponds sous 2 jours ouvr\u00e9s.\n\nSi vous savez d\u00e9j\u00e0 que vous souhaitez avancer, le diagnostic est la voie la plus directe\u00a0:\n${siteUrl}/fr/diagnostic\n\nUwa\nDeralis Digital`
-      : `Thanks for your message. I read every contact form submission personally and I'll reply within 2 working days.\n\nIf you already know you want to move forward, the diagnostic is the faster path:\n${siteUrl}/diagnostic\n\nUwa\nDeralis Digital`;
+      ? `Merci pour votre message. Je lis chaque message personnellement et je vous r\u00e9ponds sous 2 jours ouvr\u00e9s.\n\nSi vous savez d\u00e9j\u00e0 que vous souhaitez avancer, le diagnostic est la voie la plus directe\u00a0:\n${diagnosticUrl}\n\nUwa\nDeralis Digital`
+      : `Thanks for your message. I read every contact form submission personally and I'll reply within 2 working days.\n\nIf you already know you want to move forward, the diagnostic is the faster path:\n${diagnosticUrl}\n\nUwa\nDeralis Digital`;
 
     resend.emails
       .send({

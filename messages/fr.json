@@ -68,9 +68,9 @@
     "page": {
       "hero": {
         "eyebrow": "",
-        "h1": "<em>Optimisez</em> vos opérations. Accélérez votre <em>croissance</em>.",
-        "subhead1": "Je conçois des solutions où le travail et l’information avancent ensemble d’une personne à l’autre, avec les équipes et les outils déjà en place.",
-        "subhead2": "Chaque demande, validation, commande ou relance a un responsable, un statut et une prochaine action. Vos équipes savent ce qui avance, ce qui bloque et qui doit agir.",
+        "h1": "Redonnez du temps à ce qui <em>rapporte</em>.",
+        "subhead1": "Je conçois des solutions adaptées à vos équipes et aux outils déjà en place, pour que chacun sache qui s’occupe de quoi, où en est le travail et ce qui doit suivre.",
+        "subhead2": "Moins de temps passé à chercher l’information, vérifier l’avancement et relancer.",
         "ctaPrimary": "Voir ce que couvre le diagnostic",
         "ctaSecondary": "Voir mes réalisations",
         "anchor": {
@@ -94,7 +94,7 @@
       "cost": {
         "eyebrow": "Ce que la coordination absorbe",
         "intro1": "Vos équipes travaillent. Une partie de leur temps sert à livrer pour les clients. Une autre sert à coordonner le travail lui-même.",
-        "intro2": "Pendant ce temps, quelqu'un cherche la dernière version, et le client attend une réponse que personne ne porte.",
+        "intro2": "Pendant ce temps, quelqu’un cherche la dernière version, et le client attend une réponse que personne ne porte.",
         "pullquote": "Une partie de ce temps est nécessaire. Le reste est <em>récupérable</em>.",
         "card1": {
           "title": "Le temps absorbé par la coordination",
@@ -125,20 +125,12 @@
           "node4": "Livraison",
           "stalled": "en attente",
           "followUp": "relance",
-          "title": "Une demande passe d'une personne à l'autre puis reste bloquée en attente d'une validation, ce qui oblige le client à relancer.",
+          "title": "Une demande passe d’une personne à l’autre puis reste bloquée en attente d’une validation, ce qui oblige le client à relancer.",
           "detail1": "Demandé",
           "detail2": "Transmis",
-          "detail3": "En attente d'une décision",
+          "detail3": "En attente d’une décision",
           "detail4": "Jamais atteint"
         }
-      },
-      "flow": {
-        "label": "Comment je travaille",
-        "step1": "Clarifier",
-        "step2": "Cadrer",
-        "step3": "Construire le premier processus",
-        "step4": "Étendre progressivement",
-        "step5": "Transmission"
       },
       "who": {
         "eyebrow": "Avec qui je travaille",
@@ -162,16 +154,14 @@
         },
         "card3": {
           "title": "Pas pour tout le monde",
-          "description": "Pas pour les idées en phase de démarrage, les demandes de sites simples, ou les projets dont le problème n’a pas été défini. Si vous ne pouvez pas nommer ce qui est cassé, le moment n’est pas le bon.",
+          "description": "Pas pour une entreprise qui n’est encore qu’une idée, ni pour un simple site vitrine. Vous n’avez pas besoin de connaître la cause du problème. Un exemple réel suffit.",
           "tags": [
-            "Activité établie uniquement",
-            "Le problème doit être défini",
-            "Le décideur participe"
+            "Entreprise rentable et déjà en activité",
+            "Un exemple réel suffit",
+            "La personne qui décide participe"
           ]
         },
-        "pullquote": "Des entreprises établies dont le fonctionnement a dépassé <em>les outils qui le tiennent</em>.",
-        "intro1": "La personne qui peut décider d’y remédier fait partie de l’échange.",
-        "intro2": "Si ce n’est pas vous, le moment n’est pas le bon."
+        "pullquote": "Des entreprises établies dont le fonctionnement a dépassé <em>les outils qui le tiennent</em>."
       },
       "casestudy": {
         "label": "Étude de cas",
@@ -192,24 +182,24 @@
           },
           "2": {
             "num": "02",
-            "title": "Système sur mesure",
-            "description": "La première version utile. Elle résout le point de friction prioritaire et donne à chacun l’information nécessaire pour agir."
+            "title": "Première version utile",
+            "description": "Elle règle d’abord le problème qui fait perdre le plus de temps à votre équipe. Chacun voit où en est le travail et ce qu’il doit faire ensuite."
           },
           "3": {
             "num": "03",
             "title": "Extensions",
             "description": "Ce qui vient ensuite, une fois la première version en service et seulement si l’usage le justifie."
-          },
-          "4": {
-            "num": "04",
-            "title": "Suivi",
-            "description": "Maintenance et itérations, sans engagement ni forfait caché."
           }
+        },
+        "support": {
+          "eyebrow": "Une fois la première version en place",
+          "title": "Suivi",
+          "description": "Maintenance et améliorations, uniquement si vous en avez besoin. Aucun engagement à long terme, aucun forfait caché."
         }
       },
       "finalCta": {
-        "headline": "Si quelque chose <em>casse</em>, je peux vous montrer comment le réparer.",
-        "description": "Avant tout devis, je cartographie le fonctionnement réel de votre système. Ensuite, nous décidons ensemble s’il vaut la peine de le construire.",
+        "headline": "Avant de construire quoi que ce soit, je vous montre où votre équipe <em>perd du temps</em>.",
+        "description": "Avant de chiffrer la construction, j’étudie comment le travail se déroule réellement. Je vous montre ensuite ce qui vaut la peine d’être construit et ce qu’il vaut mieux laisser de côté. La décision finale vous appartient.",
         "note": "Un autre développeur peut reprendre sans tout reconstruire."
       },
       "proof": {
@@ -260,9 +250,9 @@
         "body1": "Pas pour une idée qui n’a pas encore d’activité réelle, pas pour une demande de site vitrine, pas pour une envie d’ajouter de l’automatisation sans situation réelle à montrer.",
         "body2": "<strong>Vous n’avez pas besoin de connaître la cause.</strong> Un exemple réel suffit : un dossier qui traîne, une validation qui bloque, un client qui relance.",
         "tags": [
-          "Activité établie",
-          "Un exemple concret suffit",
-          "Le décideur participe"
+          "Entreprise rentable et déjà en activité",
+          "Un exemple réel suffit",
+          "La personne qui décide participe"
         ]
       }
     }
@@ -277,7 +267,7 @@
         "eyebrow": "Réalisations",
         "title": "Des systèmes concrets, conçus pour le <em>fonctionnement</em> réel des opérations.",
         "sub1": "Un produit Deralis. Un prototype proposé à un consulat parisien. Et plusieurs démonstrations accessibles maintenant.",
-        "sub2": "Chacune est partie de la même observation. La plupart des entreprises ont déjà des outils. Ce qui leur manque, c’est un système.",
+        "sub2": "Tous ces projets sont partis du même constat. La plupart des entreprises ont déjà les outils dont elles ont besoin. Le problème, c’est que le travail se perd encore quand il passe d’un outil à l’autre.",
         "ctaSecondary": "Voir l’étude de cas"
       },
       "travixo": {
@@ -347,15 +337,15 @@
     "page": {
       "metadata": {
         "title": "À propos",
-        "description": "Deralis Digital est une structure d’ingénierie indépendante. Je construis les systèmes opérationnels pour les entreprises rentables où la circulation de l’information entre les personnes et les outils est devenue le goulot d’étranglement."
+        "description": "J’aide les entreprises rentables à réduire le temps perdu à chercher l’information, vérifier l’avancement et relancer. Structure d’ingénierie indépendante en Île-de-France."
       },
       "hero": {
-        "eyebrow": "Structure d’ingénierie de systèmes indépendante",
+        "eyebrow": "À propos · Île-de-France",
         "title": "À propos de <em>Deralis</em> Digital.",
-        "sub1": "Je construis les systèmes opérationnels dont les entreprises établies ont besoin pour continuer à tourner quand leurs outils et processus <em>ne suivent plus</em>.",
-        "sub2": "Deralis Digital est une structure d’ingénierie indépendante. Je travaille avec des entreprises rentables et opérationnelles où le travail ralentit parce qu’il faut chercher l’information, vérifier l’avancement et relancer pour obtenir une réponse. Pas des sites web. Pas de templates. Des systèmes qui montrent qui s’occupe de quoi, où ça en est et ce qui doit suivre.",
+        "sub1": "Dans une entreprise établie, le travail ralentit souvent quand il passe d’une personne à une autre. Il faut chercher l’information, demander où en est le dossier et relancer pour obtenir une réponse. Je conçois des solutions qui permettent à chacun de voir où en est le travail et ce qu’il doit faire ensuite. L’équipe passe <em>moins de temps</em> à chercher et à relancer.",
+        "sub2": "Je travaille avec des entreprises rentables et déjà en activité. Dans les solutions que je construis, chaque demande, validation, commande ou relance montre clairement qui s’en occupe, où elle en est et ce qui doit se passer ensuite. Je ne vends ni site vitrine ni solution toute faite.",
         "sub3": "J’ai travaillé à l’intérieur de vraies entreprises où le système n’est pas visible, mais les conséquences le sont. C’est de cette expérience que vient TraviXO Systems, un logiciel de conformité VGP pour le secteur français de la location de matériel.",
-        "sub4": "C’est ce qui façonne ma façon de travailler : on ne peut pas concevoir un système pour un fonctionnement qu’on ne comprend pas.",
+        "sub4": "Deralis Digital est une structure d’ingénierie indépendante. Je réalise moi-même chaque étape, du diagnostic à la mise en ligne. Tout ce que je livre est documenté, afin qu’un autre développeur puisse le comprendre, le maintenir et le faire évoluer. Pour construire une solution utile, je dois d’abord comprendre comment votre travail se déroule réellement.",
         "ctaSecondary": "Voir comment je travaille"
       },
       "background": {
@@ -409,7 +399,7 @@
   "contact": {
     "metadata": {
       "title": "Contact",
-      "description": "Contactez Deralis Digital pour parler de votre projet et voir comment le traduire en système concret."
+      "description": "Contactez Deralis Digital pour parler de ce qui vous fait perdre du temps et déterminer quoi corriger en premier."
     },
     "hero": {},
     "form": {
@@ -434,7 +424,7 @@
     "page": {
       "metadata": {
         "title": "Contact",
-        "description": "Parlez-moi avant de réserver un diagnostic opérationnel. Structure d’ingénierie indépendante basée en Île-de-France, travail à travers la France et à distance."
+        "description": "Parlez-moi de ce qui fait perdre du temps à votre équipe. Basé en Île-de-France, j’interviens partout en France à distance."
       },
       "hero": {
         "eyebrow": "Contact",
@@ -501,7 +491,7 @@
     "page": {
       "metadata": {
         "title": "Carnet",
-        "description": "En conditions réelles. Notes sur les opérations, le logiciel, et ce qu’il faut vraiment pour construire des systèmes qui fonctionnent."
+        "description": "Des situations réelles, des problèmes qui font perdre du temps et des solutions concrètes pour rendre le travail plus simple à suivre."
       }
     },
     "eyebrow": "Carnet",
@@ -882,7 +872,7 @@
     "signatureBlock": {
       "eyebrow": "Écrit par",
       "name": "Uwa Ugboaja",
-      "bio": "Je construis les systèmes opérationnels des entreprises établies, en solo, en français et en anglais, depuis l’Île-de-France.",
+      "bio": "Je conçois et construis des solutions qui réduisent le temps passé à chercher l’information, suivre l’avancement et relancer. Je travaille seul, en français et en anglais, depuis l’Île-de-France.",
       "linkLabel": "En savoir plus sur ma façon de travailler"
     },
     "moreStrip": {
@@ -932,7 +922,7 @@
         "hint": "Cochez celles que vous reconnaissez.",
         "count1": "Une seule suffit pour que ça vaille un examen.",
         "count2": "Deux, et le coût se répète déjà chaque semaine.",
-        "count3": "Trois ou plus, c'est un problème de système, pas de personnes."
+        "count3": "Vous en reconnaissez trois ou plus ? Le problème ne vient probablement pas d’une seule personne. Il vient de la façon dont le travail est organisé."
       },
       "deliverable": {
         "tab": "Ce que vous aurez en main",
@@ -1013,7 +1003,7 @@
       },
       "estimateBanner": {
         "eyebrow": "Votre estimation indicative",
-        "body": "{amount} de capacité annuelle mobilisée, soit {rate} du temps payé de l’équipe concernée. Le diagnostic permet de vérifier ce montant et d’identifier la part réellement évitable, valorisable et techniquement corrigeable.",
+        "body": "Cela représente environ {amount} de temps de travail payé chaque année, soit {rate} du temps payé de l’équipe concernée. Ce chiffre reste une estimation. Le diagnostic vérifie ce qui se passe réellement et montre quels problèmes traiter en premier.",
         "recalculate": "Refaire l’estimation"
       }
     }
@@ -1021,7 +1011,7 @@
   "methode": {
     "metadata": {
       "title": "Méthode",
-      "description": "Trois étapes : diagnostic, système, extensions. Rien n’est construit avant que le fonctionnement réel soit compris. Aucune étape ne peut être sautée."
+      "description": "Trois étapes : diagnostic opérationnel, première version utile, extensions. Rien n’est construit avant que le fonctionnement réel soit compris. Aucune étape ne peut être sautée."
     },
     "hero": {
       "eyebrow": "Méthode",
@@ -1030,8 +1020,8 @@
       "ctaPrimary": "Commencer par le diagnostic",
       "anchorTab": "Ce que vous obtenez",
       "stageNames": [
-        "Diagnostic",
-        "Système",
+        "Diagnostic opérationnel",
+        "Première version utile",
         "Extensions"
       ]
     },
@@ -1039,15 +1029,15 @@
       "intro": "Rien n’est construit avant que le fonctionnement réel soit cartographié.",
       "stage1": {
         "num": "01",
-        "title": "Diagnostic",
+        "title": "Diagnostic opérationnel",
         "desc": "Pendant deux jours, j’analyse avec vous le travail réel : qui reçoit quoi, qui décide, où ça attend, ce qui doit être vérifié ou relancé. Le livrable est un dossier de décision, pas un rapport.",
         "metadata": "Deux jours · dossier sous 5 jours ouvrés",
         "cta": "Démarrer le diagnostic"
       },
       "stage2": {
         "num": "02",
-        "title": "Système",
-        "desc": "La première version utile, construite à partir du dossier. Une seule, pas trois. Celle sans laquelle rien d’autre ne tient."
+        "title": "Première version utile",
+        "desc": "À partir du dossier de diagnostic, je construis d’abord la version qui règle le problème le plus important. Pas trois outils en même temps. Une base solide, qui pourra ensuite évoluer."
       },
       "stage3": {
         "num": "03",
@@ -1059,16 +1049,21 @@
       "h2": "Commencez par comprendre ce qui doit être construit.",
       "sub": "Deux jours. Cinq jours. Un dossier que vous gardez, quoi qu’il arrive ensuite.",
       "cta": "Prendre une décision · 1 280 €"
+    },
+    "support": {
+      "eyebrow": "Une fois la première version en place",
+      "title": "Suivi",
+      "description": "Maintenance et améliorations, uniquement si vous en avez besoin. Aucun engagement à long terme, aucun forfait caché."
     }
   },
   "frictions": {
     "metadata": {
       "title": "Calculateur de frictions opérationnelles",
-      "description": "Estimez la valeur annuelle du temps de travail absorbé par les ressaisies, les recherches d’information, les relances internes et les passages de relais."
+      "description": "Estimez la valeur annuelle du temps de travail absorbé par les ressaisies, les recherches d’information, les relances entre collègues et les passages de relais."
     },
     "hero": {
       "h1": "Où part votre temps payé ?",
-      "sub": "Estimez la valeur annuelle absorbée par les ressaisies, les recherches d’information, les relances internes et les passages de relais.",
+      "sub": "Estimez la valeur annuelle absorbée par les ressaisies, les recherches d’information, les relances entre collègues et les passages de relais.",
       "meta": "Estimation gratuite · 2 minutes · Sans inscription"
     },
     "form": {
@@ -1076,23 +1071,27 @@
       "people": {
         "label": "Nombre de personnes concernées",
         "help": "Combien de personnes rencontrent régulièrement ces frictions ?",
-        "help2": "Ne comptez pas tout l’effectif si seule une partie de l’équipe est concernée."
+        "help2": "Ne comptez pas tout l’effectif si seule une partie de l’équipe est concernée.",
+        "unit": "personnes"
       },
       "cost": {
         "label": "Coût employeur annuel moyen par personne",
         "help": "Salaire brut annuel et cotisations patronales.",
-        "help2": "Utilisez de préférence une moyenne communiquée par votre paie ou votre comptabilité."
+        "help2": "Utilisez de préférence une moyenne communiquée par votre paie ou votre comptabilité.",
+        "unit": "€ / an"
       },
       "friction": {
         "label": "Temps absorbé par personne et par semaine",
-        "help": "Combien d’heures une personne consacre-t-elle chaque semaine aux ressaisies, recherches d’information, relances internes, vérifications et passages de relais évitables ?",
+        "help": "Combien d’heures une personne consacre-t-elle chaque semaine aux ressaisies, recherches d’information, relances entre collègues, vérifications et passages de relais évitables ?",
         "help2": "Comptez uniquement le temps que vous pensez raisonnablement évitable.",
-        "warning": "Vérifiez que vous avez indiqué le temps hebdomadaire par personne, et non le total de l’équipe."
+        "warning": "Vérifiez que vous avez indiqué le temps hebdomadaire par personne, et non le total de l’équipe.",
+        "unit": "h / semaine"
       },
       "hours": {
         "label": "Durée hebdomadaire de travail",
         "help": "Nombre d’heures contractuelles travaillées chaque semaine.",
-        "help2": "Pour un forfait-jours, indiquez une base hebdomadaire équivalente."
+        "help2": "Pour un forfait-jours, indiquez une base hebdomadaire équivalente.",
+        "unit": "h / semaine"
       },
       "submit": "Calculer",
       "invalid": "Vérifiez vos saisies. Le temps absorbé ne peut pas dépasser la durée hebdomadaire de travail.",
@@ -1109,7 +1108,7 @@
     "next": {
       "title": "Ce chiffre est un point de départ",
       "p1": "Il ne montre pas encore quelles frictions peuvent réellement être supprimées, ni si leur correction justifie un investissement.",
-      "p2": "Pendant le diagnostic, j’examine les flux réels, vérifie les volumes et identifie la capacité effectivement récupérable. Le résultat permet de décider ce qu’il faut corriger, dans quel ordre et sous quelles conditions économiques.",
+      "p2": "Pendant le diagnostic, je regarde comment le travail se passe réellement : combien de demandes ou de dossiers circulent, où ils ralentissent et sur quels problèmes il est possible d’agir. Vous savez ensuite quoi corriger en premier, et pourquoi.",
       "cta": "Identifier la part réellement récupérable",
       "ctaMeta": "Diagnostic opérationnel · 1 280 € · Deux jours"
     },

@@ -12,7 +12,7 @@ export function OrganizationJsonLd() {
       height: 630,
     },
     description:
-      "I build the operational systems businesses need to operate. SaaS platforms, dashboards, and workflow automation.",
+      "Deralis Digital helps profitable, established businesses reduce time spent searching for information, checking progress and following up. The work starts with a two-day operational diagnostic.",
     email: "contact@deralis.digital",
     foundingDate: "2024",
     sameAs: [
@@ -43,11 +43,11 @@ export function WebSiteJsonLd() {
     url: "https://deralis.digital",
     name: "Deralis Digital",
     description:
-      "I build the operational systems businesses need to operate. Operational tools, SaaS platforms, and workflow automation.",
+      "Deralis Digital helps profitable, established businesses reduce time spent searching for information, checking progress and following up. The work starts with a two-day operational diagnostic.",
     publisher: {
       "@id": "https://deralis.digital/#organization",
     },
-    inLanguage: "en-US",
+    inLanguage: ["fr-FR", "en-GB"],
   };
 
   return (
@@ -124,7 +124,7 @@ export function ServicesJsonLd() {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Custom Systems Engineering",
+      name: "Operational Diagnostic and Custom Systems",
       itemListElement: [
         {
           "@type": "Offer",
