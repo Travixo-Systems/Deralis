@@ -70,9 +70,13 @@ export async function generateMetadata({
     },
   };
 
+  /* Feeds the default meta description, og:description and twitter:description.
+     Pages that set their own description override the first but not the other
+     two, so this string is what surfaced as twitter:description site-wide. Kept
+     inside a 150 character budget so the offer is not the part that gets cut. */
   const descriptions = {
-    fr: "Cabinet d'ingénierie des systèmes indépendant. Je construis les systèmes opérationnels pour les entreprises dont les outils ont dépassé la façon dont l'information circule entre eux.",
-    en: "Independent systems engineering practice. I build the operational systems that fix businesses whose tools have outgrown the way information moves between them.",
+    fr: "Réduisez le temps perdu à chercher l’information, suivre l’avancement et relancer. Diagnostic opérationnel Deralis en deux jours.",
+    en: "Reduce time lost searching for information, checking progress and following up. Two-day operational diagnostic from Deralis Digital.",
   };
 
   const localeKey = locale as keyof typeof titles;
@@ -80,28 +84,6 @@ export async function generateMetadata({
   return {
     title: titles[localeKey] || titles.en,
     description: descriptions[localeKey] || descriptions.en,
-    keywords:
-      locale === "fr"
-        ? [
-            "développement web",
-            "agence web France",
-            "transformation digitale",
-            "automatisation IA",
-            "applications web sur mesure",
-            "développeur Next.js",
-            "développeur Supabase",
-            "développement SaaS",
-          ]
-        : [
-            "web development agency",
-            "digital transformation",
-            "AI workflow automation",
-            "custom web applications",
-            "Next.js developer",
-            "Supabase developer",
-            "SaaS development",
-            "web agency France",
-          ],
     authors: [{ name: "Deralis Digital" }],
     creator: "Deralis Digital",
     icons: {

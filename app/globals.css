@@ -445,7 +445,7 @@ main > :first-child {
   .grid-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .grid-2col-wide { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
   .grid-proof { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: stretch; }
-  .grid-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; z-index: 2; }
+  .grid-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; z-index: 2; }
   .grid-process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
   .grid-diagnostic-hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
 }
@@ -486,155 +486,90 @@ main > :first-child {
       gap: 32px;
     }
 
-    /* Flow below 960px: a cross rather than a bare 2 by 2 grid.
-       The horizontal rule and its dots were simply hidden here, which left
-       four numbered blocks with nothing tying them together and no sign that
-       the four steps are a sequence. The rule now runs vertically down the
-       centre of the grid, the dots sit on it, and each step reads as hanging
-       off that spine. */
+    /* Flow below 960px: an inverted T.
+       Four steps folded into a 2 by 2 cross with a node at each arm end.
+       Three steps do not fill four quadrants, so the figure is now a T turned
+       on its head: 01 and 02 sit side by side on a horizontal bar, and 03
+       hangs below them on a stem dropped from the centre. The bar carries the
+       two steps that run in sequence; the stem carries what only happens
+       afterwards, which is the same shape the copy describes. */
     .grid-flow {
       grid-template-columns: 1fr 1fr;
-      gap: 52px 34px;
+      gap: 56px 34px;
       position: relative;
+      padding-top: 26px;
     }
 
-    /* The cross. Two rules meeting at the centre of the grid, with a step in
-       each quadrant and a node at the end of each arm, so the four steps read
-       as one figure rather than four loose blocks. */
-    .grid-flow::before,
-    .grid-flow::after {
+    /* The bar. It stops a quarter short of each edge so it reads as joining
+       the two steps rather than as a divider ruled across the block. */
+    .grid-flow::before {
       content: "";
       position: absolute;
+      top: 8px;
+      left: 25%;
+      right: 25%;
+      height: 1px;
       background: var(--border-strong);
       z-index: 1;
     }
-    /* The arms stop short of the block edges. Run to the full width and
-       height they read as a divider splitting the section in four rather
-       than as one figure sitting at its centre. Inset by a quarter on each
-       side, so each arm spans the middle half of its axis. */
-    .grid-flow::before {
-      top: 25%;
-      bottom: 25%;
+    /* The stem, joining the bar to the third step's dot. Neither end can be
+       measured in CSS: the first row's height depends on how the two titles
+       wrap, and the third step's height depends on its own copy. So the stem
+       is drawn on the third step, runs upward from its dot, and is given more
+       height than it can ever need. The grid clips the overshoot, which lands
+       it exactly on the bar at every text length. */
+    .grid-flow {
+      overflow: hidden;
+    }
+    .grid-flow > .flow-step:nth-child(3)::before {
+      content: "";
+      position: absolute;
       left: 50%;
+      bottom: calc(100% + 9px);
       width: 1px;
+      height: 1000px;
+      background: var(--border-strong);
       transform: translateX(-50%);
+      z-index: 1;
     }
     .grid-flow::after {
-      left: 25%;
-      right: 25%;
-      top: 50%;
-      height: 1px;
-      transform: translateY(-50%);
+      content: none;
     }
 
     .flow-line-responsive {
       display: none !important;
     }
 
-    /* The dots come back, sitting against the spine: the left column's dot on
-       its right edge, the right column's on its left. */
-    .flow-dot-responsive {
-      display: block !important;
-      position: absolute !important;
-      top: 0;
-      z-index: 3;
+    /* The third step spans both columns and centres itself under the stem. */
+    .grid-flow > .flow-step:nth-child(3) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      max-width: 30ch;
     }
+
+    /* Each step keeps its own dot, sitting on the bar above it, or on the end
+       of the stem for the third. Anchoring the dot to the step rather than to
+       the grid keeps it with its own step however tall the text runs. */
     .grid-flow > .flow-step {
       position: relative;
-      padding-top: 4px;
+      padding: 0 10px;
+      align-items: center;
     }
-    /* The four nodes sit at the ends of the two arms: top and bottom of the
-       vertical, left and right of the horizontal. They are drawn on the grid
-       rather than on the steps, so they stay on the arms no matter how tall
-       a step's text runs. */
     .grid-flow > .flow-step .flow-dot-responsive {
-      display: none !important;
-    }
-
-    .flow-cross-node {
-      display: block;
-      position: absolute;
-      grid-area: 1 / 1;
-      /* The nodes are direct children of a [data-cascade] row, so they were
-         picking up the card-arrive animation. That animation sets transform,
-         which overrode the translate that centres each node on its arm and
-         left every one of them offset by half its own width. */
-      animation: none !important;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background: var(--card-main);
-      border: 2px solid var(--accent);
+      display: block !important;
+      position: absolute !important;
+      top: -26px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 3;
     }
-    /* A node at each of the four arm ends, centred on the line rather than
-       sitting beside it: each is pulled back by half its own size on both
-       axes, so the arm passes through its middle. */
-    .flow-cross-node-top {
-      top: 25%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .flow-cross-node-bottom {
-      bottom: 25%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-    }
-    .flow-cross-node-left {
-      left: 25%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .flow-cross-node-right {
-      right: 25%;
-      top: 50%;
-      transform: translate(50%, -50%);
-    }
 
-    /* Each node answers its own quadrant. Hovering or focusing a step fills
-       the node on the arm nearest it, so the mark tracks where you are the
-       same way the row of dots does on a wide screen. */
-    .flow-cross-node {
-      transition: background-color 240ms ease, border-color 240ms ease,
-        transform 260ms cubic-bezier(0.16, 1.02, 0.3, 1);
-    }
-    /* The four node spans are children one to four, so the steps are five to
-       eight. Each step lights the node on the arm beside its own quadrant:
-       step one top left lights the top, step two top right the right, and so
-       on clockwise. */
-    .grid-flow:has(> .flow-step:nth-child(5).is-auto-active) .flow-cross-node-top,
-    .grid-flow:has(> .flow-step:nth-child(6).is-auto-active) .flow-cross-node-right,
-    .grid-flow:has(> .flow-step:nth-child(7).is-auto-active) .flow-cross-node-left,
-    .grid-flow:has(> .flow-step:nth-child(8).is-auto-active) .flow-cross-node-bottom,
-    .grid-flow:has(> .flow-step:nth-child(5):hover) .flow-cross-node-top,
-    .grid-flow:has(> .flow-step:nth-child(5):focus-visible) .flow-cross-node-top,
-    .grid-flow:has(> .flow-step:nth-child(6):hover) .flow-cross-node-right,
-    .grid-flow:has(> .flow-step:nth-child(6):focus-visible) .flow-cross-node-right,
-    .grid-flow:has(> .flow-step:nth-child(7):hover) .flow-cross-node-left,
-    .grid-flow:has(> .flow-step:nth-child(7):focus-visible) .flow-cross-node-left,
-    .grid-flow:has(> .flow-step:nth-child(8):hover) .flow-cross-node-bottom,
-    .grid-flow:has(> .flow-step:nth-child(8):focus-visible) .flow-cross-node-bottom {
-      background: var(--accent);
-      border-color: var(--accent);
-      transform-origin: center;
-    }
-
-    /* Text leans toward its own side of the spine, which is what makes the
-       arrangement read as a cross rather than a stack. The step sets
+    /* Text centres under its own dot on both rows, which is what makes the
+       arrangement read as a T rather than as two loose rows. The step sets
        text-align inline, so these need the extra weight. */
-    .grid-flow > .flow-step:nth-child(odd),
-    .grid-flow > .flow-step:nth-child(odd) > * {
-      text-align: right !important;
-    }
-    .grid-flow > .flow-step:nth-child(even),
-    .grid-flow > .flow-step:nth-child(even) > * {
-      text-align: left !important;
-    }
-    .grid-flow > .flow-step:nth-child(odd) {
-      padding-right: 8px;
-    }
-    .grid-flow > .flow-step:nth-child(even) {
-      padding-left: 8px;
+    .grid-flow > .flow-step,
+    .grid-flow > .flow-step > * {
+      text-align: center !important;
     }
 
     /* Pull quote mobile */
@@ -2009,64 +1944,6 @@ html {
   }
 }
 
-/* The cross nodes only exist below 960px, where the flow folds into a cross.
-   Above that the original single row and its own dots take over. Scoped to a
-   min-width query rather than left unconditional: this rule sits later in the
-   file than the one that shows them, so an unscoped hide would win. */
-@media (min-width: 961px) {
-  .flow-cross-node {
-    display: none;
-  }
-}
-
-/* --- Process flow on a phone ---------------------------------------------
-   Two columns at 390px left roughly 120px of measure per step, which broke
-   "Custom System" onto two lines and its body copy to two or three words per
-   line. Below 560px the steps stack instead, and the spine moves to the left
-   as a rail so the sequence still reads as connected. */
-@media (max-width: 560px) {
-  .grid-flow {
-    grid-template-columns: 1fr !important;
-    gap: 34px !important;
-    padding-left: 26px;
-  }
-  /* Stacked below 560px, so the cross becomes a single left rail: a
-     horizontal arm across a one column stack would cut through the text
-     rather than connect anything. */
-  .grid-flow::before {
-    left: 7px !important;
-    transform: none !important;
-  }
-  .grid-flow::after {
-    display: none !important;
-  }
-  .flow-cross-node-left,
-  .flow-cross-node-right {
-    display: none !important;
-  }
-  .flow-cross-node-top,
-  .flow-cross-node-bottom {
-    left: 7px !important;
-  }
-  .grid-flow > .flow-step:nth-child(odd),
-  .grid-flow > .flow-step:nth-child(odd) > *,
-  .grid-flow > .flow-step:nth-child(even),
-  .grid-flow > .flow-step:nth-child(even) > * {
-    text-align: left !important;
-  }
-  .grid-flow > .flow-step {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  /* Every step gets its own mark on the rail here, since they no longer
-     share a row. */
-  .grid-flow > .flow-step .flow-dot-responsive {
-    display: block !important;
-    left: -26px !important;
-    right: auto !important;
-    top: 8px !important;
-  }
-}
 
 /* ========== MOTION ========== */
 /* Reduced motion means less movement, not a different layout.
@@ -2090,5 +1967,57 @@ html {
   }
   .hero-anchor-item:hover {
     transform: none;
+  }
+}
+
+@layer components {
+  /* --- Process flow on a phone ---------------------------------------------
+     Two columns at 390px leave roughly 120px of measure per step, which breaks
+     the titles onto two lines and the body copy to a few words per line. Below
+     560px the T straightens: the steps stack and the bar becomes a single rail
+     down the left, so the sequence still reads as connected. */
+  @media (max-width: 560px) {
+    .grid-flow {
+      grid-template-columns: 1fr !important;
+      gap: 34px !important;
+      padding-top: 0 !important;
+      padding-left: 26px;
+    }
+    /* The bar has nothing to span across a one column stack, and the grid's
+       bottom edge is the last step's text rather than its mark, so a rail drawn
+       on the grid would trail past the final dot with nothing left to join. */
+    .grid-flow::before {
+      content: none !important;
+    }
+    /* The rail is drawn on the last step instead, running upward from its own
+       dot and over-long, with the grid clipping the overshoot at the top. Both
+       ends land on a dot at any text length. */
+    .grid-flow > .flow-step:nth-child(3)::before {
+      content: "" !important;
+      left: 7px !important;
+      bottom: calc(100% - 16px) !important;
+      height: 2000px !important;
+      transform: none !important;
+    }
+    .grid-flow > .flow-step:nth-child(3) {
+      grid-column: auto !important;
+      justify-self: stretch !important;
+      max-width: none !important;
+    }
+    .grid-flow > .flow-step {
+      padding: 0 !important;
+      align-items: flex-start !important;
+    }
+    /* Every step gets its own mark on the rail, level with its number. */
+    .grid-flow > .flow-step .flow-dot-responsive {
+      top: 8px !important;
+      left: -26px !important;
+      transform: none !important;
+    }
+    .grid-flow > .flow-step,
+    .grid-flow > .flow-step > * {
+      text-align: left !important;
+      max-width: none !important;
+    }
   }
 }

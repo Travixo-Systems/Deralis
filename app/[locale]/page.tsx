@@ -17,11 +17,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const isEn = locale === "en";
   const fullTitle = isEn
-    ? "Deralis Digital · Clearer operations, faster growth"
-    : "Deralis Digital · Optimisez vos opérations, accélérez votre croissance";
+    ? "Deralis Digital · Give time back to what makes money"
+    : "Deralis Digital · Redonnez du temps à ce qui rapporte";
   const description = isEn
-    ? "I design solutions that keep work and information moving together from one person to the next, using the teams and tools you already have. Two day operational diagnostic, dossier within five business days."
-    : "Je conçois des solutions où le travail et l'information avancent ensemble d'une personne à l'autre, avec les équipes et les outils déjà en place. Diagnostic opérationnel en deux jours, dossier sous cinq jours ouvrés.";
+    ? "Less time spent searching for information, checking progress and chasing answers. Two-day operational diagnostic, dossier within five business days."
+    : "Moins de temps passé à chercher l’information, vérifier l’avancement et relancer. Diagnostic opérationnel en deux jours, dossier sous cinq jours ouvrés.";
   return {
     title: { absolute: fullTitle },
     description,

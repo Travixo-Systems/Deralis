@@ -7,6 +7,7 @@ import AutoDemo from "@/components/shared/AutoDemo";
 export default function StagesCard() {
   const t = useTranslations("methode.stages");
   const tActions = useTranslations("common.actions");
+  const tSupport = useTranslations("methode.support");
 
   return (
     <DsCard>
@@ -21,6 +22,15 @@ export default function StagesCard() {
         <Stage num={t("stage3.num")} title={t("stage3.title")} desc={t("stage3.desc")} isLast />
       </ol>
       </AutoDemo>
+
+      {/* Support sits outside the ordered list. It is bought after the fact,
+          not a stage every engagement passes through, and numbering it made
+          it read as a required fourth step. */}
+      <div style={supportBlock}>
+        <p style={supportEyebrow}>{tSupport("eyebrow")}</p>
+        <p style={supportTitle}>{tSupport("title")}</p>
+        <p style={supportDesc}>{tSupport("description")}</p>
+      </div>
 
       {/* Secondary link, left-aligned with content, ~24px gap from last stage */}
       <div style={{ marginTop: 24, paddingLeft: 45 }}>
@@ -97,6 +107,23 @@ const stageCta: CSSProperties = {
   display: "inline-flex", alignItems: "center", gap: 6, padding: "14px 24px",
   background: "var(--text-primary)", color: "var(--canvas)", fontSize: 13, fontWeight: 500,
   borderRadius: "var(--radius-button)", textDecoration: "none",
+};
+const supportBlock: CSSProperties = {
+  marginTop: 56, paddingTop: 30, maxWidth: 820,
+  borderTop: "1px solid var(--border-soft)",
+  transition: "border-color 450ms ease",
+};
+const supportEyebrow: CSSProperties = {
+  fontSize: 12, fontWeight: 700, color: "var(--text-muted)",
+  letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 12,
+  transition: "color 450ms ease",
+};
+const supportTitle: CSSProperties = {
+  fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: 22, fontWeight: 500,
+  color: "var(--text-primary)", letterSpacing: "-0.01em", marginBottom: 10, lineHeight: 1.2,
+};
+const supportDesc: CSSProperties = {
+  fontSize: 15, lineHeight: 1.6, color: "var(--text-secondary)", maxWidth: "56ch",
 };
 const projectsLink: CSSProperties = {
   display: "inline-flex", alignItems: "center", gap: 6,

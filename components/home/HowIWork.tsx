@@ -40,8 +40,8 @@ const flowProcessStyle: CSSProperties = {
 const flowLineStyle: CSSProperties = {
   position: "absolute",
   top: 16,
-  left: "12.5%",
-  right: "12.5%",
+  left: "16.667%",
+  right: "16.667%",
   height: 1,
   background: "var(--border-strong)",
   zIndex: 1,
@@ -93,7 +93,43 @@ const flowDescStyle: CSSProperties = {
   maxWidth: "24ch",
 };
 
-const ITEMS = ["1", "2", "3", "4"] as const;
+/* Support sits below the three phases, separated by a rule and without a
+   number. Numbering it made an optional purchase read as a fourth stage
+   every engagement passes through. */
+const supportBlockStyle: CSSProperties = {
+  marginTop: 64,
+  paddingTop: 32,
+  borderTop: "1px solid var(--border-soft)",
+  transition: "border-color 450ms ease",
+};
+
+const supportEyebrowStyle: CSSProperties = {
+  fontSize: "var(--fs-eyebrow)",
+  textTransform: "uppercase",
+  letterSpacing: "0.14em",
+  color: "var(--text-muted)",
+  fontWeight: 600,
+  marginBottom: 14,
+  transition: "color 450ms ease",
+};
+
+const supportTitleStyle: CSSProperties = {
+  fontFamily: "var(--font-fraunces), Georgia, serif",
+  fontSize: 21,
+  fontWeight: 500,
+  color: "var(--text-primary)",
+  letterSpacing: "-0.01em",
+  marginBottom: 8,
+};
+
+const supportDescStyle: CSSProperties = {
+  fontSize: 14,
+  lineHeight: 1.6,
+  color: "var(--text-secondary)",
+  maxWidth: "52ch",
+};
+
+const ITEMS = ["1", "2", "3"] as const;
 
 export default function HowIWork() {
   const t = useTranslations("home.page.howIWork");
@@ -117,12 +153,6 @@ export default function HowIWork() {
           <span className="flow-line-fill" aria-hidden="true" />
         </div>
         <div className="grid-flow" data-cascade>
-          {/* Nodes at the four arm ends of the cross. Only drawn below 960px,
-              where the flow becomes a cross rather than a single row. */}
-          <span className="flow-cross-node flow-cross-node-top" aria-hidden="true" />
-          <span className="flow-cross-node flow-cross-node-bottom" aria-hidden="true" />
-          <span className="flow-cross-node flow-cross-node-left" aria-hidden="true" />
-          <span className="flow-cross-node flow-cross-node-right" aria-hidden="true" />
           {ITEMS.map((item) => (
             <div key={item} className="lift-step flow-step" style={flowStepStyle} tabIndex={0}>
               <div style={flowDotStyle} className="flow-dot-responsive flow-dot" />
@@ -133,6 +163,12 @@ export default function HowIWork() {
           ))}
         </div>
       </AutoDemo>
+
+      <div style={supportBlockStyle}>
+        <p style={supportEyebrowStyle}>{t("support.eyebrow")}</p>
+        <p style={supportTitleStyle}>{t("support.title")}</p>
+        <p style={supportDescStyle}>{t("support.description")}</p>
+      </div>
     </DsCard>
   );
 }
