@@ -5,6 +5,7 @@ import StagesCard from "@/components/methode/StagesCard";
 import ClimaxPeakCard from "@/components/methode/ClimaxPeakCard";
 import FinalCard from "@/components/methode/FinalCard";
 import AnimateIn from "@/components/shared/AnimateIn";
+import { localeUrl, alternateLanguages } from "@/i18n/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -14,13 +15,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "methode.metadata" });
   return {
+    alternates: {
+      canonical: localeUrl(locale, "/methode"),
+      languages: alternateLanguages("/methode"),
+    },
     title: t("title"),
     description: t("description"),
     openGraph: {
       title: t("title"),
       description: t("description"),
       type: "website",
-      url: `https://www.deralis.digital/${locale}/methode`,
+      url: localeUrl(locale, `/methode`),
       images: [{ url: "https://www.deralis.digital/og-image.png", width: 1200, height: 630, alt: "Deralis Digital" }],
     },
   };

@@ -1,8 +1,32 @@
-import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import DsCard from "@/components/shared/DsCard";
 import LegalSection from "@/components/legal/LegalSection";
 import type { CSSProperties } from "react";
+
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { localeUrl, alternateLanguages } from "@/i18n/urls";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+/* Without this the page inherited the layout's site-wide title and description,
+   so all three legal pages presented as duplicates of the homepage. The copy
+   already existed in the message catalogue under `terms.metadata`. */
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "terms.metadata" });
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: localeUrl(locale, "/terms"),
+      languages: alternateLanguages("/terms"),
+    },
+  };
+}
+
 
 const h1Style: CSSProperties = {
   fontFamily: "var(--font-fraunces), Georgia, serif",
@@ -64,8 +88,11 @@ const backLinkStyle: CSSProperties = {
   transition: "color 300ms ease",
 };
 
-export default function TermsPage() {
-  const t = useTranslations("terms");
+export default async function TermsPage({ params }: Props) {
+  const { locale } = await params;
+  /* Pins the locale so this page still prerenders as static HTML. */
+  setRequestLocale(locale);
+  const t = await getTranslations("terms");
 
   return (
     <>

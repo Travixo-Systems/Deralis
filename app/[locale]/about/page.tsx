@@ -6,6 +6,7 @@ import RichText from "@/components/shared/RichText";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
 import AnimateIn from "@/components/shared/AnimateIn";
+import { localeUrl, alternateLanguages } from "@/i18n/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -15,13 +16,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about.page.metadata" });
   return {
+    alternates: {
+      canonical: localeUrl(locale, "/about"),
+      languages: alternateLanguages("/about"),
+    },
     title: t("title"),
     description: t("description"),
     openGraph: {
       title: t("title"),
       description: t("description"),
       type: "website",
-      url: `https://www.deralis.digital/${locale}/about`,
+      url: localeUrl(locale, `/about`),
       images: [{ url: "https://www.deralis.digital/og-image.png", width: 1200, height: 630, alt: "Deralis Digital" }],
     },
   };

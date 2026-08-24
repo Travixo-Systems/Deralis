@@ -10,6 +10,7 @@ import type { CSSProperties } from "react";
 import AnimateIn from "@/components/shared/AnimateIn";
 import WordReveal from "@/components/shared/WordReveal";
 import AutoDemo from "@/components/shared/AutoDemo";
+import { localeUrl, alternateLanguages } from "@/i18n/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -19,13 +20,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "projects.page.metadata" });
   return {
+    alternates: {
+      canonical: localeUrl(locale, "/projects"),
+      languages: alternateLanguages("/projects"),
+    },
     title: t("title"),
     description: t("description"),
     openGraph: {
       title: t("title"),
       description: t("description"),
       type: "website",
-      url: `https://www.deralis.digital/${locale}/projects`,
+      url: localeUrl(locale, `/projects`),
       images: [{ url: "https://www.deralis.digital/og-image.png", width: 1200, height: 630, alt: "Deralis Digital" }],
     },
   };

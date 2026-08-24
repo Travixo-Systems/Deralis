@@ -6,6 +6,8 @@ import fs from "fs";
 import path from "path";
 import DiagnosticCTA from "@/components/shared/DiagnosticCTA";
 import SectionHeading from "@/components/shared/SectionHeading";
+import { localeUrl } from "@/i18n/urls";
+import { articleLanguages } from "@/lib/blog";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -177,13 +179,20 @@ export async function generateMetadata({ params }: Props) {
     const title = t(`posts.${slug}.title`);
     const description = t(`posts.${slug}.excerpt`);
     return {
+      /* Only advertise a locale whose article file actually exists, matching
+         app/sitemap.ts. An hreflang pointing at a translation that silently
+         falls back to the other language is a mismatch search engines penalise. */
+      alternates: {
+        canonical: localeUrl(locale, `/blog/${slug}`),
+        languages: articleLanguages(slug),
+      },
       title,
       description,
       openGraph: {
         title,
         description,
         type: "article" as const,
-        url: `https://www.deralis.digital/${locale}/blog/${slug}`,
+        url: localeUrl(locale, `/blog/${slug}`),
         siteName: "Deralis Digital",
         locale: locale === "fr" ? "fr_FR" : "en_US",
         images: [

@@ -3,6 +3,7 @@ import DsCard, { DsCardFinal } from "@/components/shared/DsCard";
 import ContactForm from "@/components/contact/ContactForm";
 import type { CSSProperties } from "react";
 import AnimateIn from "@/components/shared/AnimateIn";
+import { localeUrl, alternateLanguages } from "@/i18n/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -12,13 +13,17 @@ export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact.page" });
   return {
+    alternates: {
+      canonical: localeUrl(locale, "/contact"),
+      languages: alternateLanguages("/contact"),
+    },
     title: t("metadata.title"),
     description: t("metadata.description"),
     openGraph: {
       title: t("metadata.title"),
       description: t("metadata.description"),
       type: "website" as const,
-      url: `https://www.deralis.digital/${locale}/contact`,
+      url: localeUrl(locale, `/contact`),
       images: [{ url: "https://www.deralis.digital/og-image.png", width: 1200, height: 630, alt: "Deralis Digital" }],
     },
   };
