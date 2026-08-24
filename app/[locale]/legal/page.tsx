@@ -1,7 +1,31 @@
-import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import DsCard from "@/components/shared/DsCard";
 import type { CSSProperties } from "react";
+
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { localeUrl, alternateLanguages } from "@/i18n/urls";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+/* Without this the page inherited the layout's site-wide title and description,
+   so all three legal pages presented as duplicates of the homepage. The copy
+   already existed in the message catalogue under `legal.metadata`. */
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "legal.metadata" });
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: localeUrl(locale, "/legal"),
+      languages: alternateLanguages("/legal"),
+    },
+  };
+}
+
 
 const h1Style: CSSProperties = {
   fontFamily: "var(--font-fraunces), Georgia, serif",
@@ -69,8 +93,11 @@ const backLinkStyle: CSSProperties = {
   transition: "color 300ms ease",
 };
 
-export default function LegalPage() {
-  const t = useTranslations("legal");
+export default async function LegalPage({ params }: Props) {
+  const { locale } = await params;
+  /* Pins the locale so this page still prerenders as static HTML. */
+  setRequestLocale(locale);
+  const t = await getTranslations("legal");
 
   return (
     <DsCard style={{ maxWidth: 820 }}>

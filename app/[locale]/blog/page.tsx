@@ -9,6 +9,7 @@ import FeaturedPostCard from "@/components/blog/FeaturedPostCard";
 import PostListCard from "@/components/blog/PostListCard";
 import BlogDiagnosticCtaCard from "@/components/blog/BlogDiagnosticCtaCard";
 import AnimateIn from "@/components/shared/AnimateIn";
+import { localeUrl, alternateLanguages } from "@/i18n/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -18,13 +19,17 @@ export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog.page.metadata" });
   return {
+    alternates: {
+      canonical: localeUrl(locale, "/blog"),
+      languages: alternateLanguages("/blog"),
+    },
     title: t("title"),
     description: t("description"),
     openGraph: {
       title: t("title"),
       description: t("description"),
       type: "website" as const,
-      url: `https://www.deralis.digital/${locale}/blog`,
+      url: localeUrl(locale, `/blog`),
       images: [
         {
           url: "https://www.deralis.digital/og-image.png",

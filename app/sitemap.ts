@@ -2,7 +2,8 @@ import { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
 import { routing } from "@/i18n/routing";
-import { BASE_URL, localeUrl } from "@/i18n/urls";
+import { localeUrl } from "@/i18n/urls";
+import { articleExistsInLocale } from "@/lib/blog";
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blog");
 
@@ -30,15 +31,16 @@ function blogPages(): Page[] {
 }
 
 /**
- * True when a French version of this route actually exists. Advertising
- * hreflang="fr" for a route that falls back to English body text is a mismatch
- * search engines penalise, so the alternate is only emitted when it is real.
- * Non-blog routes are fully translated through the message catalogue.
+ * True when this route exists in the given locale. Advertising an hreflang for
+ * a route that falls back to the other language is a mismatch search engines
+ * penalise, so the alternate is only emitted when it is real. Non-blog routes
+ * are fully translated through the message catalogue, so only articles are
+ * checked against disk — via the same helper the article pages use, so the
+ * sitemap and the pages cannot disagree.
  */
-function hasFrench(routePath: string): boolean {
-  const slug = routePath.startsWith("/blog/") ? routePath.slice("/blog/".length) : null;
-  if (!slug) return true;
-  return fs.existsSync(path.join(BLOG_DIR, "fr", `${slug}.md`));
+function existsInLocale(routePath: string, locale: string): boolean {
+  if (!routePath.startsWith("/blog/")) return true;
+  return articleExistsInLocale(routePath.slice("/blog/".length), locale);
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -64,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Only advertise a locale whose content actually exists. hreflang pointing
     // at a route that falls back to the other language is a mismatch search
     // engines penalise.
-    const locales = routing.locales.filter((l) => l !== "fr" || hasFrench(page.path));
+    const locales = routing.locales.filter((l) => existsInLocale(page.path, l));
 
     const languages: Record<string, string> = {};
     for (const l of locales) languages[l] = localeUrl(l, page.path);

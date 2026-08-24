@@ -12,6 +12,7 @@ import AnimateIn from "@/components/shared/AnimateIn";
 import WordReveal from "@/components/shared/WordReveal";
 import SymptomChecklist from "@/components/diagnostic/SymptomChecklist";
 import AutoDemo from "@/components/shared/AutoDemo";
+import { localeUrl, alternateLanguages } from "@/i18n/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -26,13 +27,17 @@ export async function generateMetadata({ params }: Props) {
   const title = t("metadata.title");
   const description = t("metadata.description");
   return {
+    alternates: {
+      canonical: localeUrl(locale, "/diagnostic"),
+      languages: alternateLanguages("/diagnostic"),
+    },
     title,
     description,
     openGraph: {
       title,
       description,
       type: "website" as const,
-      url: `https://www.deralis.digital/${locale}/diagnostic`,
+      url: localeUrl(locale, `/diagnostic`),
       images: [{ url: "https://www.deralis.digital/og-image.png", width: 1200, height: 630, alt: "Deralis Digital" }],
     },
   };

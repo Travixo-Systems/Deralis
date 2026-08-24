@@ -8,7 +8,7 @@ import HomeCaseStudy from "@/components/home/HomeCaseStudy";
 import HowIWork from "@/components/home/HowIWork";
 import ClimaxPeak from "@/components/home/ClimaxPeak";
 import AnimateIn from "@/components/shared/AnimateIn";
-import { localeUrl } from "@/i18n/urls";
+import { localeUrl, alternateLanguages } from "@/i18n/urls";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? "Less time spent searching for information, checking progress and chasing answers. Two-day operational diagnostic, dossier within five business days."
     : "Moins de temps passé à chercher l’information, vérifier l’avancement et relancer. Diagnostic opérationnel en deux jours, dossier sous cinq jours ouvrés.";
   return {
+    alternates: {
+      canonical: localeUrl(locale, ""),
+      languages: alternateLanguages(""),
+    },
     title: { absolute: fullTitle },
     description,
     openGraph: {

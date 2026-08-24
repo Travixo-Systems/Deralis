@@ -1,5 +1,7 @@
 import fs from "fs";
 import path from "path";
+import { routing } from "@/i18n/routing";
+import { localeUrl } from "@/i18n/urls";
 
 export type Locale = "en" | "fr";
 
@@ -182,4 +184,41 @@ export function truncateWords(text: string, maxWords: number): string {
   const words = text.trim().split(/\s+/);
   if (words.length <= maxWords) return text;
   return words.slice(0, maxWords).join(" ") + "…";
+}
+
+/**
+ * Locale whose articles sit at the blog root rather than in a subdirectory.
+ * The root holds English and `blog/fr/` holds French; that layout predates the
+ * switch of routing.defaultLocale to French, so it is deliberately NOT tied to
+ * routing.defaultLocale. Mirrors the resolution order in the article page,
+ * which tries `blog/<locale>/` first and falls back to the root.
+ */
+const ROOT_LOCALE = "en";
+
+/** True when a file for this article actually exists on disk in that locale. */
+export function articleExistsInLocale(slug: string, locale: string): boolean {
+  if (fs.existsSync(path.join(BLOG_DIR, locale, `${slug}.md`))) return true;
+  return locale === ROOT_LOCALE && fs.existsSync(path.join(BLOG_DIR, `${slug}.md`));
+}
+
+/**
+ * hreflang map for one article, limited to locales whose file exists.
+ * Advertising a translation that silently falls back to the other language is
+ * a mismatch search engines penalise, so an untranslated article advertises
+ * only itself. Mirrors the gating in app/sitemap.ts.
+ */
+export function articleLanguages(slug: string): Record<string, string> {
+  const languages: Record<string, string> = {};
+  for (const locale of routing.locales) {
+    if (articleExistsInLocale(slug, locale)) {
+      languages[locale] = localeUrl(locale, `/blog/${slug}`);
+    }
+  }
+  const fallback = articleExistsInLocale(slug, routing.defaultLocale)
+    ? routing.defaultLocale
+    : routing.locales.find((l) => articleExistsInLocale(slug, l));
+  if (fallback) {
+    languages["x-default"] = localeUrl(fallback, `/blog/${slug}`);
+  }
+  return languages;
 }

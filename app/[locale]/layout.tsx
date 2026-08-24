@@ -128,6 +128,9 @@ export async function generateMetadata({
         "max-snippet": -1,
       },
     },
+    /* Root-level fallback only. Every page overrides this with its own path;
+       a page that does not would claim to be the homepage, so any new route
+       must set `alternates` in its own generateMetadata. */
     alternates: {
       canonical: localeUrl(locale),
       languages: alternateLanguages(),
@@ -175,15 +178,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="canonical" href={localeUrl(locale)} />
-        {routing.locales.map((l) => (
-          <link key={l} rel="alternate" hrefLang={l} href={localeUrl(l)} />
-        ))}
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href={localeUrl(routing.defaultLocale)}
-        />
+        {/* No canonical or hreflang here. A layout cannot know the pathname, so
+            anything emitted from this head is the locale root and claims every
+            page is the homepage. Each page declares its own through
+            `alternates` in generateMetadata, which Next renders into this head.
+            Emitting them in both places also produced two competing canonical
+            tags per page, which search engines resolve by trusting neither. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('deralis-theme');document.documentElement.setAttribute('data-theme',t==='dark'||t==='light'?t:'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}})()`,

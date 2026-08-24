@@ -1,13 +1,15 @@
+import { BASE_URL, localeUrl } from "@/i18n/urls";
+
 export function OrganizationJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://deralis.digital/#organization",
+    "@id": `${BASE_URL}/#organization`,
     name: "Deralis Digital",
-    url: "https://deralis.digital",
+    url: BASE_URL,
     logo: {
       "@type": "ImageObject",
-      url: "https://deralis.digital/og-image.png",
+      url: `${BASE_URL}/og-image.png`,
       width: 1200,
       height: 630,
     },
@@ -39,13 +41,13 @@ export function WebSiteJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://deralis.digital/#website",
-    url: "https://deralis.digital",
+    "@id": `${BASE_URL}/#website`,
+    url: BASE_URL,
     name: "Deralis Digital",
     description:
       "Deralis Digital helps profitable, established businesses reduce time spent searching for information, checking progress and following up. The work starts with a two-day operational diagnostic.",
     publisher: {
-      "@id": "https://deralis.digital/#organization",
+      "@id": `${BASE_URL}/#organization`,
     },
     inLanguage: ["fr-FR", "en-GB"],
   };
@@ -62,10 +64,10 @@ export function LocalBusinessJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://deralis.digital/#localbusiness",
+    "@id": `${BASE_URL}/#localbusiness`,
     name: "Deralis Digital",
-    image: "https://deralis.digital/og-image.png",
-    url: "https://deralis.digital",
+    image: `${BASE_URL}/og-image.png`,
+    url: BASE_URL,
     email: "contact@deralis.digital",
     description:
       "Independent engineering practice building operational systems with Next.js, TypeScript, Supabase, and PostgreSQL.",
@@ -113,10 +115,10 @@ export function ServicesJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://deralis.digital/methode#service",
+    "@id": `${BASE_URL}/methode#service`,
     serviceType: "Web Development Services",
     provider: {
-      "@id": "https://deralis.digital/#organization",
+      "@id": `${BASE_URL}/#organization`,
     },
     areaServed: {
       "@type": "Place",
@@ -188,6 +190,75 @@ export function BreadcrumbJsonLd({
       name: item.name,
       item: item.url,
     })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+/**
+ * Article markup for a single blog post.
+ *
+ * What this is documented to do: help Google understand the author, headline,
+ * dates and image of the page. It is not required for Top Stories, and
+ * structured data is not required for Discover, so it should not be justified
+ * on either. https://developers.google.com/search/docs/appearance/structured-data/article
+ *
+ * The author is the named person rather than the organisation, and `sameAs`
+ * points at profiles that already exist. The defensible claim for that is
+ * identification and disambiguation of the author, not a ranking effect:
+ * Google states E-E-A-T is not a ranking factor.
+ *
+ * `dateModified` falls back to `datePublished`: claiming an article was updated
+ * when it was not is a freshness signal that is not real.
+ */
+export function ArticleJsonLd({
+  headline,
+  description,
+  slug,
+  locale,
+  datePublished,
+  dateModified,
+}: {
+  headline: string;
+  description: string;
+  slug: string;
+  locale: string;
+  datePublished: string;
+  dateModified?: string;
+}) {
+  // An article with no date in its frontmatter would emit BlogPosting without
+  // datePublished, which is invalid. Better to emit nothing than something wrong.
+  if (!datePublished) return null;
+
+  const url = localeUrl(locale, `/blog/${slug}`);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}#article`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    url,
+    headline,
+    description,
+    inLanguage: locale === "fr" ? "fr-FR" : "en-GB",
+    datePublished,
+    dateModified: dateModified || datePublished,
+    author: {
+      "@type": "Person",
+      name: "Uwa Ugboaja",
+      url: `${BASE_URL}/about`,
+      sameAs: [
+        "https://github.com/theWQLker",
+        "https://www.linkedin.com/in/uwaugboaja",
+      ],
+    },
+    publisher: { "@id": `${BASE_URL}/#organization` },
+    image: `${BASE_URL}/og-image.png`,
+    isPartOf: { "@id": `${BASE_URL}/#website` },
   };
 
   return (

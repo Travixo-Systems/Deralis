@@ -6,6 +6,9 @@ import fs from "fs";
 import path from "path";
 import DiagnosticCTA from "@/components/shared/DiagnosticCTA";
 import SectionHeading from "@/components/shared/SectionHeading";
+import { localeUrl } from "@/i18n/urls";
+import { articleLanguages } from "@/lib/blog";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -177,13 +180,20 @@ export async function generateMetadata({ params }: Props) {
     const title = t(`posts.${slug}.title`);
     const description = t(`posts.${slug}.excerpt`);
     return {
+      /* Only advertise a locale whose article file actually exists, matching
+         app/sitemap.ts. An hreflang pointing at a translation that silently
+         falls back to the other language is a mismatch search engines penalise. */
+      alternates: {
+        canonical: localeUrl(locale, `/blog/${slug}`),
+        languages: articleLanguages(slug),
+      },
       title,
       description,
       openGraph: {
         title,
         description,
         type: "article" as const,
-        url: `https://www.deralis.digital/${locale}/blog/${slug}`,
+        url: localeUrl(locale, `/blog/${slug}`),
         siteName: "Deralis Digital",
         locale: locale === "fr" ? "fr_FR" : "en_US",
         images: [
@@ -243,6 +253,24 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <ArticleJsonLd
+        headline={t(`posts.${slug}.title`)}
+        description={t(`posts.${slug}.excerpt`)}
+        slug={slug}
+        locale={locale}
+        datePublished={metadata.date}
+        dateModified={metadata.updated}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: t("page.metadata.title"), url: localeUrl(locale, "/blog") },
+          {
+            name: t(`posts.${slug}.title`),
+            url: localeUrl(locale, `/blog/${slug}`),
+          },
+        ]}
+      />
+
       {/* Article hero */}
       <section className="pt-8 pb-0 max-md:pt-6">
         <div className="mx-auto max-w-[1240px] px-6 md:px-12">
