@@ -77,11 +77,11 @@ export default function SiteNav() {
           <Image
             src="/logo-mark.png"
             alt=""
-            width={64}
-            height={64}
+            width={96}
+            height={96}
             priority
             className="nav-logo-mark"
-            style={{ borderRadius: 7, display: "block" }}
+            style={{ borderRadius: 9, display: "block" }}
           />
           <span style={wordmark} className="nav-wordmark">
             Deralis Digital
@@ -199,7 +199,7 @@ const innerStyle: CSSProperties = {
 const logoLink: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
-  gap: 13,
+  gap: 9,
   /* Negative margin keeps the hit area generous without the padding pushing
      the mark off the alignment the rest of the bar sits on. */
   padding: "12px 16px",
@@ -213,7 +213,7 @@ const logoLink: CSSProperties = {
    the largest thing in the bar, which is the job it is there to do. */
 const wordmark: CSSProperties = {
   fontFamily: "var(--font-ibm-plex-sans), sans-serif",
-  fontSize: 19,
+  fontSize: 21,
   fontWeight: 600,
   letterSpacing: "-0.015em",
   color: "var(--text-primary)",

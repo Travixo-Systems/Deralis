@@ -311,12 +311,12 @@ main > :first-child {
     display: none;
   }
 
-  /* The mark is served at 64px and displayed at 34, so it stays crisp on
+  /* The mark is served at 96px and displayed at 42, so it stays crisp on
      retina without a second asset. Sized here rather than inline so the
      narrow-screen step below can actually win. */
   .nav-logo-mark {
-    width: 34px;
-    height: 34px;
+    width: 42px;
+    height: 42px;
   }
 
   @media (max-width: 960px) {
@@ -333,11 +333,11 @@ main > :first-child {
      that has to stay readable. */
   @media (max-width: 420px) {
     .nav-logo-mark {
-      width: 29px;
-      height: 29px;
+      width: 34px;
+      height: 34px;
     }
     .nav-wordmark {
-      font-size: 17px !important;
+      font-size: 18px !important;
     }
   }
 }
