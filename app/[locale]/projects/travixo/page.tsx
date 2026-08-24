@@ -8,6 +8,7 @@ import ScreenshotDisclaimer from "@/components/shared/ScreenshotDisclaimer";
 import { Link } from "@/i18n/navigation";
 import type { CSSProperties } from "react";
 import { localeUrl, alternateLanguages } from "@/i18n/urls";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -37,8 +38,22 @@ export default async function TraviXoPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const tCrumbs = await getTranslations({ locale });
+
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          {
+            name: tCrumbs("projects.page.metadata.title"),
+            url: localeUrl(locale, "/projects"),
+          },
+          {
+            name: tCrumbs("projectDetail.travixo.metadata.title"),
+            url: localeUrl(locale, "/projects/travixo"),
+          },
+        ]}
+      />
       <TraviXoHeroWithScreenshot />
       <WhatItIsCard />
       <WhatIBuiltCard />

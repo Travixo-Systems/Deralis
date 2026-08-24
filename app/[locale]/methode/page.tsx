@@ -6,6 +6,7 @@ import ClimaxPeakCard from "@/components/methode/ClimaxPeakCard";
 import FinalCard from "@/components/methode/FinalCard";
 import AnimateIn from "@/components/shared/AnimateIn";
 import { localeUrl, alternateLanguages } from "@/i18n/urls";
+import { ServicesJsonLd } from "@/components/seo/JsonLd";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -37,6 +38,7 @@ export default async function MethodePage({ params }: Props) {
 
   return (
     <>
+      <ServicesJsonLd />
       <HeroCard />
       <AnimateIn>
         <StagesCard />
