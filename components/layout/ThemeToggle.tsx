@@ -92,7 +92,19 @@ export default function ThemeToggle({
         padding: "10px 18px 10px 14px",
         background: "var(--card-main)",
         border: "1px solid var(--border-strong)",
-        borderRadius: 100,
+        /* The control is stuck to the underside of the header, so its top edge
+           is shared with a straight one. Rounding that side left two corners
+           curving away from a line they touch; squaring them lets the control
+           read as hanging from the header rather than floating near it. The
+           bottom stays round because that edge is free. */
+        borderRadius: "0 0 100px 100px",
+        borderTop: "none",
+        /* The shared card shadow blurs 12px against a 2px offset, so it spread
+           roughly ten pixels back up over the header and tinted the strip above
+           the join a shade darker than the header itself. Both surfaces are the
+           same fill; the shadow was the whole of the difference. This one only
+           falls downward, where the control actually overhangs. */
+        boxShadow: "var(--hang-shadow)",
         color: "var(--text-primary)",
         fontFamily: "var(--font-ibm-plex-sans), sans-serif",
         fontSize: 12,
@@ -101,7 +113,6 @@ export default function ThemeToggle({
         display: "flex",
         alignItems: "center",
         gap: 10,
-        boxShadow: "var(--card-shadow)",
         transition:
           "background-color 450ms ease, color 450ms ease, border-color 450ms ease, transform 150ms ease",
         ...style,
