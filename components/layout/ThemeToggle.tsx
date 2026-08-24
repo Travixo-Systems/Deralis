@@ -92,7 +92,13 @@ export default function ThemeToggle({
         padding: "10px 18px 10px 14px",
         background: "var(--card-main)",
         border: "1px solid var(--border-strong)",
-        borderRadius: 100,
+        /* The control is stuck to the underside of the header, so its top edge
+           is shared with a straight one. Rounding that side left two corners
+           curving away from a line they touch; squaring them lets the control
+           read as hanging from the header rather than floating near it. The
+           bottom stays round because that edge is free. */
+        borderRadius: "0 0 100px 100px",
+        borderTop: "none",
         color: "var(--text-primary)",
         fontFamily: "var(--font-ibm-plex-sans), sans-serif",
         fontSize: 12,

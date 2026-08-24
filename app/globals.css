@@ -664,6 +664,10 @@ main > :first-child {
   display: flex;
   justify-content: flex-end;
   padding-right: 28px;
+  /* The overlay is a zero-height sticky rail, so a stretched flex child would
+     be squeezed to 0 and left to overflow its own padding. The control sizes
+     to its content and hangs below the rail instead. */
+  align-items: flex-start;
 }
 
 .theme-toggle-mobile-overlay {
