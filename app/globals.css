@@ -310,12 +310,34 @@ main > :first-child {
   .nav-hamburger-mobile {
     display: none;
   }
+
+  /* The mark is served at 64px and displayed at 34, so it stays crisp on
+     retina without a second asset. Sized here rather than inline so the
+     narrow-screen step below can actually win. */
+  .nav-logo-mark {
+    width: 34px;
+    height: 34px;
+  }
+
   @media (max-width: 960px) {
     .nav-cluster-desktop {
       display: none !important;
     }
     .nav-hamburger-mobile {
       display: block !important;
+    }
+  }
+
+  /* Below 420px the wordmark and the hamburger start competing for the same
+     row. The mark gives up a few pixels first, since the words are the part
+     that has to stay readable. */
+  @media (max-width: 420px) {
+    .nav-logo-mark {
+      width: 29px;
+      height: 29px;
+    }
+    .nav-wordmark {
+      font-size: 17px !important;
     }
   }
 }

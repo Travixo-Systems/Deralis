@@ -13,13 +13,15 @@ export default function SiteFooter() {
         <div style={zone1Inner} className="footer-zone1-grid">
           {/* Left: logo + wordmark + tagline */}
           <div>
-            <Link href="/" style={logoLink}>
+            {/* Deliberately a step below the header's 34px: this is a closing
+                signature, not the primary identity. */}
+            <Link href="/" style={logoLink} aria-label="Deralis Digital">
               <Image
                 src="/logo-mark.png"
                 alt=""
-                width={22}
-                height={22}
-                style={{ width: 22, height: 22, borderRadius: 4, display: "block" }}
+                width={56}
+                height={56}
+                style={{ width: 28, height: 28, borderRadius: 6, display: "block" }}
               />
               <span style={wordmark}>Deralis Digital</span>
             </Link>
@@ -88,9 +90,9 @@ const logoLink: CSSProperties = {
 
 const wordmark: CSSProperties = {
   fontFamily: "var(--font-ibm-plex-sans), sans-serif",
-  fontSize: 15,
+  fontSize: 17,
   fontWeight: 600,
-  letterSpacing: "-0.01em",
+  letterSpacing: "-0.015em",
   color: "var(--text-primary)",
   transition: "color 450ms ease",
 };

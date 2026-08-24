@@ -70,16 +70,22 @@ export default function SiteNav() {
     <header style={headerStyle} className="shell-bleed">
       <div style={innerStyle}>
         {/* Logo + wordmark */}
-        <Link href="/" style={logoLink}>
+        {/* The mark carries no alt text because the wordmark beside it already
+            names the practice; describing it again would make a screen reader
+            announce "Deralis Digital Deralis Digital" for one link. */}
+        <Link href="/" style={logoLink} aria-label="Deralis Digital">
           <Image
             src="/logo-mark.png"
             alt=""
-            width={22}
-            height={22}
+            width={64}
+            height={64}
             priority
-            style={{ width: 22, height: 22, borderRadius: 4, display: "block" }}
+            className="nav-logo-mark"
+            style={{ borderRadius: 7, display: "block" }}
           />
-          <span style={wordmark}>Deralis Digital</span>
+          <span style={wordmark} className="nav-wordmark">
+            Deralis Digital
+          </span>
         </Link>
 
         {/* Right cluster: nav + locale + diagnostic pill */}
@@ -193,19 +199,25 @@ const innerStyle: CSSProperties = {
 const logoLink: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
-  gap: 10,
+  gap: 13,
+  /* Negative margin keeps the hit area generous without the padding pushing
+     the mark off the alignment the rest of the bar sits on. */
   padding: "12px 16px",
   margin: "-12px -16px",
   textDecoration: "none",
   borderRadius: 6,
 };
 
+/* The wordmark is the site's identity and sat at 15px, a step below the 16px
+   body text and level with the nav links it should outrank. It now reads as
+   the largest thing in the bar, which is the job it is there to do. */
 const wordmark: CSSProperties = {
   fontFamily: "var(--font-ibm-plex-sans), sans-serif",
-  fontSize: 15,
+  fontSize: 19,
   fontWeight: 600,
-  letterSpacing: "-0.01em",
+  letterSpacing: "-0.015em",
   color: "var(--text-primary)",
+  whiteSpace: "nowrap",
   transition: "color 450ms ease",
 };
 
