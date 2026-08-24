@@ -199,7 +199,7 @@ const innerStyle: CSSProperties = {
 const logoLink: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
-  gap: 9,
+  gap: 6,
   /* Negative margin keeps the hit area generous without the padding pushing
      the mark off the alignment the rest of the bar sits on. */
   padding: "12px 16px",
