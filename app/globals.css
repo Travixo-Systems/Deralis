@@ -46,6 +46,10 @@
   --tile-shadow: 0 24px 50px rgba(20, 17, 13, 0.1), 0 8px 20px rgba(20, 17, 13, 0.05);
   --page-shadow: 0 40px 80px rgba(0, 0, 0, 0.28), 0 14px 30px rgba(0, 0, 0, 0.14);
   --paper-shadow: 0 4px 16px rgba(20, 17, 13, 0.06), 0 1px 4px rgba(20, 17, 13, 0.04);
+  /* For a control flush against the underside of another surface. The card
+     shadow blurs further than it offsets, so it washes back up over whatever
+     it is joined to; this one is clipped to fall only downward. */
+  --hang-shadow: 0 3px 10px -3px rgba(20, 17, 13, 0.10);
   --hero-peak-shadow: 0 30px 60px rgba(26, 29, 27, 0.2), 0 10px 20px rgba(26, 29, 27, 0.1);
   --offer-peak-shadow: 0 20px 44px rgba(26, 29, 27, 0.2);
 
@@ -141,6 +145,7 @@
   --tile-shadow: 0 24px 50px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.25);
   --page-shadow: 0 50px 100px rgba(0, 0, 0, 0.55), 0 18px 36px rgba(0, 0, 0, 0.3);
   --paper-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.3);
+  --hang-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.45);
   --hero-peak-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.3);
   --offer-peak-shadow: 0 20px 44px rgba(0, 0, 0, 0.5);
   --peak-surface-elevated: rgba(20, 17, 13, 0.08);

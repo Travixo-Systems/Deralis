@@ -99,6 +99,12 @@ export default function ThemeToggle({
            bottom stays round because that edge is free. */
         borderRadius: "0 0 100px 100px",
         borderTop: "none",
+        /* The shared card shadow blurs 12px against a 2px offset, so it spread
+           roughly ten pixels back up over the header and tinted the strip above
+           the join a shade darker than the header itself. Both surfaces are the
+           same fill; the shadow was the whole of the difference. This one only
+           falls downward, where the control actually overhangs. */
+        boxShadow: "var(--hang-shadow)",
         color: "var(--text-primary)",
         fontFamily: "var(--font-ibm-plex-sans), sans-serif",
         fontSize: 12,
@@ -107,7 +113,6 @@ export default function ThemeToggle({
         display: "flex",
         alignItems: "center",
         gap: 10,
-        boxShadow: "var(--card-shadow)",
         transition:
           "background-color 450ms ease, color 450ms ease, border-color 450ms ease, transform 150ms ease",
         ...style,
