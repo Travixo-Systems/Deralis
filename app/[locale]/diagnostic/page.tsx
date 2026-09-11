@@ -24,7 +24,12 @@ const discoveryCallLink = process.env.NEXT_PUBLIC_DISCOVERY_CALL_LINK;
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "diagnostic.page" });
+  // The <title> keeps the price: in a search result it qualifies the click,
+  // and the reader arrived with intent. The share card does not: on LinkedIn
+  // a price in the card title reads as a transaction before anyone has read
+  // what the diagnostic is. The price is stated four times on the page itself.
   const title = t("metadata.title");
+  const shareTitle = t("metadata.shareTitle");
   const description = t("metadata.description");
   return {
     alternates: {
@@ -34,7 +39,7 @@ export async function generateMetadata({ params }: Props) {
     title,
     description,
     openGraph: {
-      title,
+      title: shareTitle,
       description,
       type: "website" as const,
       url: localeUrl(locale, `/diagnostic`),
